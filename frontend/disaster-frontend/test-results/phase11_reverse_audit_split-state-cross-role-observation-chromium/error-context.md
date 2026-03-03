@@ -1,0 +1,103 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - heading "Disaster Resource Management System" [level=1] [ref=e6]
+      - navigation [ref=e7]:
+        - link "State" [ref=e8] [cursor=pointer]:
+          - /url: /state
+        - link "State Requests" [ref=e9] [cursor=pointer]:
+          - /url: /state/requests
+        - button "Logout" [ref=e10]
+        - generic [ref=e11]: "Role: state"
+  - main [ref=e12]:
+    - generic [ref=e14]:
+      - generic [ref=e15]:
+        - heading "State Overview (State 33)" [level=3] [ref=e16]
+        - generic [ref=e17]:
+          - generic [ref=e18]:
+            - paragraph [ref=e19]: Total District Demand
+            - paragraph [ref=e20]: "0.00"
+          - generic [ref=e21]:
+            - paragraph [ref=e22]: Total Allocated to Districts
+            - paragraph [ref=e23]: "0.00"
+          - generic [ref=e24]:
+            - paragraph [ref=e25]: Total Unmet
+            - paragraph [ref=e26]: "0.00"
+          - generic [ref=e27]:
+            - paragraph [ref=e28]: Mutual Aid Sent
+            - paragraph [ref=e29]: "0.00"
+          - generic [ref=e30]:
+            - paragraph [ref=e31]: Mutual Aid Received
+            - paragraph [ref=e32]: "0.00"
+        - generic [ref=e33]: "Run: — | Last refresh: —"
+        - generic [ref=e34]: "Top 5 districts by unmet: None"
+        - generic [ref=e35]:
+          - heading "Mutual Aid Market" [level=3] [ref=e36]
+          - generic [ref=e37]: No open mutual aid requests in market.
+        - generic [ref=e38]:
+          - button "District Requests" [ref=e39]
+          - button "Mutual Aid Outgoing / Incoming" [ref=e40]
+          - button "State Stock" [ref=e41]
+          - button "Refill Resources" [ref=e42]
+          - button "Agent Recommendations" [ref=e43]
+          - button "Run History" [ref=e44]
+      - generic [ref=e45]:
+        - heading "District Allocation Summary" [level=3] [ref=e46]
+        - generic [ref=e47]:
+          - button "Export Aggregated CSV" [ref=e48]
+          - button "Export Details CSV" [ref=e49]
+          - textbox "Filter by district" [ref=e50]
+          - button "Show District-Level Details" [ref=e51]
+        - generic [ref=e52]:
+          - generic [ref=e53]:
+            - textbox "Search table…" [ref=e54]
+            - generic [ref=e55]: "Rows: 0"
+          - table [ref=e57]:
+            - rowgroup [ref=e58]:
+              - row "Raw JSON Run ID District Resource Time Requested Qty Allocated Quantity Unmet Quantity Coverage %" [ref=e59]:
+                - columnheader "Raw JSON" [ref=e60]
+                - columnheader "Run ID" [ref=e61]:
+                  - button "Run ID" [ref=e62]
+                - columnheader "District" [ref=e63]:
+                  - button "District" [ref=e64]
+                - columnheader "Resource" [ref=e65]:
+                  - button "Resource" [ref=e66]
+                - columnheader "Time" [ref=e67]:
+                  - button "Time" [ref=e68]
+                - columnheader "Requested Qty" [ref=e69]:
+                  - button "Requested Qty" [ref=e70]
+                - columnheader "Allocated Quantity" [ref=e71]:
+                  - button "Allocated Quantity" [ref=e72]
+                - columnheader "Unmet Quantity" [ref=e73]:
+                  - button "Unmet Quantity" [ref=e74]
+                - columnheader "Coverage %" [ref=e75]:
+                  - button "Coverage %" [ref=e76]
+              - row [ref=e77]:
+                - columnheader [ref=e78]
+                - columnheader [ref=e79]:
+                  - textbox "Filter" [ref=e80]
+                - columnheader [ref=e81]:
+                  - textbox "Filter" [ref=e82]
+                - columnheader [ref=e83]:
+                  - textbox "Filter" [ref=e84]
+                - columnheader [ref=e85]:
+                  - textbox "Filter" [ref=e86]
+                - columnheader [ref=e87]:
+                  - textbox "Filter" [ref=e88]
+                - columnheader [ref=e89]:
+                  - textbox "Filter" [ref=e90]
+                - columnheader [ref=e91]:
+                  - textbox "Filter" [ref=e92]
+                - columnheader [ref=e93]
+            - rowgroup [ref=e94]:
+              - row "No allocation summary available yet." [ref=e95]:
+                - cell "No allocation summary available yet." [ref=e96]
+          - generic [ref=e97]:
+            - generic [ref=e98]: Page 1 of 1
+            - generic [ref=e99]:
+              - button "Prev" [disabled] [ref=e100]
+              - button "Next" [disabled] [ref=e101]
+```

@@ -1,0 +1,47 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - heading "Disaster Resource Management System" [level=1] [ref=e6]
+      - navigation [ref=e7]:
+        - link "State" [ref=e8] [cursor=pointer]:
+          - /url: /state
+        - link "State Requests" [active] [ref=e9] [cursor=pointer]:
+          - /url: /state/requests
+        - button "Logout" [ref=e10]
+        - generic [ref=e11]: "Role: state"
+  - main [ref=e12]:
+    - generic [ref=e14]:
+      - generic [ref=e15]:
+        - heading "State Requests & Rebalancing (State 10)" [level=3] [ref=e16]
+        - generic [ref=e17]:
+          - generic [ref=e18]:
+            - paragraph [ref=e19]: Active District Requests
+            - paragraph [ref=e20]: "0"
+          - generic [ref=e21]:
+            - paragraph [ref=e22]: Escalation Candidates
+            - paragraph [ref=e23]: "0"
+          - generic [ref=e24]:
+            - paragraph [ref=e25]: Already Escalated
+            - paragraph [ref=e26]: "0"
+        - generic [ref=e27]: "Last refresh: —"
+        - generic [ref=e28]:
+          - textbox "Filter district" [ref=e29]
+          - textbox "Filter resource" [ref=e30]
+          - combobox [ref=e31]:
+            - option "All statuses" [selected]
+            - option "pending"
+            - option "allocated"
+            - option "partial"
+            - option "unmet"
+            - option "escalated_national"
+          - button "Clear" [ref=e32]
+      - generic [ref=e33]:
+        - heading "Grouped Request Summary" [level=3] [ref=e34]
+        - generic [ref=e35]: No grouped rows for current filters.
+      - generic [ref=e36]:
+        - heading "District Requests" [level=3] [ref=e37]
+        - generic [ref=e38]: No pending district requests.
+```

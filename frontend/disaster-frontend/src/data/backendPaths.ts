@@ -1,0 +1,87 @@
+export const API_BASE = (import.meta as any).env?.VITE_API_BASE_URL || "http://127.0.0.1:8000"
+
+export const BACKEND_PATHS = {
+  resourceCatalog: `${API_BASE}/metadata/resources`,
+
+  // ---------------- District ----------------
+  districtAllocations: `${API_BASE}/district/allocations`,
+  districtAllocationsCursor: `${API_BASE}/district/allocations/cursor`,
+  districtAllocationsDelta: `${API_BASE}/district/allocations/delta`,
+  districtAllocationsStream: `${API_BASE}/district/allocations/stream`,
+  districtUnmet: `${API_BASE}/district/unmet`,
+  districtCreateRequest: `${API_BASE}/district/request`,
+  districtCreateRequestBatch: `${API_BASE}/district/request-batch`,
+  districtListRequests: `${API_BASE}/district/requests`,
+  districtRunSolver: `${API_BASE}/district/run`,
+  districtSolverStatus: `${API_BASE}/district/solver-status`,
+  districtRunHistory: `${API_BASE}/district/run-history`,
+  districtKpis: `${API_BASE}/district/kpis`,
+  districtStock: `${API_BASE}/district/stock`,
+  districtStockRefill: `${API_BASE}/district/stock/refill`,
+  districtClaims: `${API_BASE}/district/claims`,
+  districtConsumptions: `${API_BASE}/district/consumptions`,
+  districtReturns: `${API_BASE}/district/returns`,
+  districtClaim: `${API_BASE}/district/claim`,
+  districtConsume: `${API_BASE}/district/consume`,
+  districtReturn: `${API_BASE}/district/return`,
+  districtConfirmAllocationReceipt: (allocationId: number) => `${API_BASE}/district/allocations/${allocationId}/confirm`,
+
+  districtGetDemandMode: `${API_BASE}/district/demand-mode`,
+  districtSetDemandMode: `${API_BASE}/district/demand-mode`,
+
+  // ---------------- State ----------------
+  stateAllocations: `${API_BASE}/state/allocations`,
+  stateAllocationsCursor: `${API_BASE}/state/allocations/cursor`,
+  stateAllocationsDelta: `${API_BASE}/state/allocations/delta`,
+  stateAllocationsStream: `${API_BASE}/state/allocations/stream`,
+  stateKpis: `${API_BASE}/state/kpis`,
+  stateStock: `${API_BASE}/state/stock`,
+  stateStockRefill: `${API_BASE}/state/stock/refill`,
+  stateAllocationSummary: `${API_BASE}/state/allocations/summary`,
+  stateRunHistory: `${API_BASE}/state/run-history`,
+  stateUnmet: `${API_BASE}/state/unmet`,
+  stateRequests: `${API_BASE}/state/requests`,
+  stateEscalations: `${API_BASE}/state/escalations`,
+  statePool: `${API_BASE}/state/pool`,
+  statePoolTransactions: `${API_BASE}/state/pool/transactions`,
+  statePoolAllocate: `${API_BASE}/state/pool/allocate`,
+  stateMutualAidRequests: `${API_BASE}/state/mutual-aid/requests`,
+  stateMutualAidMarket: `${API_BASE}/state/mutual-aid/market`,
+  stateMutualAidOffers: `${API_BASE}/state/mutual-aid/offers`,
+  stateMutualAidOfferRespond: (offerId: number) => `${API_BASE}/state/mutual-aid/offers/${offerId}/respond`,
+
+  districtMutualAidRequest: `${API_BASE}/district/mutual-aid/request`,
+
+  // ---------------- National ----------------
+  nationalAllocations: `${API_BASE}/national/allocations`,
+  nationalAllocationsCursor: `${API_BASE}/national/allocations/cursor`,
+  nationalAllocationsDelta: `${API_BASE}/national/allocations/delta`,
+  nationalAllocationsStream: `${API_BASE}/national/allocations/stream`,
+  nationalKpis: `${API_BASE}/national/kpis`,
+  nationalStock: `${API_BASE}/national/stock`,
+  nationalStockRefill: `${API_BASE}/national/stock/refill`,
+  nationalAllocationSummary: `${API_BASE}/national/allocations/summary`,
+  nationalRunHistory: `${API_BASE}/national/run-history`,
+  nationalUnmet: `${API_BASE}/national/unmet`,
+  nationalEscalations: `${API_BASE}/national/escalations`,
+  nationalPool: `${API_BASE}/national/pool`,
+  nationalPoolTransactions: `${API_BASE}/national/pool/transactions`,
+  nationalPoolAllocate: `${API_BASE}/national/pool/allocate`,
+
+  // ---------------- Admin Scenario ----------------
+  adminScenarios: `${API_BASE}/admin/scenarios`,
+  adminScenarioDemandBatch: (scenarioId: number) => `${API_BASE}/admin/scenarios/${scenarioId}/add-demand-batch`,
+  adminScenarioFinalize: (scenarioId: number) => `${API_BASE}/admin/scenarios/${scenarioId}/finalize`,
+  adminScenarioClone: (scenarioId: number) => `${API_BASE}/admin/scenarios/${scenarioId}/clone`,
+  adminScenarioRandomizerPreview: (scenarioId: number) => `${API_BASE}/admin/scenarios/${scenarioId}/randomizer/preview`,
+  adminScenarioRandomizerApply: (scenarioId: number) => `${API_BASE}/admin/scenarios/${scenarioId}/randomizer/apply`,
+  adminScenarioRevertEffects: (scenarioId: number) => `${API_BASE}/admin/scenarios/${scenarioId}/revert-effects`,
+  adminScenarioRevertVerify: (scenarioId: number) => `${API_BASE}/admin/scenarios/${scenarioId}/revert-effects/verify`,
+  adminScenarioRunSummary: (scenarioId: number, runId: number) => `${API_BASE}/admin/scenarios/${scenarioId}/runs/${runId}/summary`
+  ,
+  adminScenarioRunIncidents: (scenarioId: number, limit = 50) => `${API_BASE}/admin/scenarios/${scenarioId}/runs/incidents?limit=${limit}`,
+  adminAgentRecommendations: `${API_BASE}/admin/agent/recommendations`,
+  adminAgentRecommendationDecision: (recommendationId: number) => `${API_BASE}/admin/agent/recommendations/${recommendationId}/decision`,
+  stateAgentRecommendations: `${API_BASE}/state/agent/recommendations`,
+  stateAgentRecommendationDecision: (recommendationId: number) => `${API_BASE}/state/agent/recommendations/${recommendationId}/decision`
+}

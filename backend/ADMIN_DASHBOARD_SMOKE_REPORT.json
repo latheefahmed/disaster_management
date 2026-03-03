@@ -1,0 +1,127 @@
+{
+  "generated_at": "2026-03-01T17:24:59.039069+00:00",
+  "scenario_id": 256,
+  "run_id": 963,
+  "overall_status": "PASS",
+  "summary": {
+    "passed": 18,
+    "failed": 0,
+    "checks_total": 18,
+    "preset_checks": 5
+  },
+  "checks": [
+    {
+      "check": "login_admin",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "check": "list_scenarios",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "check": "create_scenario",
+      "ok": true,
+      "status": 200,
+      "scenario_id": 256
+    },
+    {
+      "check": "preview_very_low",
+      "ok": true,
+      "status": 200,
+      "row_count": 264,
+      "ratio": 0.6101
+    },
+    {
+      "check": "preview_low",
+      "ok": true,
+      "status": 200,
+      "row_count": 420,
+      "ratio": 0.9017
+    },
+    {
+      "check": "preview_medium",
+      "ok": true,
+      "status": 200,
+      "row_count": 312,
+      "ratio": 1.1713
+    },
+    {
+      "check": "preview_high",
+      "ok": true,
+      "status": 200,
+      "row_count": 504,
+      "ratio": 1.5888
+    },
+    {
+      "check": "preview_extreme",
+      "ok": true,
+      "status": 200,
+      "row_count": 750,
+      "ratio": 2.3434
+    },
+    {
+      "check": "apply_randomizer",
+      "ok": true,
+      "status": 200,
+      "applied_rows": 1000
+    },
+    {
+      "check": "run_scenario",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "check": "list_runs_and_pick_run_id",
+      "ok": true,
+      "status": 200,
+      "run_id": 963
+    },
+    {
+      "check": "summary_has_by_time_breakdown",
+      "ok": true,
+      "status": 200,
+      "by_time_rows": 5
+    },
+    {
+      "check": "summary_has_scope_breakdown",
+      "ok": true,
+      "scope_keys": [
+        "district",
+        "national",
+        "neighbor_state",
+        "state"
+      ]
+    },
+    {
+      "check": "summary_has_fairness_diagnostics",
+      "ok": true,
+      "flags": [],
+      "early_avg": null,
+      "late_avg": null
+    },
+    {
+      "check": "incidents_endpoint_available",
+      "ok": true,
+      "status": 200,
+      "incident_count": 1
+    },
+    {
+      "check": "incidents_payload_shape",
+      "ok": true,
+      "incident_rows": 1
+    },
+    {
+      "check": "revert_run_effects",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "check": "verify_revert_balance",
+      "ok": true,
+      "status": 200,
+      "net_total": 0.0
+    }
+  ]
+}

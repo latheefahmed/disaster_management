@@ -1,0 +1,437 @@
+{
+  "audit_type": "structural_discovery",
+  "scope": {
+    "workspace": "disaster_management",
+    "frontend": "frontend/disaster-frontend/src",
+    "backend": "backend/app",
+    "mode": "read-only discovery"
+  },
+  "auth": {
+    "backend": {
+      "login_endpoint": {
+        "method": "POST",
+        "path": "/auth/login",
+        "request": {
+          "username": "string",
+          "password": "string"
+        },
+        "response": {
+          "access_token": "hex token",
+          "token_type": "bearer",
+          "role": "district|state|national|admin",
+          "state_code": "string|null",
+          "district_code": "string|null"
+        }
+      },
+      "token_model": {
+        "format": "32-byte hex token via secrets.token_hex(32)",
+        "transport": "Authorization: Bearer <token>",
+        "storage": [
+          "in-memory TOKEN_STORE",
+          "SQLite table auth_tokens(token,payload,created_at)"
+        ],
+        "expiry": "no explicit TTL/expiry claims",
+        "refresh_flow": "none"
+      },
+      "authorization": {
+        "mechanism": "require_role([...]) over decoded payload role",
+        "failure_codes": {
+          "401": [
+            "invalid header format",
+            "invalid token format",
+            "missing token payload"
+          ],
+          "403": [
+            "role not allowed"
+          ]
+        }
+      }
+    },
+    "frontend": {
+      "session_store": {
+        "localStorage_keys": [
+          "user",
+          "token"
+        ]
+      },
+      "guards": {
+        "component": "RequireRole",
+        "behavior": [
+          "redirect unauthenticated to /login",
+          "redirect unauthorized role to /login"
+        ]
+      },
+      "api_client": {
+        "header_injection": "adds bearer token from localStorage on every request",
+        "error_model": "ApiError(status, body, message)",
+        "401_auto_logout": false
+      }
+    }
+  },
+  "navigation_tree": {
+    "public": [
+      "/login"
+    ],
+    "layout": {
+      "district": [
+        "/district",
+        "/district/request"
+      ],
+      "state": [
+        "/state",
+        "/state/requests"
+      ],
+      "national": [
+        "/national",
+        "/national/requests"
+      ],
+      "admin": [
+        "/admin",
+        "/admin/scenarios/:scenarioId/runs/:runId"
+      ]
+    }
+  },
+  "frontend_feature_map": {
+    "district": {
+      "routes": [
+        "/district",
+        "/district/request"
+      ],
+      "overview_tabs": [
+        "Requests",
+        "Allocations",
+        "Upstream Supply",
+        "Unmet",
+        "Resource Stocks",
+        "Refill Resources",
+        "Agent Recommendations",
+        "Run History"
+      ],
+      "request_subtabs": [
+        "Pending",
+        "Allocated",
+        "Partial",
+        "Unmet",
+        "Escalated"
+      ],
+      "controls": [
+        "Demand mode selector (AI+Human/Human Only)",
+        "Run Solver",
+        "Request Resources navigation",
+        "Export CSV",
+        "claim/consume/return per allocation row"
+      ],
+      "polling": "4s overview, 3s request page"
+    },
+    "state": {
+      "routes": [
+        "/state",
+        "/state/requests"
+      ],
+      "overview_tabs": [
+        "District Requests",
+        "Mutual Aid Outgoing / Incoming",
+        "State Stock",
+        "Refill Resources",
+        "Agent Recommendations",
+        "Run History"
+      ],
+      "controls": [
+        "district filter",
+        "show/hide detailed allocations",
+        "mutual aid offer",
+        "CSV exports"
+      ],
+      "requests_page_controls": [
+        "district/resource/status filters",
+        "clear filters",
+        "escalate to national"
+      ],
+      "polling": "4s overview, 3s requests"
+    },
+    "national": {
+      "routes": [
+        "/national",
+        "/national/requests"
+      ],
+      "overview_tabs": [
+        "State Summaries",
+        "National Stock",
+        "Refill Resources",
+        "Inter-State Transfers",
+        "Agent Recommendations",
+        "Run History"
+      ],
+      "controls": [
+        "state filter",
+        "CSV exports",
+        "escalation resolve actions (Allocate/Partial/Mark Unmet)"
+      ],
+      "polling": "5s overview, 4s requests"
+    },
+    "admin": {
+      "routes": [
+        "/admin",
+        "/admin/scenarios/:scenarioId/runs/:runId"
+      ],
+      "top_tabs": [
+        "System Health",
+        "Solver Runs",
+        "Neural Controller Status",
+        "Agent Findings",
+        "Audit Logs"
+      ],
+      "scenario_controls": [
+        "create scenario",
+        "state/district/resource selectors",
+        "scenario type, horizon, demand controls",
+        "state and national stock override",
+        "simulate scenario"
+      ],
+      "run_details_controls": [
+        "resource/district filter",
+        "CSV exports"
+      ]
+    },
+    "shared_components": {
+      "OpsDataTable": {
+        "features": [
+          "global search",
+          "per-column filter",
+          "sortable columns",
+          "pagination",
+          "row raw JSON viewer"
+        ]
+      },
+      "ResourceStockTabs": {
+        "features": [
+          "scope tabs district/state/national",
+          "resource search",
+          "scope totals"
+        ]
+      },
+      "ResourceRefillPanel": {
+        "features": [
+          "resource selector",
+          "quantity + note",
+          "immediate backend stock refill POST"
+        ]
+      }
+    }
+  },
+  "endpoint_catalog": [
+    {"method":"POST","path":"/auth/login","role":"public","request":"LoginRequest","response":"token+role payload","side_effects":"persists auth token"},
+
+    {"method":"GET","path":"/metadata/states","role":"any authenticated","request":"none","response":"state list","side_effects":"none"},
+    {"method":"GET","path":"/metadata/districts","role":"any authenticated","request":"optional state_code query","response":"district list","side_effects":"none"},
+    {"method":"GET","path":"/metadata/resources","role":"any authenticated","request":"none","response":"resource catalog + policy","side_effects":"none"},
+
+    {"method":"GET","path":"/district/me","role":"district","request":"none","response":"DistrictOut","side_effects":"none"},
+    {"method":"GET","path":"/district/demand-mode","role":"district","request":"none","response":"district+mode+ui_mode","side_effects":"none"},
+    {"method":"PUT","path":"/district/demand-mode","role":"district","request":"DemandModeUpdate","response":"updated mode","side_effects":"updates district demand mode"},
+    {"method":"POST","path":"/district/request","role":"district","request":"RequestCreate","response":"accepted + request_id + solver_run_id","side_effects":"create/merge request, prediction, starts live solver"},
+    {"method":"POST","path":"/district/request-batch","role":"district","request":"{items:[...]}","response":"accepted + request_ids + solver_run_id","side_effects":"batch create/merge requests, starts live solver"},
+    {"method":"GET","path":"/district/requests","role":"district","request":"optional time/day/latest_only","response":"request lifecycle view with lineage fields","side_effects":"refreshes request statuses"},
+    {"method":"GET","path":"/district/allocations","role":"district","request":"none","response":"AllocationOut[]","side_effects":"none"},
+    {"method":"GET","path":"/district/solver-status","role":"district","request":"none","response":"latest run status + counts","side_effects":"none"},
+    {"method":"GET","path":"/district/run-history","role":"district","request":"none","response":"run totals array","side_effects":"none"},
+    {"method":"GET","path":"/district/kpis","role":"district","request":"none","response":"KPIOut","side_effects":"none"},
+    {"method":"GET","path":"/district/stock","role":"district","request":"none","response":"StockRowOut[]","side_effects":"none"},
+    {"method":"POST","path":"/district/stock/refill","role":"district","request":"StockRefillCreate","response":"{status,refill_id}","side_effects":"writes stock_refill transaction"},
+    {"method":"GET","path":"/district/unmet","role":"district","request":"none","response":"unmet rows","side_effects":"none"},
+    {"method":"GET","path":"/district/claims","role":"district","request":"none","response":"claim rows","side_effects":"none"},
+    {"method":"GET","path":"/district/consumptions","role":"district","request":"none","response":"consumption rows","side_effects":"none"},
+    {"method":"GET","path":"/district/returns","role":"district","request":"none","response":"return rows","side_effects":"none"},
+    {"method":"POST","path":"/district/claim","role":"district","request":"ClaimCreate","response":"{status,id,snapshot}","side_effects":"writes claim + sync slot status"},
+    {"method":"POST","path":"/district/consume","role":"district","request":"ConsumptionCreate","response":"{status,id,snapshot}","side_effects":"writes consumption + sync slot status"},
+    {"method":"POST","path":"/district/return","role":"district","request":"ReturnCreate","response":"{status,id,snapshot}","side_effects":"writes return + pool/stock credits + transfer provenance"},
+    {"method":"POST","path":"/district/run","role":"district","request":"none","response":"{status,solver_run_id}","side_effects":"starts or reuses running live solver"},
+    {"method":"POST","path":"/district/allocations/{allocation_id}/confirm","role":"district","request":"path id","response":"confirmation payload","side_effects":"updates receipt state, may trigger agent engine"},
+    {"method":"POST","path":"/district/mutual-aid/request","role":"district","request":"resource_id,quantity_requested,time","response":"created aid request","side_effects":"creates mutual aid request row"},
+
+    {"method":"GET","path":"/state/me","role":"state","request":"none","response":"state access payload","side_effects":"none"},
+    {"method":"GET","path":"/state/kpis","role":"state","request":"none","response":"KPIOut","side_effects":"none"},
+    {"method":"GET","path":"/state/stock","role":"state","request":"none","response":"StockRowOut[]","side_effects":"none"},
+    {"method":"POST","path":"/state/stock/refill","role":"state","request":"StockRefillCreate","response":"{status,refill_id}","side_effects":"writes stock_refill transaction"},
+    {"method":"GET","path":"/state/requests","role":"state","request":"none","response":"state requests","side_effects":"refreshes statuses"},
+    {"method":"GET","path":"/state/allocations","role":"state","request":"none","response":"allocation rows","side_effects":"none"},
+    {"method":"GET","path":"/state/allocations/summary","role":"state","request":"none","response":"summary + lineage stats","side_effects":"none"},
+    {"method":"GET","path":"/state/run-history","role":"state","request":"none","response":"run totals array","side_effects":"none"},
+    {"method":"GET","path":"/state/unmet","role":"state","request":"none","response":"unmet rows","side_effects":"none"},
+    {"method":"GET","path":"/state/escalations","role":"state","request":"none","response":"escalation candidates","side_effects":"none"},
+    {"method":"POST","path":"/state/escalations/{request_id}","role":"state","request":"{reason}","response":"request row","side_effects":"sets request to escalated_national"},
+    {"method":"GET","path":"/state/pool","role":"state","request":"none","response":"state pool balances","side_effects":"none"},
+    {"method":"GET","path":"/state/pool/transactions","role":"state","request":"optional limit","response":"pool tx rows","side_effects":"none"},
+    {"method":"POST","path":"/state/pool/allocate","role":"state","request":"PoolAllocateCreate","response":"{status,transaction_id}","side_effects":"writes negative pool transaction"},
+    {"method":"GET","path":"/state/mutual-aid/requests","role":"state","request":"optional include_closed","response":"aid requests for state","side_effects":"none"},
+    {"method":"GET","path":"/state/mutual-aid/market","role":"state","request":"none","response":"open aid market + neighbor list","side_effects":"none"},
+    {"method":"POST","path":"/state/mutual-aid/offers","role":"state","request":"request_id,quantity_offered,cap_quantity?","response":"created offer","side_effects":"creates mutual aid offer"},
+    {"method":"POST","path":"/state/mutual-aid/offers/{offer_id}/respond","role":"state","request":"{decision}","response":"offer status payload","side_effects":"accept/reject/revoke offer + transfer + request refresh"},
+    {"method":"GET","path":"/state/agent/recommendations","role":"state","request":"optional status filter","response":"state-scoped recommendations","side_effects":"none"},
+    {"method":"POST","path":"/state/agent/recommendations/{recommendation_id}/decision","role":"state","request":"{decision}","response":"decision result","side_effects":"updates recommendation status"},
+
+    {"method":"GET","path":"/national/me","role":"national","request":"none","response":"national access payload","side_effects":"none"},
+    {"method":"GET","path":"/national/kpis","role":"national","request":"none","response":"KPIOut","side_effects":"none"},
+    {"method":"GET","path":"/national/stock","role":"national","request":"none","response":"StockRowOut[]","side_effects":"none"},
+    {"method":"GET","path":"/national/allocations/stock","role":"national","request":"none","response":"StockRowOut[]","side_effects":"none"},
+    {"method":"POST","path":"/national/stock/refill","role":"national","request":"StockRefillCreate","response":"{status,refill_id}","side_effects":"writes stock_refill transaction"},
+    {"method":"GET","path":"/national/requests","role":"national","request":"none","response":"all requests","side_effects":"refreshes statuses"},
+    {"method":"GET","path":"/national/allocations","role":"national","request":"none","response":"allocation rows","side_effects":"none"},
+    {"method":"GET","path":"/national/allocations/summary","role":"national","request":"optional state_code","response":"summary + lineage stats","side_effects":"none"},
+    {"method":"GET","path":"/national/run-history","role":"national","request":"none","response":"run totals array","side_effects":"none"},
+    {"method":"GET","path":"/national/unmet","role":"national","request":"none","response":"unmet rows","side_effects":"none"},
+    {"method":"GET","path":"/national/escalations","role":"national","request":"none","response":"escalated requests","side_effects":"none"},
+    {"method":"POST","path":"/national/escalations/{request_id}/resolve","role":"national","request":"decision,note?","response":"resolved request row","side_effects":"updates status/lifecycle"},
+    {"method":"GET","path":"/national/pool","role":"national","request":"none","response":"global pool totals + rows","side_effects":"none"},
+    {"method":"GET","path":"/national/pool/transactions","role":"national","request":"optional limit","response":"pool tx rows","side_effects":"none"},
+    {"method":"GET","path":"/national/pool/{state_code}","role":"national","request":"path state_code","response":"state pool balances","side_effects":"none"},
+    {"method":"POST","path":"/national/pool/allocate","role":"national","request":"NationalPoolAllocateCreate","response":"{status,transaction_id}","side_effects":"writes negative pool transaction"},
+
+    {"method":"POST","path":"/admin/scenarios","role":"admin","request":"{name}","response":"scenario row","side_effects":"creates scenario"},
+    {"method":"GET","path":"/admin/scenarios","role":"admin","request":"none","response":"scenario list","side_effects":"none"},
+    {"method":"GET","path":"/admin/scenarios/{scenario_id}","role":"admin","request":"path id","response":"scenario detail","side_effects":"none"},
+    {"method":"GET","path":"/admin/scenarios/{scenario_id}/runs","role":"admin","request":"path id","response":"run list","side_effects":"none"},
+    {"method":"GET","path":"/admin/scenarios/{scenario_id}/analysis","role":"admin","request":"path id","response":"explanations+recommendations","side_effects":"none"},
+    {"method":"GET","path":"/admin/scenarios/{scenario_id}/runs/{run_id}/summary","role":"admin","request":"path ids","response":"run summary payload","side_effects":"none"},
+    {"method":"POST","path":"/admin/scenarios/{scenario_id}/add-demand","role":"admin","request":"single demand payload","response":"service result","side_effects":"adds scenario demand row"},
+    {"method":"POST","path":"/admin/scenarios/{scenario_id}/add-demand-batch","role":"admin","request":"{rows:[...]}","response":"service result","side_effects":"adds many scenario demand rows"},
+    {"method":"POST","path":"/admin/scenarios/{scenario_id}/set-state-stock","role":"admin","request":"state stock override payload","response":"service result","side_effects":"writes scenario state stock override"},
+    {"method":"POST","path":"/admin/scenarios/{scenario_id}/set-national-stock","role":"admin","request":"national stock override payload","response":"service result","side_effects":"writes scenario national stock override"},
+    {"method":"POST","path":"/admin/scenarios/{scenario_id}/run","role":"admin","request":"none","response":"scenario completed status","side_effects":"executes scenario runner"},
+    {"method":"GET","path":"/admin/agent/recommendations","role":"admin","request":"optional status filter","response":"recommendation rows + finding context","side_effects":"none"},
+    {"method":"POST","path":"/admin/agent/recommendations/{recommendation_id}/decision","role":"admin","request":"{decision}","response":"decision result","side_effects":"updates recommendation status"},
+
+    {"method":"GET","path":"/admin/meta-controller/status","role":"admin","request":"none","response":"controller+model+incident status","side_effects":"creates default setting row if missing"},
+    {"method":"POST","path":"/admin/meta-controller/enable","role":"admin","request":"{enabled}","response":"enabled/mode","side_effects":"toggles nn mode and model status"},
+    {"method":"POST","path":"/admin/meta-controller/settings","role":"admin","request":"mode/influence_pct/nn_enabled","response":"updated settings","side_effects":"persists controller settings"},
+    {"method":"POST","path":"/admin/meta-controller/train/fake","role":"admin","request":"none","response":"training result","side_effects":"fake model training"},
+    {"method":"POST","path":"/admin/meta-controller/model/promote","role":"admin","request":"{model_version}","response":"status payload","side_effects":"switches prod model"},
+    {"method":"POST","path":"/admin/meta-controller/model/rollback","role":"admin","request":"{target_version}","response":"status payload","side_effects":"reverts prod model"},
+    {"method":"GET","path":"/admin/meta-controller/incidents","role":"admin","request":"optional limit","response":"incident list","side_effects":"none"}
+  ],
+  "request_lifecycle": {
+    "states": [
+      "CREATED",
+      "SENT_TO_SOLVER",
+      "ALLOCATED",
+      "PARTIAL",
+      "UNMET",
+      "ESCALATED",
+      "FAILED"
+    ],
+    "observed_statuses": [
+      "pending",
+      "solving",
+      "allocated",
+      "partial",
+      "unmet",
+      "escalated_state",
+      "escalated_national",
+      "failed"
+    ],
+    "trigger_points": [
+      "district request create/batch calls _start_live_solver_run",
+      "district /run endpoint calls same live runner trigger"
+    ],
+    "solver_binding": {
+      "run_selection": "latest completed run with final demand signal",
+      "request_status_refresh": "_refresh_request_statuses_for_latest_live_run computes slot-level allocated/unmet shares and updates lifecycle fields"
+    }
+  },
+  "escalation_flow": {
+    "district_to_state_market": [
+      "district creates mutual aid request",
+      "other states view market and submit offers",
+      "requesting state accepts/rejects/revokes offer",
+      "accepted offer creates confirmed state transfer"
+    ],
+    "state_to_national": [
+      "state escalates request via /state/escalations/{id}",
+      "national resolves via /national/escalations/{id}/resolve",
+      "optional pool allocation before resolve"
+    ],
+    "pool_paths": [
+      "district return -> district stock refill or state/national pool credit based on source",
+      "state pool allocate -> negative pool transaction",
+      "national pool allocate -> negative pool transaction"
+    ]
+  },
+  "metrics_map": {
+    "district": [
+      "kpi: final_demand, allocated, unmet, coverage",
+      "avg delay from allocations.implied_delay_hours",
+      "allocation transparency = 0.7*coverage + 0.3*trace score"
+    ],
+    "state": [
+      "kpi totals from /state/kpis",
+      "mutual aid sent/received from sign of pool transaction deltas",
+      "top unmet districts from allocation summary"
+    ],
+    "national": [
+      "kpi totals from /national/kpis",
+      "national stock sum from /national/stock",
+      "inter-state transfer count from pool tx reason contains transfer/mutual"
+    ],
+    "admin": [
+      "scenario counts, run counts, analysis counts from selected scenario artifacts"
+    ]
+  },
+  "risk_checklist": [
+    {
+      "id": "negative_qty_ui",
+      "status": "partially_guarded",
+      "evidence": "frontend inputs use min=1 and backend service validates quantities >0; no generic UI hard-stop against displaying negative deltas where expected (pool tx)"
+    },
+    {
+      "id": "status_filter_mismatch",
+      "status": "present_risk",
+      "evidence": "multiple pages use literal status strings in UI filters; backend may emit additional statuses causing hidden rows"
+    },
+    {
+      "id": "cross_role_cache_invalidation",
+      "status": "present_risk",
+      "evidence": "frontend is polling-based; no websocket/event invalidation between roles"
+    },
+    {
+      "id": "resource_canonicalization",
+      "status": "guarded_backend",
+      "evidence": "request/action services normalize resource ids via canonical resolver; UI still accepts free text in some admin stock override fields"
+    },
+    {
+      "id": "delay_and_freshness_lag",
+      "status": "known_behavior",
+      "evidence": "dashboards poll every 3-5s; freshness labels are client refresh times"
+    },
+    {
+      "id": "zero_final_demand_rows",
+      "status": "guarded_backend",
+      "evidence": "run selection logic requires completed runs with signal (final demand/allocation presence)"
+    }
+  ],
+  "ambiguities": [
+    "Login UI role/state/district selectors are not sent to backend login request; backend role is authoritative from credentials.",
+    "No explicit auth token expiry despite error text mentioning expired token.",
+    "StateRequests page sources data from /state/escalations even when labels suggest all requests.",
+    "Admin audit tab reads browser-local audit store, not backend audit log API.",
+    "Some admin and escalation endpoints accept loose dict payloads without schema models.",
+    "No dedicated frontend contract typing for many backend responses (uses inline types)."
+  ],
+  "credential_coverage_requirements": {
+    "minimum_accounts": [
+      "district user with valid district_code + state_code",
+      "state user with valid state_code",
+      "national user",
+      "admin user"
+    ],
+    "state_variants": [
+      "at least two distinct state accounts for mutual aid market/offer flow",
+      "districts in same state and different states to validate escalation and transfer provenance"
+    ],
+    "seed_dependencies": [
+      "resource catalog populated",
+      "state/district metadata populated",
+      "non-zero stock for refill/pool tests",
+      "pending and escalated requests for state/national request pages"
+    ]
+  }
+}

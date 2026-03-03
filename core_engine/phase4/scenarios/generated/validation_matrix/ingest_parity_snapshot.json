@@ -1,0 +1,22 @@
+{
+  "solver_run_id": 119,
+  "csv": {
+    "alloc_count": 2,
+    "unmet_count": 0,
+    "alloc_sum": 10.0,
+    "unmet_sum": 0.0
+  },
+  "db": {
+    "alloc_count": 2,
+    "unmet_count": 0,
+    "alloc_sum": 10.0,
+    "unmet_sum": 0.0
+  },
+  "matches": {
+    "alloc_count": true,
+    "unmet_count": true,
+    "alloc_sum": true,
+    "unmet_sum": true
+  },
+  "all_match": true
+}

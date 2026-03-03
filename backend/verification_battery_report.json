@@ -1,0 +1,215 @@
+{
+  "summary": {
+    "total": 23,
+    "pass": 23,
+    "fail": 0,
+    "overall_ok": true
+  },
+  "hard_requirements": {
+    "all_A_to_D_pass": true,
+    "B2_pass": true,
+    "C2_pass": true,
+    "I1_pass": true
+  },
+  "category_totals": {
+    "A": {
+      "pass": 3,
+      "fail": 0
+    },
+    "B": {
+      "pass": 2,
+      "fail": 0
+    },
+    "C": {
+      "pass": 3,
+      "fail": 0
+    },
+    "D": {
+      "pass": 4,
+      "fail": 0
+    },
+    "E": {
+      "pass": 2,
+      "fail": 0
+    },
+    "F": {
+      "pass": 3,
+      "fail": 0
+    },
+    "G": {
+      "pass": 2,
+      "fail": 0
+    },
+    "H": {
+      "pass": 2,
+      "fail": 0
+    },
+    "I": {
+      "pass": 2,
+      "fail": 0
+    }
+  },
+  "results": [
+    {
+      "id": "A1",
+      "status": "PASS",
+      "evidence": "run_id=172, final_demand_rows=55",
+      "root_cause": null,
+      "minimal_fix": null
+    },
+    {
+      "id": "A2",
+      "status": "PASS",
+      "evidence": "scenario_id=38, run_ids=(173,174) deterministic",
+      "root_cause": null,
+      "minimal_fix": null
+    },
+    {
+      "id": "A3",
+      "status": "PASS",
+      "evidence": "human_only_run=175, baseline_only_run=176, human_rows=0 enforced",
+      "root_cause": null,
+      "minimal_fix": null
+    },
+    {
+      "id": "B1",
+      "status": "PASS",
+      "evidence": "latest_run=121, prev_run=119, state_summary_run=121, national_summary_run=121",
+      "root_cause": null,
+      "minimal_fix": null
+    },
+    {
+      "id": "B2",
+      "status": "PASS",
+      "evidence": "run_id=174, slots_checked=35200, violations=0",
+      "root_cause": null,
+      "minimal_fix": null
+    },
+    {
+      "id": "C2",
+      "status": "PASS",
+      "evidence": "run_id=177, final=3619.38, unmet=56.31, scarcity=0.0156",
+      "root_cause": null,
+      "minimal_fix": null
+    },
+    {
+      "id": "C3",
+      "status": "PASS",
+      "evidence": "run_id=174, inflation_violations=0",
+      "root_cause": null,
+      "minimal_fix": null
+    },
+    {
+      "id": "C1",
+      "status": "PASS",
+      "evidence": "scenario_run=178, slot=(1,R10,3), final=5.00, unmet=0.00, coverage=1.0000",
+      "root_cause": null,
+      "minimal_fix": null
+    },
+    {
+      "id": "D1",
+      "status": "PASS",
+      "evidence": "District UI computes coverage from final_demand_quantity.",
+      "root_cause": null,
+      "minimal_fix": null
+    },
+    {
+      "id": "D2",
+      "status": "PASS",
+      "evidence": "Time slot filter wired through query parameter.",
+      "root_cause": null,
+      "minimal_fix": null
+    },
+    {
+      "id": "D3",
+      "status": "PASS",
+      "evidence": "District-level data isolation filter present.",
+      "root_cause": null,
+      "minimal_fix": null
+    },
+    {
+      "id": "D4",
+      "status": "PASS",
+      "evidence": "Freshness queued banner implemented.",
+      "root_cause": null,
+      "minimal_fix": null
+    },
+    {
+      "id": "E1",
+      "status": "PASS",
+      "evidence": "Request lifecycle fields included_in_run + queued status present.",
+      "root_cause": null,
+      "minimal_fix": null
+    },
+    {
+      "id": "E2",
+      "status": "PASS",
+      "evidence": "Status mapping logic present in request status refresh (allocated/partial/unmet/pending).",
+      "root_cause": null,
+      "minimal_fix": null
+    },
+    {
+      "id": "F2",
+      "status": "PASS",
+      "evidence": "Consumable flow ok for R1.",
+      "root_cause": null,
+      "minimal_fix": null
+    },
+    {
+      "id": "F3",
+      "status": "PASS",
+      "evidence": "Reusable return flow ok for R10.",
+      "root_cause": null,
+      "minimal_fix": null
+    },
+    {
+      "id": "F1",
+      "status": "PASS",
+      "evidence": "Claim operation updates claimed/remaining fields.",
+      "root_cause": null,
+      "minimal_fix": null
+    },
+    {
+      "id": "G1",
+      "status": "PASS",
+      "evidence": "Free-text resource rejected.",
+      "root_cause": null,
+      "minimal_fix": null
+    },
+    {
+      "id": "G2",
+      "status": "PASS",
+      "evidence": "canonical_name unique: 13/13",
+      "root_cause": null,
+      "minimal_fix": null
+    },
+    {
+      "id": "H1",
+      "status": "PASS",
+      "evidence": "Priority token referenced in solver model.",
+      "root_cause": null,
+      "minimal_fix": null
+    },
+    {
+      "id": "H2",
+      "status": "PASS",
+      "evidence": "Urgency token referenced in solver model.",
+      "root_cause": null,
+      "minimal_fix": null
+    },
+    {
+      "id": "I1",
+      "status": "PASS",
+      "evidence": "district=1, final=2.88, alloc+unmet=2.88",
+      "root_cause": null,
+      "minimal_fix": null
+    },
+    {
+      "id": "I2",
+      "status": "PASS",
+      "evidence": "Zero-scarcity warning banner implemented in district UI.",
+      "root_cause": null,
+      "minimal_fix": null
+    }
+  ]
+}

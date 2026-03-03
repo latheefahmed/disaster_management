@@ -1,0 +1,43 @@
+{
+  "generated_at": "2026-03-03T16:38:42Z",
+  "scope": "High-level evaluation metrics (system quality, correctness, reliability, performance)",
+  "sources": [
+    "backend/manual_validation_suite_report.json",
+    "backend/DISTRICT603_LIVE_CAMPAIGN_REPORT.json",
+    "backend/SOLVER_BACKEND_BRUTEFORCE_DOSSIER.json",
+    "backend/PERFORMANCE_PROBE_MATRIX_LATEST.json"
+  ],
+  "high_level_metrics": {
+    "functional_accuracy_pct": 98.11,
+    "campaign_completion_rate_pct": 100.0,
+    "claim_success_rate_pct": 100.0,
+    "consume_success_rate_pct": 100.0,
+    "return_success_rate_pct": 100.0,
+    "consumable_conservation_rate_pct": 100.0,
+    "non_consumable_reversibility_rate_pct": 87.5,
+    "probe_http_success_rate_pct": 100.0,
+    "probe_failure_count": 0,
+    "latency_p50_ms": 861.56,
+    "latency_p95_ms": 10202.85,
+    "latency_max_ms": 11153.3,
+    "endpoints_p95_le_1s_pct": 50.0,
+    "endpoints_p95_le_3s_pct": 80.0,
+    "campaign_failed_cases": 0,
+    "timeout_incident_count": 1
+  },
+  "composite_indices": {
+    "correctness_score_pct": 97.6,
+    "reliability_score_pct": 100.0,
+    "performance_score_pct": 59.66,
+    "overall_quality_index_pct": 88.84
+  },
+  "interpretation": {
+    "quality_band": "good",
+    "top_risk": "High-latency summary endpoints dominate tail latency (state/national allocations summary).",
+    "notes": [
+      "Metrics are high-level and intentionally exclude low-level auth/login gate checks.",
+      "Accuracy is represented as operational correctness/pass accuracy using validated case outcomes.",
+      "Performance includes endpoint tail latency and SLO-like attainment ratios."
+    ]
+  }
+}

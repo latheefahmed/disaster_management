@@ -1,0 +1,71 @@
+{
+  "generated_at": "2026-03-02T17:15:27.146502Z",
+  "meta": {
+    "districts_available": 720,
+    "districts_per_run": 50,
+    "runs": 5,
+    "seed": 42,
+    "isolation_prep": {
+      "stale_running_marked_failed": 0,
+      "cleared_queue_requests": 0
+    }
+  },
+  "result": "pass",
+  "runs": [
+    {
+      "run_id": 1003,
+      "allocations": 2408,
+      "final_demands": 2408,
+      "requests": 50,
+      "sum_allocated": 5240.0,
+      "sum_unmet": 0,
+      "sum_final_demand": 5240.0,
+      "iteration": 1,
+      "inserted_requests": 50
+    },
+    {
+      "run_id": 1004,
+      "allocations": 2406,
+      "final_demands": 2406,
+      "requests": 49,
+      "sum_allocated": 4853.0,
+      "sum_unmet": 0,
+      "sum_final_demand": 4853.0,
+      "iteration": 2,
+      "inserted_requests": 50
+    },
+    {
+      "run_id": 1005,
+      "allocations": 2407,
+      "final_demands": 2407,
+      "requests": 50,
+      "sum_allocated": 4762.0,
+      "sum_unmet": 0,
+      "sum_final_demand": 4762.0,
+      "iteration": 3,
+      "inserted_requests": 50
+    },
+    {
+      "run_id": 1006,
+      "allocations": 2743,
+      "final_demands": 2742,
+      "requests": 49,
+      "sum_allocated": 6130.0,
+      "sum_unmet": 0,
+      "sum_final_demand": 6130.0,
+      "iteration": 4,
+      "inserted_requests": 50
+    },
+    {
+      "run_id": 1007,
+      "allocations": 2464,
+      "final_demands": 2464,
+      "requests": 50,
+      "sum_allocated": 5206.0,
+      "sum_unmet": 0,
+      "sum_final_demand": 5206.0,
+      "iteration": 5,
+      "inserted_requests": 50
+    }
+  ]
+}

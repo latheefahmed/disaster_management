@@ -1,0 +1,414 @@
+{
+  "generated_at": "2026-02-22T09:08:45.033648Z",
+  "district_code": "603",
+  "parent_state": "33",
+  "expected_parent_state": "33",
+  "neighbor_state": "1",
+  "overall_pass": true,
+  "phases": [
+    {
+      "phase": "P0",
+      "name": "Clean slate reset",
+      "passed": true,
+      "details": {
+        "targets": [
+          "requests",
+          "allocations",
+          "solver_runs",
+          "claims",
+          "consumptions",
+          "returns",
+          "pool_transactions",
+          "state_transfers",
+          "mutual_aid_offers",
+          "mutual_aid_requests",
+          "request_predictions",
+          "final_demands",
+          "inventory_snapshots",
+          "shipment_plans"
+        ],
+        "before": {
+          "requests": 3,
+          "allocations": 56,
+          "solver_runs": 1,
+          "claims": 3,
+          "consumptions": 1,
+          "returns": 2,
+          "pool_transactions": 2,
+          "state_transfers": 2,
+          "mutual_aid_offers": 1,
+          "mutual_aid_requests": 1,
+          "request_predictions": 0,
+          "final_demands": 56,
+          "inventory_snapshots": 1736,
+          "shipment_plans": 11
+        },
+        "after": {
+          "requests": 0,
+          "allocations": 0,
+          "solver_runs": 0,
+          "claims": 0,
+          "consumptions": 0,
+          "returns": 0,
+          "pool_transactions": 0,
+          "state_transfers": 0,
+          "mutual_aid_offers": 0,
+          "mutual_aid_requests": 0,
+          "request_predictions": 0,
+          "final_demands": 0,
+          "inventory_snapshots": 0,
+          "shipment_plans": 0
+        }
+      }
+    },
+    {
+      "phase": "P1",
+      "name": "Class rule enforcement",
+      "passed": true,
+      "details": {
+        "rows": 56,
+        "invalid_rows": []
+      }
+    },
+    {
+      "phase": "P2",
+      "name": "Source pool tracking schema",
+      "passed": true,
+      "details": {
+        "missing_columns": [],
+        "columns": [
+          "allocated_quantity",
+          "allocation_source_code",
+          "allocation_source_scope",
+          "claimed_quantity",
+          "consumed_quantity",
+          "created_at",
+          "district_code",
+          "id",
+          "implied_delay_hours",
+          "is_unmet",
+          "origin_district_code",
+          "origin_state",
+          "origin_state_code",
+          "receipt_confirmed",
+          "receipt_time",
+          "request_id",
+          "resource_id",
+          "returned_quantity",
+          "solver_run_id",
+          "state_code",
+          "status",
+          "supply_level",
+          "time"
+        ]
+      }
+    },
+    {
+      "phase": "P3",
+      "name": "Forced shortage setup",
+      "passed": true,
+      "details": {
+        "checks": {
+          "district_zero": true,
+          "state_only_c1": true,
+          "neighbor_only_n1": true,
+          "national_only_n2": true
+        },
+        "before": {
+          "district": {
+            "R5": 0.0,
+            "R8": 0.0,
+            "R41": 0.0
+          },
+          "state": {
+            "R5": 500000000.0,
+            "R8": 0.0,
+            "R41": 0.0
+          },
+          "neighbor_state": {
+            "R5": 0.0,
+            "R8": 5000000.0,
+            "R41": 0.0
+          },
+          "national": {
+            "R5": 0.0,
+            "R8": 0.0,
+            "R41": 5000000.0
+          }
+        },
+        "after": {
+          "district": {
+            "R5": 0.0,
+            "R8": 0.0,
+            "R41": 0.0
+          },
+          "state": {
+            "R5": 500000000.0,
+            "R8": 0.0,
+            "R41": 0.0
+          },
+          "neighbor_state": {
+            "R5": 0.0,
+            "R8": 5000000.0,
+            "R41": 0.0
+          },
+          "national": {
+            "R5": 0.0,
+            "R8": 0.0,
+            "R41": 5000000.0
+          }
+        },
+        "desired": {
+          "district": {
+            "R5": 0.0,
+            "R8": 0.0,
+            "R41": 0.0
+          },
+          "state": {
+            "R5": 500000000.0,
+            "R8": 0.0,
+            "R41": 0.0
+          },
+          "neighbor_state": {
+            "R5": 0.0,
+            "R8": 5000000.0,
+            "R41": 0.0
+          },
+          "national": {
+            "R5": 0.0,
+            "R8": 0.0,
+            "R41": 5000000.0
+          }
+        }
+      }
+    },
+    {
+      "phase": "P4",
+      "name": "Request + solver run escalation chain",
+      "passed": true,
+      "details": {
+        "solver_run_id": 1,
+        "solver_status": "completed",
+        "checks": {
+          "solver_completed": true,
+          "c1_from_state": true,
+          "n1_from_neighbor": true,
+          "n2_from_national": true,
+          "no_unmet": true
+        },
+        "allocation_sources": {
+          "R5": {
+            "allocated": 400.19392,
+            "source_scope": "state",
+            "source_code": "33",
+            "supply_level": "state",
+            "origin_state_code": "33"
+          },
+          "R8": {
+            "allocated": 4.1034243,
+            "source_scope": "neighbor_state",
+            "source_code": "1",
+            "supply_level": "state",
+            "origin_state_code": "1"
+          },
+          "R41": {
+            "allocated": 1.0,
+            "source_scope": "national",
+            "source_code": "NATIONAL",
+            "supply_level": "national",
+            "origin_state_code": "NATIONAL"
+          }
+        },
+        "unmet_total": 0.0,
+        "mutual_aid": {
+          "request_id": 1,
+          "offer_id": 1,
+          "offer_status": "accepted"
+        }
+      }
+    },
+    {
+      "phase": "P5",
+      "name": "Consumable flow",
+      "passed": true,
+      "details": {
+        "consume_performed": true,
+        "consume_error": "",
+        "c1_available": 400.19392,
+        "return_blocked": true,
+        "return_error": "Resource 'R5' is non-returnable and cannot be added to pool"
+      }
+    },
+    {
+      "phase": "P6",
+      "name": "Non-consumable return flow",
+      "passed": true,
+      "details": {
+        "checks": {
+          "n1_origin_pool_increased": true,
+          "n2_origin_pool_increased": true,
+          "district_n1_unchanged": true,
+          "district_n2_unchanged": true
+        },
+        "n1_available": 4.1034243,
+        "n2_available": 1.0,
+        "pool_before": {
+          "neighbor_n1": 0.0,
+          "national_n2": 0.0
+        },
+        "pool_after": {
+          "neighbor_n1": 1.0,
+          "national_n2": 1.0
+        },
+        "district_stock_before": {
+          "N1": 0.0,
+          "N2": 0.0
+        },
+        "district_stock_after": {
+          "N1": 0.0,
+          "N2": 0.0
+        },
+        "run_id": 1
+      }
+    },
+    {
+      "phase": "P7",
+      "name": "Escalation UI verification (code-level)",
+      "passed": true,
+      "details": {
+        "file": "C:\\Users\\LATHEEF\\Desktop\\disaster_management\\frontend\\disaster-frontend\\src\\dashboards\\district\\DistrictOverview.tsx",
+        "checks": {
+          "requests_status_column": true,
+          "allocations_source_scope_column": true,
+          "unmet_tab_present": true,
+          "agent_recommendations_tab": true
+        }
+      }
+    }
+  ],
+  "stock_after_setup": {
+    "district": {
+      "R5": 0.0,
+      "R8": 0.0,
+      "R41": 0.0
+    },
+    "state": {
+      "R5": 500000000.0,
+      "R8": 0.0,
+      "R41": 0.0
+    },
+    "neighbor_state": {
+      "R5": 0.0,
+      "R8": 5000000.0,
+      "R41": 0.0
+    },
+    "national": {
+      "R5": 0.0,
+      "R8": 0.0,
+      "R41": 5000000.0
+    }
+  },
+  "requests": {
+    "time": 0,
+    "rows": [
+      {
+        "resource_id": "R5",
+        "quantity": 100.0
+      },
+      {
+        "resource_id": "R8",
+        "quantity": 1.0
+      },
+      {
+        "resource_id": "R41",
+        "quantity": 1.0
+      }
+    ]
+  },
+  "allocation_sources": {
+    "R5": {
+      "allocated": 400.19392,
+      "source_scope": "state",
+      "source_code": "33",
+      "supply_level": "state",
+      "origin_state_code": "33"
+    },
+    "R8": {
+      "allocated": 4.1034243,
+      "source_scope": "neighbor_state",
+      "source_code": "1",
+      "supply_level": "state",
+      "origin_state_code": "1"
+    },
+    "R41": {
+      "allocated": 1.0,
+      "source_scope": "national",
+      "source_code": "NATIONAL",
+      "supply_level": "national",
+      "origin_state_code": "NATIONAL"
+    }
+  },
+  "consume_return": {
+    "phase5": {
+      "consume_performed": true,
+      "consume_error": "",
+      "c1_available": 400.19392,
+      "return_blocked": true,
+      "return_error": "Resource 'R5' is non-returnable and cannot be added to pool"
+    },
+    "phase6": {
+      "checks": {
+        "n1_origin_pool_increased": true,
+        "n2_origin_pool_increased": true,
+        "district_n1_unchanged": true,
+        "district_n2_unchanged": true
+      },
+      "n1_available": 4.1034243,
+      "n2_available": 1.0,
+      "pool_before": {
+        "neighbor_n1": 0.0,
+        "national_n2": 0.0
+      },
+      "pool_after": {
+        "neighbor_n1": 1.0,
+        "national_n2": 1.0
+      },
+      "district_stock_before": {
+        "N1": 0.0,
+        "N2": 0.0
+      },
+      "district_stock_after": {
+        "N1": 0.0,
+        "N2": 0.0
+      },
+      "run_id": 1
+    },
+    "context": {
+      "run_id": 1
+    }
+  },
+  "run_history_table": [
+    {
+      "run_id": 1,
+      "mode": "live",
+      "status": "completed",
+      "alloc_rows": 56,
+      "unmet_total": 0.0,
+      "created_at": "2026-02-22 09:08:39.107719"
+    }
+  ],
+  "all_happenings": {
+    "solver_runs": [
+      {
+        "run_id": 1,
+        "mode": "live",
+        "status": "completed",
+        "alloc_rows": 56,
+        "unmet_total": 0.0,
+        "created_at": "2026-02-22 09:08:39.107719"
+      }
+    ],
+    "pool_transactions_count": 2,
+    "allocations_count": 56
+  }
+}

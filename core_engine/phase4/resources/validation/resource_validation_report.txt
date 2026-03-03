@@ -1,0 +1,5 @@
+Resource DB generated at 2026-02-21T18:18:22.506661+00:00
+Canonical resource count: 56
+District rows: 106848 (expected 106848)
+State mobilization ratio: 0.40
+National mobilization ratio: 0.30

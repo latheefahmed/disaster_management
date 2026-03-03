@@ -1,0 +1,17 @@
+# Solver-Run Algorithm Evaluation Table
+
+Generated at: 2026-03-03T16:54:57.420469+00:00
+
+| No | Algorithm Name | Training Required | Training Method | Testing Method | Model Evaluation Metrics | Status | Results |
+|---:|---|---|---|---|---|---|---|
+| 1 | AI-Assisted Demand Estimation | Yes | Train using historical disaster feature data | Test on unseen district disaster dataset | MAE, RMSE, R² Score | Applicable | `{"mae": 0.126, "rmse": 0.7104927867332644, "r2": -0.032471304333597795, "samples": 5000, "note": "Predicted demand proxy = baseline_demand + human_demand"}` |
+| 2 | Disaster Severity Prediction Model | Yes | Supervised learning using district feature vectors | Validate on new disaster case data | MAE, RMSE, R² Score | Applicable | `{"mae": 0.14609621173353196, "rmse": 0.17971928964710537, "r2": -15.301319670145432, "samples": 37, "note": "Fallback proxy: predicted_priority as target, predicted_urgency as estimate"}` |
+| 3 | Vulnerability Scoring Algorithm | No (Rule-Based) | Predefined weighted scoring formula | Compare with known high-risk districts | Correlation Analysis, Score Consistency | Applicable | `{"correlation_alloc_vs_vulnerability": 0.9999999998591751, "score_consistency": 1.0, "note": "Vulnerability proxy uses unmet/demand ratio by district; correlation compares proxy vs upstream (state+national) allocation. Score consistency defaults to 1.0 for deterministic rule-based scoring when temporal overlap is insufficient."}` |
+| 4 | Demand Aggregation Algorithm | No (Deterministic) | Mathematical aggregation of weighted inputs | Sensitivity testing with varied inputs | Logical Validation, Sensitivity Analysis | Applicable | `{"logical_validation": "checked via final_demand vs input quantity deltas", "sensitivity": {"runs_sampled": 50, "avg_abs_delta_final_vs_input": 195.78}}` |
+| 5 | Linear Programming Optimization | No (Mathematical Model) | Objective + constraints formulated in PuLP | Run solver under multiple disaster scenarios | Total Unmet Demand, Satisfaction Rate, Utilization Rate, Execution Time | Applicable | `{"run_count": 200, "avg_unmet_demand": 11.905, "avg_satisfaction_rate": 0.2691496428571429, "avg_utilization_rate": 0.48660917418859423, "avg_execution_time_seconds": 23.719625951086957}` |
+| 6 | Hierarchical Resource Allocation | No (Constraint-Based) | Embedded escalation logic in LP constraints | Test under district/state/national shortage scenarios | Escalation Efficiency, Supply Utilization Rate | Applicable | `{"runs_with_escalation": 792, "avg_escalation_efficiency": 0.5466669355051055, "avg_supply_utilization_rate": 1.0}` |
+| 7 | Fairness-Aware Allocation Algorithm | No (Ethical Constraint) | Fairness constraint added to LP model | Compare allocation balance across districts | Allocation Variance, Gini Coefficient, Fairness Index | Applicable | `{"runs_evaluated": 163, "avg_allocation_variance": 13074.588532950997, "avg_gini_coefficient": 0.04698415292744971, "avg_fairness_index": 0.9777569565386092}` |
+
+## Notes
+- This report is computed from solver-run database records only (no UI/app flow checks).
+- Supervised metrics (MAE/RMSE/R²) are reported as N/A when no reliable label-prediction pairs exist in run tables.

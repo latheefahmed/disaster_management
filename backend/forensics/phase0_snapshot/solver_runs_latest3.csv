@@ -1,0 +1,4 @@
+id,scenario_id,mode,status,demand_snapshot_path,started_at,weight_model_id,priority_model_id,urgency_model_id
+71,,live,completed,,2026-02-22 05:29:06.519492,,1,2
+70,,live,completed,,2026-02-22 05:06:23.623266,,1,2
+69,,live,completed,,2026-02-22 05:05:40.887531,,1,2

@@ -1,0 +1,12 @@
+{
+  "districts": 1,
+  "resources": 1,
+  "time_steps": 1,
+  "horizon": 1,
+  "rolling": false,
+  "total_demand": 10.0,
+  "total_stock": 0.0,
+  "total_unmet": 10.0,
+  "objective": 10000000.0,
+  "status": "Optimal"
+}

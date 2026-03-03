@@ -1,0 +1,333 @@
+{
+  "generated_at": "2026-02-21T02:21:19.999668+00:00",
+  "baseline": {
+    "recent_runs": [
+      {
+        "id": 208,
+        "mode": "live",
+        "status": "failed",
+        "scenario_id": null,
+        "started_at": "2026-02-21 01:30:30.694066"
+      },
+      {
+        "id": 207,
+        "mode": "live",
+        "status": "failed",
+        "scenario_id": null,
+        "started_at": "2026-02-21 00:37:54.137888"
+      },
+      {
+        "id": 206,
+        "mode": "scenario",
+        "status": "completed",
+        "scenario_id": 58,
+        "started_at": "2026-02-21 00:37:48.405038"
+      },
+      {
+        "id": 205,
+        "mode": "scenario",
+        "status": "completed",
+        "scenario_id": 57,
+        "started_at": "2026-02-21 00:37:41.154939"
+      },
+      {
+        "id": 204,
+        "mode": "scenario",
+        "status": "completed",
+        "scenario_id": 56,
+        "started_at": "2026-02-21 00:37:33.017655"
+      },
+      {
+        "id": 203,
+        "mode": "scenario",
+        "status": "completed",
+        "scenario_id": 55,
+        "started_at": "2026-02-21 00:37:22.654027"
+      },
+      {
+        "id": 202,
+        "mode": "scenario",
+        "status": "completed",
+        "scenario_id": 54,
+        "started_at": "2026-02-21 00:37:14.222393"
+      },
+      {
+        "id": 201,
+        "mode": "scenario",
+        "status": "completed",
+        "scenario_id": 53,
+        "started_at": "2026-02-21 00:36:57.120046"
+      },
+      {
+        "id": 200,
+        "mode": "live",
+        "status": "completed",
+        "scenario_id": null,
+        "started_at": "2026-02-20 23:57:43.537517"
+      },
+      {
+        "id": 199,
+        "mode": "live",
+        "status": "failed",
+        "scenario_id": null,
+        "started_at": "2026-02-20 23:28:14.409482"
+      }
+    ]
+  },
+  "matrix": {
+    "district_only": {
+      "scenario_id": 59,
+      "run_id": 209,
+      "run_status": "completed",
+      "district_code": "1",
+      "state_code": "1",
+      "resource_id": "R7",
+      "csv_stock": {
+        "district_stock": 114.0,
+        "state_stock": 2412.0,
+        "national_stock": 72883.0
+      },
+      "input": {
+        "demand": 57.0,
+        "state_override": 0.0,
+        "national_override": 0.0,
+        "time": 0
+      },
+      "metrics": {
+        "final": 57.0,
+        "district_alloc": 57.0,
+        "state_alloc": 0.0,
+        "national_alloc": 0.0,
+        "alloc_total": 57.0,
+        "unmet": 0.0,
+        "conservation_ok": true
+      },
+      "pass": true
+    },
+    "state_only": {
+      "scenario_id": 60,
+      "run_id": 210,
+      "run_status": "completed",
+      "district_code": "2",
+      "state_code": "1",
+      "resource_id": "R11",
+      "csv_stock": {
+        "district_stock": 0.0,
+        "state_stock": 7.0,
+        "national_stock": 323.0
+      },
+      "input": {
+        "demand": 1.0,
+        "state_override": 7.0,
+        "national_override": 0.0,
+        "time": 0
+      },
+      "metrics": {
+        "final": 1.0,
+        "district_alloc": 0.0,
+        "state_alloc": 1.0,
+        "national_alloc": 0.0,
+        "alloc_total": 1.0,
+        "unmet": 0.0,
+        "conservation_ok": true
+      },
+      "pass": true
+    },
+    "national_only": {
+      "scenario_id": 61,
+      "run_id": 211,
+      "run_status": "completed",
+      "district_code": "55",
+      "state_code": "4",
+      "resource_id": "R11",
+      "csv_stock": {
+        "district_stock": 0.0,
+        "state_stock": 0.0,
+        "national_stock": 323.0
+      },
+      "input": {
+        "demand": 32.300000000000004,
+        "state_override": 0.0,
+        "national_override": 323.0,
+        "time": 0
+      },
+      "metrics": {
+        "final": 32.3,
+        "district_alloc": 0.0,
+        "state_alloc": 0.0,
+        "national_alloc": 32.3,
+        "alloc_total": 32.3,
+        "unmet": 0.0,
+        "conservation_ok": true
+      },
+      "pass": true
+    },
+    "district_state": {
+      "scenario_id": 62,
+      "run_id": 212,
+      "run_status": "completed",
+      "district_code": "1",
+      "state_code": "1",
+      "resource_id": "R7",
+      "csv_stock": {
+        "district_stock": 114.0,
+        "state_stock": 2412.0,
+        "national_stock": 72883.0
+      },
+      "input": {
+        "demand": 214.0,
+        "state_override": 2412.0,
+        "national_override": 0.0,
+        "time": 0
+      },
+      "metrics": {
+        "final": 214.0,
+        "district_alloc": 114.0,
+        "state_alloc": 100.0,
+        "national_alloc": 0.0,
+        "alloc_total": 214.0,
+        "unmet": 0.0,
+        "conservation_ok": true
+      },
+      "pass": true
+    },
+    "district_national": {
+      "scenario_id": 63,
+      "run_id": 213,
+      "run_status": "completed",
+      "district_code": "1",
+      "state_code": "1",
+      "resource_id": "R7",
+      "csv_stock": {
+        "district_stock": 114.0,
+        "state_stock": 2412.0,
+        "national_stock": 72883.0
+      },
+      "input": {
+        "demand": 214.0,
+        "state_override": 0.0,
+        "national_override": 72883.0,
+        "time": 0
+      },
+      "metrics": {
+        "final": 214.0,
+        "district_alloc": 114.0,
+        "state_alloc": 0.0,
+        "national_alloc": 100.0,
+        "alloc_total": 214.0,
+        "unmet": 0.0,
+        "conservation_ok": true
+      },
+      "pass": true
+    },
+    "full_shortage": {
+      "scenario_id": 64,
+      "run_id": 214,
+      "run_status": "completed",
+      "district_code": "1",
+      "state_code": "1",
+      "resource_id": "R7",
+      "csv_stock": {
+        "district_stock": 114.0,
+        "state_stock": 2412.0,
+        "national_stock": 72883.0
+      },
+      "input": {
+        "demand": 214.0,
+        "state_override": 0.0,
+        "national_override": 0.0,
+        "time": 0
+      },
+      "metrics": {
+        "final": 214.0,
+        "district_alloc": 114.0,
+        "state_alloc": 0.0,
+        "national_alloc": 0.0,
+        "alloc_total": 114.0,
+        "unmet": 100.0,
+        "conservation_ok": true
+      },
+      "pass": true
+    }
+  },
+  "live_run_test": {
+    "run_id": 215,
+    "status": "running",
+    "final_demands": 0,
+    "allocations": 0,
+    "pass": false
+  },
+  "dashboard_binding_test": {
+    "selected_run_id": 214,
+    "selected_mode": "scenario",
+    "rows": 1,
+    "nonzero_rows": 1,
+    "pass": true
+  },
+  "escalation_non_blocking_test": {
+    "request_id": 172,
+    "status_after_escalate": "pending",
+    "run_id": 216,
+    "allocated_quantity": 0.0,
+    "pass": false
+  },
+  "candidate_selection": {
+    "missing": [],
+    "selected": {
+      "district_only": {
+        "district_code": "1",
+        "state_code": "1",
+        "resource_id": "R7",
+        "district_stock": 114.0,
+        "state_stock": 2412.0,
+        "national_stock": 72883.0
+      },
+      "state_only": {
+        "district_code": "2",
+        "state_code": "1",
+        "resource_id": "R11",
+        "district_stock": 0.0,
+        "state_stock": 7.0,
+        "national_stock": 323.0
+      },
+      "national_only": {
+        "district_code": "55",
+        "state_code": "4",
+        "resource_id": "R11",
+        "district_stock": 0.0,
+        "state_stock": 0.0,
+        "national_stock": 323.0
+      },
+      "district_state": {
+        "district_code": "1",
+        "state_code": "1",
+        "resource_id": "R7",
+        "district_stock": 114.0,
+        "state_stock": 2412.0,
+        "national_stock": 72883.0
+      },
+      "district_national": {
+        "district_code": "1",
+        "state_code": "1",
+        "resource_id": "R7",
+        "district_stock": 114.0,
+        "state_stock": 2412.0,
+        "national_stock": 72883.0
+      },
+      "full_shortage": {
+        "district_code": "1",
+        "state_code": "1",
+        "resource_id": "R7",
+        "district_stock": 114.0,
+        "state_stock": 2412.0,
+        "national_stock": 72883.0
+      }
+    }
+  },
+  "summary": {
+    "matrix_pass": true,
+    "live_run_pass": false,
+    "escalation_pass": false,
+    "dashboard_binding_pass": true
+  }
+}

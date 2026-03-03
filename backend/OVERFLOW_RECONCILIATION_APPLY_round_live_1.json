@@ -1,0 +1,29 @@
+{
+  "keep_latest": 300,
+  "scope": "all",
+  "dry_run": false,
+  "active_count": 300,
+  "overflow_candidates": 31493,
+  "processed": 100,
+  "returned": 18,
+  "refilled": 70,
+  "skipped": 10495,
+  "failed": 1,
+  "returned_quantity": 72.0,
+  "refilled_quantity": 280.0,
+  "errors": [
+    {
+      "allocation_id": 21641,
+      "solver_run_id": 473,
+      "district_code": "603",
+      "resource_id": "R11",
+      "time": 3,
+      "error": "Claim quantity exceeds allocated quantity"
+    }
+  ],
+  "max_process": 100,
+  "stopped_early": true,
+  "run_id": "overflow-reconcile-20260228T104438Z",
+  "applied": true,
+  "generated_at": "2026-02-28T10:45:44.629954Z"
+}

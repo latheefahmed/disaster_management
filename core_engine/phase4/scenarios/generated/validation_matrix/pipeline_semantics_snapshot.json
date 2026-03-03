@@ -1,0 +1,19 @@
+{
+  "merge": {
+    "rows": 2,
+    "merged_total_demand": 45.0,
+    "has_nonzero": true
+  },
+  "escalation": {
+    "request_id": 102,
+    "status_after": "escalated_national",
+    "allocation_count_before": 3657220,
+    "allocation_count_after": 3657220,
+    "direct_allocation_side_effect": false
+  },
+  "receipt": {
+    "allocation_id": 3657221,
+    "receipt_confirmed": true,
+    "receipt_time_present": true
+  }
+}

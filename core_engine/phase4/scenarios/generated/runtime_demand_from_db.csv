@@ -1,0 +1,6 @@
+district_code,resource_id,time,demand
+1,R1,0,5.0
+1,R3,0,1000.0
+603,water,0,100.0
+603,water,0,100.0
+603,water,0,100.0

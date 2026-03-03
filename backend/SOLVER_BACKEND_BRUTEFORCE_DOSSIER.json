@@ -1,0 +1,145 @@
+{
+  "generated_at": "2026-03-03T14:22:00Z",
+  "scope": {
+    "mode": "backend-only solver control",
+    "ui_buttons_used": false,
+    "objective": "bruteforce solver/e2e behavior with timing, outcomes, failure flags, model-effectiveness signals"
+  },
+  "methodology": {
+    "executed_scripts": [
+      "run_district603_live_campaign.py",
+      "scripts/performance_probe_matrix.py"
+    ],
+    "notes": [
+      "Used API-driven solver trigger/control and endpoint probes.",
+      "Excluded flaky UI button path as requested.",
+      "Campaign resumed from existing checkpoint and completed full 25/25 cases."
+    ]
+  },
+  "section_1_run_control": {
+    "solver_trigger_endpoint": "/district/run",
+    "solver_status_endpoint": "/district/solver-status",
+    "run_trigger_status": 200,
+    "run_trigger_body": {
+      "status": "accepted",
+      "solver_run_id": 1040,
+      "requested_by": "603"
+    },
+    "completed": true
+  },
+  "section_2_case_coverage": {
+    "cases_total": 25,
+    "resources_covered": 11,
+    "claims_ok": 25,
+    "consumes_ok": 17,
+    "returns_ok": 8,
+    "checkpoint_resume_used": true
+  },
+  "section_3_response_timing": {
+    "login_ms": {
+      "district": 36.6517000074964,
+      "state": 42.52009998890571,
+      "national": 18.981600005645305,
+      "admin": 36.45659997710027
+    },
+    "probe_total_ms": 15461.088399984874,
+    "overall": {
+      "count": 40,
+      "p50_ms": 861.561450001318,
+      "p95_ms": 10202.852199989138,
+      "max_ms": 11153.304700012086,
+      "avg_ms": 2616.2202025021543
+    },
+    "slowest_endpoints": [
+      {
+        "endpoint": "state:/state/allocations/summary",
+        "p95_ms": 9856.726800004253,
+        "max_ms": 10202.852199989138
+      },
+      {
+        "endpoint": "national:/national/allocations/summary",
+        "p95_ms": 10536.80400000303,
+        "max_ms": 11153.304700012086
+      },
+      {
+        "endpoint": "district:/district/run-history",
+        "p95_ms": 2655.402400007006,
+        "max_ms": 3217.502700019395
+      }
+    ],
+    "probe_failures": []
+  },
+  "section_4_non_consumable_pool_return": {
+    "evidence_source": "DISTRICT603_LIVE_CAMPAIGN_REPORT.json",
+    "non_consumable_return_cases": 8,
+    "observed_pattern": "post_district and post_available increase on return; state/national remain unchanged when source scope is district",
+    "sample": {
+      "resource_id": "R10",
+      "class": "non_consumable",
+      "claim_status": 200,
+      "return_status": 200,
+      "delta_district": 1.0,
+      "delta_state": 0.0,
+      "delta_national": 0.0,
+      "delta_available": 1.0
+    },
+    "pass": true
+  },
+  "section_5_escalation_and_aid": {
+    "escalation": {
+      "request_status": 201,
+      "run_trigger_status": 200,
+      "state_candidates_count": 866,
+      "state_escalation_object": {}
+    },
+    "manual_aid": {
+      "request_status": 200,
+      "offer_status": 200,
+      "accept_status": 200
+    },
+    "pass": true
+  },
+  "section_6_model_effectiveness_signals": {
+    "available_from_campaign": [
+      "priority/urgency high-demand escalation accepted",
+      "solver completion under repeated demand waves",
+      "allocation/claim/consume/return state transitions"
+    ],
+    "not_computed_in_this_backend_only_pass": [
+      "UI priority-time spread plots from strict UI runner"
+    ],
+    "recommendation": "Run run_stability_matrix.py after this dossier for deeper deterministic/model splits."
+  },
+  "section_7_failed_or_flagged_runs": {
+    "flagged": [
+      {
+        "name": "previous_ui_strict_mass_run",
+        "status": "failed",
+        "reason": "backend read timeout (40s) plus UI/env availability issues",
+        "legitimacy": "real infrastructure/timeout issue, not synthetic"
+      }
+    ],
+    "current_backend_campaign_failed_cases": 0
+  },
+  "section_8_root_causes": [
+    "Intermittent backend unavailability during long UI strict sessions caused aborts.",
+    "Heavy summary endpoints (/state|/national allocations/summary) are dominant latency contributors.",
+    "UI path added additional flake unrelated to solver correctness."
+  ],
+  "section_9_fixes_applied_or_workarounds": [
+    "Switched to backend-only solver control as requested.",
+    "Used checkpoint-resume campaign to avoid losing progress.",
+    "Collected explicit endpoint latency matrix to isolate hot paths."
+  ],
+  "section_10_next_improvements": [
+    "Add retry/backoff wrapper around /district/solver-status and summary endpoints in long runners.",
+    "Introduce paginated/limited summary fetch in state/national aggregation endpoints for large runs.",
+    "Keep UI strict runner for interaction audits only; use backend harness for throughput certification.",
+    "Generate per-run latency histogram and timeout budget thresholds in CI evidence."
+  ],
+  "artifacts": {
+    "campaign_report": "backend/DISTRICT603_LIVE_CAMPAIGN_REPORT.json",
+    "performance_probe": "backend/PERFORMANCE_PROBE_MATRIX_LATEST.json",
+    "this_dossier": "backend/SOLVER_BACKEND_BRUTEFORCE_DOSSIER.json"
+  }
+}

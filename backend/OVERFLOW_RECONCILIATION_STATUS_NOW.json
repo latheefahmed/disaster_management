@@ -1,0 +1,19 @@
+{
+  "keep_latest": 300,
+  "scope": "all",
+  "dry_run": true,
+  "active_count": 300,
+  "overflow_candidates": 31493,
+  "processed": 19520,
+  "returned": 7189,
+  "refilled": 12331,
+  "skipped": 11973,
+  "failed": 0,
+  "returned_quantity": 113970010.0,
+  "refilled_quantity": 1518118152.0,
+  "errors": [],
+  "max_process": null,
+  "run_id": "overflow-reconcile-20260228T105840Z",
+  "applied": false,
+  "generated_at": "2026-02-28T10:58:42.180897Z"
+}

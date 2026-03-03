@@ -1,0 +1,120 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - heading "Disaster Resource Management System" [level=1] [ref=e6]
+      - navigation [ref=e7]:
+        - link "District" [ref=e8] [cursor=pointer]:
+          - /url: /district
+        - link "District Request" [ref=e9] [cursor=pointer]:
+          - /url: /district/request
+        - button "Logout" [ref=e10]
+        - generic [ref=e11]: "Role: district"
+  - main [ref=e12]:
+    - generic [ref=e14]:
+      - generic [ref=e15]:
+        - heading "District Overview (District 603)" [level=3] [ref=e16]
+        - generic [ref=e17]:
+          - generic [ref=e18]:
+            - paragraph [ref=e19]: Total Final Demand
+            - paragraph [ref=e20]: "0.00"
+          - generic [ref=e21]:
+            - paragraph [ref=e22]: Allocated Resources
+            - paragraph [ref=e23]: "0.00"
+          - generic [ref=e24]:
+            - paragraph [ref=e25]: Unmet Demand
+            - paragraph [ref=e26]: "0.00"
+          - generic [ref=e27]:
+            - paragraph [ref=e28]: Coverage %
+            - paragraph [ref=e29]: 0.0%
+          - generic [ref=e30]:
+            - paragraph [ref=e31]: Runs Freshness (Last Run Time)
+            - paragraph [ref=e32]: —
+        - generic [ref=e34]:
+          - paragraph [ref=e35]: Allocation Transparency
+          - paragraph [ref=e36]: 0.0 / 100
+        - generic [ref=e37]:
+          - text: "Demand Mode:"
+          - combobox [ref=e38]:
+            - option "AI + Human" [selected]
+            - option "Human Only"
+        - generic [ref=e39]: Transparency score = weighted view of allocation coverage, unmet closure, and request traceability.
+        - generic [ref=e40]:
+          - generic [ref=e41]:
+            - generic [ref=e42]: Avg Delay per resource
+            - generic [ref=e43]: 0.00 hrs
+          - generic [ref=e44]:
+            - generic [ref=e45]: Top 5 unmet resources
+            - text: No unmet resources
+        - generic [ref=e46]:
+          - button "Request Resources" [ref=e47]
+          - button "Run Solver" [ref=e48]
+          - button "Export CSV" [ref=e49]
+        - generic [ref=e50]: "Run: — | Status: idle | Last refresh: —"
+        - generic [ref=e51]:
+          - button "Requests" [ref=e52]
+          - button "Allocations" [ref=e53]
+          - button "Upstream Supply" [ref=e54]
+          - button "Unmet" [ref=e55]
+          - button "Resource Stocks" [ref=e56]
+          - button "Refill Resources" [ref=e57]
+          - button "Agent Recommendations" [ref=e58]
+          - button "Run History" [ref=e59]
+      - generic [ref=e60]:
+        - heading "Claim, Consume & Return Resources" [level=3] [ref=e61]
+        - generic [ref=e62]:
+          - generic [ref=e63]:
+            - textbox "Search table…" [ref=e64]
+            - generic [ref=e65]: "Rows: 0"
+          - table [ref=e67]:
+            - rowgroup [ref=e68]:
+              - row "Raw JSON Resource Allocated Quantity Supply Level Source Scope Source Code Origin State/District Delay (hrs) Receipt Confirmed Actions" [ref=e69]:
+                - columnheader "Raw JSON" [ref=e70]
+                - columnheader "Resource" [ref=e71]:
+                  - button "Resource" [ref=e72]
+                - columnheader "Allocated Quantity" [ref=e73]:
+                  - button "Allocated Quantity" [ref=e74]
+                - columnheader "Supply Level" [ref=e75]:
+                  - button "Supply Level" [ref=e76]
+                - columnheader "Source Scope" [ref=e77]:
+                  - button "Source Scope" [ref=e78]
+                - columnheader "Source Code" [ref=e79]:
+                  - button "Source Code" [ref=e80]
+                - columnheader "Origin State/District" [ref=e81]:
+                  - button "Origin State/District" [ref=e82]
+                - columnheader "Delay (hrs)" [ref=e83]:
+                  - button "Delay (hrs)" [ref=e84]
+                - columnheader "Receipt Confirmed" [ref=e85]:
+                  - button "Receipt Confirmed" [ref=e86]
+                - columnheader "Actions" [ref=e87]:
+                  - button "Actions" [ref=e88]
+              - row [ref=e89]:
+                - columnheader [ref=e90]
+                - columnheader [ref=e91]:
+                  - textbox "Filter" [ref=e92]
+                - columnheader [ref=e93]:
+                  - textbox "Filter" [ref=e94]
+                - columnheader [ref=e95]:
+                  - textbox "Filter" [ref=e96]
+                - columnheader [ref=e97]:
+                  - textbox "Filter" [ref=e98]
+                - columnheader [ref=e99]:
+                  - textbox "Filter" [ref=e100]
+                - columnheader [ref=e101]
+                - columnheader [ref=e102]:
+                  - textbox "Filter" [ref=e103]
+                - columnheader [ref=e104]:
+                  - textbox "Filter" [ref=e105]
+                - columnheader [ref=e106]
+            - rowgroup [ref=e107]:
+              - row "No allocations for this district." [ref=e108]:
+                - cell "No allocations for this district." [ref=e109]
+          - generic [ref=e110]:
+            - generic [ref=e111]: Page 1 of 1
+            - generic [ref=e112]:
+              - button "Prev" [disabled] [ref=e113]
+              - button "Next" [disabled] [ref=e114]
+        - generic [ref=e115]: Coverage % uses allocated / final_demand based on current run request lineage.
+```

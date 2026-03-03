@@ -1,0 +1,17 @@
+{
+  "keep_latest": 300,
+  "scope": "all",
+  "overflow_candidates": 31493,
+  "unresolved_overflow": 0,
+  "invalid_mode_for_returnable": 0,
+  "invalid_mode_for_non_returnable": 0,
+  "mode_counts": {
+    "refilled_non_returnable": 20474,
+    "returned": 10717,
+    "skipped_returned_status": 141,
+    "skipped_zero_remaining": 161
+  },
+  "ok": true,
+  "issues": [],
+  "generated_at": "2026-02-28T14:00:56.096064Z"
+}

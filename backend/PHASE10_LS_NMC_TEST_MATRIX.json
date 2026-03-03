@@ -1,0 +1,194 @@
+{
+  "version": "1.0.0",
+  "invariants": [
+    "Solver remains single source of truth",
+    "Neural outputs are bounded knob proposals only",
+    "No direct allocation, constraint mutation, or governance bypass",
+    "Fallback controller is always available"
+  ],
+  "tests": [
+    {
+      "id": "D1",
+      "scope": "district",
+      "name": "large_human_request_spike",
+      "input": "5x human request increase for one district/resource over 2 runs",
+      "expected_behavior": "beta_applied rises within bounds; no direct allocation write by neural layer",
+      "acceptance_criteria": [
+        "0.2<=beta<=0.8",
+        "knob log persisted",
+        "solver input remains CSV",
+        "no solver constraint changes"
+      ]
+    },
+    {
+      "id": "D2",
+      "scope": "district",
+      "name": "repeated_unmet_demand",
+      "input": "unmet > 0 for 3 consecutive runs",
+      "expected_behavior": "chronic_unmet finding and pending recommendation generated",
+      "acceptance_criteria": [
+        "finding_type=chronic_unmet exists",
+        "recommendation status is pending",
+        "no auto-apply"
+      ]
+    },
+    {
+      "id": "D3",
+      "scope": "district",
+      "name": "delayed_receipt_confirmations",
+      "input": "receipts unconfirmed beyond 1.5x implied delay",
+      "expected_behavior": "chronic_delay signal generated and recommendation created",
+      "acceptance_criteria": [
+        "signal count > 0",
+        "incident/finding logged",
+        "solver run completes normally"
+      ]
+    },
+    {
+      "id": "D4",
+      "scope": "district",
+      "name": "priority_escalation",
+      "input": "repeated high urgency/priority requests",
+      "expected_behavior": "u_mult and p_mult adjust within bounds only",
+      "acceptance_criteria": [
+        "0.8<=u_mult<=1.3",
+        "0.8<=p_mult<=1.3",
+        "no direct allocation override"
+      ]
+    },
+    {
+      "id": "S1",
+      "scope": "state",
+      "name": "state_stock_exhaustion",
+      "input": "state pool near zero with rising unmet",
+      "expected_behavior": "gamma increases boundedly; fallback/NN blend applied",
+      "acceptance_criteria": [
+        "1.0<=gamma<=2.0",
+        "blend formula applied",
+        "auditable log row exists"
+      ]
+    },
+    {
+      "id": "S2",
+      "scope": "state",
+      "name": "mutual_aid_between_districts",
+      "input": "active mutual aid flows and return flows",
+      "expected_behavior": "delay-aware recommendations; transfer logic unchanged",
+      "acceptance_criteria": [
+        "no regression in phase9 tests",
+        "recommendations only pending until approved"
+      ]
+    },
+    {
+      "id": "S3",
+      "scope": "state",
+      "name": "state_override_of_district_request",
+      "input": "repeated override pattern by state operators",
+      "expected_behavior": "repeated_override finding generated",
+      "acceptance_criteria": [
+        "finding exists",
+        "no automatic governance mutation"
+      ]
+    },
+    {
+      "id": "N1",
+      "scope": "national",
+      "name": "national_stock_activation",
+      "input": "escalated shortages requiring national pool",
+      "expected_behavior": "knob tuning only; optimizer remains final allocator",
+      "acceptance_criteria": [
+        "no neural allocation writes",
+        "solver output produced via normal path"
+      ]
+    },
+    {
+      "id": "N2",
+      "scope": "national",
+      "name": "inter_state_transfers",
+      "input": "multiple inter-state transfer events",
+      "expected_behavior": "delay trends influence recommendations only",
+      "acceptance_criteria": [
+        "state transfer tables unchanged in semantics",
+        "recommendation generated where applicable"
+      ]
+    },
+    {
+      "id": "N3",
+      "scope": "national",
+      "name": "cascading_shortages",
+      "input": "multi-state unmet surge",
+      "expected_behavior": "stable bounded knobs with controlled volatility",
+      "acceptance_criteria": [
+        "volatility metric within threshold",
+        "no solver interruption"
+      ]
+    },
+    {
+      "id": "NS1",
+      "scope": "neural_safety",
+      "name": "nn_returns_nan",
+      "input": "model output contains NaN",
+      "expected_behavior": "fallback used, incident logged, finding raised",
+      "acceptance_criteria": [
+        "fallback_used=true",
+        "incident_type=nan_output logged",
+        "run status completed"
+      ]
+    },
+    {
+      "id": "NS2",
+      "scope": "neural_safety",
+      "name": "nn_extreme_values",
+      "input": "raw outputs far outside bounds",
+      "expected_behavior": "clip or fallback",
+      "acceptance_criteria": [
+        "all applied knobs in legal bounds",
+        "guardrail outcome logged"
+      ]
+    },
+    {
+      "id": "NS3",
+      "scope": "neural_safety",
+      "name": "nn_offline",
+      "input": "model artifact unavailable",
+      "expected_behavior": "fallback controller active",
+      "acceptance_criteria": [
+        "incident_type=model_unavailable logged",
+        "no interruption to solver cycle"
+      ]
+    },
+    {
+      "id": "G1",
+      "scope": "governance",
+      "name": "admin_disables_nn",
+      "input": "admin toggles enable=false",
+      "expected_behavior": "immediate deterministic-only mode",
+      "acceptance_criteria": [
+        "status endpoint shows disabled",
+        "subsequent runs fallback_used=true"
+      ]
+    },
+    {
+      "id": "G2",
+      "scope": "governance",
+      "name": "admin_rollback_model",
+      "input": "admin rollback to target_version",
+      "expected_behavior": "active model switches instantly",
+      "acceptance_criteria": [
+        "registry shows target as prod",
+        "new runs use target model_version"
+      ]
+    },
+    {
+      "id": "G3",
+      "scope": "governance",
+      "name": "agent_flags_drift",
+      "input": "guardrail drift violations repeat",
+      "expected_behavior": "agent recommends disabling model",
+      "acceptance_criteria": [
+        "finding present",
+        "recommendation pending until human decision"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "generated_at": "2026-03-02T15:44:47.639628+00:00",
+  "startup_metrics": {
+    "import_time_ms": 10016.337700013537,
+    "migration_time_ms": 15025.061699998332,
+    "seed_time_ms": 15022.942999989027,
+    "import_status": "timeout",
+    "migration_status": "timeout",
+    "seed_status": "timeout"
+  },
+  "stale_running_after_start": 0,
+  "log_file": "C:\\Users\\LATHEEF\\Desktop\\disaster_management\\backend\\BACKEND_AUTONOMOUS_GATEWAY_LOG.jsonl"
+}

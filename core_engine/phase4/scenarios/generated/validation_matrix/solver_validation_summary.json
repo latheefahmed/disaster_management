@@ -1,0 +1,57 @@
+{
+  "results": [
+    {
+      "name": "district_only_sufficient",
+      "ok": true,
+      "allocated_total": 10.0,
+      "unmet_total": 0.0,
+      "district_alloc_total": 10.0,
+      "state_in_total": 0.0,
+      "national_in_total": 0.0,
+      "alloc_rows": 1,
+      "unmet_rows": 0,
+      "shipment_rows": 0,
+      "meets_expected": true
+    },
+    {
+      "name": "district_then_state",
+      "ok": true,
+      "allocated_total": 10.0,
+      "unmet_total": 0.0,
+      "district_alloc_total": 5.0,
+      "state_in_total": 5.0,
+      "national_in_total": 0.0,
+      "alloc_rows": 2,
+      "unmet_rows": 0,
+      "shipment_rows": 0,
+      "meets_expected": true
+    },
+    {
+      "name": "district_then_national",
+      "ok": true,
+      "allocated_total": 10.0,
+      "unmet_total": 0.0,
+      "district_alloc_total": 5.0,
+      "state_in_total": 0.0,
+      "national_in_total": 5.0,
+      "alloc_rows": 2,
+      "unmet_rows": 0,
+      "shipment_rows": 0,
+      "meets_expected": true
+    },
+    {
+      "name": "full_shortage",
+      "ok": true,
+      "allocated_total": 0.0,
+      "unmet_total": 10.0,
+      "district_alloc_total": 0.0,
+      "state_in_total": 0.0,
+      "national_in_total": 0.0,
+      "alloc_rows": 0,
+      "unmet_rows": 1,
+      "shipment_rows": 0,
+      "meets_expected": true
+    }
+  ],
+  "all_passed": true
+}

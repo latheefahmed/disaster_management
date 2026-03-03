@@ -1,0 +1,10 @@
+scenario_name: scenario_A_demand_shock
+description: Compound flood-cyclone demand surge
+multiplier: 1.5
+
+affected:
+  mode: top_k_by_demand
+  k: 10
+
+output:
+  overwrite: false

@@ -1,0 +1,26 @@
+[
+  {
+    "label": "LIVE_DEMAND",
+    "passed": true,
+    "return_code": 0,
+    "status": "Optimal",
+    "allocation_rows": 37276,
+    "unmet_rows": 22589,
+    "total_allocated": 130466676.05721554,
+    "total_unmet": 4631471389.826885,
+    "run_summary_status": "Optimal",
+    "run_summary_objective": 4631471555273497.0
+  },
+  {
+    "label": "SCENARIO_4",
+    "passed": true,
+    "return_code": 0,
+    "status": "Optimal",
+    "allocation_rows": 58559,
+    "unmet_rows": 143,
+    "total_allocated": 2064961030032.732,
+    "total_unmet": 344100905814.62427,
+    "run_summary_status": "Optimal",
+    "run_summary_objective": 3.4410502915206464e+17
+  }
+]

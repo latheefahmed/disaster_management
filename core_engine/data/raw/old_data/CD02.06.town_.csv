@@ -1,0 +1,4251 @@
+town_code;town_name;state_code;district_code;sub_district_code
+800001;Kupwara (MC);1;1;1
+800002;Handwara (MC);1;1;2
+800016;Magam (MC);1;2;5
+800017;Beerwah (MC);1;2;5
+800018;Khansahib (MC);1;2;6
+800019;Badgam (MC);1;2;7
+800020;Chadura (MC);1;2;8
+800013;Srinagar (M Corp. + OG) (Part);1;2;8
+800021;Charar-i-Sharief (MC);1;2;9
+800047;Leh Ladakh (MC);1;3;10
+800048;Kargil (MC);1;4;13
+800062;Punch (M Cl);1;5;16
+800063;Surankote (MC);1;5;19
+800064;Thanamandi (MC);1;6;20
+800065;Rajauri (MC);1;6;22
+800066;Nowshehra (MC);1;6;25
+800067;Sunderbani (MC);1;6;26
+800081;Billawar (MC);1;7;27
+800082;Bashohli (MC);1;7;28
+800083;Lakhanpur (MC);1;7;30
+800084;Kathua (M Cl + OG);1;7;30
+800084;Kathua (M Cl);1;7;30
+800085;Parole (MC);1;7;30
+800086;Hiranagar (MC);1;7;31
+800003;Sopore (M Cl + OG);1;8;32
+800003;Sopore (M Cl);1;8;32
+800004;Watra Gam (MC);1;8;33
+800005;Pattan (MC);1;8;34
+800006;Baramula (M Cl + OG);1;8;35
+800006;Baramula (M Cl);1;8;35
+800007;Uri (MC);1;8;37
+800008;Kunzer (MC);1;8;39
+800009;Gulmarg (MC);1;8;39
+800010;Bandipore (MC);1;9;41
+800011;Hajan (MC);1;9;42
+800012;Sumbal (MC);1;9;42
+800013;Srinagar (M Corp. + OG) (Part);1;10;43
+800014;Badami Bagh (CB);1;10;43
+800013;Srinagar (M Corp. + OG) (Part);1;10;44
+800015;Ganderbal (MC);1;11;47
+800022;Pampora (MC);1;12;48
+800023;Khrew (MC);1;12;48
+800024;Awantipora (MC);1;12;49
+800025;Tral (MC);1;12;50
+800026;Pulwama (MC);1;12;51
+800027;Shupiyan (MC);1;13;52
+800028;Pahalgam (MC);1;14;53
+800029;Aishmuquam (MC);1;14;53
+800030;Bijbehara (MC);1;14;54
+800031;Arwani (MC);1;14;54
+800032;Mattan (MC);1;14;55
+800033;Anantnag (M Cl + OG) (Part);1;14;55
+800034;Achhabal (MC);1;14;55
+800035;Seer Hamdan (MC);1;14;55
+800036;Shangus (MC);1;14;56
+800037;Koker Nag (MC);1;14;57
+800038;Qazi Gund (MC);1;14;58
+800039;Duru Verinag (MC);1;14;58
+800033;Anantnag (M Cl + OG) (Part);1;15;59
+800040;Kulgam (MC);1;15;59
+800041;Quimoh (MC);1;15;59
+800042;Frisal (MC);1;15;59
+800043;Yari Pora (MC);1;15;59
+800044;Ashmuji Khalsa (MC);1;15;59
+800045;Mehmood Pora (MC);1;15;59
+800046;Devsar (MC);1;15;60
+800049;Doda (MC);1;16;62
+800050;Bhaderwah (MC);1;16;65
+800051;Banihal (MC);1;17;66
+800052;Ramban (MC);1;17;67
+800053;Batote (MC);1;17;67
+800054;Kishtwar (MC);1;18;68
+800055;Udhampur (M Cl + OG);1;19;72
+800055;Udhampur (M Cl);1;19;72
+800056;Kud (MC);1;19;73
+800057;Chenani (MC);1;19;73
+800058;Ram Nagar (MC);1;19;74
+800059;Reasi (MC);1;20;77
+800060;Purana Daroorh (MC);1;20;77
+800061;Katra (MC);1;20;77
+800068;Jourian (MC);1;21;78
+800069;Akhnoor (MC);1;21;78
+800070;Khore (MC);1;21;78
+800071;Jammu (M Corp. + OG);1;21;79
+800071;Jammu (M Corp.);1;21;79
+800072;Jammu Cantt. (CB);1;21;79
+800073;Ghomanhasan (MC);1;21;79
+0;Ranbir Singh Pora;1;21;80
+800074;R.S. Pora (MC);1;21;80
+800075;Bishna (MC);1;21;81
+800076;Arnia (MC);1;21;81
+800077;Bari Brahamana (MC);1;22;82
+800078;Vijay Pur (MC);1;22;82
+800079;Samba (MC);1;22;82
+800080;Ramgarh (MC);1;22;82
+800087;Dalhousie (CB);2;23;87
+800088;Dalhousie (M Cl);2;23;87
+800089;Bakloh (CB);2;23;88
+800090;Chuari Khas (NP);2;23;88
+800091;Chamba (M Cl);2;23;90
+800092;Nurpur (M Cl);2;24;93
+800093;Dharmsala (M Cl + OG);2;24;99
+800093;Dharmsala (M Cl);2;24;99
+800094;Yol (CB);2;24;99
+800095;Kangra (M Cl);2;24;100
+800096;Nagrota Bagwan (M Cl);2;24;101
+800097;Dera Gopipur (NP);2;24;103
+800098;Jawalamukhi (NP);2;24;104
+800099;Palampur (M Cl);2;24;111
+800100;Manali (M Cl);2;26;117
+800101;Kullu (M Cl);2;26;118
+800102;Bhuntar (NP);2;26;118
+800103;Banjar (NP);2;26;120
+800104;Jogindarnagar (NP);2;27;124
+800105;Sarkaghat (NP);2;27;129
+800106;Sundarnagar (M Cl);2;27;132
+800107;Mandi (M Cl);2;27;133
+800108;Rawalsar (NP);2;27;133
+800109;Tira Sujanpur (NP);2;28;140
+800110;Nadaun (NP);2;28;141
+800111;Hamirpur (M Cl);2;28;143
+800112;Bhota (NP);2;28;144
+800113;Daulatpur (NP);2;29;148
+800114;Gagret (NP);2;29;148
+800115;Una (M Cl);2;29;150
+800116;Mehatpur Basdehra (NP);2;29;150
+800117;Santokhgarh (NP);2;29;150
+800118;Ghumarwin (M Cl);2;30;152
+800119;Talai (NP);2;30;154
+800120;Naina Devi (M Cl);2;30;155
+800121;Bilaspur (M Cl);2;30;156
+800122;Arki (NP);2;31;158
+800123;Nalagarh (M Cl);2;31;161
+800124;Baddi (M Cl + OG);2;31;162
+800124;Baddi (M Cl);2;31;162
+800125;Kasauli (CB);2;31;164
+800126;Parwanoo (M Cl);2;31;164
+800127;Dagshai (CB);2;31;165
+800128;Solan (M Cl);2;31;165
+800129;Sabathu (CB);2;31;165
+800130;Rajgarh (NP);2;32;167
+800131;Nahan (M Cl);2;32;172
+800132;Paonta Sahib (M Cl);2;32;173
+800133;Rampur (M Cl);2;33;177
+800134;Narkanda (NP);2;33;179
+800135;Seoni (NP);2;33;180
+800136;Jutogh (CB);2;33;181
+800137;Shimla (M Corp.);2;33;182
+800138;Theog (M Cl);2;33;184
+800139;Chaupal (NP) ;2;33;185
+800140;Jubbal (NP);2;33;188
+800141;Kotkhai (NP);2;33;189
+800142;Rohru (M Cl);2;33;191
+800275;Cheema (NP);3;53;272
+800276;Sunam Udham Singh Wala (M Cl + OG);3;53;272
+800276;Sunam Udham Singh Wala (M Cl);3;53;272
+800277;Dirba (NP);3;53;272
+800278;Lehragaga (M Cl);3;53;273
+800279;Moonak (NP);3;53;274
+800280;Khanauri (NP);3;53;274
+800281;Barnala (M Cl);3;54;275
+800282;Handiaya (NP);3;54;275
+800283;Dhanaula (M Cl);3;54;275
+800284;Tapa (M Cl);3;54;276
+800285;Bhadaur (M Cl);3;54;276
+800286;Chandigarh (M Corp. + OG) ;4;55;277
+800286;Chandigarh (M Corp.) ;4;55;277
+800348;Gadarpur (NPP);5;67;350
+800349;Dineshpur (NP);5;67;350
+800350;Shaktigarh (NP);5;67;351
+800351;Sitarganj (NPP);5;67;351
+800352;Khatima (NPP);5;67;352
+800353;Roorkee (NPP);5;68;353
+800354;Roorkee (CB);5;68;353
+800355;Jhabrera (NP);5;68;353
+800356;Manglaur (NPP);5;68;353
+800357;Landhaura (NP);5;68;353
+800358;Bharat Heavy Electricals Limited Ranipur (ITS);5;68;354
+800359;Hardwar (NPP + OG);5;68;354
+800359;Hardwar (NPP);5;68;354
+800360;Laksar (NP);5;68;355
+800361;Kalka (MC + OG);6;69;356
+800361;Kalka (MC);6;69;356
+800362;Pinjore (MC);6;69;356
+800363;Panchkula (M Cl);6;69;357
+800364;Naraingarh (MC);6;70;358
+800365;Ambala (M Cl);6;70;359
+800366;Ambala Cantt. (CB);6;70;359
+800367;Ambala Sadar (M Cl + OG);6;70;359
+800367;Ambala Sadar (M Cl);6;70;359
+800368;Jagadhri (M Cl);6;71;361
+800369;Yamunanagar (M Cl + OG);6;71;361
+800369;Yamunanagar (M Cl);6;71;361
+800370;Shahbad (MC);6;72;364
+800371;Pehowa (MC);6;72;365
+800372;Thanesar (M Cl);6;72;366
+800373;Ladwa (MC);6;72;366
+800374;Cheeka (MC);6;73;367
+800375;Kaithal (M Cl);6;73;368
+800376;Kalayat (MC);6;73;368
+800377;Pundri (MC + OG);6;73;369
+800377;Pundri (MC);6;73;369
+800378;Nilokheri (MC);6;74;370
+800379;Taraori (MC);6;74;370
+800380;Indri (MC);6;74;371
+800381;Karnal (M Cl + OG);6;74;372
+800381;Karnal (M Cl);6;74;372
+800382;Nissing (MC);6;74;372
+800383;Assandh (MC);6;74;373
+800384;Gharaunda (MC);6;74;374
+800385;Panipat (M Cl + OG);6;75;375
+800385;Panipat (M Cl);6;75;375
+800386;Samalkha (MC + OG);6;75;377
+800386;Samalkha (MC);6;75;377
+800387;Gohana (MC);6;76;378
+800388;Ganaur (MC);6;76;379
+800389;Sonipat (M Cl + OG);6;76;380
+800389;Sonipat (M Cl);6;76;380
+800390;Kharkhoda (MC);6;76;381
+800391;Narwana (M Cl);6;77;382
+800392;Uchana (MC);6;77;382
+800393;Jind (M Cl);6;77;383
+800394;Julana (MC);6;77;384
+800395;Safidon (MC);6;77;385
+800396;Ratia (MC);6;78;386
+800397;Tohana (M Cl);6;78;387
+800398;Fatehabad (M Cl);6;78;388
+800399;Mandi Dabwali (MC);6;79;389
+800400;Kalanwali (MC);6;79;390
+800401;Sirsa (M Cl);6;79;390
+800402;Rania (MC);6;79;391
+800403;Ellenabad (MC);6;79;392
+800404;Barwala (MC);6;80;394
+800405;Hisar (M Cl + OG);6;80;394
+800405;Hisar (M Cl);6;80;394
+800406;Narnaund (MC);6;80;395
+800407;Hansi (M Cl);6;80;396
+800408;Bawani khera (MC);6;81;397
+800409;Bhiwani (M Cl);6;81;398
+800410;Siwani (MC);6;81;400
+800411;Loharu (MC);6;81;401
+800412;Charkhi Dadri (MC);6;81;402
+800413;Maham (MC);6;82;404
+800414;Rohtak (M Cl);6;82;405
+800415;Kalanaur (MC);6;82;405
+800416;Sampla (MC);6;82;406
+800417;Beri (MC);6;83;407
+800418;Bahadurgarh (M Cl);6;83;408
+800419;Jhajjar (MC);6;83;409
+800420;Kanina (MC);6;84;411
+800421;Mahendragarh (MC);6;84;411
+800422;Ateli (MC);6;84;412
+800423;Narnaul (M Cl);6;84;412
+800424;Dharuhera (MC);6;85;414
+800425;Rewari (M Cl);6;85;414
+800426;Bawal (MC);6;85;415
+800427;Hailey Mandi (MC);6;86;416
+800428;Pataudi (MC);6;86;416
+800429;Gurgaon (M Corp. + OG);6;86;417
+800429;Gurgaon (M Corp.);6;86;417
+800430;Farrukhnagar (MC);6;86;418
+800431;Sohna (MC);6;86;420
+800432;Taoru (MC);6;87;421
+800433;Nuh (MC);6;87;422
+800434;Ferozepur jhirka (MC);6;87;423
+800435;Punahana (MC);6;87;424
+800436;Faridabad (M Corp.);6;88;425
+800437;Palwal (M Cl + OG);6;89;427
+800437;Palwal (M Cl);6;89;427
+800438;Hathin (MC);6;89;428
+800439;Hassan Pur (MC);6;89;429
+800440;Hodal (MC);6;89;429
+800441;DMC (U) (Part);7;90;430
+800441;DMC (U) (Part);7;90;431
+800441;DMC (U) (Part);7;90;432
+800441;DMC (U) (Part);7;91;433
+800441;DMC (U) (Part);7;91;434
+800441;DMC (U) (Part);7;91;435
+800441;DMC (U) (Part);7;92;436
+800441;DMC (U) (Part);7;92;437
+800441;DMC (U) (Part);7;92;438
+800441;DMC (U) (Part);7;93;439
+800441;DMC (U) (Part);7;93;440
+800441;DMC (U) (Part);7;93;441
+800441;DMC (U) (Part);7;94;442
+800442;NDMC (Part);7;94;442
+800442;NDMC (Part);7;94;443
+800442;NDMC (Part);7;94;444
+800441;DMC (U) (Part);7;95;445
+800441;DMC (U) (Part);7;95;446
+800442;NDMC (Part);7;95;446
+800441;DMC (U) (Part);7;95;447
+800441;DMC (U) (Part);7;96;448
+800441;DMC (U) (Part);7;96;449
+800441;DMC (U) (Part);7;96;450
+800441;DMC (U) (Part);7;97;451
+800441;DMC (U) (Part);7;97;452
+800443;Delhi Cantonment (CB) (Part);7;97;452
+800441;DMC (U) (Part);7;97;453
+800443;Delhi Cantonment (CB) (Part);7;97;453
+800442;NDMC (Part);7;97;453
+800441;DMC (U) (Part);7;98;454
+800442;NDMC (Part);7;98;454
+800441;DMC (U) (Part);7;98;455
+800442;NDMC (Part);7;98;455
+800441;DMC (U) (Part);7;98;456
+800444;Kesrisinghpur (M);8;99;457
+800445;Karanpur (M);8;99;457
+800446;Ganganagar (M Cl + OG);8;99;458
+800446;Ganganagar (M Cl);8;99;458
+800447;Sadulshahar (M);8;99;459
+800448;Gajsinghpur (M);8;99;460
+800449;Padampur (M);8;99;460
+800450;Raisinghnagar (M);8;99;461
+800451;Anupgarh (M);8;99;462
+800452;Vijainagar (M);8;99;464
+800453;Suratgarh (M);8;99;465
+800454;Sangaria (M);8;100;466
+800455;Hanumangarh (M Cl);8;100;468
+800456;Pilibanga (M);8;100;469
+800457;Rawatsar (M);8;100;470
+800458;Nohar (M);8;100;471
+800459;Bhadra (M);8;100;472
+800460;Bikaner (M Corp.);8;101;473
+800461;Deshnoke (M);8;101;473
+800462;Nokha (M);8;101;477
+800463;Dungargarh (M);8;101;480
+800464;Taranagar (M);8;102;481
+800465;Rajgarh (M);8;102;482
+800466;Sardarshahar (M);8;102;483
+800467;Ratannagar (M);8;102;484
+800468;Churu (M Cl + OG);8;102;484
+800468;Churu (M Cl);8;102;484
+800469;Ratangarh (M);8;102;485
+800470;Rajaldesar (M);8;102;485
+800471;Bidasar (M);8;102;486
+800472;Chhapar (M);8;102;486
+800473;Sujangarh (M);8;102;486
+800474;Bissau (M);8;103;487
+800475;Mandawa (M);8;103;487
+800476;Jhunjhunun (M Cl);8;103;487
+800477;Baggar (M);8;103;487
+800478;Pilani (M) ;8;103;488
+800479;Vidyavihar (M);8;103;488
+800480;Surajgarh (M);8;103;488
+800481;Chirawa (M);8;103;488
+800482;Khetri (M);8;103;490
+800483;Mukandgarh (M);8;103;491
+800484;Nawalgarh (M);8;103;491
+800485;Udaipurwati (M);8;103;492
+800486;Behror (M);8;104;493
+800487;Bhiwadi (M);8;104;496
+800488;Tijara (M);8;104;496
+800489;Khairthal (M);8;104;497
+800490;Alwar (M Cl + OG);8;104;499
+800490;Alwar (M Cl);8;104;499
+800491;Rajgarh (M);8;104;502
+800492;Kherli (M);8;104;504
+800493;Kaman (M);8;105;506
+800494;Nagar (M);8;105;507
+800495;Deeg (M);8;105;508
+800496;Nadbai (M);8;105;509
+800497;Kumher (M);8;105;510
+800498;Bharatpur (M Cl + OG)  ;8;105;511
+800498;Bharatpur (M Cl) ;8;105;511
+800499;Bhusawar (M);8;105;512
+800500;Weir (M);8;105;512
+800501;Bayana (M);8;105;513
+800502;Bari (M);8;106;516
+800503;Dhaulpur (M + OG);8;106;518
+800503;Dhaulpur (M);8;106;518
+800504;Rajakhera (M);8;106;519
+800505;Todabhim (M);8;107;520
+800506;Hindaun (M);8;107;522
+800507;Karauli (M);8;107;523
+800508;Gangapur City (M);8;108;526
+800509;Sawai Madhopur (M);8;108;531
+800510;Bandikui (M);8;109;533
+800511;Dausa (M);8;109;536
+800512;Lalsot (M);8;109;537
+800513;Kotputli (M);8;110;538
+800514;Viratnagar (M);8;110;539
+800515;Shahpura (M);8;110;540
+800516;Chomu (M);8;110;541
+800517;Kishangarh Renwal (M);8;110;542
+800518;Sambhar (M);8;110;542
+800519;Phulera (M + OG);8;110;542
+800519;Phulera (M);8;110;542
+800520;Jobner (M);8;110;542
+800521;Bagru (M);8;110;545
+800522;Jaipur (M Corp.) (Part);8;110;545
+800522;Jaipur (M Corp.) (Part);8;110;546
+800522;Jaipur (M Corp.) (Part);8;110;547
+800523;Chaksu (M);8;110;550
+800524;Ramgarh (M);8;111;551
+800525;Fatehpur (M);8;111;551
+800526;Lachhmangarh (M);8;111;552
+800527;Sikar (M Cl + OG);8;111;553
+800527;Sikar (M Cl);8;111;553
+800528;Losal (M);8;111;554
+800529;Khandela (M + OG);8;111;555
+800529;Khandela (M);8;111;555
+800530;Sri Madhopur (M);8;111;555
+800531;Reengus (M);8;111;555
+800532;Neem-Ka-Thana (M);8;111;556
+800533;Ladnu (M);8;112;557
+800534;Didwana (M + OG);8;112;558
+800534;Didwana (M);8;112;558
+800535;Nagaur (M + OG);8;112;560
+800535;Nagaur (M);8;112;560
+800536;Mundwa (M);8;112;560
+800537;Kuchera (M);8;112;560
+800538;Merta City (M);8;112;562
+800539;Parbatsar (M);8;112;564
+800540;Makrana (M + OG);8;112;565
+800540;Makrana (M);8;112;565
+800541;Kuchaman City (M);8;112;566
+800542;Nawa (M);8;112;566
+800543;Phalodi (M + OG);8;113;567
+800543;Phalodi (M);8;113;567
+800544;Jodhpur (M Corp. + OG);8;113;570
+800544;Jodhpur (M Corp.);8;113;570
+800545;Pipar City (M);8;113;573
+800546;Bilara (M);8;113;573
+800547;Jaisalmer (M);8;114;574
+800548;Pokaran (M);8;114;575
+800549;Balotra (M);8;115;579
+800550;Barmer (M);8;115;582
+800551;Jalor (M);8;116;587
+800552;Bhinmal (M);8;116;588
+800553;Sanchore (M);8;116;590
+800554;Sheoganj (M + OG);8;117;592
+800554;Sheoganj (M);8;117;592
+800555;Sirohi (M);8;117;593
+800556;Pindwara (M);8;117;594
+800557;Mount Abu (M);8;117;595
+800558;Abu Road (M + OG);8;117;595
+800558;Abu Road (M);8;117;595
+800559;Jaitaran (M);8;118;597
+800560;Sojat (M);8;118;599
+800561;Pali (M Cl);8;118;601
+800562;Rani (M);8;118;603
+800563;Sadri (M);8;118;603
+800564;Takhatgarh (M);8;118;604
+800565;Sumerpur (M);8;118;604
+800566;Falna (M);8;118;605
+800567;Bali (M);8;118;605
+800568;Kishangarh (M Cl);8;119;606
+800569;Pushkar (M);8;119;607
+800570;Ajmer (M Corp.);8;119;607
+800571;Beawar (M Cl + OG);8;119;609
+800571;Beawar (M Cl);8;119;609
+800572;Vijainagar (M);8;119;610
+800573;Nasirabad (CB);8;119;611
+800574;Sarwar (M);8;119;613
+800575;Kekri (M);8;119;614
+800576;Malpura (M + OG);8;120;615
+800576;Malpura (M);8;120;615
+800577;Niwai (M);8;120;617
+800578;Tonk (M Cl);8;120;618
+800579;Todaraisingh (M);8;120;619
+800580;Deoli (M);8;120;620
+800581;Uniara (M);8;120;621
+800582;Nainwa (M);8;121;623
+800583;Indragarh (M);8;121;624
+800584;Lakheri (M);8;121;624
+800585;Keshoraipatan (M);8;121;625
+800586;Kaprain (M);8;121;625
+800587;Bundi (M + OG);8;121;626
+800587;Bundi (M);8;121;626
+800588;Asind (M);8;122;627
+800589;Gulabpura (M);8;122;628
+800590;Shahpura (M);8;122;629
+800591;Gangapur (M);8;122;633
+800592;Bhilwara (M Cl);8;122;634
+800593;Jahazpur (M);8;122;636
+800594;Mandalgarh (M);8;122;637
+800595;Deogarh (M);8;123;640
+800596;Amet (M);8;123;641
+800597;Rajsamand (M);8;123;643
+800598;Nathdwara (M);8;123;645
+800599;Dungarpur (M);8;124;646
+800600;Sagwara (M);8;124;648
+800601;Banswara (M + OG);8;125;652
+800601;Banswara (M);8;125;652
+800602;Kushalgarh (M);8;125;654
+800603;Begun (M);8;126;657
+800604;Rawatbhata (M);8;126;658
+800605;Chittaurgarh (M);8;126;659
+800606;Kapasan (M);8;126;660
+800607;Nimbahera (M);8;126;663
+800608;Bari Sadri (M);8;126;664
+800609;Kota (M Corp.);8;127;667
+800610;Kaithoon (M);8;127;667
+800611;Ramganj Mandi (M);8;127;668
+800612;Sangod (M);8;127;669
+800613;Mangrol (M);8;128;670
+800614;Antah (M);8;128;671
+800615;Baran (M);8;128;672
+800616;Chhabra (M);8;128;676
+800617;Jhalawar (M);8;129;679
+800618;Jhalrapatan (M);8;129;679
+800619;Aklera (M);8;129;680
+800620;Bhawani Mandi (M);8;129;682
+800621;Pirawa (M);8;129;683
+800622;Fatehnagar (M);8;130;685
+800623;Udaipur (M Cl);8;130;689
+800624;Bhinder (M);8;130;690
+800625;Kanor (M);8;130;690
+800626;Salumbar (M);8;130;692
+800627;Chhoti Sadri (M);8;131;698
+800628;Pratapgarh (M);8;131;699
+800629;Behat (NP);9;132;701
+800630;Saharanpur (M Corp.);9;132;702
+800631;Chilkana Sultanpur (NP);9;132;703
+800632;Sarsawa (NPP);9;132;703
+800633;Nakur (NPP);9;132;703
+800634;Ambehta (NP);9;132;703
+800635;Gangoh (NPP);9;132;703
+800636;Titron (NP);9;132;703
+800637;Deoband (NPP);9;132;704
+800638;Nanauta (NP);9;132;705
+800639;Rampur Maniharan (NP);9;132;705
+800640;Un (NP);9;133;706
+800641;Jhinjhana (NP);9;133;706
+800642;Kairana (NPP);9;133;706
+800643;Kandhla (NPP);9;133;706
+800644;Ailam (NP);9;133;707
+800645;Shamli (NPP);9;133;707
+800646;Banat (NP);9;133;707
+800647;Garhi Pukhta (NP);9;133;707
+800648;Thana Bhawan (NP);9;133;707
+800649;Jalalabad (NP);9;133;707
+800650;Purquazi (NP + OG);9;133;708
+800650;Purquazi (NP);9;133;708
+800651;Charthawal (NP);9;133;708
+800652;Muzaffarnagar (NPP);9;133;708
+800653;Sisauli (NP);9;133;709
+800654;Budhana (NP + OG);9;133;709
+800654;Budhana (NP);9;133;709
+800655;Shahpur (NP);9;133;709
+800656;Khatauli (NPP);9;133;710
+800657;Jansath (NP);9;133;711
+800658;Bhokarhedi (NP);9;133;711
+800659;Miranpur (NP);9;133;711
+800660;Sahanpur (NP);9;134;712
+800661;Najibabad (NPP);9;134;712
+800662;Jalalabad (NP);9;134;712
+800663;Kiratpur (NPP + OG);9;134;712
+800663;Kiratpur (NPP);9;134;712
+800664;Mandawar (NP);9;134;713
+800665;Bijnor (NPP);9;134;713
+800666;Jhalu (NP);9;134;713
+800667;Haldaur (NPP);9;134;713
+800668;Nagina (NPP);9;134;714
+800669;Warhapur (NP);9;134;714
+800670;Afzalgarh (NPP);9;134;715
+800671;Sherkot (NPP);9;134;715
+800672;Dhampur (NPP);9;134;715
+800673;Nehtaur (NPP);9;134;715
+800674;Seohara (NPP + OG);9;134;715
+800674;Seohara (NPP);9;134;715
+800675;Sahaspur (NP);9;134;715
+800676;Noorpur (NPP);9;134;716
+800677;Chandpur (NPP);9;134;716
+800678;Thakurdwara (NPP);9;135;717
+800679;Kanth (NP);9;135;718
+800680;Umri Kalan (NP);9;135;718
+800681;Bhojpur Dharampur (NP);9;135;719
+800682;Moradabad (M Corp.);9;135;719
+800683;Kundarki (NP);9;135;720
+800684;Bilari (NPP);9;135;720
+800685;Sirsi (NP);9;135;721
+800686;Sambhal (NPP);9;135;721
+800687;Bahjoi (NPP);9;135;722
+800688;Narauli (NP);9;135;722
+800689;Chandausi (NPP);9;135;722
+800690;Maswasi (NP);9;136;723
+800691;Suar (NPP);9;136;723
+800692;Tanda (NPP);9;136;724
+800693;Bilaspur (NPP);9;136;725
+800694;Kemri (NP);9;136;725
+800695;Rampur (NPP);9;136;726
+800696;Shahabad (NP);9;136;727
+800697;Milak (NPP);9;136;728
+800698;Dhanaura (NPP);9;137;729
+800699;Bachhraon (NPP);9;137;729
+800700;Gajraula (NP);9;137;729
+800701;Naugawan Sadat (NP);9;137;730
+800702;Amroha (NPP);9;137;730
+800703;Joya (NP);9;137;730
+800704;Hasanpur (NPP);9;137;731
+800705;Ujhari (NP);9;137;731
+800706;Karnawal (NP);9;138;732
+800707;Sardhana (NPP);9;138;732
+800708;Daurala (NP);9;138;732
+800709;Lawar (NP);9;138;732
+800710;Phalauda (NP);9;138;733
+800711;Bahsuma (NP);9;138;733
+800712;Hastinapur (NP);9;138;733
+800713;Mawana (NPP);9;138;733
+800714;Parikshitgarh (NP);9;138;733
+800715;Kithaur (NP);9;138;733
+800716;Meerut (M Corp.);9;138;734
+800717;Meerut (CB);9;138;734
+800718;Sewalkhas (NP);9;138;734
+800719;Kharkhoda (NP);9;138;734
+800720;Chhaprauli (NP);9;139;735
+800721;Tikri (NP);9;139;735
+800722;Doghat (NP);9;139;735
+800723;Baraut (NPP);9;139;735
+800724;Baghpat (NPP);9;139;736
+800725;Agarwal Mandi (Tatiri) (NP);9;139;736
+800726;Aminagar Sarai (NP);9;139;736
+800727;Khekada (NP);9;139;737
+800728;Patala (NP);9;140;738
+800729;Niwari (NP);9;140;738
+800730;Modinagar (NPP);9;140;738
+800731;Faridnagar (NP);9;140;738
+800732;Muradnagar (NPP);9;140;738
+800733;Loni (NPP);9;140;739
+800734;Ghaziabad (M Corp.);9;140;739
+800735;Dasna (NP);9;140;739
+800736;Pilkhuwa (NPP);9;140;740
+800737;Hapur (NPP);9;140;740
+800738;Babugarh (NP);9;140;740
+800739;Garhmukhteshwar (NPP);9;140;741
+800740;Dadri (NPP);9;141;742
+800741;Bilaspur (NP);9;141;743
+800742;Dankaur (NP);9;141;743
+800743;Rabupura (NP);9;141;744
+800744;Jahangirpur (NP);9;141;744
+800745;Jewar (NP);9;141;744
+800746;Sikandrabad (NPP);9;142;745
+800747;Kakod (NP);9;142;745
+800748;Aurangabad (NP);9;142;746
+800749;Bulandshahr (NPP + OG);9;142;746
+800749;Bulandshahr (NPP);9;142;746
+800750;Gulaothi (NPP);9;142;746
+800751;Bhawan Bahadur Nagar (NP);9;142;747
+800752;Siana (NPP);9;142;747
+800753;Bugrasi (NP);9;142;747
+800754;Khanpur (NP);9;142;747
+800755;Anupshahr (NPP);9;142;748
+800756;Jahangirabad (NPP);9;142;748
+800757;Dibai (NPP);9;142;749
+800758;Naraura (NP);9;142;749
+800759;Shikarpur (NPP);9;142;750
+800760;Pahasu (NP);9;142;750
+800761;Chhatari (NP);9;142;750
+800762;Khurja (NPP + OG);9;142;751
+800762;Khurja (NPP);9;142;751
+800763;Jatari (NP);9;143;752
+800764;Khair (NPP);9;143;752
+800765;Atrauli (NPP);9;143;754
+800766;Chharra Rafatpur (NP);9;143;754
+800767;Harduaganj (NP);9;143;755
+800768;Aligarh (M Corp.);9;143;755
+800769;Jalali (NP);9;143;755
+800770;Kauriaganj (NP);9;143;755
+800771;Pilkhana (NP);9;143;755
+800772;Vijaigarh (NP);9;143;755
+800773;Iglas (NP);9;143;756
+800774;Beswan (NP);9;143;756
+800775;Sasni (NP);9;144;757
+800776;Sikandrarao (NPP);9;144;758
+800777;Purdilnagar (NP);9;144;758
+800778;Hasayan (NP);9;144;758
+800779;Mendu (NP);9;144;759
+800780;Hathras (NPP + OG);9;144;759
+800780;Hathras (NPP);9;144;759
+800781;Mursan (NP);9;144;759
+800782;Sadabad (NP);9;144;760
+800783;Sahpau (NP);9;144;760
+800784;Kosi Kalan (NPP + OG);9;145;761
+800784;Kosi Kalan (NPP);9;145;761
+800785;Nandgaon (NP);9;145;761
+800786;Barsana (NP);9;145;761
+800787;Chhata (NP);9;145;761
+800788;Chaumuhan (NP);9;145;761
+800789;Bajna (NP);9;145;762
+800790;Raya (NP);9;145;763
+800791;Gokul (NP);9;145;763
+800792;Mahaban (NP);9;145;763
+800793;Baldeo (NP);9;145;763
+800794;Farah (NP);9;145;764
+800795;Vrindavan (NPP);9;145;764
+800796;Radhakund (NP);9;145;764
+800797;Govardhan (NP);9;145;764
+800798;Saunkh (NP);9;145;764
+800799;Mathura (NPP);9;145;764
+800800;Mathura (CB);9;145;764
+800801;Etmadpur (NPP);9;146;765
+800802;Dayalbagh (NP);9;146;766
+800803;Swamibagh (NP);9;146;766
+800804;Agra (M Corp.);9;146;766
+800805;Agra (CB);9;146;766
+800806;Achhnera (NPP);9;146;767
+800807;Kiraoali (NP);9;146;767
+800808;Fatehpur Sikri (NPP);9;146;767
+800809;Jagner (NP);9;146;768
+800810;Kheragarh (NP);9;146;768
+800811;Shamsabad (NPP);9;146;769
+800812;Fatehabad (NP);9;146;769
+800813;Pinahat (NP);9;146;770
+800814;Bah (NPP);9;146;770
+800815;Tundla (NPP);9;147;771
+800816;Firozabad (NPP);9;147;772
+800817;Fariha (NP);9;147;773
+800818;Jasrana (NP);9;147;773
+800819;Shikohabad (NPP);9;147;774
+800820;Sirsaganj (NPP + OG);9;147;774
+800820;Sirsaganj (NPP);9;147;774
+800821;Kuraoali (NP);9;148;775
+800822;Jyoti Khuriya (NP);9;148;775
+800823;Ghiraur (NP);9;148;775
+800824;Mainpuri (NPP + OG);9;148;775
+800824;Mainpuri (NPP);9;148;775
+800825;Karhal (NP);9;148;776
+800826;Bhogaon (NP);9;148;777
+800827;Bewar (NP);9;148;777
+800828;Kusmara (NP);9;148;777
+800829;Kishni (NP);9;148;777
+800830;Gawan (NP);9;149;778
+800831;Babrala (NP);9;149;778
+800832;Gunnaur (NP);9;149;778
+800833;Islamnagar (NP);9;149;779
+800834;Faizganj (NP);9;149;779
+800835;Mundiya (NP);9;149;779
+800836;Bisauli (NPP);9;149;779
+800837;Saidpur (NP);9;149;779
+800838;Wazirganj (NP);9;149;779
+800839;Rudayan (NP);9;149;780
+800840;Bilsi (NPP);9;149;780
+800841;Sahaswan (NPP);9;149;781
+800842;Kachhla (NP);9;149;782
+800843;Ujhani (NPP);9;149;782
+800844;Budaun (NPP);9;149;782
+800845;Kunwargaon (NP);9;149;782
+800846;Gulariya (NP);9;149;782
+800847;Sakhanu (NP);9;149;782
+800848;Kakrala (NPP);9;149;783
+800849;Allapur (NP);9;149;783
+800850;Dataganj (NP);9;149;783
+800851;Usawan (NP);9;149;783
+800852;Usehat (NP);9;149;783
+800853;Baheri (NPP);9;150;784
+800854;Faridpur (NP);9;150;784
+800855;Richha (NP);9;150;784
+800856;Deoranian (NP);9;150;784
+800857;Shergarh (NP);9;150;784
+800858;Shishgarh (NP);9;150;785
+800859;Mirganj (NP);9;150;785
+800860;Fatehganj Pashchimi (NP);9;150;785
+800861;Shahi (NP);9;150;785
+800862;Bisharatganj (NP);9;150;786
+800863;Aonla (NPP);9;150;786
+800864;Sirauli (NP);9;150;786
+800865;Dhaura Tanda (NP);9;150;787
+800866;Bareilly (M Corp. + OG);9;150;787
+800866;Bareilly (M Corp.);9;150;787
+800867;Bareilly (CB);9;150;787
+800868;Thiriya Nizamat Khan (NP);9;150;787
+800869;Rithora (NP);9;150;787
+800870;Sainthal (NP);9;150;788
+800871;Nawabganj (NPP);9;150;788
+800872;Fatehganj Purvi (NP);9;150;789
+800873;Faridpur (NPP);9;150;789
+800874;Gulariya Bhindara (NP);9;151;790
+800875;Nyoria Husainpur (NP);9;151;790
+800876;Jahanabad (NP);9;151;790
+800877;Pilibhit (NPP);9;151;790
+800878;Barkhera (NP);9;151;791
+800879;Bisalpur (NPP);9;151;791
+800880;Bilsanda (NP);9;151;791
+800881;Kalinagar (NP);9;151;792
+800882;Puranpur (NPP);9;151;792
+800883;Khutar (NP);9;152;793
+800884;Powayan (NP);9;152;793
+800885;Khudaganj (NP);9;152;794
+800886;Katra (NP);9;152;794
+800887;Tilhar (NPP);9;152;794
+800888;Railway Settlement Roza (NP);9;152;795
+800889;Shahjahanpur (NPP);9;152;795
+800890;Shahjahanpur (CB);9;152;795
+800891;Kanth (NP);9;152;795
+800892;Jalalabad (NPP);9;152;796
+800893;Allahganj (NP);9;152;796
+800894;Singahi Bhiraura (NP);9;153;797
+800895;Paliya Kalan (NPP);9;153;798
+800896;Mailani (NP);9;153;799
+800897;Gola Gokaran Nath (NPP);9;153;799
+800898;Mohammadi (NPP);9;153;800
+800899;Barwar (NP);9;153;800
+800900;Lakhimpur (NPP);9;153;801
+800901;Kheri (NP);9;153;801
+800902;Oel Dhakwa (NP);9;153;801
+800903;Dhaurehra (NP);9;153;802
+800904;Maholi (NP);9;154;803
+800905;Misrikh-cum-Neemsar (NPP);9;154;803
+800906;Khairabad (NPP);9;154;804
+800907;Sitapur (NPP);9;154;804
+800908;Hargaon (NP);9;154;804
+800909;Laharpur (NPP);9;154;805
+800910;Tambaur-cum-Ahamdabad (NP);9;154;805
+800911;Biswan (NPP);9;154;806
+800912;Mahmudabad (NPP);9;154;807
+800913;Paintepur (NP);9;154;807
+800914;Sidhauli (NP);9;154;808
+800915;Shahabad (NPP);9;155;809
+800916;Pihani (NPP);9;155;809
+800917;Pali (NP);9;155;810
+800918;Gopamau (NP);9;155;811
+800919;Hardoi (NPP + OG);9;155;811
+800919;Hardoi (NPP);9;155;811
+800920;Sandi (NPP);9;155;812
+800921;Bilgram (NPP);9;155;812
+800922;Madhoganj (NP);9;155;812
+800923;Mallawan (NPP);9;155;812
+800924;Kursath (NP);9;155;812
+800925;Kachhauna Patseni (NP);9;155;813
+800926;Beniganj (NP);9;155;813
+800927;Sandila (NPP);9;155;813
+800928;Ganj Muradabad (NP);9;156;814
+800929;Bangarmau (NPP);9;156;814
+800930;Fatehpur Chaurasi (NP);9;156;814
+800931;Ugu (NP);9;156;814
+800932;Safipur (NP);9;156;814
+800933;Kursath (NP);9;156;814
+800934;Auras (NP);9;156;815
+800935;Hyderabad (NP);9;156;815
+800936;Rasulabad (NP);9;156;815
+800937;Mohan (NP);9;156;815
+800938;Nyotini (NP);9;156;815
+800939;Nawabganj (NP);9;156;815
+800940;Unnao (NPP);9;156;816
+800941;Gangaghat (NPP);9;156;816
+800942;Purwa (NP);9;156;817
+800943;Maurawan (NP);9;156;817
+800944;Bighapur (NP);9;156;818
+800945;Bhagwant Nagar (NP);9;156;818
+800946;Malihabad (NP);9;157;819
+800947;Mahona (NP);9;157;820
+800948;Itaunja (NP);9;157;820
+800949;Bakshi Ka Talab (NP);9;157;820
+800950;Kakori (NP);9;157;821
+800951;Lucknow (M Corp.);9;157;821
+800952;Lucknow (CB);9;157;821
+800953;Gosainganj (NP);9;157;822
+800954;Amethi (NP);9;157;822
+800955;Nagram (NP);9;157;822
+800956;Bachhrawan (NP);9;158;823
+800957;Maharajganj (NP);9;158;823
+800958;Jais (NPP);9;158;824
+800959;Rae Bareli (NPP);9;158;825
+800960;Lalganj (NP);9;158;826
+800961;Dalmau (NP);9;158;827
+800962;Unchahar (NP);9;158;828
+800963;Parsadepur (NP);9;158;829
+800964;Salon (NP);9;158;829
+800965;Kampil (NP);9;159;830
+800966;Kaimganj (NPP);9;159;830
+800967;Shamsabad (NP);9;159;830
+800968;Farrukhabad-cum-Fatehgarh (NPP);9;159;832
+800969;Fatehgarh (CB);9;159;832
+800970;Mohammadabad (NP);9;159;832
+800971;Kamalganj (NP);9;159;832
+800972;Samdhan (NP);9;160;833
+800973;Gursahaiganj (NPP);9;160;833
+800974;Sikanderpur (NP);9;160;833
+800975;Chhibramau (NPP);9;160;833
+800976;Saurikh (NP);9;160;833
+800977;Talgram (NP);9;160;833
+800978;Kannauj (NPP);9;160;834
+800979;Tirwaganj (NP);9;160;835
+800980;Jaswantnagar (NPP);9;161;836
+800981;Etawah (NPP);9;161;838
+800982;Ekdil (NP);9;161;838
+800983;Bharthana (NPP);9;161;839
+800984;Bakewar (NP);9;161;839
+800985;Lakhna (NP);9;161;839
+800986;Bidhuna (NP);9;162;841
+800987;Achhalda (NP);9;162;841
+800988;Babarpur Ajitmal (NP);9;162;842
+800989;Atasu (NP);9;162;842
+800990;Phaphund (NP);9;162;842
+800991;Dibiyapur (NP);9;162;842
+800992;Auraiya (NPP);9;162;842
+800993;Rasulabad (NP);9;163;843
+800994;Jhinjhak (NP);9;163;844
+800995;Derapur (NP);9;163;844
+800996;Shivli (NP);9;163;845
+800997;Rura (NP);9;163;845
+800998;Akbarpur (NP);9;163;845
+800999;Amraudha (NP);9;163;846
+801000;Pukhrayan (NPP);9;163;846
+801001;Sikandra (NP);9;163;847
+801002;Bilhaur (NPP);9;164;848
+801003;Shivrajpur (NP);9;164;848
+801004;Bithoor (NP);9;164;849
+801005;Kanpur (M Corp. + OG);9;164;849
+801005;Kanpur (M Corp.);9;164;849
+801006;Kanpur (CB);9;164;849
+801007;Ghatampur (NPP);9;164;850
+801008;Rampura (NP);9;165;851
+801009;Umri (NP);9;165;851
+801010;Madhogarh (NP);9;165;851
+801011;Jalaun (NPP);9;165;852
+801012;Kalpi (NPP);9;165;853
+801013;Kadaura (NP);9;165;853
+801014;Orai (NPP + OG);9;165;854
+801014;Orai (NPP);9;165;854
+801015;Kotra (NP);9;165;854
+801016;Konch (NPP);9;165;855
+801017;Nadigaon (NP);9;165;855
+801018;Samthar (NPP);9;166;856
+801019;Moth (NP);9;166;856
+801020;Chirgaon (NPP);9;166;856
+801021;Erich (NP);9;166;857
+801022;Gursarai (NPP);9;166;857
+801023;Garautha (NP);9;166;857
+801024;Tondi Fatehpur (NP);9;166;858
+801025;Mauranipur (NPP + OG);9;166;859
+801025;Mauranipur (NPP);9;166;859
+801026;Ranipur (NP);9;166;859
+801027;Kathera (NP);9;166;859
+801028;Barua Sagar (NPP);9;166;860
+801029;Baragaon (NP);9;166;860
+801030;Jhansi (M Corp.);9;166;860
+801031;Jhansi (CB);9;166;860
+801032;Jhansi Railway Settlement (ITS);9;166;860
+801033;Babina (CB);9;166;860
+801034;Talbehat (NP);9;167;861
+801035;Lalitpur (NPP);9;167;862
+801036;Pali (NP);9;167;862
+801037;Mahroni (NP);9;167;863
+801038;Kurara (NP);9;168;864
+801039;Hamirpur (NPP);9;168;864
+801040;Sumerpur (NP + OG);9;168;864
+801040;Sumerpur (NP);9;168;864
+801042;Rath (NPP);9;168;865
+801041;Gohand (NP);9;168;866
+801043;Sarila (NP);9;168;866
+801044;Maudaha (NPP);9;168;867
+801045;Kul Pahar (NP);9;169;868
+801046;Kharela (NP);9;169;869
+801047;Charkhari (NPP);9;169;869
+801048;Mahoba (NPP);9;169;870
+801049;Kabrai (NP);9;169;870
+801050;Mataundh (NP);9;170;871
+801051;Banda (NPP + OG);9;170;871
+801051;Banda (NPP);9;170;871
+801052;Tindwari (NP);9;170;871
+801053;Baberu (NP);9;170;872
+801054;Oran (NP);9;170;873
+801055;Bisanda Buzurg (NP);9;170;873
+801056;Atarra (NPP);9;170;873
+801057;Naraini (NP);9;170;874
+801058;Manikpur Sarhat (NP);9;171;875
+801059;Chitrakoot Dham (Karwi) (NPP);9;171;875
+801060;Rajapur (NP);9;171;876
+801061;Kora Jahanabad (NP);9;172;877
+801062;Bindki (NPP);9;172;877
+801063;Bahuwa (NP);9;172;878
+801064;Fatehpur (NPP);9;172;878
+801065;Khaga (NP);9;172;879
+801066;Kishunpur (NP);9;172;879
+801067;Hathgram (NP);9;172;879
+801068;Manikpur (NP);9;173;881
+801069;Kunda (NP);9;173;881
+801070;Antu (NP);9;173;882
+801071;Bela Pratapgarh (NPP);9;173;882
+801072;Pratapgarh City (NP);9;173;882
+801073;Katra Medniganj (NP);9;173;882
+801074;Patti (NP);9;173;883
+801075;Ajhuwa (NP);9;174;885
+801076;Sirathu (NP);9;174;885
+801077;Manjhanpur (NP);9;174;886
+801078;Karari (NP);9;174;886
+801079;Bharwari (NP);9;174;887
+801080;Chail (NP);9;174;887
+801081;Sarai Aquil (NP);9;174;887
+801082;Mau Aima (NP);9;175;888
+801083;Lal Gopalganj Nindaura (NP);9;175;888
+801084;Jhusi (NP);9;175;889
+801085;Phulpur (NP);9;175;889
+801086;Allahabad (M Corp. + OG);9;175;890
+801086;Allahabad (M Corp.);9;175;890
+801087;Allahabad (CB);9;175;890
+801088;Shankargarh (NP);9;175;891
+801089;Handia (NP);9;175;893
+801090;Sirsa (NP);9;175;894
+801091;Bharatganj (NP);9;175;894
+801092;Koraon (NP);9;175;895
+801093;Fatehpur (NP);9;176;896
+801094;Ramnagar (NP);9;176;897
+801095;Dewa (NP);9;176;898
+801096;Nawabganj (NPP + OG);9;176;898
+801096;Nawabganj (NPP);9;176;898
+801097;Banki (NP);9;176;898
+801098;Satrikh (NP);9;176;898
+801099;Zaidpur (NP);9;176;898
+801100;Tikait Nagar (NP);9;176;899
+801101;Dariyabad (NP);9;176;900
+801102;Siddhaur (NP);9;176;901
+801103;Haidergarh (NP);9;176;901
+801104;Subeha (NP);9;176;901
+801105;Rudauli (NPP);9;177;902
+801106;Bhadarsa (NP);9;177;904
+801107;Faizabad (CB);9;177;905
+801108;Faizabad (NPP);9;177;905
+801109;Ayodhya (NPP);9;177;905
+801110;Gosainganj (NP);9;177;905
+801111;Bikapur (NP);9;177;906
+801112;Iltifatganj Bazar (NP);9;178;907
+801113;Tanda (NPP);9;178;907
+801114;Ashrafpur Kichhauchha (NP);9;178;907
+801115;Jalalpur (NPP);9;178;909
+801116;Akbarpur (NPP);9;178;910
+801117;Musafirkhana (NP);9;179;912
+801118;Amethi (NP);9;179;914
+801119;Sultanpur (NPP);9;179;915
+801120;Koeripur (NP);9;179;917
+801121;Dostpur (NP);9;179;918
+801122;Kadipur (NP);9;179;918
+801123;Nanpara (NPP);9;180;919
+801124;Risiya Bazar (NP);9;180;921
+801125;Bahraich (NPP);9;180;921
+801126;Jarwal (NP);9;180;922
+801127;Bhinga (NP);9;181;923
+801128;Ikauna (NP);9;181;924
+801129;Balrampur (NPP + OG);9;182;925
+801129;Balrampur (NPP);9;182;925
+801130;Tulsipur (NP);9;182;926
+801131;Pachperwa (NP);9;182;926
+801132;Utraula (NPP);9;182;927
+801133;Khargupur (NP);9;183;928
+801134;Gonda (NPP);9;183;928
+801135;Katra (NP);9;183;929
+801136;Colonelganj (NPP);9;183;929
+801137;Nawabganj (NPP);9;183;930
+801138;Mankapur (NP);9;183;931
+801139;Barhani Bazar (NP);9;184;932
+801140;Shohratgarh (NP);9;184;932
+801141;Siddharthnagar (NPP);9;184;933
+801142;Uska Bazar (NP);9;184;933
+801143;Bansi (NPP);9;184;934
+801144;Domariyaganj (NP);9;184;936
+801145;Harraiya (NP);9;185;938
+801146;Bhabnan Bazar (NP);9;185;938
+801147;Basti (NPP);9;185;939
+801148;Mehdawal (NP);9;186;941
+801149;Khalilabad (NPP);9;186;942
+801150;Maghar (NP);9;186;942
+801151;Hariharpur (NP);9;186;943
+801152;Nautanwa (NPP);9;187;944
+801153;Nichlaul (NP);9;187;945
+801154;Siswa Bazar (NP);9;187;945
+801155;Anandnagar (NP);9;187;946
+801156;Ghughuli (NP);9;187;947
+801157;Maharajganj (NPP);9;187;947
+801158;Pipiganj (NP);9;188;948
+801159;Sahjanwan (NP);9;188;949
+801160;Gorakhpur (M Corp.);9;188;950
+801161;Pipraich (NP);9;188;950
+801162;Mundera Bazar (NP);9;188;951
+801163;Bansgaon (NP);9;188;952
+801164;Gola Bazar (NP);9;188;954
+801165;Barhalganj (NP);9;188;954
+801166;Khadda (NP);9;189;955
+801167;Padrauna (NPP);9;189;955
+801168;Ramkola (NP);9;189;956
+801169;Kaptanganj (NP);9;189;956
+801170;Hata (NP);9;189;956
+801171;Kushinagar (NP);9;189;957
+801172;Sewarhi (NP);9;189;958
+801173;Gauri Bazar (NP);9;190;959
+801174;Rampur Karkhana (NP);9;190;959
+801175;Deoria (NPP);9;190;959
+801176;Rudrapur (NP);9;190;960
+801177;Gaura Barhaj (NPP);9;190;961
+801178;Bhatni Bazar (NP);9;190;962
+801179;Majhauliraj (NP);9;190;962
+801180;Salempur (NP);9;190;962
+801181;Lar (NP);9;190;962
+801182;Bhatpar Rani (NP);9;190;963
+801183;Atrauliya (NP);9;191;964
+801184;Mahrajganj (NP);9;191;965
+801185;Bilariaganj (NP);9;191;965
+801186;Jiyanpur (NP);9;191;965
+801187;Azmatgarh (NP);9;191;965
+801188;Mubarakpur (NPP);9;191;966
+801189;Azamgarh (NPP);9;191;966
+801190;Nizamabad (NP);9;191;967
+801191;Sarai Mir (NP);9;191;967
+801192;Phulpur (NP);9;191;968
+801193;Katghar Lalganj (NP);9;191;969
+801194;Mehnagar (NP);9;191;970
+801195;Dohrighat (NP);9;192;971
+801196;Amila (NP);9;192;971
+801197;Ghosi (NP);9;192;971
+801198;Kopaganj (NP);9;192;973
+801199;Adari (NP);9;192;973
+801200;Maunath Bhanjan (NPP);9;192;973
+801201;Muhammadabad (NP);9;192;974
+801202;Belthara Road (NP);9;193;975
+801203;Sikanderpur (NP);9;193;976
+801204;Rasra (NPP);9;193;977
+801205;Chitbara Gaon (NP);9;193;978
+801206;Ballia (NPP);9;193;978
+801207;Maniyar (NP);9;193;979
+801208;Bansdih (NP);9;193;979
+801209;Sahatwar (NP);9;193;979
+801210;Reoti (NP);9;193;979
+801211;Shahganj (NPP);9;194;981
+801212;Khetasarai (NP);9;194;981
+801213;Mogra Badshahpur (NPP);9;194;983
+801214;Machhlishahr (NP);9;194;983
+801215;Jaunpur (NPP);9;194;984
+801216;Jafarabad (NP);9;194;984
+801217;Mariahu (NP);9;194;985
+801218;Kerakat (NP);9;194;986
+801219;Sadat (NP);9;195;987
+801220;Saidpur (NP);9;195;988
+801221;Jangipur (NP);9;195;989
+801222;Ghazipur (NPP + OG);9;195;989
+801222;Ghazipur (NPP);9;195;989
+801223;Bahadurganj (NP);9;195;990
+801224;Mohammadabad (NPP);9;195;990
+801225;Dildarnagar Fatehpur Bazar (NP);9;195;991
+801226;Zamania (NPP);9;195;991
+801227;Mughalsarai (NPP);9;196;993
+801228;Mughalsarai Railway Settlement (ITS);9;196;993
+801229;Chandauli (NP);9;196;993
+801230;Saiyad Raza (NP);9;196;993
+801231;Chakia (NP);9;196;994
+801232;Gangapur (NP);9;197;996
+801233;Varanasi (CB);9;197;996
+801234;Maruadih Railway Settlement (ITS);9;197;996
+801235;Varanasi (M Corp.);9;197;996
+801236;Ramnagar (NPP);9;197;996
+801237;Suriyawan (NP);9;198;997
+801238;Nai Bazar (NP);9;198;997
+801239;Bhadohi (NPP);9;198;997
+801240;Gyanpur (NP);9;198;998
+801241;Gopiganj (NPP);9;198;998
+801242;Khamaria (NP);9;198;999
+801243;Ghosia Bazar (NP);9;198;999
+801244;Mirzapur-cum-Vindhyachal (NPP);9;199;1000
+801245;Kachhwa (NP);9;199;1000
+801246;Chunar (NPP);9;199;1003
+801247;Ahraura (NPP);9;199;1003
+801248;Ghorawal (NP);9;200;1004
+801249;Sonbhadra (NPP);9;200;1005
+801250;Churk Ghurma (NP);9;200;1005
+801251;Chopan (NP);9;200;1005
+801252;Obra (NP);9;200;1005
+801253;Dudhi (NP);9;200;1006
+801254;Renukoot (NP + OG);9;200;1006
+801254;Renukoot (NP);9;200;1006
+801255;Hindalco Industries Ltd. (Renukoot) (ITS);9;200;1006
+801256;Kanaudia Chamical & Industries Ltd. (Renukoot) (ITS);9;200;1006
+801257;Pipri (NP);9;200;1006
+801258;Raja Ka Rampur (NP);9;201;1007
+801259;Aliganj (NPP);9;201;1007
+801260;Jaithara (NP);9;201;1007
+801261;Sakit (NP);9;201;1008
+801262;Etah (NPP);9;201;1008
+801263;Marehra (NPP);9;201;1008
+801264;Nidhauli Kalan (NP);9;201;1008
+801265;Jalesar (NPP);9;201;1009
+801266;Awagarh (NP);9;201;1009
+801267;Soron (NPP);9;202;1010
+801268;Bilram (NP);9;202;1010
+801269;Kasganj (NPP);9;202;1010
+801270;Sahawar (NP);9;202;1011
+801271;Amanpur (NP);9;202;1011
+801272;Mohanpur (NP);9;202;1012
+801273;Ganj Dundawara (NPP);9;202;1012
+801274;Patiyali (NP);9;202;1012
+801275;Sidhpura (NP);9;202;1012
+801276;Bhargain (NP);9;202;1012
+801277;Ramnagar (NP);10;203;1014
+801278;Narkatiaganj (Nagar Parishad);10;203;1017
+801279;Bagaha (Nagar Parishad);10;203;1019
+801280;Chanpatia (NP);10;203;1025
+801281;Bettiah (Nagar Parishad);10;203;1028
+801282;Raxaul Bazar  (Nagar Parishad);10;204;1031
+801283;Sugauli (NP);10;204;1034
+801284;Dhaka (NP);10;204;1039
+801285;Motihari (Nagar Parishad);10;204;1041
+801286;Areraj (NP);10;204;1045
+801287;Kesaria (NP);10;204;1047
+801288;Chakia (NP);10;204;1051
+801289;Pakri Dayal (NP);10;204;1052
+801290;Madhuban (NP);10;204;1055
+801291;Mehsi (NP);10;204;1057
+801292;Sheohar (NP);10;205;1060
+801293;Bairgania (NP);10;206;1063
+801294;Belsand (NP);10;206;1072
+801295;Sitamarhi (Nagar Parishad);10;206;1074
+801296;Dumra (NP);10;206;1074
+801297;Janakpur Road (NP);10;206;1077
+801298;Jainagar (NP);10;207;1083
+801299;Madhubani (Nagar Parishad);10;207;1093
+801300;Jhanjharpur (NP);10;207;1097
+801301;Ghoghardiha (NP);10;207;1098
+801302;Nirmali (NP);10;208;1101
+801303;Birpur (NP);10;208;1102
+801304;Supaul (Nagar Parishad);10;208;1109
+801305;Jogabani (NP);10;209;1113
+801306;Forbesganj (Nagar Parishad);10;209;1113
+801307;Araria (Nagar Parishad);10;209;1116
+801308;Thakurganj (NP);10;210;1123
+801309;Bahadurganj (NP);10;210;1125
+801310;Kishanganj (Nagar Parishad);10;210;1127
+801311;Banmankhi Bazar (NP);10;211;1128
+801312;Purnia (M Corp.);10;211;1134
+801313;Kasba (NP);10;211;1135
+801314;Katihar (M Corp. + OG);10;212;1151
+801314;Katihar (M Corp.);10;212;1151
+801315;Manihari (NP);10;212;1156
+801316;Madhepura (Nagar Parishad);10;213;1161
+801317;Murliganj (NP);10;213;1164
+801318;Saharsa (Nagar Parishad);10;214;1174
+801319;Darbhanga (M Corp.);10;215;1184
+801320;Benipur (Nagar Parishad);10;215;1188
+801321;Sahebganj (NP);10;216;1199
+801322;Motipur (NP);10;216;1200
+801323;Kanti (NP);10;216;1204
+801324;Muzaffarpur (M Corp.);10;216;1212
+801325;Kataiya (NP);10;217;1215
+801326;Mirganj (NP);10;217;1222
+801327;Gopalganj (Nagar Parishad);10;217;1224
+801328;Barauli (NP);10;217;1226
+801329;Siwan (Nagar Parishad);10;218;1230
+801330;Maharajganj (NP);10;218;1236
+801331;Mairwa (NP);10;218;1240
+801332;Revelganj (NP);10;219;1257
+801333;Chapra (Nagar Parishad);10;219;1258
+801334;Marhaura (NP);10;219;1260
+801335;Dighwara (NP);10;219;1266
+801336;Sonepur (NP);10;219;1267
+801337;Lalganj (NP);10;220;1270
+801338;Hajipur (Nagar Parishad);10;220;1278
+801339;Mahnar Bazar (NP);10;220;1283
+801340;Samastipur (Nagar Parishad + OG);10;221;1288
+801340;Samastipur (Nagar Parishad);10;221;1288
+801341;Dalsinghsarai (NP);10;221;1297
+801342;Rosera (NP);10;221;1300
+801343;Barauni (Nagar Parishad);10;222;1311
+801344;Teghra (NP);10;222;1311
+801345;Bihat (Nagar Parishad);10;222;1312
+801346;Begusarai (M Corp.) ;10;222;1314
+801347;Bakhri (NP);10;222;1316
+801348;Balia (NP);10;222;1319
+801349;Khagaria (Nagar Parishad);10;223;1323
+801350;Gogri Jamalpur (NP);10;223;1327
+801351;Naugachhia (NP);10;224;1332
+801352;Colgong (NP);10;224;1336
+801353;Sultanganj (Nagar Parishad);10;224;1340
+801354;Bhagalpur (M Corp.);10;224;1343
+801355;Amarpur (NP);10;225;1346
+801356;Banka (NP);10;225;1350
+801357;Munger (M Corp.);10;226;1356
+801358;Jamalpur (Nagar Parishad);10;226;1358
+801359;Kharagpur (NP);10;226;1360
+801360;Barahiya (NP);10;227;1365
+801361;Lakhisarai (Nagar Parishad);10;227;1368
+801362;Barbigha (NP);10;228;1372
+801363;Sheikhpura (Nagar Parishad);10;228;1374
+801364;Biharsharif (M Corp.);10;229;1386
+801365;Hilsa (Nagar Parishad);10;229;1390
+801366;Islampur (NP);10;229;1392
+801367;Rajgir (NP);10;229;1394
+801368;Silao (NP);10;229;1395
+801369;Maner (NP);10;230;1398
+801370;Dinapur Nizamat (Nagar Parishad);10;230;1399
+801371;Dinapur Cantonment (CB);10;230;1399
+801372;Khagaul (Nagar Parishad);10;230;1399
+801373;Patna (M Corp. + OG);10;230;1400
+801373;Patna (M Corp.);10;230;1400
+801374;Phulwari Sharif (Nagar Parishad);10;230;1402
+801375;Bihta (NP);10;230;1403
+801376;Naubatpur (NP);10;230;1404
+801377;Bikram (NP);10;230;1405
+801378;Masaurhi (Nagar Parishad);10;230;1408
+801379;Fatwah (NP);10;230;1411
+801380;Khusrupur (NP);10;230;1413
+801381;Bakhtiarpur (NP);10;230;1414
+801382;Barh (Nagar Parishad);10;230;1417
+801383;Mokameh (Nagar Parishad);10;230;1420
+801384;Shahpur (NP);10;231;1421
+801385;Arrah (M Corp.);10;231;1422
+801386;Koilwar (NP);10;231;1424
+801387;Behea (NP);10;231;1427
+801388;Jagdishpur (NP);10;231;1428
+801389;Piro (NP);10;231;1429
+801390;Dumraon (Nagar Parishad);10;232;1440
+801391;Buxar (Nagar Parishad);10;232;1441
+801392;Bhabua (Nagar Parishad);10;233;1453
+801393;Koath (NP);10;234;1459
+801394;Bikramganj (NP);10;234;1461
+801395;Nasriganj (NP);10;234;1463
+801396;Nokha (NP);10;234;1466
+801397;Sasaram (Nagar Parishad);10;234;1471
+801398;Dehri (Nagar Parishad);10;234;1473
+801399;Daudnagar (NP);10;235;1476
+801400;Rafiganj (NP);10;235;1479
+801401;Aurangabad (Nagar Parishad);10;235;1481
+801402;Nabinagar (NP);10;235;1483
+801403;Tikari (NP);10;236;1488
+801404;Gaya (M Corp. + OG);10;236;1495
+801404;Gaya (M Corp.);10;236;1495
+801405;Sherghati (NP);10;236;1503
+801406;Bodh Gaya (NP);10;236;1505
+801407;Nawada (Nagar Parishad);10;237;1512
+801408;Warisaliganj (NP);10;237;1513
+801409;Hisua (NP);10;237;1520
+801410;Rajauli (NP);10;237;1524
+801411;Jamui (Nagar Parishad);10;238;1527
+801412;Jhajha (NP);10;238;1530
+801413;Jehanabad (Nagar Parishad) ;10;239;1536
+801414;Makhdumpur (NP);10;239;1540
+801415;Arwal (Nagar Parishad);10;240;1542
+801416;Mangan (NP);11;241;1548
+801417;Gyalshing (NP);11;242;1549
+801418;Nayabazar Notified Bazar Area;11;242;1550
+801419;Namchi (M Cl);11;243;1551
+801420;Jorethang (NP);11;243;1551
+801421;Gangtok (M Corp.);11;244;1553
+801422;Singtam (NP);11;244;1553
+801423;Rangpo (NP);11;244;1553
+801424;Tawang (NT);12;245;1559
+801425;Dirang (NT);12;246;1566
+801426;Bomdila (NT);12;246;1569
+801427;Seppa (NT);12;247;1584
+801428;Itanagar (NT);12;248;1596
+801429;Naharlagun (NT);12;248;1597
+801430;Sagalee (NT);12;248;1601
+801431;Daporijo (NT);12;249;1615
+801432;Aalo (NT);12;250;1634
+801433;Basar (NT);12;250;1636
+801434;Boleng (NT);12;251;1643
+801435;Pasighat (NT);12;251;1655
+801436;Yingkiong (NT);12;252;1663
+801437;Changlang (NT);12;253;1671
+801438;Jairampur (NT);12;253;1678
+801439;Miao (NT);12;253;1680
+801440;Deomali (NT);12;254;1684
+801441;Khonsa (NT);12;254;1686
+801442;Longding;12;254;1690
+801443;Ziro (NT);12;255;1695
+801444;Koloriang (NT);12;256;1708
+801445;Anini (NT);12;257;1718
+801446;Roing (NT);12;258;1724
+801447;Tezu (NT);12;259;1729
+801448;Namsai (NT);12;259;1732
+801449;Hawai (NT);12;260;1743
+801450;Naginimora (TC);13;261;1744
+801451;Mon (TC);13;261;1748
+801452;Tuli (TC);13;262;1760
+801453;Changtongya (TC);13;262;1761
+801454;Mokokchung (MC);13;262;1766
+801455;Zunheboto (TC);13;263;1772
+801456;Wokha (TC);13;264;1789
+801457;Dimapur (MC);13;265;1796
+801458;Chumukedima (TC);13;265;1797
+801459;Medziphema (TC);13;265;1799
+801460;Phek (TC);13;266;1801
+801461;Pfutsero (TC);13;266;1809
+801462;Tuensang (TC);13;267;1817
+801463;Longleng (TC);13;268;1833
+801464;Kiphire (TC);13;269;1837
+801465;Tseminyu (TC);13;270;1843
+801466;Kohima (MC);13;270;1849
+801467;Jalukie (TC);13;271;1852
+801468;Peren (TC);13;271;1857
+801469;Nambol (MCI) (Major part);14;275;1873
+801470;Oinam (NP);14;275;1873
+801471;Bishnupur (MCI);14;275;1874
+801472;Ningthoukhong (NP);14;275;1874
+801473;Moirang (MCI);14;275;1875
+801474;Kwakta (NP);14;275;1875
+801475;Kumbi (NP);14;275;1875
+801476;Lilong (Thoubal) (NP) (Major part);14;276;1876
+801488;Samurou (NP) (Minor part);14;276;1876
+801477;Heirok (NP);14;276;1877
+801478;Wangjing (NP);14;276;1877
+801479;Thoubal (MCI);14;276;1877
+801480;Sikhong Sekmai (NP);14;276;1877
+801481;Yairipok (NP);14;276;1877
+801482;Sugnu (NP);14;276;1878
+801483;Kakching Khunou (NP);14;276;1878
+801484;Kakching (M Cl);14;276;1878
+801485;Lamsang (NP);14;277;1879
+801486;Sekmai Bazar (NP);14;277;1879
+801469;Nambol (MCI) (Minor part);14;277;1880
+801487;Imphal (MCI + OG) (Major part);14;277;1881
+801487;Imphal (MCI) (Major part);14;277;1881
+801488;Samurou NP (Major part);14;277;1882
+801489;Mayang Imphal (NP);14;277;1882
+801490;Thongkhong Laxmi Bazar (NP);14;277;1882
+801491;Wangoi (NP);14;277;1882
+801492;Lilong (Imphal West) (NP + OG);14;277;1882
+801492;Lilong (Imphal West) (NP);14;277;1882
+801493;Jiribam (M Cl);14;278;1883
+801494;Lamlai (NP);14;278;1884
+801487;Imphal (MCI + OG) ( Minor part);14;278;1885
+801487;Imphal (MCI) ( Minor part);14;278;1885
+801476;Lilong (Thoubal) (NP) ( Minor part);14;278;1886
+801495;Andro (NP);14;278;1886
+801496;Moreh (ST);14;280;1893
+801497;Zawlnuam (NT);15;281;1896
+801498;Mamit (NT);15;281;1896
+801499;Lengpui (NT);15;281;1898
+801500;N. Kawnpui (NT);15;282;1899
+801501;Vairengte (NT);15;282;1900
+801502;Bairabi (NT);15;282;1900
+801503;Kolasib (NT);15;282;1900
+801504;Darlawn (NT);15;283;1902
+801505;Sairang (NT);15;283;1901
+801506;Aizawl (NT);15;283;1901
+801507;Saitual (NT);15;283;1905
+801508;Khawzawl (NT);15;284;1907
+801509;Khawhai (NT);15;284;1907
+801510;Champhai (NT);15;284;1908
+801511;Biate (NT);15;284;1911
+801512;Serchhip (NT);15;285;1910
+801513;Thenzawl (NT);15;285;1910
+801514;North Vanlaiphai (NT);15;285;1911
+801515;Tlabung (NT);15;286;1913
+801516;Lunglei (NT);15;286;1914
+801517;Hnahthial (NT);15;286;1915
+801518;Lawngtlai (NT)            ;15;287;1917
+801519;Saiha (NT);15;288;1921
+801520;Khowai (NP);16;289;99999
+801521;Teliamura (NP);16;289;99999
+801522;Ranirbazar (NP);16;289;99999
+801523;Agartala (M Cl);16;289;99999
+801524;Bishalgarh (NP);16;289;99999
+801525;Sonamura (NP);16;289;99999
+801526;Udaipur (NP);16;290;99999
+801527;Amarpur (NP);16;290;99999
+801528;Santir Bazar (NP);16;290;99999
+801529;Belonia (NP);16;290;99999
+801530;Sabroom (NP);16;290;99999
+801531;Kamalpur (NP);16;291;99999
+801532;Ambassa (NP);16;291;99999
+801533;Kailasahar (NP);16;292;99999
+801534;Dharmanagar (NP);16;292;99999
+801535;Kumarghat (NP);16;292;99999
+801536;Tura (M);17;293;1965
+801537;Resubelpara (MB);17;294;1970
+801538;Williamnagar (MB);17;294;1974
+801539;Baghmara (MB);17;295;1977
+801540;Nongstoin (TC);17;296;1980
+801541;Mairang (TC);17;296;1982
+801542;Nongpoh (TC);17;297;1985
+801543;Shillong (CB);17;298;1989
+801544;Shillong (MB);17;298;1989
+801545;Jowai (M);17;299;1996
+801546;Gossaigaon (TC);18;300;2001
+801547;Kokrajhar (MB);18;300;2004
+801548;Gauripur (TC);18;301;2008
+801549;Dhubri (MB);18;301;2008
+801550;Sapatgram (TC);18;301;2005
+801551;Bilasipara (TC);18;301;2009
+801552;Chapar (TC);18;301;2010
+801553;Lakhipur (TC);18;302;2013
+801554;Goalpara (MB);18;302;2014
+801555;Barpeta Road (MB);18;303;2018
+801556;Sarbhog (TC);18;303;2018
+801557;Barpeta (MB);18;303;2022
+801558;Howli (TC);18;303;2022
+801559;Sarthebari (TC);18;303;2023
+801560;Pathsala (TC);18;303;2024
+801561;Marigaon (MB);18;304;2029
+801562;Dhing (TC);18;305;2034
+801563;Nagaon (MB + OG);18;305;2035
+801563;Nagaon (MB);18;305;2035
+801564;Raha (TC);18;305;2036
+801565;Kampur Town (TC);18;305;2037
+801566;Hojai (MB);18;305;2038
+801567;Doboka (TC);18;305;2039
+801568;Lumding (MB);18;305;2040
+801569;Lanka (MB);18;305;2040
+801570;Dhekiajuli (MB);18;306;2041
+801571;Rangapara (TC);18;306;2042
+801572;Tezpur (MB + OG);18;306;2043
+801572;Tezpur (MB);18;306;2043
+801573;Biswanath Chariali (TC);18;306;2045
+801574;Gohpur (TC) (Part);18;306;2046
+801574;Gohpur (TC) (Part);18;306;2047
+801575;Narayanpur (TC);18;307;2048
+801576;Bihpuria (TC);18;307;2049
+801577;North Lakhimpur (MB);18;307;2052
+801578;Dhakuakhana (TC);18;307;2053
+801579;Dhemaji (TC);18;308;2055
+801580;Silapathar (TC);18;308;2056
+801581;Doom Dooma (TC);18;309;2060
+801582;Makum (TC);18;309;2060
+801583;Tinsukia (MB + OG);18;309;2061
+801583;Tinsukia (MB);18;309;2061
+801584;Digboi (TC);18;309;2062
+801585;Margherita (TC);18;309;2062
+801586;Dibrugarh (MB + OG) (Part);18;310;2063
+801586;Dibrugarh (MB + OG) (Part);18;310;2064
+801587;Chabua (TC);18;310;2065
+801588;Naharkatiya (TC);18;310;2069
+801589;Sibsagar (MB);18;311;2071
+801590;Amguri (MB);18;311;2072
+801591;Nazira (MB);18;311;2073
+801592;Simaluguri (TC);18;311;2073
+801593;Sonari (MB);18;311;2074
+801594;Moranhat (TC);18;311;2075
+801595;Jorhat (MB + OG) (Part);18;312;2077
+801595;Jorhat (MB + OG) (Part);18;312;2078
+801596;Teok (TC) ;18;312;2079
+801597;Titabor Town (TC);18;312;2080
+801598;Mariani (TC);18;312;2081
+801599;Bokakhat (TC);18;313;2082
+801600;Dergaon (MB);18;313;2084
+801601;Golaghat (MB);18;313;2085
+801602;Sarupathar (TC);18;313;2087
+801603;Barpathar (TC);18;313;2087
+801604;Hamren (TC);18;314;2088
+801605;Donkamokam (TC);18;314;2088
+801606;Diphu (TC);18;314;2089
+801607;Bokajan (TC);18;314;2089
+801608;Howraghat (TC);18;314;2090
+801609;Dokmoka (TC);18;314;2090
+801610;Umrangso (TC);18;315;2092
+801611;Haflong (TC);18;315;2093
+801612;Mahur (TC);18;315;2094
+801613;Maibong (TC);18;315;2095
+801614;Silchar (MB + OG);18;316;2097
+801614;Silchar (MB);18;316;2097
+801615;Lakhipur (MB);18;316;2100
+801616;Karimganj (MB);18;317;2101
+801617;Badarpur (TC);18;317;2102
+801618;Hailakandi (MB);18;318;2107
+801619;Lala (TC);18;318;2108
+801620;Bongaigaon (MB);18;319;2110
+801621;Abhayapuri (TC);18;319;2112
+801622;Basugaon (TC);18;320;2004
+801623;Bijni (TC);18;320;2115
+801624;Rangia (MB);18;321;2116
+801625;Palasbari (MB);18;321;2125
+801626;North Guwahati (TC);18;322;2126
+801627;Guwahati (M Corp.) (Part);18;322;2128
+801627;Guwahati (M Corp. + OG) (Part);18;322;2129
+801628;Tihu (TC);18;323;2132
+801629;Nalbari (MB);18;323;2136
+801630;Mangaldoi (MB);18;325;2148
+801631;Kharupatia (TC);18;325;2149
+801632;Tangla (TC);18;326;2151
+801633;Udalguri (TC);18;326;2152
+801634;Darjiling (M);19;327;99999
+801635;Kalimpong (M);19;327;99999
+801636;Mirik (NA);19;327;99999
+801637;Kurseong (M);19;327;99999
+801638;Siliguri (M Corp.) (Part);19;327;99999
+801638;Siliguri (M Corp.) (Part);19;328;99999
+801639;Mal (M);19;328;99999
+801640;Jalpaiguri (M);19;328;99999
+801641;Dhupguri (M);19;328;99999
+801642;Alipurduar (M);19;328;99999
+801643;Haldibari (M);19;329;99999
+801644;Mekliganj (M);19;329;99999
+801645;Mathabhanga (M);19;329;99999
+801646;Koch Bihar (M);19;329;99999
+801647;Tufanganj (M);19;329;99999
+801648;Dinhata (M);19;329;99999
+801649;Islampur (M);19;330;99999
+801650;Dalkhola (M);19;330;99999
+801651;Raiganj (M);19;330;99999
+801652;Kaliaganj (M);19;330;99999
+801653;Gangarampur (M);19;331;99999
+801654;Balurghat (M + OG);19;331;99999
+801654;Balurghat (M);19;331;99999
+801655;Old Malda (M);19;332;99999
+801656;English Bazar (M);19;332;99999
+801657;Dhulian (M);19;333;99999
+801658;Jangipur (M);19;333;99999
+801659;Jiaganj-Azimganj (M);19;333;99999
+801660;Murshidabad (M);19;333;99999
+801661;Kandi (M);19;333;99999
+801662;Berhampore (M);19;333;99999
+801663;Beldanga (M);19;333;99999
+801664;Nalhati (M);19;334;99999
+801665;Rampurhat (M);19;334;99999
+801666;Suri (M);19;334;99999
+801667;Sainthia (M);19;334;99999
+801668;Dubrajpur (M);19;334;99999
+801669;Bolpur (M);19;334;99999
+801670;Kulti (M);19;335;99999
+801671;Asansol (M Corp.);19;335;99999
+801672;Jamuria (M + OG);19;335;99999
+801672;Jamuria (M);19;335;99999
+801673;Raniganj (M);19;335;99999
+801674;Durgapur (M Corp.);19;335;99999
+801675;Katwa (M);19;335;99999
+801676;Dainhat (M);19;335;99999
+801677;Guskara (M);19;335;99999
+801678;Barddhaman (M);19;335;99999
+801679;Kalna (M);19;335;99999
+801680;Memari (M);19;335;99999
+801681;Nabadwip (M);19;336;99999
+801682;Krishnanagar (M);19;336;99999
+801683;Santipur (M);19;336;99999
+801684;Taherpur (NA + OG);19;336;99999
+801684;Taherpur (NA);19;336;99999
+801685;Birnagar (M);19;336;99999
+801686;Ranaghat (M);19;336;99999
+801687;Cooper's Camp (NA + OG);19;336;99999
+801687;Cooper's Camp (NA);19;336;99999
+801688;Chakdaha (M);19;336;99999
+801689;Kalyani (M);19;336;99999
+801690;Gayespur (M);19;336;99999
+801691;Bongaon (M);19;337;99999
+801692;Halisahar (M);19;337;99999
+801693;Kanchrapara (M + OG);19;337;99999
+801693;Kanchrapara (M);19;337;99999
+801694;Naihati (M);19;337;99999
+801695;Bhatpara (M + OG);19;337;99999
+801695;Bhatpara (M);19;337;99999
+801696;Gobardanga (M);19;337;99999
+801697;Habra (M);19;337;99999
+801698;Ashokenagar Kalyangarh (M);19;337;99999
+801699;Garulia (M);19;337;99999
+801700;North Barrackpore (M);19;337;99999
+801701;Barrackpur Cantonment (CB);19;337;99999
+801702;Barrackpore (M);19;337;99999
+801703;Titagarh (M);19;337;99999
+801704;Khardah (M);19;337;99999
+801705;Panihati (M);19;337;99999
+801706;Baduria (M);19;337;99999
+801707;Barasat (M);19;337;99999
+801708;Madhyamgram (M);19;337;99999
+801709;New Barrackpore (M);19;337;99999
+801710;North DumDum (M);19;337;99999
+801711;Kamarhati (M);19;337;99999
+801712;Baranagar (M);19;337;99999
+801713;Dum Dum (M);19;337;99999
+801714;South DumDum (M);19;337;99999
+801715;Rajarhat Gopalpur (M);19;337;99999
+801716;Bidhannagar (M);19;337;99999
+801717;Nabadiganta Industrial Township (ITS);19;337;99999
+801718;Basirhat (M);19;337;99999
+801719;Taki (M);19;337;99999
+801720;Bansberia (M);19;338;99999
+801721;Hugli-Chinsurah (M + OG);19;338;99999
+801721;Hugli-Chinsurah (M);19;338;99999
+801722;Chandannagar (M Corp);19;338;99999
+801723;Tarakeswar (M);19;338;99999
+801724;Arambag (M);19;338;99999
+801725;Bhadreswar (M);19;338;99999
+801726;Champdani (M);19;338;99999
+801727;Baidyabati (M);19;338;99999
+801728;Serampore (M);19;338;99999
+801729;Rishra (M);19;338;99999
+801730;Konnagar (M);19;338;99999
+801731;Dankuni (M);19;338;99999
+801732;Uttarpara Kotrung (M);19;338;99999
+801733;Bankura (M);19;339;99999
+801734;Sonamukhi (M);19;339;99999
+801735;Bishnupur (M);19;339;99999
+801736;Jhalda (M);19;340;99999
+801737;Raghunathpur (M);19;340;99999
+801738;Puruliya (M);19;340;99999
+801739;Bally (M);19;341;99999
+801740;Haora (M Corp);19;341;99999
+801741;Uluberia (M + OG);19;341;99999
+801741;Uluberia (M);19;341;99999
+801742;Kolkata (M Corp.);19;342;99999
+801743;Maheshtala (M);19;343;99999
+801744;Budge Budge (M);19;343;99999
+801745;Pujali (M);19;343;99999
+801746;Rajpur Sonarpur (M);19;343;99999
+801747;Baruipur (M);19;343;99999
+801748;Diamond Harbour (M);19;343;99999
+801749;Jaynagar Mazilpur (M);19;343;99999
+801750;Ramjibanpur (M);19;344;99999
+801751;Kshirpai (M);19;344;99999
+801752;Chandrakona (M);19;344;99999
+801753;Kharar (M);19;344;99999
+801754;Ghatal (M);19;344;99999
+801755;Medinipur (M);19;344;99999
+801756;Jhargram (M);19;344;99999
+801757;Kharagpur (M);19;344;99999
+801758;Panskura (M);19;345;99999
+801759;Tamluk (M);19;345;99999
+801760;Haldia (M);19;345;99999
+801761;Egra (M);19;345;99999
+801762;Contai (M);19;345;99999
+801763;Majhion (NP);20;346;2499
+801764;Garhwa (NP);20;346;2509
+801765;Chatra (Nagar Parishad);20;347;2518
+801766;Kodarma (NP);20;348;2527
+801767;Jhumri Tilaiya (Nagar Parishad);20;348;2527
+801768;Giridih (Nagar Parishad);20;349;2539
+801769;Deoghar  (M Corp.);20;350;2545
+801770;Madhupur (Nagar Parishad);20;350;2550
+801771;Godda (NP);20;351;2561
+801772;Sahibganj (Nagar Parishad);20;352;2564
+801773;Rajmahal (NP);20;352;2569
+801774;Pakaur (NP);20;353;2576
+801775;Dhanbad (M Corp.);20;354;2584
+801776;Chirkunda (NP);20;354;2587
+801777;Phusro (Nagar Parishad);20;355;2590
+801778;Chas (Nagar Parishad);20;355;2595
+801779;Lohardaga (Nagar Parishad);20;356;2601
+801780;Mango (NAC);20;357;2606
+801781;Jamshedpur (NAC + OG);20;357;2606
+801781;Jamshedpur (NAC);20;357;2606
+801782;Jugsalai (M);20;357;2606
+801783;Chakulia (NP);20;357;2613
+801784;Hussainabad (NP);20;358;2615
+801785;Bishrampur (NP);20;358;2624
+801786;Medininagar (Daltonganj) (Nagar Parishad);20;358;2633
+801787;Latehar (NP);20;359;2639
+801788;Hazaribag (Nagar Parishad);20;360;2653
+801789;Ramgarh Cantonment (CB);20;361;2662
+801790;Basukinath (NP);20;362;2667
+801791;Dumka (Nagar Parishad);20;362;2673
+801792;Jamtara (NP);20;363;2678
+801793;Mihijam (NP);20;363;2678
+801794;Ranchi (M Corp.);20;364;2684
+801795;Bundu (NP);20;364;2698
+801796;Khunti (NP);20;365;2704
+801797;Gumla (NP);20;366;2712
+801798;Simdega (NP);20;367;2718
+801799;Chakardharpur (Nagar Parishad);20;368;2731
+801800;Chaibasa (Nagar Parishad);20;368;2739
+801801;Adityapur (Nagar Parishad);20;369;2752
+801802;Seraikela (NP);20;369;2753
+801803;Padmapur (NAC);21;370;2757
+801804;Barapali (NAC);21;370;2763
+801805;Bargarh (M);21;370;2765
+801806;Belpahar (M);21;371;2772
+801807;Brajarajnagar (M);21;371;2774
+801808;Jharsuguda (M);21;371;2776
+801809;Kochinda (NAC);21;372;2782
+801810;Hirakud (NAC);21;372;2787
+801811;Burla (NAC);21;372;2788
+801812;Redhakhol (NAC);21;372;2797
+801813;Sambalpur (M + OG);21;372;2799
+801813;Sambalpur (M);21;372;2799
+801814;Debagarh (M);21;373;2800
+801815;Sundargarh (M);21;374;2808
+801816;Rajagangapur (M);21;374;2814
+801817;O.C.L. (ITS);21;374;2814
+801818;Biramitrapur (M);21;374;2816
+801819;Raurkela (M + OG);21;374;2832
+801819;Raurkela (M);21;374;2832
+801820;Raurkela  (ITS + OG);21;374;2833
+801820;Raurkela  (ITS);21;374;2833
+801821;Barbil (M);21;375;2834
+801822;Joda (M );21;375;2837
+801823;Kendujhar (M);21;375;2845
+801824;Anandpur (M);21;375;2854
+801825;Rairangpur (NAC + OG);21;376;2861
+801825;Rairangpur (NAC);21;376;2861
+801826;Karanjia (NAC);21;376;2870
+801827;Udala (NAC);21;376;2884
+801828;Baripada (M + OG);21;376;2888
+801828;Baripada (M);21;376;2888
+801829;Jaleshwar (NAC);21;377;2890
+801830;Remuna (NAC);21;377;2902
+801831;Nilagiri (NAC);21;377;2903
+801832;Soro (NAC);21;377;2907
+801833;Baleshwar (M + OG);21;377;2909
+801833;Baleshwar (M);21;377;2909
+801834;Dhamanagar (NAC);21;378;2913
+801835;Bhadrak (M + OG);21;378;2914
+801835;Bhadrak (M);21;378;2914
+801836;Basudebpur (NAC);21;378;2915
+801837;Pattamundai (NAC);21;379;2926
+801838;Kendrapara (M);21;379;2927
+801839;Paradip (M);21;380;2934
+801840;Jagatsinghapur (M);21;380;2940
+801841;Banki (NAC);21;381;2948
+801842;Athagad (NAC);21;381;2950
+801843;Choudwar (M + OG);21;381;2954
+801843;Choudwar (M);21;381;2954
+801844;Cuttack (MC);21;381;2968
+801845;Byasanagar (M + OG);21;382;2974
+801845;Byasanagar (M);21;382;2974
+801846;Jajapur (M);21;382;2977
+801847;Kamakshyanagar (NAC);21;383;2988
+801848;Bhuban (NAC);21;383;2990
+801849;Dhenkanal (M);21;383;2999
+801850;Talcher (M);21;384;3006
+801851;Anugul (M);21;384;3011
+801852;Athmallik (NAC);21;384;3017
+801853;Khandapada (NAC);21;385;3026
+801854;Nayagarh (NAC);21;385;3028
+801855;Khordha (M);21;386;3036
+801856;Jatani (M + OG);21;386;3049
+801856;Jatani (M);21;386;3049
+801857;Balugaon (NAC);21;386;3053
+801858;Banapur (NAC);21;386;3054
+801859;Bhubaneswar (MC + OG);21;386;3055
+801859;Bhubaneswar (MC);21;386;3055
+801860;Pipili (NAC);21;387;3057
+801861;Nimapada (NAC);21;387;3058
+801862;Konark (NAC);21;387;3061
+801863;Puri (M);21;387;3070
+801864;Buguda (NAC);21;388;3072
+801865;Bhanjanagar (NAC);21;388;3074
+801866;Bellaguntha (NAC);21;388;3074
+801867;Surada (NAC);21;388;3076
+801868;Asika (NAC);21;388;3078
+801869;Kabisurjyanagar (NAC);21;388;3080
+801870;Polasara (NAC);21;388;3081
+801871;Kodala (NAC);21;388;3082
+801872;Khalikote (NAC);21;388;3083
+801873;Rambha (NAC);21;388;3084
+801874;Chhatrapur (NAC);21;388;3085
+801875;Ganjam (NAC);21;388;3086
+801876;Purusottampur (NAC);21;388;3089
+801877;Hinjilicut (NAC);21;388;3090
+801878;Gopalpur (NAC);21;388;3094
+801879;Digapahandi (NAC);21;388;3096
+801880;Chikiti (NAC);21;388;3097
+801881;Brahmapur (MC);21;388;3099
+801882;Kashinagar (NAC);21;389;3104
+801883;Paralakhemundi (M + OG);21;389;3105
+801883;Paralakhemundi (M);21;389;3105
+801884;Phulabani (M);21;390;3112
+801885;G. Udayagiri (NAC);21;390;3114
+801886;Baudhgarh (NAC);21;391;3130
+801887;Binika (NAC);21;392;3135
+801888;Sonapur (M);21;392;3139
+801889;Tarbha (NAC);21;392;3140
+801890;Balangir (M);21;393;3142
+801891;Patnagarh (NAC);21;393;3144
+801892;Kantabanji (NAC);21;393;3149
+801893;Titlagarh (NAC + OG);21;393;3152
+801893;Titlagarh (NAC);21;393;3152
+801894;Khariar Road (NAC);21;394;3153
+801895;Khariar (NAC);21;394;3156
+801896;Kesinga (NAC);21;395;3159
+801897;Bhawanipatna (M);21;395;3164
+801898;Junagarh (NAC);21;395;3166
+801899;Rayagada (M);21;396;3181
+801900;Gunupur (NAC + OG);21;396;3183
+801900;Gunupur (NAC);21;396;3183
+801901;Gudari (NAC);21;396;3184
+801902;Umarkote (NAC);21;397;3189
+801903;Nabarangapur (M + OG);21;397;3196
+801903;Nabarangapur (M);21;397;3196
+801904;Kotpad (NAC);21;398;3199
+801905;Koraput (NAC);21;398;3208
+801906;Jeypur (M);21;398;3209
+801907;Sunabeda (NAC).;21;398;3216
+801908;Malkangiri (NAC);21;399;3220
+801909;Balimela (NAC);21;399;3226
+801910;Shivpur Charcha (M);22;400;3232
+801911;Baikunthpur (M);22;400;3232
+801916;Chirmiri (M.Corp) (Part);22;400;3232
+801912;Manendragarh (M);22;400;3234
+801913;Khongapani (NP);22;400;3234
+801914;Jhagrakhand (NP);22;400;3234
+801915;Nai-Ledri (NP);22;400;3234
+801916;Chirmiri (M.Corp) (Part);22;400;3235
+801917;Ramanujganj (NP);22;401;3236
+801918;Balrampur (NP);22;401;3237
+801919;Wadrafnagar (NP);22;401;3238
+801920;Pratappur (NP);22;401;3239
+801921;Jarhi (NP);22;401;3239
+801922;Kusmi (NP);22;401;3240
+801923;Surajpur (M);22;401;3242
+801924;Bishrampur (NP);22;401;3242
+801925;Bhatgaon (NP);22;401;3244
+801926;Premnagar (NP);22;401;3246
+801927;Ambikapur (M Corp. + OG);22;401;3247
+801927;Ambikapur (M Corp.);22;401;3247
+801928;Lakhanpur (NP);22;401;3248
+801929;Rajpur (NP);22;401;3250
+801930;Sitapur (NP);22;401;3252
+801931;Bagicha (NP);22;402;3255
+801932;JashpurNagar (M + OG);22;402;3257
+801932;JashpurNagar (M);22;402;3257
+801933;Pathalgaon (NP);22;402;3262
+801934;Kotba (NP);22;402;3262
+801935;Dharamjaigarh (NP);22;403;3263
+801936;Lailunga (NP);22;403;3264
+801937;Gharghoda (NP);22;403;3265
+801938;Kirodimalnagar (NP);22;403;3267
+801939;Raigarh (M Corp. + OG);22;403;3267
+801939;Raigarh (M Corp.);22;403;3267
+801940;Pusaur (NP);22;403;3268
+801941;Kharsia  (M);22;403;3269
+801942;Sarangarh (NP);22;403;3270
+801943;Sariya (NP);22;403;3271
+801944;Baramkela (NP);22;403;3271
+801945;Katghora (NP);22;404;3272
+801946;Chhurikala (NP);22;404;3272
+801947;Dipka (M);22;404;3272
+801949;Korba (M Corp.) (Part);22;404;3272
+801948;Pali (NP);22;404;3274
+801949;Korba (M Corp. + OG) (Part);22;404;3275
+801949;Korba (M Corp.) (Part);22;404;3275
+801950;Naila-Janjgir (M);22;405;3277
+801951;Akaltara (M);22;405;3278
+801952;Baloda (NP);22;405;3279
+801953;Nawagarh (NP);22;405;3280
+801954;Shivrinarayan (NP);22;405;3280
+801955;Champa (M);22;405;3281
+801956;Saragaon (NP);22;405;3281
+801957;Sakti (M);22;405;3282
+801958;Naya Baradwar (NP);22;405;3282
+801959;Rahaud (NP);22;405;3283
+801960;Kharod (NP);22;405;3283
+801961;Dabhra (NP);22;405;3284
+801962;Chandrapur (NP);22;405;3284
+801963;Adbhar (NP);22;405;3285
+801964;Jaijepur (NP);22;405;3286
+801965;Gaurella (NP);22;406;3287
+801966;Pendra (NP);22;406;3289
+801967;Lormi (NP);22;406;3290
+801968;Kota (NP);22;406;3291
+801969;Ratanpur (NP);22;406;3291
+801970;Mungeli (M + OG);22;406;3292
+801970;Mungeli (M );22;406;3292
+801971;Pathariya (NP);22;406;3293
+801972;Sargaon (NP);22;406;3293
+801973;Takhatpur (NP);22;406;3294
+801974;Sakari (NP);22;406;3294
+801975;Bilaspur (M Corp. + OG) (Part);22;406;3294
+801975;Bilaspur (M Corp.) (Part);22;406;3295
+801976;Tifra (NP);22;406;3295
+801977;Sirgitti (NP);22;406;3295
+801978;Malhar (NP);22;406;3296
+801979;Bodri (NP);22;406;3297
+801980;Bilha (NP);22;406;3297
+801981;Kawardha (M + OG);22;407;3298
+801981;Kawardha (M );22;407;3298
+801982;Pipariya (NP);22;407;3298
+801983;Bodla (NP);22;407;3299
+801984;Sahaspur-Lohara (NP);22;407;3300
+801985;Pandariya (NP);22;407;3301
+801986;Pandatarai (NP);22;407;3301
+801987;Gandai (NP);22;408;3302
+801988;Chhuikhadan (NP);22;408;3302
+801989;Khairagarh (M);22;408;3303
+801990;Dongargarh (M);22;408;3304
+801991;Rajnandgaon (M Corp.);22;408;3305
+801992;Chhuriya (NP);22;408;3306
+801993;Dongargaon (NP);22;408;3307
+801994;Ambagarh Chowki (NP);22;408;3310
+801995;Nawagarh (NP);22;409;3311
+801996;Maro (NP);22;409;3311
+801997;Bemetara (M);22;409;3312
+801998;Saja (NP);22;409;3313
+801999;Devkar  (NP);22;409;3313
+802000;Parpondi (NP);22;409;3313
+802001;Than-Khamharia (NP);22;409;3314
+802002;Berla (NP);22;409;3315
+802003;Dhamdha (NP);22;409;3316
+802004;Ahiwara (NP);22;409;3316
+802005;Kumhari (M) (Part);22;409;3316
+802006;Jamul (M) (Part);22;409;3316
+802007;Bhilai Charoda (M) (Part);22;409;3316
+802006;Jamul (M) (Part);22;409;3317
+802008;Bhilai Nagar (M Corp. + OG) (Part);22;409;3317
+802008;Bhilai Nagar (M Corp.) (Part);22;409;3317
+802009;Durg (M Corp.);22;409;3317
+802010;Utai (NP);22;409;3317
+802007;Bhilai Charoda (M) (Part);22;409;3317
+802008;Bhilai Nagar (M Corp.) (Part);22;409;3318
+802005;Kumhari (M) (Part);22;409;3318
+802007;Bhilai Charoda (M) (Part);22;409;3318
+802011;Patan (NP);22;409;3318
+802012;Arjunda (NP);22;409;3319
+802013;Gunderdehi (NP);22;409;3319
+802014;Daundi Lohara (NP);22;409;3320
+802015;Balod (M);22;409;3321
+802016;Dalli-Rajhara (M);22;409;3322
+802017;Chikhalakasa (NP);22;409;3322
+802018;Doundi (NP);22;409;3322
+802019;Gurur (NP);22;409;3323
+802020;Simga (NP);22;410;3324
+802021;Bhatapara (M);22;410;3325
+802022;Baloda Bazar (M);22;410;3326
+802023;Lawan (NP);22;410;3326
+802024;Palari (NP);22;410;3327
+802025;Tundra (NP);22;410;3328
+802026;Kasdol (NP);22;410;3328
+802027;Bhatgaon (NP);22;410;3329
+802028;Bilaigarh (NP);22;410;3329
+802029;Arang  (NP);22;410;3330
+802030;Abhanpur (NP);22;410;3331
+802031;Gobra Nawapara (M);22;410;3331
+802032;Koora (NP);22;410;3332
+802033;Birgaon (M);22;410;3332
+802034;Raipur (M Corp. + OG);22;410;3332
+802034;Raipur (M Corp.);22;410;3332
+802035;Mana-Camp (NP);22;410;3332
+802036;Fingeshwar (NP);22;410;3333
+802037;Rajim (NP);22;410;3333
+802038;Tilda Newra (M + OG);22;410;3334
+802038;Tilda Newra (M);22;410;3334
+802039;Kharora (NP);22;410;3334
+802040;Gariyaband (NP);22;410;3335
+802041;Chhura (NP);22;410;3336
+802042;Basna  (NP);22;411;3339
+802043;Saraipali (NP);22;411;3340
+802044;Tumgaon (NP);22;411;3341
+802045;Mahasamund (M + OG);22;411;3341
+802045;Mahasamund (M);22;411;3341
+802046;Pithora (NP);22;411;3342
+802047;Bagbahara (NP);22;411;3343
+802048;Bhakhara (NP);22;412;3344
+802049;Kurud (NP);22;412;3344
+802050;Magarlod (NP);22;412;3345
+802051;Aamadi (NP);22;412;3346
+802052;Dhamtari (M + OG);22;412;3346
+802052;Dhamtari (M);22;412;3346
+802053;Nagari (NP);22;412;3347
+802054;Charama (NP);22;413;3348
+802055;Bhanupratappur (NP);22;413;3349
+802056;Kanker (M + OG);22;413;3351
+802056;Kanker (M);22;413;3351
+802057;Narharpur (NP);22;413;3352
+802058;Antagarh (NP);22;413;3353
+802059;Pakhanjur (NP);22;413;3354
+802060;Keskal (NP);22;414;3355
+802061;Visrampuree (NP);22;414;3356
+802062;Kondagaon (M);22;414;3357
+802063;Farasgaon (NP);22;414;3359
+802064;Jagdalpur (M Corp.);22;414;3360
+802065;Bastar (NP);22;414;3363
+802066;Narayanpur (NP);22;415;3367
+802067;Dantewada (NP);22;416;3369
+802068;Bade Bacheli (M);22;416;3369
+802069;Barsur (NP);22;416;3370
+802070;Geedam (NP);22;416;3370
+802071;Kirandul (M);22;416;3372
+802072;Dornapal (NP);22;416;3373
+802073;Konta (NP);22;416;3373
+802074;Sukma (NP);22;416;3375
+802075;Bhopalpattanam (NP);22;417;3376
+802076;Bijapur (NP);22;417;3378
+802077;Bhairamgarh (NP);22;417;3379
+802078;Vijaypur (NP);23;418;3380
+802079;Sheopur (M + OG);23;418;3382
+802079;Sheopur (M);23;418;3382
+802080;Badoda (NP);23;418;3383
+802081;Ambah (M);23;419;3385
+802082;Porsa (M);23;419;3386
+802083;Morena (M);23;419;3387
+802084;Bamor (NP);23;419;3387
+802085;Joura (NP);23;419;3388
+802086;Kailaras (NP);23;419;3389
+802087;Jhundpura (NP);23;419;3390
+802088;Sabalgarh (M);23;419;3390
+802089;Phuphkalan (NP);23;420;3392
+802090;Bhind (M);23;420;3392
+802091;Akoda (NP);23;420;3392
+802092;Mehgaon (NP);23;420;3393
+802093;Gormi (NP);23;420;3394
+802094;Gohad (M);23;420;3395
+802095;Mau (NP);23;420;3395
+802096;Mihona (NP);23;420;3397
+802097;Lahar (NP);23;420;3398
+802098;Alampur (NP);23;420;3398
+802099;Daboh (NP);23;420;3398
+802100;Gwalior (M Corp.);23;421;3399
+802101;Morar Cantt (CB);23;421;3399
+802102;Bilaua (NP);23;421;3400
+802103;Pichhore (NP);23;421;3400
+802104;Dabra (M);23;421;3400
+802105;Bhitarwar (NP);23;421;3401
+802106;Antari (NP);23;421;3402
+802107;Seondha (NP);23;422;3403
+802108;Indergarh (NP);23;422;3404
+802109;Datia (M);23;422;3405
+802110;Badoni (NP);23;422;3405
+802111;Bhander (NP);23;422;3406
+802112;Shivpuri (M);23;423;3408
+802113;Narwar (NP);23;423;3409
+802114;Karera (NP);23;423;3410
+802115;Kolaras (NP);23;423;3411
+802116;Badarwas (NP);23;423;3412
+802117;Pichhore (NP);23;423;3413
+802118;Khaniyadhana (NP);23;423;3414
+802119;Tarichar Kalan (NP);23;424;3415
+802120;Niwari (NP);23;424;3415
+802121;Orchha (NP);23;424;3416
+802122;Jeron Khalsa (NP);23;424;3417
+802123;Prithvipur (NP);23;424;3417
+802124;Lidhora Khas (NP);23;424;3418
+802125;Jatara (NP);23;424;3418
+802126;Palera (NP);23;424;3420
+802127;Baldeogarh (NP);23;424;3421
+802128;Khargapur (NP);23;424;3422
+802129;Kari (NP);23;424;3423
+802130;Tikamgarh (M);23;424;3423
+802131;Badagaon (NP);23;424;3423
+802132;Barigarh (NP);23;425;3424
+802133;Laundi (NP);23;425;3425
+802134;Chandla (NP);23;425;3426
+802135;Harpalpur (NP);23;425;3427
+802136;Nowgong (M);23;425;3427
+802137;Garhi - Malhera (NP);23;425;3428
+802138;Maharajpur (NP);23;425;3428
+802139;Chhatarpur (M + OG);23;425;3429
+802139;Chhatarpur (M);23;425;3429
+802140;Rajnagar (NP);23;425;3430
+802141;Khajuraho (NP);23;425;3430
+802142;Bada Malhera (NP);23;425;3431
+802143;Ghuwara (NP);23;425;3432
+802144;Satai (NP);23;425;3433
+802145;Bijawar (NP);23;425;3433
+802146;Buxwaha (NP);23;425;3434
+802147;Ajaigarh (NP);23;426;3435
+802148;Panna (M + OG);23;426;3436
+802148;Panna (M);23;426;3436
+802149;Devendranagar (NP);23;426;3437
+802150;Kakarhati (NP);23;426;3437
+802151;Amanganj (NP);23;426;3439
+802152;Pawai (NP);23;426;3440
+802153;Bina Etawa (M);23;427;3443
+802154;Khurai (M);23;427;3444
+802155;Banda (NP);23;427;3446
+802156;Shahgarh (NP);23;427;3447
+802157;Rahatgarh (NP);23;427;3448
+802158;Shahpur (NP);23;427;3449
+802159;Sagar (M Corp. + OG);23;427;3449
+802159;Sagar (M Corp.);23;427;3449
+802160;Sagar Cantt (CB);23;427;3449
+802161;Garhakota (M + OG);23;427;3450
+802161;Garhakota (M);23;427;3450
+802162;Rehli (M);23;427;3451
+802163;Deori (M);23;427;3453
+802164;Hatta (M);23;428;3454
+802165;Patharia (NP);23;428;3457
+802166;Hindoria (NP);23;428;3458
+802167;Damoh (M + OG);23;428;3458
+802167;Damoh (M);23;428;3458
+802168;Tendukheda (NP);23;428;3460
+802169;Kothi (NP);23;429;3461
+802170;Satna (M Corp. + OG);23;429;3461
+802170;Satna (M Corp.);23;429;3461
+802171;Chitrakoot (NP);23;429;3462
+802172;Birsinghpur (NP);23;429;3463
+802173;Jaitwara (NP);23;429;3463
+802174;Nagod (NP);23;429;3464
+802175;Unchahara (NP);23;429;3465
+802176;Rampur Baghelan (NP);23;429;3466
+802177;Kotar (NP);23;429;3467
+802178;Amarpatan (NP);23;429;3468
+802179;Maihar (M);23;429;3470
+802180;Chakghat (NP);23;430;3471
+802181;Teonthar (NP);23;430;3471
+802182;Sirmour (NP);23;430;3473
+802183;Baikunthpur (NP);23;430;3473
+802184;Mangawan (NP);23;430;3474
+802185;Semaria (NP);23;430;3475
+802186;Hanumana (NP);23;430;3476
+802187;Mauganj (NP);23;430;3477
+802188;Naigarhi (NP);23;430;3478
+802189;Rewa (M Corp.);23;430;3479
+802190;Govindgarh (NP);23;430;3479
+802191;Gurh (NP);23;430;3481
+802192;Umaria (M);23;431;3482
+802193;Chandia (NP);23;431;3483
+802194;Pali (NP);23;431;3485
+802195;Nowrozabad (Khodargama) (NP);23;431;3486
+802196;Diken (NP);23;432;3487
+802197;Jawad (NP);23;432;3487
+802198;Singoli (NP);23;432;3488
+802199;Ratangarh (NP);23;432;3488
+802200;Neemuch (M + OG);23;432;3489
+802200;Neemuch (M);23;432;3489
+802201;Jiran (NP);23;432;3490
+802202;Rampura (NP);23;432;3491
+802203;Manasa (NP);23;432;3491
+802204;Kukdeshwar (NP);23;432;3491
+802205;Bhanpura (NP);23;433;3492
+802206;Malhargarh (NP);23;433;3493
+802207;Narayangarh (NP);23;433;3493
+802208;Piplya Mandi (NP);23;433;3493
+802209;Garoth (NP);23;433;3494
+802210;Shamgarh (NP);23;433;3495
+802211;Mandsaur (M);23;433;3496
+802212;Nagri (NP);23;433;3497
+802213;Sitamau (NP);23;433;3498
+802214;Suwasara (NP);23;433;3499
+802215;Piploda (NP);23;434;3500
+802216;Jaora (M + OG);23;434;3501
+802216;Jaora (M);23;434;3501
+802217;Badawada (NP);23;434;3501
+802218;Alot (NP);23;434;3502
+802219;Tal (NP);23;434;3503
+802220;Sailana (NP);23;434;3504
+802221;Namli (NP);23;434;3507
+802222;Ratlam (M Corp.);23;434;3507
+802223;Dhamnod (NP);23;434;3507
+802224;Khacharod (M);23;435;3508
+802225;Nagda (M);23;435;3509
+802226;Unhel (NP);23;435;3509
+802227;Mahidpur (M + OG);23;435;3510
+802227;Mahidpur (M);23;435;3510
+802228;Tarana (NP);23;435;3512
+802229;Makdon (NP);23;435;3512
+802230;Ujjain (M Corp.);23;435;3513
+802231;Badnagar (M + OG);23;435;3514
+802231;Badnagar (M);23;435;3514
+802232;Soyatkalan (NP);23;436;3515
+802233;Susner (NP);23;436;3515
+802234;Nalkheda (NP);23;436;3516
+802235;Badagaon (NP);23;436;3516
+802236;Badod (NP);23;436;3517
+802237;Agar (M);23;436;3518
+802238;Kanad (NP);23;436;3518
+802239;Shajapur (M);23;436;3519
+802240;Maksi (NP);23;436;3519
+802241;Shujalpur (M);23;436;3522
+802242;Akodia (NP);23;436;3522
+802243;Polaykalan (NP);23;436;3522
+802244;Tonk Khurd (NP);23;437;3524
+802245;Bhaurasa (NP);23;437;3525
+802246;Sonkatch (NP);23;437;3525
+802247;Pipalrawan (NP);23;437;3525
+802248;Dewas (M Corp.);23;437;3526
+802249;Kannod (NP);23;437;3527
+802250;Loharda (NP);23;437;3528
+802251;Kantaphod (NP);23;437;3528
+802252;Satwas (NP);23;437;3528
+802253;Karnawad (NP);23;437;3529
+802254;Bagli (NP);23;437;3529
+802255;Hatpiplya (NP);23;437;3530
+802256;Khategaon (NP);23;437;3531
+802257;Badnawar (NP);23;438;3532
+802258;Rajgarh (NP);23;438;3533
+802259;Sardarpur (NP);23;438;3533
+802260;Dhar (M);23;438;3534
+802261;Pithampur (M);23;438;3534
+802262;Mandav (NP);23;438;3534
+802263;Kukshi (NP);23;438;3536
+802264;Dahi (NP);23;438;3537
+802265;Manawar (M);23;438;3538
+802266;Dhamnod (NP);23;438;3539
+802267;Dharampuri (NP);23;438;3539
+802268;Runji-Gautampura (NP);23;439;3540
+802269;Depalpur (NP);23;439;3540
+802270;Betma (NP);23;439;3540
+802271;Hatod (NP);23;439;3541
+802272;Sawer (NP);23;439;3542
+802273;Indore (M Corp. + OG);23;439;3543
+802273;Indore (M Corp.);23;439;3543
+802274;Rau (NP);23;439;3543
+802275;Mhow Cantt (CB);23;439;3544
+802276;Mhowgaon (NP);23;439;3544
+802277;Manpur (NP);23;439;3544
+802278;Barwaha (M);23;440;3545
+802279;Sanawad (M);23;440;3545
+802280;Maheshwar (NP);23;440;3546
+802281;Mandleshwar (NP);23;440;3546
+802282;Kasrawad (NP);23;440;3547
+802283;Bhikangaon (NP);23;440;3549
+802284;Khargone (M + OG);23;440;3550
+802284;Khargone (M);23;440;3550
+802285;Barwani (M);23;441;3554
+802286;Anjad (NP);23;441;3557
+802287;Rajpur (NP);23;441;3558
+802288;Palsud (NP);23;441;3558
+802289;Pansemal (NP);23;441;3559
+802290;Khetia (NP);23;441;3559
+802291;Sendhwa (M);23;441;3561
+802292;Machalpur (NP);23;442;3563
+802293;Jirapur (NP);23;442;3563
+802294;Khilchipur (NP);23;442;3564
+802295;Chhapiheda (NP);23;442;3564
+802296;Rajgarh (NP);23;442;3565
+802297;Khujner (NP);23;442;3565
+802298;Suthaliya (NP);23;442;3566
+802299;Biaora (M + OG);23;442;3566
+802299;Biaora (M);23;442;3566
+802300;Sarangpur (M);23;442;3567
+802301;Narsinghgarh (M);23;442;3568
+802302;Boda (NP);23;442;3568
+802303;Pachore (NP);23;442;3569
+802304;Talen (NP);23;442;3569
+802305;Lateri (NP);23;443;3570
+802306;Sironj (M);23;443;3571
+802307;Kurwai (NP);23;443;3572
+802308;Basoda (M + OG);23;443;3573
+802308;Basoda (M);23;443;3573
+802309;Shamshabad (NP);23;443;3576
+802310;Vidisha (M);23;443;3579
+802311;Berasia (M);23;444;3580
+802312;Bhopal (M Corp.);23;444;3581
+802313;Kolar (M);23;444;3581
+802314;Sehore (M + OG);23;445;3582
+802314;Sehore (M);23;445;3582
+802315;Ashta (M + OG);23;445;3584
+802315;Ashta (M);23;445;3584
+802316;Kothri (NP);23;445;3584
+802317;Jawar (NP);23;445;3585
+802318;Ichhawar (NP);23;445;3586
+802319;Nasrullaganj (NP);23;445;3587
+802320;Budni (NP);23;445;3588
+802321;Rehti (NP);23;445;3589
+802322;Sanchi (NP);23;446;3590
+802323;Raisen (M);23;446;3590
+802324;Gairatganj (NP);23;446;3591
+802325;Begamganj (M);23;446;3592
+802326;Sultanpur (NP);23;446;3593
+802327;Mandideep (M);23;446;3593
+802328;Obedullaganj (NP);23;446;3593
+802329;Baraily (NP + OG);23;446;3594
+802329;Baraily (NP);23;446;3594
+802330;Badi (NP);23;446;3595
+802331;Silwani (NP);23;446;3596
+802332;Udaipura (NP);23;446;3597
+802333;Bhainsdehi (NP);23;447;3598
+802334;Athner (NP);23;447;3599
+802335;Betul (M);23;447;3600
+802336;Betul-Bazar (NP);23;447;3600
+802337;Chicholi (NP);23;447;3601
+802338;Sarni (M);23;447;3602
+802339;Multai (M);23;447;3604
+802340;Amla (M);23;447;3605
+802341;Khirkiya (NP);23;448;3606
+802342;Harda (M + OG);23;448;3608
+802342;Harda (M);23;448;3608
+802343;Timarni (NP);23;448;3610
+802344;Seoni-Malwa (M);23;449;3612
+802345;Itarsi (M + OG);23;449;3613
+802345;Itarsi (M);23;449;3613
+802346;Hoshangabad (M);23;449;3614
+802347;Babai (NP);23;449;3616
+802348;Sohagpur (NP);23;449;3617
+802349;Pipariya (M);23;449;3618
+802350;Pachmarhi Cantt (CB);23;449;3618
+802351;Murwara (Katni) (M Corp.);23;450;3620
+802352;Barhi (NP);23;450;3622
+802353;Kymore (NP);23;450;3624
+802354;Vijayraghavgarh (NP);23;450;3624
+802355;Sihora (M);23;451;3627
+802356;Majholi (NP);23;451;3628
+802357;Katangi (NP);23;451;3629
+802358;Patan (NP);23;451;3629
+802359;Shahpura (NP);23;451;3630
+802360;Jabalpur Cantt (CB);23;451;3631
+802361;Jabalpur (M Corp. + OG);23;451;3631
+802361;Jabalpur (M Corp.);23;451;3631
+802362;Bhedaghat (NP);23;451;3631
+802363;Barela (NP);23;451;3631
+802364;Panagar (M);23;451;3632
+802365;Gotegaon (NP + OG);23;452;3634
+802365;Gotegaon (NP);23;452;3634
+802366;Gadarwara (M + OG);23;452;3635
+802366;Gadarwara (M);23;452;3635
+802367;Narsimhapur (M + OG);23;452;3636
+802367;Narsimhapur (M);23;452;3636
+802368;Kareli (M);23;452;3637
+802369;Tendukheda (NP);23;452;3638
+802370;Shahpura (NP);23;453;3639
+802371;Dindori (NP);23;453;3640
+802372;Niwas (NP);23;454;3641
+802373;Mandla (M + OG);23;454;3643
+802373;Mandla (M);23;454;3643
+802374;Bamhani (NP);23;454;3643
+802375;Bichhiya (NP);23;454;3645
+802376;Nainpur (M + OG);23;454;3646
+802376;Nainpur (M);23;454;3646
+802377;Amarwara (M);23;455;3648
+802378;Harrai (NP);23;455;3649
+802379;Chaurai Khas (M);23;455;3650
+802380;Jamai (M);23;455;3651
+802381;Damua (M);23;455;3651
+802382;Neuton Chikhli Kalan (NP);23;455;3652
+802383;Dongar Parasia (M + OG);23;455;3652
+802383;Dongar Parasia (M);23;455;3652
+802384;Chandameta- Butaria (NP);23;455;3652
+802385;Badkuhi (NP);23;455;3652
+802386;Chhindwara (M + OG);23;455;3654
+802386;Chhindwara (M);23;455;3654
+802387;Sausar (M);23;455;3656
+802388;Mohgaon (NP);23;455;3656
+802389;Lodhikheda (NP);23;455;3656
+802390;Piplanarayanwar (NP);23;455;3656
+802391;Pandhurna (M);23;455;3658
+802392;Lakhnadon (NP);23;456;3659
+802393;Seoni (M);23;456;3664
+802394;Barghat (NP);23;456;3665
+802395;Katangi (NP);23;457;3667
+802396;Waraseoni (M + OG);23;457;3669
+802396;Waraseoni (M);23;457;3669
+802397;Balaghat (M);23;457;3672
+802398;Baihar (NP);23;457;3674
+802399;Malajkhand (M);23;457;3674
+802400;Lanji (NP);23;457;3676
+802401;Guna (M);23;458;3677
+802402;Raghogarh -Vijaypur (M);23;458;3679
+802403;Kumbhraj (NP);23;458;3681
+802404;Aron (NP);23;458;3682
+802405;Chachaura-Binaganj (NP);23;458;3683
+802406;Isagarh (NP);23;459;3684
+802407;Chanderi (M);23;459;3685
+802408;Ashoknagar (M);23;459;3686
+802409;Mungaoli (NP + OG);23;459;3688
+802409;Mungaoli (NP);23;459;3688
+802410;Khand(Bansagar) (NP);23;460;3689
+802411;Beohari (NP);23;460;3689
+802412;Jaisinghnagar (NP);23;460;3690
+802413;Shahdol (M);23;460;3691
+802414;Burhar (NP);23;460;3691
+802415;Dhanpuri (Nargada Hari Dafai) (M);23;460;3691
+802416;Bijuri (M);23;461;3693
+802417;Kotma (M);23;461;3693
+802418;Pasan (M);23;461;3694
+802419;Anuppur (M);23;461;3694
+802420;Jaithari (NP);23;461;3695
+802421;Amarkantak (NP);23;461;3696
+802422;Rampur Naikin (NP);23;462;3697
+802423;Churhat (NP);23;462;3698
+802424;Sidhi (M);23;462;3699
+802425;Majhauli (NP);23;462;3701
+802426;Singrauli (M Corp.);23;463;3705
+802427;Thandla (NP);23;464;3706
+802428;Petlawad (NP);23;464;3707
+802429;Jhabua (M);23;464;3709
+802430;Ranapur (NP);23;464;3710
+802431;Bhavra (NP);23;465;3711
+802432;Jobat (NP);23;465;3712
+802433;Alirajpur (M);23;465;3713
+802434;Chhanera (NP);23;466;3714
+802435;Khandwa (M Corp.);23;466;3716
+802436;Omkareshwar (NP);23;466;3717
+802437;Mundi (NP);23;466;3717
+802438;Pandhana (NP);23;466;3718
+802439;Burhanpur (M Corp.);23;467;3719
+802440;Shahpur (NP);23;467;3719
+802441;Nepanagar (M);23;467;3721
+802442;Rapar (M);24;468;3723
+802443;Bhachau (M);24;468;3724
+802444;Anjar (M);24;468;3725
+802445;Bhuj (M + OG);24;468;3726
+802445;Bhuj (M);24;468;3726
+802446;Mandvi (M);24;468;3729
+802447;Gandhidham (M);24;468;3731
+802448;Tharad (M);24;469;3733
+802449;Dhanera (M);24;469;3734
+802450;Palanpur (M + OG);24;469;3739
+802450;Palanpur (M);24;469;3739
+802451;Deesa (M);24;469;3740
+802452;Bhabhar (M);24;469;3742
+802453;Thara (M);24;469;3743
+802454;Radhanpur (M);24;470;3745
+802455;Sidhpur (M + OG);24;470;3746
+802455;Sidhpur (M);24;470;3746
+802456;Patan (M + OG);24;470;3747
+802456;Patan (M);24;470;3747
+802457;Harij (M);24;470;3748
+802458;Chanasma (M);24;470;3750
+802459;Kheralu (M);24;471;3752
+802460;Unjha (M);24;471;3753
+802461;Visnagar (M + OG);24;471;3754
+802461;Visnagar (M);24;471;3754
+802462;Vadnagar (M);24;471;3755
+802463;Vijapur (M + OG);24;471;3756
+802463;Vijapur (M);24;471;3756
+802464;Mahesana (M + OG);24;471;3757
+802464;Mahesana (M);24;471;3757
+802465;Kadi (M + OG);24;471;3759
+802465;Kadi (M);24;471;3759
+802466;Khedbrahma (M);24;472;3760
+802467;Vadali (M);24;472;3762
+802468;Idar (M + OG);24;472;3763
+802468;Idar (M);24;472;3763
+802469;Himatnagar (M);24;472;3766
+802470;Prantij (M);24;472;3767
+802471;Talod (M);24;472;3768
+802472;Modasa (M);24;472;3769
+802473;Bayad (M);24;472;3772
+802474;Chhatral (INA);24;473;3773
+802475;Kalol (M + OG);24;473;3773
+802475;Kalol (M + OG);24;473;3773
+802475;Kalol (M);24;473;3773
+802476;Kalol (INA);24;473;3773
+802477;Mansa (M);24;473;3774
+802478;Pethapur (M);24;473;3775
+802479;Gandhinagar (NA + OG);24;473;3775
+802479;Gandhinagar (NA);24;473;3775
+802480;Dehgam (M);24;473;3776
+802481;Viramgam (M);24;474;3779
+802482;Sanand (M + OG);24;474;3780
+802482;Sanand (M);24;474;3780
+802483;Ahmadabad Cantonment (CB);24;474;3781
+802484;Ahmadabad (M Corp.) (Part);24;474;3781
+802484;Ahmadabad (M Corp. + OG) (Part);24;474;3782
+802484;Ahmadabad (M Corp.) (Part);24;474;3782
+802485;Bareja (M);24;474;3782
+802486;Dholka (M + OG);24;474;3783
+802486;Dholka (M);24;474;3783
+802487;Bavla (M + OG);24;474;3784
+802487;Bavla (M);24;474;3784
+802488;Barwala (M);24;474;3786
+802489;Dhandhuka (M);24;474;3787
+802490;Halvad (M);24;475;3788
+802491;Dhrangadhra (M);24;475;3789
+802492;Patdi (M);24;475;3790
+802493;Surendranagar Dudhrej (M);24;475;3792
+802494;Wadhwan (M);24;475;3792
+802495;Thangadh (M);24;475;3794
+802496;Chotila (M);24;475;3794
+802497;Limbdi (M);24;475;3797
+802498;Maliya (M);24;476;3798
+802499;Morvi (M + OG);24;476;3799
+802499;Morvi (M);24;476;3799
+802500;Wankaner (M);24;476;3801
+802501;Rajkot (M Corp. + OG);24;476;3803
+802501;Rajkot (M Corp.);24;476;3803
+802502;Lodhika (INA);24;476;3804
+802503;Jasdan (M);24;476;3806
+802504;Gondal (M);24;476;3807
+802505;Bhayavadar (M);24;476;3809
+802506;Upleta (M);24;476;3809
+802507;Dhoraji (M);24;476;3810
+802508;Jetpur Navagadh (M);24;476;3811
+802509;Okha (M);24;477;3812
+802510;Dwarka (M);24;477;3812
+802511;Salaya (M);24;477;3813
+802512;Khambhalia (M);24;477;3813
+802513;Sikka (M);24;477;3814
+802514;GSFC (Motikhavdi Sikka) (INA);24;477;3814
+802515;Reliance Complex (INA);24;477;3814
+802516;Jamnagar (M Corp. + OG);24;477;3814
+802516;Jamnagar (M Corp.);24;477;3814
+802517;Dhrol (M);24;477;3816
+802518;Kalavad (M);24;477;3817
+802519;Raval (M);24;477;3819
+802520;Bhanvad (M);24;477;3820
+802521;Jamjodhpur (M);24;477;3821
+802522;Porbandar (M + OG);24;478;3822
+802522;Porbandar (M);24;478;3822
+802523;Chhaya (M);24;478;3822
+802524;Ranavav (M);24;478;3823
+802525;Kutiyana (M);24;478;3824
+802526;Bantwa (M);24;479;3825
+802527;Manavadar (M);24;479;3825
+802528;Vanthali (M);24;479;3826
+802529;Junagadh (M Corp.);24;479;3827
+802530;Visavadar (M);24;479;3829
+802531;Keshod (M);24;479;3831
+802532;Mangrol (M + OG);24;479;3832
+802532;Mangrol (M);24;479;3832
+802533;Chorvad (M);24;479;3833
+802534;Talala (M);24;479;3834
+802535;Veraval (M + OG);24;479;3835
+802535;Veraval (M);24;479;3835
+802536;Sutrapada (M);24;479;3836
+802537;Kodinar (M);24;479;3837
+802538;Una (M);24;479;3838
+802539;Babra (M);24;480;3840
+802540;Lathi (M);24;480;3841
+802541;Damnagar (M);24;480;3841
+802542;Amreli (M + OG);24;480;3843
+802542;Amreli (M);24;480;3843
+802543;Bagasara (M);24;480;3844
+802544;Chalala (M);24;480;3845
+802545;Savarkundla (M);24;480;3846
+802546;Jafrabad (M);24;480;3848
+802547;Rajula (M);24;480;3849
+802548;Botad (M);24;481;3850
+802549;Vallabhipur (M);24;481;3851
+802550;Gadhada (M);24;481;3852
+802551;Bhavnagar (M Corp. + OG);24;481;3854
+802551;Bhavnagar (M Corp.);24;481;3854
+802552;Sihor (M);24;481;3856
+802553;Gariadhar (M);24;481;3857
+802554;Palitana (M);24;481;3858
+802555;Talaja (M);24;481;3859
+802556;Alang-Sosiya (INA);24;481;3859
+802557;Mahuva (M + OG);24;481;3860
+802557;Mahuva (M);24;481;3860
+802558;Sojitra (M);24;482;3862
+802559;Umreth (M);24;482;3863
+802560;Boriavi (M);24;482;3864
+802561;Ode (M);24;482;3864
+802562;Anand (M + OG);24;482;3864
+802562;Anand (M);24;482;3864
+802563;Vallabh Vidyanagar (M);24;482;3864
+802564;Karamsad (M);24;482;3864
+802565;Vithal Udyognagar (INA);24;482;3864
+802566;Petlad (M);24;482;3865
+802567;Khambhat (M + OG);24;482;3866
+802567;Khambhat (M);24;482;3866
+802568;Borsad (M);24;482;3867
+802569;Vasna Borsad (INA);24;482;3867
+802570;Anklav (M);24;482;3868
+802571;Kapadvanj (M);24;483;3869
+802572;Balasinor (M);24;483;3871
+802573;Kathlal (M);24;483;3872
+802574;Mehmedabad (M);24;483;3873
+802575;Kheda (M);24;483;3874
+802576;Nadiad (M + OG);24;483;3876
+802576;Nadiad (M);24;483;3876
+802577;Chaklasi (M);24;483;3876
+802578;Kanjari (M);24;483;3876
+802579;Mahudha (M);24;483;3877
+802580;Thasra (M);24;483;3878
+802581;Dakor (M + OG);24;483;3878
+802581;Dakor (M);24;483;3878
+802582;Santrampur (M);24;484;3881
+802583;Lunawada (M);24;484;3882
+802584;Shehera (M);24;484;3883
+802585;Godhra (M);24;484;3885
+802586;Kalol (M + OG);24;484;3886
+802586;Kalol (M);24;484;3886
+802587;Kalol (INA);24;484;3886
+802588;Halol (M + OG);24;484;3888
+802588;Halol (M);24;484;3888
+802589;Jhalod (M);24;485;3891
+802590;Dohad (M + OG);24;485;3893
+802590;Dohad (M);24;485;3893
+802591;Devgadbaria (M);24;485;3895
+802592;Savli (M);24;486;3897
+802593;Nandesari (INA);24;486;3898
+802594;Petro-Chemical Complex (INA);24;486;3898
+802595;GSFC Complex (INA);24;486;3898
+802596;Vadodara (M Corp. + OG);24;486;3898
+802596;Vadodara (M Corp.);24;486;3898
+802597;Por-Ramangamdi (INA);24;486;3898
+802598;Vaghodia (INA);24;486;3899
+802599;Chhota Udaipur (M);24;486;3901
+802600;Dabhoi (M);24;486;3905
+802601;Padra (M + OG);24;486;3906
+802601;Padra (M);24;486;3906
+802602;Karjan (M);24;486;3907
+802603;Rajpipla (M);24;487;3910
+802604;Jambusar (M);24;488;3913
+802605;Amod (M);24;488;3914
+802606;Bharuch (INA);24;488;3916
+802607;Bharuch (M);24;488;3916
+802608;Anklesvar (M + OG);24;488;3918
+802608;Anklesvar (M);24;488;3918
+802609;Anklesvar (INA);24;488;3918
+802610;Panoli (INA);24;488;3918
+802611;Valia - Jhagadia (GNFC Scooter Project Area) (INA);24;488;3920
+802612;Valia (Naldhari) (INA);24;488;3920
+802613;Saputara (NA);24;489;3921
+802614;Navsari (M + OG);24;490;3922
+802614;Navsari (M);24;490;3922
+802615;Vijalpor (M);24;490;3923
+802616;Gandevi (M);24;490;3924
+802617;Bilimora (M);24;490;3924
+802618;Valsad (M + OG);24;491;3927
+802618;Valsad (M);24;491;3927
+802619;Valsad (INA);24;491;3927
+802620;Dharampur (M);24;491;3928
+802621;Pardi (M);24;491;3929
+802622;Vapi (M);24;491;3929
+802623;Vapi (INA);24;491;3929
+802624;Sarigam (INA);24;491;3931
+802625;Umbergaon (M);24;491;3931
+802626;Umbergaon (INA);24;491;3931
+802627;Tarsadi (M);24;492;3933
+802628;Mandvi (M);24;492;3935
+802629;Surat (M Corp.) (Part);24;492;3937
+802629;Surat (M Corp. + OG) (Part);24;492;3938
+802629;Surat (M Corp.) (Part);24;492;3938
+802630;Hajira (INA);24;492;3938
+802631;Magdalla (INA);24;492;3938
+802632;Sachin (INA);24;492;3938
+802633;Kansad (M);24;492;3938
+802634;Bardoli (M);24;492;3940
+802635;Songadh (M);24;493;3944
+802636;Vyara (M);24;493;3945
+802637;Diu (M CI);25;494;3947
+802638;Daman (M CI);25;495;3948
+802639;Silvassa (M CI);26;496;3949
+802640;Talode (M Cl);27;497;3952
+802641;Shahade (M Cl);27;497;3953
+802642;Nandurbar (M Cl);27;497;3954
+802643;Nawapur (M Cl);27;497;3955
+802644;Shirpur-Warwade (M Cl) ;27;498;3956
+802645;Dondaicha-Warwade(M Cl) ;27;498;3957
+802646;Dhule (M Corp.) ;27;498;3959
+802647;Chopda (M Cl) ;27;499;3960
+802648;Yawal (M Cl) ;27;499;3961
+802649;Faizpur (M Cl);27;499;3961
+802650;Savda (M Cl) ;27;499;3962
+802651;Raver (M Cl) ;27;499;3962
+802652;Bhusawal (M Cl) ;27;499;3965
+802653;Jalgaon (M Corp.);27;499;3966
+802654;Erandol (M Cl);27;499;3967
+802655;Dharangaon (M Cl) ;27;499;3968
+802656;Amalner (M Cl) ;27;499;3969
+802657;Parola (M Cl);27;499;3970
+802658;Bhadgaon (M Cl);27;499;3971
+802659;Chalisgaon(M Cl);27;499;3972
+802660;Pachora (M Cl) ;27;499;3973
+802661;Jamner (M Cl) ;27;499;3974
+802662;Jalgaon (Jamod) (M Cl);27;500;3975
+802663;Shegaon (M Cl);27;500;3977
+802664;Nandura (M Cl + OG);27;500;3978
+802664;Nandura (M Cl);27;500;3978
+802665;Malkapur (M Cl);27;500;3979
+802666;Khamgaon (M Cl);27;500;3981
+802667;Mehkar (M Cl);27;500;3982
+802668;Chikhli (M Cl);27;500;3983
+802669;Buldana (M Cl);27;500;3984
+802670;Deulgaon Raja (M Cl);27;500;3985
+802671;Sindkhed Raja (M Cl);27;500;3986
+802672;Lonar (M Cl);27;500;3987
+802673;Telhara (M Cl);27;501;3988
+802674;Akot (M Cl);27;501;3989
+802675;Balapur (M Cl);27;501;3990
+802676;Akola (M Corp.);27;501;3991
+802677;Murtijapur (M Cl);27;501;3992
+802678;Patur (M Cl);27;501;3993
+802679;Mangrulpir (M Cl);27;502;3996
+802680;Karanja (M Cl);27;502;3997
+802681;Washim (M Cl);27;502;3999
+802682;Risod (M Cl);27;502;4000
+802683;Chikhaldara (M Cl) ;27;503;4002
+802684;Anjangaon (M Cl);27;503;4003
+802685;Achalpur (M Cl);27;503;4004
+802686;Chandurbazar (M Cl);27;503;4005
+802687;Morshi (M Cl);27;503;4006
+802688;Warud (M Cl);27;503;4007
+802689;Shendurjana (M Cl);27;503;4007
+802690;Amravati (M Corp.);27;503;4009
+802691;Daryapur Banosa (M Cl) ;27;503;4011
+802692;Chandur Railway (M Cl);27;503;4013
+802693;Dattapur Dhamangaon (M Cl);27;503;4014
+802694;Arvi (M Cl);27;504;4017
+802695;Sindi (M Cl);27;504;4018
+802696;Wardha (M Cl);27;504;4019
+802697;Pulgaon (M Cl);27;504;4020
+802698;Deoli (M Cl);27;504;4020
+802699;Hinganghat (M Cl);27;504;4021
+802700;Mowad (M Cl);27;505;4023
+802701;Narkhed (M Cl);27;505;4023
+802702;Katol (M Cl);27;505;4024
+802703;Kalameshwar (M Cl) ;27;505;4025
+802704;Mohpa (M Cl);27;505;4025
+802705;Savner (M Cl);27;505;4026
+802706;Khapa (M Cl);27;505;4026
+802707;Ramtek (M Cl);27;505;4028
+802708;Kamptee (M Cl);27;505;4030
+802709;Kamptee (CB);27;505;4030
+802710;Nagpur (M Corp.);27;505;4032
+802711;Umred (M Cl);27;505;4034
+802712;Tumsar (M Cl);27;506;4037
+802713;Bhandara (M Cl);27;506;4039
+802714;Pauni (M Cl);27;506;4042
+802715;Tirora (M Cl);27;507;4044
+802716;Gondiya (M Cl);27;507;4046
+802717;Desaiganj (M Cl);27;508;4052
+802718;Gadchiroli (M Cl);27;508;4057
+802719;Warora (M Cl);27;509;4064
+802720;Brahmapuri (M Cl);27;509;4067
+802721;Bhadravati (M Cl);27;509;4070
+802722;Chandrapur (M Cl);27;509;4071
+802723;Mul (M Cl);27;509;4072
+802724;Ballarpur (M Cl);27;509;4074
+802725;Rajura (M Cl);27;509;4077
+802726;Ner (M Cl);27;510;4079
+802727;Yavatmal (M Cl);27;510;4082
+802728;Darwha (M Cl);27;510;4083
+802729;Digras (M Cl);27;510;4084
+802730;Pusad (M Cl);27;510;4085
+802731;Umarkhed (M Cl);27;510;4086
+802732;Ghatanji (M Cl);27;510;4089
+802733;Pandharkaoda (M Cl);27;510;4090
+802734;Wani (M Cl);27;510;4094
+802735;Kinwat (M Cl);27;511;4096
+802736;Hadgaon (M Cl);27;511;4098
+802737;Nanded Waghala (M Corp.);27;511;4100
+802738;Mudkhed (M Cl);27;511;4101
+802739;Bhokar (M Cl);27;511;4102
+802740;Peth Umri (M Cl);27;511;4103
+802741;Dharmabad (M Cl);27;511;4104
+802742;Kundalwadi (M Cl);27;511;4105
+802743;Biloli (M Cl);27;511;4105
+802744;Loha (M Cl);27;511;4107
+802745;Kandhar (M Cl);27;511;4108
+802746;Mukhed (M Cl);27;511;4109
+802747;Deglur (M Cl);27;511;4110
+802748;Hingoli (M Cl);27;512;4112
+802749;Kalamnuri (M Cl);27;512;4114
+802750;Basmath (M Cl);27;512;4115
+802751;Sailu (M Cl);27;513;4116
+802752;Jintur (M Cl);27;513;4117
+802753;Parbhani (M Cl);27;513;4118
+802754;Manwath (M Cl);27;513;4119
+802755;Pathri (M Cl);27;513;4120
+802756;Sonpeth (M Cl);27;513;4121
+802757;Gangakhed (M Cl);27;513;4122
+802758;Purna (M Cl);27;513;4124
+802759;Bhokardan (M Cl);27;514;4125
+802760;Jalna (M Cl);27;514;4127
+802761;Ambad (M Cl);27;514;4129
+802762;Partur (M Cl);27;514;4131
+802763;Kannad (M Cl);27;515;4133
+802764;Sillod (M Cl);27;515;4135
+802765;Aurangabad (M Corp.);27;515;4137
+802766;Aurangabad (CB);27;515;4137
+802767;Khuldabad (M Cl);27;515;4138
+802768;Vaijapur (M Cl);27;515;4139
+802769;Gangapur (M Cl);27;515;4140
+802770;Paithan (M Cl);27;515;4141
+802771;Satana (M Cl);27;516;4145
+802772;Malegaon (M Corp. + OG);27;516;4146
+802772;Malegaon (M Corp.);27;516;4146
+802773;Nandgaon (M Cl);27;516;4147
+802774;Manmad (M Cl);27;516;4147
+802775;Trimbak (M Cl);27;516;4151
+802776;Nashik (M Corp.);27;516;4152
+802777;Deolali (CB);27;516;4152
+802778;Bhagur (M Cl);27;516;4152
+802779;Igatpuri (M Cl);27;516;4153
+802780;Sinnar (M Cl);27;516;4154
+802781;Yevla (M Cl);27;516;4156
+802782;Dahanu (M Cl);27;517;4158
+802783;Jawhar (M Cl);27;517;4160
+802784;Palghar (M Cl);27;517;4163
+802785;Vasai-Virar City (M Corp);27;517;4164
+802786;Mira-Bhayandar (M Corp.);27;517;4165
+802787;Thane (M Corp.);27;517;4165
+802788;Navi Mumbai (M Corp.);27;517;4165
+802789;Bhiwandi Nizampur (M Corp.);27;517;4166
+802790;Kalyan-Dombivli (M Corp.);27;517;4168
+802791;Ulhasnagar (M Corp.);27;517;4169
+802792;Badlapur (M Cl);27;517;4170
+802793;Ambarnath(M Cl);27;517;4170
+802794;Greater Mumbai (M Corp.) (Part);27;518;99999
+802794;Greater Mumbai (M Corp.) (Part);27;519;99999
+802795;Uran (M Cl);27;520;4172
+802796;Panvel (M Cl);27;520;4173
+802797;Matheran (M Cl);27;520;4174
+802798;Karjat (M Cl);27;520;4174
+802799;Khopoli (M Cl);27;520;4175
+802800;Pen (M Cl);27;520;4176
+802801;Alibag (M Cl);27;520;4177
+802802;Murud Janjira (M Cl);27;520;4178
+802803;Roha Ashtami (M Cl);27;520;4179
+802804;Shrivardhan (M Cl);27;520;4183
+802805;Mahad (M Cl);27;520;4185
+802806;Junnar (M Cl);27;521;4187
+802807;Shirur (M Cl);27;521;4189
+802808;Alandi (M Cl);27;521;4190
+802809;Talegaon Dabhade (M Cl);27;521;4191
+802810;Lonavala (M Cl);27;521;4191
+802811;Pimpri Chinchwad (M Corp.);27;521;4193
+802812;Dehu Road (CB);27;521;4193
+802813;Pune (CB);27;521;4194
+802814;Pune (M Corp.);27;521;4194
+802815;Kirkee (CB);27;521;4194
+802816;Daund (M Cl);27;521;4195
+802817;Sasvad (M Cl);27;521;4196
+802818;Jejuri (M Cl);27;521;4196
+802819;Bhor (M Cl);27;521;4198
+802820;Baramati (M Cl);27;521;4199
+802821;Indapur (M Cl);27;521;4200
+802822;Sangamner (M Cl);27;522;4202
+802823;Kopargaon (M Cl);27;522;4203
+802824;Shirdi (NP);27;522;4204
+802825;Rahta Pimplas (M Cl);27;522;4204
+802826;Shrirampur (M Cl);27;522;4205
+802827;Pathardi (M Cl);27;522;4208
+802828;Ahmadnagar (M Corp.);27;522;4209
+802829;Ahmadnagar (CB);27;522;4209
+802830;Rahuri (M Cl);27;522;4210
+802831;Deolali Pravara (M Cl);27;522;4210
+802832;Shrigonda (M Cl);27;522;4212
+802833;Georai (M Cl);27;523;4218
+802834;Manjlegaon (M Cl);27;523;4219
+802835;Bid (M Cl);27;523;4221
+802836;Kaij (NP);27;523;4222
+802837;Dharur (M Cl);27;523;4223
+802838;Parli (M Cl);27;523;4224
+802839;Ambejogai (M Cl);27;523;4225
+802840;Latur (M Cl);27;524;4226
+802841;Ahmadpur (M Cl);27;524;4228
+802842;Ausa (M Cl);27;524;4232
+802843;Nilanga (M Cl);27;524;4233
+802844;Udgir (M Cl);27;524;4235
+802845;Paranda (M Cl);27;525;4236
+802846;Bhum (M Cl) ;27;525;4237
+802847;Kalamb (M Cl);27;525;4239
+802848;Osmanabad (M Cl);27;525;4240
+802849;Tuljapur (M Cl);27;525;4241
+802850;Naldurg (M Cl);27;525;4241
+802851;Murum (M Cl);27;525;4243
+802852;Umarga (M Cl);27;525;4243
+802853;Karmala (M Cl);27;526;4244
+802854;Kurduvadi (M Cl);27;526;4245
+802855;Barshi (M Cl);27;526;4246
+802856;Solapur (M Corp.) ;27;526;4247
+802857;Pandharpur (M Cl);27;526;4249
+802858;Sangole (M Cl);27;526;4251
+802859;Mangalvedhe (M Cl);27;526;4252
+802860;Akkalkot (M Cl);27;526;4254
+802861;Maindargi (M Cl);27;526;4254
+802862;Dudhani (M Cl);27;526;4254
+802863;Mahabaleshwar (M Cl);27;527;4255
+802864;Panchgani (M Cl);27;527;4255
+802865;Wai (M Cl);27;527;4256
+802866;Phaltan (M Cl);27;527;4258
+802867;Mhaswad (M Cl);27;527;4259
+802868;Rahimatpur (M Cl);27;527;4261
+802869;Satara (M Cl);27;527;4262
+802870;Karad (M Cl);27;527;4265
+802871;Malkapur (NP);27;527;4265
+802872;Dapoli Camp (NP) ;27;528;4267
+802873;Khed (M Cl);27;528;4268
+802874;Chiplun (M Cl);27;528;4269
+802875;Ratnagiri (M Cl);27;528;4271
+802876;Rajapur (M Cl);27;528;4274
+802877;Kankavli (NP);27;529;4277
+802878;Malwan (M Cl);27;529;4278
+802879;Vengurla (M Cl);27;529;4279
+802880;Sawantwadi (M Cl);27;529;4281
+802881;Malkapur (M Cl);27;530;4283
+802882;Panhala (M Cl);27;530;4284
+802883;Vadgaon Kasba (M Cl);27;530;4285
+802884;Ichalkaranji (M Cl);27;530;4285
+802885;Jaysingpur (M Cl);27;530;4286
+802886;Kurundvad (M Cl);27;530;4286
+802887;Kolhapur (M Corp.);27;530;4287
+802888;Kagal (M Cl);27;530;4290
+802889;Murgud (M Cl);27;530;4290
+802890;Gadhinglaj (M Cl);27;530;4293
+802891;Uran Islampur (M Cl);27;531;4296
+802892;Ashta (M Cl);27;531;4296
+802893;Vita (M Cl);27;531;4299
+802894;Tasgaon (M Cl);27;531;4301
+802895;Sangli Miraj Kupwad (M Corp.);27;531;4302
+802896;Adilabad (M);28;532;4306
+802897;Kagaznagar (M);28;532;4318
+802898;Bhainsa (M);28;532;4339
+802899;Nirmal (M);28;532;4344
+802900;Bellampalle (M) (Part);28;532;4349
+802900;Bellampalle (M) (Part);28;532;4350
+802901;Mandamarri (M);28;532;4352
+802902;Mancherial (M + OG);28;532;4354
+802902;Mancherial (M);28;532;4354
+802903;Armur (M + OG);28;533;4360
+802903;Armur (M);28;533;4360
+802904;Nizamabad (M Corp.);28;533;4368
+802905;Bodhan (M);28;533;4370
+802906;Kamareddy (M);28;533;4390
+802907;Ramagundam (M + OG) (Part);28;534;4399
+802907;Ramagundam (M);28;534;4399
+802907;Ramagundam (M + OG) (Part);28;534;4400
+802908;Jagtial (M + OG);28;534;4414
+802908;Jagtial (M);28;534;4414
+802909;Koratla (M);28;534;4416
+802910;Metpalle (M);28;534;4417
+802911;Karimnagar (M Corp. + OG) (Part);28;534;4428
+802911;Karimnagar (M Corp.);28;534;4428
+802912;Sircilla (M + OG);28;534;4435
+802912;Sircilla (M);28;534;4435
+802911;Karimnagar (M Corp. + OG) (Part);28;534;4438
+802913;Medak (M + OG);28;535;4456
+802913;Medak (M);28;535;4456
+802914;Siddipet (M + OG);28;535;4459
+802914;Siddipet (M);28;535;4459
+802915;Zahirabad (M + OG);28;535;4474
+802915;Zahirabad (M);28;535;4474
+802916;Sadasivpet (M + OG);28;535;4490
+802916;Sadasivpet (M);28;535;4490
+802917;Sangareddy (M + OG);28;535;4492
+802917;Sangareddy (M);28;535;4492
+802918;GHMC (M Corp.) (Part);28;535;4494
+802918;GHMC (M Corp. + OG) (Part);28;535;4495
+802918;GHMC (M Corp.) (Part);28;535;4495
+802918;GHMC (M Corp.) (Part);28;536;4496
+802918;GHMC (M Corp.) (Part);28;536;4497
+802918;GHMC (M Corp.) (Part);28;536;4498
+802919;Secunderabad (CB);28;536;4499
+802918;GHMC (M Corp.) (Part);28;536;4500
+802918;GHMC (M Corp.) (Part);28;536;4501
+802918;GHMC (M Corp.) (Part);28;536;4502
+802918;GHMC (M Corp.) (Part);28;536;4503
+802918;GHMC (M Corp.) (Part);28;536;4504
+802918;GHMC (M Corp.) (Part);28;536;4505
+802918;GHMC (M Corp.) (Part);28;536;4506
+802918;GHMC (M Corp.) (Part);28;536;4507
+802918;GHMC (M Corp.) (Part);28;536;4508
+802918;GHMC (M Corp.) (Part);28;536;4509
+802918;GHMC (M Corp.) (Part);28;536;4510
+802918;GHMC (M Corp.) (Part);28;536;4511
+802918;GHMC (M Corp.) (Part);28;537;4516
+802918;GHMC (M Corp.) (Part);28;537;4517
+802918;GHMC (M Corp. + OG) (Part);28;537;4518
+802918;GHMC (M Corp.) (Part);28;537;4518
+802918;GHMC (M Corp. + OG) (Part);28;537;4520
+802918;GHMC (M Corp. + OG) (Part);28;537;4521
+802918;GHMC (M Corp.) (Part);28;537;4521
+802918;GHMC (M Corp. + OG) (Part);28;537;4522
+802918;GHMC (M Corp.) (Part);28;537;4522
+802918;GHMC (M Corp. + OG) (Part);28;537;4523
+802918;GHMC (M Corp.) (Part);28;537;4523
+802918;GHMC (M Corp.) (Part);28;537;4524
+802918;GHMC (M Corp. + OG) (Part);28;537;4525
+802918;GHMC (M Corp.) (Part);28;537;4525
+802918;GHMC (M Corp. + OG) (Part);28;537;4526
+802918;GHMC (M Corp.) (Part);28;537;4526
+802918;GHMC (M Corp. + OG) (Part);28;537;4527
+802918;GHMC (M Corp.) (Part);28;537;4527
+802920;Vicarabad (M);28;537;4530
+802921;Tandur (M);28;537;4534
+802918;GHMC (M Corp. + OG) (Part);28;537;4543
+802922;Mahbubnagar (M + OG);28;538;4568
+802922;Mahbubnagar (M);28;538;4568
+802923;Narayanpet (NP);28;538;4570
+802924;Wanaparthy (M);28;538;4595
+802925;Gadwal (M + OG);28;538;4603
+802925;Gadwal (M);28;538;4603
+802926;Bhongir (M);28;539;4628
+802927;Suryapet (M + OG);28;539;4638
+802927;Suryapet (M);28;539;4638
+802928;Nalgonda (M + OG);28;539;4646
+802928;Nalgonda (M);28;539;4646
+802929;Miryalaguda (M + OG);28;539;4664
+802929;Miryalaguda (M);28;539;4664
+802930;Warangal (M.Corp. + OG) (Part);28;540;4677
+802930;Warangal (M.Corp. + OG) (Part);28;540;4678
+802930;Warangal (M.Corp. + OG) (Part);28;540;4695
+802930;Warangal (M Corp.) (Part);28;540;4695
+802930;Warangal (M Corp.) (Part);28;540;4695
+802930;Warangal (M Corp.) (Part);28;540;4695
+802931;Jangaon (M);28;540;4699
+802930;Warangal (M Corp.) (Part);28;540;4706
+802930;Warangal (M Corp.) (Part);28;540;4706
+802930;Warangal (M Corp.) (Part);28;540;4706
+802930;Warangal (M.Corp. + OG) (Part);28;540;4707
+802932;Manugur (M);28;541;4727
+802933;Palwancha (M);28;541;4737
+802934;Kothagudem (M);28;541;4738
+802935;Yellandu (M + OG);28;541;4740
+802935;Yellandu (M);28;541;4740
+802936;Sathupalle (NP);28;541;4751
+802937;Khammam (M + OG) (Part);28;541;4756
+802937;Khammam (M) (Part);28;541;4757
+802937;Khammam (M);28;541;4757
+802938;Palasa Kasibugga (M);28;542;4775
+802939;Ichchapuram (M);28;542;4778
+802940;Rajam (NP);28;542;4796
+802941;Amadalavalasa (M);28;542;4798
+802942;Srikakulam (M + OG) (Part);28;542;4802
+802942;Srikakulam (M);28;542;4802
+802942;Srikakulam (M + OG) (Part);28;542;4806
+802943;Parvathipuram (M);28;543;4812
+802944;Bobbili (M);28;543;4816
+802945;Salur (M);28;543;4817
+802946;Vizianagaram (M + OG);28;543;4836
+802946;Vizianagaram (M);28;543;4836
+802947;GVMC (Part);28;544;4861
+802947;GVMC (Part);28;544;4862
+802948;Bheemunipatnam (M + OG);28;544;4865
+802948;Bheemunipatnam (M);28;544;4865
+802947;GVMC (Part);28;544;4866
+802947;GVMC (Part);28;544;4867
+802947;GVMC (Part);28;544;4868
+802947;GVMC (Part);28;544;4869
+802947;GVMC (Part);28;544;4870
+802949;Anakapalle (M);28;544;4871
+802950;Tuni (M);28;545;4890
+802951;Peddapuram (M);28;545;4903
+802952;Rajahmundry (M Corp. + OG) (Part);28;545;4906
+802952;Rajahmundry (M Corp.);28;545;4906
+802952;Rajahmundry (M Corp. + OG) (Part);28;545;4907
+802953;Samalkot (M);28;545;4910
+802954;Pithapuram (M + OG);28;545;4911
+802954;Pithapuram (M);28;545;4911
+802955;Kakinada (M Corp. + OG) (Part);28;545;4913
+802955;Kakinada (M Corp. + OG) (Part);28;545;4914
+802955;Kakinada (M Corp.);28;545;4914
+802956;Mandapeta (M + OG);28;545;4920
+802956;Mandapeta (M);28;545;4920
+802957;Ramachandrapuram (M);28;545;4924
+802958;Amalapuram (M);28;545;4941
+802959;Kovvur (M);28;546;4958
+802960;Nidadavole (M);28;546;4960
+802961;Tadepalligudem (M + OG);28;546;4961
+802961;Tadepalligudem (M);28;546;4961
+802962;Eluru (M Corp. + OG);28;546;4966
+802962;Eluru (M Corp.);28;546;4966
+802963;Tanuku (M + OG);28;546;4972
+802963;Tanuku (M);28;546;4972
+802964;Bhimavaram (M + OG);28;546;4984
+802964;Bhimavaram (M);28;546;4984
+802965;Narasapur (M);28;546;4987
+802966;Palacole (M + OG);28;546;4988
+802966;Palacole (M);28;546;4988
+802967;Jaggaiahpet (M);28;547;4991
+802968;Nuzvid (M);28;547;5003
+802969;Vijayawada (M Corp.) (Part);28;547;5010
+802969;Vijayawada (M Corp. + OG) (Part);28;547;5011
+802969;Vijayawada (M Corp.) (Part);28;547;5011
+802970;Gudivada (M);28;547;5021
+802969;Vijayawada (M Corp. + OG) (Part);28;547;5024
+802971;Pedana (M);28;547;5030
+802972;Machilipatnam (M);28;547;5034
+802973;Macherla (M);28;548;5040
+802974;Piduguralla (NP);28;548;5047
+802975;Tadepalle (M + OG);28;548;5054
+802975;Tadepalle (M);28;548;5054
+802976;Mangalagiri (M + OG);28;548;5055
+802976;Mangalagiri (M);28;548;5055
+802977;Sattenapalle (M);28;548;5058
+802978;Vinukonda (M + OG);28;548;5062
+802978;Vinukonda (M);28;548;5062
+802979;Narasaraopet (M + OG);28;548;5067
+802979;Narasaraopet (M);28;548;5067
+802980;Chilakaluripet (M);28;548;5070
+802981;Guntur (M Corp. + OG);28;548;5074
+802981;Guntur (M Corp.);28;548;5074
+802982;Tenali (M);28;548;5078
+802983;Ponnur (M);28;548;5084
+802984;Bapatla (M);28;548;5093
+802985;Repalle (M);28;548;5096
+802986;Markapur (M);28;549;5115
+802987;Chirala (M + OG) (Part);28;549;5123
+802987;Chirala (M);28;549;5123
+802987;Chirala (M + OG) (Part);28;549;5124
+802988;Ongole (M + OG) (Part);28;549;5138
+802988;Ongole (M + OG) (Part);28;549;5139
+802988;Ongole (M);28;549;5139
+802989;Kandukur (M);28;549;5148
+802990;Kavali (M + OG);28;550;5158
+802990;Kavali (M);28;550;5158
+802991;Nellore (M Corp. + OG);28;550;5177
+802991;Nellore (M Corp.);28;550;5177
+802992;Gudur (M + OG) (Part);28;550;5184
+802993;Venkatagiri (M + OG);28;550;5187
+802993;Venkatagiri (M);28;550;5187
+802992;Gudur (M + OG) (Part);28;550;5190
+802994;Badvel (M) (Part);28;551;5210
+802994;Badvel (M) (Part);28;551;5211
+802995;Proddatur (M + OG);28;551;5214
+802995;Proddatur (M);28;551;5214
+802996;Jammalamadugu (NP);28;551;5215
+802997;Pulivendla (M);28;551;5219
+802998;Kadapa (M Corp. + OG) (Part);28;551;5226
+802998;Kadapa (M Corp.) (Part);28;551;5230
+802998;Kadapa (M Corp. + OG) (Part);28;551;5231
+802998;Kadapa (M Corp.) (Part);28;551;5231
+802999;Rayachoti (M);28;551;5239
+803000;Rajampet (NP + OG);28;551;5246
+803000;Rajampet (NP);28;551;5246
+803001;Yemmiganur (M);28;552;5254
+803002;Kurnool (M Corp. + OG) (Part);28;552;5258
+803002;Kurnool (M Corp. + OG) (Part);28;552;5259
+803002;Kurnool (M Corp.) (Part);28;552;5259
+803003;Adoni (M + OG);28;552;5271
+803003;Adoni (M);28;552;5271
+803004;Nandyal (M + OG);28;552;5284
+803004;Nandyal (M);28;552;5284
+803005;Dhone (NP);28;552;5289
+803006;Rayadurg (M);28;553;5305
+803007;Guntakal (M);28;553;5309
+803008;Tadpatri (M);28;553;5313
+803009;Anantapur (M Corp. + OG) (Part);28;553;5330
+803009;Anantapur (M Corp.);28;553;5330
+803009;Anantapur (M Corp. + OG) (Part);28;553;5331
+803010;Dharmavaram (M);28;553;5336
+803011;Kadiri (M);28;553;5343
+803012;Hindupur (M);28;553;5364
+803014;Tirupati (M Corp. + OG) (Part);28;554;5375
+803013;Srikalahasti (M);28;554;5378
+803014;Tirupati (M Corp. + OG) (Part);28;554;5383
+803014;Tirupati (M Corp.);28;554;5383
+803015;Madanapalle (M + OG);28;554;5392
+803015;Madanapalle (M);28;554;5392
+803016;Nagari (M);28;554;5406
+803017;Puttur (M);28;554;5407
+803018;Punganur (M);28;554;5415
+803020;Palamaner (M + OG) (Part);28;554;5417
+803019;Chittoor (M + OG);28;554;5421
+803019;Chittoor (M);28;554;5421
+803020;Palamaner (M + OG) (Part);28;554;5422
+803020;Palamaner (M);28;554;5422
+803021;Nipani  (CMC);29;555;5433
+803022;Sadalgi (TP);29;555;5433
+803023;Chikodi (TMC);29;555;5433
+803024;Athni (TMC + OG);29;555;5434
+803024;Athni (TMC);29;555;5434
+803025;Kudchi (TP);29;555;5435
+803026;Raybag (TP);29;555;5435
+803027;Mudalgi (TMC);29;555;5436
+803028;Konnur (TP);29;555;5436
+803029;Gokak Falls (NAC);29;555;5436
+803030;Gokak (CMC);29;555;5436
+803031;Sankeshwar (TMC);29;555;5437
+803032;Hukeri (TP);29;555;5437
+803033;Belgaum (M Corp. + OG);29;555;5438
+803033;Belgaum (M Corp.);29;555;5438
+803034;Belgaum Cantonment (CB);29;555;5438
+803035;Khanapur (TP);29;555;5439
+803036;Bail Hongal (TMC);29;555;5440
+803037;Saundatti-Yellamma (TMC);29;555;5441
+803038;Ramdurg (TMC + OG);29;555;5442
+803038;Ramdurg (TMC);29;555;5442
+803039;Mahalingpur (TMC);29;556;99999
+803040;Terdal (TMC);29;556;5443
+803041;Jamkhandi (CMC);29;556;5443
+803042;Rabkavi Banhatti (CMC);29;556;5443
+803043;Bilgi (TP);29;556;5444
+803044;Mudhol (TMC);29;556;5445
+803045;Kerur (TP);29;556;5446
+803046;Badami (TMC);29;556;5446
+803047;Guledgudda (TMC);29;556;5446
+803048;Bagalkot (CMC);29;556;5447
+803049;Hungund (TP);29;556;5448
+803050;Ilkal (CMC);29;556;5448
+803051;Bijapur (CMC);29;557;5449
+803052;Indi (TMC);29;557;5450
+803053;Sindgi (TMC);29;557;5451
+803054;Basavana Bagevadi (TMC);29;557;5452
+803055;Muddebihal (TMC);29;557;5453
+803056;Talikota (TMC);29;557;5453
+803057;Basavakalyan (CMC);29;558;5454
+803058;Bhalki (TMC);29;558;5455
+803059;Aurad (TP);29;558;5456
+803060;Bidar (CMC + OG);29;558;5457
+803060;Bidar (CMC);29;558;5457
+803061;Homnabad (TMC);29;558;5458
+803062;Chitgoppa (TMC);29;558;5458
+803063;Mudgal (TP);29;559;5459
+803064;Lingsugur (TMC);29;559;5459
+803065;Hatti Gold Mines(NAC);29;559;5459
+803066;Devadurga (TMC);29;559;5460
+803067;Raichur (CMC);29;559;5461
+803068;Manvi (TMC);29;559;5462
+803069;Sindhnur (CMC);29;559;5463
+803070;Yelbarga (TP);29;560;5464
+803071;Kushtagi (TMC);29;560;5465
+803072;Gangawati (CMC + OG);29;560;5466
+803072;Gangawati (CMC);29;560;5466
+803073;Koppal (CMC);29;560;5467
+803074;Nargund (TMC);29;561;5468
+803075;Ron (TMC);29;561;5469
+803076;Gajendragarh (TMC);29;561;5469
+803077;Naregal (TP);29;561;5469
+803078;Gadag-Betigeri (CMC);29;561;5470
+803079;Mulgund (TP);29;561;5470
+803080;Shirhatti (TP);29;561;5471
+803081;Lakshmeshwar (TMC);29;561;5471
+803082;Mundargi (TMC);29;561;5472
+803083;Hubli-Dharwad (M Corp.);29;562;99999
+803084;Alnavar (TP);29;562;5473
+803085;Navalgund (TMC);29;562;5474
+803086;Annigeri (TMC);29;562;5474
+803087;Kalghatgi (TP);29;562;5476
+803088;Kundgol (TP);29;562;5477
+803089;Dandeli (CMC);29;563;99999
+803090;Karwar (CMC + OG);29;563;5478
+803090;Karwar (CMC);29;563;5478
+803091;Haliyal (TP);29;563;5480
+803092;Yellapur (TP);29;563;5481
+803093;Mundgod (TP);29;563;5482
+803094;Sirsi (CMC);29;563;5483
+803095;Ankola (TP + OG);29;563;5484
+803095;Ankola (TP);29;563;5484
+803096;Kumta (TMC + OG);29;563;5485
+803096;Kumta (TMC);29;563;5485
+803097;Siddapur (TP);29;563;5486
+803098;Honavar (TP);29;563;5487
+803099;Bhatkal (TMC);29;563;5488
+803100;Shiggaon (TMC);29;564;5489
+803101;Bankapura (TMC);29;564;5489
+803102;Savanur (TMC);29;564;5490
+803103;Hangal (TMC);29;564;5491
+803104;Haveri (CMC);29;564;5492
+803105;Byadgi (TMC);29;564;5493
+803106;Hirekerur (TP);29;564;5494
+803107;Ranibennur (CMC);29;564;5495
+803108;Hoovina Hadagalli (TMC);29;565;5496
+803109;Hospet (CMC);29;565;5498
+803110;Kamalapuram (TP);29;565;5498
+803111;Kampli (TMC);29;565;5498
+803112;Siruguppa (TMC);29;565;5499
+803113;Tekkalakote (TP);29;565;5499
+803114;Bellary (M Corp.);29;565;5500
+803115;Sandur (TMC);29;565;5501
+803116;Kudligi (TP);29;565;5502
+803117;Kotturu (TP);29;565;5502
+803118;Molakalmuru (TP);29;566;5503
+803119;Challakere (TMC);29;566;5504
+803120;Chitradurga (CMC + OG);29;566;5505
+803120;Chitradurga (CMC);29;566;5505
+803121;Holalkere (TP);29;566;5506
+803122;Hosdurga (TMC);29;566;5507
+803123;Hiriyur (TMC);29;566;5508
+803124;Harihar (CMC + OG);29;567;5509
+803124;Harihar (CMC);29;567;5509
+803125;Harapanahalli (TMC);29;567;5510
+803126;Jagalur (TP);29;567;5511
+803127;Davanagere (M Corp.);29;567;5512
+803128;Honnali (TP);29;567;5513
+803129;Channagiri (TP);29;567;5514
+803130;Jog Kargal (TP);29;568;5515
+803131;Sagar (CMC);29;568;5515
+803132;Sorab (TP);29;568;5516
+803133;Siralkoppa (TP);29;568;5517
+803134;Shikarpur (TMC);29;568;5517
+803135;Hosanagara (TP);29;568;5518
+803136;Tirthahalli (TP);29;568;5519
+803137;Shimoga (CMC);29;568;5520
+803138;Bhadravati (CMC);29;568;5521
+803139;Kundapura (TMC);29;569;5522
+803140;Saligram (TP);29;569;5523
+803141;Udupi (CMC + OG);29;569;5523
+803141;Udupi (CMC);29;569;5523
+803142;Karkal (TMC);29;569;5524
+803143;Sringeri (TP);29;570;5525
+803144;Koppa (TP);29;570;5526
+803145;Narasimharajapura (TP);29;570;5527
+803146;Tarikere (TMC);29;570;5528
+803147;Birur (TMC);29;570;5529
+803148;Kadur (TMC);29;570;5529
+803149;Chikmagalur (CMC);29;570;5530
+803150;Mudigere (TP);29;570;5531
+803151;Kudremukh (NAC);29;570;5531
+803152;Chiknayakanhalli (TMC);29;571;5532
+803153;Sira (CMC);29;571;5533
+803154;Pavagada (TMC);29;571;5534
+803155;Madhugiri (TMC);29;571;5535
+803156;Koratagere (TP);29;571;5536
+803157;Tumkur (CMC);29;571;5537
+803158;Gubbi (TP);29;571;5538
+803159;Tiptur (CMC);29;571;5539
+803160;Turuvekere (TP);29;571;5540
+803161;Kunigal (TMC);29;571;5541
+803162;BBMP (M Corp. + OG);29;572;99999
+803162;BBMP (M Corp.);29;572;99999
+803163;Anekal (TMC);29;572;5545
+803164;Krishnarajpet (TMC);29;573;5546
+803165;Nagamangala (TP);29;573;5547
+803166;Pandavapura (TP);29;573;5548
+803167;Shrirangapattana (TMC);29;573;5549
+803168;Mandya (CMC);29;573;5550
+803169;Maddur (TMC);29;573;5551
+803170;Malavalli (TMC);29;573;5552
+803171;Sakleshpur (TMC);29;574;5553
+803172;Belur (TMC);29;574;5554
+803173;Arsikere (TMC + OG);29;574;5555
+803173;Arsikere (TMC);29;574;5555
+803174;Hassan (CMC + OG);29;574;5556
+803174;Hassan (CMC);29;574;5556
+803175;Alur (TP);29;574;5557
+803176;Arkalgud (TP);29;574;5558
+803177;Hole Narsipur (TMC);29;574;5559
+803178;Channarayapatna (TMC + OG);29;574;5560
+803178;Channarayapatna (TMC);29;574;5560
+803179;Mulki (TP);29;575;5561
+803180;Mudbidri (TMC);29;575;5561
+803181;Mangalore (M Corp. + OG);29;575;5561
+803181;Mangalore (M Corp.);29;575;5561
+803182;Ullal (TMC);29;575;5561
+803183;Bantval (TMC);29;575;5562
+803184;Beltangadi (TP);29;575;5563
+803185;Puttur (TMC);29;575;5564
+803186;Sulya (TP);29;575;5565
+803187;Madikeri (CMC);29;576;5566
+803188;Somvarpet (TP);29;576;5567
+803189;Kushalnagar (TP);29;576;5567
+803190;Virajpet (TP);29;576;5568
+803191;Piriyapatna (TP);29;577;5569
+803192;Hunsur (TMC);29;577;5570
+803193;Krishnarajanagara (TMC);29;577;5571
+803194;Mysore (M Corp. + OG);29;577;5572
+803194;Mysore (M Corp.);29;577;5572
+803195;Heggadadevankote (TP);29;577;5573
+803196;Saragur (TP);29;577;5573
+803197;Nanjangud (TMC);29;577;5574
+803198;Bannur (TMC);29;577;5575
+803199;Tirumakudal  Narsipur (TP);29;577;5575
+803200;Gundlupet (TMC);29;578;5576
+803201;Chamarajanagar (CMC);29;578;5577
+803202;Yelandur (TP);29;578;5578
+803203;Kollegal (CMC);29;578;5579
+803204;Hanur (TP);29;578;5579
+803205;Aland (TMC);29;579;5580
+803206;Afzalpur (TP);29;579;5581
+803207;Gulbarga (M Corp. + OG);29;579;5582
+803207;Gulbarga (M Corp.);29;579;5582
+803208;Chincholi (TP);29;579;5583
+803209;Sedam (TMC);29;579;5584
+803210;Chitapur (TMC);29;579;5585
+803211;Shahabad ACC (NAC + OG);29;579;5585
+803211;Shahabad ACC (NAC);29;579;5585
+803212;Shahabad (CMC);29;579;5585
+803213;Wadi (TMC);29;579;5585
+803214;Jevargi (TP);29;579;5586
+803215;Shorapur (TMC);29;580;5587
+803216;Bhimarayanagudi (NAC);29;580;5588
+803217;Shahpur (TMC);29;580;5588
+803218;Gurmatkal (TP);29;580;5589
+803219;Yadgir (CMC);29;580;5589
+803220;Srinivaspur (TMC);29;581;5590
+803221;Kolar (CMC);29;581;5591
+803222;Malur (TMC);29;581;5592
+803223;Bangarapet (TMC);29;581;5593
+803224;Robertson Pet (CMC + OG);29;581;5593
+803224;Robertson Pet (CMC);29;581;5593
+803225;Mulbagal (TMC);29;581;5594
+803226;Gauribidanur (TMC);29;582;5595
+803227;Chikkaballapura (CMC);29;582;5596
+803228;Gudibanda (TP);29;582;5597
+803229;Bagepalli (TMC);29;582;5598
+803230;Sidlaghatta (TMC);29;582;5599
+803231;Chintamani (CMC);29;582;5600
+803232;Nelamangala (TMC);29;583;5601
+803233;Dod Ballapur (CMC + OG);29;583;5602
+803233;Dod Ballapur (CMC);29;583;5602
+803234;Vijayapura (TMC);29;583;5603
+803235;Devanahalli (TMC);29;583;5603
+803236;Hosakote (TMC);29;583;5604
+803237;Magadi (TMC);29;584;5605
+803238;Ramanagara (CMC);29;584;5606
+803239;Channapatna (CMC);29;584;5607
+803240;Kanakapura (TMC);29;584;5608
+803241;Pernem (M Cl);30;585;5609
+803242;Mapusa (M Cl);30;585;5610
+803243;Panaji (M Cl + OG);30;585;5611
+803243;Panaji (M Cl);30;585;5611
+803244;Bicholim (M Cl);30;585;5612
+803245;Sanquelim (M Cl);30;585;5612
+803246;Valpoi (M Cl);30;585;5613
+803247;Ponda (M Cl);30;585;5614
+803248;Mormugao (M Cl);30;586;5615
+803249;Margao (M Cl);30;586;5616
+803250;Cuncolim (M Cl);30;586;5616
+803251;Quepem (M Cl);30;586;5617
+803252;Curchorem-Cacora (M Cl);30;586;5617
+803253;Sanguem (M Cl);30;586;5618
+803254;Canacona (M Cl);30;586;5619
+803255;Kasaragod (M);32;588;5630
+803256;Kanhangad (M + OG);32;588;5631
+803256;Kanhangad (M);32;588;5631
+803257;Payyannur (M);32;589;5632
+803258;Taliparamba (M);32;589;5632
+803259;Kannur (M);32;589;5633
+803260;Kannur Cantonment (CB);32;589;5633
+803261;Mattannur (M);32;589;5634
+803262;Koothuparamba (M);32;589;5634
+803263;Thalassery (M);32;589;5634
+803264;Kalpetta (M);32;590;5637
+803265;Vadakara (M);32;591;5638
+803266;Quilandy (M);32;591;5639
+803267;Kozhikode (M Corp. + OG);32;591;5640
+803267;Kozhikode (M Corp.);32;591;5640
+803268;Manjeri (M);32;592;5641
+803269;Malappuram (M + OG);32;592;5641
+803269;Malappuram (M);32;592;5641
+803270;Perinthalmanna (M);32;592;5643
+803271;Tirur (M);32;592;5644
+803272;Ponnani (M);32;592;5646
+803273;Shoranur (M);32;593;5647
+803274;Ottappalam (M);32;593;5647
+803275;Palakkad (M);32;593;5649
+803276;Chittur-Thathamangalam (M);32;593;5650
+803277;Kunnamkulam (M);32;594;5652
+803278;Guruvayoor (M);32;594;5653
+803279;Chavakkad (M);32;594;5653
+803280;Thrissur (M Corp.);32;594;5654
+803281;Kodungallur (M + OG);32;594;5655
+803281;Kodungallur (M);32;594;5655
+803282;Irinjalakuda (M);32;594;5656
+803283;Chalakudy (M);32;594;5656
+803284;Perumbavoor (M);32;595;5657
+803285;Angamaly (M);32;595;5658
+803286;Aluva (M);32;595;5658
+803287;Paravur (M);32;595;5659
+803288;Kochi (M Corp. + OG) (Part);32;595;5659
+803288;Kochi (M Corp. + OG) (Part);32;595;5660
+803288;Kochi (M Corp.) (Part);32;595;5660
+803288;Kochi (M Corp. + OG) (Part);32;595;5661
+803289;Kalamassery (M);32;595;5661
+803288;Kochi (M Corp.) (Part);32;595;5661
+803290;Thrippunithura (M);32;595;5661
+803291;Muvattupuzha (M);32;595;5662
+803292;Kothamangalam (M);32;595;5663
+803293;Thodupuzha (M);32;596;5666
+803294;Palai (M);32;597;5668
+803295;Vaikom (M);32;597;5669
+803296;Kottayam (M);32;597;5670
+803297;Changanassery (M);32;597;5671
+803298;Cherthala (M);32;598;5673
+803299;Alappuzha (M + OG);32;598;5674
+803299;Alappuzha (M);32;598;5674
+803300;Kayamkulam (M);32;598;5676
+803301;Chengannur (M);32;598;5677
+803302;Mavelikkara (M);32;598;5678
+803303;Thiruvalla (M);32;599;5679
+803304;Pathanamthitta (M);32;599;5682
+803305;Adoor (M);32;599;5683
+803306;Kollam (M Corp. + OG) (Part);32;600;5684
+803307;Punalur (M);32;600;5686
+803306;Kollam (M Corp. + OG) (Part);32;600;5688
+803306;Kollam (M Corp.) (Part);32;600;5688
+803308;Paravoor (M);32;600;5688
+803309;Varkala (M);32;601;5689
+803310;Attingal (M);32;601;5689
+803311;Nedumangad (M);32;601;5690
+803312;Thiruvananthapuram (M Corp. + OG) (Part);32;601;5691
+803312;Thiruvananthapuram (M Corp. + OG) (Part);32;601;5692
+803313;Neyyattinkara (M);32;601;5692
+803314;Gummidipoondi (TP);33;602;5693
+803315;Ponneri (TP);33;602;5694
+803316;Arani (TP);33;602;5694
+803317;Minjur (TP);33;602;5694
+803318;Uthukkottai (TP);33;602;5695
+803319;Tiruttani (M);33;602;5696
+803320;Pallipattu (TP);33;602;5697
+803321;Pothatturpettai (TP);33;602;5697
+803322;Thiruvallur (M);33;602;5698
+803323;Avadi (M);33;602;5699
+803324;Thirunindravur (TP);33;602;5699
+803325;Tiruverkadu (M + OG);33;602;5699
+803325;Tiruverkadu (M);33;602;5699
+803326;Thirumazhisai (TP);33;602;5699
+803327;Poonamallee (M + OG);33;602;5699
+803327;Poonamallee (M);33;602;5699
+803328;Ambattur (M);33;602;5700
+803329;Maduravoyal (M);33;602;5700
+803330;Valasaravakkam (M);33;602;5700
+803331;Porur (TP);33;602;5700
+803332;Kattivakkam (M);33;602;5701
+803333;Tiruvottiyur (M);33;602;5701
+803334;Manali (M);33;602;5701
+803335;Naravarikuppam (TP);33;602;5701
+803336;Puzhal (TP);33;602;5701
+803337;Madavaram (M);33;602;5701
+803338;Chinnasekkadu (TP);33;602;5701
+803339;Chennai (M Corp.);33;603;99999
+803340;Mangadu (TP);33;604;5702
+803341;Kundrathur (TP + OG);33;604;5702
+803341;Kundrathur (TP);33;604;5702
+803342;Sriperumbudur (TP);33;604;5702
+803343;Chitlapakkam (TP);33;604;5703
+803344;Perungalathur (TP);33;604;5703
+803345;Tambaram (M);33;604;5703
+803346;Sembakkam (TP);33;604;5703
+803347;Peerkankaranai (TP + OG);33;604;5703
+803347;Peerkankaranai (TP);33;604;5703
+803348;Madambakkam (TP);33;604;5703
+803349;Nandambakkam (TP);33;604;5704
+803350;St.Thomas Mount-cum-Pallavaram (CB);33;604;5704
+803351;Alandur (M);33;604;5704
+803352;Meenambakkam (TP + OG);33;604;5704
+803352;Meenambakkam (TP);33;604;5704
+803353;Anakaputhur (M);33;604;5704
+803354;Pammal (M);33;604;5704
+803355;Thiruneermalai (TP);33;604;5704
+803356;Pallavaram (M + OG);33;604;5704
+803356;Pallavaram (M);33;604;5704
+803357;Puzhithivakkam (Ullagaram) (M);33;604;5705
+803358;Perungudi (TP);33;604;5705
+803359;Pallikaranai (TP);33;604;5705
+803360;Sholinganallur (TP + OG);33;604;5705
+803360;Sholinganallur (TP);33;604;5705
+803361;Nandivaram - Guduvancheri (TP);33;604;5706
+803362;Maraimalainagar (M);33;604;5706
+803363;Thiruporur (TP);33;604;5706
+803364;Chengalpattu (M);33;604;5706
+803365;Kancheepuram (M);33;604;5707
+803366;Sevilimedu (TP);33;604;5707
+803367;Walajabad (TP);33;604;5707
+803368;Uthiramerur (TP);33;604;5708
+803369;Mamallapuram (TP);33;604;5709
+803370;Tirukalukundram (TP);33;604;5709
+803371;Karunguzhi (TP);33;604;5710
+803372;Maduranthakam (M);33;604;5710
+803373;Acharapakkam (TP);33;604;5710
+803374;Edakalinadu (TP);33;604;5711
+803375;Gudiyatham (M);33;605;5712
+803376;Pernampattu (M);33;605;5712
+803377;Thiruvalam (TP);33;605;5713
+803378;Katpadi (TP);33;605;5713
+803379;Dharapadavedu (M);33;605;5713
+803380;Gandhinagar (TP);33;605;5713
+803381;Kalinjur (TP);33;605;5713
+803382;Sholingur (TP);33;605;5714
+803383;Ammoor (TP);33;605;5714
+803384;Walajapet (M + OG);33;605;5714
+803384;Walajapet (M);33;605;5714
+803385;Ranipettai (M);33;605;5714
+803386;Melvisharam (M);33;605;5714
+803387;Arakonam (M);33;605;5715
+803388;Thakkolam (TP);33;605;5715
+803389;Nemili (TP);33;605;5715
+803390;Kaveripakkam (TP);33;605;5715
+803391;Panapakkam (TP);33;605;5715
+803392;Arcot (M);33;605;5716
+803393;Vilapakkam (TP);33;605;5716
+803394;Timiri (TP);33;605;5716
+803395;Kalavai (TP);33;605;5716
+803396;Sathuvachari (M);33;605;5717
+803397;Shenbakkam (TP);33;605;5717
+803398;Vellore (M. Corp);33;605;5717
+803399;Pallikonda (TP);33;605;5717
+803400;Thorapadi (TP);33;605;5717
+803401;Allapuram (TP);33;605;5717
+803402;Pennathur (TP);33;605;5717
+803403;Odugathur (TP);33;605;5717
+803404;Vaniyambadi (M);33;605;5718
+803405;Alangayam (TP);33;605;5718
+803406;Ambur (M);33;605;5719
+803407;Uthayendram (TP);33;605;5719
+803408;Natrampalli (TP);33;605;5720
+803409;Jolarpet (M);33;605;5720
+803410;Tirupathur (M);33;605;5720
+803411;Kannamangalam (TP);33;606;5721
+803412;Arani (M);33;606;5721
+803413;Tiruvethipuram (M);33;606;5722
+803414;Peranamallur (TP);33;606;5723
+803415;Vandavasi (M);33;606;5723
+803416;Desur (TP);33;606;5723
+803417;Kalambur (TP);33;606;5724
+803418;Polur (TP);33;606;5724
+803419;Chetpet (TP);33;606;5724
+803420;Pudupalayam (TP);33;606;5725
+803421;Chengam (TP);33;606;5725
+803422;Tiruvannamalai (M);33;606;5727
+803423;Kilpennathur (TP);33;606;5727
+803424;Vettavalam (TP);33;606;5727
+803425;Gingee (TP);33;607;5728
+803426;Ananthapuram (TP);33;607;5728
+803427;Tindivanam (M);33;607;5729
+803428;Marakkanam (TP);33;607;5729
+803429;Kottakuppam (TP);33;607;5730
+803430;Vikravandi (TP);33;607;5731
+803431;Viluppuram (M);33;607;5731
+803432;Valavanur (TP);33;607;5731
+803433;Manalurpet (TP);33;607;5732
+803434;Arakandanallur (TP);33;607;5732
+803435;Tirukkoyilur (TP);33;607;5732
+803436;Thiruvennainallur (TP);33;607;5732
+803437;Sankarapuram (TP);33;607;5733
+803438;Vadakkanandal (TP);33;607;5734
+803439;Thiagadurgam (TP);33;607;5734
+803440;Kallakkurichi (M);33;607;5734
+803441;Chinnasalem (TP);33;607;5734
+803442;Ulundurpettai (TP);33;607;5735
+803443;Kolathur (TP);33;608;5736
+803444;Mecheri (TP);33;608;5736
+803445;Veerakkalpudur (TP);33;608;5736
+803446;Mettur (M);33;608;5736
+803447;P.N.Patti (TP);33;608;5736
+803448;Nangavalli (TP);33;608;5736
+803449;Vanavasi (TP);33;608;5736
+803450;Jalakandapuram (TP);33;608;5736
+803451;Kadayampatti (TP);33;608;5737
+803452;Omalur (TP);33;608;5737
+803453;Karuppur (TP);33;608;5737
+803454;Tharamangalam (TP);33;608;5737
+803455;Poolampatti (TP);33;608;5738
+803456;Edappadi (M);33;608;5738
+803457;Konganapuram (TP);33;608;5738
+803458;Edaganasalai (TP);33;608;5739
+803459;Arasiramani (TP);33;608;5739
+803460;Thevur (TP);33;608;5739
+803461;Sankari (TP);33;608;5739
+803462;Kannankurichi (TP);33;608;5740
+803463;Salem (M Corp.);33;608;5740
+803464;Ilampillai (TP);33;608;5740
+803465;Panaimarathupatti (TP);33;608;5740
+803466;Mallur (TP);33;608;5740
+803467;Attayampatti (TP);33;608;5740
+803468;Belur (TP);33;608;5742
+803469;Vazhapadi (TP);33;608;5742
+803470;Ayothiapattinam (TP);33;608;5742
+803471;Pethanaickenpalayam (TP);33;608;5743
+803472;Ethapur (TP);33;608;5743
+803473;Attur (M);33;608;5743
+803474;Narasingapuram (M);33;608;5743
+803475;Keeripatti (TP);33;608;5743
+803476;Veeraganur ((TP);33;608;5744
+803477;Thedavur (TP);33;608;5744
+803478;Gangavalli (TP);33;608;5744
+803479;Thammampatti (TP);33;608;5744
+803480;Sentharapatti (TP);33;608;5744
+803481;Mallasamudram (TP);33;609;5745
+803482;Kumarapalayam (M);33;609;5745
+803483;Padaiveedu (TP);33;609;5745
+803484;Tiruchengode (M);33;609;5745
+803485;Alampalayam (TP);33;609;5745
+803486;Pallipalayam (M);33;609;5745
+803487;Vennanthur (TP);33;609;5746
+803488;Athanur (TP);33;609;5746
+803489;R.Pudupatti (TP);33;609;5746
+803490;Namagiripettai (TP);33;609;5746
+803491;Seerapalli (TP);33;609;5746
+803492;Pattinam (TP);33;609;5746
+803493;Rasipuram (M);33;609;5746
+803494;Pillanallur (TP);33;609;5746
+803495;Kalappanaickenpatti (TP);33;609;5747
+803496;Senthamangalam (TP);33;609;5747
+803497;Namakkal (M);33;609;5747
+803498;Erumaipatti (TP);33;609;5747
+803499;Mohanur (TP);33;609;5747
+803500;Paramathi (TP);33;609;5748
+803501;Velur (TP);33;609;5748
+803502;Pothanur (TP);33;609;5748
+803503;Venkarai (TP);33;609;5748
+803504;Pandamangalam (TP);33;609;5748
+803505;Sathyamangalam (M);33;610;5749
+803506;Kembainaickenpalayam (TP);33;610;5749
+803507;Ariyappampalayam (TP);33;610;5749
+803508;Bhavanisagar (TP);33;610;5749
+803509;Punjaipuliampatti (M);33;610;5749
+803510;Nerunjipettai (TP);33;610;5750
+803511;Ammapettai (TP);33;610;5750
+803512;Anthiyur (TP);33;610;5750
+803513;Olagadam (TP);33;610;5750
+803514;Athani (TP);33;610;5750
+803515;Jambai (TP);33;610;5750
+803516;Appakudal (TP);33;610;5750
+803517;Bhavani (M);33;610;5750
+803518;Salangapalayam (TP);33;610;5750
+803519;Periyakodiveri (TP);33;610;5751
+803520;Vaniputhur (TP);33;610;5751
+803521;Lakkampatti (TP);33;610;5751
+803522;Kasipalayam (G) (TP);33;610;5751
+803523;Gobichettipalayam (M);33;610;5751
+803524;Kuhalur (TP);33;610;5751
+803525;P.Mettupalayam (TP);33;610;5751
+803526;Elathur (TP);33;610;5751
+803527;Kolappalur (TP);33;610;5751
+803528;Nambiyur (TP);33;610;5751
+803529;Pallapalayam (TP);33;610;5752
+803530;Kanjikoil (TP);33;610;5752
+803531;Nallampatti (TP);33;610;5752
+803532;Pethampalayam (TP);33;610;5752
+803533;Karumandi Chellipalayam (TP);33;610;5752
+803534;Perundurai (TP);33;610;5752
+803535;Chennimalai (TP);33;610;5752
+803536;Suriyampalayam (TP);33;610;5753
+803537;Chithode (TP);33;610;5753
+803538;Brahmana Periya Agraharam (TP);33;610;5753
+803539;Periyasemur (M);33;610;5753
+803540;Nasiyanur (TP);33;610;5753
+803541;Veerappanchatiram (M);33;610;5753
+803542;Erode (M.Corp);33;610;5753
+803543;Surampatti (M);33;610;5753
+803544;Kasipalayam  (E) (M);33;610;5753
+803545;Avalpoondurai (TP);33;610;5753
+803546;Modakurichi (TP);33;610;5753
+803547;Pasur (TP);33;610;5753
+803548;Kilampadi (TP);33;610;5753
+803549;Vellottamparappu (TP);33;610;5753
+803550;Vadugapatti (TP);33;610;5753
+803551;Arachalur (TP);33;610;5753
+803552;Sivagiri (TP);33;610;5753
+803553;Unjalur (TP);33;610;5753
+803554;Kollankoil (TP);33;610;5753
+803555;Vengampudur (TP);33;610;5753
+803556;Kodumudi (TP);33;610;5753
+803557;Chennasamudram (TP);33;610;5753
+803558;Nelliyalam (M);33;611;5754
+803559;Devarshola (TP);33;611;5755
+803560;Gudalur (M);33;611;5755
+803561;O' Valley (TP);33;611;5755
+803562;Sholur (TP);33;611;5756
+803563;Naduvattam (TP);33;611;5756
+803564;Udhagamandalam (M);33;611;5756
+803565;Kotagiri (TP);33;611;5757
+803566;Jagathala (TP);33;611;5757
+803567;Wellington (CB);33;611;5758
+803568;Kethi (TP);33;611;5758
+803569;Adikaratti (TP);33;611;5758
+803570;Coonoor (M);33;611;5758
+803571;Huligal (TP);33;611;5758
+803572;Bikketti (TP);33;611;5759
+803573;Kilkunda (TP);33;611;5759
+803574;Keeranur (TP);33;612;5760
+803575;Neikkarapatti (TP);33;612;5760
+803576;Palani (M);33;612;5760
+803577;Ayakudi (TP);33;612;5760
+803578;Balasamudram (TP);33;612;5760
+803579;Oddanchatram (TP);33;612;5761
+803580;Palayam (TP);33;612;5762
+803581;Vedasandur (TP);33;612;5762
+803582;Eriodu (TP);33;612;5762
+803583;Ayyalur (TP);33;612;5762
+803584;Vadamadurai (TP);33;612;5762
+803585;Natham (TP);33;612;5763
+803586;Sriramapuram (TP);33;612;5764
+803587;Agaram (TP);33;612;5764
+803588;Thadikombu (TP);33;612;5764
+803589;Dindigul (M);33;612;5764
+803590;Kannivadi (TP);33;612;5764
+803591;Sithayankottai (TP);33;612;5765
+803592;Chinnalapatti (TP);33;612;5765
+803593;Ayyampalayam (TP);33;612;5765
+803594;Pannaikadu (TP);33;612;5766
+803595;Kodaikanal (M);33;612;5766
+803596;Sevugampatti (TP);33;612;5767
+803597;Ammainaickanur (TP);33;612;5767
+803598;Nilakkottai (TP);33;612;5767
+803599;Pattiveeranpatti (TP);33;612;5767
+803600;Batlagundu (TP);33;612;5767
+803601;Aravakurichi (TP);33;613;5768
+803602;Pallapatti (TP);33;613;5768
+803603;TNPL Pugalur (TP);33;613;5769
+803604;Punjaipugalur (TP);33;613;5769
+803605;Punjai Thottakurichi (TP);33;613;5769
+803606;Inam Karur (M);33;613;5769
+803607;Karur (M);33;613;5769
+803608;Puliyur (TP);33;613;5769
+803609;Thanthoni (M);33;613;5769
+803610;Uppidamangalam (TP);33;613;5769
+803611;Krishnarayapuram (TP);33;613;5770
+803612;P.J. Cholapuram (TP);33;613;5770
+803613;Kulithalai (M);33;613;5771
+803614;Marudur (TP);33;613;5771
+803615;Nangavaram (TP);33;613;5771
+803616;Kattuputhur (TP);33;614;5773
+803617;Thottiyam (TP);33;614;5773
+803618;Mettupalayam (TP);33;614;5774
+803619;Thathaiyangarpet (TP);33;614;5774
+803620;Musiri (TP);33;614;5774
+803621;Uppiliapuram (TP);33;614;5775
+803622;Balakrishnampatti (TP);33;614;5775
+803623;Thuraiyur (M);33;614;5775
+803624;S. Kannanur (TP);33;614;5776
+803625;Manachanallur (TP);33;614;5776
+803626;Kallakudi (TP);33;614;5777
+803627;Pullampadi (TP);33;614;5777
+803628;Puvalur (TP);33;614;5777
+803629;Lalgudi (TP);33;614;5777
+803630;Sirugamani (TP);33;614;5778
+803631;Tiruchirappalli (M Corp.);33;614;5779
+803632;Koothappar (TP);33;614;5780
+803633;Thiruverumbur (TP);33;614;5780
+803634;Thuvakudi  (M);33;614;5780
+803635;Manapparai (M);33;614;5781
+803636;Ponnampatti (TP);33;614;5781
+803637;Poolambadi (TP);33;615;5782
+803638;Arumbavur (TP);33;615;5782
+803639;Perambalur (M);33;615;5783
+803640;Kurumbalur (TP);33;615;5783
+803641;Labbaikudikadu (TP);33;615;5784
+803642;Varadarajanpettai (TP);33;616;5786
+803643;Jayankondam (M);33;616;5786
+803644;Udayarpalayam (TP);33;616;5786
+803645;Ariyalur (M);33;616;5787
+803646;Thorapadi (TP);33;617;5788
+803647;Melpattampakkam (TP);33;617;5788
+803648;Nellikuppam (M);33;617;5788
+803649;Panruti (M);33;617;5788
+803650;Cuddalore (M);33;617;5789
+803651;Kurinjipadi (TP);33;617;5790
+803652;Vadalur (TP);33;617;5790
+803653;Parangipettai (TP);33;617;5791
+803654;Sethiathoppu (TP);33;617;5791
+803655;Bhuvanagiri (TP);33;617;5791
+803656;Killai (TP);33;617;5791
+803657;Chidambaram (M);33;617;5791
+803658;Annamalai Nagar (TP);33;617;5791
+803659;Srimushnam (TP);33;617;5792
+803660;Lalpet (TP);33;617;5792
+803661;Kattumannarkoil (TP);33;617;5792
+803662;Mangalampet (TP);33;617;5793
+803663;Gangaikondan (TP);33;617;5793
+803664;Virudhachalam (M);33;617;5793
+803665;Pennadam (TP);33;617;5794
+803666;Tittakudi (TP);33;617;5794
+803667;Sirkali (M);33;618;5795
+803668;Vaitheeswarankoil (TP);33;618;5795
+803669;Manalmedu (TP);33;618;5796
+803670;Mayiladuthurai (M);33;618;5796
+803671;Kuthalam (TP);33;618;5797
+803672;Tharangambadi (TP);33;618;5798
+803673;Tittacheri (TP);33;618;5799
+803674;Nagapattinam (M);33;618;5799
+803675;Kilvelur (TP);33;618;5800
+803676;Velankanni (TP);33;618;5800
+803677;Thalainayar (TP);33;618;5802
+803678;Vedaranyam (M);33;618;5802
+803679;Valangaiman (TP);33;619;5803
+803680;Kodavasal (TP);33;619;5804
+803681;Koradacheri (TP);33;619;5804
+803682;Peralam (TP);33;619;5805
+803683;Nannilam (TP);33;619;5805
+803684;Thiruvarur (M);33;619;5806
+803685;Needamangalam (TP);33;619;5807
+803686;Kuthanallur (M);33;619;5807
+803687;Mannargudi (M);33;619;5808
+803688;Thiruthuraipoondi (M);33;619;5809
+803689;Muthupet (TP);33;619;5809
+803690;Thiruppanandal (TP);33;620;5810
+803691;Aduthurai alias Maruthuvakudi (TP);33;620;5810
+803692;Veppathur (TP);33;620;5810
+803693;Thirupuvanam (TP);33;620;5810
+803694;Thiruvidaimarudur (TP);33;620;5810
+803695;Cholapuram (TP);33;620;5811
+803696;Thirunageswaram (TP);33;620;5811
+803697;Kumbakonam (M);33;620;5811
+803698;Swamimalai (TP);33;620;5811
+803699;Dharasuram (TP);33;620;5811
+803700;Papanasam (TP);33;620;5812
+803701;Ayyampettai (TP);33;620;5812
+803702;Melattur (TP);33;620;5812
+803703;Ammapettai (TP);33;620;5812
+803704;Thiruvaiyaru (TP);33;620;5813
+803705;Melathiruppanthuruthi (TP);33;620;5813
+803706;Thirukkattupalli (TP);33;620;5813
+803707;Thanjavur (M);33;620;5814
+803708;Vallam (TP);33;620;5814
+803709;Orathanadu (Mukthambalpuram) (TP);33;620;5815
+803710;Madukkur (TP);33;620;5816
+803711;Pattukkottai (M);33;620;5816
+803712;Adiramapattinam (TP);33;620;5816
+803713;Peravurani (TP);33;620;5817
+803714;Perumagalur (TP);33;620;5817
+803715;Iluppur (TP);33;621;5818
+803716;Annavasal (TP);33;621;5818
+803717;Keeranur (TP);33;621;5819
+803718;Pudukkottai (M);33;621;5821
+803719;Arimalam (TP);33;621;5822
+803720;Ponnamaravathi (TP);33;621;5823
+803721;Alangudi (TP);33;621;5824
+803722;Keeramangalam (TP);33;621;5824
+803723;Karambakkudi (TP);33;621;5825
+803724;Aranthangi (M);33;621;5826
+803725;Nerkuppai (TP);33;622;5829
+803726;Singampuneri (TP);33;622;5829
+803727;Tirupathur (TP);33;622;5829
+803728;Kanadukathan (TP);33;622;5830
+803729;Pallathur (TP);33;622;5830
+803730;Kottaiyur (TP);33;622;5830
+803731;Kandanur (TP);33;622;5830
+803732;Puduvayal (TP);33;622;5830
+803733;Karaikkudi (M);33;622;5830
+803734;Devakottai (M);33;622;5831
+803735;Nattarasankottai (TP);33;622;5832
+803736;Sivaganga (M);33;622;5832
+803737;Thirupuvanam (TP);33;622;5833
+803738;Manamadurai (TP);33;622;5833
+803739;Ilayangudi (TP);33;622;5834
+803740;A.Vellalapatti (TP);33;623;5835
+803741;Melur (M);33;623;5835
+803742;Anaiyur (M);33;623;5836
+803743;Paravai (TP);33;623;5836
+803744;Vilangudi (TP);33;623;5836
+803745;Vadipatti (TP);33;623;5837
+803746;Palamedu (TP);33;623;5837
+803747;Sholavandan (TP);33;623;5837
+803748;Alanganallur (TP);33;623;5837
+803749;Usilampatti (M);33;623;5838
+803750;Elumalai (TP);33;623;5839
+803751;T.Kallupatti (TP);33;623;5839
+803752;Peraiyur (TP);33;623;5839
+803753;Thirumangalam (M);33;623;5840
+803754;Madurai (M Corp.);33;623;5841
+803755;Thirunagar (TP);33;623;5841
+803756;Avaniapuram (M);33;623;5841
+803757;Thiruparankundram (M + OG);33;623;5841
+803757;Thiruparankundram (M);33;623;5841
+803758;Harveypatti (TP);33;623;5841
+803759;Boothipuram (TP);33;624;5842
+803760;Bodinayakanur (M);33;624;5842
+803761;Melachokkanathapuram (TP);33;624;5842
+803762;B. Meenakshipuram (TP);33;624;5842
+803763;Ganguvarpatti (TP);33;624;5843
+803764;Devadanapatti (TP);33;624;5843
+803765;Vadugapatti (TP);33;624;5843
+803766;Thamaraikulam (TP);33;624;5843
+803767;Periyakulam (M);33;624;5843
+803768;Thenkarai (TP);33;624;5843
+803769;Theni Allinagaram (M);33;624;5844
+803770;Palani Chettipatti (TP);33;624;5844
+803771;Veerapandi (TP);33;624;5844
+803772;Thevaram (TP);33;624;5845
+803773;Kuchanur (TP);33;624;5845
+803774;Markayankottai (TP);33;624;5845
+803775;Pannaipuram (TP);33;624;5845
+803776;Kombai (TP);33;624;5845
+803777;Chinnamanur (M);33;624;5845
+803778;Odaipatti (TP);33;624;5845
+803779;Uthamapalayam (TP);33;624;5845
+803780;Hanumanthampatti (TP);33;624;5845
+803781;Pudupatti (TP);33;624;5845
+803782;Kamayagoundanpatti (TP);33;624;5845
+803783;Kambam (M);33;624;5845
+803784;Gudalur (M);33;624;5845
+803785;Highways (TP);33;624;5845
+803786;Andipatti Jakkampatti (TP);33;624;5846
+803787;Rajapalayam (M);33;625;5847
+803788;Seithur (TP);33;625;5847
+803789;Chettiarpatti (TP);33;625;5847
+803790;S.Kodikulam (TP);33;625;5848
+803791;Vathirairuppu (TP);33;625;5848
+803792;V.Pudupatti (TP);33;625;5848
+803793;Sundarapandiam (TP);33;625;5848
+803794;Srivilliputhur (M);33;625;5848
+803795;Mamsapuram (TP);33;625;5848
+803796;Thiruthangal (M);33;625;5849
+803797;Sivakasi (M);33;625;5849
+803798;Virudhunagar (M);33;625;5850
+803799;Kariapatti (TP);33;625;5851
+803800;Mallankinaru (TP);33;625;5851
+803801;Aruppukkottai (M);33;625;5853
+803802;Sattur (M);33;625;5854
+803803;Thondi (TP);33;626;5855
+803804;R.S.Mangalam (TP);33;626;5855
+803805;Paramakudi (M);33;626;5856
+803806;Mudukulathur (TP);33;626;5857
+803807;Abiramam (TP);33;626;5858
+803808;Kamuthi (TP);33;626;5858
+803809;Sayalgudi (TP);33;626;5859
+803810;Ramanathapuram (M);33;626;5860
+803811;Mandapam (TP);33;626;5860
+803812;Keelakarai (M);33;626;5860
+803813;Rameswaram (M);33;626;5861
+803814;Kovilpatti (M);33;627;5862
+803815;Kalugumalai (TP);33;627;5862
+803816;Kadambur (TP);33;627;5862
+803817;Kayatharu (TP);33;627;5862
+803818;Ettayapuram (TP);33;627;5863
+803819;V. Pudur (TP);33;627;5864
+803820;Vilathikulam (TP);33;627;5864
+803821;Thoothukkudi (M Corp.);33;627;5866
+803822;Sayapuram (TP);33;627;5867
+803823;Perungulam (TP);33;627;5867
+803824;Srivaikuntam (TP);33;627;5867
+803825;Eral (TP);33;627;5867
+803826;Kayalpattinam (M);33;627;5868
+803827;Athur (TP);33;627;5868
+803828;Thenthiruperai (TP);33;627;5868
+803829;Alwarthirunagiri (TP);33;627;5868
+803830;Nazerath (TP);33;627;5868
+803831;Arumuganeri (TP);33;627;5868
+803832;Kanam (TP);33;627;5868
+803833;Tiruchendur (TP);33;627;5868
+803834;Udangudi (TP);33;627;5868
+803835;Sathankulam (TP);33;627;5869
+803836;Sivagiri (TP);33;628;5870
+803837;Rayagiri (TP);33;628;5870
+803838;Vasudevanallur (TP);33;628;5870
+803839;Puliankudi (M);33;628;5870
+803840;Thiruvenkadam (TP);33;628;5871
+803841;Sankarankoil (M);33;628;5871
+803842;Surandai (TP);33;628;5872
+803843;Kadayanallur (M);33;628;5873
+803844;Sambavar Vadagarai (TP);33;628;5873
+803845;Aygudi (TP);33;628;5873
+803846;Tenkasi (M);33;628;5873
+803847;Sundarapandiapuram (TP);33;628;5873
+803848;Ilanji (TP);33;628;5873
+803849;Courtalam (TP);33;628;5873
+803850;Melagaram (TP);33;628;5873
+803851;Achampudur (TP);33;628;5874
+803852;Vadakarai Keezhpadugai (TP);33;628;5874
+803853;Panpoli (TP);33;628;5874
+803854;Pudur (S) (TP);33;628;5874
+803855;Shenkottai (M);33;628;5874
+803856;Kilapavoor (TP);33;628;5875
+803857;Alangulam (TP);33;628;5875
+803858;Sankarnagar (TP);33;628;5876
+803859;Naranammalpuram (TP);33;628;5876
+803860;Tirunelveli (M Corp.);33;628;5876
+803861;Alwarkurichi (TP);33;628;5878
+803862;Mukkudal (TP);33;628;5878
+803863;Vikramasingapuram (M);33;628;5878
+803864;Ambasamudram (M);33;628;5878
+803865;Cheranmadevi (TP);33;628;5878
+803866;Veeravanallur (TP);33;628;5878
+803867;Kalladaikurichi (TP);33;628;5878
+803868;Manimutharu (TP);33;628;5878
+803869;Pathamadai (TP);33;628;5878
+803870;Melacheval (TP);33;628;5878
+803871;Gopalasamudram (TP);33;628;5878
+803872;Moolakaraipatti (TP);33;628;5879
+803873;Kalakad (TP);33;628;5879
+803874;Nanguneri (TP);33;628;5879
+803875;Eruvadi (TP);33;628;5879
+803876;Thirukarungudi (TP);33;628;5879
+803877;Vadakkuvalliyur (TP);33;628;5880
+803878;Panagudi (TP);33;628;5880
+803879;Thisayanvilai (TP);33;628;5880
+803880;Kadayal (TP);33;629;5881
+803881;Arumanai (TP);33;629;5881
+803882;Edaicode (TP);33;629;5881
+803883;Palugal (TP);33;629;5881
+803884;Kaliyakkavilai (TP);33;629;5881
+803885;Pacode (TP);33;629;5881
+803886;Kuzhithurai (M);33;629;5881
+803887;Unnamalaikadai (TP);33;629;5881
+803888;Nalloor (TP);33;629;5881
+803889;Kollancode (TP);33;629;5881
+803890;Ezhudesam (TP);33;629;5881
+803891;Puthukkadai (TP);33;629;5881
+803892;Killiyoor (TP);33;629;5881
+803893;Keezhkulam (TP);33;629;5881
+803894;Karungal (TP);33;629;5881
+803895;Palappallam (TP);33;629;5881
+803896;Thirparappu (TP);33;629;5882
+803897;Ponmanai (TP);33;629;5882
+803898;Kulasekaram (TP);33;629;5882
+803899;Thiruvattar (TP);33;629;5882
+803900;Athur (TP);33;629;5882
+803901;Verkilambi (TP);33;629;5882
+803902;Kumarapuram (TP);33;629;5882
+803903;Kothanallur (TP);33;629;5882
+803904;Valvaithankoshtam (TP);33;629;5882
+803905;Mulagumudu (TP);33;629;5882
+803906;Vilavur (TP);33;629;5882
+803907;Padmanabhapuram (M);33;629;5882
+803908;Thiruvithancode (TP);33;629;5882
+803909;Kappiyarai (TP);33;629;5882
+803910;Eraniel (TP);33;629;5882
+803911;Villukuri (TP);33;629;5882
+803912;Neyyoor (TP);33;629;5882
+803913;Reethapuram (TP);33;629;5882
+803914;Kallukuttam (TP);33;629;5882
+803915;Thingalnagar (TP);33;629;5882
+803916;Alur (TP);33;629;5882
+803917;Colachel (M);33;629;5882
+803918;Mandaikadu (TP);33;629;5882
+803919;Manavalakurichi (TP);33;629;5882
+803920;Vellimalai (TP);33;629;5882
+803921;Azhagiapandipuram (TP);33;629;5883
+803922;Boothapandi (TP);33;629;5883
+803923;Aralvaimozhi (TP);33;629;5883
+803924;Thazhakudy (TP);33;629;5883
+803925;Marungur (TP);33;629;5884
+803926;Therur (TP);33;629;5884
+803927;Nagercoil (M);33;629;5884
+803928;Asaripallam (TP);33;629;5884
+803929;Suchindrum (TP);33;629;5884
+803930;Ganapathipuram (TP);33;629;5884
+803931;Mylaudy (TP);33;629;5884
+803932;Alagappapuram (TP);33;629;5884
+803933;Anjugrammam (TP);33;629;5884
+803934;Kottaram (TP);33;629;5884
+803935;Thengampudur (TP);33;629;5884
+803936;Puthalam (TP);33;629;5884
+803937;Agastheeswaram (TP);33;629;5884
+803938;Thenthamaraikulam (TP);33;629;5884
+803939;Kanniyakumari (TP);33;629;5884
+803940;Marandahalli (TP);33;630;5885
+803941;Kariamangalam (TP);33;630;5885
+803942;Palakkodu (TP);33;630;5885
+803943;Kambainallur (TP);33;630;5886
+803944;Harur (TP);33;630;5886
+803945;Kadathur (TP);33;630;5887
+803946;B.Mallapuram (TP);33;630;5887
+803947;Pappireddipatti (TP);33;630;5887
+803948;Dharmapuri (M);33;630;5888
+803949;Papparapatti (TP);33;630;5889
+803950;Pennagaram (TP);33;630;5889
+803951;Hosur (M);33;631;5890
+803952;Mathigiri (TP);33;631;5890
+803953;Bargur (TP);33;631;5891
+803954;Krishnagiri (M);33;631;5891
+803955;Kaveripattinam (TP);33;631;5891
+803956;Kelamangalam (TP);33;631;5892
+803957;Denkanikottai (TP);33;631;5892
+803958;Nagojanahalli (TP);33;631;5893
+803959;Uthangarai (TP);33;631;5894
+803960;Sirumugai (TP);33;632;5895
+803961;Mettupalayam (M);33;632;5895
+803962;Karamadai (TP);33;632;5895
+803963;Mopperipalayam (TP);33;632;5896
+803964;Karumathampatti (TP);33;632;5896
+803965;Irugur (TP);33;632;5896
+803966;Sulur (TP);33;632;5896
+803967;Pallapalayam (TP);33;632;5896
+803968;Kannampalayam (TP);33;632;5896
+803969;Annur (TP);33;632;5897
+803970;Veerapandi (TP);33;632;5897
+803971;Gudalur (TP);33;632;5897
+803972;Periyanaicken-palayam (TP);33;632;5897
+803973;Idikarai (TP);33;632;5897
+803974;Sarcarsamakulam (TP);33;632;5897
+803975;Narasimhanaicken-palayam (TP);33;632;5897
+803976;Kalapatti (TP);33;632;5897
+803977;Saravanampatti (TP);33;632;5897
+803978;Vellakinar (TP);33;632;5897
+803979;Thudiyalur (TP);33;632;5897
+803980;Chinnavedampatti (TP);33;632;5897
+803981;Goundampalayam (M);33;632;5897
+803982;Veerakeralam (TP);33;632;5897
+803983;Vadavalli (TP);33;632;5898
+803984;Coimbatore (M Corp.);33;632;5898
+803985;Thondamuthur (TP);33;632;5898
+803986;Dhaliyur (TP);33;632;5898
+803987;Vedapatti (TP);33;632;5898
+803988;Vellalur (TP);33;632;5898
+803989;Kurichi (M);33;632;5898
+803990;Kuniyamuthur (M);33;632;5898
+803991;Perur (TP);33;632;5898
+803992;Thenkarai (TP);33;632;5898
+803993;Pooluvapatti (TP);33;632;5898
+803994;Alanthurai (TP);33;632;5898
+803995;Chettipalayam (TP);33;632;5898
+803996;Madukkarai (TP);33;632;5898
+803997;Ettimadai (TP);33;632;5898
+803998;Othakalmandapam (TP);33;632;5898
+803999;Thirumalayampalayam (TP);33;632;5898
+804000;Kinathukadavu (TP);33;632;5899
+804001;Periya Negamam (TP);33;632;5899
+804002;Pollachi (M);33;632;5899
+804003;Zamin Uthukuli (TP);33;632;5899
+804004;Suleeswaranpatti (TP);33;632;5899
+804005;Samathur (TP);33;632;5899
+804006;Anaimalai (TP);33;632;5899
+804007;Odaiyakulam (TP);33;632;5899
+804008;Vettaikaranpudur (TP);33;632;5899
+804009;Kottur (TP);33;632;5899
+804010;Valparai (M);33;632;5900
+804011;Muthur (TP);33;633;5901
+804012;Kangeyam (TP);33;633;5901
+804013;Vellakoil (M);33;633;5901
+804014;Rudravathi (TP);33;633;5902
+804015;Kannivadi (TP);33;633;5902
+804016;Mulanur (TP);33;633;5902
+804017;Kolathupalayam (TP);33;633;5902
+804018;Dharapuram (M);33;633;5902
+804019;Chinnakkampalayam (TP);33;633;5902
+804020;Kunnathur (TP);33;633;5903
+804021;Avanashi (TP);33;633;5903
+804022;Thirumuruganpoondi (TP);33;633;5903
+804023;Uthukuli (TP);33;633;5903
+804024;Velampalayam (M);33;633;5904
+804025;S.Nallur (M);33;633;5904
+804026;Tiruppur (M.Corp);33;633;5904
+804027;Samalapuram (TP);33;633;5905
+804028;Palladam (M);33;633;5905
+804029;Udumalaipettai  (M);33;633;5906
+804030;Dhali (TP);33;633;5906
+804031;Kaniyur (TP);33;633;5907
+804032;Madathukulam (TP);33;633;5907
+804033;Komaralingam (TP);33;633;5907
+804034;Sankaramanallur (TP);33;633;5907
+804035;Yanam (M);34;634;5908
+804036;Puducherry (M);34;635;5909
+804037;Ozhukarai (M);34;635;5910
+804038;Kurumbapet (GP + OG);34;635;5911
+804038;Kurumbapet (GP);34;635;5911
+804039;Mahe (M);34;636;5913
+804040;Karaikal (M);34;637;5914
+804041;Port Blair (M Cl);35;640;5923

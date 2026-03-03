@@ -1,0 +1,41 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - heading "Disaster Resource Management System" [level=1] [ref=e6]
+      - navigation [ref=e7]:
+        - link "National" [ref=e8] [cursor=pointer]:
+          - /url: /national
+        - link "National Requests" [active] [ref=e9] [cursor=pointer]:
+          - /url: /national/requests
+        - button "Logout" [ref=e10]
+        - generic [ref=e11]: "Role: national"
+  - main [ref=e12]:
+    - generic [ref=e14]:
+      - generic [ref=e15]:
+        - heading "National Escalation & Reserve Allocation" [level=3] [ref=e16]
+        - generic [ref=e17]:
+          - generic [ref=e18]:
+            - paragraph [ref=e19]: Escalated Requests
+            - paragraph [ref=e20]: "0"
+          - generic [ref=e21]:
+            - paragraph [ref=e22]: Resources in National Reserve
+            - paragraph [ref=e23]: "0"
+          - generic [ref=e24]:
+            - paragraph [ref=e25]: Global Pool Quantity
+            - paragraph [ref=e26]: "0.00"
+        - generic [ref=e27]: "Last refresh: —"
+        - generic [ref=e28]:
+          - textbox "Filter state" [ref=e29]
+          - textbox "Filter district" [ref=e30]
+          - textbox "Filter resource" [ref=e31]
+          - button "Clear" [ref=e32]
+      - generic [ref=e33]:
+        - heading "Escalation Group Summary" [level=3] [ref=e34]
+        - generic [ref=e35]: No escalation summary rows for current filters.
+      - generic [ref=e36]:
+        - heading "Escalated Demand" [level=3] [ref=e37]
+        - generic [ref=e38]: No unmet demand requiring national escalation.
+```

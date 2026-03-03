@@ -1,0 +1,75 @@
+{
+  "generated_at": "2026-02-18T16:26:13.748725Z",
+  "cases": [
+    {
+      "case": "fallback_only",
+      "expected_source": "fallback",
+      "actual_source": "fallback",
+      "actual_mode": "",
+      "fallback_used": 0,
+      "alpha": 0.46736958244149274,
+      "beta": 0.5326304175585073,
+      "gamma": 1.3978912526755218,
+      "p_mult": 1.1326304175585074,
+      "u_mult": 1.0994728131688805,
+      "passed": true,
+      "toggle": "disabled"
+    },
+    {
+      "case": "shadow",
+      "expected_source": "fallback",
+      "actual_source": "fallback",
+      "actual_mode": "",
+      "fallback_used": 0,
+      "alpha": 0.46736958244149274,
+      "beta": 0.5326304175585073,
+      "gamma": 1.3978912526755218,
+      "p_mult": 1.1326304175585074,
+      "u_mult": 1.0994728131688805,
+      "passed": true,
+      "toggle": "enabled"
+    },
+    {
+      "case": "blended_20pct",
+      "expected_source": "neural_blend",
+      "actual_source": "neural_blend",
+      "actual_mode": "blended",
+      "fallback_used": 0,
+      "alpha": 0.5,
+      "beta": 0.5334988966805819,
+      "gamma": 1.3779966900417457,
+      "p_mult": 1.128498896680582,
+      "u_mult": 1.0959991725104365,
+      "passed": true,
+      "influence_pct": 0.2
+    },
+    {
+      "case": "blended_45pct",
+      "expected_source": "neural_blend",
+      "actual_source": "neural_blend",
+      "actual_mode": "blended",
+      "fallback_used": 0,
+      "alpha": 0.5,
+      "beta": 0.5393673758026565,
+      "gamma": 1.3681021274079697,
+      "p_mult": 1.1273673758026566,
+      "u_mult": 1.0965255318519924,
+      "passed": true,
+      "influence_pct": 0.45
+    },
+    {
+      "case": "nn_failure",
+      "expected_source": "fallback",
+      "actual_source": "fallback",
+      "actual_mode": "",
+      "fallback_used": 0,
+      "alpha": 0.46736958244149274,
+      "beta": 0.5326304175585073,
+      "gamma": 1.3978912526755218,
+      "p_mult": 1.1326304175585074,
+      "u_mult": 1.0994728131688805,
+      "passed": true
+    }
+  ],
+  "all_passed": true
+}

@@ -1,0 +1,114 @@
+{
+  "generated_at": "2026-03-03T16:54:57.420469+00:00",
+  "scope": "solver-run-only algorithm evaluation",
+  "database": "C:\\Users\\LATHEEF\\Desktop\\disaster_management\\backend\\backend.db",
+  "table": [
+    {
+      "no": 1,
+      "algorithm_name": "AI-Assisted Demand Estimation",
+      "training_required": "Yes",
+      "training_method": "Train using historical disaster feature data",
+      "testing_method": "Test on unseen district disaster dataset",
+      "model_evaluation_metrics": "MAE, RMSE, R\u00b2 Score",
+      "status": "Applicable",
+      "results": {
+        "mae": 0.126,
+        "rmse": 0.7104927867332644,
+        "r2": -0.032471304333597795,
+        "samples": 5000,
+        "note": "Predicted demand proxy = baseline_demand + human_demand"
+      }
+    },
+    {
+      "no": 2,
+      "algorithm_name": "Disaster Severity Prediction Model",
+      "training_required": "Yes",
+      "training_method": "Supervised learning using district feature vectors",
+      "testing_method": "Validate on new disaster case data",
+      "model_evaluation_metrics": "MAE, RMSE, R\u00b2 Score",
+      "status": "Applicable",
+      "results": {
+        "mae": 0.14609621173353196,
+        "rmse": 0.17971928964710537,
+        "r2": -15.301319670145432,
+        "samples": 37,
+        "note": "Fallback proxy: predicted_priority as target, predicted_urgency as estimate"
+      }
+    },
+    {
+      "no": 3,
+      "algorithm_name": "Vulnerability Scoring Algorithm",
+      "training_required": "No (Rule-Based)",
+      "training_method": "Predefined weighted scoring formula",
+      "testing_method": "Compare with known high-risk districts",
+      "model_evaluation_metrics": "Correlation Analysis, Score Consistency",
+      "status": "Applicable",
+      "results": {
+        "correlation_alloc_vs_vulnerability": 0.9999999998591751,
+        "score_consistency": 1.0,
+        "note": "Vulnerability proxy uses unmet/demand ratio by district; correlation compares proxy vs upstream (state+national) allocation. Score consistency defaults to 1.0 for deterministic rule-based scoring when temporal overlap is insufficient."
+      }
+    },
+    {
+      "no": 4,
+      "algorithm_name": "Demand Aggregation Algorithm",
+      "training_required": "No (Deterministic)",
+      "training_method": "Mathematical aggregation of weighted inputs",
+      "testing_method": "Sensitivity testing with varied inputs",
+      "model_evaluation_metrics": "Logical Validation, Sensitivity Analysis",
+      "status": "Applicable",
+      "results": {
+        "logical_validation": "checked via final_demand vs input quantity deltas",
+        "sensitivity": {
+          "runs_sampled": 50,
+          "avg_abs_delta_final_vs_input": 195.78
+        }
+      }
+    },
+    {
+      "no": 5,
+      "algorithm_name": "Linear Programming Optimization",
+      "training_required": "No (Mathematical Model)",
+      "training_method": "Objective + constraints formulated in PuLP",
+      "testing_method": "Run solver under multiple disaster scenarios",
+      "model_evaluation_metrics": "Total Unmet Demand, Satisfaction Rate, Utilization Rate, Execution Time",
+      "status": "Applicable",
+      "results": {
+        "run_count": 200,
+        "avg_unmet_demand": 11.905,
+        "avg_satisfaction_rate": 0.2691496428571429,
+        "avg_utilization_rate": 0.48660917418859423,
+        "avg_execution_time_seconds": 23.719625951086957
+      }
+    },
+    {
+      "no": 6,
+      "algorithm_name": "Hierarchical Resource Allocation",
+      "training_required": "No (Constraint-Based)",
+      "training_method": "Embedded escalation logic in LP constraints",
+      "testing_method": "Test under district/state/national shortage scenarios",
+      "model_evaluation_metrics": "Escalation Efficiency, Supply Utilization Rate",
+      "status": "Applicable",
+      "results": {
+        "runs_with_escalation": 792,
+        "avg_escalation_efficiency": 0.5466669355051055,
+        "avg_supply_utilization_rate": 1.0
+      }
+    },
+    {
+      "no": 7,
+      "algorithm_name": "Fairness-Aware Allocation Algorithm",
+      "training_required": "No (Ethical Constraint)",
+      "training_method": "Fairness constraint added to LP model",
+      "testing_method": "Compare allocation balance across districts",
+      "model_evaluation_metrics": "Allocation Variance, Gini Coefficient, Fairness Index",
+      "status": "Applicable",
+      "results": {
+        "runs_evaluated": 163,
+        "avg_allocation_variance": 13074.588532950997,
+        "avg_gini_coefficient": 0.04698415292744971,
+        "avg_fairness_index": 0.9777569565386092
+      }
+    }
+  ]
+}

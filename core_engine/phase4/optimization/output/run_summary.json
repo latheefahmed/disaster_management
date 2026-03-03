@@ -1,0 +1,14 @@
+{
+  "districts": 46,
+  "resources": 16,
+  "time_steps": 1,
+  "horizon": 2,
+  "rolling": false,
+  "window_start": 1,
+  "window_end": 1,
+  "total_demand": 13056357188.14,
+  "total_stock": 6641538107.07,
+  "total_unmet": 6414819081.07,
+  "objective": 7056301313342043.0,
+  "status": "Optimal"
+}

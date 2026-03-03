@@ -1,0 +1,97 @@
+{
+  "generated_at": "2026-02-20T17:15:01.896515+00:00",
+  "tests": {
+    "district_test": {
+      "run_id": 194,
+      "run_status": "running",
+      "metrics": {
+        "final": 0.0,
+        "alloc": 0.0,
+        "unmet": 0.0,
+        "conservation_ok": true
+      },
+      "expected": {
+        "final": 10.0,
+        "alloc": 10.0,
+        "unmet": 0.0
+      },
+      "pass": false
+    },
+    "state_cover_test": {
+      "scenario_id": 50,
+      "run_id": 195,
+      "run_status": "completed",
+      "metrics": {
+        "final": 10.0,
+        "alloc": 10.0,
+        "unmet": 0.0,
+        "conservation_ok": true
+      },
+      "expected": {
+        "alloc": 10.0,
+        "unmet": 0.0
+      },
+      "pass": true
+    },
+    "national_cover_test": {
+      "scenario_id": 51,
+      "run_id": 196,
+      "run_status": "completed",
+      "metrics": {
+        "final": 10.0,
+        "alloc": 10.0,
+        "unmet": 0.0,
+        "conservation_ok": true
+      },
+      "expected": {
+        "alloc": 10.0,
+        "unmet": 0.0
+      },
+      "pass": true
+    },
+    "full_shortage_test": {
+      "scenario_id": 52,
+      "run_id": 197,
+      "run_status": "completed",
+      "metrics": {
+        "final": 100.0,
+        "alloc": 3.0,
+        "unmet": 97.0,
+        "conservation_ok": true
+      },
+      "expected": {
+        "alloc": 3.0,
+        "unmet": 97.0
+      },
+      "pass": true
+    },
+    "escalation_test": {
+      "request_id": 164,
+      "status_before": "pending",
+      "status_after_escalate": "allocated",
+      "status_after_resolve": "allocated",
+      "pass": true,
+      "note": "Resolution path validates escalation lifecycle transition."
+    }
+  },
+  "dashboard_validation": {
+    "district": {
+      "latest_completed_live_run_id": 121,
+      "kpi_nonzero": false
+    },
+    "state": {
+      "solver_run_id": 121,
+      "rows": 0,
+      "nonzero_rows": 0
+    },
+    "national": {
+      "solver_run_id": 121,
+      "rows": 6,
+      "nonzero_rows": 6
+    },
+    "admin": {
+      "solver_runs_visible": 197,
+      "agent_findings_visible": 0
+    }
+  }
+}

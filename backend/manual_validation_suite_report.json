@@ -1,0 +1,331 @@
+{
+  "generated_at": "2026-02-16T16:08:23.889943Z",
+  "totals": {
+    "total_cases": 53,
+    "green": 52,
+    "yellow": 0,
+    "red": 1,
+    "pass_rate": 0.9811
+  },
+  "confidence": "high",
+  "cases": [
+    {
+      "name": "Operational-01: district me",
+      "ok": true,
+      "color": "green",
+      "detail": "status=200"
+    },
+    {
+      "name": "Operational-02: district demand-mode get",
+      "ok": true,
+      "color": "green",
+      "detail": "status=200"
+    },
+    {
+      "name": "Operational-03: district demand-mode put human_only",
+      "ok": true,
+      "color": "green",
+      "detail": "status=200"
+    },
+    {
+      "name": "Operational-04: district demand-mode put ai_human",
+      "ok": true,
+      "color": "green",
+      "detail": "status=200"
+    },
+    {
+      "name": "Operational-05: district allocations",
+      "ok": true,
+      "color": "green",
+      "detail": "status=200"
+    },
+    {
+      "name": "Operational-06: district unmet",
+      "ok": true,
+      "color": "green",
+      "detail": "status=200"
+    },
+    {
+      "name": "Operational-07: district solver-status",
+      "ok": true,
+      "color": "green",
+      "detail": "status=200"
+    },
+    {
+      "name": "Operational-08: district request unknown rejected",
+      "ok": true,
+      "color": "green",
+      "detail": "status=400"
+    },
+    {
+      "name": "Operational-09: district request-batch unknown rejected",
+      "ok": true,
+      "color": "green",
+      "detail": "status=400"
+    },
+    {
+      "name": "Operational-10: district request alias water_liters accepted",
+      "ok": false,
+      "color": "red",
+      "detail": "status=201"
+    },
+    {
+      "name": "Operational-11: district request-batch alias food_packets accepted",
+      "ok": true,
+      "color": "green",
+      "detail": "status=200"
+    },
+    {
+      "name": "Operational-12: district requests filtered time",
+      "ok": true,
+      "color": "green",
+      "detail": "status=200"
+    },
+    {
+      "name": "Operational-13: district claims list",
+      "ok": true,
+      "color": "green",
+      "detail": "status=200"
+    },
+    {
+      "name": "Operational-14: district consumptions list",
+      "ok": true,
+      "color": "green",
+      "detail": "status=200"
+    },
+    {
+      "name": "Operational-15: district returns list",
+      "ok": true,
+      "color": "green",
+      "detail": "status=200"
+    },
+    {
+      "name": "Operational-16: district claim",
+      "ok": true,
+      "color": "green",
+      "detail": "status=200"
+    },
+    {
+      "name": "Operational-17: district consume",
+      "ok": true,
+      "color": "green",
+      "detail": "status=200"
+    },
+    {
+      "name": "Operational-18: district claim reusable",
+      "ok": true,
+      "color": "green",
+      "detail": "status=200"
+    },
+    {
+      "name": "Operational-19: district return",
+      "ok": true,
+      "color": "green",
+      "detail": "status=200"
+    },
+    {
+      "name": "Operational-20: state requests",
+      "ok": true,
+      "color": "green",
+      "detail": "status=200"
+    },
+    {
+      "name": "Operational-21: state allocations",
+      "ok": true,
+      "color": "green",
+      "detail": "status=200"
+    },
+    {
+      "name": "Operational-22: state allocation summary",
+      "ok": true,
+      "color": "green",
+      "detail": "status=200"
+    },
+    {
+      "name": "Operational-23: state unmet",
+      "ok": true,
+      "color": "green",
+      "detail": "status=200"
+    },
+    {
+      "name": "Operational-24: state escalations",
+      "ok": true,
+      "color": "green",
+      "detail": "status=200"
+    },
+    {
+      "name": "Operational-25: state pool",
+      "ok": true,
+      "color": "green",
+      "detail": "status=200"
+    },
+    {
+      "name": "Operational-26: state pool transactions",
+      "ok": true,
+      "color": "green",
+      "detail": "status=200"
+    },
+    {
+      "name": "Operational-27: state pool allocate",
+      "ok": true,
+      "color": "green",
+      "detail": "status=200"
+    },
+    {
+      "name": "Operational-28: state escalates request to national",
+      "ok": true,
+      "color": "green",
+      "detail": "status=200"
+    },
+    {
+      "name": "Operational-29: national escalations visible",
+      "ok": true,
+      "color": "green",
+      "detail": "status=200"
+    },
+    {
+      "name": "Operational-30: national resolve escalation",
+      "ok": true,
+      "color": "green",
+      "detail": "status=200"
+    },
+    {
+      "name": "Operational-31: national allocations",
+      "ok": true,
+      "color": "green",
+      "detail": "status=200"
+    },
+    {
+      "name": "Operational-32: national allocation summary",
+      "ok": true,
+      "color": "green",
+      "detail": "status=200"
+    },
+    {
+      "name": "Operational-33: national unmet",
+      "ok": true,
+      "color": "green",
+      "detail": "status=200"
+    },
+    {
+      "name": "AdminScenario-01: full lifecycle",
+      "ok": true,
+      "color": "green",
+      "detail": "batch=200, state=200, national=200, run=200, runs=200, analysis=200"
+    },
+    {
+      "name": "AdminScenario-02: full lifecycle",
+      "ok": true,
+      "color": "green",
+      "detail": "batch=200, state=200, national=200, run=200, runs=200, analysis=200"
+    },
+    {
+      "name": "AdminScenario-03: full lifecycle",
+      "ok": true,
+      "color": "green",
+      "detail": "batch=200, state=200, national=200, run=200, runs=200, analysis=200"
+    },
+    {
+      "name": "AdminScenario-04: full lifecycle",
+      "ok": true,
+      "color": "green",
+      "detail": "batch=200, state=200, national=200, run=200, runs=200, analysis=200"
+    },
+    {
+      "name": "AdminScenario-05: full lifecycle",
+      "ok": true,
+      "color": "green",
+      "detail": "batch=200, state=200, national=200, run=200, runs=200, analysis=200"
+    },
+    {
+      "name": "AdminScenario-06: full lifecycle",
+      "ok": true,
+      "color": "green",
+      "detail": "batch=200, state=200, national=200, run=200, runs=200, analysis=200"
+    },
+    {
+      "name": "AdminScenario-07: full lifecycle",
+      "ok": true,
+      "color": "green",
+      "detail": "batch=200, state=200, national=200, run=200, runs=200, analysis=200"
+    },
+    {
+      "name": "AdminScenario-08: full lifecycle",
+      "ok": true,
+      "color": "green",
+      "detail": "batch=200, state=200, national=200, run=200, runs=200, analysis=200"
+    },
+    {
+      "name": "AdminScenario-09: full lifecycle",
+      "ok": true,
+      "color": "green",
+      "detail": "batch=200, state=200, national=200, run=200, runs=200, analysis=200"
+    },
+    {
+      "name": "AdminScenario-10: full lifecycle",
+      "ok": true,
+      "color": "green",
+      "detail": "batch=200, state=200, national=200, run=200, runs=200, analysis=200"
+    },
+    {
+      "name": "AdminScenario-11: full lifecycle",
+      "ok": true,
+      "color": "green",
+      "detail": "batch=200, state=200, national=200, run=200, runs=200, analysis=200"
+    },
+    {
+      "name": "AdminScenario-12: full lifecycle",
+      "ok": true,
+      "color": "green",
+      "detail": "batch=200, state=200, national=200, run=200, runs=200, analysis=200"
+    },
+    {
+      "name": "AdminScenario-13: full lifecycle",
+      "ok": true,
+      "color": "green",
+      "detail": "batch=200, state=200, national=200, run=200, runs=200, analysis=200"
+    },
+    {
+      "name": "AdminScenario-14: full lifecycle",
+      "ok": true,
+      "color": "green",
+      "detail": "batch=200, state=200, national=200, run=200, runs=200, analysis=200"
+    },
+    {
+      "name": "AdminScenario-15: full lifecycle",
+      "ok": true,
+      "color": "green",
+      "detail": "batch=200, state=200, national=200, run=200, runs=200, analysis=200"
+    },
+    {
+      "name": "AdminScenario-16: full lifecycle",
+      "ok": true,
+      "color": "green",
+      "detail": "batch=200, state=200, national=200, run=200, runs=200, analysis=200"
+    },
+    {
+      "name": "AdminScenario-17: full lifecycle",
+      "ok": true,
+      "color": "green",
+      "detail": "batch=200, state=200, national=200, run=200, runs=200, analysis=200"
+    },
+    {
+      "name": "AdminScenario-18: full lifecycle",
+      "ok": true,
+      "color": "green",
+      "detail": "batch=200, state=200, national=200, run=200, runs=200, analysis=200"
+    },
+    {
+      "name": "AdminScenario-19: full lifecycle",
+      "ok": true,
+      "color": "green",
+      "detail": "batch=200, state=200, national=200, run=200, runs=200, analysis=200"
+    },
+    {
+      "name": "AdminScenario-20: full lifecycle",
+      "ok": true,
+      "color": "green",
+      "detail": "batch=200, state=200, national=200, run=200, runs=200, analysis=200"
+    }
+  ]
+}

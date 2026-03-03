@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+:root {
+	color-scheme: light;
+}
+
+html,
+body,
+#app {
+	min-height: 100%;
+}
+
+body {
+	background: radial-gradient(1200px 500px at 10% -10%, #dbeafe 0%, rgba(219, 234, 254, 0) 55%),
+							radial-gradient(900px 400px at 90% 0%, #e9d5ff 0%, rgba(233, 213, 255, 0) 60%),
+							#f8fafc;
+	color: #0f172a;
+}

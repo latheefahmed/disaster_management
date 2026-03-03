@@ -1,0 +1,36 @@
+State_Code;State_Name;State_Official_Language_Code;Sub_District_Nomenclature
+1;Jammu and Kashmir ;22;Tahsil
+2;Himachal Pradesh;6;Tahsil
+3;Punjab;16;Tahsil
+4;Chandigarh;6;Tahsil
+5;Uttarakhand;6;Tahsil
+6;Haryana;6;Tahsil
+7;Delhi;6;Tahsil
+8;Rajasthan;6;Tahsil
+9;Uttar Pradesh;6;Tahsil
+10;Bihar;6;C.D. Block
+11;Sikkim;14;Sub-Division
+12;Arunachal Pradesh;6;Circle
+13;Nagaland;99;Circle
+14;Manipur;12;Sub-Division
+15;Mizoram;99;R. D. Block
+16;Tripura;2;Development Block
+17;Meghalaya;99;C.D. Block
+18;Assam;1;Circle
+19;West Bengal;2;C.D. Block
+20;Jharkhand;6;C.D. Block
+21;Odisha;15;Police Station
+22;Chhatisgarh;6;Tahsil
+23;Madhya Pradesh;6;Tahsil
+24;Gujarat;5;Taluka
+25;Daman & Diu;5;Taluka
+26;Dadra & Nagar Haveli;5;Taluka
+27;Maharashtra;13;Tashil
+28;Andhra Pradesh;21;Mandal
+29;Karnataka;7;Taluka
+30;Goa;9;Taluka
+31;Lakshadweep;11;Sub-Division
+32;Kerala;11;Taluka
+33;Tamil Nadu;20;Taluka
+34;Puducherry;20;Commune Panchayat
+35;Andaman & Nicobar Islands;6;Tahsil

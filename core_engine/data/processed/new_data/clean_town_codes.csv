@@ -1,0 +1,4251 @@
+town_code,town_name,district_code,state_code
+800001,Kupwara (MC),1,1
+800002,Handwara (MC),1,1
+800016,Magam (MC),2,1
+800017,Beerwah (MC),2,1
+800018,Khansahib (MC),2,1
+800019,Badgam (MC),2,1
+800020,Chadura (MC),2,1
+800013,Srinagar (M Corp. + OG) (Part),2,1
+800021,Charar-i-Sharief (MC),2,1
+800047,Leh Ladakh (MC),3,1
+800048,Kargil (MC),4,1
+800062,Punch (M Cl),5,1
+800063,Surankote (MC),5,1
+800064,Thanamandi (MC),6,1
+800065,Rajauri (MC),6,1
+800066,Nowshehra (MC),6,1
+800067,Sunderbani (MC),6,1
+800081,Billawar (MC),7,1
+800082,Bashohli (MC),7,1
+800083,Lakhanpur (MC),7,1
+800084,Kathua (M Cl + OG),7,1
+800084,Kathua (M Cl),7,1
+800085,Parole (MC),7,1
+800086,Hiranagar (MC),7,1
+800003,Sopore (M Cl + OG),8,1
+800003,Sopore (M Cl),8,1
+800004,Watra Gam (MC),8,1
+800005,Pattan (MC),8,1
+800006,Baramula (M Cl + OG),8,1
+800006,Baramula (M Cl),8,1
+800007,Uri (MC),8,1
+800008,Kunzer (MC),8,1
+800009,Gulmarg (MC),8,1
+800010,Bandipore (MC),9,1
+800011,Hajan (MC),9,1
+800012,Sumbal (MC),9,1
+800013,Srinagar (M Corp. + OG) (Part),10,1
+800014,Badami Bagh (CB),10,1
+800013,Srinagar (M Corp. + OG) (Part),10,1
+800015,Ganderbal (MC),11,1
+800022,Pampora (MC),12,1
+800023,Khrew (MC),12,1
+800024,Awantipora (MC),12,1
+800025,Tral (MC),12,1
+800026,Pulwama (MC),12,1
+800027,Shupiyan (MC),13,1
+800028,Pahalgam (MC),14,1
+800029,Aishmuquam (MC),14,1
+800030,Bijbehara (MC),14,1
+800031,Arwani (MC),14,1
+800032,Mattan (MC),14,1
+800033,Anantnag (M Cl + OG) (Part),14,1
+800034,Achhabal (MC),14,1
+800035,Seer Hamdan (MC),14,1
+800036,Shangus (MC),14,1
+800037,Koker Nag (MC),14,1
+800038,Qazi Gund (MC),14,1
+800039,Duru Verinag (MC),14,1
+800033,Anantnag (M Cl + OG) (Part),15,1
+800040,Kulgam (MC),15,1
+800041,Quimoh (MC),15,1
+800042,Frisal (MC),15,1
+800043,Yari Pora (MC),15,1
+800044,Ashmuji Khalsa (MC),15,1
+800045,Mehmood Pora (MC),15,1
+800046,Devsar (MC),15,1
+800049,Doda (MC),16,1
+800050,Bhaderwah (MC),16,1
+800051,Banihal (MC),17,1
+800052,Ramban (MC),17,1
+800053,Batote (MC),17,1
+800054,Kishtwar (MC),18,1
+800055,Udhampur (M Cl + OG),19,1
+800055,Udhampur (M Cl),19,1
+800056,Kud (MC),19,1
+800057,Chenani (MC),19,1
+800058,Ram Nagar (MC),19,1
+800059,Reasi (MC),20,1
+800060,Purana Daroorh (MC),20,1
+800061,Katra (MC),20,1
+800068,Jourian (MC),21,1
+800069,Akhnoor (MC),21,1
+800070,Khore (MC),21,1
+800071,Jammu (M Corp. + OG),21,1
+800071,Jammu (M Corp.),21,1
+800072,Jammu Cantt. (CB),21,1
+800073,Ghomanhasan (MC),21,1
+0,Ranbir Singh Pora,21,1
+800074,R.S. Pora (MC),21,1
+800075,Bishna (MC),21,1
+800076,Arnia (MC),21,1
+800077,Bari Brahamana (MC),22,1
+800078,Vijay Pur (MC),22,1
+800079,Samba (MC),22,1
+800080,Ramgarh (MC),22,1
+800087,Dalhousie (CB),23,2
+800088,Dalhousie (M Cl),23,2
+800089,Bakloh (CB),23,2
+800090,Chuari Khas (NP),23,2
+800091,Chamba (M Cl),23,2
+800092,Nurpur (M Cl),24,2
+800093,Dharmsala (M Cl + OG),24,2
+800093,Dharmsala (M Cl),24,2
+800094,Yol (CB),24,2
+800095,Kangra (M Cl),24,2
+800096,Nagrota Bagwan (M Cl),24,2
+800097,Dera Gopipur (NP),24,2
+800098,Jawalamukhi (NP),24,2
+800099,Palampur (M Cl),24,2
+800100,Manali (M Cl),26,2
+800101,Kullu (M Cl),26,2
+800102,Bhuntar (NP),26,2
+800103,Banjar (NP),26,2
+800104,Jogindarnagar (NP),27,2
+800105,Sarkaghat (NP),27,2
+800106,Sundarnagar (M Cl),27,2
+800107,Mandi (M Cl),27,2
+800108,Rawalsar (NP),27,2
+800109,Tira Sujanpur (NP),28,2
+800110,Nadaun (NP),28,2
+800111,Hamirpur (M Cl),28,2
+800112,Bhota (NP),28,2
+800113,Daulatpur (NP),29,2
+800114,Gagret (NP),29,2
+800115,Una (M Cl),29,2
+800116,Mehatpur Basdehra (NP),29,2
+800117,Santokhgarh (NP),29,2
+800118,Ghumarwin (M Cl),30,2
+800119,Talai (NP),30,2
+800120,Naina Devi (M Cl),30,2
+800121,Bilaspur (M Cl),30,2
+800122,Arki (NP),31,2
+800123,Nalagarh (M Cl),31,2
+800124,Baddi (M Cl + OG),31,2
+800124,Baddi (M Cl),31,2
+800125,Kasauli (CB),31,2
+800126,Parwanoo (M Cl),31,2
+800127,Dagshai (CB),31,2
+800128,Solan (M Cl),31,2
+800129,Sabathu (CB),31,2
+800130,Rajgarh (NP),32,2
+800131,Nahan (M Cl),32,2
+800132,Paonta Sahib (M Cl),32,2
+800133,Rampur (M Cl),33,2
+800134,Narkanda (NP),33,2
+800135,Seoni (NP),33,2
+800136,Jutogh (CB),33,2
+800137,Shimla (M Corp.),33,2
+800138,Theog (M Cl),33,2
+800139,Chaupal (NP) ,33,2
+800140,Jubbal (NP),33,2
+800141,Kotkhai (NP),33,2
+800142,Rohru (M Cl),33,2
+800275,Cheema (NP),53,3
+800276,Sunam Udham Singh Wala (M Cl + OG),53,3
+800276,Sunam Udham Singh Wala (M Cl),53,3
+800277,Dirba (NP),53,3
+800278,Lehragaga (M Cl),53,3
+800279,Moonak (NP),53,3
+800280,Khanauri (NP),53,3
+800281,Barnala (M Cl),54,3
+800282,Handiaya (NP),54,3
+800283,Dhanaula (M Cl),54,3
+800284,Tapa (M Cl),54,3
+800285,Bhadaur (M Cl),54,3
+800286,Chandigarh (M Corp. + OG) ,55,4
+800286,Chandigarh (M Corp.) ,55,4
+800348,Gadarpur (NPP),67,5
+800349,Dineshpur (NP),67,5
+800350,Shaktigarh (NP),67,5
+800351,Sitarganj (NPP),67,5
+800352,Khatima (NPP),67,5
+800353,Roorkee (NPP),68,5
+800354,Roorkee (CB),68,5
+800355,Jhabrera (NP),68,5
+800356,Manglaur (NPP),68,5
+800357,Landhaura (NP),68,5
+800358,Bharat Heavy Electricals Limited Ranipur (ITS),68,5
+800359,Hardwar (NPP + OG),68,5
+800359,Hardwar (NPP),68,5
+800360,Laksar (NP),68,5
+800361,Kalka (MC + OG),69,6
+800361,Kalka (MC),69,6
+800362,Pinjore (MC),69,6
+800363,Panchkula (M Cl),69,6
+800364,Naraingarh (MC),70,6
+800365,Ambala (M Cl),70,6
+800366,Ambala Cantt. (CB),70,6
+800367,Ambala Sadar (M Cl + OG),70,6
+800367,Ambala Sadar (M Cl),70,6
+800368,Jagadhri (M Cl),71,6
+800369,Yamunanagar (M Cl + OG),71,6
+800369,Yamunanagar (M Cl),71,6
+800370,Shahbad (MC),72,6
+800371,Pehowa (MC),72,6
+800372,Thanesar (M Cl),72,6
+800373,Ladwa (MC),72,6
+800374,Cheeka (MC),73,6
+800375,Kaithal (M Cl),73,6
+800376,Kalayat (MC),73,6
+800377,Pundri (MC + OG),73,6
+800377,Pundri (MC),73,6
+800378,Nilokheri (MC),74,6
+800379,Taraori (MC),74,6
+800380,Indri (MC),74,6
+800381,Karnal (M Cl + OG),74,6
+800381,Karnal (M Cl),74,6
+800382,Nissing (MC),74,6
+800383,Assandh (MC),74,6
+800384,Gharaunda (MC),74,6
+800385,Panipat (M Cl + OG),75,6
+800385,Panipat (M Cl),75,6
+800386,Samalkha (MC + OG),75,6
+800386,Samalkha (MC),75,6
+800387,Gohana (MC),76,6
+800388,Ganaur (MC),76,6
+800389,Sonipat (M Cl + OG),76,6
+800389,Sonipat (M Cl),76,6
+800390,Kharkhoda (MC),76,6
+800391,Narwana (M Cl),77,6
+800392,Uchana (MC),77,6
+800393,Jind (M Cl),77,6
+800394,Julana (MC),77,6
+800395,Safidon (MC),77,6
+800396,Ratia (MC),78,6
+800397,Tohana (M Cl),78,6
+800398,Fatehabad (M Cl),78,6
+800399,Mandi Dabwali (MC),79,6
+800400,Kalanwali (MC),79,6
+800401,Sirsa (M Cl),79,6
+800402,Rania (MC),79,6
+800403,Ellenabad (MC),79,6
+800404,Barwala (MC),80,6
+800405,Hisar (M Cl + OG),80,6
+800405,Hisar (M Cl),80,6
+800406,Narnaund (MC),80,6
+800407,Hansi (M Cl),80,6
+800408,Bawani khera (MC),81,6
+800409,Bhiwani (M Cl),81,6
+800410,Siwani (MC),81,6
+800411,Loharu (MC),81,6
+800412,Charkhi Dadri (MC),81,6
+800413,Maham (MC),82,6
+800414,Rohtak (M Cl),82,6
+800415,Kalanaur (MC),82,6
+800416,Sampla (MC),82,6
+800417,Beri (MC),83,6
+800418,Bahadurgarh (M Cl),83,6
+800419,Jhajjar (MC),83,6
+800420,Kanina (MC),84,6
+800421,Mahendragarh (MC),84,6
+800422,Ateli (MC),84,6
+800423,Narnaul (M Cl),84,6
+800424,Dharuhera (MC),85,6
+800425,Rewari (M Cl),85,6
+800426,Bawal (MC),85,6
+800427,Hailey Mandi (MC),86,6
+800428,Pataudi (MC),86,6
+800429,Gurgaon (M Corp. + OG),86,6
+800429,Gurgaon (M Corp.),86,6
+800430,Farrukhnagar (MC),86,6
+800431,Sohna (MC),86,6
+800432,Taoru (MC),87,6
+800433,Nuh (MC),87,6
+800434,Ferozepur jhirka (MC),87,6
+800435,Punahana (MC),87,6
+800436,Faridabad (M Corp.),88,6
+800437,Palwal (M Cl + OG),89,6
+800437,Palwal (M Cl),89,6
+800438,Hathin (MC),89,6
+800439,Hassan Pur (MC),89,6
+800440,Hodal (MC),89,6
+800441,DMC (U) (Part),90,7
+800441,DMC (U) (Part),90,7
+800441,DMC (U) (Part),90,7
+800441,DMC (U) (Part),91,7
+800441,DMC (U) (Part),91,7
+800441,DMC (U) (Part),91,7
+800441,DMC (U) (Part),92,7
+800441,DMC (U) (Part),92,7
+800441,DMC (U) (Part),92,7
+800441,DMC (U) (Part),93,7
+800441,DMC (U) (Part),93,7
+800441,DMC (U) (Part),93,7
+800441,DMC (U) (Part),94,7
+800442,NDMC (Part),94,7
+800442,NDMC (Part),94,7
+800442,NDMC (Part),94,7
+800441,DMC (U) (Part),95,7
+800441,DMC (U) (Part),95,7
+800442,NDMC (Part),95,7
+800441,DMC (U) (Part),95,7
+800441,DMC (U) (Part),96,7
+800441,DMC (U) (Part),96,7
+800441,DMC (U) (Part),96,7
+800441,DMC (U) (Part),97,7
+800441,DMC (U) (Part),97,7
+800443,Delhi Cantonment (CB) (Part),97,7
+800441,DMC (U) (Part),97,7
+800443,Delhi Cantonment (CB) (Part),97,7
+800442,NDMC (Part),97,7
+800441,DMC (U) (Part),98,7
+800442,NDMC (Part),98,7
+800441,DMC (U) (Part),98,7
+800442,NDMC (Part),98,7
+800441,DMC (U) (Part),98,7
+800444,Kesrisinghpur (M),99,8
+800445,Karanpur (M),99,8
+800446,Ganganagar (M Cl + OG),99,8
+800446,Ganganagar (M Cl),99,8
+800447,Sadulshahar (M),99,8
+800448,Gajsinghpur (M),99,8
+800449,Padampur (M),99,8
+800450,Raisinghnagar (M),99,8
+800451,Anupgarh (M),99,8
+800452,Vijainagar (M),99,8
+800453,Suratgarh (M),99,8
+800454,Sangaria (M),100,8
+800455,Hanumangarh (M Cl),100,8
+800456,Pilibanga (M),100,8
+800457,Rawatsar (M),100,8
+800458,Nohar (M),100,8
+800459,Bhadra (M),100,8
+800460,Bikaner (M Corp.),101,8
+800461,Deshnoke (M),101,8
+800462,Nokha (M),101,8
+800463,Dungargarh (M),101,8
+800464,Taranagar (M),102,8
+800465,Rajgarh (M),102,8
+800466,Sardarshahar (M),102,8
+800467,Ratannagar (M),102,8
+800468,Churu (M Cl + OG),102,8
+800468,Churu (M Cl),102,8
+800469,Ratangarh (M),102,8
+800470,Rajaldesar (M),102,8
+800471,Bidasar (M),102,8
+800472,Chhapar (M),102,8
+800473,Sujangarh (M),102,8
+800474,Bissau (M),103,8
+800475,Mandawa (M),103,8
+800476,Jhunjhunun (M Cl),103,8
+800477,Baggar (M),103,8
+800478,Pilani (M) ,103,8
+800479,Vidyavihar (M),103,8
+800480,Surajgarh (M),103,8
+800481,Chirawa (M),103,8
+800482,Khetri (M),103,8
+800483,Mukandgarh (M),103,8
+800484,Nawalgarh (M),103,8
+800485,Udaipurwati (M),103,8
+800486,Behror (M),104,8
+800487,Bhiwadi (M),104,8
+800488,Tijara (M),104,8
+800489,Khairthal (M),104,8
+800490,Alwar (M Cl + OG),104,8
+800490,Alwar (M Cl),104,8
+800491,Rajgarh (M),104,8
+800492,Kherli (M),104,8
+800493,Kaman (M),105,8
+800494,Nagar (M),105,8
+800495,Deeg (M),105,8
+800496,Nadbai (M),105,8
+800497,Kumher (M),105,8
+800498,Bharatpur (M Cl + OG)  ,105,8
+800498,Bharatpur (M Cl) ,105,8
+800499,Bhusawar (M),105,8
+800500,Weir (M),105,8
+800501,Bayana (M),105,8
+800502,Bari (M),106,8
+800503,Dhaulpur (M + OG),106,8
+800503,Dhaulpur (M),106,8
+800504,Rajakhera (M),106,8
+800505,Todabhim (M),107,8
+800506,Hindaun (M),107,8
+800507,Karauli (M),107,8
+800508,Gangapur City (M),108,8
+800509,Sawai Madhopur (M),108,8
+800510,Bandikui (M),109,8
+800511,Dausa (M),109,8
+800512,Lalsot (M),109,8
+800513,Kotputli (M),110,8
+800514,Viratnagar (M),110,8
+800515,Shahpura (M),110,8
+800516,Chomu (M),110,8
+800517,Kishangarh Renwal (M),110,8
+800518,Sambhar (M),110,8
+800519,Phulera (M + OG),110,8
+800519,Phulera (M),110,8
+800520,Jobner (M),110,8
+800521,Bagru (M),110,8
+800522,Jaipur (M Corp.) (Part),110,8
+800522,Jaipur (M Corp.) (Part),110,8
+800522,Jaipur (M Corp.) (Part),110,8
+800523,Chaksu (M),110,8
+800524,Ramgarh (M),111,8
+800525,Fatehpur (M),111,8
+800526,Lachhmangarh (M),111,8
+800527,Sikar (M Cl + OG),111,8
+800527,Sikar (M Cl),111,8
+800528,Losal (M),111,8
+800529,Khandela (M + OG),111,8
+800529,Khandela (M),111,8
+800530,Sri Madhopur (M),111,8
+800531,Reengus (M),111,8
+800532,Neem-Ka-Thana (M),111,8
+800533,Ladnu (M),112,8
+800534,Didwana (M + OG),112,8
+800534,Didwana (M),112,8
+800535,Nagaur (M + OG),112,8
+800535,Nagaur (M),112,8
+800536,Mundwa (M),112,8
+800537,Kuchera (M),112,8
+800538,Merta City (M),112,8
+800539,Parbatsar (M),112,8
+800540,Makrana (M + OG),112,8
+800540,Makrana (M),112,8
+800541,Kuchaman City (M),112,8
+800542,Nawa (M),112,8
+800543,Phalodi (M + OG),113,8
+800543,Phalodi (M),113,8
+800544,Jodhpur (M Corp. + OG),113,8
+800544,Jodhpur (M Corp.),113,8
+800545,Pipar City (M),113,8
+800546,Bilara (M),113,8
+800547,Jaisalmer (M),114,8
+800548,Pokaran (M),114,8
+800549,Balotra (M),115,8
+800550,Barmer (M),115,8
+800551,Jalor (M),116,8
+800552,Bhinmal (M),116,8
+800553,Sanchore (M),116,8
+800554,Sheoganj (M + OG),117,8
+800554,Sheoganj (M),117,8
+800555,Sirohi (M),117,8
+800556,Pindwara (M),117,8
+800557,Mount Abu (M),117,8
+800558,Abu Road (M + OG),117,8
+800558,Abu Road (M),117,8
+800559,Jaitaran (M),118,8
+800560,Sojat (M),118,8
+800561,Pali (M Cl),118,8
+800562,Rani (M),118,8
+800563,Sadri (M),118,8
+800564,Takhatgarh (M),118,8
+800565,Sumerpur (M),118,8
+800566,Falna (M),118,8
+800567,Bali (M),118,8
+800568,Kishangarh (M Cl),119,8
+800569,Pushkar (M),119,8
+800570,Ajmer (M Corp.),119,8
+800571,Beawar (M Cl + OG),119,8
+800571,Beawar (M Cl),119,8
+800572,Vijainagar (M),119,8
+800573,Nasirabad (CB),119,8
+800574,Sarwar (M),119,8
+800575,Kekri (M),119,8
+800576,Malpura (M + OG),120,8
+800576,Malpura (M),120,8
+800577,Niwai (M),120,8
+800578,Tonk (M Cl),120,8
+800579,Todaraisingh (M),120,8
+800580,Deoli (M),120,8
+800581,Uniara (M),120,8
+800582,Nainwa (M),121,8
+800583,Indragarh (M),121,8
+800584,Lakheri (M),121,8
+800585,Keshoraipatan (M),121,8
+800586,Kaprain (M),121,8
+800587,Bundi (M + OG),121,8
+800587,Bundi (M),121,8
+800588,Asind (M),122,8
+800589,Gulabpura (M),122,8
+800590,Shahpura (M),122,8
+800591,Gangapur (M),122,8
+800592,Bhilwara (M Cl),122,8
+800593,Jahazpur (M),122,8
+800594,Mandalgarh (M),122,8
+800595,Deogarh (M),123,8
+800596,Amet (M),123,8
+800597,Rajsamand (M),123,8
+800598,Nathdwara (M),123,8
+800599,Dungarpur (M),124,8
+800600,Sagwara (M),124,8
+800601,Banswara (M + OG),125,8
+800601,Banswara (M),125,8
+800602,Kushalgarh (M),125,8
+800603,Begun (M),126,8
+800604,Rawatbhata (M),126,8
+800605,Chittaurgarh (M),126,8
+800606,Kapasan (M),126,8
+800607,Nimbahera (M),126,8
+800608,Bari Sadri (M),126,8
+800609,Kota (M Corp.),127,8
+800610,Kaithoon (M),127,8
+800611,Ramganj Mandi (M),127,8
+800612,Sangod (M),127,8
+800613,Mangrol (M),128,8
+800614,Antah (M),128,8
+800615,Baran (M),128,8
+800616,Chhabra (M),128,8
+800617,Jhalawar (M),129,8
+800618,Jhalrapatan (M),129,8
+800619,Aklera (M),129,8
+800620,Bhawani Mandi (M),129,8
+800621,Pirawa (M),129,8
+800622,Fatehnagar (M),130,8
+800623,Udaipur (M Cl),130,8
+800624,Bhinder (M),130,8
+800625,Kanor (M),130,8
+800626,Salumbar (M),130,8
+800627,Chhoti Sadri (M),131,8
+800628,Pratapgarh (M),131,8
+800629,Behat (NP),132,9
+800630,Saharanpur (M Corp.),132,9
+800631,Chilkana Sultanpur (NP),132,9
+800632,Sarsawa (NPP),132,9
+800633,Nakur (NPP),132,9
+800634,Ambehta (NP),132,9
+800635,Gangoh (NPP),132,9
+800636,Titron (NP),132,9
+800637,Deoband (NPP),132,9
+800638,Nanauta (NP),132,9
+800639,Rampur Maniharan (NP),132,9
+800640,Un (NP),133,9
+800641,Jhinjhana (NP),133,9
+800642,Kairana (NPP),133,9
+800643,Kandhla (NPP),133,9
+800644,Ailam (NP),133,9
+800645,Shamli (NPP),133,9
+800646,Banat (NP),133,9
+800647,Garhi Pukhta (NP),133,9
+800648,Thana Bhawan (NP),133,9
+800649,Jalalabad (NP),133,9
+800650,Purquazi (NP + OG),133,9
+800650,Purquazi (NP),133,9
+800651,Charthawal (NP),133,9
+800652,Muzaffarnagar (NPP),133,9
+800653,Sisauli (NP),133,9
+800654,Budhana (NP + OG),133,9
+800654,Budhana (NP),133,9
+800655,Shahpur (NP),133,9
+800656,Khatauli (NPP),133,9
+800657,Jansath (NP),133,9
+800658,Bhokarhedi (NP),133,9
+800659,Miranpur (NP),133,9
+800660,Sahanpur (NP),134,9
+800661,Najibabad (NPP),134,9
+800662,Jalalabad (NP),134,9
+800663,Kiratpur (NPP + OG),134,9
+800663,Kiratpur (NPP),134,9
+800664,Mandawar (NP),134,9
+800665,Bijnor (NPP),134,9
+800666,Jhalu (NP),134,9
+800667,Haldaur (NPP),134,9
+800668,Nagina (NPP),134,9
+800669,Warhapur (NP),134,9
+800670,Afzalgarh (NPP),134,9
+800671,Sherkot (NPP),134,9
+800672,Dhampur (NPP),134,9
+800673,Nehtaur (NPP),134,9
+800674,Seohara (NPP + OG),134,9
+800674,Seohara (NPP),134,9
+800675,Sahaspur (NP),134,9
+800676,Noorpur (NPP),134,9
+800677,Chandpur (NPP),134,9
+800678,Thakurdwara (NPP),135,9
+800679,Kanth (NP),135,9
+800680,Umri Kalan (NP),135,9
+800681,Bhojpur Dharampur (NP),135,9
+800682,Moradabad (M Corp.),135,9
+800683,Kundarki (NP),135,9
+800684,Bilari (NPP),135,9
+800685,Sirsi (NP),135,9
+800686,Sambhal (NPP),135,9
+800687,Bahjoi (NPP),135,9
+800688,Narauli (NP),135,9
+800689,Chandausi (NPP),135,9
+800690,Maswasi (NP),136,9
+800691,Suar (NPP),136,9
+800692,Tanda (NPP),136,9
+800693,Bilaspur (NPP),136,9
+800694,Kemri (NP),136,9
+800695,Rampur (NPP),136,9
+800696,Shahabad (NP),136,9
+800697,Milak (NPP),136,9
+800698,Dhanaura (NPP),137,9
+800699,Bachhraon (NPP),137,9
+800700,Gajraula (NP),137,9
+800701,Naugawan Sadat (NP),137,9
+800702,Amroha (NPP),137,9
+800703,Joya (NP),137,9
+800704,Hasanpur (NPP),137,9
+800705,Ujhari (NP),137,9
+800706,Karnawal (NP),138,9
+800707,Sardhana (NPP),138,9
+800708,Daurala (NP),138,9
+800709,Lawar (NP),138,9
+800710,Phalauda (NP),138,9
+800711,Bahsuma (NP),138,9
+800712,Hastinapur (NP),138,9
+800713,Mawana (NPP),138,9
+800714,Parikshitgarh (NP),138,9
+800715,Kithaur (NP),138,9
+800716,Meerut (M Corp.),138,9
+800717,Meerut (CB),138,9
+800718,Sewalkhas (NP),138,9
+800719,Kharkhoda (NP),138,9
+800720,Chhaprauli (NP),139,9
+800721,Tikri (NP),139,9
+800722,Doghat (NP),139,9
+800723,Baraut (NPP),139,9
+800724,Baghpat (NPP),139,9
+800725,Agarwal Mandi (Tatiri) (NP),139,9
+800726,Aminagar Sarai (NP),139,9
+800727,Khekada (NP),139,9
+800728,Patala (NP),140,9
+800729,Niwari (NP),140,9
+800730,Modinagar (NPP),140,9
+800731,Faridnagar (NP),140,9
+800732,Muradnagar (NPP),140,9
+800733,Loni (NPP),140,9
+800734,Ghaziabad (M Corp.),140,9
+800735,Dasna (NP),140,9
+800736,Pilkhuwa (NPP),140,9
+800737,Hapur (NPP),140,9
+800738,Babugarh (NP),140,9
+800739,Garhmukhteshwar (NPP),140,9
+800740,Dadri (NPP),141,9
+800741,Bilaspur (NP),141,9
+800742,Dankaur (NP),141,9
+800743,Rabupura (NP),141,9
+800744,Jahangirpur (NP),141,9
+800745,Jewar (NP),141,9
+800746,Sikandrabad (NPP),142,9
+800747,Kakod (NP),142,9
+800748,Aurangabad (NP),142,9
+800749,Bulandshahr (NPP + OG),142,9
+800749,Bulandshahr (NPP),142,9
+800750,Gulaothi (NPP),142,9
+800751,Bhawan Bahadur Nagar (NP),142,9
+800752,Siana (NPP),142,9
+800753,Bugrasi (NP),142,9
+800754,Khanpur (NP),142,9
+800755,Anupshahr (NPP),142,9
+800756,Jahangirabad (NPP),142,9
+800757,Dibai (NPP),142,9
+800758,Naraura (NP),142,9
+800759,Shikarpur (NPP),142,9
+800760,Pahasu (NP),142,9
+800761,Chhatari (NP),142,9
+800762,Khurja (NPP + OG),142,9
+800762,Khurja (NPP),142,9
+800763,Jatari (NP),143,9
+800764,Khair (NPP),143,9
+800765,Atrauli (NPP),143,9
+800766,Chharra Rafatpur (NP),143,9
+800767,Harduaganj (NP),143,9
+800768,Aligarh (M Corp.),143,9
+800769,Jalali (NP),143,9
+800770,Kauriaganj (NP),143,9
+800771,Pilkhana (NP),143,9
+800772,Vijaigarh (NP),143,9
+800773,Iglas (NP),143,9
+800774,Beswan (NP),143,9
+800775,Sasni (NP),144,9
+800776,Sikandrarao (NPP),144,9
+800777,Purdilnagar (NP),144,9
+800778,Hasayan (NP),144,9
+800779,Mendu (NP),144,9
+800780,Hathras (NPP + OG),144,9
+800780,Hathras (NPP),144,9
+800781,Mursan (NP),144,9
+800782,Sadabad (NP),144,9
+800783,Sahpau (NP),144,9
+800784,Kosi Kalan (NPP + OG),145,9
+800784,Kosi Kalan (NPP),145,9
+800785,Nandgaon (NP),145,9
+800786,Barsana (NP),145,9
+800787,Chhata (NP),145,9
+800788,Chaumuhan (NP),145,9
+800789,Bajna (NP),145,9
+800790,Raya (NP),145,9
+800791,Gokul (NP),145,9
+800792,Mahaban (NP),145,9
+800793,Baldeo (NP),145,9
+800794,Farah (NP),145,9
+800795,Vrindavan (NPP),145,9
+800796,Radhakund (NP),145,9
+800797,Govardhan (NP),145,9
+800798,Saunkh (NP),145,9
+800799,Mathura (NPP),145,9
+800800,Mathura (CB),145,9
+800801,Etmadpur (NPP),146,9
+800802,Dayalbagh (NP),146,9
+800803,Swamibagh (NP),146,9
+800804,Agra (M Corp.),146,9
+800805,Agra (CB),146,9
+800806,Achhnera (NPP),146,9
+800807,Kiraoali (NP),146,9
+800808,Fatehpur Sikri (NPP),146,9
+800809,Jagner (NP),146,9
+800810,Kheragarh (NP),146,9
+800811,Shamsabad (NPP),146,9
+800812,Fatehabad (NP),146,9
+800813,Pinahat (NP),146,9
+800814,Bah (NPP),146,9
+800815,Tundla (NPP),147,9
+800816,Firozabad (NPP),147,9
+800817,Fariha (NP),147,9
+800818,Jasrana (NP),147,9
+800819,Shikohabad (NPP),147,9
+800820,Sirsaganj (NPP + OG),147,9
+800820,Sirsaganj (NPP),147,9
+800821,Kuraoali (NP),148,9
+800822,Jyoti Khuriya (NP),148,9
+800823,Ghiraur (NP),148,9
+800824,Mainpuri (NPP + OG),148,9
+800824,Mainpuri (NPP),148,9
+800825,Karhal (NP),148,9
+800826,Bhogaon (NP),148,9
+800827,Bewar (NP),148,9
+800828,Kusmara (NP),148,9
+800829,Kishni (NP),148,9
+800830,Gawan (NP),149,9
+800831,Babrala (NP),149,9
+800832,Gunnaur (NP),149,9
+800833,Islamnagar (NP),149,9
+800834,Faizganj (NP),149,9
+800835,Mundiya (NP),149,9
+800836,Bisauli (NPP),149,9
+800837,Saidpur (NP),149,9
+800838,Wazirganj (NP),149,9
+800839,Rudayan (NP),149,9
+800840,Bilsi (NPP),149,9
+800841,Sahaswan (NPP),149,9
+800842,Kachhla (NP),149,9
+800843,Ujhani (NPP),149,9
+800844,Budaun (NPP),149,9
+800845,Kunwargaon (NP),149,9
+800846,Gulariya (NP),149,9
+800847,Sakhanu (NP),149,9
+800848,Kakrala (NPP),149,9
+800849,Allapur (NP),149,9
+800850,Dataganj (NP),149,9
+800851,Usawan (NP),149,9
+800852,Usehat (NP),149,9
+800853,Baheri (NPP),150,9
+800854,Faridpur (NP),150,9
+800855,Richha (NP),150,9
+800856,Deoranian (NP),150,9
+800857,Shergarh (NP),150,9
+800858,Shishgarh (NP),150,9
+800859,Mirganj (NP),150,9
+800860,Fatehganj Pashchimi (NP),150,9
+800861,Shahi (NP),150,9
+800862,Bisharatganj (NP),150,9
+800863,Aonla (NPP),150,9
+800864,Sirauli (NP),150,9
+800865,Dhaura Tanda (NP),150,9
+800866,Bareilly (M Corp. + OG),150,9
+800866,Bareilly (M Corp.),150,9
+800867,Bareilly (CB),150,9
+800868,Thiriya Nizamat Khan (NP),150,9
+800869,Rithora (NP),150,9
+800870,Sainthal (NP),150,9
+800871,Nawabganj (NPP),150,9
+800872,Fatehganj Purvi (NP),150,9
+800873,Faridpur (NPP),150,9
+800874,Gulariya Bhindara (NP),151,9
+800875,Nyoria Husainpur (NP),151,9
+800876,Jahanabad (NP),151,9
+800877,Pilibhit (NPP),151,9
+800878,Barkhera (NP),151,9
+800879,Bisalpur (NPP),151,9
+800880,Bilsanda (NP),151,9
+800881,Kalinagar (NP),151,9
+800882,Puranpur (NPP),151,9
+800883,Khutar (NP),152,9
+800884,Powayan (NP),152,9
+800885,Khudaganj (NP),152,9
+800886,Katra (NP),152,9
+800887,Tilhar (NPP),152,9
+800888,Railway Settlement Roza (NP),152,9
+800889,Shahjahanpur (NPP),152,9
+800890,Shahjahanpur (CB),152,9
+800891,Kanth (NP),152,9
+800892,Jalalabad (NPP),152,9
+800893,Allahganj (NP),152,9
+800894,Singahi Bhiraura (NP),153,9
+800895,Paliya Kalan (NPP),153,9
+800896,Mailani (NP),153,9
+800897,Gola Gokaran Nath (NPP),153,9
+800898,Mohammadi (NPP),153,9
+800899,Barwar (NP),153,9
+800900,Lakhimpur (NPP),153,9
+800901,Kheri (NP),153,9
+800902,Oel Dhakwa (NP),153,9
+800903,Dhaurehra (NP),153,9
+800904,Maholi (NP),154,9
+800905,Misrikh-cum-Neemsar (NPP),154,9
+800906,Khairabad (NPP),154,9
+800907,Sitapur (NPP),154,9
+800908,Hargaon (NP),154,9
+800909,Laharpur (NPP),154,9
+800910,Tambaur-cum-Ahamdabad (NP),154,9
+800911,Biswan (NPP),154,9
+800912,Mahmudabad (NPP),154,9
+800913,Paintepur (NP),154,9
+800914,Sidhauli (NP),154,9
+800915,Shahabad (NPP),155,9
+800916,Pihani (NPP),155,9
+800917,Pali (NP),155,9
+800918,Gopamau (NP),155,9
+800919,Hardoi (NPP + OG),155,9
+800919,Hardoi (NPP),155,9
+800920,Sandi (NPP),155,9
+800921,Bilgram (NPP),155,9
+800922,Madhoganj (NP),155,9
+800923,Mallawan (NPP),155,9
+800924,Kursath (NP),155,9
+800925,Kachhauna Patseni (NP),155,9
+800926,Beniganj (NP),155,9
+800927,Sandila (NPP),155,9
+800928,Ganj Muradabad (NP),156,9
+800929,Bangarmau (NPP),156,9
+800930,Fatehpur Chaurasi (NP),156,9
+800931,Ugu (NP),156,9
+800932,Safipur (NP),156,9
+800933,Kursath (NP),156,9
+800934,Auras (NP),156,9
+800935,Hyderabad (NP),156,9
+800936,Rasulabad (NP),156,9
+800937,Mohan (NP),156,9
+800938,Nyotini (NP),156,9
+800939,Nawabganj (NP),156,9
+800940,Unnao (NPP),156,9
+800941,Gangaghat (NPP),156,9
+800942,Purwa (NP),156,9
+800943,Maurawan (NP),156,9
+800944,Bighapur (NP),156,9
+800945,Bhagwant Nagar (NP),156,9
+800946,Malihabad (NP),157,9
+800947,Mahona (NP),157,9
+800948,Itaunja (NP),157,9
+800949,Bakshi Ka Talab (NP),157,9
+800950,Kakori (NP),157,9
+800951,Lucknow (M Corp.),157,9
+800952,Lucknow (CB),157,9
+800953,Gosainganj (NP),157,9
+800954,Amethi (NP),157,9
+800955,Nagram (NP),157,9
+800956,Bachhrawan (NP),158,9
+800957,Maharajganj (NP),158,9
+800958,Jais (NPP),158,9
+800959,Rae Bareli (NPP),158,9
+800960,Lalganj (NP),158,9
+800961,Dalmau (NP),158,9
+800962,Unchahar (NP),158,9
+800963,Parsadepur (NP),158,9
+800964,Salon (NP),158,9
+800965,Kampil (NP),159,9
+800966,Kaimganj (NPP),159,9
+800967,Shamsabad (NP),159,9
+800968,Farrukhabad-cum-Fatehgarh (NPP),159,9
+800969,Fatehgarh (CB),159,9
+800970,Mohammadabad (NP),159,9
+800971,Kamalganj (NP),159,9
+800972,Samdhan (NP),160,9
+800973,Gursahaiganj (NPP),160,9
+800974,Sikanderpur (NP),160,9
+800975,Chhibramau (NPP),160,9
+800976,Saurikh (NP),160,9
+800977,Talgram (NP),160,9
+800978,Kannauj (NPP),160,9
+800979,Tirwaganj (NP),160,9
+800980,Jaswantnagar (NPP),161,9
+800981,Etawah (NPP),161,9
+800982,Ekdil (NP),161,9
+800983,Bharthana (NPP),161,9
+800984,Bakewar (NP),161,9
+800985,Lakhna (NP),161,9
+800986,Bidhuna (NP),162,9
+800987,Achhalda (NP),162,9
+800988,Babarpur Ajitmal (NP),162,9
+800989,Atasu (NP),162,9
+800990,Phaphund (NP),162,9
+800991,Dibiyapur (NP),162,9
+800992,Auraiya (NPP),162,9
+800993,Rasulabad (NP),163,9
+800994,Jhinjhak (NP),163,9
+800995,Derapur (NP),163,9
+800996,Shivli (NP),163,9
+800997,Rura (NP),163,9
+800998,Akbarpur (NP),163,9
+800999,Amraudha (NP),163,9
+801000,Pukhrayan (NPP),163,9
+801001,Sikandra (NP),163,9
+801002,Bilhaur (NPP),164,9
+801003,Shivrajpur (NP),164,9
+801004,Bithoor (NP),164,9
+801005,Kanpur (M Corp. + OG),164,9
+801005,Kanpur (M Corp.),164,9
+801006,Kanpur (CB),164,9
+801007,Ghatampur (NPP),164,9
+801008,Rampura (NP),165,9
+801009,Umri (NP),165,9
+801010,Madhogarh (NP),165,9
+801011,Jalaun (NPP),165,9
+801012,Kalpi (NPP),165,9
+801013,Kadaura (NP),165,9
+801014,Orai (NPP + OG),165,9
+801014,Orai (NPP),165,9
+801015,Kotra (NP),165,9
+801016,Konch (NPP),165,9
+801017,Nadigaon (NP),165,9
+801018,Samthar (NPP),166,9
+801019,Moth (NP),166,9
+801020,Chirgaon (NPP),166,9
+801021,Erich (NP),166,9
+801022,Gursarai (NPP),166,9
+801023,Garautha (NP),166,9
+801024,Tondi Fatehpur (NP),166,9
+801025,Mauranipur (NPP + OG),166,9
+801025,Mauranipur (NPP),166,9
+801026,Ranipur (NP),166,9
+801027,Kathera (NP),166,9
+801028,Barua Sagar (NPP),166,9
+801029,Baragaon (NP),166,9
+801030,Jhansi (M Corp.),166,9
+801031,Jhansi (CB),166,9
+801032,Jhansi Railway Settlement (ITS),166,9
+801033,Babina (CB),166,9
+801034,Talbehat (NP),167,9
+801035,Lalitpur (NPP),167,9
+801036,Pali (NP),167,9
+801037,Mahroni (NP),167,9
+801038,Kurara (NP),168,9
+801039,Hamirpur (NPP),168,9
+801040,Sumerpur (NP + OG),168,9
+801040,Sumerpur (NP),168,9
+801042,Rath (NPP),168,9
+801041,Gohand (NP),168,9
+801043,Sarila (NP),168,9
+801044,Maudaha (NPP),168,9
+801045,Kul Pahar (NP),169,9
+801046,Kharela (NP),169,9
+801047,Charkhari (NPP),169,9
+801048,Mahoba (NPP),169,9
+801049,Kabrai (NP),169,9
+801050,Mataundh (NP),170,9
+801051,Banda (NPP + OG),170,9
+801051,Banda (NPP),170,9
+801052,Tindwari (NP),170,9
+801053,Baberu (NP),170,9
+801054,Oran (NP),170,9
+801055,Bisanda Buzurg (NP),170,9
+801056,Atarra (NPP),170,9
+801057,Naraini (NP),170,9
+801058,Manikpur Sarhat (NP),171,9
+801059,Chitrakoot Dham (Karwi) (NPP),171,9
+801060,Rajapur (NP),171,9
+801061,Kora Jahanabad (NP),172,9
+801062,Bindki (NPP),172,9
+801063,Bahuwa (NP),172,9
+801064,Fatehpur (NPP),172,9
+801065,Khaga (NP),172,9
+801066,Kishunpur (NP),172,9
+801067,Hathgram (NP),172,9
+801068,Manikpur (NP),173,9
+801069,Kunda (NP),173,9
+801070,Antu (NP),173,9
+801071,Bela Pratapgarh (NPP),173,9
+801072,Pratapgarh City (NP),173,9
+801073,Katra Medniganj (NP),173,9
+801074,Patti (NP),173,9
+801075,Ajhuwa (NP),174,9
+801076,Sirathu (NP),174,9
+801077,Manjhanpur (NP),174,9
+801078,Karari (NP),174,9
+801079,Bharwari (NP),174,9
+801080,Chail (NP),174,9
+801081,Sarai Aquil (NP),174,9
+801082,Mau Aima (NP),175,9
+801083,Lal Gopalganj Nindaura (NP),175,9
+801084,Jhusi (NP),175,9
+801085,Phulpur (NP),175,9
+801086,Allahabad (M Corp. + OG),175,9
+801086,Allahabad (M Corp.),175,9
+801087,Allahabad (CB),175,9
+801088,Shankargarh (NP),175,9
+801089,Handia (NP),175,9
+801090,Sirsa (NP),175,9
+801091,Bharatganj (NP),175,9
+801092,Koraon (NP),175,9
+801093,Fatehpur (NP),176,9
+801094,Ramnagar (NP),176,9
+801095,Dewa (NP),176,9
+801096,Nawabganj (NPP + OG),176,9
+801096,Nawabganj (NPP),176,9
+801097,Banki (NP),176,9
+801098,Satrikh (NP),176,9
+801099,Zaidpur (NP),176,9
+801100,Tikait Nagar (NP),176,9
+801101,Dariyabad (NP),176,9
+801102,Siddhaur (NP),176,9
+801103,Haidergarh (NP),176,9
+801104,Subeha (NP),176,9
+801105,Rudauli (NPP),177,9
+801106,Bhadarsa (NP),177,9
+801107,Faizabad (CB),177,9
+801108,Faizabad (NPP),177,9
+801109,Ayodhya (NPP),177,9
+801110,Gosainganj (NP),177,9
+801111,Bikapur (NP),177,9
+801112,Iltifatganj Bazar (NP),178,9
+801113,Tanda (NPP),178,9
+801114,Ashrafpur Kichhauchha (NP),178,9
+801115,Jalalpur (NPP),178,9
+801116,Akbarpur (NPP),178,9
+801117,Musafirkhana (NP),179,9
+801118,Amethi (NP),179,9
+801119,Sultanpur (NPP),179,9
+801120,Koeripur (NP),179,9
+801121,Dostpur (NP),179,9
+801122,Kadipur (NP),179,9
+801123,Nanpara (NPP),180,9
+801124,Risiya Bazar (NP),180,9
+801125,Bahraich (NPP),180,9
+801126,Jarwal (NP),180,9
+801127,Bhinga (NP),181,9
+801128,Ikauna (NP),181,9
+801129,Balrampur (NPP + OG),182,9
+801129,Balrampur (NPP),182,9
+801130,Tulsipur (NP),182,9
+801131,Pachperwa (NP),182,9
+801132,Utraula (NPP),182,9
+801133,Khargupur (NP),183,9
+801134,Gonda (NPP),183,9
+801135,Katra (NP),183,9
+801136,Colonelganj (NPP),183,9
+801137,Nawabganj (NPP),183,9
+801138,Mankapur (NP),183,9
+801139,Barhani Bazar (NP),184,9
+801140,Shohratgarh (NP),184,9
+801141,Siddharthnagar (NPP),184,9
+801142,Uska Bazar (NP),184,9
+801143,Bansi (NPP),184,9
+801144,Domariyaganj (NP),184,9
+801145,Harraiya (NP),185,9
+801146,Bhabnan Bazar (NP),185,9
+801147,Basti (NPP),185,9
+801148,Mehdawal (NP),186,9
+801149,Khalilabad (NPP),186,9
+801150,Maghar (NP),186,9
+801151,Hariharpur (NP),186,9
+801152,Nautanwa (NPP),187,9
+801153,Nichlaul (NP),187,9
+801154,Siswa Bazar (NP),187,9
+801155,Anandnagar (NP),187,9
+801156,Ghughuli (NP),187,9
+801157,Maharajganj (NPP),187,9
+801158,Pipiganj (NP),188,9
+801159,Sahjanwan (NP),188,9
+801160,Gorakhpur (M Corp.),188,9
+801161,Pipraich (NP),188,9
+801162,Mundera Bazar (NP),188,9
+801163,Bansgaon (NP),188,9
+801164,Gola Bazar (NP),188,9
+801165,Barhalganj (NP),188,9
+801166,Khadda (NP),189,9
+801167,Padrauna (NPP),189,9
+801168,Ramkola (NP),189,9
+801169,Kaptanganj (NP),189,9
+801170,Hata (NP),189,9
+801171,Kushinagar (NP),189,9
+801172,Sewarhi (NP),189,9
+801173,Gauri Bazar (NP),190,9
+801174,Rampur Karkhana (NP),190,9
+801175,Deoria (NPP),190,9
+801176,Rudrapur (NP),190,9
+801177,Gaura Barhaj (NPP),190,9
+801178,Bhatni Bazar (NP),190,9
+801179,Majhauliraj (NP),190,9
+801180,Salempur (NP),190,9
+801181,Lar (NP),190,9
+801182,Bhatpar Rani (NP),190,9
+801183,Atrauliya (NP),191,9
+801184,Mahrajganj (NP),191,9
+801185,Bilariaganj (NP),191,9
+801186,Jiyanpur (NP),191,9
+801187,Azmatgarh (NP),191,9
+801188,Mubarakpur (NPP),191,9
+801189,Azamgarh (NPP),191,9
+801190,Nizamabad (NP),191,9
+801191,Sarai Mir (NP),191,9
+801192,Phulpur (NP),191,9
+801193,Katghar Lalganj (NP),191,9
+801194,Mehnagar (NP),191,9
+801195,Dohrighat (NP),192,9
+801196,Amila (NP),192,9
+801197,Ghosi (NP),192,9
+801198,Kopaganj (NP),192,9
+801199,Adari (NP),192,9
+801200,Maunath Bhanjan (NPP),192,9
+801201,Muhammadabad (NP),192,9
+801202,Belthara Road (NP),193,9
+801203,Sikanderpur (NP),193,9
+801204,Rasra (NPP),193,9
+801205,Chitbara Gaon (NP),193,9
+801206,Ballia (NPP),193,9
+801207,Maniyar (NP),193,9
+801208,Bansdih (NP),193,9
+801209,Sahatwar (NP),193,9
+801210,Reoti (NP),193,9
+801211,Shahganj (NPP),194,9
+801212,Khetasarai (NP),194,9
+801213,Mogra Badshahpur (NPP),194,9
+801214,Machhlishahr (NP),194,9
+801215,Jaunpur (NPP),194,9
+801216,Jafarabad (NP),194,9
+801217,Mariahu (NP),194,9
+801218,Kerakat (NP),194,9
+801219,Sadat (NP),195,9
+801220,Saidpur (NP),195,9
+801221,Jangipur (NP),195,9
+801222,Ghazipur (NPP + OG),195,9
+801222,Ghazipur (NPP),195,9
+801223,Bahadurganj (NP),195,9
+801224,Mohammadabad (NPP),195,9
+801225,Dildarnagar Fatehpur Bazar (NP),195,9
+801226,Zamania (NPP),195,9
+801227,Mughalsarai (NPP),196,9
+801228,Mughalsarai Railway Settlement (ITS),196,9
+801229,Chandauli (NP),196,9
+801230,Saiyad Raza (NP),196,9
+801231,Chakia (NP),196,9
+801232,Gangapur (NP),197,9
+801233,Varanasi (CB),197,9
+801234,Maruadih Railway Settlement (ITS),197,9
+801235,Varanasi (M Corp.),197,9
+801236,Ramnagar (NPP),197,9
+801237,Suriyawan (NP),198,9
+801238,Nai Bazar (NP),198,9
+801239,Bhadohi (NPP),198,9
+801240,Gyanpur (NP),198,9
+801241,Gopiganj (NPP),198,9
+801242,Khamaria (NP),198,9
+801243,Ghosia Bazar (NP),198,9
+801244,Mirzapur-cum-Vindhyachal (NPP),199,9
+801245,Kachhwa (NP),199,9
+801246,Chunar (NPP),199,9
+801247,Ahraura (NPP),199,9
+801248,Ghorawal (NP),200,9
+801249,Sonbhadra (NPP),200,9
+801250,Churk Ghurma (NP),200,9
+801251,Chopan (NP),200,9
+801252,Obra (NP),200,9
+801253,Dudhi (NP),200,9
+801254,Renukoot (NP + OG),200,9
+801254,Renukoot (NP),200,9
+801255,Hindalco Industries Ltd. (Renukoot) (ITS),200,9
+801256,Kanaudia Chamical & Industries Ltd. (Renukoot) (ITS),200,9
+801257,Pipri (NP),200,9
+801258,Raja Ka Rampur (NP),201,9
+801259,Aliganj (NPP),201,9
+801260,Jaithara (NP),201,9
+801261,Sakit (NP),201,9
+801262,Etah (NPP),201,9
+801263,Marehra (NPP),201,9
+801264,Nidhauli Kalan (NP),201,9
+801265,Jalesar (NPP),201,9
+801266,Awagarh (NP),201,9
+801267,Soron (NPP),202,9
+801268,Bilram (NP),202,9
+801269,Kasganj (NPP),202,9
+801270,Sahawar (NP),202,9
+801271,Amanpur (NP),202,9
+801272,Mohanpur (NP),202,9
+801273,Ganj Dundawara (NPP),202,9
+801274,Patiyali (NP),202,9
+801275,Sidhpura (NP),202,9
+801276,Bhargain (NP),202,9
+801277,Ramnagar (NP),203,10
+801278,Narkatiaganj (Nagar Parishad),203,10
+801279,Bagaha (Nagar Parishad),203,10
+801280,Chanpatia (NP),203,10
+801281,Bettiah (Nagar Parishad),203,10
+801282,Raxaul Bazar  (Nagar Parishad),204,10
+801283,Sugauli (NP),204,10
+801284,Dhaka (NP),204,10
+801285,Motihari (Nagar Parishad),204,10
+801286,Areraj (NP),204,10
+801287,Kesaria (NP),204,10
+801288,Chakia (NP),204,10
+801289,Pakri Dayal (NP),204,10
+801290,Madhuban (NP),204,10
+801291,Mehsi (NP),204,10
+801292,Sheohar (NP),205,10
+801293,Bairgania (NP),206,10
+801294,Belsand (NP),206,10
+801295,Sitamarhi (Nagar Parishad),206,10
+801296,Dumra (NP),206,10
+801297,Janakpur Road (NP),206,10
+801298,Jainagar (NP),207,10
+801299,Madhubani (Nagar Parishad),207,10
+801300,Jhanjharpur (NP),207,10
+801301,Ghoghardiha (NP),207,10
+801302,Nirmali (NP),208,10
+801303,Birpur (NP),208,10
+801304,Supaul (Nagar Parishad),208,10
+801305,Jogabani (NP),209,10
+801306,Forbesganj (Nagar Parishad),209,10
+801307,Araria (Nagar Parishad),209,10
+801308,Thakurganj (NP),210,10
+801309,Bahadurganj (NP),210,10
+801310,Kishanganj (Nagar Parishad),210,10
+801311,Banmankhi Bazar (NP),211,10
+801312,Purnia (M Corp.),211,10
+801313,Kasba (NP),211,10
+801314,Katihar (M Corp. + OG),212,10
+801314,Katihar (M Corp.),212,10
+801315,Manihari (NP),212,10
+801316,Madhepura (Nagar Parishad),213,10
+801317,Murliganj (NP),213,10
+801318,Saharsa (Nagar Parishad),214,10
+801319,Darbhanga (M Corp.),215,10
+801320,Benipur (Nagar Parishad),215,10
+801321,Sahebganj (NP),216,10
+801322,Motipur (NP),216,10
+801323,Kanti (NP),216,10
+801324,Muzaffarpur (M Corp.),216,10
+801325,Kataiya (NP),217,10
+801326,Mirganj (NP),217,10
+801327,Gopalganj (Nagar Parishad),217,10
+801328,Barauli (NP),217,10
+801329,Siwan (Nagar Parishad),218,10
+801330,Maharajganj (NP),218,10
+801331,Mairwa (NP),218,10
+801332,Revelganj (NP),219,10
+801333,Chapra (Nagar Parishad),219,10
+801334,Marhaura (NP),219,10
+801335,Dighwara (NP),219,10
+801336,Sonepur (NP),219,10
+801337,Lalganj (NP),220,10
+801338,Hajipur (Nagar Parishad),220,10
+801339,Mahnar Bazar (NP),220,10
+801340,Samastipur (Nagar Parishad + OG),221,10
+801340,Samastipur (Nagar Parishad),221,10
+801341,Dalsinghsarai (NP),221,10
+801342,Rosera (NP),221,10
+801343,Barauni (Nagar Parishad),222,10
+801344,Teghra (NP),222,10
+801345,Bihat (Nagar Parishad),222,10
+801346,Begusarai (M Corp.) ,222,10
+801347,Bakhri (NP),222,10
+801348,Balia (NP),222,10
+801349,Khagaria (Nagar Parishad),223,10
+801350,Gogri Jamalpur (NP),223,10
+801351,Naugachhia (NP),224,10
+801352,Colgong (NP),224,10
+801353,Sultanganj (Nagar Parishad),224,10
+801354,Bhagalpur (M Corp.),224,10
+801355,Amarpur (NP),225,10
+801356,Banka (NP),225,10
+801357,Munger (M Corp.),226,10
+801358,Jamalpur (Nagar Parishad),226,10
+801359,Kharagpur (NP),226,10
+801360,Barahiya (NP),227,10
+801361,Lakhisarai (Nagar Parishad),227,10
+801362,Barbigha (NP),228,10
+801363,Sheikhpura (Nagar Parishad),228,10
+801364,Biharsharif (M Corp.),229,10
+801365,Hilsa (Nagar Parishad),229,10
+801366,Islampur (NP),229,10
+801367,Rajgir (NP),229,10
+801368,Silao (NP),229,10
+801369,Maner (NP),230,10
+801370,Dinapur Nizamat (Nagar Parishad),230,10
+801371,Dinapur Cantonment (CB),230,10
+801372,Khagaul (Nagar Parishad),230,10
+801373,Patna (M Corp. + OG),230,10
+801373,Patna (M Corp.),230,10
+801374,Phulwari Sharif (Nagar Parishad),230,10
+801375,Bihta (NP),230,10
+801376,Naubatpur (NP),230,10
+801377,Bikram (NP),230,10
+801378,Masaurhi (Nagar Parishad),230,10
+801379,Fatwah (NP),230,10
+801380,Khusrupur (NP),230,10
+801381,Bakhtiarpur (NP),230,10
+801382,Barh (Nagar Parishad),230,10
+801383,Mokameh (Nagar Parishad),230,10
+801384,Shahpur (NP),231,10
+801385,Arrah (M Corp.),231,10
+801386,Koilwar (NP),231,10
+801387,Behea (NP),231,10
+801388,Jagdishpur (NP),231,10
+801389,Piro (NP),231,10
+801390,Dumraon (Nagar Parishad),232,10
+801391,Buxar (Nagar Parishad),232,10
+801392,Bhabua (Nagar Parishad),233,10
+801393,Koath (NP),234,10
+801394,Bikramganj (NP),234,10
+801395,Nasriganj (NP),234,10
+801396,Nokha (NP),234,10
+801397,Sasaram (Nagar Parishad),234,10
+801398,Dehri (Nagar Parishad),234,10
+801399,Daudnagar (NP),235,10
+801400,Rafiganj (NP),235,10
+801401,Aurangabad (Nagar Parishad),235,10
+801402,Nabinagar (NP),235,10
+801403,Tikari (NP),236,10
+801404,Gaya (M Corp. + OG),236,10
+801404,Gaya (M Corp.),236,10
+801405,Sherghati (NP),236,10
+801406,Bodh Gaya (NP),236,10
+801407,Nawada (Nagar Parishad),237,10
+801408,Warisaliganj (NP),237,10
+801409,Hisua (NP),237,10
+801410,Rajauli (NP),237,10
+801411,Jamui (Nagar Parishad),238,10
+801412,Jhajha (NP),238,10
+801413,Jehanabad (Nagar Parishad) ,239,10
+801414,Makhdumpur (NP),239,10
+801415,Arwal (Nagar Parishad),240,10
+801416,Mangan (NP),241,11
+801417,Gyalshing (NP),242,11
+801418,Nayabazar Notified Bazar Area,242,11
+801419,Namchi (M Cl),243,11
+801420,Jorethang (NP),243,11
+801421,Gangtok (M Corp.),244,11
+801422,Singtam (NP),244,11
+801423,Rangpo (NP),244,11
+801424,Tawang (NT),245,12
+801425,Dirang (NT),246,12
+801426,Bomdila (NT),246,12
+801427,Seppa (NT),247,12
+801428,Itanagar (NT),248,12
+801429,Naharlagun (NT),248,12
+801430,Sagalee (NT),248,12
+801431,Daporijo (NT),249,12
+801432,Aalo (NT),250,12
+801433,Basar (NT),250,12
+801434,Boleng (NT),251,12
+801435,Pasighat (NT),251,12
+801436,Yingkiong (NT),252,12
+801437,Changlang (NT),253,12
+801438,Jairampur (NT),253,12
+801439,Miao (NT),253,12
+801440,Deomali (NT),254,12
+801441,Khonsa (NT),254,12
+801442,Longding,254,12
+801443,Ziro (NT),255,12
+801444,Koloriang (NT),256,12
+801445,Anini (NT),257,12
+801446,Roing (NT),258,12
+801447,Tezu (NT),259,12
+801448,Namsai (NT),259,12
+801449,Hawai (NT),260,12
+801450,Naginimora (TC),261,13
+801451,Mon (TC),261,13
+801452,Tuli (TC),262,13
+801453,Changtongya (TC),262,13
+801454,Mokokchung (MC),262,13
+801455,Zunheboto (TC),263,13
+801456,Wokha (TC),264,13
+801457,Dimapur (MC),265,13
+801458,Chumukedima (TC),265,13
+801459,Medziphema (TC),265,13
+801460,Phek (TC),266,13
+801461,Pfutsero (TC),266,13
+801462,Tuensang (TC),267,13
+801463,Longleng (TC),268,13
+801464,Kiphire (TC),269,13
+801465,Tseminyu (TC),270,13
+801466,Kohima (MC),270,13
+801467,Jalukie (TC),271,13
+801468,Peren (TC),271,13
+801469,Nambol (MCI) (Major part),275,14
+801470,Oinam (NP),275,14
+801471,Bishnupur (MCI),275,14
+801472,Ningthoukhong (NP),275,14
+801473,Moirang (MCI),275,14
+801474,Kwakta (NP),275,14
+801475,Kumbi (NP),275,14
+801476,Lilong (Thoubal) (NP) (Major part),276,14
+801488,Samurou (NP) (Minor part),276,14
+801477,Heirok (NP),276,14
+801478,Wangjing (NP),276,14
+801479,Thoubal (MCI),276,14
+801480,Sikhong Sekmai (NP),276,14
+801481,Yairipok (NP),276,14
+801482,Sugnu (NP),276,14
+801483,Kakching Khunou (NP),276,14
+801484,Kakching (M Cl),276,14
+801485,Lamsang (NP),277,14
+801486,Sekmai Bazar (NP),277,14
+801469,Nambol (MCI) (Minor part),277,14
+801487,Imphal (MCI + OG) (Major part),277,14
+801487,Imphal (MCI) (Major part),277,14
+801488,Samurou NP (Major part),277,14
+801489,Mayang Imphal (NP),277,14
+801490,Thongkhong Laxmi Bazar (NP),277,14
+801491,Wangoi (NP),277,14
+801492,Lilong (Imphal West) (NP + OG),277,14
+801492,Lilong (Imphal West) (NP),277,14
+801493,Jiribam (M Cl),278,14
+801494,Lamlai (NP),278,14
+801487,Imphal (MCI + OG) ( Minor part),278,14
+801487,Imphal (MCI) ( Minor part),278,14
+801476,Lilong (Thoubal) (NP) ( Minor part),278,14
+801495,Andro (NP),278,14
+801496,Moreh (ST),280,14
+801497,Zawlnuam (NT),281,15
+801498,Mamit (NT),281,15
+801499,Lengpui (NT),281,15
+801500,N. Kawnpui (NT),282,15
+801501,Vairengte (NT),282,15
+801502,Bairabi (NT),282,15
+801503,Kolasib (NT),282,15
+801504,Darlawn (NT),283,15
+801505,Sairang (NT),283,15
+801506,Aizawl (NT),283,15
+801507,Saitual (NT),283,15
+801508,Khawzawl (NT),284,15
+801509,Khawhai (NT),284,15
+801510,Champhai (NT),284,15
+801511,Biate (NT),284,15
+801512,Serchhip (NT),285,15
+801513,Thenzawl (NT),285,15
+801514,North Vanlaiphai (NT),285,15
+801515,Tlabung (NT),286,15
+801516,Lunglei (NT),286,15
+801517,Hnahthial (NT),286,15
+801518,Lawngtlai (NT)            ,287,15
+801519,Saiha (NT),288,15
+801520,Khowai (NP),289,16
+801521,Teliamura (NP),289,16
+801522,Ranirbazar (NP),289,16
+801523,Agartala (M Cl),289,16
+801524,Bishalgarh (NP),289,16
+801525,Sonamura (NP),289,16
+801526,Udaipur (NP),290,16
+801527,Amarpur (NP),290,16
+801528,Santir Bazar (NP),290,16
+801529,Belonia (NP),290,16
+801530,Sabroom (NP),290,16
+801531,Kamalpur (NP),291,16
+801532,Ambassa (NP),291,16
+801533,Kailasahar (NP),292,16
+801534,Dharmanagar (NP),292,16
+801535,Kumarghat (NP),292,16
+801536,Tura (M),293,17
+801537,Resubelpara (MB),294,17
+801538,Williamnagar (MB),294,17
+801539,Baghmara (MB),295,17
+801540,Nongstoin (TC),296,17
+801541,Mairang (TC),296,17
+801542,Nongpoh (TC),297,17
+801543,Shillong (CB),298,17
+801544,Shillong (MB),298,17
+801545,Jowai (M),299,17
+801546,Gossaigaon (TC),300,18
+801547,Kokrajhar (MB),300,18
+801548,Gauripur (TC),301,18
+801549,Dhubri (MB),301,18
+801550,Sapatgram (TC),301,18
+801551,Bilasipara (TC),301,18
+801552,Chapar (TC),301,18
+801553,Lakhipur (TC),302,18
+801554,Goalpara (MB),302,18
+801555,Barpeta Road (MB),303,18
+801556,Sarbhog (TC),303,18
+801557,Barpeta (MB),303,18
+801558,Howli (TC),303,18
+801559,Sarthebari (TC),303,18
+801560,Pathsala (TC),303,18
+801561,Marigaon (MB),304,18
+801562,Dhing (TC),305,18
+801563,Nagaon (MB + OG),305,18
+801563,Nagaon (MB),305,18
+801564,Raha (TC),305,18
+801565,Kampur Town (TC),305,18
+801566,Hojai (MB),305,18
+801567,Doboka (TC),305,18
+801568,Lumding (MB),305,18
+801569,Lanka (MB),305,18
+801570,Dhekiajuli (MB),306,18
+801571,Rangapara (TC),306,18
+801572,Tezpur (MB + OG),306,18
+801572,Tezpur (MB),306,18
+801573,Biswanath Chariali (TC),306,18
+801574,Gohpur (TC) (Part),306,18
+801574,Gohpur (TC) (Part),306,18
+801575,Narayanpur (TC),307,18
+801576,Bihpuria (TC),307,18
+801577,North Lakhimpur (MB),307,18
+801578,Dhakuakhana (TC),307,18
+801579,Dhemaji (TC),308,18
+801580,Silapathar (TC),308,18
+801581,Doom Dooma (TC),309,18
+801582,Makum (TC),309,18
+801583,Tinsukia (MB + OG),309,18
+801583,Tinsukia (MB),309,18
+801584,Digboi (TC),309,18
+801585,Margherita (TC),309,18
+801586,Dibrugarh (MB + OG) (Part),310,18
+801586,Dibrugarh (MB + OG) (Part),310,18
+801587,Chabua (TC),310,18
+801588,Naharkatiya (TC),310,18
+801589,Sibsagar (MB),311,18
+801590,Amguri (MB),311,18
+801591,Nazira (MB),311,18
+801592,Simaluguri (TC),311,18
+801593,Sonari (MB),311,18
+801594,Moranhat (TC),311,18
+801595,Jorhat (MB + OG) (Part),312,18
+801595,Jorhat (MB + OG) (Part),312,18
+801596,Teok (TC) ,312,18
+801597,Titabor Town (TC),312,18
+801598,Mariani (TC),312,18
+801599,Bokakhat (TC),313,18
+801600,Dergaon (MB),313,18
+801601,Golaghat (MB),313,18
+801602,Sarupathar (TC),313,18
+801603,Barpathar (TC),313,18
+801604,Hamren (TC),314,18
+801605,Donkamokam (TC),314,18
+801606,Diphu (TC),314,18
+801607,Bokajan (TC),314,18
+801608,Howraghat (TC),314,18
+801609,Dokmoka (TC),314,18
+801610,Umrangso (TC),315,18
+801611,Haflong (TC),315,18
+801612,Mahur (TC),315,18
+801613,Maibong (TC),315,18
+801614,Silchar (MB + OG),316,18
+801614,Silchar (MB),316,18
+801615,Lakhipur (MB),316,18
+801616,Karimganj (MB),317,18
+801617,Badarpur (TC),317,18
+801618,Hailakandi (MB),318,18
+801619,Lala (TC),318,18
+801620,Bongaigaon (MB),319,18
+801621,Abhayapuri (TC),319,18
+801622,Basugaon (TC),320,18
+801623,Bijni (TC),320,18
+801624,Rangia (MB),321,18
+801625,Palasbari (MB),321,18
+801626,North Guwahati (TC),322,18
+801627,Guwahati (M Corp.) (Part),322,18
+801627,Guwahati (M Corp. + OG) (Part),322,18
+801628,Tihu (TC),323,18
+801629,Nalbari (MB),323,18
+801630,Mangaldoi (MB),325,18
+801631,Kharupatia (TC),325,18
+801632,Tangla (TC),326,18
+801633,Udalguri (TC),326,18
+801634,Darjiling (M),327,19
+801635,Kalimpong (M),327,19
+801636,Mirik (NA),327,19
+801637,Kurseong (M),327,19
+801638,Siliguri (M Corp.) (Part),327,19
+801638,Siliguri (M Corp.) (Part),328,19
+801639,Mal (M),328,19
+801640,Jalpaiguri (M),328,19
+801641,Dhupguri (M),328,19
+801642,Alipurduar (M),328,19
+801643,Haldibari (M),329,19
+801644,Mekliganj (M),329,19
+801645,Mathabhanga (M),329,19
+801646,Koch Bihar (M),329,19
+801647,Tufanganj (M),329,19
+801648,Dinhata (M),329,19
+801649,Islampur (M),330,19
+801650,Dalkhola (M),330,19
+801651,Raiganj (M),330,19
+801652,Kaliaganj (M),330,19
+801653,Gangarampur (M),331,19
+801654,Balurghat (M + OG),331,19
+801654,Balurghat (M),331,19
+801655,Old Malda (M),332,19
+801656,English Bazar (M),332,19
+801657,Dhulian (M),333,19
+801658,Jangipur (M),333,19
+801659,Jiaganj-Azimganj (M),333,19
+801660,Murshidabad (M),333,19
+801661,Kandi (M),333,19
+801662,Berhampore (M),333,19
+801663,Beldanga (M),333,19
+801664,Nalhati (M),334,19
+801665,Rampurhat (M),334,19
+801666,Suri (M),334,19
+801667,Sainthia (M),334,19
+801668,Dubrajpur (M),334,19
+801669,Bolpur (M),334,19
+801670,Kulti (M),335,19
+801671,Asansol (M Corp.),335,19
+801672,Jamuria (M + OG),335,19
+801672,Jamuria (M),335,19
+801673,Raniganj (M),335,19
+801674,Durgapur (M Corp.),335,19
+801675,Katwa (M),335,19
+801676,Dainhat (M),335,19
+801677,Guskara (M),335,19
+801678,Barddhaman (M),335,19
+801679,Kalna (M),335,19
+801680,Memari (M),335,19
+801681,Nabadwip (M),336,19
+801682,Krishnanagar (M),336,19
+801683,Santipur (M),336,19
+801684,Taherpur (NA + OG),336,19
+801684,Taherpur (NA),336,19
+801685,Birnagar (M),336,19
+801686,Ranaghat (M),336,19
+801687,Cooper's Camp (NA + OG),336,19
+801687,Cooper's Camp (NA),336,19
+801688,Chakdaha (M),336,19
+801689,Kalyani (M),336,19
+801690,Gayespur (M),336,19
+801691,Bongaon (M),337,19
+801692,Halisahar (M),337,19
+801693,Kanchrapara (M + OG),337,19
+801693,Kanchrapara (M),337,19
+801694,Naihati (M),337,19
+801695,Bhatpara (M + OG),337,19
+801695,Bhatpara (M),337,19
+801696,Gobardanga (M),337,19
+801697,Habra (M),337,19
+801698,Ashokenagar Kalyangarh (M),337,19
+801699,Garulia (M),337,19
+801700,North Barrackpore (M),337,19
+801701,Barrackpur Cantonment (CB),337,19
+801702,Barrackpore (M),337,19
+801703,Titagarh (M),337,19
+801704,Khardah (M),337,19
+801705,Panihati (M),337,19
+801706,Baduria (M),337,19
+801707,Barasat (M),337,19
+801708,Madhyamgram (M),337,19
+801709,New Barrackpore (M),337,19
+801710,North DumDum (M),337,19
+801711,Kamarhati (M),337,19
+801712,Baranagar (M),337,19
+801713,Dum Dum (M),337,19
+801714,South DumDum (M),337,19
+801715,Rajarhat Gopalpur (M),337,19
+801716,Bidhannagar (M),337,19
+801717,Nabadiganta Industrial Township (ITS),337,19
+801718,Basirhat (M),337,19
+801719,Taki (M),337,19
+801720,Bansberia (M),338,19
+801721,Hugli-Chinsurah (M + OG),338,19
+801721,Hugli-Chinsurah (M),338,19
+801722,Chandannagar (M Corp),338,19
+801723,Tarakeswar (M),338,19
+801724,Arambag (M),338,19
+801725,Bhadreswar (M),338,19
+801726,Champdani (M),338,19
+801727,Baidyabati (M),338,19
+801728,Serampore (M),338,19
+801729,Rishra (M),338,19
+801730,Konnagar (M),338,19
+801731,Dankuni (M),338,19
+801732,Uttarpara Kotrung (M),338,19
+801733,Bankura (M),339,19
+801734,Sonamukhi (M),339,19
+801735,Bishnupur (M),339,19
+801736,Jhalda (M),340,19
+801737,Raghunathpur (M),340,19
+801738,Puruliya (M),340,19
+801739,Bally (M),341,19
+801740,Haora (M Corp),341,19
+801741,Uluberia (M + OG),341,19
+801741,Uluberia (M),341,19
+801742,Kolkata (M Corp.),342,19
+801743,Maheshtala (M),343,19
+801744,Budge Budge (M),343,19
+801745,Pujali (M),343,19
+801746,Rajpur Sonarpur (M),343,19
+801747,Baruipur (M),343,19
+801748,Diamond Harbour (M),343,19
+801749,Jaynagar Mazilpur (M),343,19
+801750,Ramjibanpur (M),344,19
+801751,Kshirpai (M),344,19
+801752,Chandrakona (M),344,19
+801753,Kharar (M),344,19
+801754,Ghatal (M),344,19
+801755,Medinipur (M),344,19
+801756,Jhargram (M),344,19
+801757,Kharagpur (M),344,19
+801758,Panskura (M),345,19
+801759,Tamluk (M),345,19
+801760,Haldia (M),345,19
+801761,Egra (M),345,19
+801762,Contai (M),345,19
+801763,Majhion (NP),346,20
+801764,Garhwa (NP),346,20
+801765,Chatra (Nagar Parishad),347,20
+801766,Kodarma (NP),348,20
+801767,Jhumri Tilaiya (Nagar Parishad),348,20
+801768,Giridih (Nagar Parishad),349,20
+801769,Deoghar  (M Corp.),350,20
+801770,Madhupur (Nagar Parishad),350,20
+801771,Godda (NP),351,20
+801772,Sahibganj (Nagar Parishad),352,20
+801773,Rajmahal (NP),352,20
+801774,Pakaur (NP),353,20
+801775,Dhanbad (M Corp.),354,20
+801776,Chirkunda (NP),354,20
+801777,Phusro (Nagar Parishad),355,20
+801778,Chas (Nagar Parishad),355,20
+801779,Lohardaga (Nagar Parishad),356,20
+801780,Mango (NAC),357,20
+801781,Jamshedpur (NAC + OG),357,20
+801781,Jamshedpur (NAC),357,20
+801782,Jugsalai (M),357,20
+801783,Chakulia (NP),357,20
+801784,Hussainabad (NP),358,20
+801785,Bishrampur (NP),358,20
+801786,Medininagar (Daltonganj) (Nagar Parishad),358,20
+801787,Latehar (NP),359,20
+801788,Hazaribag (Nagar Parishad),360,20
+801789,Ramgarh Cantonment (CB),361,20
+801790,Basukinath (NP),362,20
+801791,Dumka (Nagar Parishad),362,20
+801792,Jamtara (NP),363,20
+801793,Mihijam (NP),363,20
+801794,Ranchi (M Corp.),364,20
+801795,Bundu (NP),364,20
+801796,Khunti (NP),365,20
+801797,Gumla (NP),366,20
+801798,Simdega (NP),367,20
+801799,Chakardharpur (Nagar Parishad),368,20
+801800,Chaibasa (Nagar Parishad),368,20
+801801,Adityapur (Nagar Parishad),369,20
+801802,Seraikela (NP),369,20
+801803,Padmapur (NAC),370,21
+801804,Barapali (NAC),370,21
+801805,Bargarh (M),370,21
+801806,Belpahar (M),371,21
+801807,Brajarajnagar (M),371,21
+801808,Jharsuguda (M),371,21
+801809,Kochinda (NAC),372,21
+801810,Hirakud (NAC),372,21
+801811,Burla (NAC),372,21
+801812,Redhakhol (NAC),372,21
+801813,Sambalpur (M + OG),372,21
+801813,Sambalpur (M),372,21
+801814,Debagarh (M),373,21
+801815,Sundargarh (M),374,21
+801816,Rajagangapur (M),374,21
+801817,O.C.L. (ITS),374,21
+801818,Biramitrapur (M),374,21
+801819,Raurkela (M + OG),374,21
+801819,Raurkela (M),374,21
+801820,Raurkela  (ITS + OG),374,21
+801820,Raurkela  (ITS),374,21
+801821,Barbil (M),375,21
+801822,Joda (M ),375,21
+801823,Kendujhar (M),375,21
+801824,Anandpur (M),375,21
+801825,Rairangpur (NAC + OG),376,21
+801825,Rairangpur (NAC),376,21
+801826,Karanjia (NAC),376,21
+801827,Udala (NAC),376,21
+801828,Baripada (M + OG),376,21
+801828,Baripada (M),376,21
+801829,Jaleshwar (NAC),377,21
+801830,Remuna (NAC),377,21
+801831,Nilagiri (NAC),377,21
+801832,Soro (NAC),377,21
+801833,Baleshwar (M + OG),377,21
+801833,Baleshwar (M),377,21
+801834,Dhamanagar (NAC),378,21
+801835,Bhadrak (M + OG),378,21
+801835,Bhadrak (M),378,21
+801836,Basudebpur (NAC),378,21
+801837,Pattamundai (NAC),379,21
+801838,Kendrapara (M),379,21
+801839,Paradip (M),380,21
+801840,Jagatsinghapur (M),380,21
+801841,Banki (NAC),381,21
+801842,Athagad (NAC),381,21
+801843,Choudwar (M + OG),381,21
+801843,Choudwar (M),381,21
+801844,Cuttack (MC),381,21
+801845,Byasanagar (M + OG),382,21
+801845,Byasanagar (M),382,21
+801846,Jajapur (M),382,21
+801847,Kamakshyanagar (NAC),383,21
+801848,Bhuban (NAC),383,21
+801849,Dhenkanal (M),383,21
+801850,Talcher (M),384,21
+801851,Anugul (M),384,21
+801852,Athmallik (NAC),384,21
+801853,Khandapada (NAC),385,21
+801854,Nayagarh (NAC),385,21
+801855,Khordha (M),386,21
+801856,Jatani (M + OG),386,21
+801856,Jatani (M),386,21
+801857,Balugaon (NAC),386,21
+801858,Banapur (NAC),386,21
+801859,Bhubaneswar (MC + OG),386,21
+801859,Bhubaneswar (MC),386,21
+801860,Pipili (NAC),387,21
+801861,Nimapada (NAC),387,21
+801862,Konark (NAC),387,21
+801863,Puri (M),387,21
+801864,Buguda (NAC),388,21
+801865,Bhanjanagar (NAC),388,21
+801866,Bellaguntha (NAC),388,21
+801867,Surada (NAC),388,21
+801868,Asika (NAC),388,21
+801869,Kabisurjyanagar (NAC),388,21
+801870,Polasara (NAC),388,21
+801871,Kodala (NAC),388,21
+801872,Khalikote (NAC),388,21
+801873,Rambha (NAC),388,21
+801874,Chhatrapur (NAC),388,21
+801875,Ganjam (NAC),388,21
+801876,Purusottampur (NAC),388,21
+801877,Hinjilicut (NAC),388,21
+801878,Gopalpur (NAC),388,21
+801879,Digapahandi (NAC),388,21
+801880,Chikiti (NAC),388,21
+801881,Brahmapur (MC),388,21
+801882,Kashinagar (NAC),389,21
+801883,Paralakhemundi (M + OG),389,21
+801883,Paralakhemundi (M),389,21
+801884,Phulabani (M),390,21
+801885,G. Udayagiri (NAC),390,21
+801886,Baudhgarh (NAC),391,21
+801887,Binika (NAC),392,21
+801888,Sonapur (M),392,21
+801889,Tarbha (NAC),392,21
+801890,Balangir (M),393,21
+801891,Patnagarh (NAC),393,21
+801892,Kantabanji (NAC),393,21
+801893,Titlagarh (NAC + OG),393,21
+801893,Titlagarh (NAC),393,21
+801894,Khariar Road (NAC),394,21
+801895,Khariar (NAC),394,21
+801896,Kesinga (NAC),395,21
+801897,Bhawanipatna (M),395,21
+801898,Junagarh (NAC),395,21
+801899,Rayagada (M),396,21
+801900,Gunupur (NAC + OG),396,21
+801900,Gunupur (NAC),396,21
+801901,Gudari (NAC),396,21
+801902,Umarkote (NAC),397,21
+801903,Nabarangapur (M + OG),397,21
+801903,Nabarangapur (M),397,21
+801904,Kotpad (NAC),398,21
+801905,Koraput (NAC),398,21
+801906,Jeypur (M),398,21
+801907,Sunabeda (NAC).,398,21
+801908,Malkangiri (NAC),399,21
+801909,Balimela (NAC),399,21
+801910,Shivpur Charcha (M),400,22
+801911,Baikunthpur (M),400,22
+801916,Chirmiri (M.Corp) (Part),400,22
+801912,Manendragarh (M),400,22
+801913,Khongapani (NP),400,22
+801914,Jhagrakhand (NP),400,22
+801915,Nai-Ledri (NP),400,22
+801916,Chirmiri (M.Corp) (Part),400,22
+801917,Ramanujganj (NP),401,22
+801918,Balrampur (NP),401,22
+801919,Wadrafnagar (NP),401,22
+801920,Pratappur (NP),401,22
+801921,Jarhi (NP),401,22
+801922,Kusmi (NP),401,22
+801923,Surajpur (M),401,22
+801924,Bishrampur (NP),401,22
+801925,Bhatgaon (NP),401,22
+801926,Premnagar (NP),401,22
+801927,Ambikapur (M Corp. + OG),401,22
+801927,Ambikapur (M Corp.),401,22
+801928,Lakhanpur (NP),401,22
+801929,Rajpur (NP),401,22
+801930,Sitapur (NP),401,22
+801931,Bagicha (NP),402,22
+801932,JashpurNagar (M + OG),402,22
+801932,JashpurNagar (M),402,22
+801933,Pathalgaon (NP),402,22
+801934,Kotba (NP),402,22
+801935,Dharamjaigarh (NP),403,22
+801936,Lailunga (NP),403,22
+801937,Gharghoda (NP),403,22
+801938,Kirodimalnagar (NP),403,22
+801939,Raigarh (M Corp. + OG),403,22
+801939,Raigarh (M Corp.),403,22
+801940,Pusaur (NP),403,22
+801941,Kharsia  (M),403,22
+801942,Sarangarh (NP),403,22
+801943,Sariya (NP),403,22
+801944,Baramkela (NP),403,22
+801945,Katghora (NP),404,22
+801946,Chhurikala (NP),404,22
+801947,Dipka (M),404,22
+801949,Korba (M Corp.) (Part),404,22
+801948,Pali (NP),404,22
+801949,Korba (M Corp. + OG) (Part),404,22
+801949,Korba (M Corp.) (Part),404,22
+801950,Naila-Janjgir (M),405,22
+801951,Akaltara (M),405,22
+801952,Baloda (NP),405,22
+801953,Nawagarh (NP),405,22
+801954,Shivrinarayan (NP),405,22
+801955,Champa (M),405,22
+801956,Saragaon (NP),405,22
+801957,Sakti (M),405,22
+801958,Naya Baradwar (NP),405,22
+801959,Rahaud (NP),405,22
+801960,Kharod (NP),405,22
+801961,Dabhra (NP),405,22
+801962,Chandrapur (NP),405,22
+801963,Adbhar (NP),405,22
+801964,Jaijepur (NP),405,22
+801965,Gaurella (NP),406,22
+801966,Pendra (NP),406,22
+801967,Lormi (NP),406,22
+801968,Kota (NP),406,22
+801969,Ratanpur (NP),406,22
+801970,Mungeli (M + OG),406,22
+801970,Mungeli (M ),406,22
+801971,Pathariya (NP),406,22
+801972,Sargaon (NP),406,22
+801973,Takhatpur (NP),406,22
+801974,Sakari (NP),406,22
+801975,Bilaspur (M Corp. + OG) (Part),406,22
+801975,Bilaspur (M Corp.) (Part),406,22
+801976,Tifra (NP),406,22
+801977,Sirgitti (NP),406,22
+801978,Malhar (NP),406,22
+801979,Bodri (NP),406,22
+801980,Bilha (NP),406,22
+801981,Kawardha (M + OG),407,22
+801981,Kawardha (M ),407,22
+801982,Pipariya (NP),407,22
+801983,Bodla (NP),407,22
+801984,Sahaspur-Lohara (NP),407,22
+801985,Pandariya (NP),407,22
+801986,Pandatarai (NP),407,22
+801987,Gandai (NP),408,22
+801988,Chhuikhadan (NP),408,22
+801989,Khairagarh (M),408,22
+801990,Dongargarh (M),408,22
+801991,Rajnandgaon (M Corp.),408,22
+801992,Chhuriya (NP),408,22
+801993,Dongargaon (NP),408,22
+801994,Ambagarh Chowki (NP),408,22
+801995,Nawagarh (NP),409,22
+801996,Maro (NP),409,22
+801997,Bemetara (M),409,22
+801998,Saja (NP),409,22
+801999,Devkar  (NP),409,22
+802000,Parpondi (NP),409,22
+802001,Than-Khamharia (NP),409,22
+802002,Berla (NP),409,22
+802003,Dhamdha (NP),409,22
+802004,Ahiwara (NP),409,22
+802005,Kumhari (M) (Part),409,22
+802006,Jamul (M) (Part),409,22
+802007,Bhilai Charoda (M) (Part),409,22
+802006,Jamul (M) (Part),409,22
+802008,Bhilai Nagar (M Corp. + OG) (Part),409,22
+802008,Bhilai Nagar (M Corp.) (Part),409,22
+802009,Durg (M Corp.),409,22
+802010,Utai (NP),409,22
+802007,Bhilai Charoda (M) (Part),409,22
+802008,Bhilai Nagar (M Corp.) (Part),409,22
+802005,Kumhari (M) (Part),409,22
+802007,Bhilai Charoda (M) (Part),409,22
+802011,Patan (NP),409,22
+802012,Arjunda (NP),409,22
+802013,Gunderdehi (NP),409,22
+802014,Daundi Lohara (NP),409,22
+802015,Balod (M),409,22
+802016,Dalli-Rajhara (M),409,22
+802017,Chikhalakasa (NP),409,22
+802018,Doundi (NP),409,22
+802019,Gurur (NP),409,22
+802020,Simga (NP),410,22
+802021,Bhatapara (M),410,22
+802022,Baloda Bazar (M),410,22
+802023,Lawan (NP),410,22
+802024,Palari (NP),410,22
+802025,Tundra (NP),410,22
+802026,Kasdol (NP),410,22
+802027,Bhatgaon (NP),410,22
+802028,Bilaigarh (NP),410,22
+802029,Arang  (NP),410,22
+802030,Abhanpur (NP),410,22
+802031,Gobra Nawapara (M),410,22
+802032,Koora (NP),410,22
+802033,Birgaon (M),410,22
+802034,Raipur (M Corp. + OG),410,22
+802034,Raipur (M Corp.),410,22
+802035,Mana-Camp (NP),410,22
+802036,Fingeshwar (NP),410,22
+802037,Rajim (NP),410,22
+802038,Tilda Newra (M + OG),410,22
+802038,Tilda Newra (M),410,22
+802039,Kharora (NP),410,22
+802040,Gariyaband (NP),410,22
+802041,Chhura (NP),410,22
+802042,Basna  (NP),411,22
+802043,Saraipali (NP),411,22
+802044,Tumgaon (NP),411,22
+802045,Mahasamund (M + OG),411,22
+802045,Mahasamund (M),411,22
+802046,Pithora (NP),411,22
+802047,Bagbahara (NP),411,22
+802048,Bhakhara (NP),412,22
+802049,Kurud (NP),412,22
+802050,Magarlod (NP),412,22
+802051,Aamadi (NP),412,22
+802052,Dhamtari (M + OG),412,22
+802052,Dhamtari (M),412,22
+802053,Nagari (NP),412,22
+802054,Charama (NP),413,22
+802055,Bhanupratappur (NP),413,22
+802056,Kanker (M + OG),413,22
+802056,Kanker (M),413,22
+802057,Narharpur (NP),413,22
+802058,Antagarh (NP),413,22
+802059,Pakhanjur (NP),413,22
+802060,Keskal (NP),414,22
+802061,Visrampuree (NP),414,22
+802062,Kondagaon (M),414,22
+802063,Farasgaon (NP),414,22
+802064,Jagdalpur (M Corp.),414,22
+802065,Bastar (NP),414,22
+802066,Narayanpur (NP),415,22
+802067,Dantewada (NP),416,22
+802068,Bade Bacheli (M),416,22
+802069,Barsur (NP),416,22
+802070,Geedam (NP),416,22
+802071,Kirandul (M),416,22
+802072,Dornapal (NP),416,22
+802073,Konta (NP),416,22
+802074,Sukma (NP),416,22
+802075,Bhopalpattanam (NP),417,22
+802076,Bijapur (NP),417,22
+802077,Bhairamgarh (NP),417,22
+802078,Vijaypur (NP),418,23
+802079,Sheopur (M + OG),418,23
+802079,Sheopur (M),418,23
+802080,Badoda (NP),418,23
+802081,Ambah (M),419,23
+802082,Porsa (M),419,23
+802083,Morena (M),419,23
+802084,Bamor (NP),419,23
+802085,Joura (NP),419,23
+802086,Kailaras (NP),419,23
+802087,Jhundpura (NP),419,23
+802088,Sabalgarh (M),419,23
+802089,Phuphkalan (NP),420,23
+802090,Bhind (M),420,23
+802091,Akoda (NP),420,23
+802092,Mehgaon (NP),420,23
+802093,Gormi (NP),420,23
+802094,Gohad (M),420,23
+802095,Mau (NP),420,23
+802096,Mihona (NP),420,23
+802097,Lahar (NP),420,23
+802098,Alampur (NP),420,23
+802099,Daboh (NP),420,23
+802100,Gwalior (M Corp.),421,23
+802101,Morar Cantt (CB),421,23
+802102,Bilaua (NP),421,23
+802103,Pichhore (NP),421,23
+802104,Dabra (M),421,23
+802105,Bhitarwar (NP),421,23
+802106,Antari (NP),421,23
+802107,Seondha (NP),422,23
+802108,Indergarh (NP),422,23
+802109,Datia (M),422,23
+802110,Badoni (NP),422,23
+802111,Bhander (NP),422,23
+802112,Shivpuri (M),423,23
+802113,Narwar (NP),423,23
+802114,Karera (NP),423,23
+802115,Kolaras (NP),423,23
+802116,Badarwas (NP),423,23
+802117,Pichhore (NP),423,23
+802118,Khaniyadhana (NP),423,23
+802119,Tarichar Kalan (NP),424,23
+802120,Niwari (NP),424,23
+802121,Orchha (NP),424,23
+802122,Jeron Khalsa (NP),424,23
+802123,Prithvipur (NP),424,23
+802124,Lidhora Khas (NP),424,23
+802125,Jatara (NP),424,23
+802126,Palera (NP),424,23
+802127,Baldeogarh (NP),424,23
+802128,Khargapur (NP),424,23
+802129,Kari (NP),424,23
+802130,Tikamgarh (M),424,23
+802131,Badagaon (NP),424,23
+802132,Barigarh (NP),425,23
+802133,Laundi (NP),425,23
+802134,Chandla (NP),425,23
+802135,Harpalpur (NP),425,23
+802136,Nowgong (M),425,23
+802137,Garhi - Malhera (NP),425,23
+802138,Maharajpur (NP),425,23
+802139,Chhatarpur (M + OG),425,23
+802139,Chhatarpur (M),425,23
+802140,Rajnagar (NP),425,23
+802141,Khajuraho (NP),425,23
+802142,Bada Malhera (NP),425,23
+802143,Ghuwara (NP),425,23
+802144,Satai (NP),425,23
+802145,Bijawar (NP),425,23
+802146,Buxwaha (NP),425,23
+802147,Ajaigarh (NP),426,23
+802148,Panna (M + OG),426,23
+802148,Panna (M),426,23
+802149,Devendranagar (NP),426,23
+802150,Kakarhati (NP),426,23
+802151,Amanganj (NP),426,23
+802152,Pawai (NP),426,23
+802153,Bina Etawa (M),427,23
+802154,Khurai (M),427,23
+802155,Banda (NP),427,23
+802156,Shahgarh (NP),427,23
+802157,Rahatgarh (NP),427,23
+802158,Shahpur (NP),427,23
+802159,Sagar (M Corp. + OG),427,23
+802159,Sagar (M Corp.),427,23
+802160,Sagar Cantt (CB),427,23
+802161,Garhakota (M + OG),427,23
+802161,Garhakota (M),427,23
+802162,Rehli (M),427,23
+802163,Deori (M),427,23
+802164,Hatta (M),428,23
+802165,Patharia (NP),428,23
+802166,Hindoria (NP),428,23
+802167,Damoh (M + OG),428,23
+802167,Damoh (M),428,23
+802168,Tendukheda (NP),428,23
+802169,Kothi (NP),429,23
+802170,Satna (M Corp. + OG),429,23
+802170,Satna (M Corp.),429,23
+802171,Chitrakoot (NP),429,23
+802172,Birsinghpur (NP),429,23
+802173,Jaitwara (NP),429,23
+802174,Nagod (NP),429,23
+802175,Unchahara (NP),429,23
+802176,Rampur Baghelan (NP),429,23
+802177,Kotar (NP),429,23
+802178,Amarpatan (NP),429,23
+802179,Maihar (M),429,23
+802180,Chakghat (NP),430,23
+802181,Teonthar (NP),430,23
+802182,Sirmour (NP),430,23
+802183,Baikunthpur (NP),430,23
+802184,Mangawan (NP),430,23
+802185,Semaria (NP),430,23
+802186,Hanumana (NP),430,23
+802187,Mauganj (NP),430,23
+802188,Naigarhi (NP),430,23
+802189,Rewa (M Corp.),430,23
+802190,Govindgarh (NP),430,23
+802191,Gurh (NP),430,23
+802192,Umaria (M),431,23
+802193,Chandia (NP),431,23
+802194,Pali (NP),431,23
+802195,Nowrozabad (Khodargama) (NP),431,23
+802196,Diken (NP),432,23
+802197,Jawad (NP),432,23
+802198,Singoli (NP),432,23
+802199,Ratangarh (NP),432,23
+802200,Neemuch (M + OG),432,23
+802200,Neemuch (M),432,23
+802201,Jiran (NP),432,23
+802202,Rampura (NP),432,23
+802203,Manasa (NP),432,23
+802204,Kukdeshwar (NP),432,23
+802205,Bhanpura (NP),433,23
+802206,Malhargarh (NP),433,23
+802207,Narayangarh (NP),433,23
+802208,Piplya Mandi (NP),433,23
+802209,Garoth (NP),433,23
+802210,Shamgarh (NP),433,23
+802211,Mandsaur (M),433,23
+802212,Nagri (NP),433,23
+802213,Sitamau (NP),433,23
+802214,Suwasara (NP),433,23
+802215,Piploda (NP),434,23
+802216,Jaora (M + OG),434,23
+802216,Jaora (M),434,23
+802217,Badawada (NP),434,23
+802218,Alot (NP),434,23
+802219,Tal (NP),434,23
+802220,Sailana (NP),434,23
+802221,Namli (NP),434,23
+802222,Ratlam (M Corp.),434,23
+802223,Dhamnod (NP),434,23
+802224,Khacharod (M),435,23
+802225,Nagda (M),435,23
+802226,Unhel (NP),435,23
+802227,Mahidpur (M + OG),435,23
+802227,Mahidpur (M),435,23
+802228,Tarana (NP),435,23
+802229,Makdon (NP),435,23
+802230,Ujjain (M Corp.),435,23
+802231,Badnagar (M + OG),435,23
+802231,Badnagar (M),435,23
+802232,Soyatkalan (NP),436,23
+802233,Susner (NP),436,23
+802234,Nalkheda (NP),436,23
+802235,Badagaon (NP),436,23
+802236,Badod (NP),436,23
+802237,Agar (M),436,23
+802238,Kanad (NP),436,23
+802239,Shajapur (M),436,23
+802240,Maksi (NP),436,23
+802241,Shujalpur (M),436,23
+802242,Akodia (NP),436,23
+802243,Polaykalan (NP),436,23
+802244,Tonk Khurd (NP),437,23
+802245,Bhaurasa (NP),437,23
+802246,Sonkatch (NP),437,23
+802247,Pipalrawan (NP),437,23
+802248,Dewas (M Corp.),437,23
+802249,Kannod (NP),437,23
+802250,Loharda (NP),437,23
+802251,Kantaphod (NP),437,23
+802252,Satwas (NP),437,23
+802253,Karnawad (NP),437,23
+802254,Bagli (NP),437,23
+802255,Hatpiplya (NP),437,23
+802256,Khategaon (NP),437,23
+802257,Badnawar (NP),438,23
+802258,Rajgarh (NP),438,23
+802259,Sardarpur (NP),438,23
+802260,Dhar (M),438,23
+802261,Pithampur (M),438,23
+802262,Mandav (NP),438,23
+802263,Kukshi (NP),438,23
+802264,Dahi (NP),438,23
+802265,Manawar (M),438,23
+802266,Dhamnod (NP),438,23
+802267,Dharampuri (NP),438,23
+802268,Runji-Gautampura (NP),439,23
+802269,Depalpur (NP),439,23
+802270,Betma (NP),439,23
+802271,Hatod (NP),439,23
+802272,Sawer (NP),439,23
+802273,Indore (M Corp. + OG),439,23
+802273,Indore (M Corp.),439,23
+802274,Rau (NP),439,23
+802275,Mhow Cantt (CB),439,23
+802276,Mhowgaon (NP),439,23
+802277,Manpur (NP),439,23
+802278,Barwaha (M),440,23
+802279,Sanawad (M),440,23
+802280,Maheshwar (NP),440,23
+802281,Mandleshwar (NP),440,23
+802282,Kasrawad (NP),440,23
+802283,Bhikangaon (NP),440,23
+802284,Khargone (M + OG),440,23
+802284,Khargone (M),440,23
+802285,Barwani (M),441,23
+802286,Anjad (NP),441,23
+802287,Rajpur (NP),441,23
+802288,Palsud (NP),441,23
+802289,Pansemal (NP),441,23
+802290,Khetia (NP),441,23
+802291,Sendhwa (M),441,23
+802292,Machalpur (NP),442,23
+802293,Jirapur (NP),442,23
+802294,Khilchipur (NP),442,23
+802295,Chhapiheda (NP),442,23
+802296,Rajgarh (NP),442,23
+802297,Khujner (NP),442,23
+802298,Suthaliya (NP),442,23
+802299,Biaora (M + OG),442,23
+802299,Biaora (M),442,23
+802300,Sarangpur (M),442,23
+802301,Narsinghgarh (M),442,23
+802302,Boda (NP),442,23
+802303,Pachore (NP),442,23
+802304,Talen (NP),442,23
+802305,Lateri (NP),443,23
+802306,Sironj (M),443,23
+802307,Kurwai (NP),443,23
+802308,Basoda (M + OG),443,23
+802308,Basoda (M),443,23
+802309,Shamshabad (NP),443,23
+802310,Vidisha (M),443,23
+802311,Berasia (M),444,23
+802312,Bhopal (M Corp.),444,23
+802313,Kolar (M),444,23
+802314,Sehore (M + OG),445,23
+802314,Sehore (M),445,23
+802315,Ashta (M + OG),445,23
+802315,Ashta (M),445,23
+802316,Kothri (NP),445,23
+802317,Jawar (NP),445,23
+802318,Ichhawar (NP),445,23
+802319,Nasrullaganj (NP),445,23
+802320,Budni (NP),445,23
+802321,Rehti (NP),445,23
+802322,Sanchi (NP),446,23
+802323,Raisen (M),446,23
+802324,Gairatganj (NP),446,23
+802325,Begamganj (M),446,23
+802326,Sultanpur (NP),446,23
+802327,Mandideep (M),446,23
+802328,Obedullaganj (NP),446,23
+802329,Baraily (NP + OG),446,23
+802329,Baraily (NP),446,23
+802330,Badi (NP),446,23
+802331,Silwani (NP),446,23
+802332,Udaipura (NP),446,23
+802333,Bhainsdehi (NP),447,23
+802334,Athner (NP),447,23
+802335,Betul (M),447,23
+802336,Betul-Bazar (NP),447,23
+802337,Chicholi (NP),447,23
+802338,Sarni (M),447,23
+802339,Multai (M),447,23
+802340,Amla (M),447,23
+802341,Khirkiya (NP),448,23
+802342,Harda (M + OG),448,23
+802342,Harda (M),448,23
+802343,Timarni (NP),448,23
+802344,Seoni-Malwa (M),449,23
+802345,Itarsi (M + OG),449,23
+802345,Itarsi (M),449,23
+802346,Hoshangabad (M),449,23
+802347,Babai (NP),449,23
+802348,Sohagpur (NP),449,23
+802349,Pipariya (M),449,23
+802350,Pachmarhi Cantt (CB),449,23
+802351,Murwara (Katni) (M Corp.),450,23
+802352,Barhi (NP),450,23
+802353,Kymore (NP),450,23
+802354,Vijayraghavgarh (NP),450,23
+802355,Sihora (M),451,23
+802356,Majholi (NP),451,23
+802357,Katangi (NP),451,23
+802358,Patan (NP),451,23
+802359,Shahpura (NP),451,23
+802360,Jabalpur Cantt (CB),451,23
+802361,Jabalpur (M Corp. + OG),451,23
+802361,Jabalpur (M Corp.),451,23
+802362,Bhedaghat (NP),451,23
+802363,Barela (NP),451,23
+802364,Panagar (M),451,23
+802365,Gotegaon (NP + OG),452,23
+802365,Gotegaon (NP),452,23
+802366,Gadarwara (M + OG),452,23
+802366,Gadarwara (M),452,23
+802367,Narsimhapur (M + OG),452,23
+802367,Narsimhapur (M),452,23
+802368,Kareli (M),452,23
+802369,Tendukheda (NP),452,23
+802370,Shahpura (NP),453,23
+802371,Dindori (NP),453,23
+802372,Niwas (NP),454,23
+802373,Mandla (M + OG),454,23
+802373,Mandla (M),454,23
+802374,Bamhani (NP),454,23
+802375,Bichhiya (NP),454,23
+802376,Nainpur (M + OG),454,23
+802376,Nainpur (M),454,23
+802377,Amarwara (M),455,23
+802378,Harrai (NP),455,23
+802379,Chaurai Khas (M),455,23
+802380,Jamai (M),455,23
+802381,Damua (M),455,23
+802382,Neuton Chikhli Kalan (NP),455,23
+802383,Dongar Parasia (M + OG),455,23
+802383,Dongar Parasia (M),455,23
+802384,Chandameta- Butaria (NP),455,23
+802385,Badkuhi (NP),455,23
+802386,Chhindwara (M + OG),455,23
+802386,Chhindwara (M),455,23
+802387,Sausar (M),455,23
+802388,Mohgaon (NP),455,23
+802389,Lodhikheda (NP),455,23
+802390,Piplanarayanwar (NP),455,23
+802391,Pandhurna (M),455,23
+802392,Lakhnadon (NP),456,23
+802393,Seoni (M),456,23
+802394,Barghat (NP),456,23
+802395,Katangi (NP),457,23
+802396,Waraseoni (M + OG),457,23
+802396,Waraseoni (M),457,23
+802397,Balaghat (M),457,23
+802398,Baihar (NP),457,23
+802399,Malajkhand (M),457,23
+802400,Lanji (NP),457,23
+802401,Guna (M),458,23
+802402,Raghogarh -Vijaypur (M),458,23
+802403,Kumbhraj (NP),458,23
+802404,Aron (NP),458,23
+802405,Chachaura-Binaganj (NP),458,23
+802406,Isagarh (NP),459,23
+802407,Chanderi (M),459,23
+802408,Ashoknagar (M),459,23
+802409,Mungaoli (NP + OG),459,23
+802409,Mungaoli (NP),459,23
+802410,Khand(Bansagar) (NP),460,23
+802411,Beohari (NP),460,23
+802412,Jaisinghnagar (NP),460,23
+802413,Shahdol (M),460,23
+802414,Burhar (NP),460,23
+802415,Dhanpuri (Nargada Hari Dafai) (M),460,23
+802416,Bijuri (M),461,23
+802417,Kotma (M),461,23
+802418,Pasan (M),461,23
+802419,Anuppur (M),461,23
+802420,Jaithari (NP),461,23
+802421,Amarkantak (NP),461,23
+802422,Rampur Naikin (NP),462,23
+802423,Churhat (NP),462,23
+802424,Sidhi (M),462,23
+802425,Majhauli (NP),462,23
+802426,Singrauli (M Corp.),463,23
+802427,Thandla (NP),464,23
+802428,Petlawad (NP),464,23
+802429,Jhabua (M),464,23
+802430,Ranapur (NP),464,23
+802431,Bhavra (NP),465,23
+802432,Jobat (NP),465,23
+802433,Alirajpur (M),465,23
+802434,Chhanera (NP),466,23
+802435,Khandwa (M Corp.),466,23
+802436,Omkareshwar (NP),466,23
+802437,Mundi (NP),466,23
+802438,Pandhana (NP),466,23
+802439,Burhanpur (M Corp.),467,23
+802440,Shahpur (NP),467,23
+802441,Nepanagar (M),467,23
+802442,Rapar (M),468,24
+802443,Bhachau (M),468,24
+802444,Anjar (M),468,24
+802445,Bhuj (M + OG),468,24
+802445,Bhuj (M),468,24
+802446,Mandvi (M),468,24
+802447,Gandhidham (M),468,24
+802448,Tharad (M),469,24
+802449,Dhanera (M),469,24
+802450,Palanpur (M + OG),469,24
+802450,Palanpur (M),469,24
+802451,Deesa (M),469,24
+802452,Bhabhar (M),469,24
+802453,Thara (M),469,24
+802454,Radhanpur (M),470,24
+802455,Sidhpur (M + OG),470,24
+802455,Sidhpur (M),470,24
+802456,Patan (M + OG),470,24
+802456,Patan (M),470,24
+802457,Harij (M),470,24
+802458,Chanasma (M),470,24
+802459,Kheralu (M),471,24
+802460,Unjha (M),471,24
+802461,Visnagar (M + OG),471,24
+802461,Visnagar (M),471,24
+802462,Vadnagar (M),471,24
+802463,Vijapur (M + OG),471,24
+802463,Vijapur (M),471,24
+802464,Mahesana (M + OG),471,24
+802464,Mahesana (M),471,24
+802465,Kadi (M + OG),471,24
+802465,Kadi (M),471,24
+802466,Khedbrahma (M),472,24
+802467,Vadali (M),472,24
+802468,Idar (M + OG),472,24
+802468,Idar (M),472,24
+802469,Himatnagar (M),472,24
+802470,Prantij (M),472,24
+802471,Talod (M),472,24
+802472,Modasa (M),472,24
+802473,Bayad (M),472,24
+802474,Chhatral (INA),473,24
+802475,Kalol (M + OG),473,24
+802475,Kalol (M + OG),473,24
+802475,Kalol (M),473,24
+802476,Kalol (INA),473,24
+802477,Mansa (M),473,24
+802478,Pethapur (M),473,24
+802479,Gandhinagar (NA + OG),473,24
+802479,Gandhinagar (NA),473,24
+802480,Dehgam (M),473,24
+802481,Viramgam (M),474,24
+802482,Sanand (M + OG),474,24
+802482,Sanand (M),474,24
+802483,Ahmadabad Cantonment (CB),474,24
+802484,Ahmadabad (M Corp.) (Part),474,24
+802484,Ahmadabad (M Corp. + OG) (Part),474,24
+802484,Ahmadabad (M Corp.) (Part),474,24
+802485,Bareja (M),474,24
+802486,Dholka (M + OG),474,24
+802486,Dholka (M),474,24
+802487,Bavla (M + OG),474,24
+802487,Bavla (M),474,24
+802488,Barwala (M),474,24
+802489,Dhandhuka (M),474,24
+802490,Halvad (M),475,24
+802491,Dhrangadhra (M),475,24
+802492,Patdi (M),475,24
+802493,Surendranagar Dudhrej (M),475,24
+802494,Wadhwan (M),475,24
+802495,Thangadh (M),475,24
+802496,Chotila (M),475,24
+802497,Limbdi (M),475,24
+802498,Maliya (M),476,24
+802499,Morvi (M + OG),476,24
+802499,Morvi (M),476,24
+802500,Wankaner (M),476,24
+802501,Rajkot (M Corp. + OG),476,24
+802501,Rajkot (M Corp.),476,24
+802502,Lodhika (INA),476,24
+802503,Jasdan (M),476,24
+802504,Gondal (M),476,24
+802505,Bhayavadar (M),476,24
+802506,Upleta (M),476,24
+802507,Dhoraji (M),476,24
+802508,Jetpur Navagadh (M),476,24
+802509,Okha (M),477,24
+802510,Dwarka (M),477,24
+802511,Salaya (M),477,24
+802512,Khambhalia (M),477,24
+802513,Sikka (M),477,24
+802514,GSFC (Motikhavdi Sikka) (INA),477,24
+802515,Reliance Complex (INA),477,24
+802516,Jamnagar (M Corp. + OG),477,24
+802516,Jamnagar (M Corp.),477,24
+802517,Dhrol (M),477,24
+802518,Kalavad (M),477,24
+802519,Raval (M),477,24
+802520,Bhanvad (M),477,24
+802521,Jamjodhpur (M),477,24
+802522,Porbandar (M + OG),478,24
+802522,Porbandar (M),478,24
+802523,Chhaya (M),478,24
+802524,Ranavav (M),478,24
+802525,Kutiyana (M),478,24
+802526,Bantwa (M),479,24
+802527,Manavadar (M),479,24
+802528,Vanthali (M),479,24
+802529,Junagadh (M Corp.),479,24
+802530,Visavadar (M),479,24
+802531,Keshod (M),479,24
+802532,Mangrol (M + OG),479,24
+802532,Mangrol (M),479,24
+802533,Chorvad (M),479,24
+802534,Talala (M),479,24
+802535,Veraval (M + OG),479,24
+802535,Veraval (M),479,24
+802536,Sutrapada (M),479,24
+802537,Kodinar (M),479,24
+802538,Una (M),479,24
+802539,Babra (M),480,24
+802540,Lathi (M),480,24
+802541,Damnagar (M),480,24
+802542,Amreli (M + OG),480,24
+802542,Amreli (M),480,24
+802543,Bagasara (M),480,24
+802544,Chalala (M),480,24
+802545,Savarkundla (M),480,24
+802546,Jafrabad (M),480,24
+802547,Rajula (M),480,24
+802548,Botad (M),481,24
+802549,Vallabhipur (M),481,24
+802550,Gadhada (M),481,24
+802551,Bhavnagar (M Corp. + OG),481,24
+802551,Bhavnagar (M Corp.),481,24
+802552,Sihor (M),481,24
+802553,Gariadhar (M),481,24
+802554,Palitana (M),481,24
+802555,Talaja (M),481,24
+802556,Alang-Sosiya (INA),481,24
+802557,Mahuva (M + OG),481,24
+802557,Mahuva (M),481,24
+802558,Sojitra (M),482,24
+802559,Umreth (M),482,24
+802560,Boriavi (M),482,24
+802561,Ode (M),482,24
+802562,Anand (M + OG),482,24
+802562,Anand (M),482,24
+802563,Vallabh Vidyanagar (M),482,24
+802564,Karamsad (M),482,24
+802565,Vithal Udyognagar (INA),482,24
+802566,Petlad (M),482,24
+802567,Khambhat (M + OG),482,24
+802567,Khambhat (M),482,24
+802568,Borsad (M),482,24
+802569,Vasna Borsad (INA),482,24
+802570,Anklav (M),482,24
+802571,Kapadvanj (M),483,24
+802572,Balasinor (M),483,24
+802573,Kathlal (M),483,24
+802574,Mehmedabad (M),483,24
+802575,Kheda (M),483,24
+802576,Nadiad (M + OG),483,24
+802576,Nadiad (M),483,24
+802577,Chaklasi (M),483,24
+802578,Kanjari (M),483,24
+802579,Mahudha (M),483,24
+802580,Thasra (M),483,24
+802581,Dakor (M + OG),483,24
+802581,Dakor (M),483,24
+802582,Santrampur (M),484,24
+802583,Lunawada (M),484,24
+802584,Shehera (M),484,24
+802585,Godhra (M),484,24
+802586,Kalol (M + OG),484,24
+802586,Kalol (M),484,24
+802587,Kalol (INA),484,24
+802588,Halol (M + OG),484,24
+802588,Halol (M),484,24
+802589,Jhalod (M),485,24
+802590,Dohad (M + OG),485,24
+802590,Dohad (M),485,24
+802591,Devgadbaria (M),485,24
+802592,Savli (M),486,24
+802593,Nandesari (INA),486,24
+802594,Petro-Chemical Complex (INA),486,24
+802595,GSFC Complex (INA),486,24
+802596,Vadodara (M Corp. + OG),486,24
+802596,Vadodara (M Corp.),486,24
+802597,Por-Ramangamdi (INA),486,24
+802598,Vaghodia (INA),486,24
+802599,Chhota Udaipur (M),486,24
+802600,Dabhoi (M),486,24
+802601,Padra (M + OG),486,24
+802601,Padra (M),486,24
+802602,Karjan (M),486,24
+802603,Rajpipla (M),487,24
+802604,Jambusar (M),488,24
+802605,Amod (M),488,24
+802606,Bharuch (INA),488,24
+802607,Bharuch (M),488,24
+802608,Anklesvar (M + OG),488,24
+802608,Anklesvar (M),488,24
+802609,Anklesvar (INA),488,24
+802610,Panoli (INA),488,24
+802611,Valia - Jhagadia (GNFC Scooter Project Area) (INA),488,24
+802612,Valia (Naldhari) (INA),488,24
+802613,Saputara (NA),489,24
+802614,Navsari (M + OG),490,24
+802614,Navsari (M),490,24
+802615,Vijalpor (M),490,24
+802616,Gandevi (M),490,24
+802617,Bilimora (M),490,24
+802618,Valsad (M + OG),491,24
+802618,Valsad (M),491,24
+802619,Valsad (INA),491,24
+802620,Dharampur (M),491,24
+802621,Pardi (M),491,24
+802622,Vapi (M),491,24
+802623,Vapi (INA),491,24
+802624,Sarigam (INA),491,24
+802625,Umbergaon (M),491,24
+802626,Umbergaon (INA),491,24
+802627,Tarsadi (M),492,24
+802628,Mandvi (M),492,24
+802629,Surat (M Corp.) (Part),492,24
+802629,Surat (M Corp. + OG) (Part),492,24
+802629,Surat (M Corp.) (Part),492,24
+802630,Hajira (INA),492,24
+802631,Magdalla (INA),492,24
+802632,Sachin (INA),492,24
+802633,Kansad (M),492,24
+802634,Bardoli (M),492,24
+802635,Songadh (M),493,24
+802636,Vyara (M),493,24
+802637,Diu (M CI),494,25
+802638,Daman (M CI),495,25
+802639,Silvassa (M CI),496,26
+802640,Talode (M Cl),497,27
+802641,Shahade (M Cl),497,27
+802642,Nandurbar (M Cl),497,27
+802643,Nawapur (M Cl),497,27
+802644,Shirpur-Warwade (M Cl) ,498,27
+802645,Dondaicha-Warwade(M Cl) ,498,27
+802646,Dhule (M Corp.) ,498,27
+802647,Chopda (M Cl) ,499,27
+802648,Yawal (M Cl) ,499,27
+802649,Faizpur (M Cl),499,27
+802650,Savda (M Cl) ,499,27
+802651,Raver (M Cl) ,499,27
+802652,Bhusawal (M Cl) ,499,27
+802653,Jalgaon (M Corp.),499,27
+802654,Erandol (M Cl),499,27
+802655,Dharangaon (M Cl) ,499,27
+802656,Amalner (M Cl) ,499,27
+802657,Parola (M Cl),499,27
+802658,Bhadgaon (M Cl),499,27
+802659,Chalisgaon(M Cl),499,27
+802660,Pachora (M Cl) ,499,27
+802661,Jamner (M Cl) ,499,27
+802662,Jalgaon (Jamod) (M Cl),500,27
+802663,Shegaon (M Cl),500,27
+802664,Nandura (M Cl + OG),500,27
+802664,Nandura (M Cl),500,27
+802665,Malkapur (M Cl),500,27
+802666,Khamgaon (M Cl),500,27
+802667,Mehkar (M Cl),500,27
+802668,Chikhli (M Cl),500,27
+802669,Buldana (M Cl),500,27
+802670,Deulgaon Raja (M Cl),500,27
+802671,Sindkhed Raja (M Cl),500,27
+802672,Lonar (M Cl),500,27
+802673,Telhara (M Cl),501,27
+802674,Akot (M Cl),501,27
+802675,Balapur (M Cl),501,27
+802676,Akola (M Corp.),501,27
+802677,Murtijapur (M Cl),501,27
+802678,Patur (M Cl),501,27
+802679,Mangrulpir (M Cl),502,27
+802680,Karanja (M Cl),502,27
+802681,Washim (M Cl),502,27
+802682,Risod (M Cl),502,27
+802683,Chikhaldara (M Cl) ,503,27
+802684,Anjangaon (M Cl),503,27
+802685,Achalpur (M Cl),503,27
+802686,Chandurbazar (M Cl),503,27
+802687,Morshi (M Cl),503,27
+802688,Warud (M Cl),503,27
+802689,Shendurjana (M Cl),503,27
+802690,Amravati (M Corp.),503,27
+802691,Daryapur Banosa (M Cl) ,503,27
+802692,Chandur Railway (M Cl),503,27
+802693,Dattapur Dhamangaon (M Cl),503,27
+802694,Arvi (M Cl),504,27
+802695,Sindi (M Cl),504,27
+802696,Wardha (M Cl),504,27
+802697,Pulgaon (M Cl),504,27
+802698,Deoli (M Cl),504,27
+802699,Hinganghat (M Cl),504,27
+802700,Mowad (M Cl),505,27
+802701,Narkhed (M Cl),505,27
+802702,Katol (M Cl),505,27
+802703,Kalameshwar (M Cl) ,505,27
+802704,Mohpa (M Cl),505,27
+802705,Savner (M Cl),505,27
+802706,Khapa (M Cl),505,27
+802707,Ramtek (M Cl),505,27
+802708,Kamptee (M Cl),505,27
+802709,Kamptee (CB),505,27
+802710,Nagpur (M Corp.),505,27
+802711,Umred (M Cl),505,27
+802712,Tumsar (M Cl),506,27
+802713,Bhandara (M Cl),506,27
+802714,Pauni (M Cl),506,27
+802715,Tirora (M Cl),507,27
+802716,Gondiya (M Cl),507,27
+802717,Desaiganj (M Cl),508,27
+802718,Gadchiroli (M Cl),508,27
+802719,Warora (M Cl),509,27
+802720,Brahmapuri (M Cl),509,27
+802721,Bhadravati (M Cl),509,27
+802722,Chandrapur (M Cl),509,27
+802723,Mul (M Cl),509,27
+802724,Ballarpur (M Cl),509,27
+802725,Rajura (M Cl),509,27
+802726,Ner (M Cl),510,27
+802727,Yavatmal (M Cl),510,27
+802728,Darwha (M Cl),510,27
+802729,Digras (M Cl),510,27
+802730,Pusad (M Cl),510,27
+802731,Umarkhed (M Cl),510,27
+802732,Ghatanji (M Cl),510,27
+802733,Pandharkaoda (M Cl),510,27
+802734,Wani (M Cl),510,27
+802735,Kinwat (M Cl),511,27
+802736,Hadgaon (M Cl),511,27
+802737,Nanded Waghala (M Corp.),511,27
+802738,Mudkhed (M Cl),511,27
+802739,Bhokar (M Cl),511,27
+802740,Peth Umri (M Cl),511,27
+802741,Dharmabad (M Cl),511,27
+802742,Kundalwadi (M Cl),511,27
+802743,Biloli (M Cl),511,27
+802744,Loha (M Cl),511,27
+802745,Kandhar (M Cl),511,27
+802746,Mukhed (M Cl),511,27
+802747,Deglur (M Cl),511,27
+802748,Hingoli (M Cl),512,27
+802749,Kalamnuri (M Cl),512,27
+802750,Basmath (M Cl),512,27
+802751,Sailu (M Cl),513,27
+802752,Jintur (M Cl),513,27
+802753,Parbhani (M Cl),513,27
+802754,Manwath (M Cl),513,27
+802755,Pathri (M Cl),513,27
+802756,Sonpeth (M Cl),513,27
+802757,Gangakhed (M Cl),513,27
+802758,Purna (M Cl),513,27
+802759,Bhokardan (M Cl),514,27
+802760,Jalna (M Cl),514,27
+802761,Ambad (M Cl),514,27
+802762,Partur (M Cl),514,27
+802763,Kannad (M Cl),515,27
+802764,Sillod (M Cl),515,27
+802765,Aurangabad (M Corp.),515,27
+802766,Aurangabad (CB),515,27
+802767,Khuldabad (M Cl),515,27
+802768,Vaijapur (M Cl),515,27
+802769,Gangapur (M Cl),515,27
+802770,Paithan (M Cl),515,27
+802771,Satana (M Cl),516,27
+802772,Malegaon (M Corp. + OG),516,27
+802772,Malegaon (M Corp.),516,27
+802773,Nandgaon (M Cl),516,27
+802774,Manmad (M Cl),516,27
+802775,Trimbak (M Cl),516,27
+802776,Nashik (M Corp.),516,27
+802777,Deolali (CB),516,27
+802778,Bhagur (M Cl),516,27
+802779,Igatpuri (M Cl),516,27
+802780,Sinnar (M Cl),516,27
+802781,Yevla (M Cl),516,27
+802782,Dahanu (M Cl),517,27
+802783,Jawhar (M Cl),517,27
+802784,Palghar (M Cl),517,27
+802785,Vasai-Virar City (M Corp),517,27
+802786,Mira-Bhayandar (M Corp.),517,27
+802787,Thane (M Corp.),517,27
+802788,Navi Mumbai (M Corp.),517,27
+802789,Bhiwandi Nizampur (M Corp.),517,27
+802790,Kalyan-Dombivli (M Corp.),517,27
+802791,Ulhasnagar (M Corp.),517,27
+802792,Badlapur (M Cl),517,27
+802793,Ambarnath(M Cl),517,27
+802794,Greater Mumbai (M Corp.) (Part),518,27
+802794,Greater Mumbai (M Corp.) (Part),519,27
+802795,Uran (M Cl),520,27
+802796,Panvel (M Cl),520,27
+802797,Matheran (M Cl),520,27
+802798,Karjat (M Cl),520,27
+802799,Khopoli (M Cl),520,27
+802800,Pen (M Cl),520,27
+802801,Alibag (M Cl),520,27
+802802,Murud Janjira (M Cl),520,27
+802803,Roha Ashtami (M Cl),520,27
+802804,Shrivardhan (M Cl),520,27
+802805,Mahad (M Cl),520,27
+802806,Junnar (M Cl),521,27
+802807,Shirur (M Cl),521,27
+802808,Alandi (M Cl),521,27
+802809,Talegaon Dabhade (M Cl),521,27
+802810,Lonavala (M Cl),521,27
+802811,Pimpri Chinchwad (M Corp.),521,27
+802812,Dehu Road (CB),521,27
+802813,Pune (CB),521,27
+802814,Pune (M Corp.),521,27
+802815,Kirkee (CB),521,27
+802816,Daund (M Cl),521,27
+802817,Sasvad (M Cl),521,27
+802818,Jejuri (M Cl),521,27
+802819,Bhor (M Cl),521,27
+802820,Baramati (M Cl),521,27
+802821,Indapur (M Cl),521,27
+802822,Sangamner (M Cl),522,27
+802823,Kopargaon (M Cl),522,27
+802824,Shirdi (NP),522,27
+802825,Rahta Pimplas (M Cl),522,27
+802826,Shrirampur (M Cl),522,27
+802827,Pathardi (M Cl),522,27
+802828,Ahmadnagar (M Corp.),522,27
+802829,Ahmadnagar (CB),522,27
+802830,Rahuri (M Cl),522,27
+802831,Deolali Pravara (M Cl),522,27
+802832,Shrigonda (M Cl),522,27
+802833,Georai (M Cl),523,27
+802834,Manjlegaon (M Cl),523,27
+802835,Bid (M Cl),523,27
+802836,Kaij (NP),523,27
+802837,Dharur (M Cl),523,27
+802838,Parli (M Cl),523,27
+802839,Ambejogai (M Cl),523,27
+802840,Latur (M Cl),524,27
+802841,Ahmadpur (M Cl),524,27
+802842,Ausa (M Cl),524,27
+802843,Nilanga (M Cl),524,27
+802844,Udgir (M Cl),524,27
+802845,Paranda (M Cl),525,27
+802846,Bhum (M Cl) ,525,27
+802847,Kalamb (M Cl),525,27
+802848,Osmanabad (M Cl),525,27
+802849,Tuljapur (M Cl),525,27
+802850,Naldurg (M Cl),525,27
+802851,Murum (M Cl),525,27
+802852,Umarga (M Cl),525,27
+802853,Karmala (M Cl),526,27
+802854,Kurduvadi (M Cl),526,27
+802855,Barshi (M Cl),526,27
+802856,Solapur (M Corp.) ,526,27
+802857,Pandharpur (M Cl),526,27
+802858,Sangole (M Cl),526,27
+802859,Mangalvedhe (M Cl),526,27
+802860,Akkalkot (M Cl),526,27
+802861,Maindargi (M Cl),526,27
+802862,Dudhani (M Cl),526,27
+802863,Mahabaleshwar (M Cl),527,27
+802864,Panchgani (M Cl),527,27
+802865,Wai (M Cl),527,27
+802866,Phaltan (M Cl),527,27
+802867,Mhaswad (M Cl),527,27
+802868,Rahimatpur (M Cl),527,27
+802869,Satara (M Cl),527,27
+802870,Karad (M Cl),527,27
+802871,Malkapur (NP),527,27
+802872,Dapoli Camp (NP) ,528,27
+802873,Khed (M Cl),528,27
+802874,Chiplun (M Cl),528,27
+802875,Ratnagiri (M Cl),528,27
+802876,Rajapur (M Cl),528,27
+802877,Kankavli (NP),529,27
+802878,Malwan (M Cl),529,27
+802879,Vengurla (M Cl),529,27
+802880,Sawantwadi (M Cl),529,27
+802881,Malkapur (M Cl),530,27
+802882,Panhala (M Cl),530,27
+802883,Vadgaon Kasba (M Cl),530,27
+802884,Ichalkaranji (M Cl),530,27
+802885,Jaysingpur (M Cl),530,27
+802886,Kurundvad (M Cl),530,27
+802887,Kolhapur (M Corp.),530,27
+802888,Kagal (M Cl),530,27
+802889,Murgud (M Cl),530,27
+802890,Gadhinglaj (M Cl),530,27
+802891,Uran Islampur (M Cl),531,27
+802892,Ashta (M Cl),531,27
+802893,Vita (M Cl),531,27
+802894,Tasgaon (M Cl),531,27
+802895,Sangli Miraj Kupwad (M Corp.),531,27
+802896,Adilabad (M),532,28
+802897,Kagaznagar (M),532,28
+802898,Bhainsa (M),532,28
+802899,Nirmal (M),532,28
+802900,Bellampalle (M) (Part),532,28
+802900,Bellampalle (M) (Part),532,28
+802901,Mandamarri (M),532,28
+802902,Mancherial (M + OG),532,28
+802902,Mancherial (M),532,28
+802903,Armur (M + OG),533,28
+802903,Armur (M),533,28
+802904,Nizamabad (M Corp.),533,28
+802905,Bodhan (M),533,28
+802906,Kamareddy (M),533,28
+802907,Ramagundam (M + OG) (Part),534,28
+802907,Ramagundam (M),534,28
+802907,Ramagundam (M + OG) (Part),534,28
+802908,Jagtial (M + OG),534,28
+802908,Jagtial (M),534,28
+802909,Koratla (M),534,28
+802910,Metpalle (M),534,28
+802911,Karimnagar (M Corp. + OG) (Part),534,28
+802911,Karimnagar (M Corp.),534,28
+802912,Sircilla (M + OG),534,28
+802912,Sircilla (M),534,28
+802911,Karimnagar (M Corp. + OG) (Part),534,28
+802913,Medak (M + OG),535,28
+802913,Medak (M),535,28
+802914,Siddipet (M + OG),535,28
+802914,Siddipet (M),535,28
+802915,Zahirabad (M + OG),535,28
+802915,Zahirabad (M),535,28
+802916,Sadasivpet (M + OG),535,28
+802916,Sadasivpet (M),535,28
+802917,Sangareddy (M + OG),535,28
+802917,Sangareddy (M),535,28
+802918,GHMC (M Corp.) (Part),535,28
+802918,GHMC (M Corp. + OG) (Part),535,28
+802918,GHMC (M Corp.) (Part),535,28
+802918,GHMC (M Corp.) (Part),536,28
+802918,GHMC (M Corp.) (Part),536,28
+802918,GHMC (M Corp.) (Part),536,28
+802919,Secunderabad (CB),536,28
+802918,GHMC (M Corp.) (Part),536,28
+802918,GHMC (M Corp.) (Part),536,28
+802918,GHMC (M Corp.) (Part),536,28
+802918,GHMC (M Corp.) (Part),536,28
+802918,GHMC (M Corp.) (Part),536,28
+802918,GHMC (M Corp.) (Part),536,28
+802918,GHMC (M Corp.) (Part),536,28
+802918,GHMC (M Corp.) (Part),536,28
+802918,GHMC (M Corp.) (Part),536,28
+802918,GHMC (M Corp.) (Part),536,28
+802918,GHMC (M Corp.) (Part),536,28
+802918,GHMC (M Corp.) (Part),536,28
+802918,GHMC (M Corp.) (Part),537,28
+802918,GHMC (M Corp.) (Part),537,28
+802918,GHMC (M Corp. + OG) (Part),537,28
+802918,GHMC (M Corp.) (Part),537,28
+802918,GHMC (M Corp. + OG) (Part),537,28
+802918,GHMC (M Corp. + OG) (Part),537,28
+802918,GHMC (M Corp.) (Part),537,28
+802918,GHMC (M Corp. + OG) (Part),537,28
+802918,GHMC (M Corp.) (Part),537,28
+802918,GHMC (M Corp. + OG) (Part),537,28
+802918,GHMC (M Corp.) (Part),537,28
+802918,GHMC (M Corp.) (Part),537,28
+802918,GHMC (M Corp. + OG) (Part),537,28
+802918,GHMC (M Corp.) (Part),537,28
+802918,GHMC (M Corp. + OG) (Part),537,28
+802918,GHMC (M Corp.) (Part),537,28
+802918,GHMC (M Corp. + OG) (Part),537,28
+802918,GHMC (M Corp.) (Part),537,28
+802920,Vicarabad (M),537,28
+802921,Tandur (M),537,28
+802918,GHMC (M Corp. + OG) (Part),537,28
+802922,Mahbubnagar (M + OG),538,28
+802922,Mahbubnagar (M),538,28
+802923,Narayanpet (NP),538,28
+802924,Wanaparthy (M),538,28
+802925,Gadwal (M + OG),538,28
+802925,Gadwal (M),538,28
+802926,Bhongir (M),539,28
+802927,Suryapet (M + OG),539,28
+802927,Suryapet (M),539,28
+802928,Nalgonda (M + OG),539,28
+802928,Nalgonda (M),539,28
+802929,Miryalaguda (M + OG),539,28
+802929,Miryalaguda (M),539,28
+802930,Warangal (M.Corp. + OG) (Part),540,28
+802930,Warangal (M.Corp. + OG) (Part),540,28
+802930,Warangal (M.Corp. + OG) (Part),540,28
+802930,Warangal (M Corp.) (Part),540,28
+802930,Warangal (M Corp.) (Part),540,28
+802930,Warangal (M Corp.) (Part),540,28
+802931,Jangaon (M),540,28
+802930,Warangal (M Corp.) (Part),540,28
+802930,Warangal (M Corp.) (Part),540,28
+802930,Warangal (M Corp.) (Part),540,28
+802930,Warangal (M.Corp. + OG) (Part),540,28
+802932,Manugur (M),541,28
+802933,Palwancha (M),541,28
+802934,Kothagudem (M),541,28
+802935,Yellandu (M + OG),541,28
+802935,Yellandu (M),541,28
+802936,Sathupalle (NP),541,28
+802937,Khammam (M + OG) (Part),541,28
+802937,Khammam (M) (Part),541,28
+802937,Khammam (M),541,28
+802938,Palasa Kasibugga (M),542,28
+802939,Ichchapuram (M),542,28
+802940,Rajam (NP),542,28
+802941,Amadalavalasa (M),542,28
+802942,Srikakulam (M + OG) (Part),542,28
+802942,Srikakulam (M),542,28
+802942,Srikakulam (M + OG) (Part),542,28
+802943,Parvathipuram (M),543,28
+802944,Bobbili (M),543,28
+802945,Salur (M),543,28
+802946,Vizianagaram (M + OG),543,28
+802946,Vizianagaram (M),543,28
+802947,GVMC (Part),544,28
+802947,GVMC (Part),544,28
+802948,Bheemunipatnam (M + OG),544,28
+802948,Bheemunipatnam (M),544,28
+802947,GVMC (Part),544,28
+802947,GVMC (Part),544,28
+802947,GVMC (Part),544,28
+802947,GVMC (Part),544,28
+802947,GVMC (Part),544,28
+802949,Anakapalle (M),544,28
+802950,Tuni (M),545,28
+802951,Peddapuram (M),545,28
+802952,Rajahmundry (M Corp. + OG) (Part),545,28
+802952,Rajahmundry (M Corp.),545,28
+802952,Rajahmundry (M Corp. + OG) (Part),545,28
+802953,Samalkot (M),545,28
+802954,Pithapuram (M + OG),545,28
+802954,Pithapuram (M),545,28
+802955,Kakinada (M Corp. + OG) (Part),545,28
+802955,Kakinada (M Corp. + OG) (Part),545,28
+802955,Kakinada (M Corp.),545,28
+802956,Mandapeta (M + OG),545,28
+802956,Mandapeta (M),545,28
+802957,Ramachandrapuram (M),545,28
+802958,Amalapuram (M),545,28
+802959,Kovvur (M),546,28
+802960,Nidadavole (M),546,28
+802961,Tadepalligudem (M + OG),546,28
+802961,Tadepalligudem (M),546,28
+802962,Eluru (M Corp. + OG),546,28
+802962,Eluru (M Corp.),546,28
+802963,Tanuku (M + OG),546,28
+802963,Tanuku (M),546,28
+802964,Bhimavaram (M + OG),546,28
+802964,Bhimavaram (M),546,28
+802965,Narasapur (M),546,28
+802966,Palacole (M + OG),546,28
+802966,Palacole (M),546,28
+802967,Jaggaiahpet (M),547,28
+802968,Nuzvid (M),547,28
+802969,Vijayawada (M Corp.) (Part),547,28
+802969,Vijayawada (M Corp. + OG) (Part),547,28
+802969,Vijayawada (M Corp.) (Part),547,28
+802970,Gudivada (M),547,28
+802969,Vijayawada (M Corp. + OG) (Part),547,28
+802971,Pedana (M),547,28
+802972,Machilipatnam (M),547,28
+802973,Macherla (M),548,28
+802974,Piduguralla (NP),548,28
+802975,Tadepalle (M + OG),548,28
+802975,Tadepalle (M),548,28
+802976,Mangalagiri (M + OG),548,28
+802976,Mangalagiri (M),548,28
+802977,Sattenapalle (M),548,28
+802978,Vinukonda (M + OG),548,28
+802978,Vinukonda (M),548,28
+802979,Narasaraopet (M + OG),548,28
+802979,Narasaraopet (M),548,28
+802980,Chilakaluripet (M),548,28
+802981,Guntur (M Corp. + OG),548,28
+802981,Guntur (M Corp.),548,28
+802982,Tenali (M),548,28
+802983,Ponnur (M),548,28
+802984,Bapatla (M),548,28
+802985,Repalle (M),548,28
+802986,Markapur (M),549,28
+802987,Chirala (M + OG) (Part),549,28
+802987,Chirala (M),549,28
+802987,Chirala (M + OG) (Part),549,28
+802988,Ongole (M + OG) (Part),549,28
+802988,Ongole (M + OG) (Part),549,28
+802988,Ongole (M),549,28
+802989,Kandukur (M),549,28
+802990,Kavali (M + OG),550,28
+802990,Kavali (M),550,28
+802991,Nellore (M Corp. + OG),550,28
+802991,Nellore (M Corp.),550,28
+802992,Gudur (M + OG) (Part),550,28
+802993,Venkatagiri (M + OG),550,28
+802993,Venkatagiri (M),550,28
+802992,Gudur (M + OG) (Part),550,28
+802994,Badvel (M) (Part),551,28
+802994,Badvel (M) (Part),551,28
+802995,Proddatur (M + OG),551,28
+802995,Proddatur (M),551,28
+802996,Jammalamadugu (NP),551,28
+802997,Pulivendla (M),551,28
+802998,Kadapa (M Corp. + OG) (Part),551,28
+802998,Kadapa (M Corp.) (Part),551,28
+802998,Kadapa (M Corp. + OG) (Part),551,28
+802998,Kadapa (M Corp.) (Part),551,28
+802999,Rayachoti (M),551,28
+803000,Rajampet (NP + OG),551,28
+803000,Rajampet (NP),551,28
+803001,Yemmiganur (M),552,28
+803002,Kurnool (M Corp. + OG) (Part),552,28
+803002,Kurnool (M Corp. + OG) (Part),552,28
+803002,Kurnool (M Corp.) (Part),552,28
+803003,Adoni (M + OG),552,28
+803003,Adoni (M),552,28
+803004,Nandyal (M + OG),552,28
+803004,Nandyal (M),552,28
+803005,Dhone (NP),552,28
+803006,Rayadurg (M),553,28
+803007,Guntakal (M),553,28
+803008,Tadpatri (M),553,28
+803009,Anantapur (M Corp. + OG) (Part),553,28
+803009,Anantapur (M Corp.),553,28
+803009,Anantapur (M Corp. + OG) (Part),553,28
+803010,Dharmavaram (M),553,28
+803011,Kadiri (M),553,28
+803012,Hindupur (M),553,28
+803014,Tirupati (M Corp. + OG) (Part),554,28
+803013,Srikalahasti (M),554,28
+803014,Tirupati (M Corp. + OG) (Part),554,28
+803014,Tirupati (M Corp.),554,28
+803015,Madanapalle (M + OG),554,28
+803015,Madanapalle (M),554,28
+803016,Nagari (M),554,28
+803017,Puttur (M),554,28
+803018,Punganur (M),554,28
+803020,Palamaner (M + OG) (Part),554,28
+803019,Chittoor (M + OG),554,28
+803019,Chittoor (M),554,28
+803020,Palamaner (M + OG) (Part),554,28
+803020,Palamaner (M),554,28
+803021,Nipani  (CMC),555,29
+803022,Sadalgi (TP),555,29
+803023,Chikodi (TMC),555,29
+803024,Athni (TMC + OG),555,29
+803024,Athni (TMC),555,29
+803025,Kudchi (TP),555,29
+803026,Raybag (TP),555,29
+803027,Mudalgi (TMC),555,29
+803028,Konnur (TP),555,29
+803029,Gokak Falls (NAC),555,29
+803030,Gokak (CMC),555,29
+803031,Sankeshwar (TMC),555,29
+803032,Hukeri (TP),555,29
+803033,Belgaum (M Corp. + OG),555,29
+803033,Belgaum (M Corp.),555,29
+803034,Belgaum Cantonment (CB),555,29
+803035,Khanapur (TP),555,29
+803036,Bail Hongal (TMC),555,29
+803037,Saundatti-Yellamma (TMC),555,29
+803038,Ramdurg (TMC + OG),555,29
+803038,Ramdurg (TMC),555,29
+803039,Mahalingpur (TMC),556,29
+803040,Terdal (TMC),556,29
+803041,Jamkhandi (CMC),556,29
+803042,Rabkavi Banhatti (CMC),556,29
+803043,Bilgi (TP),556,29
+803044,Mudhol (TMC),556,29
+803045,Kerur (TP),556,29
+803046,Badami (TMC),556,29
+803047,Guledgudda (TMC),556,29
+803048,Bagalkot (CMC),556,29
+803049,Hungund (TP),556,29
+803050,Ilkal (CMC),556,29
+803051,Bijapur (CMC),557,29
+803052,Indi (TMC),557,29
+803053,Sindgi (TMC),557,29
+803054,Basavana Bagevadi (TMC),557,29
+803055,Muddebihal (TMC),557,29
+803056,Talikota (TMC),557,29
+803057,Basavakalyan (CMC),558,29
+803058,Bhalki (TMC),558,29
+803059,Aurad (TP),558,29
+803060,Bidar (CMC + OG),558,29
+803060,Bidar (CMC),558,29
+803061,Homnabad (TMC),558,29
+803062,Chitgoppa (TMC),558,29
+803063,Mudgal (TP),559,29
+803064,Lingsugur (TMC),559,29
+803065,Hatti Gold Mines(NAC),559,29
+803066,Devadurga (TMC),559,29
+803067,Raichur (CMC),559,29
+803068,Manvi (TMC),559,29
+803069,Sindhnur (CMC),559,29
+803070,Yelbarga (TP),560,29
+803071,Kushtagi (TMC),560,29
+803072,Gangawati (CMC + OG),560,29
+803072,Gangawati (CMC),560,29
+803073,Koppal (CMC),560,29
+803074,Nargund (TMC),561,29
+803075,Ron (TMC),561,29
+803076,Gajendragarh (TMC),561,29
+803077,Naregal (TP),561,29
+803078,Gadag-Betigeri (CMC),561,29
+803079,Mulgund (TP),561,29
+803080,Shirhatti (TP),561,29
+803081,Lakshmeshwar (TMC),561,29
+803082,Mundargi (TMC),561,29
+803083,Hubli-Dharwad (M Corp.),562,29
+803084,Alnavar (TP),562,29
+803085,Navalgund (TMC),562,29
+803086,Annigeri (TMC),562,29
+803087,Kalghatgi (TP),562,29
+803088,Kundgol (TP),562,29
+803089,Dandeli (CMC),563,29
+803090,Karwar (CMC + OG),563,29
+803090,Karwar (CMC),563,29
+803091,Haliyal (TP),563,29
+803092,Yellapur (TP),563,29
+803093,Mundgod (TP),563,29
+803094,Sirsi (CMC),563,29
+803095,Ankola (TP + OG),563,29
+803095,Ankola (TP),563,29
+803096,Kumta (TMC + OG),563,29
+803096,Kumta (TMC),563,29
+803097,Siddapur (TP),563,29
+803098,Honavar (TP),563,29
+803099,Bhatkal (TMC),563,29
+803100,Shiggaon (TMC),564,29
+803101,Bankapura (TMC),564,29
+803102,Savanur (TMC),564,29
+803103,Hangal (TMC),564,29
+803104,Haveri (CMC),564,29
+803105,Byadgi (TMC),564,29
+803106,Hirekerur (TP),564,29
+803107,Ranibennur (CMC),564,29
+803108,Hoovina Hadagalli (TMC),565,29
+803109,Hospet (CMC),565,29
+803110,Kamalapuram (TP),565,29
+803111,Kampli (TMC),565,29
+803112,Siruguppa (TMC),565,29
+803113,Tekkalakote (TP),565,29
+803114,Bellary (M Corp.),565,29
+803115,Sandur (TMC),565,29
+803116,Kudligi (TP),565,29
+803117,Kotturu (TP),565,29
+803118,Molakalmuru (TP),566,29
+803119,Challakere (TMC),566,29
+803120,Chitradurga (CMC + OG),566,29
+803120,Chitradurga (CMC),566,29
+803121,Holalkere (TP),566,29
+803122,Hosdurga (TMC),566,29
+803123,Hiriyur (TMC),566,29
+803124,Harihar (CMC + OG),567,29
+803124,Harihar (CMC),567,29
+803125,Harapanahalli (TMC),567,29
+803126,Jagalur (TP),567,29
+803127,Davanagere (M Corp.),567,29
+803128,Honnali (TP),567,29
+803129,Channagiri (TP),567,29
+803130,Jog Kargal (TP),568,29
+803131,Sagar (CMC),568,29
+803132,Sorab (TP),568,29
+803133,Siralkoppa (TP),568,29
+803134,Shikarpur (TMC),568,29
+803135,Hosanagara (TP),568,29
+803136,Tirthahalli (TP),568,29
+803137,Shimoga (CMC),568,29
+803138,Bhadravati (CMC),568,29
+803139,Kundapura (TMC),569,29
+803140,Saligram (TP),569,29
+803141,Udupi (CMC + OG),569,29
+803141,Udupi (CMC),569,29
+803142,Karkal (TMC),569,29
+803143,Sringeri (TP),570,29
+803144,Koppa (TP),570,29
+803145,Narasimharajapura (TP),570,29
+803146,Tarikere (TMC),570,29
+803147,Birur (TMC),570,29
+803148,Kadur (TMC),570,29
+803149,Chikmagalur (CMC),570,29
+803150,Mudigere (TP),570,29
+803151,Kudremukh (NAC),570,29
+803152,Chiknayakanhalli (TMC),571,29
+803153,Sira (CMC),571,29
+803154,Pavagada (TMC),571,29
+803155,Madhugiri (TMC),571,29
+803156,Koratagere (TP),571,29
+803157,Tumkur (CMC),571,29
+803158,Gubbi (TP),571,29
+803159,Tiptur (CMC),571,29
+803160,Turuvekere (TP),571,29
+803161,Kunigal (TMC),571,29
+803162,BBMP (M Corp. + OG),572,29
+803162,BBMP (M Corp.),572,29
+803163,Anekal (TMC),572,29
+803164,Krishnarajpet (TMC),573,29
+803165,Nagamangala (TP),573,29
+803166,Pandavapura (TP),573,29
+803167,Shrirangapattana (TMC),573,29
+803168,Mandya (CMC),573,29
+803169,Maddur (TMC),573,29
+803170,Malavalli (TMC),573,29
+803171,Sakleshpur (TMC),574,29
+803172,Belur (TMC),574,29
+803173,Arsikere (TMC + OG),574,29
+803173,Arsikere (TMC),574,29
+803174,Hassan (CMC + OG),574,29
+803174,Hassan (CMC),574,29
+803175,Alur (TP),574,29
+803176,Arkalgud (TP),574,29
+803177,Hole Narsipur (TMC),574,29
+803178,Channarayapatna (TMC + OG),574,29
+803178,Channarayapatna (TMC),574,29
+803179,Mulki (TP),575,29
+803180,Mudbidri (TMC),575,29
+803181,Mangalore (M Corp. + OG),575,29
+803181,Mangalore (M Corp.),575,29
+803182,Ullal (TMC),575,29
+803183,Bantval (TMC),575,29
+803184,Beltangadi (TP),575,29
+803185,Puttur (TMC),575,29
+803186,Sulya (TP),575,29
+803187,Madikeri (CMC),576,29
+803188,Somvarpet (TP),576,29
+803189,Kushalnagar (TP),576,29
+803190,Virajpet (TP),576,29
+803191,Piriyapatna (TP),577,29
+803192,Hunsur (TMC),577,29
+803193,Krishnarajanagara (TMC),577,29
+803194,Mysore (M Corp. + OG),577,29
+803194,Mysore (M Corp.),577,29
+803195,Heggadadevankote (TP),577,29
+803196,Saragur (TP),577,29
+803197,Nanjangud (TMC),577,29
+803198,Bannur (TMC),577,29
+803199,Tirumakudal  Narsipur (TP),577,29
+803200,Gundlupet (TMC),578,29
+803201,Chamarajanagar (CMC),578,29
+803202,Yelandur (TP),578,29
+803203,Kollegal (CMC),578,29
+803204,Hanur (TP),578,29
+803205,Aland (TMC),579,29
+803206,Afzalpur (TP),579,29
+803207,Gulbarga (M Corp. + OG),579,29
+803207,Gulbarga (M Corp.),579,29
+803208,Chincholi (TP),579,29
+803209,Sedam (TMC),579,29
+803210,Chitapur (TMC),579,29
+803211,Shahabad ACC (NAC + OG),579,29
+803211,Shahabad ACC (NAC),579,29
+803212,Shahabad (CMC),579,29
+803213,Wadi (TMC),579,29
+803214,Jevargi (TP),579,29
+803215,Shorapur (TMC),580,29
+803216,Bhimarayanagudi (NAC),580,29
+803217,Shahpur (TMC),580,29
+803218,Gurmatkal (TP),580,29
+803219,Yadgir (CMC),580,29
+803220,Srinivaspur (TMC),581,29
+803221,Kolar (CMC),581,29
+803222,Malur (TMC),581,29
+803223,Bangarapet (TMC),581,29
+803224,Robertson Pet (CMC + OG),581,29
+803224,Robertson Pet (CMC),581,29
+803225,Mulbagal (TMC),581,29
+803226,Gauribidanur (TMC),582,29
+803227,Chikkaballapura (CMC),582,29
+803228,Gudibanda (TP),582,29
+803229,Bagepalli (TMC),582,29
+803230,Sidlaghatta (TMC),582,29
+803231,Chintamani (CMC),582,29
+803232,Nelamangala (TMC),583,29
+803233,Dod Ballapur (CMC + OG),583,29
+803233,Dod Ballapur (CMC),583,29
+803234,Vijayapura (TMC),583,29
+803235,Devanahalli (TMC),583,29
+803236,Hosakote (TMC),583,29
+803237,Magadi (TMC),584,29
+803238,Ramanagara (CMC),584,29
+803239,Channapatna (CMC),584,29
+803240,Kanakapura (TMC),584,29
+803241,Pernem (M Cl),585,30
+803242,Mapusa (M Cl),585,30
+803243,Panaji (M Cl + OG),585,30
+803243,Panaji (M Cl),585,30
+803244,Bicholim (M Cl),585,30
+803245,Sanquelim (M Cl),585,30
+803246,Valpoi (M Cl),585,30
+803247,Ponda (M Cl),585,30
+803248,Mormugao (M Cl),586,30
+803249,Margao (M Cl),586,30
+803250,Cuncolim (M Cl),586,30
+803251,Quepem (M Cl),586,30
+803252,Curchorem-Cacora (M Cl),586,30
+803253,Sanguem (M Cl),586,30
+803254,Canacona (M Cl),586,30
+803255,Kasaragod (M),588,32
+803256,Kanhangad (M + OG),588,32
+803256,Kanhangad (M),588,32
+803257,Payyannur (M),589,32
+803258,Taliparamba (M),589,32
+803259,Kannur (M),589,32
+803260,Kannur Cantonment (CB),589,32
+803261,Mattannur (M),589,32
+803262,Koothuparamba (M),589,32
+803263,Thalassery (M),589,32
+803264,Kalpetta (M),590,32
+803265,Vadakara (M),591,32
+803266,Quilandy (M),591,32
+803267,Kozhikode (M Corp. + OG),591,32
+803267,Kozhikode (M Corp.),591,32
+803268,Manjeri (M),592,32
+803269,Malappuram (M + OG),592,32
+803269,Malappuram (M),592,32
+803270,Perinthalmanna (M),592,32
+803271,Tirur (M),592,32
+803272,Ponnani (M),592,32
+803273,Shoranur (M),593,32
+803274,Ottappalam (M),593,32
+803275,Palakkad (M),593,32
+803276,Chittur-Thathamangalam (M),593,32
+803277,Kunnamkulam (M),594,32
+803278,Guruvayoor (M),594,32
+803279,Chavakkad (M),594,32
+803280,Thrissur (M Corp.),594,32
+803281,Kodungallur (M + OG),594,32
+803281,Kodungallur (M),594,32
+803282,Irinjalakuda (M),594,32
+803283,Chalakudy (M),594,32
+803284,Perumbavoor (M),595,32
+803285,Angamaly (M),595,32
+803286,Aluva (M),595,32
+803287,Paravur (M),595,32
+803288,Kochi (M Corp. + OG) (Part),595,32
+803288,Kochi (M Corp. + OG) (Part),595,32
+803288,Kochi (M Corp.) (Part),595,32
+803288,Kochi (M Corp. + OG) (Part),595,32
+803289,Kalamassery (M),595,32
+803288,Kochi (M Corp.) (Part),595,32
+803290,Thrippunithura (M),595,32
+803291,Muvattupuzha (M),595,32
+803292,Kothamangalam (M),595,32
+803293,Thodupuzha (M),596,32
+803294,Palai (M),597,32
+803295,Vaikom (M),597,32
+803296,Kottayam (M),597,32
+803297,Changanassery (M),597,32
+803298,Cherthala (M),598,32
+803299,Alappuzha (M + OG),598,32
+803299,Alappuzha (M),598,32
+803300,Kayamkulam (M),598,32
+803301,Chengannur (M),598,32
+803302,Mavelikkara (M),598,32
+803303,Thiruvalla (M),599,32
+803304,Pathanamthitta (M),599,32
+803305,Adoor (M),599,32
+803306,Kollam (M Corp. + OG) (Part),600,32
+803307,Punalur (M),600,32
+803306,Kollam (M Corp. + OG) (Part),600,32
+803306,Kollam (M Corp.) (Part),600,32
+803308,Paravoor (M),600,32
+803309,Varkala (M),601,32
+803310,Attingal (M),601,32
+803311,Nedumangad (M),601,32
+803312,Thiruvananthapuram (M Corp. + OG) (Part),601,32
+803312,Thiruvananthapuram (M Corp. + OG) (Part),601,32
+803313,Neyyattinkara (M),601,32
+803314,Gummidipoondi (TP),602,33
+803315,Ponneri (TP),602,33
+803316,Arani (TP),602,33
+803317,Minjur (TP),602,33
+803318,Uthukkottai (TP),602,33
+803319,Tiruttani (M),602,33
+803320,Pallipattu (TP),602,33
+803321,Pothatturpettai (TP),602,33
+803322,Thiruvallur (M),602,33
+803323,Avadi (M),602,33
+803324,Thirunindravur (TP),602,33
+803325,Tiruverkadu (M + OG),602,33
+803325,Tiruverkadu (M),602,33
+803326,Thirumazhisai (TP),602,33
+803327,Poonamallee (M + OG),602,33
+803327,Poonamallee (M),602,33
+803328,Ambattur (M),602,33
+803329,Maduravoyal (M),602,33
+803330,Valasaravakkam (M),602,33
+803331,Porur (TP),602,33
+803332,Kattivakkam (M),602,33
+803333,Tiruvottiyur (M),602,33
+803334,Manali (M),602,33
+803335,Naravarikuppam (TP),602,33
+803336,Puzhal (TP),602,33
+803337,Madavaram (M),602,33
+803338,Chinnasekkadu (TP),602,33
+803339,Chennai (M Corp.),603,33
+803340,Mangadu (TP),604,33
+803341,Kundrathur (TP + OG),604,33
+803341,Kundrathur (TP),604,33
+803342,Sriperumbudur (TP),604,33
+803343,Chitlapakkam (TP),604,33
+803344,Perungalathur (TP),604,33
+803345,Tambaram (M),604,33
+803346,Sembakkam (TP),604,33
+803347,Peerkankaranai (TP + OG),604,33
+803347,Peerkankaranai (TP),604,33
+803348,Madambakkam (TP),604,33
+803349,Nandambakkam (TP),604,33
+803350,St.Thomas Mount-cum-Pallavaram (CB),604,33
+803351,Alandur (M),604,33
+803352,Meenambakkam (TP + OG),604,33
+803352,Meenambakkam (TP),604,33
+803353,Anakaputhur (M),604,33
+803354,Pammal (M),604,33
+803355,Thiruneermalai (TP),604,33
+803356,Pallavaram (M + OG),604,33
+803356,Pallavaram (M),604,33
+803357,Puzhithivakkam (Ullagaram) (M),604,33
+803358,Perungudi (TP),604,33
+803359,Pallikaranai (TP),604,33
+803360,Sholinganallur (TP + OG),604,33
+803360,Sholinganallur (TP),604,33
+803361,Nandivaram - Guduvancheri (TP),604,33
+803362,Maraimalainagar (M),604,33
+803363,Thiruporur (TP),604,33
+803364,Chengalpattu (M),604,33
+803365,Kancheepuram (M),604,33
+803366,Sevilimedu (TP),604,33
+803367,Walajabad (TP),604,33
+803368,Uthiramerur (TP),604,33
+803369,Mamallapuram (TP),604,33
+803370,Tirukalukundram (TP),604,33
+803371,Karunguzhi (TP),604,33
+803372,Maduranthakam (M),604,33
+803373,Acharapakkam (TP),604,33
+803374,Edakalinadu (TP),604,33
+803375,Gudiyatham (M),605,33
+803376,Pernampattu (M),605,33
+803377,Thiruvalam (TP),605,33
+803378,Katpadi (TP),605,33
+803379,Dharapadavedu (M),605,33
+803380,Gandhinagar (TP),605,33
+803381,Kalinjur (TP),605,33
+803382,Sholingur (TP),605,33
+803383,Ammoor (TP),605,33
+803384,Walajapet (M + OG),605,33
+803384,Walajapet (M),605,33
+803385,Ranipettai (M),605,33
+803386,Melvisharam (M),605,33
+803387,Arakonam (M),605,33
+803388,Thakkolam (TP),605,33
+803389,Nemili (TP),605,33
+803390,Kaveripakkam (TP),605,33
+803391,Panapakkam (TP),605,33
+803392,Arcot (M),605,33
+803393,Vilapakkam (TP),605,33
+803394,Timiri (TP),605,33
+803395,Kalavai (TP),605,33
+803396,Sathuvachari (M),605,33
+803397,Shenbakkam (TP),605,33
+803398,Vellore (M. Corp),605,33
+803399,Pallikonda (TP),605,33
+803400,Thorapadi (TP),605,33
+803401,Allapuram (TP),605,33
+803402,Pennathur (TP),605,33
+803403,Odugathur (TP),605,33
+803404,Vaniyambadi (M),605,33
+803405,Alangayam (TP),605,33
+803406,Ambur (M),605,33
+803407,Uthayendram (TP),605,33
+803408,Natrampalli (TP),605,33
+803409,Jolarpet (M),605,33
+803410,Tirupathur (M),605,33
+803411,Kannamangalam (TP),606,33
+803412,Arani (M),606,33
+803413,Tiruvethipuram (M),606,33
+803414,Peranamallur (TP),606,33
+803415,Vandavasi (M),606,33
+803416,Desur (TP),606,33
+803417,Kalambur (TP),606,33
+803418,Polur (TP),606,33
+803419,Chetpet (TP),606,33
+803420,Pudupalayam (TP),606,33
+803421,Chengam (TP),606,33
+803422,Tiruvannamalai (M),606,33
+803423,Kilpennathur (TP),606,33
+803424,Vettavalam (TP),606,33
+803425,Gingee (TP),607,33
+803426,Ananthapuram (TP),607,33
+803427,Tindivanam (M),607,33
+803428,Marakkanam (TP),607,33
+803429,Kottakuppam (TP),607,33
+803430,Vikravandi (TP),607,33
+803431,Viluppuram (M),607,33
+803432,Valavanur (TP),607,33
+803433,Manalurpet (TP),607,33
+803434,Arakandanallur (TP),607,33
+803435,Tirukkoyilur (TP),607,33
+803436,Thiruvennainallur (TP),607,33
+803437,Sankarapuram (TP),607,33
+803438,Vadakkanandal (TP),607,33
+803439,Thiagadurgam (TP),607,33
+803440,Kallakkurichi (M),607,33
+803441,Chinnasalem (TP),607,33
+803442,Ulundurpettai (TP),607,33
+803443,Kolathur (TP),608,33
+803444,Mecheri (TP),608,33
+803445,Veerakkalpudur (TP),608,33
+803446,Mettur (M),608,33
+803447,P.N.Patti (TP),608,33
+803448,Nangavalli (TP),608,33
+803449,Vanavasi (TP),608,33
+803450,Jalakandapuram (TP),608,33
+803451,Kadayampatti (TP),608,33
+803452,Omalur (TP),608,33
+803453,Karuppur (TP),608,33
+803454,Tharamangalam (TP),608,33
+803455,Poolampatti (TP),608,33
+803456,Edappadi (M),608,33
+803457,Konganapuram (TP),608,33
+803458,Edaganasalai (TP),608,33
+803459,Arasiramani (TP),608,33
+803460,Thevur (TP),608,33
+803461,Sankari (TP),608,33
+803462,Kannankurichi (TP),608,33
+803463,Salem (M Corp.),608,33
+803464,Ilampillai (TP),608,33
+803465,Panaimarathupatti (TP),608,33
+803466,Mallur (TP),608,33
+803467,Attayampatti (TP),608,33
+803468,Belur (TP),608,33
+803469,Vazhapadi (TP),608,33
+803470,Ayothiapattinam (TP),608,33
+803471,Pethanaickenpalayam (TP),608,33
+803472,Ethapur (TP),608,33
+803473,Attur (M),608,33
+803474,Narasingapuram (M),608,33
+803475,Keeripatti (TP),608,33
+803476,Veeraganur ((TP),608,33
+803477,Thedavur (TP),608,33
+803478,Gangavalli (TP),608,33
+803479,Thammampatti (TP),608,33
+803480,Sentharapatti (TP),608,33
+803481,Mallasamudram (TP),609,33
+803482,Kumarapalayam (M),609,33
+803483,Padaiveedu (TP),609,33
+803484,Tiruchengode (M),609,33
+803485,Alampalayam (TP),609,33
+803486,Pallipalayam (M),609,33
+803487,Vennanthur (TP),609,33
+803488,Athanur (TP),609,33
+803489,R.Pudupatti (TP),609,33
+803490,Namagiripettai (TP),609,33
+803491,Seerapalli (TP),609,33
+803492,Pattinam (TP),609,33
+803493,Rasipuram (M),609,33
+803494,Pillanallur (TP),609,33
+803495,Kalappanaickenpatti (TP),609,33
+803496,Senthamangalam (TP),609,33
+803497,Namakkal (M),609,33
+803498,Erumaipatti (TP),609,33
+803499,Mohanur (TP),609,33
+803500,Paramathi (TP),609,33
+803501,Velur (TP),609,33
+803502,Pothanur (TP),609,33
+803503,Venkarai (TP),609,33
+803504,Pandamangalam (TP),609,33
+803505,Sathyamangalam (M),610,33
+803506,Kembainaickenpalayam (TP),610,33
+803507,Ariyappampalayam (TP),610,33
+803508,Bhavanisagar (TP),610,33
+803509,Punjaipuliampatti (M),610,33
+803510,Nerunjipettai (TP),610,33
+803511,Ammapettai (TP),610,33
+803512,Anthiyur (TP),610,33
+803513,Olagadam (TP),610,33
+803514,Athani (TP),610,33
+803515,Jambai (TP),610,33
+803516,Appakudal (TP),610,33
+803517,Bhavani (M),610,33
+803518,Salangapalayam (TP),610,33
+803519,Periyakodiveri (TP),610,33
+803520,Vaniputhur (TP),610,33
+803521,Lakkampatti (TP),610,33
+803522,Kasipalayam (G) (TP),610,33
+803523,Gobichettipalayam (M),610,33
+803524,Kuhalur (TP),610,33
+803525,P.Mettupalayam (TP),610,33
+803526,Elathur (TP),610,33
+803527,Kolappalur (TP),610,33
+803528,Nambiyur (TP),610,33
+803529,Pallapalayam (TP),610,33
+803530,Kanjikoil (TP),610,33
+803531,Nallampatti (TP),610,33
+803532,Pethampalayam (TP),610,33
+803533,Karumandi Chellipalayam (TP),610,33
+803534,Perundurai (TP),610,33
+803535,Chennimalai (TP),610,33
+803536,Suriyampalayam (TP),610,33
+803537,Chithode (TP),610,33
+803538,Brahmana Periya Agraharam (TP),610,33
+803539,Periyasemur (M),610,33
+803540,Nasiyanur (TP),610,33
+803541,Veerappanchatiram (M),610,33
+803542,Erode (M.Corp),610,33
+803543,Surampatti (M),610,33
+803544,Kasipalayam  (E) (M),610,33
+803545,Avalpoondurai (TP),610,33
+803546,Modakurichi (TP),610,33
+803547,Pasur (TP),610,33
+803548,Kilampadi (TP),610,33
+803549,Vellottamparappu (TP),610,33
+803550,Vadugapatti (TP),610,33
+803551,Arachalur (TP),610,33
+803552,Sivagiri (TP),610,33
+803553,Unjalur (TP),610,33
+803554,Kollankoil (TP),610,33
+803555,Vengampudur (TP),610,33
+803556,Kodumudi (TP),610,33
+803557,Chennasamudram (TP),610,33
+803558,Nelliyalam (M),611,33
+803559,Devarshola (TP),611,33
+803560,Gudalur (M),611,33
+803561,O' Valley (TP),611,33
+803562,Sholur (TP),611,33
+803563,Naduvattam (TP),611,33
+803564,Udhagamandalam (M),611,33
+803565,Kotagiri (TP),611,33
+803566,Jagathala (TP),611,33
+803567,Wellington (CB),611,33
+803568,Kethi (TP),611,33
+803569,Adikaratti (TP),611,33
+803570,Coonoor (M),611,33
+803571,Huligal (TP),611,33
+803572,Bikketti (TP),611,33
+803573,Kilkunda (TP),611,33
+803574,Keeranur (TP),612,33
+803575,Neikkarapatti (TP),612,33
+803576,Palani (M),612,33
+803577,Ayakudi (TP),612,33
+803578,Balasamudram (TP),612,33
+803579,Oddanchatram (TP),612,33
+803580,Palayam (TP),612,33
+803581,Vedasandur (TP),612,33
+803582,Eriodu (TP),612,33
+803583,Ayyalur (TP),612,33
+803584,Vadamadurai (TP),612,33
+803585,Natham (TP),612,33
+803586,Sriramapuram (TP),612,33
+803587,Agaram (TP),612,33
+803588,Thadikombu (TP),612,33
+803589,Dindigul (M),612,33
+803590,Kannivadi (TP),612,33
+803591,Sithayankottai (TP),612,33
+803592,Chinnalapatti (TP),612,33
+803593,Ayyampalayam (TP),612,33
+803594,Pannaikadu (TP),612,33
+803595,Kodaikanal (M),612,33
+803596,Sevugampatti (TP),612,33
+803597,Ammainaickanur (TP),612,33
+803598,Nilakkottai (TP),612,33
+803599,Pattiveeranpatti (TP),612,33
+803600,Batlagundu (TP),612,33
+803601,Aravakurichi (TP),613,33
+803602,Pallapatti (TP),613,33
+803603,TNPL Pugalur (TP),613,33
+803604,Punjaipugalur (TP),613,33
+803605,Punjai Thottakurichi (TP),613,33
+803606,Inam Karur (M),613,33
+803607,Karur (M),613,33
+803608,Puliyur (TP),613,33
+803609,Thanthoni (M),613,33
+803610,Uppidamangalam (TP),613,33
+803611,Krishnarayapuram (TP),613,33
+803612,P.J. Cholapuram (TP),613,33
+803613,Kulithalai (M),613,33
+803614,Marudur (TP),613,33
+803615,Nangavaram (TP),613,33
+803616,Kattuputhur (TP),614,33
+803617,Thottiyam (TP),614,33
+803618,Mettupalayam (TP),614,33
+803619,Thathaiyangarpet (TP),614,33
+803620,Musiri (TP),614,33
+803621,Uppiliapuram (TP),614,33
+803622,Balakrishnampatti (TP),614,33
+803623,Thuraiyur (M),614,33
+803624,S. Kannanur (TP),614,33
+803625,Manachanallur (TP),614,33
+803626,Kallakudi (TP),614,33
+803627,Pullampadi (TP),614,33
+803628,Puvalur (TP),614,33
+803629,Lalgudi (TP),614,33
+803630,Sirugamani (TP),614,33
+803631,Tiruchirappalli (M Corp.),614,33
+803632,Koothappar (TP),614,33
+803633,Thiruverumbur (TP),614,33
+803634,Thuvakudi  (M),614,33
+803635,Manapparai (M),614,33
+803636,Ponnampatti (TP),614,33
+803637,Poolambadi (TP),615,33
+803638,Arumbavur (TP),615,33
+803639,Perambalur (M),615,33
+803640,Kurumbalur (TP),615,33
+803641,Labbaikudikadu (TP),615,33
+803642,Varadarajanpettai (TP),616,33
+803643,Jayankondam (M),616,33
+803644,Udayarpalayam (TP),616,33
+803645,Ariyalur (M),616,33
+803646,Thorapadi (TP),617,33
+803647,Melpattampakkam (TP),617,33
+803648,Nellikuppam (M),617,33
+803649,Panruti (M),617,33
+803650,Cuddalore (M),617,33
+803651,Kurinjipadi (TP),617,33
+803652,Vadalur (TP),617,33
+803653,Parangipettai (TP),617,33
+803654,Sethiathoppu (TP),617,33
+803655,Bhuvanagiri (TP),617,33
+803656,Killai (TP),617,33
+803657,Chidambaram (M),617,33
+803658,Annamalai Nagar (TP),617,33
+803659,Srimushnam (TP),617,33
+803660,Lalpet (TP),617,33
+803661,Kattumannarkoil (TP),617,33
+803662,Mangalampet (TP),617,33
+803663,Gangaikondan (TP),617,33
+803664,Virudhachalam (M),617,33
+803665,Pennadam (TP),617,33
+803666,Tittakudi (TP),617,33
+803667,Sirkali (M),618,33
+803668,Vaitheeswarankoil (TP),618,33
+803669,Manalmedu (TP),618,33
+803670,Mayiladuthurai (M),618,33
+803671,Kuthalam (TP),618,33
+803672,Tharangambadi (TP),618,33
+803673,Tittacheri (TP),618,33
+803674,Nagapattinam (M),618,33
+803675,Kilvelur (TP),618,33
+803676,Velankanni (TP),618,33
+803677,Thalainayar (TP),618,33
+803678,Vedaranyam (M),618,33
+803679,Valangaiman (TP),619,33
+803680,Kodavasal (TP),619,33
+803681,Koradacheri (TP),619,33
+803682,Peralam (TP),619,33
+803683,Nannilam (TP),619,33
+803684,Thiruvarur (M),619,33
+803685,Needamangalam (TP),619,33
+803686,Kuthanallur (M),619,33
+803687,Mannargudi (M),619,33
+803688,Thiruthuraipoondi (M),619,33
+803689,Muthupet (TP),619,33
+803690,Thiruppanandal (TP),620,33
+803691,Aduthurai alias Maruthuvakudi (TP),620,33
+803692,Veppathur (TP),620,33
+803693,Thirupuvanam (TP),620,33
+803694,Thiruvidaimarudur (TP),620,33
+803695,Cholapuram (TP),620,33
+803696,Thirunageswaram (TP),620,33
+803697,Kumbakonam (M),620,33
+803698,Swamimalai (TP),620,33
+803699,Dharasuram (TP),620,33
+803700,Papanasam (TP),620,33
+803701,Ayyampettai (TP),620,33
+803702,Melattur (TP),620,33
+803703,Ammapettai (TP),620,33
+803704,Thiruvaiyaru (TP),620,33
+803705,Melathiruppanthuruthi (TP),620,33
+803706,Thirukkattupalli (TP),620,33
+803707,Thanjavur (M),620,33
+803708,Vallam (TP),620,33
+803709,Orathanadu (Mukthambalpuram) (TP),620,33
+803710,Madukkur (TP),620,33
+803711,Pattukkottai (M),620,33
+803712,Adiramapattinam (TP),620,33
+803713,Peravurani (TP),620,33
+803714,Perumagalur (TP),620,33
+803715,Iluppur (TP),621,33
+803716,Annavasal (TP),621,33
+803717,Keeranur (TP),621,33
+803718,Pudukkottai (M),621,33
+803719,Arimalam (TP),621,33
+803720,Ponnamaravathi (TP),621,33
+803721,Alangudi (TP),621,33
+803722,Keeramangalam (TP),621,33
+803723,Karambakkudi (TP),621,33
+803724,Aranthangi (M),621,33
+803725,Nerkuppai (TP),622,33
+803726,Singampuneri (TP),622,33
+803727,Tirupathur (TP),622,33
+803728,Kanadukathan (TP),622,33
+803729,Pallathur (TP),622,33
+803730,Kottaiyur (TP),622,33
+803731,Kandanur (TP),622,33
+803732,Puduvayal (TP),622,33
+803733,Karaikkudi (M),622,33
+803734,Devakottai (M),622,33
+803735,Nattarasankottai (TP),622,33
+803736,Sivaganga (M),622,33
+803737,Thirupuvanam (TP),622,33
+803738,Manamadurai (TP),622,33
+803739,Ilayangudi (TP),622,33
+803740,A.Vellalapatti (TP),623,33
+803741,Melur (M),623,33
+803742,Anaiyur (M),623,33
+803743,Paravai (TP),623,33
+803744,Vilangudi (TP),623,33
+803745,Vadipatti (TP),623,33
+803746,Palamedu (TP),623,33
+803747,Sholavandan (TP),623,33
+803748,Alanganallur (TP),623,33
+803749,Usilampatti (M),623,33
+803750,Elumalai (TP),623,33
+803751,T.Kallupatti (TP),623,33
+803752,Peraiyur (TP),623,33
+803753,Thirumangalam (M),623,33
+803754,Madurai (M Corp.),623,33
+803755,Thirunagar (TP),623,33
+803756,Avaniapuram (M),623,33
+803757,Thiruparankundram (M + OG),623,33
+803757,Thiruparankundram (M),623,33
+803758,Harveypatti (TP),623,33
+803759,Boothipuram (TP),624,33
+803760,Bodinayakanur (M),624,33
+803761,Melachokkanathapuram (TP),624,33
+803762,B. Meenakshipuram (TP),624,33
+803763,Ganguvarpatti (TP),624,33
+803764,Devadanapatti (TP),624,33
+803765,Vadugapatti (TP),624,33
+803766,Thamaraikulam (TP),624,33
+803767,Periyakulam (M),624,33
+803768,Thenkarai (TP),624,33
+803769,Theni Allinagaram (M),624,33
+803770,Palani Chettipatti (TP),624,33
+803771,Veerapandi (TP),624,33
+803772,Thevaram (TP),624,33
+803773,Kuchanur (TP),624,33
+803774,Markayankottai (TP),624,33
+803775,Pannaipuram (TP),624,33
+803776,Kombai (TP),624,33
+803777,Chinnamanur (M),624,33
+803778,Odaipatti (TP),624,33
+803779,Uthamapalayam (TP),624,33
+803780,Hanumanthampatti (TP),624,33
+803781,Pudupatti (TP),624,33
+803782,Kamayagoundanpatti (TP),624,33
+803783,Kambam (M),624,33
+803784,Gudalur (M),624,33
+803785,Highways (TP),624,33
+803786,Andipatti Jakkampatti (TP),624,33
+803787,Rajapalayam (M),625,33
+803788,Seithur (TP),625,33
+803789,Chettiarpatti (TP),625,33
+803790,S.Kodikulam (TP),625,33
+803791,Vathirairuppu (TP),625,33
+803792,V.Pudupatti (TP),625,33
+803793,Sundarapandiam (TP),625,33
+803794,Srivilliputhur (M),625,33
+803795,Mamsapuram (TP),625,33
+803796,Thiruthangal (M),625,33
+803797,Sivakasi (M),625,33
+803798,Virudhunagar (M),625,33
+803799,Kariapatti (TP),625,33
+803800,Mallankinaru (TP),625,33
+803801,Aruppukkottai (M),625,33
+803802,Sattur (M),625,33
+803803,Thondi (TP),626,33
+803804,R.S.Mangalam (TP),626,33
+803805,Paramakudi (M),626,33
+803806,Mudukulathur (TP),626,33
+803807,Abiramam (TP),626,33
+803808,Kamuthi (TP),626,33
+803809,Sayalgudi (TP),626,33
+803810,Ramanathapuram (M),626,33
+803811,Mandapam (TP),626,33
+803812,Keelakarai (M),626,33
+803813,Rameswaram (M),626,33
+803814,Kovilpatti (M),627,33
+803815,Kalugumalai (TP),627,33
+803816,Kadambur (TP),627,33
+803817,Kayatharu (TP),627,33
+803818,Ettayapuram (TP),627,33
+803819,V. Pudur (TP),627,33
+803820,Vilathikulam (TP),627,33
+803821,Thoothukkudi (M Corp.),627,33
+803822,Sayapuram (TP),627,33
+803823,Perungulam (TP),627,33
+803824,Srivaikuntam (TP),627,33
+803825,Eral (TP),627,33
+803826,Kayalpattinam (M),627,33
+803827,Athur (TP),627,33
+803828,Thenthiruperai (TP),627,33
+803829,Alwarthirunagiri (TP),627,33
+803830,Nazerath (TP),627,33
+803831,Arumuganeri (TP),627,33
+803832,Kanam (TP),627,33
+803833,Tiruchendur (TP),627,33
+803834,Udangudi (TP),627,33
+803835,Sathankulam (TP),627,33
+803836,Sivagiri (TP),628,33
+803837,Rayagiri (TP),628,33
+803838,Vasudevanallur (TP),628,33
+803839,Puliankudi (M),628,33
+803840,Thiruvenkadam (TP),628,33
+803841,Sankarankoil (M),628,33
+803842,Surandai (TP),628,33
+803843,Kadayanallur (M),628,33
+803844,Sambavar Vadagarai (TP),628,33
+803845,Aygudi (TP),628,33
+803846,Tenkasi (M),628,33
+803847,Sundarapandiapuram (TP),628,33
+803848,Ilanji (TP),628,33
+803849,Courtalam (TP),628,33
+803850,Melagaram (TP),628,33
+803851,Achampudur (TP),628,33
+803852,Vadakarai Keezhpadugai (TP),628,33
+803853,Panpoli (TP),628,33
+803854,Pudur (S) (TP),628,33
+803855,Shenkottai (M),628,33
+803856,Kilapavoor (TP),628,33
+803857,Alangulam (TP),628,33
+803858,Sankarnagar (TP),628,33
+803859,Naranammalpuram (TP),628,33
+803860,Tirunelveli (M Corp.),628,33
+803861,Alwarkurichi (TP),628,33
+803862,Mukkudal (TP),628,33
+803863,Vikramasingapuram (M),628,33
+803864,Ambasamudram (M),628,33
+803865,Cheranmadevi (TP),628,33
+803866,Veeravanallur (TP),628,33
+803867,Kalladaikurichi (TP),628,33
+803868,Manimutharu (TP),628,33
+803869,Pathamadai (TP),628,33
+803870,Melacheval (TP),628,33
+803871,Gopalasamudram (TP),628,33
+803872,Moolakaraipatti (TP),628,33
+803873,Kalakad (TP),628,33
+803874,Nanguneri (TP),628,33
+803875,Eruvadi (TP),628,33
+803876,Thirukarungudi (TP),628,33
+803877,Vadakkuvalliyur (TP),628,33
+803878,Panagudi (TP),628,33
+803879,Thisayanvilai (TP),628,33
+803880,Kadayal (TP),629,33
+803881,Arumanai (TP),629,33
+803882,Edaicode (TP),629,33
+803883,Palugal (TP),629,33
+803884,Kaliyakkavilai (TP),629,33
+803885,Pacode (TP),629,33
+803886,Kuzhithurai (M),629,33
+803887,Unnamalaikadai (TP),629,33
+803888,Nalloor (TP),629,33
+803889,Kollancode (TP),629,33
+803890,Ezhudesam (TP),629,33
+803891,Puthukkadai (TP),629,33
+803892,Killiyoor (TP),629,33
+803893,Keezhkulam (TP),629,33
+803894,Karungal (TP),629,33
+803895,Palappallam (TP),629,33
+803896,Thirparappu (TP),629,33
+803897,Ponmanai (TP),629,33
+803898,Kulasekaram (TP),629,33
+803899,Thiruvattar (TP),629,33
+803900,Athur (TP),629,33
+803901,Verkilambi (TP),629,33
+803902,Kumarapuram (TP),629,33
+803903,Kothanallur (TP),629,33
+803904,Valvaithankoshtam (TP),629,33
+803905,Mulagumudu (TP),629,33
+803906,Vilavur (TP),629,33
+803907,Padmanabhapuram (M),629,33
+803908,Thiruvithancode (TP),629,33
+803909,Kappiyarai (TP),629,33
+803910,Eraniel (TP),629,33
+803911,Villukuri (TP),629,33
+803912,Neyyoor (TP),629,33
+803913,Reethapuram (TP),629,33
+803914,Kallukuttam (TP),629,33
+803915,Thingalnagar (TP),629,33
+803916,Alur (TP),629,33
+803917,Colachel (M),629,33
+803918,Mandaikadu (TP),629,33
+803919,Manavalakurichi (TP),629,33
+803920,Vellimalai (TP),629,33
+803921,Azhagiapandipuram (TP),629,33
+803922,Boothapandi (TP),629,33
+803923,Aralvaimozhi (TP),629,33
+803924,Thazhakudy (TP),629,33
+803925,Marungur (TP),629,33
+803926,Therur (TP),629,33
+803927,Nagercoil (M),629,33
+803928,Asaripallam (TP),629,33
+803929,Suchindrum (TP),629,33
+803930,Ganapathipuram (TP),629,33
+803931,Mylaudy (TP),629,33
+803932,Alagappapuram (TP),629,33
+803933,Anjugrammam (TP),629,33
+803934,Kottaram (TP),629,33
+803935,Thengampudur (TP),629,33
+803936,Puthalam (TP),629,33
+803937,Agastheeswaram (TP),629,33
+803938,Thenthamaraikulam (TP),629,33
+803939,Kanniyakumari (TP),629,33
+803940,Marandahalli (TP),630,33
+803941,Kariamangalam (TP),630,33
+803942,Palakkodu (TP),630,33
+803943,Kambainallur (TP),630,33
+803944,Harur (TP),630,33
+803945,Kadathur (TP),630,33
+803946,B.Mallapuram (TP),630,33
+803947,Pappireddipatti (TP),630,33
+803948,Dharmapuri (M),630,33
+803949,Papparapatti (TP),630,33
+803950,Pennagaram (TP),630,33
+803951,Hosur (M),631,33
+803952,Mathigiri (TP),631,33
+803953,Bargur (TP),631,33
+803954,Krishnagiri (M),631,33
+803955,Kaveripattinam (TP),631,33
+803956,Kelamangalam (TP),631,33
+803957,Denkanikottai (TP),631,33
+803958,Nagojanahalli (TP),631,33
+803959,Uthangarai (TP),631,33
+803960,Sirumugai (TP),632,33
+803961,Mettupalayam (M),632,33
+803962,Karamadai (TP),632,33
+803963,Mopperipalayam (TP),632,33
+803964,Karumathampatti (TP),632,33
+803965,Irugur (TP),632,33
+803966,Sulur (TP),632,33
+803967,Pallapalayam (TP),632,33
+803968,Kannampalayam (TP),632,33
+803969,Annur (TP),632,33
+803970,Veerapandi (TP),632,33
+803971,Gudalur (TP),632,33
+803972,Periyanaicken-palayam (TP),632,33
+803973,Idikarai (TP),632,33
+803974,Sarcarsamakulam (TP),632,33
+803975,Narasimhanaicken-palayam (TP),632,33
+803976,Kalapatti (TP),632,33
+803977,Saravanampatti (TP),632,33
+803978,Vellakinar (TP),632,33
+803979,Thudiyalur (TP),632,33
+803980,Chinnavedampatti (TP),632,33
+803981,Goundampalayam (M),632,33
+803982,Veerakeralam (TP),632,33
+803983,Vadavalli (TP),632,33
+803984,Coimbatore (M Corp.),632,33
+803985,Thondamuthur (TP),632,33
+803986,Dhaliyur (TP),632,33
+803987,Vedapatti (TP),632,33
+803988,Vellalur (TP),632,33
+803989,Kurichi (M),632,33
+803990,Kuniyamuthur (M),632,33
+803991,Perur (TP),632,33
+803992,Thenkarai (TP),632,33
+803993,Pooluvapatti (TP),632,33
+803994,Alanthurai (TP),632,33
+803995,Chettipalayam (TP),632,33
+803996,Madukkarai (TP),632,33
+803997,Ettimadai (TP),632,33
+803998,Othakalmandapam (TP),632,33
+803999,Thirumalayampalayam (TP),632,33
+804000,Kinathukadavu (TP),632,33
+804001,Periya Negamam (TP),632,33
+804002,Pollachi (M),632,33
+804003,Zamin Uthukuli (TP),632,33
+804004,Suleeswaranpatti (TP),632,33
+804005,Samathur (TP),632,33
+804006,Anaimalai (TP),632,33
+804007,Odaiyakulam (TP),632,33
+804008,Vettaikaranpudur (TP),632,33
+804009,Kottur (TP),632,33
+804010,Valparai (M),632,33
+804011,Muthur (TP),633,33
+804012,Kangeyam (TP),633,33
+804013,Vellakoil (M),633,33
+804014,Rudravathi (TP),633,33
+804015,Kannivadi (TP),633,33
+804016,Mulanur (TP),633,33
+804017,Kolathupalayam (TP),633,33
+804018,Dharapuram (M),633,33
+804019,Chinnakkampalayam (TP),633,33
+804020,Kunnathur (TP),633,33
+804021,Avanashi (TP),633,33
+804022,Thirumuruganpoondi (TP),633,33
+804023,Uthukuli (TP),633,33
+804024,Velampalayam (M),633,33
+804025,S.Nallur (M),633,33
+804026,Tiruppur (M.Corp),633,33
+804027,Samalapuram (TP),633,33
+804028,Palladam (M),633,33
+804029,Udumalaipettai  (M),633,33
+804030,Dhali (TP),633,33
+804031,Kaniyur (TP),633,33
+804032,Madathukulam (TP),633,33
+804033,Komaralingam (TP),633,33
+804034,Sankaramanallur (TP),633,33
+804035,Yanam (M),634,34
+804036,Puducherry (M),635,34
+804037,Ozhukarai (M),635,34
+804038,Kurumbapet (GP + OG),635,34
+804038,Kurumbapet (GP),635,34
+804039,Mahe (M),636,34
+804040,Karaikal (M),637,34
+804041,Port Blair (M Cl),640,35

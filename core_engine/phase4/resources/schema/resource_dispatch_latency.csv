@@ -1,0 +1,4 @@
+from_level,to_level,latency_hours
+district,district,0
+state,district,12
+national,district,36

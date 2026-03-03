@@ -1,0 +1,2630 @@
+{
+  "started_at": "2026-03-01T15:59:05.296382+00:00",
+  "config": {
+    "frontend_base": "http://127.0.0.1:5173",
+    "api_base": "http://127.0.0.1:8000",
+    "headless": false,
+    "slow_mo": 150,
+    "target_district_code": "603",
+    "target_state_code": "33"
+  },
+  "role_matrix": {
+    "district": {
+      "logged_in": true,
+      "username": "district_603",
+      "redirect_ok": true,
+      "console_error_count": 1,
+      "http_error_count": 0,
+      "state_code": "33",
+      "district_code": "603"
+    },
+    "state": {
+      "logged_in": true,
+      "username": "state_33",
+      "redirect_ok": true,
+      "console_error_count": 1,
+      "http_error_count": 0,
+      "state_code": "33",
+      "district_code": null
+    },
+    "national": {
+      "logged_in": true,
+      "username": "national_admin",
+      "redirect_ok": true,
+      "console_error_count": 1,
+      "http_error_count": 0,
+      "state_code": null,
+      "district_code": null
+    },
+    "admin": {
+      "logged_in": false,
+      "username": null,
+      "redirect_ok": false,
+      "console_error_count": 1,
+      "http_error_count": 0,
+      "error": "Login failed for role=admin. Attempts: admin: Login timed out; current_url=http://127.0.0.1:5173/login | admin_user: Login timed out; current_url=http://127.0.0.1:5173/login | verify_admin: Login timed out; current_url=http://127.0.0.1:5173/login"
+    }
+  },
+  "district_tests": {},
+  "state_tests": {},
+  "national_tests": {},
+  "admin_tests": {},
+  "invariant_violations": [],
+  "ui_mismatches": [
+    {
+      "category": "UI_BUG",
+      "message": "Console error detected",
+      "evidence": {
+        "console": {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+          "location": {
+            "url": "http://127.0.0.1:5173/favicon.ico",
+            "lineNumber": 0,
+            "columnNumber": 0
+          },
+          "time": "2026-03-01T15:59:18.168684+00:00"
+        }
+      }
+    },
+    {
+      "category": "UI_BUG",
+      "message": "Could not auto-select state dropdown on state login",
+      "evidence": {
+        "username": "state_33",
+        "desired_state_code": "33"
+      }
+    },
+    {
+      "category": "BACKEND_BUG",
+      "message": "Request failed",
+      "evidence": {
+        "request": {
+          "url": "http://127.0.0.1:8000/metadata/resources",
+          "method": "GET",
+          "failure": "net::ERR_ABORTED",
+          "time": "2026-03-01T15:59:27.088061+00:00"
+        }
+      }
+    },
+    {
+      "category": "BACKEND_BUG",
+      "message": "Request failed",
+      "evidence": {
+        "request": {
+          "url": "http://127.0.0.1:8000/metadata/resources",
+          "method": "GET",
+          "failure": "net::ERR_ABORTED",
+          "time": "2026-03-01T15:59:27.088061+00:00"
+        }
+      }
+    },
+    {
+      "category": "BACKEND_BUG",
+      "message": "Request failed",
+      "evidence": {
+        "request": {
+          "url": "http://127.0.0.1:8000/state/stock",
+          "method": "GET",
+          "failure": "net::ERR_ABORTED",
+          "time": "2026-03-01T15:59:27.089409+00:00"
+        }
+      }
+    },
+    {
+      "category": "BACKEND_BUG",
+      "message": "Request failed",
+      "evidence": {
+        "request": {
+          "url": "http://127.0.0.1:8000/state/allocations/summary",
+          "method": "GET",
+          "failure": "net::ERR_ABORTED",
+          "time": "2026-03-01T15:59:27.106626+00:00"
+        }
+      }
+    },
+    {
+      "category": "BACKEND_BUG",
+      "message": "Request failed",
+      "evidence": {
+        "request": {
+          "url": "http://127.0.0.1:8000/state/kpis",
+          "method": "GET",
+          "failure": "net::ERR_ABORTED",
+          "time": "2026-03-01T15:59:27.120415+00:00"
+        }
+      }
+    },
+    {
+      "category": "BACKEND_BUG",
+      "message": "Request failed",
+      "evidence": {
+        "request": {
+          "url": "http://127.0.0.1:8000/state/mutual-aid/market",
+          "method": "GET",
+          "failure": "net::ERR_ABORTED",
+          "time": "2026-03-01T15:59:27.132083+00:00"
+        }
+      }
+    },
+    {
+      "category": "BACKEND_BUG",
+      "message": "Request failed",
+      "evidence": {
+        "request": {
+          "url": "http://127.0.0.1:8000/state/pool/transactions",
+          "method": "GET",
+          "failure": "net::ERR_ABORTED",
+          "time": "2026-03-01T15:59:27.134096+00:00"
+        }
+      }
+    },
+    {
+      "category": "BACKEND_BUG",
+      "message": "Request failed",
+      "evidence": {
+        "request": {
+          "url": "http://127.0.0.1:8000/state/stock",
+          "method": "GET",
+          "failure": "net::ERR_ABORTED",
+          "time": "2026-03-01T15:59:27.134096+00:00"
+        }
+      }
+    },
+    {
+      "category": "BACKEND_BUG",
+      "message": "Request failed",
+      "evidence": {
+        "request": {
+          "url": "http://127.0.0.1:8000/state/pool",
+          "method": "GET",
+          "failure": "net::ERR_ABORTED",
+          "time": "2026-03-01T15:59:27.143340+00:00"
+        }
+      }
+    },
+    {
+      "category": "BACKEND_BUG",
+      "message": "Request failed",
+      "evidence": {
+        "request": {
+          "url": "http://127.0.0.1:8000/state/agent/recommendations",
+          "method": "GET",
+          "failure": "net::ERR_ABORTED",
+          "time": "2026-03-01T15:59:27.145368+00:00"
+        }
+      }
+    },
+    {
+      "category": "BACKEND_BUG",
+      "message": "Request failed",
+      "evidence": {
+        "request": {
+          "url": "http://127.0.0.1:8000/state/run-history",
+          "method": "GET",
+          "failure": "net::ERR_ABORTED",
+          "time": "2026-03-01T15:59:27.149841+00:00"
+        }
+      }
+    },
+    {
+      "category": "BACKEND_BUG",
+      "message": "Request failed",
+      "evidence": {
+        "request": {
+          "url": "http://127.0.0.1:8000/state/kpis",
+          "method": "GET",
+          "failure": "net::ERR_ABORTED",
+          "time": "2026-03-01T15:59:27.149841+00:00"
+        }
+      }
+    },
+    {
+      "category": "BACKEND_BUG",
+      "message": "Request failed",
+      "evidence": {
+        "request": {
+          "url": "http://127.0.0.1:8000/state/allocations/summary",
+          "method": "GET",
+          "failure": "net::ERR_ABORTED",
+          "time": "2026-03-01T15:59:27.149841+00:00"
+        }
+      }
+    },
+    {
+      "category": "BACKEND_BUG",
+      "message": "Request failed",
+      "evidence": {
+        "request": {
+          "url": "http://127.0.0.1:8000/state/agent/recommendations",
+          "method": "GET",
+          "failure": "net::ERR_ABORTED",
+          "time": "2026-03-01T15:59:27.151882+00:00"
+        }
+      }
+    },
+    {
+      "category": "BACKEND_BUG",
+      "message": "Request failed",
+      "evidence": {
+        "request": {
+          "url": "http://127.0.0.1:8000/state/allocations/stream?token=3bae83d40998596ee7b4e45acfab2948e4c6102ecec69179ea8c96e48fe48c23",
+          "method": "GET",
+          "failure": "net::ERR_ABORTED",
+          "time": "2026-03-01T15:59:27.153899+00:00"
+        }
+      }
+    },
+    {
+      "category": "BACKEND_BUG",
+      "message": "Request failed",
+      "evidence": {
+        "request": {
+          "url": "http://127.0.0.1:8000/state/mutual-aid/market",
+          "method": "GET",
+          "failure": "net::ERR_ABORTED",
+          "time": "2026-03-01T15:59:27.155924+00:00"
+        }
+      }
+    },
+    {
+      "category": "BACKEND_BUG",
+      "message": "Request failed",
+      "evidence": {
+        "request": {
+          "url": "http://127.0.0.1:8000/state/run-history",
+          "method": "GET",
+          "failure": "net::ERR_ABORTED",
+          "time": "2026-03-01T15:59:27.155924+00:00"
+        }
+      }
+    },
+    {
+      "category": "BACKEND_BUG",
+      "message": "Request failed",
+      "evidence": {
+        "request": {
+          "url": "http://127.0.0.1:8000/state/pool",
+          "method": "GET",
+          "failure": "net::ERR_ABORTED",
+          "time": "2026-03-01T15:59:27.157439+00:00"
+        }
+      }
+    },
+    {
+      "category": "BACKEND_BUG",
+      "message": "Request failed",
+      "evidence": {
+        "request": {
+          "url": "http://127.0.0.1:8000/state/pool/transactions",
+          "method": "GET",
+          "failure": "net::ERR_ABORTED",
+          "time": "2026-03-01T15:59:27.161802+00:00"
+        }
+      }
+    },
+    {
+      "category": "BACKEND_BUG",
+      "message": "API login call failed",
+      "evidence": {
+        "username": "admin",
+        "error": "HTTPConnectionPool(host='127.0.0.1', port=8000): Read timed out. (read timeout=20)"
+      }
+    },
+    {
+      "category": "BACKEND_BUG",
+      "message": "API login call failed",
+      "evidence": {
+        "username": "admin_user",
+        "error": "HTTPConnectionPool(host='127.0.0.1', port=8000): Read timed out. (read timeout=20)"
+      }
+    },
+    {
+      "category": "BACKEND_BUG",
+      "message": "API login call failed",
+      "evidence": {
+        "username": "verify_admin",
+        "error": "HTTPConnectionPool(host='127.0.0.1', port=8000): Read timed out. (read timeout=20)"
+      }
+    },
+    {
+      "category": "BACKEND_BUG",
+      "message": "Request failed",
+      "evidence": {
+        "request": {
+          "url": "http://127.0.0.1:8000/metadata/states",
+          "method": "GET",
+          "failure": "net::ERR_ABORTED",
+          "time": "2026-03-01T16:00:47.656746+00:00"
+        }
+      }
+    },
+    {
+      "category": "BACKEND_BUG",
+      "message": "Request failed",
+      "evidence": {
+        "request": {
+          "url": "http://127.0.0.1:8000/auth/login",
+          "method": "POST",
+          "failure": "net::ERR_ABORTED",
+          "time": "2026-03-01T16:00:47.656746+00:00"
+        }
+      }
+    },
+    {
+      "category": "BACKEND_BUG",
+      "message": "Request failed",
+      "evidence": {
+        "request": {
+          "url": "http://127.0.0.1:8000/metadata/states",
+          "method": "GET",
+          "failure": "net::ERR_ABORTED",
+          "time": "2026-03-01T16:00:47.658773+00:00"
+        }
+      }
+    },
+    {
+      "category": "BACKEND_BUG",
+      "message": "Request failed",
+      "evidence": {
+        "request": {
+          "url": "http://127.0.0.1:8000/metadata/states",
+          "method": "GET",
+          "failure": "net::ERR_ABORTED",
+          "time": "2026-03-01T16:00:54.752223+00:00"
+        }
+      }
+    },
+    {
+      "category": "BACKEND_BUG",
+      "message": "Request failed",
+      "evidence": {
+        "request": {
+          "url": "http://127.0.0.1:8000/metadata/states",
+          "method": "GET",
+          "failure": "net::ERR_ABORTED",
+          "time": "2026-03-01T16:00:54.753671+00:00"
+        }
+      }
+    },
+    {
+      "category": "BACKEND_BUG",
+      "message": "Request failed",
+      "evidence": {
+        "request": {
+          "url": "http://127.0.0.1:8000/auth/login",
+          "method": "POST",
+          "failure": "net::ERR_ABORTED",
+          "time": "2026-03-01T16:00:54.753671+00:00"
+        }
+      }
+    },
+    {
+      "category": "UI_BUG",
+      "message": "Role login matrix failed for admin",
+      "evidence": {
+        "error": "Login failed for role=admin. Attempts: admin: Login timed out; current_url=http://127.0.0.1:5173/login | admin_user: Login timed out; current_url=http://127.0.0.1:5173/login | verify_admin: Login timed out; current_url=http://127.0.0.1:5173/login"
+      }
+    },
+    {
+      "category": "BACKEND_BUG",
+      "message": "Audit execution failed",
+      "evidence": {
+        "error": "Role matrix not fully successful; cannot continue full-app audit"
+      }
+    }
+  ],
+  "performance_issues": [
+    {
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/district/returns",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 4.23351779999939,
+          "time": "2026-03-01T15:59:24.303258+00:00"
+        }
+      }
+    },
+    {
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/district/claims",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 4.252200199996878,
+          "time": "2026-03-01T15:59:24.317831+00:00"
+        }
+      }
+    },
+    {
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/district/unmet",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 4.260116100005689,
+          "time": "2026-03-01T15:59:24.329632+00:00"
+        }
+      }
+    },
+    {
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/district/consumptions",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 4.242986099998234,
+          "time": "2026-03-01T15:59:24.331657+00:00"
+        }
+      }
+    },
+    {
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/district/demand-mode",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 4.232834800001001,
+          "time": "2026-03-01T15:59:24.331657+00:00"
+        }
+      }
+    },
+    {
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/district/solver-status",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 4.231752500003495,
+          "time": "2026-03-01T15:59:24.333681+00:00"
+        }
+      }
+    },
+    {
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/metadata/resources",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 4.231935900003009,
+          "time": "2026-03-01T15:59:24.333681+00:00"
+        }
+      }
+    },
+    {
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/district/allocations",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 4.281811799999559,
+          "time": "2026-03-01T15:59:24.378277+00:00"
+        }
+      }
+    },
+    {
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/district/returns",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 6.683571399997163,
+          "time": "2026-03-01T15:59:26.773507+00:00"
+        }
+      }
+    },
+    {
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/district/claims",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 6.699895699995977,
+          "time": "2026-03-01T15:59:26.786137+00:00"
+        }
+      }
+    },
+    {
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/district/consumptions",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 6.921092399999907,
+          "time": "2026-03-01T15:59:27.015522+00:00"
+        }
+      }
+    },
+    {
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/district/solver-status",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 3.101066399998672,
+          "time": "2026-03-01T15:59:27.411803+00:00"
+        }
+      }
+    },
+    {
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/district/unmet",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 7.620526600003359,
+          "time": "2026-03-01T15:59:27.719276+00:00"
+        }
+      }
+    },
+    {
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/metadata/resources",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 3.4086311999999452,
+          "time": "2026-03-01T15:59:27.720800+00:00"
+        }
+      }
+    },
+    {
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/district/allocations",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 3.485047399997711,
+          "time": "2026-03-01T15:59:27.790552+00:00"
+        }
+      }
+    },
+    {
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/district/returns",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 11.520600999996532,
+          "time": "2026-03-01T15:59:31.617678+00:00"
+        }
+      }
+    },
+    {
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/district/run-history",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 11.533186799999385,
+          "time": "2026-03-01T15:59:31.618719+00:00"
+        }
+      }
+    },
+    {
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/district/claims",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 11.53178140000091,
+          "time": "2026-03-01T15:59:31.622840+00:00"
+        }
+      }
+    },
+    {
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/district/demand-mode",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 7.311390900002152,
+          "time": "2026-03-01T15:59:31.633222+00:00"
+        }
+      }
+    },
+    {
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/district/solver-status",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 7.311417800003255,
+          "time": "2026-03-01T15:59:31.633222+00:00"
+        }
+      }
+    },
+    {
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/metadata/resources",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 7.312933699999121,
+          "time": "2026-03-01T15:59:31.637258+00:00"
+        }
+      }
+    },
+    {
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/district/consumptions",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 11.525280499998189,
+          "time": "2026-03-01T15:59:31.638812+00:00"
+        }
+      }
+    },
+    {
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/district/allocations",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 7.711987000002409,
+          "time": "2026-03-01T15:59:32.032745+00:00"
+        }
+      }
+    },
+    {
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/state/agent/recommendations",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 6.889481599995634,
+          "time": "2026-03-01T15:59:34.284036+00:00"
+        }
+      }
+    },
+    {
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/district/unmet",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 13.492708300000231,
+          "time": "2026-03-01T15:59:34.290649+00:00"
+        }
+      }
+    },
+    {
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/district/returns",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 14.199069499998586,
+          "time": "2026-03-01T15:59:34.314959+00:00"
+        }
+      }
+    },
+    {
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/state/allocations/stream?token=3bae83d40998596ee7b4e45acfab2948e4c6102ecec69179ea8c96e48fe48c23",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 6.931797500001267,
+          "time": "2026-03-01T15:59:34.343073+00:00"
+        }
+      }
+    },
+    {
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/state/run-history",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 11.468380700003763,
+          "time": "2026-03-01T15:59:38.866258+00:00"
+        }
+      }
+    },
+    {
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/district/run-history",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 18.763988799997605,
+          "time": "2026-03-01T15:59:38.875878+00:00"
+        }
+      }
+    },
+    {
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/auth/login",
+          "status": 200,
+          "method": "POST",
+          "duration_seconds": 5.877225600001111,
+          "time": "2026-03-01T15:59:38.878433+00:00"
+        }
+      }
+    },
+    {
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/state/kpis",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 11.50177199999598,
+          "time": "2026-03-01T15:59:38.897588+00:00"
+        }
+      }
+    },
+    {
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/state/pool",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 11.789893199995277,
+          "time": "2026-03-01T15:59:39.189068+00:00"
+        }
+      }
+    },
+    {
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/district/demand-mode",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 7.587407399994845,
+          "time": "2026-03-01T15:59:39.190641+00:00"
+        }
+      }
+    },
+    {
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/district/solver-status",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 7.587765500000387,
+          "time": "2026-03-01T15:59:39.190641+00:00"
+        }
+      }
+    },
+    {
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/district/kpis",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 19.11100080000324,
+          "time": "2026-03-01T15:59:39.193965+00:00"
+        }
+      }
+    },
+    {
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/state/pool/transactions",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 11.803716300004453,
+          "time": "2026-03-01T15:59:39.202956+00:00"
+        }
+      }
+    },
+    {
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/metadata/resources",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 7.600498400002834,
+          "time": "2026-03-01T15:59:39.204977+00:00"
+        }
+      }
+    },
+    {
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/metadata/resources",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 11.800032099999953,
+          "time": "2026-03-01T15:59:39.209105+00:00"
+        }
+      }
+    },
+    {
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/district/consumptions",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 14.910603500000434,
+          "time": "2026-03-01T15:59:39.229342+00:00"
+        }
+      }
+    },
+    {
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/state/allocations/summary",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 72.56249529999332,
+          "time": "2026-03-01T16:00:39.961292+00:00"
+        }
+      }
+    },
+    {
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/district/unmet",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 75.650012099999,
+          "time": "2026-03-01T16:00:39.961292+00:00"
+        }
+      }
+    },
+    {
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/district/claims",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 79.84408619999886,
+          "time": "2026-03-01T16:00:39.963705+00:00"
+        }
+      }
+    },
+    {
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/state/agent/recommendations",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 72.55733460000192,
+          "time": "2026-03-01T16:00:39.963705+00:00"
+        }
+      }
+    },
+    {
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/district/allocations",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 68.45196749999741,
+          "time": "2026-03-01T16:00:40.058072+00:00"
+        }
+      }
+    },
+    {
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/state/mutual-aid/market",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 72.65820079999685,
+          "time": "2026-03-01T16:00:40.058072+00:00"
+        }
+      }
+    },
+    {
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/national/allocations/summary",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 60.8591665999993,
+          "time": "2026-03-01T16:00:40.060097+00:00"
+        }
+      }
+    },
+    {
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/state/stock",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 72.65793660000054,
+          "time": "2026-03-01T16:00:40.060097+00:00"
+        }
+      }
+    },
+    {
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/district/stock",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 80.00048580000293,
+          "time": "2026-03-01T16:00:40.091475+00:00"
+        }
+      }
+    },
+    {
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/district/returns",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 79.28294720000122,
+          "time": "2026-03-01T16:00:40.091475+00:00"
+        }
+      }
+    },
+    {
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/national/escalations",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 60.89144800000213,
+          "time": "2026-03-01T16:00:40.091475+00:00"
+        }
+      }
+    },
+    {
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/national/pool/transactions",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 60.91991720000078,
+          "time": "2026-03-01T16:00:40.122523+00:00"
+        }
+      }
+    },
+    {
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/state/run-history",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 72.70630879999953,
+          "time": "2026-03-01T16:00:40.122523+00:00"
+        }
+      }
+    },
+    {
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/national/run-history",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 60.919626099996094,
+          "time": "2026-03-01T16:00:40.124042+00:00"
+        }
+      }
+    },
+    {
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/national/stock",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 61.04545909999433,
+          "time": "2026-03-01T16:00:40.249001+00:00"
+        }
+      }
+    },
+    {
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/metadata/resources",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 68.68669399999635,
+          "time": "2026-03-01T16:00:40.307527+00:00"
+        }
+      }
+    },
+    {
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/metadata/resources",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 61.11019460000534,
+          "time": "2026-03-01T16:00:40.313759+00:00"
+        }
+      }
+    },
+    {
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/metadata/resources",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 64.2303830000019,
+          "time": "2026-03-01T16:00:40.313759+00:00"
+        }
+      }
+    },
+    {
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/district/demand-mode",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 64.2618955999933,
+          "time": "2026-03-01T16:00:40.344065+00:00"
+        }
+      }
+    },
+    {
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/district/run-history",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 79.53583060000528,
+          "time": "2026-03-01T16:00:40.344584+00:00"
+        }
+      }
+    },
+    {
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/state/pool",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 68.72524220000196,
+          "time": "2026-03-01T16:00:40.344584+00:00"
+        }
+      }
+    },
+    {
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/district/solver-status",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 64.29974620000576,
+          "time": "2026-03-01T16:00:40.382340+00:00"
+        }
+      }
+    },
+    {
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/state/pool/transactions",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 68.7650966000001,
+          "time": "2026-03-01T16:00:40.384895+00:00"
+        }
+      }
+    },
+    {
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/state/kpis",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 74.22192429999996,
+          "time": "2026-03-01T16:00:41.635412+00:00"
+        }
+      }
+    },
+    {
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/national/escalations",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 69.28972620000422,
+          "time": "2026-03-01T16:00:48.495289+00:00"
+        }
+      }
+    },
+    {
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/state/allocations/summary",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 84.17075860000477,
+          "time": "2026-03-01T16:00:51.575837+00:00"
+        }
+      }
+    },
+    {
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/national/kpis",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 72.38481969999702,
+          "time": "2026-03-01T16:00:51.587348+00:00"
+        }
+      }
+    },
+    {
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/national/allocations/summary",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 72.41831839999941,
+          "time": "2026-03-01T16:00:51.623855+00:00"
+        }
+      }
+    },
+    {
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/district/kpis",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 94.21915960000479,
+          "time": "2026-03-01T16:00:54.328559+00:00"
+        }
+      }
+    },
+    {
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/national/pool/transactions",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 80.84325949999766,
+          "time": "2026-03-01T16:01:00.051022+00:00"
+        }
+      }
+    }
+  ],
+  "findings": [
+    {
+      "category": "UI_BUG",
+      "severity": "high",
+      "message": "Console error detected",
+      "evidence": {
+        "console": {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+          "location": {
+            "url": "http://127.0.0.1:5173/favicon.ico",
+            "lineNumber": 0,
+            "columnNumber": 0
+          },
+          "time": "2026-03-01T15:59:18.168684+00:00"
+        }
+      }
+    },
+    {
+      "category": "PERFORMANCE_ISSUE",
+      "severity": "medium",
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/district/returns",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 4.23351779999939,
+          "time": "2026-03-01T15:59:24.303258+00:00"
+        }
+      }
+    },
+    {
+      "category": "PERFORMANCE_ISSUE",
+      "severity": "medium",
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/district/claims",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 4.252200199996878,
+          "time": "2026-03-01T15:59:24.317831+00:00"
+        }
+      }
+    },
+    {
+      "category": "PERFORMANCE_ISSUE",
+      "severity": "medium",
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/district/unmet",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 4.260116100005689,
+          "time": "2026-03-01T15:59:24.329632+00:00"
+        }
+      }
+    },
+    {
+      "category": "PERFORMANCE_ISSUE",
+      "severity": "medium",
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/district/consumptions",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 4.242986099998234,
+          "time": "2026-03-01T15:59:24.331657+00:00"
+        }
+      }
+    },
+    {
+      "category": "PERFORMANCE_ISSUE",
+      "severity": "medium",
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/district/demand-mode",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 4.232834800001001,
+          "time": "2026-03-01T15:59:24.331657+00:00"
+        }
+      }
+    },
+    {
+      "category": "PERFORMANCE_ISSUE",
+      "severity": "medium",
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/district/solver-status",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 4.231752500003495,
+          "time": "2026-03-01T15:59:24.333681+00:00"
+        }
+      }
+    },
+    {
+      "category": "PERFORMANCE_ISSUE",
+      "severity": "medium",
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/metadata/resources",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 4.231935900003009,
+          "time": "2026-03-01T15:59:24.333681+00:00"
+        }
+      }
+    },
+    {
+      "category": "PERFORMANCE_ISSUE",
+      "severity": "medium",
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/district/allocations",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 4.281811799999559,
+          "time": "2026-03-01T15:59:24.378277+00:00"
+        }
+      }
+    },
+    {
+      "category": "UI_BUG",
+      "severity": "medium",
+      "message": "Could not auto-select state dropdown on state login",
+      "evidence": {
+        "username": "state_33",
+        "desired_state_code": "33"
+      }
+    },
+    {
+      "category": "PERFORMANCE_ISSUE",
+      "severity": "medium",
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/district/returns",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 6.683571399997163,
+          "time": "2026-03-01T15:59:26.773507+00:00"
+        }
+      }
+    },
+    {
+      "category": "PERFORMANCE_ISSUE",
+      "severity": "medium",
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/district/claims",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 6.699895699995977,
+          "time": "2026-03-01T15:59:26.786137+00:00"
+        }
+      }
+    },
+    {
+      "category": "PERFORMANCE_ISSUE",
+      "severity": "medium",
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/district/consumptions",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 6.921092399999907,
+          "time": "2026-03-01T15:59:27.015522+00:00"
+        }
+      }
+    },
+    {
+      "category": "BACKEND_BUG",
+      "severity": "high",
+      "message": "Request failed",
+      "evidence": {
+        "request": {
+          "url": "http://127.0.0.1:8000/metadata/resources",
+          "method": "GET",
+          "failure": "net::ERR_ABORTED",
+          "time": "2026-03-01T15:59:27.088061+00:00"
+        }
+      }
+    },
+    {
+      "category": "BACKEND_BUG",
+      "severity": "high",
+      "message": "Request failed",
+      "evidence": {
+        "request": {
+          "url": "http://127.0.0.1:8000/metadata/resources",
+          "method": "GET",
+          "failure": "net::ERR_ABORTED",
+          "time": "2026-03-01T15:59:27.088061+00:00"
+        }
+      }
+    },
+    {
+      "category": "BACKEND_BUG",
+      "severity": "high",
+      "message": "Request failed",
+      "evidence": {
+        "request": {
+          "url": "http://127.0.0.1:8000/state/stock",
+          "method": "GET",
+          "failure": "net::ERR_ABORTED",
+          "time": "2026-03-01T15:59:27.089409+00:00"
+        }
+      }
+    },
+    {
+      "category": "BACKEND_BUG",
+      "severity": "high",
+      "message": "Request failed",
+      "evidence": {
+        "request": {
+          "url": "http://127.0.0.1:8000/state/allocations/summary",
+          "method": "GET",
+          "failure": "net::ERR_ABORTED",
+          "time": "2026-03-01T15:59:27.106626+00:00"
+        }
+      }
+    },
+    {
+      "category": "BACKEND_BUG",
+      "severity": "high",
+      "message": "Request failed",
+      "evidence": {
+        "request": {
+          "url": "http://127.0.0.1:8000/state/kpis",
+          "method": "GET",
+          "failure": "net::ERR_ABORTED",
+          "time": "2026-03-01T15:59:27.120415+00:00"
+        }
+      }
+    },
+    {
+      "category": "BACKEND_BUG",
+      "severity": "high",
+      "message": "Request failed",
+      "evidence": {
+        "request": {
+          "url": "http://127.0.0.1:8000/state/mutual-aid/market",
+          "method": "GET",
+          "failure": "net::ERR_ABORTED",
+          "time": "2026-03-01T15:59:27.132083+00:00"
+        }
+      }
+    },
+    {
+      "category": "BACKEND_BUG",
+      "severity": "high",
+      "message": "Request failed",
+      "evidence": {
+        "request": {
+          "url": "http://127.0.0.1:8000/state/pool/transactions",
+          "method": "GET",
+          "failure": "net::ERR_ABORTED",
+          "time": "2026-03-01T15:59:27.134096+00:00"
+        }
+      }
+    },
+    {
+      "category": "BACKEND_BUG",
+      "severity": "high",
+      "message": "Request failed",
+      "evidence": {
+        "request": {
+          "url": "http://127.0.0.1:8000/state/stock",
+          "method": "GET",
+          "failure": "net::ERR_ABORTED",
+          "time": "2026-03-01T15:59:27.134096+00:00"
+        }
+      }
+    },
+    {
+      "category": "BACKEND_BUG",
+      "severity": "high",
+      "message": "Request failed",
+      "evidence": {
+        "request": {
+          "url": "http://127.0.0.1:8000/state/pool",
+          "method": "GET",
+          "failure": "net::ERR_ABORTED",
+          "time": "2026-03-01T15:59:27.143340+00:00"
+        }
+      }
+    },
+    {
+      "category": "BACKEND_BUG",
+      "severity": "high",
+      "message": "Request failed",
+      "evidence": {
+        "request": {
+          "url": "http://127.0.0.1:8000/state/agent/recommendations",
+          "method": "GET",
+          "failure": "net::ERR_ABORTED",
+          "time": "2026-03-01T15:59:27.145368+00:00"
+        }
+      }
+    },
+    {
+      "category": "BACKEND_BUG",
+      "severity": "high",
+      "message": "Request failed",
+      "evidence": {
+        "request": {
+          "url": "http://127.0.0.1:8000/state/run-history",
+          "method": "GET",
+          "failure": "net::ERR_ABORTED",
+          "time": "2026-03-01T15:59:27.149841+00:00"
+        }
+      }
+    },
+    {
+      "category": "BACKEND_BUG",
+      "severity": "high",
+      "message": "Request failed",
+      "evidence": {
+        "request": {
+          "url": "http://127.0.0.1:8000/state/kpis",
+          "method": "GET",
+          "failure": "net::ERR_ABORTED",
+          "time": "2026-03-01T15:59:27.149841+00:00"
+        }
+      }
+    },
+    {
+      "category": "BACKEND_BUG",
+      "severity": "high",
+      "message": "Request failed",
+      "evidence": {
+        "request": {
+          "url": "http://127.0.0.1:8000/state/allocations/summary",
+          "method": "GET",
+          "failure": "net::ERR_ABORTED",
+          "time": "2026-03-01T15:59:27.149841+00:00"
+        }
+      }
+    },
+    {
+      "category": "BACKEND_BUG",
+      "severity": "high",
+      "message": "Request failed",
+      "evidence": {
+        "request": {
+          "url": "http://127.0.0.1:8000/state/agent/recommendations",
+          "method": "GET",
+          "failure": "net::ERR_ABORTED",
+          "time": "2026-03-01T15:59:27.151882+00:00"
+        }
+      }
+    },
+    {
+      "category": "BACKEND_BUG",
+      "severity": "high",
+      "message": "Request failed",
+      "evidence": {
+        "request": {
+          "url": "http://127.0.0.1:8000/state/allocations/stream?token=3bae83d40998596ee7b4e45acfab2948e4c6102ecec69179ea8c96e48fe48c23",
+          "method": "GET",
+          "failure": "net::ERR_ABORTED",
+          "time": "2026-03-01T15:59:27.153899+00:00"
+        }
+      }
+    },
+    {
+      "category": "BACKEND_BUG",
+      "severity": "high",
+      "message": "Request failed",
+      "evidence": {
+        "request": {
+          "url": "http://127.0.0.1:8000/state/mutual-aid/market",
+          "method": "GET",
+          "failure": "net::ERR_ABORTED",
+          "time": "2026-03-01T15:59:27.155924+00:00"
+        }
+      }
+    },
+    {
+      "category": "BACKEND_BUG",
+      "severity": "high",
+      "message": "Request failed",
+      "evidence": {
+        "request": {
+          "url": "http://127.0.0.1:8000/state/run-history",
+          "method": "GET",
+          "failure": "net::ERR_ABORTED",
+          "time": "2026-03-01T15:59:27.155924+00:00"
+        }
+      }
+    },
+    {
+      "category": "BACKEND_BUG",
+      "severity": "high",
+      "message": "Request failed",
+      "evidence": {
+        "request": {
+          "url": "http://127.0.0.1:8000/state/pool",
+          "method": "GET",
+          "failure": "net::ERR_ABORTED",
+          "time": "2026-03-01T15:59:27.157439+00:00"
+        }
+      }
+    },
+    {
+      "category": "BACKEND_BUG",
+      "severity": "high",
+      "message": "Request failed",
+      "evidence": {
+        "request": {
+          "url": "http://127.0.0.1:8000/state/pool/transactions",
+          "method": "GET",
+          "failure": "net::ERR_ABORTED",
+          "time": "2026-03-01T15:59:27.161802+00:00"
+        }
+      }
+    },
+    {
+      "category": "PERFORMANCE_ISSUE",
+      "severity": "medium",
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/district/solver-status",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 3.101066399998672,
+          "time": "2026-03-01T15:59:27.411803+00:00"
+        }
+      }
+    },
+    {
+      "category": "PERFORMANCE_ISSUE",
+      "severity": "medium",
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/district/unmet",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 7.620526600003359,
+          "time": "2026-03-01T15:59:27.719276+00:00"
+        }
+      }
+    },
+    {
+      "category": "PERFORMANCE_ISSUE",
+      "severity": "medium",
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/metadata/resources",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 3.4086311999999452,
+          "time": "2026-03-01T15:59:27.720800+00:00"
+        }
+      }
+    },
+    {
+      "category": "PERFORMANCE_ISSUE",
+      "severity": "medium",
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/district/allocations",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 3.485047399997711,
+          "time": "2026-03-01T15:59:27.790552+00:00"
+        }
+      }
+    },
+    {
+      "category": "PERFORMANCE_ISSUE",
+      "severity": "medium",
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/district/returns",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 11.520600999996532,
+          "time": "2026-03-01T15:59:31.617678+00:00"
+        }
+      }
+    },
+    {
+      "category": "PERFORMANCE_ISSUE",
+      "severity": "medium",
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/district/run-history",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 11.533186799999385,
+          "time": "2026-03-01T15:59:31.618719+00:00"
+        }
+      }
+    },
+    {
+      "category": "PERFORMANCE_ISSUE",
+      "severity": "medium",
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/district/claims",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 11.53178140000091,
+          "time": "2026-03-01T15:59:31.622840+00:00"
+        }
+      }
+    },
+    {
+      "category": "PERFORMANCE_ISSUE",
+      "severity": "medium",
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/district/demand-mode",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 7.311390900002152,
+          "time": "2026-03-01T15:59:31.633222+00:00"
+        }
+      }
+    },
+    {
+      "category": "PERFORMANCE_ISSUE",
+      "severity": "medium",
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/district/solver-status",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 7.311417800003255,
+          "time": "2026-03-01T15:59:31.633222+00:00"
+        }
+      }
+    },
+    {
+      "category": "PERFORMANCE_ISSUE",
+      "severity": "medium",
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/metadata/resources",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 7.312933699999121,
+          "time": "2026-03-01T15:59:31.637258+00:00"
+        }
+      }
+    },
+    {
+      "category": "PERFORMANCE_ISSUE",
+      "severity": "medium",
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/district/consumptions",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 11.525280499998189,
+          "time": "2026-03-01T15:59:31.638812+00:00"
+        }
+      }
+    },
+    {
+      "category": "PERFORMANCE_ISSUE",
+      "severity": "medium",
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/district/allocations",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 7.711987000002409,
+          "time": "2026-03-01T15:59:32.032745+00:00"
+        }
+      }
+    },
+    {
+      "category": "PERFORMANCE_ISSUE",
+      "severity": "medium",
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/state/agent/recommendations",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 6.889481599995634,
+          "time": "2026-03-01T15:59:34.284036+00:00"
+        }
+      }
+    },
+    {
+      "category": "PERFORMANCE_ISSUE",
+      "severity": "medium",
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/district/unmet",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 13.492708300000231,
+          "time": "2026-03-01T15:59:34.290649+00:00"
+        }
+      }
+    },
+    {
+      "category": "PERFORMANCE_ISSUE",
+      "severity": "medium",
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/district/returns",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 14.199069499998586,
+          "time": "2026-03-01T15:59:34.314959+00:00"
+        }
+      }
+    },
+    {
+      "category": "PERFORMANCE_ISSUE",
+      "severity": "medium",
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/state/allocations/stream?token=3bae83d40998596ee7b4e45acfab2948e4c6102ecec69179ea8c96e48fe48c23",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 6.931797500001267,
+          "time": "2026-03-01T15:59:34.343073+00:00"
+        }
+      }
+    },
+    {
+      "category": "PERFORMANCE_ISSUE",
+      "severity": "medium",
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/state/run-history",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 11.468380700003763,
+          "time": "2026-03-01T15:59:38.866258+00:00"
+        }
+      }
+    },
+    {
+      "category": "PERFORMANCE_ISSUE",
+      "severity": "medium",
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/district/run-history",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 18.763988799997605,
+          "time": "2026-03-01T15:59:38.875878+00:00"
+        }
+      }
+    },
+    {
+      "category": "PERFORMANCE_ISSUE",
+      "severity": "medium",
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/auth/login",
+          "status": 200,
+          "method": "POST",
+          "duration_seconds": 5.877225600001111,
+          "time": "2026-03-01T15:59:38.878433+00:00"
+        }
+      }
+    },
+    {
+      "category": "PERFORMANCE_ISSUE",
+      "severity": "medium",
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/state/kpis",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 11.50177199999598,
+          "time": "2026-03-01T15:59:38.897588+00:00"
+        }
+      }
+    },
+    {
+      "category": "PERFORMANCE_ISSUE",
+      "severity": "medium",
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/state/pool",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 11.789893199995277,
+          "time": "2026-03-01T15:59:39.189068+00:00"
+        }
+      }
+    },
+    {
+      "category": "PERFORMANCE_ISSUE",
+      "severity": "medium",
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/district/demand-mode",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 7.587407399994845,
+          "time": "2026-03-01T15:59:39.190641+00:00"
+        }
+      }
+    },
+    {
+      "category": "PERFORMANCE_ISSUE",
+      "severity": "medium",
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/district/solver-status",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 7.587765500000387,
+          "time": "2026-03-01T15:59:39.190641+00:00"
+        }
+      }
+    },
+    {
+      "category": "PERFORMANCE_ISSUE",
+      "severity": "medium",
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/district/kpis",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 19.11100080000324,
+          "time": "2026-03-01T15:59:39.193965+00:00"
+        }
+      }
+    },
+    {
+      "category": "PERFORMANCE_ISSUE",
+      "severity": "medium",
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/state/pool/transactions",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 11.803716300004453,
+          "time": "2026-03-01T15:59:39.202956+00:00"
+        }
+      }
+    },
+    {
+      "category": "PERFORMANCE_ISSUE",
+      "severity": "medium",
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/metadata/resources",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 7.600498400002834,
+          "time": "2026-03-01T15:59:39.204977+00:00"
+        }
+      }
+    },
+    {
+      "category": "PERFORMANCE_ISSUE",
+      "severity": "medium",
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/metadata/resources",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 11.800032099999953,
+          "time": "2026-03-01T15:59:39.209105+00:00"
+        }
+      }
+    },
+    {
+      "category": "PERFORMANCE_ISSUE",
+      "severity": "medium",
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/district/consumptions",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 14.910603500000434,
+          "time": "2026-03-01T15:59:39.229342+00:00"
+        }
+      }
+    },
+    {
+      "category": "BACKEND_BUG",
+      "severity": "high",
+      "message": "API login call failed",
+      "evidence": {
+        "username": "admin",
+        "error": "HTTPConnectionPool(host='127.0.0.1', port=8000): Read timed out. (read timeout=20)"
+      }
+    },
+    {
+      "category": "BACKEND_BUG",
+      "severity": "high",
+      "message": "API login call failed",
+      "evidence": {
+        "username": "admin_user",
+        "error": "HTTPConnectionPool(host='127.0.0.1', port=8000): Read timed out. (read timeout=20)"
+      }
+    },
+    {
+      "category": "BACKEND_BUG",
+      "severity": "high",
+      "message": "API login call failed",
+      "evidence": {
+        "username": "verify_admin",
+        "error": "HTTPConnectionPool(host='127.0.0.1', port=8000): Read timed out. (read timeout=20)"
+      }
+    },
+    {
+      "category": "PERFORMANCE_ISSUE",
+      "severity": "medium",
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/state/allocations/summary",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 72.56249529999332,
+          "time": "2026-03-01T16:00:39.961292+00:00"
+        }
+      }
+    },
+    {
+      "category": "PERFORMANCE_ISSUE",
+      "severity": "medium",
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/district/unmet",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 75.650012099999,
+          "time": "2026-03-01T16:00:39.961292+00:00"
+        }
+      }
+    },
+    {
+      "category": "PERFORMANCE_ISSUE",
+      "severity": "medium",
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/district/claims",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 79.84408619999886,
+          "time": "2026-03-01T16:00:39.963705+00:00"
+        }
+      }
+    },
+    {
+      "category": "PERFORMANCE_ISSUE",
+      "severity": "medium",
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/state/agent/recommendations",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 72.55733460000192,
+          "time": "2026-03-01T16:00:39.963705+00:00"
+        }
+      }
+    },
+    {
+      "category": "PERFORMANCE_ISSUE",
+      "severity": "medium",
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/district/allocations",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 68.45196749999741,
+          "time": "2026-03-01T16:00:40.058072+00:00"
+        }
+      }
+    },
+    {
+      "category": "PERFORMANCE_ISSUE",
+      "severity": "medium",
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/state/mutual-aid/market",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 72.65820079999685,
+          "time": "2026-03-01T16:00:40.058072+00:00"
+        }
+      }
+    },
+    {
+      "category": "PERFORMANCE_ISSUE",
+      "severity": "medium",
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/national/allocations/summary",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 60.8591665999993,
+          "time": "2026-03-01T16:00:40.060097+00:00"
+        }
+      }
+    },
+    {
+      "category": "PERFORMANCE_ISSUE",
+      "severity": "medium",
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/state/stock",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 72.65793660000054,
+          "time": "2026-03-01T16:00:40.060097+00:00"
+        }
+      }
+    },
+    {
+      "category": "PERFORMANCE_ISSUE",
+      "severity": "medium",
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/district/stock",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 80.00048580000293,
+          "time": "2026-03-01T16:00:40.091475+00:00"
+        }
+      }
+    },
+    {
+      "category": "PERFORMANCE_ISSUE",
+      "severity": "medium",
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/district/returns",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 79.28294720000122,
+          "time": "2026-03-01T16:00:40.091475+00:00"
+        }
+      }
+    },
+    {
+      "category": "PERFORMANCE_ISSUE",
+      "severity": "medium",
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/national/escalations",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 60.89144800000213,
+          "time": "2026-03-01T16:00:40.091475+00:00"
+        }
+      }
+    },
+    {
+      "category": "PERFORMANCE_ISSUE",
+      "severity": "medium",
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/national/pool/transactions",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 60.91991720000078,
+          "time": "2026-03-01T16:00:40.122523+00:00"
+        }
+      }
+    },
+    {
+      "category": "PERFORMANCE_ISSUE",
+      "severity": "medium",
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/state/run-history",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 72.70630879999953,
+          "time": "2026-03-01T16:00:40.122523+00:00"
+        }
+      }
+    },
+    {
+      "category": "PERFORMANCE_ISSUE",
+      "severity": "medium",
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/national/run-history",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 60.919626099996094,
+          "time": "2026-03-01T16:00:40.124042+00:00"
+        }
+      }
+    },
+    {
+      "category": "PERFORMANCE_ISSUE",
+      "severity": "medium",
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/national/stock",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 61.04545909999433,
+          "time": "2026-03-01T16:00:40.249001+00:00"
+        }
+      }
+    },
+    {
+      "category": "PERFORMANCE_ISSUE",
+      "severity": "medium",
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/metadata/resources",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 68.68669399999635,
+          "time": "2026-03-01T16:00:40.307527+00:00"
+        }
+      }
+    },
+    {
+      "category": "PERFORMANCE_ISSUE",
+      "severity": "medium",
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/metadata/resources",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 61.11019460000534,
+          "time": "2026-03-01T16:00:40.313759+00:00"
+        }
+      }
+    },
+    {
+      "category": "PERFORMANCE_ISSUE",
+      "severity": "medium",
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/metadata/resources",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 64.2303830000019,
+          "time": "2026-03-01T16:00:40.313759+00:00"
+        }
+      }
+    },
+    {
+      "category": "PERFORMANCE_ISSUE",
+      "severity": "medium",
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/district/demand-mode",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 64.2618955999933,
+          "time": "2026-03-01T16:00:40.344065+00:00"
+        }
+      }
+    },
+    {
+      "category": "PERFORMANCE_ISSUE",
+      "severity": "medium",
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/district/run-history",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 79.53583060000528,
+          "time": "2026-03-01T16:00:40.344584+00:00"
+        }
+      }
+    },
+    {
+      "category": "PERFORMANCE_ISSUE",
+      "severity": "medium",
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/state/pool",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 68.72524220000196,
+          "time": "2026-03-01T16:00:40.344584+00:00"
+        }
+      }
+    },
+    {
+      "category": "PERFORMANCE_ISSUE",
+      "severity": "medium",
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/district/solver-status",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 64.29974620000576,
+          "time": "2026-03-01T16:00:40.382340+00:00"
+        }
+      }
+    },
+    {
+      "category": "PERFORMANCE_ISSUE",
+      "severity": "medium",
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/state/pool/transactions",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 68.7650966000001,
+          "time": "2026-03-01T16:00:40.384895+00:00"
+        }
+      }
+    },
+    {
+      "category": "PERFORMANCE_ISSUE",
+      "severity": "medium",
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/state/kpis",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 74.22192429999996,
+          "time": "2026-03-01T16:00:41.635412+00:00"
+        }
+      }
+    },
+    {
+      "category": "BACKEND_BUG",
+      "severity": "high",
+      "message": "Request failed",
+      "evidence": {
+        "request": {
+          "url": "http://127.0.0.1:8000/metadata/states",
+          "method": "GET",
+          "failure": "net::ERR_ABORTED",
+          "time": "2026-03-01T16:00:47.656746+00:00"
+        }
+      }
+    },
+    {
+      "category": "BACKEND_BUG",
+      "severity": "high",
+      "message": "Request failed",
+      "evidence": {
+        "request": {
+          "url": "http://127.0.0.1:8000/auth/login",
+          "method": "POST",
+          "failure": "net::ERR_ABORTED",
+          "time": "2026-03-01T16:00:47.656746+00:00"
+        }
+      }
+    },
+    {
+      "category": "BACKEND_BUG",
+      "severity": "high",
+      "message": "Request failed",
+      "evidence": {
+        "request": {
+          "url": "http://127.0.0.1:8000/metadata/states",
+          "method": "GET",
+          "failure": "net::ERR_ABORTED",
+          "time": "2026-03-01T16:00:47.658773+00:00"
+        }
+      }
+    },
+    {
+      "category": "PERFORMANCE_ISSUE",
+      "severity": "medium",
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/national/escalations",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 69.28972620000422,
+          "time": "2026-03-01T16:00:48.495289+00:00"
+        }
+      }
+    },
+    {
+      "category": "PERFORMANCE_ISSUE",
+      "severity": "medium",
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/state/allocations/summary",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 84.17075860000477,
+          "time": "2026-03-01T16:00:51.575837+00:00"
+        }
+      }
+    },
+    {
+      "category": "PERFORMANCE_ISSUE",
+      "severity": "medium",
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/national/kpis",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 72.38481969999702,
+          "time": "2026-03-01T16:00:51.587348+00:00"
+        }
+      }
+    },
+    {
+      "category": "PERFORMANCE_ISSUE",
+      "severity": "medium",
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/national/allocations/summary",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 72.41831839999941,
+          "time": "2026-03-01T16:00:51.623855+00:00"
+        }
+      }
+    },
+    {
+      "category": "PERFORMANCE_ISSUE",
+      "severity": "medium",
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/district/kpis",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 94.21915960000479,
+          "time": "2026-03-01T16:00:54.328559+00:00"
+        }
+      }
+    },
+    {
+      "category": "BACKEND_BUG",
+      "severity": "high",
+      "message": "Request failed",
+      "evidence": {
+        "request": {
+          "url": "http://127.0.0.1:8000/metadata/states",
+          "method": "GET",
+          "failure": "net::ERR_ABORTED",
+          "time": "2026-03-01T16:00:54.752223+00:00"
+        }
+      }
+    },
+    {
+      "category": "BACKEND_BUG",
+      "severity": "high",
+      "message": "Request failed",
+      "evidence": {
+        "request": {
+          "url": "http://127.0.0.1:8000/metadata/states",
+          "method": "GET",
+          "failure": "net::ERR_ABORTED",
+          "time": "2026-03-01T16:00:54.753671+00:00"
+        }
+      }
+    },
+    {
+      "category": "BACKEND_BUG",
+      "severity": "high",
+      "message": "Request failed",
+      "evidence": {
+        "request": {
+          "url": "http://127.0.0.1:8000/auth/login",
+          "method": "POST",
+          "failure": "net::ERR_ABORTED",
+          "time": "2026-03-01T16:00:54.753671+00:00"
+        }
+      }
+    },
+    {
+      "category": "PERFORMANCE_ISSUE",
+      "severity": "medium",
+      "message": "Slow network response (>3s)",
+      "evidence": {
+        "response": {
+          "url": "http://127.0.0.1:8000/national/pool/transactions",
+          "status": 200,
+          "method": "GET",
+          "duration_seconds": 80.84325949999766,
+          "time": "2026-03-01T16:01:00.051022+00:00"
+        }
+      }
+    },
+    {
+      "category": "UI_BUG",
+      "severity": "high",
+      "message": "Role login matrix failed for admin",
+      "evidence": {
+        "error": "Login failed for role=admin. Attempts: admin: Login timed out; current_url=http://127.0.0.1:5173/login | admin_user: Login timed out; current_url=http://127.0.0.1:5173/login | verify_admin: Login timed out; current_url=http://127.0.0.1:5173/login"
+      }
+    },
+    {
+      "category": "BACKEND_BUG",
+      "severity": "high",
+      "message": "Audit execution failed",
+      "evidence": {
+        "error": "Role matrix not fully successful; cannot continue full-app audit"
+      }
+    }
+  ],
+  "screenshots": [
+    "ui_screenshots/login_district_dashboard.png",
+    "ui_screenshots/login_state_dashboard.png",
+    "ui_screenshots/login_national_dashboard.png"
+  ],
+  "stop_condition": {
+    "all_roles_tested": false,
+    "all_5_district_cases_executed": false,
+    "claim_consume_return_done": false,
+    "at_least_one_escalation_tested": false,
+    "all_role_tabs_visited": false,
+    "screenshots_captured": true,
+    "json_report_written": true,
+    "ready": false
+  },
+  "error": {
+    "message": "Role matrix not fully successful; cannot continue full-app audit",
+    "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\LATHEEF\\Desktop\\disaster_management\\backend\\autonomous_ui_auditor.py\", line 1558, in execute\n    raise RuntimeError(\"Role matrix not fully successful; cannot continue full-app audit\")\nRuntimeError: Role matrix not fully successful; cannot continue full-app audit\n"
+  },
+  "duration_seconds": null,
+  "finished_at": "2026-03-01T16:01:03.623960+00:00"
+}

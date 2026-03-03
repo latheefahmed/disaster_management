@@ -1,0 +1,165 @@
+{
+  "generated_at": "2026-02-21T07:49:13.729099+00:00",
+  "baseline": {
+    "latest_solver_runs": [
+      {
+        "id": 16,
+        "mode": "live",
+        "status": "completed",
+        "started_at": "2026-02-21 07:52:23.408896"
+      },
+      {
+        "id": 15,
+        "mode": "live",
+        "status": "completed",
+        "started_at": "2026-02-21 07:51:09.459983"
+      },
+      {
+        "id": 14,
+        "mode": "scenario",
+        "status": "completed",
+        "started_at": "2026-02-21 07:50:33.686199"
+      },
+      {
+        "id": 13,
+        "mode": "scenario",
+        "status": "completed",
+        "started_at": "2026-02-21 07:49:56.754858"
+      },
+      {
+        "id": 12,
+        "mode": "scenario",
+        "status": "completed",
+        "started_at": "2026-02-21 07:49:15.887011"
+      },
+      {
+        "id": 11,
+        "mode": "live",
+        "status": "failed",
+        "started_at": "2026-02-21 07:40:59.232250"
+      },
+      {
+        "id": 10,
+        "mode": "live",
+        "status": "failed",
+        "started_at": "2026-02-21 07:35:18.139399"
+      },
+      {
+        "id": 9,
+        "mode": "live",
+        "status": "failed",
+        "started_at": "2026-02-21 07:34:45.221608"
+      },
+      {
+        "id": 8,
+        "mode": "live",
+        "status": "completed",
+        "started_at": "2026-02-21 07:20:29.339417"
+      },
+      {
+        "id": 7,
+        "mode": "live",
+        "status": "completed",
+        "started_at": "2026-02-21 07:19:24.036842"
+      }
+    ]
+  },
+  "cases": {
+    "state_autopull": {
+      "scenario_id": 7,
+      "run_id": 12,
+      "run_status": "completed",
+      "district_code": "228",
+      "state_code": "10",
+      "resource_id": "R10",
+      "demand": 1.0,
+      "state_stock": 334.0,
+      "national_stock": 0.0,
+      "metrics": {
+        "final": 1.0,
+        "allocated": 1.0,
+        "unmet": 0.0,
+        "by_supply_level": {
+          "state": 1.0
+        },
+        "conservation_ok": true
+      }
+    },
+    "national_autopull": {
+      "scenario_id": 8,
+      "run_id": 13,
+      "run_status": "completed",
+      "district_code": "496",
+      "state_code": "26",
+      "resource_id": "R9",
+      "demand": 1.0,
+      "state_stock": 0.0,
+      "national_stock": 4562.0,
+      "metrics": {
+        "final": 1.0,
+        "allocated": 1.0,
+        "unmet": 0.0,
+        "by_supply_level": {
+          "national": 1.0
+        },
+        "conservation_ok": true
+      }
+    },
+    "full_shortage": {
+      "scenario_id": 9,
+      "run_id": 14,
+      "run_status": "completed",
+      "district_code": "228",
+      "state_code": "10",
+      "resource_id": "R10",
+      "demand": 335.0,
+      "state_stock": 334.0,
+      "national_stock": 0.0,
+      "metrics": {
+        "final": 335.0,
+        "allocated": 334.0,
+        "unmet": 1.0,
+        "by_supply_level": {
+          "state": 334.0,
+          "unmet": 1.0
+        },
+        "conservation_ok": true
+      }
+    }
+  },
+  "live_run": {
+    "run_id": 15,
+    "status": "completed",
+    "final_demands": 35145,
+    "allocations": 35145
+  },
+  "dashboard_fallback": {
+    "latest_completed_live_before": {
+      "id": 16,
+      "mode": "live"
+    },
+    "latest_completed_any_before": {
+      "id": 16,
+      "mode": "live"
+    },
+    "selected_when_no_live_completed": {
+      "id": 14,
+      "mode": "scenario"
+    }
+  },
+  "escalation_non_blocking": {
+    "request_id": 7,
+    "status_after_escalate": "allocated",
+    "rerun_id": 16,
+    "request_status_after_rerun": "allocated",
+    "slot_metrics": {
+      "final": 18.022356,
+      "allocated": 18.022356,
+      "unmet": 0.0,
+      "by_supply_level": {
+        "district": 18.022356
+      },
+      "conservation_ok": true
+    }
+  }
+}

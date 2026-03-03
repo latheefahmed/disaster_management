@@ -1,0 +1,463 @@
+{
+  "summary": {
+    "generated_at": "2026-02-22T08:00:51.562406Z",
+    "district_code": "603",
+    "time_slot": 0,
+    "solver_run_id": 3,
+    "solver_status": "completed",
+    "requested_total": 37366780.0,
+    "allocated_total": 9859954.0,
+    "unmet_total": 0.0,
+    "all_allocated_no_unmet": false
+  },
+  "rows": [
+    {
+      "resource_id": "R1",
+      "before_stock": 27880395.875096,
+      "requested": 1394019.0,
+      "allocated": 0.0,
+      "after_allocation_stock": 27880395.875096,
+      "unmet": 0.0
+    },
+    {
+      "resource_id": "R2",
+      "before_stock": 9757741.875097,
+      "requested": 487887.0,
+      "allocated": 0.0,
+      "after_allocation_stock": 9757741.875097,
+      "unmet": 0.0
+    },
+    {
+      "resource_id": "R3",
+      "before_stock": 8364121.450116,
+      "requested": 418206.0,
+      "allocated": 0.0,
+      "after_allocation_stock": 8364121.450116,
+      "unmet": 0.0
+    },
+    {
+      "resource_id": "R4",
+      "before_stock": 2230435.237625,
+      "requested": 111521.0,
+      "allocated": 0.0,
+      "after_allocation_stock": 2230435.237625,
+      "unmet": 0.0
+    },
+    {
+      "resource_id": "R5",
+      "before_stock": 139401962.954727,
+      "requested": 6970098.0,
+      "allocated": 0.0,
+      "after_allocation_stock": 139401962.954727,
+      "unmet": 0.0
+    },
+    {
+      "resource_id": "R6",
+      "before_stock": 418205882.600154,
+      "requested": 20910294.0,
+      "allocated": 0.0,
+      "after_allocation_stock": 418205882.600154,
+      "unmet": 0.0
+    },
+    {
+      "resource_id": "R7",
+      "before_stock": 55760787.450116,
+      "requested": 2788039.0,
+      "allocated": 0.0,
+      "after_allocation_stock": 55760787.450116,
+      "unmet": 0.0
+    },
+    {
+      "resource_id": "R8",
+      "before_stock": 207900.300077,
+      "requested": 10395.0,
+      "allocated": 0.0,
+      "after_allocation_stock": 207900.300077,
+      "unmet": 0.0
+    },
+    {
+      "resource_id": "R9",
+      "before_stock": 277200.087587,
+      "requested": 13860.0,
+      "allocated": 0.0,
+      "after_allocation_stock": 277200.087587,
+      "unmet": 0.0
+    },
+    {
+      "resource_id": "R10",
+      "before_stock": 10687487.662606,
+      "requested": 534374.0,
+      "allocated": 0.0,
+      "after_allocation_stock": 10687487.662606,
+      "unmet": 0.0
+    },
+    {
+      "resource_id": "R11",
+      "before_stock": 8828793.025135,
+      "requested": 441439.0,
+      "allocated": 0.0,
+      "after_allocation_stock": 8828793.025135,
+      "unmet": 0.0
+    },
+    {
+      "resource_id": "R12",
+      "before_stock": 462002.0,
+      "requested": 23100.0,
+      "allocated": 69300.0,
+      "after_allocation_stock": 392702.0,
+      "unmet": 0.0
+    },
+    {
+      "resource_id": "R13",
+      "before_stock": 231006.0,
+      "requested": 11550.0,
+      "allocated": 34650.0,
+      "after_allocation_stock": 196356.0,
+      "unmet": 0.0
+    },
+    {
+      "resource_id": "R14",
+      "before_stock": 9304.0,
+      "requested": 465.0,
+      "allocated": 1395.0,
+      "after_allocation_stock": 7909.0,
+      "unmet": 0.0
+    },
+    {
+      "resource_id": "R15",
+      "before_stock": 1172.0,
+      "requested": 58.0,
+      "allocated": 175.0,
+      "after_allocation_stock": 997.0,
+      "unmet": 0.0
+    },
+    {
+      "resource_id": "R16",
+      "before_stock": 3728.0,
+      "requested": 186.0,
+      "allocated": 558.0,
+      "after_allocation_stock": 3170.0,
+      "unmet": 0.0
+    },
+    {
+      "resource_id": "R17",
+      "before_stock": 278814.0,
+      "requested": 13940.0,
+      "allocated": 41821.0,
+      "after_allocation_stock": 236993.0,
+      "unmet": 0.0
+    },
+    {
+      "resource_id": "R18",
+      "before_stock": 371748.0,
+      "requested": 18587.0,
+      "allocated": 55761.0,
+      "after_allocation_stock": 315987.0,
+      "unmet": 0.0
+    },
+    {
+      "resource_id": "R19",
+      "before_stock": 2323376.0,
+      "requested": 116168.0,
+      "allocated": 348505.0,
+      "after_allocation_stock": 1974871.0,
+      "unmet": 0.0
+    },
+    {
+      "resource_id": "R20",
+      "before_stock": 185880.0,
+      "requested": 9294.0,
+      "allocated": 27882.0,
+      "after_allocation_stock": 157998.0,
+      "unmet": 0.0
+    },
+    {
+      "resource_id": "R21",
+      "before_stock": 6206.0,
+      "requested": 310.0,
+      "allocated": 930.0,
+      "after_allocation_stock": 5276.0,
+      "unmet": 0.0
+    },
+    {
+      "resource_id": "R22",
+      "before_stock": 2334.0,
+      "requested": 116.0,
+      "allocated": 349.0,
+      "after_allocation_stock": 1985.0,
+      "unmet": 0.0
+    },
+    {
+      "resource_id": "R23",
+      "before_stock": 7444.0,
+      "requested": 372.0,
+      "allocated": 1116.0,
+      "after_allocation_stock": 6328.0,
+      "unmet": 0.0
+    },
+    {
+      "resource_id": "R24",
+      "before_stock": 3262.0,
+      "requested": 163.0,
+      "allocated": 489.0,
+      "after_allocation_stock": 2773.0,
+      "unmet": 0.0
+    },
+    {
+      "resource_id": "R25",
+      "before_stock": 9304.0,
+      "requested": 465.0,
+      "allocated": 1395.0,
+      "after_allocation_stock": 7909.0,
+      "unmet": 0.0
+    },
+    {
+      "resource_id": "R26",
+      "before_stock": 754.0,
+      "requested": 37.0,
+      "allocated": 112.0,
+      "after_allocation_stock": 642.0,
+      "unmet": 0.0
+    },
+    {
+      "resource_id": "R27",
+      "before_stock": 48.0,
+      "requested": 2.0,
+      "allocated": 6.0,
+      "after_allocation_stock": 42.0,
+      "unmet": 0.0
+    },
+    {
+      "resource_id": "R28",
+      "before_stock": 28.0,
+      "requested": 1.0,
+      "allocated": 3.0,
+      "after_allocation_stock": 25.0,
+      "unmet": 0.0
+    },
+    {
+      "resource_id": "R29",
+      "before_stock": 1868.0,
+      "requested": 93.0,
+      "allocated": 279.0,
+      "after_allocation_stock": 1589.0,
+      "unmet": 0.0
+    },
+    {
+      "resource_id": "R30",
+      "before_stock": 3108.0,
+      "requested": 155.0,
+      "allocated": 465.0,
+      "after_allocation_stock": 2643.0,
+      "unmet": 0.0
+    },
+    {
+      "resource_id": "R31",
+      "before_stock": 88.0,
+      "requested": 4.0,
+      "allocated": 12.0,
+      "after_allocation_stock": 76.0,
+      "unmet": 0.0
+    },
+    {
+      "resource_id": "R32",
+      "before_stock": 102.0,
+      "requested": 5.0,
+      "allocated": 15.0,
+      "after_allocation_stock": 87.0,
+      "unmet": 0.0
+    },
+    {
+      "resource_id": "R33",
+      "before_stock": 22.0,
+      "requested": 1.0,
+      "allocated": 3.0,
+      "after_allocation_stock": 19.0,
+      "unmet": 0.0
+    },
+    {
+      "resource_id": "R34",
+      "before_stock": 940.0,
+      "requested": 47.0,
+      "allocated": 141.0,
+      "after_allocation_stock": 799.0,
+      "unmet": 0.0
+    },
+    {
+      "resource_id": "R35",
+      "before_stock": 48.0,
+      "requested": 2.0,
+      "allocated": 6.0,
+      "after_allocation_stock": 42.0,
+      "unmet": 0.0
+    },
+    {
+      "resource_id": "R36",
+      "before_stock": 62.0,
+      "requested": 3.0,
+      "allocated": 9.0,
+      "after_allocation_stock": 53.0,
+      "unmet": 0.0
+    },
+    {
+      "resource_id": "R37",
+      "before_stock": 14.0,
+      "requested": 1.0,
+      "allocated": 2.0,
+      "after_allocation_stock": 12.0,
+      "unmet": 0.0
+    },
+    {
+      "resource_id": "R38",
+      "before_stock": 22.0,
+      "requested": 1.0,
+      "allocated": 3.0,
+      "after_allocation_stock": 19.0,
+      "unmet": 0.0
+    },
+    {
+      "resource_id": "R39",
+      "before_stock": 18586938.0,
+      "requested": 929346.0,
+      "allocated": 2788039.0,
+      "after_allocation_stock": 15798899.0,
+      "unmet": 0.0
+    },
+    {
+      "resource_id": "R40",
+      "before_stock": 11152166.0,
+      "requested": 557608.0,
+      "allocated": 1672824.0,
+      "after_allocation_stock": 9479342.0,
+      "unmet": 0.0
+    },
+    {
+      "resource_id": "R41",
+      "before_stock": 23110.0,
+      "requested": 1155.0,
+      "allocated": 3466.0,
+      "after_allocation_stock": 19644.0,
+      "unmet": 0.0
+    },
+    {
+      "resource_id": "R42",
+      "before_stock": 693000.0,
+      "requested": 34650.0,
+      "allocated": 103950.0,
+      "after_allocation_stock": 589050.0,
+      "unmet": 0.0
+    },
+    {
+      "resource_id": "R43",
+      "before_stock": 6970108.0,
+      "requested": 348505.0,
+      "allocated": 1045515.0,
+      "after_allocation_stock": 5924593.0,
+      "unmet": 0.0
+    },
+    {
+      "resource_id": "R44",
+      "before_stock": 88.0,
+      "requested": 4.0,
+      "allocated": 12.0,
+      "after_allocation_stock": 76.0,
+      "unmet": 0.0
+    },
+    {
+      "resource_id": "R45",
+      "before_stock": 1868.0,
+      "requested": 93.0,
+      "allocated": 279.0,
+      "after_allocation_stock": 1589.0,
+      "unmet": 0.0
+    },
+    {
+      "resource_id": "R46",
+      "before_stock": 36.0,
+      "requested": 1.0,
+      "allocated": 4.0,
+      "after_allocation_stock": 32.0,
+      "unmet": 0.0
+    },
+    {
+      "resource_id": "R47",
+      "before_stock": 3108.0,
+      "requested": 155.0,
+      "allocated": 465.0,
+      "after_allocation_stock": 2643.0,
+      "unmet": 0.0
+    },
+    {
+      "resource_id": "R48",
+      "before_stock": 185880.0,
+      "requested": 9294.0,
+      "allocated": 27882.0,
+      "after_allocation_stock": 157998.0,
+      "unmet": 0.0
+    },
+    {
+      "resource_id": "R49",
+      "before_stock": 277206.0,
+      "requested": 13860.0,
+      "allocated": 41580.0,
+      "after_allocation_stock": 235626.0,
+      "unmet": 0.0
+    },
+    {
+      "resource_id": "R50",
+      "before_stock": 16728246.0,
+      "requested": 836412.0,
+      "allocated": 2509236.0,
+      "after_allocation_stock": 14219010.0,
+      "unmet": 0.0
+    },
+    {
+      "resource_id": "R51",
+      "before_stock": 5111416.0,
+      "requested": 255570.0,
+      "allocated": 766711.0,
+      "after_allocation_stock": 4344705.0,
+      "unmet": 0.0
+    },
+    {
+      "resource_id": "R52",
+      "before_stock": 1858702.0,
+      "requested": 92935.0,
+      "allocated": 278805.0,
+      "after_allocation_stock": 1579897.0,
+      "unmet": 0.0
+    },
+    {
+      "resource_id": "R53",
+      "before_stock": 62.0,
+      "requested": 3.0,
+      "allocated": 9.0,
+      "after_allocation_stock": 53.0,
+      "unmet": 0.0
+    },
+    {
+      "resource_id": "R54",
+      "before_stock": 232346.0,
+      "requested": 11617.0,
+      "allocated": 34851.0,
+      "after_allocation_stock": 197495.0,
+      "unmet": 0.0
+    },
+    {
+      "resource_id": "R55",
+      "before_stock": 2076.0,
+      "requested": 103.0,
+      "allocated": 310.0,
+      "after_allocation_stock": 1766.0,
+      "unmet": 0.0
+    },
+    {
+      "resource_id": "R56",
+      "before_stock": 4234.0,
+      "requested": 211.0,
+      "allocated": 634.0,
+      "after_allocation_stock": 3600.0,
+      "unmet": 0.0
+    }
+  ]
+}

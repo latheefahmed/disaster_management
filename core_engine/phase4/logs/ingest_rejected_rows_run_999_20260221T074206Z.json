@@ -1,0 +1,56 @@
+[
+  {
+    "table": "allocation_or_unmet",
+    "row": {
+      "solver_run_id": 999,
+      "request_id": 0,
+      "supply_level": "state",
+      "resource_id": "water",
+      "district_code": "201",
+      "state_code": "20",
+      "origin_state": "20",
+      "origin_state_code": "20",
+      "origin_district_code": null,
+      "time": 1,
+      "allocated_quantity": 70.0,
+      "implied_delay_hours": 0.0,
+      "receipt_confirmed": false,
+      "receipt_time": null,
+      "is_unmet": false,
+      "claimed_quantity": 0.0,
+      "consumed_quantity": 0.0,
+      "returned_quantity": 0.0,
+      "status": "allocated"
+    },
+    "reason": "slot_total_mismatch_with_final_demand",
+    "observed_slot_total": 75.0,
+    "final_demand_total": 0.0
+  },
+  {
+    "table": "allocation_or_unmet",
+    "row": {
+      "solver_run_id": 999,
+      "request_id": 0,
+      "supply_level": "unmet",
+      "resource_id": "water",
+      "district_code": "201",
+      "state_code": "20",
+      "origin_state": "20",
+      "origin_state_code": "20",
+      "origin_district_code": null,
+      "time": 1,
+      "allocated_quantity": 5.0,
+      "implied_delay_hours": 0.0,
+      "receipt_confirmed": false,
+      "receipt_time": null,
+      "is_unmet": true,
+      "claimed_quantity": 0.0,
+      "consumed_quantity": 0.0,
+      "returned_quantity": 0.0,
+      "status": "unmet"
+    },
+    "reason": "slot_total_mismatch_with_final_demand",
+    "observed_slot_total": 75.0,
+    "final_demand_total": 0.0
+  }
+]

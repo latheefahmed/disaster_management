@@ -1,0 +1,35 @@
+{
+  "keep_latest": 300,
+  "scope": "all",
+  "dry_run": false,
+  "active_count": 300,
+  "overflow_candidates": 31493,
+  "processed": 1938,
+  "returned": 711,
+  "refilled": 1217,
+  "skipped": 29565,
+  "failed": 0,
+  "returned_quantity": 1195891.0,
+  "refilled_quantity": 233775.0,
+  "errors": [],
+  "max_process": 2000,
+  "run_id": "overflow-reconcile-20260228T134404Z",
+  "applied": true,
+  "generated_at": "2026-02-28T13:57:56.027255Z",
+  "validation": {
+    "keep_latest": 300,
+    "scope": "all",
+    "overflow_candidates": 31493,
+    "unresolved_overflow": 0,
+    "invalid_mode_for_returnable": 0,
+    "invalid_mode_for_non_returnable": 0,
+    "mode_counts": {
+      "refilled_non_returnable": 20474,
+      "returned": 10717,
+      "skipped_returned_status": 141,
+      "skipped_zero_remaining": 161
+    },
+    "ok": true,
+    "issues": []
+  }
+}

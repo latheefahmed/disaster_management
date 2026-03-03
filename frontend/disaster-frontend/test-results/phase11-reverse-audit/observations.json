@@ -1,0 +1,75 @@
+{
+  "timestamp": "2026-03-01T17:43:45.246Z",
+  "district": {
+    "requestStatus": 201,
+    "runStatus": 200,
+    "before": {
+      "finalDemand": null,
+      "allocated": null,
+      "unmet": null,
+      "coverage": null,
+      "allocationRows": 1,
+      "inventoryRows": 0
+    },
+    "after": {
+      "finalDemand": null,
+      "allocated": null,
+      "unmet": null,
+      "coverage": null,
+      "allocationRows": 1,
+      "inventoryRows": 0
+    },
+    "api": {
+      "kpiStatus": 200,
+      "kpiBody": {
+        "solver_run_id": 710,
+        "allocated": 3812778290,
+        "unmet": 530854,
+        "final_demand": 3813309144,
+        "coverage": 0.999860789151901
+      },
+      "stockStatus": 200,
+      "stockRows": 56
+    }
+  },
+  "state": {
+    "before": {
+      "totalDemand": null,
+      "totalAllocated": null,
+      "totalUnmet": null,
+      "inventoryRows": 0
+    },
+    "api": {
+      "kpiStatus": 200,
+      "kpiBody": {
+        "solver_run_id": 710,
+        "allocated": 3812778290,
+        "unmet": 530854,
+        "final_demand": 3813309144,
+        "coverage": 0.999860789151901
+      },
+      "stockStatus": 200,
+      "stockRows": 56
+    }
+  },
+  "national": {
+    "stats": {
+      "nationalDemand": null,
+      "nationalStock": null,
+      "totalUnmet": null,
+      "inventoryRows": 0
+    },
+    "api": {
+      "kpiStatus": 200,
+      "kpiBody": {
+        "solver_run_id": 710,
+        "allocated": 3812778890,
+        "unmet": 530854,
+        "final_demand": 3813309744,
+        "coverage": 0.9998607891738049
+      },
+      "stockStatus": 200,
+      "stockRows": 56
+    }
+  }
+}

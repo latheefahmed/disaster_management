@@ -1,0 +1,62 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - heading "Disaster Resource Management System" [level=1] [ref=e6]
+      - navigation [ref=e7]:
+        - link "District" [ref=e8] [cursor=pointer]:
+          - /url: /district
+        - link "District Request" [ref=e9] [cursor=pointer]:
+          - /url: /district/request
+        - button "Logout" [ref=e10]
+        - generic [ref=e11]: "Role: district"
+  - main [ref=e12]:
+    - generic [ref=e14]:
+      - heading "District Resource Request — District 1001" [level=3] [ref=e15]
+      - generic [ref=e16]:
+        - generic [ref=e17]:
+          - heading "Add Resource Request" [level=3] [ref=e18]
+          - generic [ref=e19]:
+            - generic [ref=e20]:
+              - text: Resource
+              - combobox [ref=e21]:
+                - option "Select resource" [selected]
+            - generic [ref=e22]:
+              - text: Time Index
+              - spinbutton [ref=e23]: "0"
+            - generic [ref=e24]:
+              - text: Quantity
+              - spinbutton [ref=e25]: "0"
+            - generic [ref=e26]:
+              - text: Priority
+              - spinbutton [ref=e27]
+            - generic [ref=e28]:
+              - text: Urgency
+              - combobox [ref=e29]:
+                - option "Auto (ML suggestion)" [selected]
+                - option "Low"
+                - option "Medium"
+                - option "High"
+                - option "Critical"
+            - generic [ref=e30]:
+              - text: Confidence (0-1)
+              - spinbutton [ref=e31]: "1"
+            - generic [ref=e32]:
+              - text: Source
+              - combobox [ref=e33]:
+                - option "human" [selected]
+                - option "human_ai_agent"
+          - button "Add to Request Batch" [ref=e34]
+          - generic [ref=e35]: No resource requests added.
+        - generic [ref=e36]:
+          - heading "Pending Requests" [level=3] [ref=e37]
+          - generic [ref=e38]: No resources added yet.
+        - generic [ref=e39]:
+          - heading "Submit Requests" [level=3] [ref=e40]
+          - button "Submit All Requests" [active] [ref=e41]
+        - generic [ref=e42]:
+          - heading "Request Status Log (Live)" [level=3] [ref=e43]
+          - generic [ref=e44]: No requests found yet.
+```

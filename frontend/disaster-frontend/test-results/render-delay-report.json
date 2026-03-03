@@ -1,0 +1,19 @@
+{
+  "generatedAt": "2026-03-01T17:43:51.392Z",
+  "sampleCount": 3,
+  "averageDelayMs": 1619,
+  "samples": [
+    {
+      "step": "login_to_district_overview",
+      "delayMs": 4095
+    },
+    {
+      "step": "district_overview_to_request_page",
+      "delayMs": 343
+    },
+    {
+      "step": "request_page_to_district_overview",
+      "delayMs": 419
+    }
+  ]
+}

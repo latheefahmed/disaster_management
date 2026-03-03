@@ -1,0 +1,109 @@
+{
+  "keep_latest": 300,
+  "scope": "all",
+  "dry_run": false,
+  "active_count": 300,
+  "overflow_candidates": 31493,
+  "processed": 1500,
+  "returned": 467,
+  "refilled": 1033,
+  "skipped": 222,
+  "failed": 11,
+  "returned_quantity": 1868.0,
+  "refilled_quantity": 281984232.0,
+  "errors": [
+    {
+      "allocation_id": 32935,
+      "solver_run_id": 701,
+      "district_code": "603",
+      "resource_id": "R13",
+      "time": 0,
+      "error": "Cannot claim in allocation status 'RETURNED'"
+    },
+    {
+      "allocation_id": 32791,
+      "solver_run_id": 699,
+      "district_code": "603",
+      "resource_id": "R10",
+      "time": 4,
+      "error": "quantity exceeds max allowed for resource 'R10' (5000000)"
+    },
+    {
+      "allocation_id": 32505,
+      "solver_run_id": 692,
+      "district_code": "603",
+      "resource_id": "R12",
+      "time": 1,
+      "error": "Cannot claim in allocation status 'RETURNED'"
+    },
+    {
+      "allocation_id": 32400,
+      "solver_run_id": 690,
+      "district_code": "603",
+      "resource_id": "R12",
+      "time": 1,
+      "error": "Cannot claim in allocation status 'RETURNED'"
+    },
+    {
+      "allocation_id": 32307,
+      "solver_run_id": 688,
+      "district_code": "603",
+      "resource_id": "R56",
+      "time": 4,
+      "error": "Cannot claim in allocation status 'RETURNED'"
+    },
+    {
+      "allocation_id": 32096,
+      "solver_run_id": 684,
+      "district_code": "603",
+      "resource_id": "R54",
+      "time": 0,
+      "error": "Cannot claim in allocation status 'RETURNED'"
+    },
+    {
+      "allocation_id": 32043,
+      "solver_run_id": 683,
+      "district_code": "603",
+      "resource_id": "R48",
+      "time": 1,
+      "error": "Cannot claim in allocation status 'RETURNED'"
+    },
+    {
+      "allocation_id": 31884,
+      "solver_run_id": 680,
+      "district_code": "603",
+      "resource_id": "R41",
+      "time": 0,
+      "error": "Cannot claim in allocation status 'RETURNED'"
+    },
+    {
+      "allocation_id": 31830,
+      "solver_run_id": 679,
+      "district_code": "603",
+      "resource_id": "R48",
+      "time": 0,
+      "error": "Cannot claim in allocation status 'RETURNED'"
+    },
+    {
+      "allocation_id": 31660,
+      "solver_run_id": 675,
+      "district_code": "603",
+      "resource_id": "R47",
+      "time": 3,
+      "error": "Cannot claim in allocation status 'RETURNED'"
+    },
+    {
+      "allocation_id": 31420,
+      "solver_run_id": 671,
+      "district_code": "603",
+      "resource_id": "R11",
+      "time": 1,
+      "error": "quantity exceeds max allowed for resource 'R11' (5000000)"
+    }
+  ],
+  "max_process": 1500,
+  "stopped_early": true,
+  "run_id": "overflow-reconcile-20260228T091836Z",
+  "applied": true,
+  "generated_at": "2026-02-28T09:31:16.748824Z"
+}

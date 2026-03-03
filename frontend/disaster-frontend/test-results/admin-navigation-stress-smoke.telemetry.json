@@ -1,0 +1,387 @@
+{
+  "test": "admin-navigation-stress-smoke",
+  "captured_at": "2026-03-01T17:45:53.177Z",
+  "console": [
+    {
+      "type": "debug",
+      "text": "[vite] connecting...",
+      "location": {
+        "url": "http://127.0.0.1:5173/@vite/client",
+        "lineNumber": 732,
+        "columnNumber": 8
+      }
+    },
+    {
+      "type": "debug",
+      "text": "[vite] connected.",
+      "location": {
+        "url": "http://127.0.0.1:5173/@vite/client",
+        "lineNumber": 826,
+        "columnNumber": 11
+      }
+    },
+    {
+      "type": "info",
+      "text": "%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold",
+      "location": {
+        "url": "http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=3574dd16",
+        "lineNumber": 20100,
+        "columnNumber": 53
+      }
+    }
+  ],
+  "network": [
+    {
+      "kind": "response",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/login",
+      "status": 200,
+      "statusText": "OK"
+    },
+    {
+      "kind": "response",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/src/main.tsx?t=1772387022048",
+      "status": 200,
+      "statusText": "OK"
+    },
+    {
+      "kind": "response",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/@vite/client",
+      "status": 200,
+      "statusText": "OK"
+    },
+    {
+      "kind": "response",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/node_modules/.vite/deps/react.js?v=3574dd16",
+      "status": 200,
+      "statusText": "OK"
+    },
+    {
+      "kind": "response",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=3574dd16",
+      "status": 200,
+      "statusText": "OK"
+    },
+    {
+      "kind": "response",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/src/App.tsx",
+      "status": 200,
+      "statusText": "OK"
+    },
+    {
+      "kind": "response",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/src/style.css?t=1772387022048",
+      "status": 200,
+      "statusText": "OK"
+    },
+    {
+      "kind": "response",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/node_modules/vite/dist/client/env.mjs",
+      "status": 200,
+      "statusText": "OK"
+    },
+    {
+      "kind": "response",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/node_modules/.vite/deps/chunk-OSXXUFI4.js?v=3574dd16",
+      "status": 200,
+      "statusText": "OK"
+    },
+    {
+      "kind": "response",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/src/routes/AppRoutes.tsx",
+      "status": 200,
+      "statusText": "OK"
+    },
+    {
+      "kind": "response",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/src/auth/AuthContext.tsx",
+      "status": 200,
+      "statusText": "OK"
+    },
+    {
+      "kind": "response",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/src/state/scenarioContext.tsx",
+      "status": 200,
+      "statusText": "OK"
+    },
+    {
+      "kind": "response",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=3574dd16",
+      "status": 200,
+      "statusText": "OK"
+    },
+    {
+      "kind": "response",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/src/auth/RequireRole.tsx",
+      "status": 200,
+      "statusText": "OK"
+    },
+    {
+      "kind": "response",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/src/pages/DistrictDashboard.tsx",
+      "status": 200,
+      "statusText": "OK"
+    },
+    {
+      "kind": "response",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/src/pages/StateDashboard.tsx",
+      "status": 200,
+      "statusText": "OK"
+    },
+    {
+      "kind": "response",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/src/pages/NationalDashboard.tsx",
+      "status": 200,
+      "statusText": "OK"
+    },
+    {
+      "kind": "response",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/src/layout/AppLayout.tsx",
+      "status": 200,
+      "statusText": "OK"
+    },
+    {
+      "kind": "response",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/src/pages/AdminDashboard.tsx",
+      "status": 200,
+      "statusText": "OK"
+    },
+    {
+      "kind": "response",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/src/dashboards/state/StateRequests.tsx",
+      "status": 200,
+      "statusText": "OK"
+    },
+    {
+      "kind": "response",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/src/pages/Login.tsx",
+      "status": 200,
+      "statusText": "OK"
+    },
+    {
+      "kind": "response",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/src/dashboards/district/DistrictRequest.tsx",
+      "status": 200,
+      "statusText": "OK"
+    },
+    {
+      "kind": "response",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/src/dashboards/national/NationalRequests.tsx",
+      "status": 200,
+      "statusText": "OK"
+    },
+    {
+      "kind": "response",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/src/dashboards/admin/AdminScenarioRunDetails.tsx",
+      "status": 200,
+      "statusText": "OK"
+    },
+    {
+      "kind": "response",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/node_modules/.vite/deps/chunk-XBBB7KFK.js?v=3574dd16",
+      "status": 200,
+      "statusText": "OK"
+    },
+    {
+      "kind": "response",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/node_modules/.vite/deps/react-router-dom.js?v=3574dd16",
+      "status": 200,
+      "statusText": "OK"
+    },
+    {
+      "kind": "response",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/src/dashboards/national/NationalOverview.tsx",
+      "status": 200,
+      "statusText": "OK"
+    },
+    {
+      "kind": "response",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/src/dashboards/state/StateOverview.tsx",
+      "status": 200,
+      "statusText": "OK"
+    },
+    {
+      "kind": "response",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/src/dashboards/shared/StatCard.tsx",
+      "status": 200,
+      "statusText": "OK"
+    },
+    {
+      "kind": "response",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/src/dashboards/shared/Section.tsx",
+      "status": 200,
+      "statusText": "OK"
+    },
+    {
+      "kind": "response",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/src/data/backendPaths.ts",
+      "status": 200,
+      "statusText": "OK"
+    },
+    {
+      "kind": "response",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/src/dashboards/shared/EmptyState.tsx",
+      "status": 200,
+      "statusText": "OK"
+    },
+    {
+      "kind": "response",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/src/dashboards/admin/AdminOverview.tsx",
+      "status": 200,
+      "statusText": "OK"
+    },
+    {
+      "kind": "response",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/src/utils/csv.ts",
+      "status": 200,
+      "statusText": "OK"
+    },
+    {
+      "kind": "response",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/src/dashboards/district/DistrictOverview.tsx",
+      "status": 200,
+      "statusText": "OK"
+    },
+    {
+      "kind": "response",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/src/state/auditLog.ts",
+      "status": 200,
+      "statusText": "OK"
+    },
+    {
+      "kind": "response",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/src/data/apiClient.ts",
+      "status": 200,
+      "statusText": "OK"
+    },
+    {
+      "kind": "response",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/src/components/ResourceRefillPanel.tsx",
+      "status": 200,
+      "statusText": "OK"
+    },
+    {
+      "kind": "response",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/src/state/useLiveAllocationStream.ts",
+      "status": 200,
+      "statusText": "OK"
+    },
+    {
+      "kind": "response",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/src/dashboards/shared/OpsDataTable.tsx",
+      "status": 200,
+      "statusText": "OK"
+    },
+    {
+      "kind": "response",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/src/components/ResourceStockTabs.tsx",
+      "status": 200,
+      "statusText": "OK"
+    },
+    {
+      "kind": "response",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/src/state/districtClaims.ts",
+      "status": 200,
+      "statusText": "OK"
+    },
+    {
+      "kind": "response",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/src/state/districtConsumption.ts",
+      "status": 200,
+      "statusText": "OK"
+    },
+    {
+      "kind": "response",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/src/state/districtReturns.ts",
+      "status": 200,
+      "statusText": "OK"
+    },
+    {
+      "kind": "response",
+      "method": "GET",
+      "url": "http://127.0.0.1:8000/metadata/states",
+      "status": 200,
+      "statusText": "OK"
+    },
+    {
+      "kind": "response",
+      "method": "GET",
+      "url": "http://127.0.0.1:8000/metadata/states",
+      "status": 200,
+      "statusText": "OK"
+    },
+    {
+      "kind": "response",
+      "method": "POST",
+      "url": "http://127.0.0.1:8000/auth/login",
+      "status": 200,
+      "statusText": "OK"
+    },
+    {
+      "kind": "response",
+      "method": "GET",
+      "url": "http://127.0.0.1:8000/metadata/states",
+      "status": 200,
+      "statusText": "OK"
+    },
+    {
+      "kind": "response",
+      "method": "GET",
+      "url": "http://127.0.0.1:8000/metadata/resources",
+      "status": 200,
+      "statusText": "OK"
+    },
+    {
+      "kind": "response",
+      "method": "GET",
+      "url": "http://127.0.0.1:8000/metadata/districts",
+      "status": 200,
+      "statusText": "OK"
+    }
+  ],
+  "http_errors": [],
+  "request_failures": []
+}

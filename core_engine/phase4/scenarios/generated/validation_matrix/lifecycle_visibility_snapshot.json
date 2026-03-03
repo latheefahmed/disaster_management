@@ -1,0 +1,118 @@
+{
+  "generated_at": "2026-02-18T15:45:49.864838Z",
+  "solver_run_id": 121,
+  "probe": {
+    "district_code": "1",
+    "state_code": "1",
+    "resource_id": "CERT_R_121",
+    "time_slots": {
+      "allocated": 9101,
+      "partial": 9102,
+      "unmet": 9103,
+      "pending": 9104,
+      "escalated": 9105
+    }
+  },
+  "request_status_checks": {
+    "expected": {
+      "107": "allocated",
+      "108": "partial",
+      "109": "unmet",
+      "110": "pending",
+      "111": "escalated_national"
+    },
+    "district_view": {
+      "107": "allocated",
+      "108": "partial",
+      "109": "unmet",
+      "110": "pending",
+      "111": "escalated_national"
+    },
+    "state_view": {
+      "107": "allocated",
+      "108": "partial",
+      "109": "unmet",
+      "110": "pending",
+      "111": "escalated_national"
+    },
+    "all_match": true
+  },
+  "allocation_slot_lifecycle": {
+    "sequence": [
+      "allocated",
+      "claimed",
+      "partially_returned",
+      "closed"
+    ],
+    "expected": [
+      "allocated",
+      "claimed",
+      "partially_returned",
+      "closed"
+    ],
+    "passed": true
+  },
+  "state_parity": {
+    "district_slot_allocated_sum": 8.0,
+    "state_summary_allocated_quantity": 8.0,
+    "equal": true,
+    "state_summary_row": {
+      "district_code": "1",
+      "resource_id": "CERT_R_121",
+      "time": 9101,
+      "allocated_quantity": 8.0,
+      "unmet_quantity": 0.0,
+      "final_demand_quantity": 0.0,
+      "met": true,
+      "lineage_consistent": false
+    },
+    "state_lineage_all_consistent": false
+  },
+  "ui_surface_map": {
+    "district_request_log": {
+      "surface": "district request status log",
+      "endpoint": "/district/requests",
+      "statuses": [
+        "pending",
+        "allocated",
+        "partial",
+        "unmet",
+        "escalated_national"
+      ]
+    },
+    "state_requests_table": {
+      "surface": "state requests and rebalancing table",
+      "endpoint": "/state/requests",
+      "statuses": [
+        "pending",
+        "allocated",
+        "partial",
+        "unmet",
+        "escalated_national"
+      ]
+    },
+    "district_allocation_lifecycle": {
+      "surface": "district claim/consume/return cards",
+      "endpoint": "/district/allocations + /district/claims + /district/returns",
+      "statuses": [
+        "allocated",
+        "claimed",
+        "partially_consumed",
+        "partially_returned",
+        "closed",
+        "empty"
+      ]
+    },
+    "state_allocations_detail": {
+      "surface": "state allocations summary/detail by district",
+      "endpoint": "/state/allocations/summary",
+      "district_dimension_present": true
+    },
+    "terminology_note": {
+      "ready_maps_to": "pending",
+      "returned_maps_to": "partially_returned/closed (slot lifecycle)",
+      "dropped_status_present": false,
+      "dropped_rendered_as": "closed or zero/empty slot depending context"
+    }
+  }
+}

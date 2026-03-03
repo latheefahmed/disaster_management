@@ -1,0 +1,8 @@
+{
+  "solver_run_id": 121,
+  "allocated": 10.0,
+  "unmet": 0.0,
+  "district_alloc_rows": 1,
+  "district_alloc_total": 10.0,
+  "passes": true
+}

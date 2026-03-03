@@ -1,0 +1,370 @@
+{
+  "timestamp": "2026-02-15 14:30:00",
+  "base_url": "http://localhost:8000",
+  "totals": {
+    "all": 50,
+    "passed": 50,
+    "failed": 0,
+    "critical_total": 26,
+    "critical_failed": 0,
+    "major_total": 24,
+    "major_failed": 0
+  },
+  "gate": {
+    "critical_pass": true,
+    "major_pass": true,
+    "overall_green": true
+  },
+  "results": [
+    {
+      "name": "auth.login.admin",
+      "severity": "critical",
+      "passed": true,
+      "http_status": 200,
+      "detail": "{'access_token': 'c494162caf5d808a23c6c7b8161f70d563807d21d51a4262a0832333f88dabfd', 'token_type': 'bearer', 'role': 'admin', 'state_code': None, 'district_code': None}"
+    },
+    {
+      "name": "auth.login.district",
+      "severity": "critical",
+      "passed": true,
+      "http_status": 200,
+      "detail": "{'access_token': 'f9fbfc1459eec50e867577980bde595885b16128b6ae6d1cd9dcebdb1e593dfd', 'token_type': 'bearer', 'role': 'district', 'state_code': '33', 'district_code': '603'}"
+    },
+    {
+      "name": "auth.login.state",
+      "severity": "critical",
+      "passed": true,
+      "http_status": 200,
+      "detail": "{'access_token': '216d152b31fe2d8628cfef3852fb8fe1fa19ded5bd4e71d9e938c411748a2853', 'token_type': 'bearer', 'role': 'state', 'state_code': '33', 'district_code': None}"
+    },
+    {
+      "name": "auth.login.national",
+      "severity": "critical",
+      "passed": true,
+      "http_status": 200,
+      "detail": "{'access_token': '78316f43068790f1c94a1df76e1d0eaae55adcd1ca72c0730da25b89eaa67a08', 'token_type': 'bearer', 'role': 'national', 'state_code': None, 'district_code': None}"
+    },
+    {
+      "name": "auth.invalid_password_rejected",
+      "severity": "critical",
+      "passed": true,
+      "http_status": 401,
+      "detail": "{'detail': 'Invalid credentials'}"
+    },
+    {
+      "name": "auth.role_guard.district_blocked_admin",
+      "severity": "major",
+      "passed": true,
+      "http_status": 403,
+      "detail": "{'detail': 'Not authorized for this role'}"
+    },
+    {
+      "name": "metadata.resources",
+      "severity": "major",
+      "passed": true,
+      "http_status": 200,
+      "detail": "rows=11"
+    },
+    {
+      "name": "district.me",
+      "severity": "major",
+      "passed": true,
+      "http_status": 200,
+      "detail": "{'district_code': '603', 'district_name': 'Chennai', 'state_code': '33', 'demand_mode': 'baseline_plus_human'}"
+    },
+    {
+      "name": "district.get_demand_mode",
+      "severity": "major",
+      "passed": true,
+      "http_status": 200,
+      "detail": "{'district_code': '603', 'demand_mode': 'baseline_plus_human'}"
+    },
+    {
+      "name": "district.set_demand_mode",
+      "severity": "major",
+      "passed": true,
+      "http_status": 200,
+      "detail": "{'district_code': '603', 'demand_mode': 'human_only'}"
+    },
+    {
+      "name": "district.create_request",
+      "severity": "critical",
+      "passed": true,
+      "http_status": 200,
+      "detail": "{'status': 'accepted', 'request_id': 41}"
+    },
+    {
+      "name": "district.live_solver_completed",
+      "severity": "critical",
+      "passed": true,
+      "http_status": null,
+      "detail": "(60, 'completed')"
+    },
+    {
+      "name": "district.list_requests",
+      "severity": "major",
+      "passed": true,
+      "http_status": 200,
+      "detail": "rows=40"
+    },
+    {
+      "name": "district.list_allocations",
+      "severity": "critical",
+      "passed": true,
+      "http_status": 200,
+      "detail": "rows=3"
+    },
+    {
+      "name": "district.list_unmet",
+      "severity": "major",
+      "passed": true,
+      "http_status": 200,
+      "detail": "rows=1"
+    },
+    {
+      "name": "district.solver_status",
+      "severity": "major",
+      "passed": true,
+      "http_status": 200,
+      "detail": "{'solver_run_id': 60, 'status': 'completed', 'mode': 'live', 'alloc_count': 3, 'unmet_count': 1, 'started_at': '2026-02-15T08:57:50.477058'}"
+    },
+    {
+      "name": "district.claim",
+      "severity": "critical",
+      "passed": true,
+      "http_status": 200,
+      "detail": "{'status': 'ok', 'id': 4}"
+    },
+    {
+      "name": "district.consume",
+      "severity": "critical",
+      "passed": true,
+      "http_status": 200,
+      "detail": "{'status': 'ok', 'id': 4}"
+    },
+    {
+      "name": "district.return",
+      "severity": "critical",
+      "passed": true,
+      "http_status": 200,
+      "detail": "{'status': 'ok', 'id': 2}"
+    },
+    {
+      "name": "district.list_claims",
+      "severity": "major",
+      "passed": true,
+      "http_status": 200,
+      "detail": "rows=4"
+    },
+    {
+      "name": "district.list_consumptions",
+      "severity": "major",
+      "passed": true,
+      "http_status": 200,
+      "detail": "rows=4"
+    },
+    {
+      "name": "district.list_returns",
+      "severity": "major",
+      "passed": true,
+      "http_status": 200,
+      "detail": "rows=2"
+    },
+    {
+      "name": "state.me",
+      "severity": "major",
+      "passed": true,
+      "http_status": 200,
+      "detail": "{'message': 'State access confirmed', 'user': {'username': 'state_33', 'role': 'state', 'state_code': '33', 'district_code': None}}"
+    },
+    {
+      "name": "state.requests",
+      "severity": "major",
+      "passed": true,
+      "http_status": 200,
+      "detail": "rows=41"
+    },
+    {
+      "name": "state.allocations",
+      "severity": "major",
+      "passed": true,
+      "http_status": 200,
+      "detail": "rows=1836"
+    },
+    {
+      "name": "state.unmet",
+      "severity": "major",
+      "passed": true,
+      "http_status": 200,
+      "detail": "rows=1093"
+    },
+    {
+      "name": "state.escalations",
+      "severity": "critical",
+      "passed": true,
+      "http_status": 200,
+      "detail": "rows=12"
+    },
+    {
+      "name": "state.pool",
+      "severity": "critical",
+      "passed": true,
+      "http_status": 200,
+      "detail": "rows=1"
+    },
+    {
+      "name": "state.pool_allocate",
+      "severity": "critical",
+      "passed": true,
+      "http_status": 200,
+      "detail": "{'status': 'ok', 'transaction_id': 5}"
+    },
+    {
+      "name": "state.escalate_to_national",
+      "severity": "critical",
+      "passed": true,
+      "http_status": 200,
+      "detail": "{'resource_id': 'R3', 'id': 41, 'quantity': 900.0, 'urgency': 3, 'source': 'human', 'created_at': '2026-02-15T08:57:50.452427', 'time': 0, 'district_code': '603', 'state_code': '33', 'priority': 2, 'c"
+    },
+    {
+      "name": "national.me",
+      "severity": "major",
+      "passed": true,
+      "http_status": 200,
+      "detail": "{'message': 'National access confirmed', 'user': {'username': 'national_admin', 'role': 'national', 'state_code': None, 'district_code': None}}"
+    },
+    {
+      "name": "national.requests",
+      "severity": "major",
+      "passed": true,
+      "http_status": 200,
+      "detail": "rows=41"
+    },
+    {
+      "name": "national.allocations",
+      "severity": "major",
+      "passed": true,
+      "http_status": 200,
+      "detail": "rows=37269"
+    },
+    {
+      "name": "national.unmet",
+      "severity": "major",
+      "passed": true,
+      "http_status": 200,
+      "detail": "rows=22500"
+    },
+    {
+      "name": "national.stock",
+      "severity": "major",
+      "passed": true,
+      "http_status": 200,
+      "detail": "rows=11"
+    },
+    {
+      "name": "national.escalations",
+      "severity": "critical",
+      "passed": true,
+      "http_status": 200,
+      "detail": "rows=1"
+    },
+    {
+      "name": "national.pool",
+      "severity": "critical",
+      "passed": true,
+      "http_status": 200,
+      "detail": "{'total_quantity': 0.0, 'rows': []}"
+    },
+    {
+      "name": "national.pool_by_state",
+      "severity": "major",
+      "passed": true,
+      "http_status": 200,
+      "detail": "rows=0"
+    },
+    {
+      "name": "national.pool_allocate",
+      "severity": "major",
+      "passed": true,
+      "http_status": null,
+      "detail": "Skipped: no available state pool quantity"
+    },
+    {
+      "name": "national.resolve_escalation",
+      "severity": "critical",
+      "passed": true,
+      "http_status": 200,
+      "detail": "{'resource_id': 'R3', 'id': 41, 'quantity': 900.0, 'urgency': 3, 'source': 'human', 'created_at': '2026-02-15T08:57:50.452427', 'time': 0, 'district_code': '603', 'state_code': '33', 'priority': 2, 'c"
+    },
+    {
+      "name": "admin.list_scenarios",
+      "severity": "critical",
+      "passed": true,
+      "http_status": 200,
+      "detail": "rows=3"
+    },
+    {
+      "name": "admin.create_scenario",
+      "severity": "critical",
+      "passed": true,
+      "http_status": 200,
+      "detail": "{'name': 'Regression-d79ba843', 'status': 'created', 'created_at': '2026-02-15T08:59:31.737661', 'id': 4}"
+    },
+    {
+      "name": "admin.get_scenario_detail",
+      "severity": "major",
+      "passed": true,
+      "http_status": 200,
+      "detail": "{'id': 4, 'name': 'Regression-d79ba843', 'status': 'created', 'created_at': '2026-02-15T08:59:31.737661', 'demand': [], 'state_stock': [], 'national_stock': []}"
+    },
+    {
+      "name": "admin.add_demand",
+      "severity": "critical",
+      "passed": true,
+      "http_status": 200,
+      "detail": "{}"
+    },
+    {
+      "name": "admin.set_state_stock",
+      "severity": "critical",
+      "passed": true,
+      "http_status": 200,
+      "detail": "{}"
+    },
+    {
+      "name": "admin.set_national_stock",
+      "severity": "critical",
+      "passed": true,
+      "http_status": 200,
+      "detail": "{}"
+    },
+    {
+      "name": "admin.run_scenario",
+      "severity": "critical",
+      "passed": true,
+      "http_status": 200,
+      "detail": "{'status': 'scenario completed'}"
+    },
+    {
+      "name": "admin.scenario_runs",
+      "severity": "critical",
+      "passed": true,
+      "http_status": 200,
+      "detail": "rows=1"
+    },
+    {
+      "name": "admin.scenario_analysis",
+      "severity": "major",
+      "passed": true,
+      "http_status": 200,
+      "detail": "{'explanations': [{'id': 6, 'solver_run_id': 61, 'summary': 'Scenario 4 completed. Total demand=3730.17, unmet=12865300.50, recommendations=70', 'details': {'total_demand': 3730.17315193428, 'total_un"
+    },
+    {
+      "name": "dataflow.live_scenario_isolation",
+      "severity": "critical",
+      "passed": true,
+      "http_status": null,
+      "detail": "[(61, 4, 'scenario', 'completed'), (60, None, 'live', 'completed'), (59, 3, 'scenario', 'completed'), (58, None, 'live', 'completed'), (57, None, 'live', 'completed'), (56, None, 'live', 'completed'), (55, 2, 'scenario', 'completed'), (54, 1, 'scenario', 'completed')]"
+    }
+  ]
+}
