@@ -1,0 +1,550 @@
+{
+  "timestamp": "2026-03-04T01:18:10.600879Z",
+  "cases": 15,
+  "passed": 15,
+  "failed": 0,
+  "pass_rate": 1.0,
+  "results": [
+    {
+      "case": 1,
+      "scenario_id": 269,
+      "preset": "very_low",
+      "horizon": 1,
+      "district_count_requested": 6,
+      "resource_count_requested": 5,
+      "state_scope": [
+        "6"
+      ],
+      "preview_ok": true,
+      "apply_ok": true,
+      "run_http": 200,
+      "run_status": "completed",
+      "run_id": 1051,
+      "preview_row_count": 30,
+      "preview_quantity_mode": "stock_aware",
+      "preview_stock_backed_rows": 30,
+      "preview_zero_stock_rows": 0,
+      "summary_service_ratio": 1.0,
+      "summary_scope": {
+        "district": 6279528.0,
+        "state": 72431159.0,
+        "neighbor_state": 0.0,
+        "national": 263747397.0
+      },
+      "summary_escalation_status": {
+        "events_found": 0,
+        "state_marked": 0,
+        "national_marked": 0,
+        "neighbor_offers_created": 0,
+        "neighbor_offers_accepted": 0,
+        "neighbor_accepted_quantity": 0.0,
+        "mode": "scenario_no_live_auto_chain"
+      },
+      "pass": true
+    },
+    {
+      "case": 2,
+      "scenario_id": 270,
+      "preset": "low",
+      "horizon": 1,
+      "district_count_requested": 5,
+      "resource_count_requested": 2,
+      "state_scope": [],
+      "preview_ok": true,
+      "apply_ok": true,
+      "run_http": 200,
+      "run_status": "completed",
+      "run_id": 1052,
+      "preview_row_count": 10,
+      "preview_quantity_mode": "stock_aware",
+      "preview_stock_backed_rows": 10,
+      "preview_zero_stock_rows": 0,
+      "summary_service_ratio": 1.0,
+      "summary_scope": {
+        "district": 1396.0,
+        "state": 193626.0,
+        "neighbor_state": 0.0,
+        "national": 7708.0
+      },
+      "summary_escalation_status": {
+        "events_found": 0,
+        "state_marked": 0,
+        "national_marked": 0,
+        "neighbor_offers_created": 0,
+        "neighbor_offers_accepted": 0,
+        "neighbor_accepted_quantity": 0.0,
+        "mode": "scenario_no_live_auto_chain"
+      },
+      "pass": true
+    },
+    {
+      "case": 3,
+      "scenario_id": 271,
+      "preset": "medium",
+      "horizon": 1,
+      "district_count_requested": 4,
+      "resource_count_requested": 3,
+      "state_scope": [
+        "31"
+      ],
+      "preview_ok": true,
+      "apply_ok": true,
+      "run_http": 200,
+      "run_status": "completed",
+      "run_id": 1053,
+      "preview_row_count": 3,
+      "preview_quantity_mode": "stock_aware",
+      "preview_stock_backed_rows": 3,
+      "preview_zero_stock_rows": 0,
+      "summary_service_ratio": 1.0,
+      "summary_scope": {
+        "district": 103697.0,
+        "state": 0.0,
+        "neighbor_state": 0.0,
+        "national": 40906106.0
+      },
+      "summary_escalation_status": {
+        "events_found": 0,
+        "state_marked": 0,
+        "national_marked": 0,
+        "neighbor_offers_created": 0,
+        "neighbor_offers_accepted": 0,
+        "neighbor_accepted_quantity": 0.0,
+        "mode": "scenario_no_live_auto_chain"
+      },
+      "pass": true
+    },
+    {
+      "case": 4,
+      "scenario_id": 272,
+      "preset": "high",
+      "horizon": 1,
+      "district_count_requested": 5,
+      "resource_count_requested": 2,
+      "state_scope": [],
+      "preview_ok": true,
+      "apply_ok": true,
+      "run_http": 200,
+      "run_status": "completed",
+      "run_id": 1054,
+      "preview_row_count": 10,
+      "preview_quantity_mode": "stock_aware",
+      "preview_stock_backed_rows": 10,
+      "preview_zero_stock_rows": 0,
+      "summary_service_ratio": 1.0,
+      "summary_scope": {
+        "district": 894.0,
+        "state": 130868.0,
+        "neighbor_state": 0.0,
+        "national": 105342.0
+      },
+      "summary_escalation_status": {
+        "events_found": 0,
+        "state_marked": 0,
+        "national_marked": 0,
+        "neighbor_offers_created": 0,
+        "neighbor_offers_accepted": 0,
+        "neighbor_accepted_quantity": 0.0,
+        "mode": "scenario_no_live_auto_chain"
+      },
+      "pass": true
+    },
+    {
+      "case": 5,
+      "scenario_id": 273,
+      "preset": "extreme",
+      "horizon": 1,
+      "district_count_requested": 2,
+      "resource_count_requested": 7,
+      "state_scope": [
+        "29"
+      ],
+      "preview_ok": true,
+      "apply_ok": true,
+      "run_http": 200,
+      "run_status": "completed",
+      "run_id": 1055,
+      "preview_row_count": 14,
+      "preview_quantity_mode": "stock_aware",
+      "preview_stock_backed_rows": 14,
+      "preview_zero_stock_rows": 0,
+      "summary_service_ratio": 1.0,
+      "summary_scope": {
+        "district": 212287.0,
+        "state": 0.0,
+        "neighbor_state": 0.0,
+        "national": 327351777.0
+      },
+      "summary_escalation_status": {
+        "events_found": 0,
+        "state_marked": 0,
+        "national_marked": 0,
+        "neighbor_offers_created": 0,
+        "neighbor_offers_accepted": 0,
+        "neighbor_accepted_quantity": 0.0,
+        "mode": "scenario_no_live_auto_chain"
+      },
+      "pass": true
+    },
+    {
+      "case": 6,
+      "scenario_id": 274,
+      "preset": "very_low",
+      "horizon": 2,
+      "district_count_requested": 3,
+      "resource_count_requested": 3,
+      "state_scope": [],
+      "preview_ok": true,
+      "apply_ok": true,
+      "run_http": 200,
+      "run_status": "completed",
+      "run_id": 1056,
+      "preview_row_count": 18,
+      "preview_quantity_mode": "stock_aware",
+      "preview_stock_backed_rows": 18,
+      "preview_zero_stock_rows": 0,
+      "summary_service_ratio": 1.0,
+      "summary_scope": {
+        "district": 66.0,
+        "state": 2023.0,
+        "neighbor_state": 0.0,
+        "national": 1801.0
+      },
+      "summary_escalation_status": {
+        "events_found": 0,
+        "state_marked": 0,
+        "national_marked": 0,
+        "neighbor_offers_created": 0,
+        "neighbor_offers_accepted": 0,
+        "neighbor_accepted_quantity": 0.0,
+        "mode": "scenario_no_live_auto_chain"
+      },
+      "pass": true
+    },
+    {
+      "case": 7,
+      "scenario_id": 275,
+      "preset": "low",
+      "horizon": 2,
+      "district_count_requested": 4,
+      "resource_count_requested": 5,
+      "state_scope": [
+        "34"
+      ],
+      "preview_ok": true,
+      "apply_ok": true,
+      "run_http": 200,
+      "run_status": "completed",
+      "run_id": 1057,
+      "preview_row_count": 40,
+      "preview_quantity_mode": "stock_aware",
+      "preview_stock_backed_rows": 40,
+      "preview_zero_stock_rows": 0,
+      "summary_service_ratio": 1.0,
+      "summary_scope": {
+        "district": 627377.0,
+        "state": 3863528.0,
+        "neighbor_state": 0.0,
+        "national": 355514134.0
+      },
+      "summary_escalation_status": {
+        "events_found": 0,
+        "state_marked": 0,
+        "national_marked": 0,
+        "neighbor_offers_created": 0,
+        "neighbor_offers_accepted": 0,
+        "neighbor_accepted_quantity": 0.0,
+        "mode": "scenario_no_live_auto_chain"
+      },
+      "pass": true
+    },
+    {
+      "case": 8,
+      "scenario_id": 276,
+      "preset": "medium",
+      "horizon": 2,
+      "district_count_requested": 3,
+      "resource_count_requested": 4,
+      "state_scope": [],
+      "preview_ok": true,
+      "apply_ok": true,
+      "run_http": 200,
+      "run_status": "completed",
+      "run_id": 1058,
+      "preview_row_count": 24,
+      "preview_quantity_mode": "stock_aware",
+      "preview_stock_backed_rows": 24,
+      "preview_zero_stock_rows": 0,
+      "summary_service_ratio": 1.0,
+      "summary_scope": {
+        "district": 497417.0,
+        "state": 11822173.0,
+        "neighbor_state": 0.0,
+        "national": 27201513.0
+      },
+      "summary_escalation_status": {
+        "events_found": 0,
+        "state_marked": 0,
+        "national_marked": 0,
+        "neighbor_offers_created": 0,
+        "neighbor_offers_accepted": 0,
+        "neighbor_accepted_quantity": 0.0,
+        "mode": "scenario_no_live_auto_chain"
+      },
+      "pass": true
+    },
+    {
+      "case": 9,
+      "scenario_id": 277,
+      "preset": "high",
+      "horizon": 2,
+      "district_count_requested": 3,
+      "resource_count_requested": 4,
+      "state_scope": [
+        "12"
+      ],
+      "preview_ok": true,
+      "apply_ok": true,
+      "run_http": 200,
+      "run_status": "completed",
+      "run_id": 1059,
+      "preview_row_count": 24,
+      "preview_quantity_mode": "stock_aware",
+      "preview_stock_backed_rows": 24,
+      "preview_zero_stock_rows": 0,
+      "summary_service_ratio": 1.0,
+      "summary_scope": {
+        "district": 12492.0,
+        "state": 3820196.0,
+        "neighbor_state": 0.0,
+        "national": 166374945.0
+      },
+      "summary_escalation_status": {
+        "events_found": 0,
+        "state_marked": 0,
+        "national_marked": 0,
+        "neighbor_offers_created": 0,
+        "neighbor_offers_accepted": 0,
+        "neighbor_accepted_quantity": 0.0,
+        "mode": "scenario_no_live_auto_chain"
+      },
+      "pass": true
+    },
+    {
+      "case": 10,
+      "scenario_id": 278,
+      "preset": "extreme",
+      "horizon": 2,
+      "district_count_requested": 3,
+      "resource_count_requested": 7,
+      "state_scope": [],
+      "preview_ok": true,
+      "apply_ok": true,
+      "run_http": 200,
+      "run_status": "completed",
+      "run_id": 1060,
+      "preview_row_count": 42,
+      "preview_quantity_mode": "stock_aware",
+      "preview_stock_backed_rows": 42,
+      "preview_zero_stock_rows": 0,
+      "summary_service_ratio": 1.0,
+      "summary_scope": {
+        "district": 13819029.0,
+        "state": 35547378.0,
+        "neighbor_state": 0.0,
+        "national": 169016755.0
+      },
+      "summary_escalation_status": {
+        "events_found": 0,
+        "state_marked": 0,
+        "national_marked": 0,
+        "neighbor_offers_created": 0,
+        "neighbor_offers_accepted": 0,
+        "neighbor_accepted_quantity": 0.0,
+        "mode": "scenario_no_live_auto_chain"
+      },
+      "pass": true
+    },
+    {
+      "case": 11,
+      "scenario_id": 279,
+      "preset": "very_low",
+      "horizon": 3,
+      "district_count_requested": 4,
+      "resource_count_requested": 5,
+      "state_scope": [
+        "3"
+      ],
+      "preview_ok": true,
+      "apply_ok": true,
+      "run_http": 200,
+      "run_status": "completed",
+      "run_id": 1061,
+      "preview_row_count": 60,
+      "preview_quantity_mode": "stock_aware",
+      "preview_stock_backed_rows": 60,
+      "preview_zero_stock_rows": 0,
+      "summary_service_ratio": 1.0,
+      "summary_scope": {
+        "district": 18933578.0,
+        "state": 1537280.0,
+        "neighbor_state": 0.0,
+        "national": 439241448.0
+      },
+      "summary_escalation_status": {
+        "events_found": 0,
+        "state_marked": 0,
+        "national_marked": 0,
+        "neighbor_offers_created": 0,
+        "neighbor_offers_accepted": 0,
+        "neighbor_accepted_quantity": 0.0,
+        "mode": "scenario_no_live_auto_chain"
+      },
+      "pass": true
+    },
+    {
+      "case": 12,
+      "scenario_id": 280,
+      "preset": "low",
+      "horizon": 3,
+      "district_count_requested": 6,
+      "resource_count_requested": 4,
+      "state_scope": [],
+      "preview_ok": true,
+      "apply_ok": true,
+      "run_http": 200,
+      "run_status": "completed",
+      "run_id": 1062,
+      "preview_row_count": 72,
+      "preview_quantity_mode": "stock_aware",
+      "preview_stock_backed_rows": 72,
+      "preview_zero_stock_rows": 0,
+      "summary_service_ratio": 1.0,
+      "summary_scope": {
+        "district": 13992496.0,
+        "state": 549989911.0,
+        "neighbor_state": 0.0,
+        "national": 298848946.0
+      },
+      "summary_escalation_status": {
+        "events_found": 0,
+        "state_marked": 0,
+        "national_marked": 0,
+        "neighbor_offers_created": 0,
+        "neighbor_offers_accepted": 0,
+        "neighbor_accepted_quantity": 0.0,
+        "mode": "scenario_no_live_auto_chain"
+      },
+      "pass": true
+    },
+    {
+      "case": 13,
+      "scenario_id": 281,
+      "preset": "medium",
+      "horizon": 3,
+      "district_count_requested": 3,
+      "resource_count_requested": 6,
+      "state_scope": [
+        "17"
+      ],
+      "preview_ok": true,
+      "apply_ok": true,
+      "run_http": 200,
+      "run_status": "completed",
+      "run_id": 1063,
+      "preview_row_count": 54,
+      "preview_quantity_mode": "stock_aware",
+      "preview_stock_backed_rows": 54,
+      "preview_zero_stock_rows": 0,
+      "summary_service_ratio": 1.0,
+      "summary_scope": {
+        "district": 34803.0,
+        "state": 16.0,
+        "neighbor_state": 0.0,
+        "national": 14064003.0
+      },
+      "summary_escalation_status": {
+        "events_found": 0,
+        "state_marked": 0,
+        "national_marked": 0,
+        "neighbor_offers_created": 0,
+        "neighbor_offers_accepted": 0,
+        "neighbor_accepted_quantity": 0.0,
+        "mode": "scenario_no_live_auto_chain"
+      },
+      "pass": true
+    },
+    {
+      "case": 14,
+      "scenario_id": 282,
+      "preset": "high",
+      "horizon": 3,
+      "district_count_requested": 5,
+      "resource_count_requested": 5,
+      "state_scope": [],
+      "preview_ok": true,
+      "apply_ok": true,
+      "run_http": 200,
+      "run_status": "completed",
+      "run_id": 1064,
+      "preview_row_count": 75,
+      "preview_quantity_mode": "stock_aware",
+      "preview_stock_backed_rows": 75,
+      "preview_zero_stock_rows": 0,
+      "summary_service_ratio": 1.0,
+      "summary_scope": {
+        "district": 9244292.0,
+        "state": 230343252.0,
+        "neighbor_state": 0.0,
+        "national": 117141108.0
+      },
+      "summary_escalation_status": {
+        "events_found": 0,
+        "state_marked": 0,
+        "national_marked": 0,
+        "neighbor_offers_created": 0,
+        "neighbor_offers_accepted": 0,
+        "neighbor_accepted_quantity": 0.0,
+        "mode": "scenario_no_live_auto_chain"
+      },
+      "pass": true
+    },
+    {
+      "case": 15,
+      "scenario_id": 283,
+      "preset": "extreme",
+      "horizon": 3,
+      "district_count_requested": 6,
+      "resource_count_requested": 5,
+      "state_scope": [
+        "27"
+      ],
+      "preview_ok": true,
+      "apply_ok": true,
+      "run_http": 200,
+      "run_status": "completed",
+      "run_id": 1065,
+      "preview_row_count": 90,
+      "preview_quantity_mode": "stock_aware",
+      "preview_stock_backed_rows": 90,
+      "preview_zero_stock_rows": 0,
+      "summary_service_ratio": 1.0,
+      "summary_scope": {
+        "district": 22115433.0,
+        "state": 112180889.0,
+        "neighbor_state": 0.0,
+        "national": 425185082.0
+      },
+      "summary_escalation_status": {
+        "events_found": 0,
+        "state_marked": 0,
+        "national_marked": 0,
+        "neighbor_offers_created": 0,
+        "neighbor_offers_accepted": 0,
+        "neighbor_accepted_quantity": 0.0,
+        "mode": "scenario_no_live_auto_chain"
+      },
+      "pass": true
+    }
+  ]
+}

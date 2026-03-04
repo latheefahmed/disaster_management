@@ -32,6 +32,15 @@ type ScenarioRunSummary = {
   scenario_id?: number
   status?: string
   started_at?: string
+  escalation_status?: {
+    events_found: number
+    state_marked: number
+    national_marked: number
+    neighbor_offers_created: number
+    neighbor_offers_accepted: number
+    neighbor_accepted_quantity: number
+    mode: string
+  }
   totals: {
     allocated_quantity: number
     unmet_quantity: number
@@ -67,6 +76,15 @@ type ScenarioRunSummary = {
     allocated_quantity: number
     unmet_quantity: number
     service_ratio: number
+  }>
+  used_state_stock?: boolean
+  used_national_stock?: boolean
+  allocation_details?: Array<{
+    resource_id: string
+    district_code: string
+    time: number
+    allocated_quantity: number
+    source_level: 'district' | 'state' | 'national'
   }>
   fairness?: {
     district_ratio_jain?: number | null
@@ -133,6 +151,7 @@ type AgentRecommendationRow = {
 type RandomizerPreview = {
   scenario_id: number
   preset: string
+  intensity_ratio?: number
   seed?: number | null
   time_horizon: number
   stress_mode: boolean
@@ -144,6 +163,18 @@ type RandomizerPreview = {
   total_quantity: number
   baseline_total_quantity: number
   demand_ratio_vs_baseline?: number | null
+  total_available_supply?: number
+  total_generated_demand?: number
+  demand_supply_ratio?: number | null
+  expected_shortage_estimate?: number
+  selected_districts?: string[]
+  selected_resources?: string[]
+  avg_available_stock?: number
+  avg_priority?: number
+  avg_time_index?: number
+  stock_backed_rows?: number
+  zero_stock_rows?: number
+  quantity_mode?: 'fixed' | 'stock_aware'
   guardrail_warnings: string[]
 }
 
@@ -225,10 +256,13 @@ export default function AdminOverview({ initialAdminView = 'system' }: AdminOver
   const [selectedResourceIds, setSelectedResourceIds] = useState<string[]>([])
 
   const [scenarioType, setScenarioType] = useState('multi_district_intra_state')
-  const [timeHorizon, setTimeHorizon] = useState(1)
-  const [demandMultiplier, setDemandMultiplier] = useState(1)
-  const [baseDemandQty, setBaseDemandQty] = useState(100)
+  const [timeHorizon, setTimeHorizon] = useState<number | ''>(1)
+  const [demandMultiplier, setDemandMultiplier] = useState<number | ''>(1)
+  const [baseDemandQty, setBaseDemandQty] = useState<number | ''>(100)
   const [resourceDemandMap, setResourceDemandMap] = useState<Record<string, number>>({})
+  const [manualPriority, setManualPriority] = useState<number | ''>(3)
+  const [manualUrgency, setManualUrgency] = useState<number | ''>(3)
+  const [manualTimeIndex, setManualTimeIndex] = useState<number | ''>(1)
 
   const [stateStockDraft, setStateStockDraft] = useState({
     state_code: '',
@@ -245,10 +279,8 @@ export default function AdminOverview({ initialAdminView = 'system' }: AdminOver
   const [agentBusyId, setAgentBusyId] = useState<number | null>(null)
   const [activeTab, setActiveTab] = useState<'system-health' | 'solver-runs' | 'neural' | 'agent' | 'audit'>(initialAdminView === 'scenarios' ? 'solver-runs' : 'system-health')
   const [modelingMode, setModelingMode] = useState<'manual' | 'guided_random'>('manual')
-  const [randomPreset, setRandomPreset] = useState<'very_low' | 'low' | 'medium' | 'high' | 'extreme'>('medium')
-  const [randomSeed, setRandomSeed] = useState<number>(() => Number(`${Date.now()}`.slice(-8)))
-  const [randomDistrictCount, setRandomDistrictCount] = useState<number>(6)
-  const [randomResourceCount, setRandomResourceCount] = useState<number>(5)
+  const [randomPreset, setRandomPreset] = useState<'extremely_low' | 'low' | 'medium_low' | 'medium' | 'medium_high' | 'high' | 'extremely_high'>('medium')
+  const [randomSeed, setRandomSeed] = useState<number | ''>(() => Number(`${Date.now()}`.slice(-8)))
   const [randomStressMode, setRandomStressMode] = useState<boolean>(false)
   const [randomStockAwareDistribution, setRandomStockAwareDistribution] = useState<boolean>(false)
   const [randomizerPreview, setRandomizerPreview] = useState<RandomizerPreview | null>(null)
@@ -339,7 +371,7 @@ export default function AdminOverview({ initialAdminView = 'system' }: AdminOver
 
   const persistedDemandRows = useMemo(() => Number(selectedScenario?.demand_rows || 0), [selectedScenario])
   const pendingManualDemandRows = useMemo(
-    () => Number(selectedDistrictCodes.length * selectedResourceIds.length * timeHorizon),
+    () => Number(selectedDistrictCodes.length * selectedResourceIds.length * clampPositiveInt(timeHorizon, 1)),
     [selectedDistrictCodes.length, selectedResourceIds.length, timeHorizon]
   )
   const pendingRandomizedRows = useMemo(
@@ -447,20 +479,27 @@ export default function AdminOverview({ initialAdminView = 'system' }: AdminOver
         resource_id: string
         time: number
         quantity: number
+        priority: number
+        urgency: number
+        time_index: number
       }> = []
 
       for (const districtCode of selectedDistrictCodes) {
         const district = districts.find(d => String(d.district_code) === String(districtCode))
         const stateCode = district?.state_code || selectedStateCode
         for (const resourceId of selectedResourceIds) {
-          const requestedQty = Number(resourceDemandMap[resourceId] ?? (Number(baseDemandQty) * Number(demandMultiplier)))
-          for (let t = 1; t <= timeHorizon; t++) {
+          const requestedQty = Number(resourceDemandMap[resourceId] ?? (Number(baseDemandQty || 0) * Number(demandMultiplier || 0)))
+          const horizon = clampPositiveInt(timeHorizon, 1)
+          for (let t = 1; t <= horizon; t++) {
             rows.push({
               district_code: districtCode,
               state_code: String(stateCode),
               resource_id: resourceId,
               time: t,
               quantity: requestedQty,
+              priority: clampRangeInt(manualPriority, 1, 5, 3),
+              urgency: clampRangeInt(manualUrgency, 1, 5, 3),
+              time_index: clampNonNegativeFloat(manualTimeIndex, 1),
             })
           }
         }
@@ -573,22 +612,30 @@ export default function AdminOverview({ initialAdminView = 'system' }: AdminOver
     }
   }
 
-  function clampPositiveInt(value: number, fallback: number) {
+  function clampPositiveInt(value: number | '', fallback: number) {
     const parsed = Number(value)
     if (!Number.isFinite(parsed)) return Math.max(1, Math.trunc(fallback || 1))
     return Math.max(1, Math.trunc(parsed))
   }
 
+  function clampRangeInt(value: number | '', min: number, max: number, fallback: number) {
+    const parsed = Number(value)
+    if (!Number.isFinite(parsed)) return fallback
+    return Math.max(min, Math.min(max, Math.trunc(parsed)))
+  }
+
+  function clampNonNegativeFloat(value: number | '', fallback: number) {
+    const parsed = Number(value)
+    if (!Number.isFinite(parsed)) return fallback
+    return Math.max(0, parsed)
+  }
+
   function randomizerPayload() {
-    const effectiveDistrictCount = selectedDistrictCodes.length > 0 ? selectedDistrictCodes.length : clampPositiveInt(randomDistrictCount, 6)
-    const effectiveResourceCount = selectedResourceIds.length > 0 ? selectedResourceIds.length : clampPositiveInt(randomResourceCount, 5)
     return {
       preset: randomPreset,
-      seed: Number(randomSeed),
-      time_horizon: Number(timeHorizon),
+      seed: (randomSeed === '' ? undefined : Number(randomSeed)),
+      time_horizon: clampPositiveInt(timeHorizon, 1),
       stress_mode: randomStressMode,
-      district_count: Number(effectiveDistrictCount),
-      resource_count: Number(effectiveResourceCount),
       state_codes: selectedStateCode ? [selectedStateCode] : [],
       district_codes: selectedDistrictCodes,
       resource_ids: selectedResourceIds,
@@ -976,15 +1023,30 @@ export default function AdminOverview({ initialAdminView = 'system' }: AdminOver
             <div className="grid grid-cols-3 gap-2">
               <div>
                 <label className="text-xs block">Time Horizon</label>
-                <input type="number" min={1} value={timeHorizon} onChange={e => setTimeHorizon(clampPositiveInt(Number(e.target.value), 1))} className="border rounded px-2 py-1 w-full" />
+                <input type="number" min={1} value={timeHorizon} onChange={e => setTimeHorizon(e.target.value === '' ? '' : clampPositiveInt(Number(e.target.value), 1))} className="border rounded px-2 py-1 w-full" />
               </div>
               <div>
                 <label className="text-xs block">Base Demand</label>
-                <input type="number" min={1} value={baseDemandQty} onChange={e => setBaseDemandQty(Number(e.target.value))} className="border rounded px-2 py-1 w-full" disabled={modelingMode !== 'manual'} />
+                <input type="number" min={1} value={baseDemandQty} onChange={e => setBaseDemandQty(e.target.value === '' ? '' : Number(e.target.value))} className="border rounded px-2 py-1 w-full" disabled={modelingMode !== 'manual'} />
               </div>
               <div>
                 <label className="text-xs block">Demand Multiplier</label>
-                <input type="number" min={0.1} step={0.1} value={demandMultiplier} onChange={e => setDemandMultiplier(Number(e.target.value))} className="border rounded px-2 py-1 w-full" disabled={modelingMode !== 'manual'} />
+                <input type="number" min={0.1} step={0.1} value={demandMultiplier} onChange={e => setDemandMultiplier(e.target.value === '' ? '' : Number(e.target.value))} className="border rounded px-2 py-1 w-full" disabled={modelingMode !== 'manual'} />
+              </div>
+            </div>
+
+            <div className="grid grid-cols-3 gap-2">
+              <div>
+                <label className="text-xs block">Manual Priority (1-5)</label>
+                <input type="number" min={1} max={5} value={manualPriority} onChange={e => setManualPriority(e.target.value === '' ? '' : clampRangeInt(Number(e.target.value), 1, 5, 3))} className="border rounded px-2 py-1 w-full" disabled={modelingMode !== 'manual'} />
+              </div>
+              <div>
+                <label className="text-xs block">Manual Urgency (1-5)</label>
+                <input type="number" min={1} max={5} value={manualUrgency} onChange={e => setManualUrgency(e.target.value === '' ? '' : clampRangeInt(Number(e.target.value), 1, 5, 3))} className="border rounded px-2 py-1 w-full" disabled={modelingMode !== 'manual'} />
+              </div>
+              <div>
+                <label className="text-xs block">Manual Time Index</label>
+                <input type="number" min={0} step={0.1} value={manualTimeIndex} onChange={e => setManualTimeIndex(e.target.value === '' ? '' : clampNonNegativeFloat(Number(e.target.value), 0))} className="border rounded px-2 py-1 w-full" disabled={modelingMode !== 'manual'} />
               </div>
             </div>
 
@@ -1024,7 +1086,7 @@ export default function AdminOverview({ initialAdminView = 'system' }: AdminOver
                         type="number"
                         min={1}
                         disabled={modelingMode !== 'manual'}
-                        value={resourceDemandMap[String(r.resource_id)] ?? Number(baseDemandQty) * Number(demandMultiplier)}
+                        value={resourceDemandMap[String(r.resource_id)] ?? Number(baseDemandQty || 0) * Number(demandMultiplier || 0)}
                         onChange={e =>
                           setResourceDemandMap(prev => ({
                             ...prev,
@@ -1054,26 +1116,20 @@ export default function AdminOverview({ initialAdminView = 'system' }: AdminOver
           )}
           <div className="grid grid-cols-2 md:grid-cols-5 gap-2 text-sm">
             <label className="flex flex-col gap-1">
-              <span className="text-xs">Preset</span>
+              <span className="text-xs">Demand Level</span>
               <select value={randomPreset} onChange={e => setRandomPreset(e.target.value as any)} className="border rounded px-2 py-1" disabled={modelingMode !== 'guided_random'}>
-                <option value="very_low">very_low</option>
+                <option value="extremely_low">Extremely Low (0.20x supply)</option>
                 <option value="low">low</option>
+                <option value="medium_low">Medium Low (0.70x supply)</option>
                 <option value="medium">medium</option>
+                <option value="medium_high">Medium High (1.25x supply)</option>
                 <option value="high">high</option>
-                <option value="extreme">extreme</option>
+                <option value="extremely_high">Extremely High (1.79x supply)</option>
               </select>
             </label>
             <label className="flex flex-col gap-1">
               <span className="text-xs">Seed</span>
-              <input type="number" value={randomSeed} onChange={e => setRandomSeed(Number(e.target.value || 0))} className="border rounded px-2 py-1" disabled={modelingMode !== 'guided_random'} />
-            </label>
-            <label className="flex flex-col gap-1">
-              <span className="text-xs">District Count</span>
-              <input type="number" min={1} value={randomDistrictCount} onChange={e => setRandomDistrictCount(clampPositiveInt(Number(e.target.value), 6))} className="border rounded px-2 py-1" disabled={modelingMode !== 'guided_random' || selectedDistrictCodes.length > 0} />
-            </label>
-            <label className="flex flex-col gap-1">
-              <span className="text-xs">Resource Count</span>
-              <input type="number" min={1} value={randomResourceCount} onChange={e => setRandomResourceCount(clampPositiveInt(Number(e.target.value), 5))} className="border rounded px-2 py-1" disabled={modelingMode !== 'guided_random' || selectedResourceIds.length > 0} />
+              <input type="number" value={randomSeed} onChange={e => setRandomSeed(e.target.value === '' ? '' : Number(e.target.value))} className="border rounded px-2 py-1" disabled={modelingMode !== 'guided_random'} />
             </label>
             <label className="flex items-center gap-2 mt-5">
               <input type="checkbox" checked={randomStressMode} onChange={e => setRandomStressMode(e.target.checked)} disabled={modelingMode !== 'guided_random'} />
@@ -1111,8 +1167,14 @@ export default function AdminOverview({ initialAdminView = 'system' }: AdminOver
 
           {randomizerPreview && (
             <div className={`text-xs border rounded p-2 ${isPreviewing ? 'bg-blue-50 border-blue-200' : 'bg-slate-50'}`}>
-              <div>Preview rows={randomizerPreview.row_count} districts={randomizerPreview.district_count} resources={randomizerPreview.resource_count} total_qty={Number(randomizerPreview.total_quantity || 0).toFixed(2)} ratio_vs_baseline={randomizerPreview.demand_ratio_vs_baseline ?? 'n/a'}</div>
-              <div>Mode={randomStockAwareDistribution ? 'stock_aware' : 'fixed'} | Scope districts={randomizerPreview.district_count} | Scope resources={randomizerPreview.resource_count}</div>
+              <div>Preview rows={randomizerPreview.row_count} districts={randomizerPreview.district_count} resources={randomizerPreview.resource_count} total_qty={Number(randomizerPreview.total_quantity || 0).toFixed(2)}</div>
+              <div>Total available supply={Number(randomizerPreview.total_available_supply || 0).toFixed(2)} | Total generated demand={Number(randomizerPreview.total_generated_demand || 0).toFixed(2)}</div>
+              <div>Demand/Supply ratio={randomizerPreview.demand_supply_ratio ?? 'n/a'} | Expected shortage={Number(randomizerPreview.expected_shortage_estimate || 0).toFixed(2)} | Intensity ratio={Number(randomizerPreview.intensity_ratio || 0).toFixed(2)}</div>
+              <div>Mode={randomizerPreview.quantity_mode || (randomStockAwareDistribution ? 'stock_aware' : 'fixed')} | Scope districts={randomizerPreview.district_count} | Scope resources={randomizerPreview.resource_count}</div>
+              <div>Selected districts={(randomizerPreview.selected_districts || []).join(', ') || '—'}</div>
+              <div>Selected resources={(randomizerPreview.selected_resources || []).join(', ') || '—'}</div>
+              <div>Stock-backed rows={Number(randomizerPreview.stock_backed_rows || 0)} | Zero-stock rows={Number(randomizerPreview.zero_stock_rows || 0)} | Avg available stock={Number(randomizerPreview.avg_available_stock || 0).toFixed(2)}</div>
+              <div>Randomizer Priority/TimeIndex: avg_priority={Number(randomizerPreview.avg_priority || 0).toFixed(2)} avg_time_index={Number(randomizerPreview.avg_time_index || 0).toFixed(2)}</div>
               <div>Apply Mode=additive | Existing rows are preserved and matching slots are incremented.</div>
               <div>Live baseline run={randomizerPreview.latest_live_run_id ?? 'none'} preset={randomizerPreview.preset}</div>
               <div className={randomizerPreview.guardrail_warnings.length > 0 ? 'text-amber-700' : 'text-emerald-700'}>
@@ -1149,8 +1211,8 @@ export default function AdminOverview({ initialAdminView = 'system' }: AdminOver
           <div>Resources Selected: {selectedResourceRows.length}</div>
           <div>Resource IDs: {selectedResourceIds.length > 0 ? selectedResourceIds.slice(0, 12).join(', ') : '—'}</div>
           <div>Time Horizon: {timeHorizon}</div>
-          <div>Per-slot Base Quantity: {baseDemandQty * demandMultiplier}</div>
-          <div>Total Demand Rows To Add: {selectedDistrictCodes.length * selectedResourceRows.length * timeHorizon}</div>
+          <div>Per-slot Base Quantity: {Number(baseDemandQty || 0) * Number(demandMultiplier || 0)}</div>
+          <div>Total Demand Rows To Add: {selectedDistrictCodes.length * selectedResourceRows.length * clampPositiveInt(timeHorizon, 1)}</div>
         </div>
 
         <div className="text-xs text-slate-600">
@@ -1301,6 +1363,18 @@ export default function AdminOverview({ initialAdminView = 'system' }: AdminOver
             <div>Districts Met: {selectedRunSummary.totals.districts_met}</div>
             <div>Districts Unmet: {selectedRunSummary.totals.districts_unmet}</div>
 
+            {selectedRunSummary.escalation_status && (
+              <div className="mt-2 border rounded p-2 bg-white text-xs">
+                <div className="font-semibold mb-1">Escalation Status</div>
+                <div>Mode: {selectedRunSummary.escalation_status.mode}</div>
+                <div>Events Found: {selectedRunSummary.escalation_status.events_found}</div>
+                <div>State Marked: {selectedRunSummary.escalation_status.state_marked}</div>
+                <div>National Marked: {selectedRunSummary.escalation_status.national_marked}</div>
+                <div>Neighbor Offers: created={selectedRunSummary.escalation_status.neighbor_offers_created} accepted={selectedRunSummary.escalation_status.neighbor_offers_accepted}</div>
+                <div>Neighbor Accepted Qty: {Number(selectedRunSummary.escalation_status.neighbor_accepted_quantity || 0).toFixed(2)}</div>
+              </div>
+            )}
+
             <div className="mt-2 overflow-x-auto border rounded bg-white">
               <table className="w-full text-sm">
                 <thead className="bg-slate-100 text-left">
@@ -1333,6 +1407,37 @@ export default function AdminOverview({ initialAdminView = 'system' }: AdminOver
                   <div>Neighbor: {Number(selectedRunSummary.source_scope_breakdown.allocations.neighbor_state || 0).toFixed(2)} ({Number((selectedRunSummary.source_scope_breakdown.percentages.neighbor_state || 0) * 100).toFixed(1)}%)</div>
                   <div>National: {Number(selectedRunSummary.source_scope_breakdown.allocations.national || 0).toFixed(2)} ({Number((selectedRunSummary.source_scope_breakdown.percentages.national || 0) * 100).toFixed(1)}%)</div>
                 </div>
+                <div className="mt-1 text-xs">
+                  used_state_stock={selectedRunSummary.used_state_stock ? 'true' : 'false'} | used_national_stock={selectedRunSummary.used_national_stock ? 'true' : 'false'}
+                </div>
+              </div>
+            )}
+
+            {selectedRunSummary.allocation_details && selectedRunSummary.allocation_details.length > 0 && (
+              <div className="mt-3 overflow-x-auto border rounded bg-white">
+                <div className="font-semibold p-2">Allocation Provenance (resource_id, district_code, time, allocated_quantity, source_level)</div>
+                <table className="w-full text-sm">
+                  <thead className="bg-slate-100 text-left">
+                    <tr>
+                      <th className="p-2">resource_id</th>
+                      <th className="p-2">district_code</th>
+                      <th className="p-2">time</th>
+                      <th className="p-2">allocated_quantity</th>
+                      <th className="p-2">source_level</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {selectedRunSummary.allocation_details.slice(0, 200).map((row, idx) => (
+                      <tr key={`alloc_detail_${idx}`} className="border-t">
+                        <td className="p-2">{row.resource_id}</td>
+                        <td className="p-2">{row.district_code}</td>
+                        <td className="p-2">{row.time}</td>
+                        <td className="p-2">{Number(row.allocated_quantity || 0).toFixed(2)}</td>
+                        <td className="p-2">{row.source_level}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
               </div>
             )}
 

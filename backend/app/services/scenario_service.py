@@ -11,7 +11,18 @@ from app.models.solver_run import SolverRun
 from app.models.scenario_explanation import ScenarioExplanation
 from app.models.agent_recommendation import AgentRecommendation
 from app.models.allocation import Allocation
+from app.models.audit_log import AuditLog
 from sqlalchemy import func
+
+
+def _normalize_source_level(raw_scope: str | None, raw_level: str | None) -> str:
+    scope = str(raw_scope or "").strip().lower()
+    level = str(raw_level or "district").strip().lower()
+    if scope == "national" or level == "national":
+        return "national"
+    if scope in {"state", "neighbor_state"} or level in {"state", "neighbor_state"}:
+        return "state"
+    return "district"
 
 
 def create_scenario(db: Session, name: str):
@@ -194,6 +205,38 @@ def get_scenario_run_summary(db: Session, scenario_id: int, run_id: int):
     if not run:
         return None
 
+    escalation_rows = db.query(AuditLog).filter(
+        AuditLog.event_type.in_([
+            "AUTO_ESCALATED_TO_STATE_MARKET",
+            "AUTO_ESCALATED_TO_NATIONAL",
+            "AUTO_NEIGHBOR_OFFERS_SEEDED",
+        ])
+    ).order_by(AuditLog.id.desc()).all()
+
+    escalation_summary = {
+        "events_found": 0,
+        "state_marked": 0,
+        "national_marked": 0,
+        "neighbor_offers_created": 0,
+        "neighbor_offers_accepted": 0,
+        "neighbor_accepted_quantity": 0.0,
+        "mode": ("live_auto_chain" if str(run.mode or "").lower() == "live" else "scenario_no_live_auto_chain"),
+    }
+
+    for row in escalation_rows:
+        payload = row.payload or {}
+        if int(payload.get("solver_run_id") or -1) != int(run_id):
+            continue
+        escalation_summary["events_found"] += 1
+        if str(row.event_type) == "AUTO_ESCALATED_TO_STATE_MARKET":
+            escalation_summary["state_marked"] += int(payload.get("requests_marked") or 0)
+        elif str(row.event_type) == "AUTO_ESCALATED_TO_NATIONAL":
+            escalation_summary["national_marked"] += int(payload.get("requests_marked") or 0)
+        elif str(row.event_type) == "AUTO_NEIGHBOR_OFFERS_SEEDED":
+            escalation_summary["neighbor_offers_created"] += int(payload.get("offers_created") or 0)
+            escalation_summary["neighbor_offers_accepted"] += int(payload.get("offers_accepted") or 0)
+            escalation_summary["neighbor_accepted_quantity"] += float(payload.get("accepted_quantity") or 0.0)
+
     if getattr(run, "summary_snapshot_json", None):
         try:
             snap = json.loads(str(run.summary_snapshot_json))
@@ -203,6 +246,10 @@ def get_scenario_run_summary(db: Session, scenario_id: int, run_id: int):
                 by_time = list(snap.get("by_time_breakdown") or [])
                 fairness = dict(snap.get("fairness") or {})
                 source_scope = dict((snap.get("source_scope_breakdown") or {}).get("allocations") or {})
+                neighbor_alloc_qty = float(source_scope.get("neighbor_state") or 0.0)
+                if neighbor_alloc_qty > 1e-9 and float(escalation_summary.get("neighbor_accepted_quantity") or 0.0) <= 1e-9:
+                    escalation_summary["neighbor_offers_accepted"] = max(1, int(escalation_summary.get("neighbor_offers_accepted") or 0))
+                    escalation_summary["neighbor_accepted_quantity"] = float(round(neighbor_alloc_qty, 2))
 
                 districts = sorted({str(r.get("district_code") or "") for r in national_rows if str(r.get("district_code") or "")})
                 district_breakdown = []
@@ -223,6 +270,7 @@ def get_scenario_run_summary(db: Session, scenario_id: int, run_id: int):
                     "scenario_id": scenario_id,
                     "status": run.status,
                     "started_at": run.started_at,
+                    "escalation_status": escalation_summary,
                     "totals": {
                         "allocated_quantity": float(totals.get("allocated_quantity") or 0.0),
                         "unmet_quantity": float(totals.get("unmet_quantity") or 0.0),
@@ -242,6 +290,8 @@ def get_scenario_run_summary(db: Session, scenario_id: int, run_id: int):
                         },
                         "percentages": dict((snap.get("source_scope_breakdown") or {}).get("percentages") or {}),
                     },
+                    "used_state_stock": float(source_scope.get("state") or 0.0) > 1e-9 or float(source_scope.get("neighbor_state") or 0.0) > 1e-9,
+                    "used_national_stock": float(source_scope.get("national") or 0.0) > 1e-9,
                     "by_time_breakdown": by_time,
                     "fairness": {
                         "district_ratio_jain": fairness.get("district_ratio_jain"),
@@ -259,6 +309,10 @@ def get_scenario_run_summary(db: Session, scenario_id: int, run_id: int):
                             "resource_id": str(r.get("resource_id") or ""),
                             "time": int(r.get("time") or 0),
                             "allocated_quantity": float(r.get("allocated_quantity") or 0.0),
+                            "source_level": _normalize_source_level(
+                                str(r.get("allocation_source_scope") or ""),
+                                str(r.get("supply_level") or "district"),
+                            ),
                         }
                         for r in national_rows
                     ],
@@ -282,6 +336,8 @@ def get_scenario_run_summary(db: Session, scenario_id: int, run_id: int):
         Allocation.state_code,
         Allocation.resource_id,
         Allocation.time,
+        func.coalesce(Allocation.allocation_source_scope, "").label("source_scope"),
+        func.coalesce(Allocation.supply_level, "district").label("supply_level"),
         func.coalesce(func.sum(Allocation.allocated_quantity), 0.0).label("quantity"),
     ).filter(
         Allocation.solver_run_id == run_id,
@@ -291,6 +347,8 @@ def get_scenario_run_summary(db: Session, scenario_id: int, run_id: int):
         Allocation.state_code,
         Allocation.resource_id,
         Allocation.time,
+        Allocation.allocation_source_scope,
+        Allocation.supply_level,
     ).all()
 
     unmet_rows = db.query(
@@ -361,6 +419,10 @@ def get_scenario_run_summary(db: Session, scenario_id: int, run_id: int):
             key = "district"
         scope_allocations[key] += float(row.quantity or 0.0)
 
+    if float(scope_allocations.get("neighbor_state") or 0.0) > 1e-9 and float(escalation_summary.get("neighbor_accepted_quantity") or 0.0) <= 1e-9:
+        escalation_summary["neighbor_offers_accepted"] = max(1, int(escalation_summary.get("neighbor_offers_accepted") or 0))
+        escalation_summary["neighbor_accepted_quantity"] = float(round(float(scope_allocations.get("neighbor_state") or 0.0), 2))
+
     def _jain(values: list[float]) -> float | None:
         clean = [max(0.0, float(v)) for v in values]
         if not clean:
@@ -430,6 +492,7 @@ def get_scenario_run_summary(db: Session, scenario_id: int, run_id: int):
             "resource_id": str(r.resource_id),
             "time": int(r.time),
             "allocated_quantity": float(r.quantity or 0.0),
+            "source_level": _normalize_source_level(str(r.source_scope), str(r.supply_level)),
         }
         for r in alloc_rows
     ]
@@ -449,6 +512,7 @@ def get_scenario_run_summary(db: Session, scenario_id: int, run_id: int):
         "scenario_id": scenario_id,
         "status": run.status,
         "started_at": run.started_at,
+        "escalation_status": escalation_summary,
         "totals": {
             "allocated_quantity": float(sum(by_district_alloc.values())),
             "unmet_quantity": float(sum(by_district_unmet.values())),
@@ -477,6 +541,8 @@ def get_scenario_run_summary(db: Session, scenario_id: int, run_id: int):
                 for k, v in scope_allocations.items()
             },
         },
+        "used_state_stock": float(scope_allocations.get("state") or 0.0) > 1e-9 or float(scope_allocations.get("neighbor_state") or 0.0) > 1e-9,
+        "used_national_stock": float(scope_allocations.get("national") or 0.0) > 1e-9,
         "by_time_breakdown": by_time_breakdown,
         "fairness": {
             "district_ratio_jain": district_jain,
@@ -508,6 +574,9 @@ def get_scenario_run_incidents(db: Session, scenario_id: int, limit: int = 50):
         unmet = float(totals.get("unmet_quantity") or 0.0)
         scope_alloc = ((summary.get("source_scope_breakdown") or {}).get("allocations") or {})
         neighbor_qty = float(scope_alloc.get("neighbor_state") or 0.0)
+        state_qty = float(scope_alloc.get("state") or 0.0)
+        national_qty = float(scope_alloc.get("national") or 0.0)
+        escalation_status = summary.get("escalation_status") or {}
 
         reasons: list[str] = []
         if unmet > 0.0:
@@ -518,6 +587,12 @@ def get_scenario_run_incidents(db: Session, scenario_id: int, limit: int = 50):
             reasons.append("fairness_low")
         if neighbor_qty > 0.0:
             reasons.append("neighbor_state_used")
+        if state_qty > 0.0:
+            reasons.append("state_scope_used")
+        if national_qty > 0.0:
+            reasons.append("national_scope_used")
+        if int(escalation_status.get("state_marked") or 0) > 0 or int(escalation_status.get("national_marked") or 0) > 0:
+            reasons.append("auto_escalation_marked")
 
         if not reasons:
             continue

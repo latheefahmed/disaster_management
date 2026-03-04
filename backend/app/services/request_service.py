@@ -89,6 +89,7 @@ AUTO_ESCALATION_NEIGHBOR_OFFER_FRACTION = float(os.getenv("AUTO_ESCALATION_NEIGH
 AUTO_ESCALATION_NEIGHBOR_STOCK_UTILIZATION_CAP = float(os.getenv("AUTO_ESCALATION_NEIGHBOR_STOCK_UTILIZATION_CAP", "0.20"))
 AUTO_ESCALATION_NEIGHBOR_ACCEPT_THRESHOLD = int(os.getenv("AUTO_ESCALATION_NEIGHBOR_ACCEPT_THRESHOLD", "55"))
 AUTO_ESCALATION_NEIGHBOR_EMERGENCY_ACCEPT_THRESHOLD = int(os.getenv("AUTO_ESCALATION_NEIGHBOR_EMERGENCY_ACCEPT_THRESHOLD", "75"))
+AUTO_ESCALATION_NEIGHBOR_AUTO_ACCEPT = os.getenv("AUTO_ESCALATION_NEIGHBOR_AUTO_ACCEPT", "true").strip().lower() in {"1", "true", "yes", "on"}
 
 
 def _priority_urgency_influence_mode() -> str:
@@ -278,8 +279,11 @@ def _seed_neighbor_offers_for_request(
             )
             offers_created += 1
 
-            score = _stable_acceptance_score(int(req.id), offering_state)
-            decision = "accepted" if score < accept_threshold else "rejected"
+            if AUTO_ESCALATION_NEIGHBOR_AUTO_ACCEPT:
+                decision = "accepted"
+            else:
+                score = _stable_acceptance_score(int(req.id), offering_state)
+                decision = "accepted" if score < accept_threshold else "rejected"
             responded = respond_to_offer(
                 db=db,
                 offer_id=int(offer.id),
