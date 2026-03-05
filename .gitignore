@@ -1,28 +1,26 @@
-# Python
+# Python virtual environments
+.venv/
+**/.venv/
+venv/
+**/venv/
+
+# Node dependencies
+node_modules/
+**/node_modules/
+
+# Python build/cache artifacts
 __pycache__/
-*.py[cod]
+**/__pycache__/
+*.pyc
 *.pyo
 *.pyd
 .pytest_cache/
-.mypy_cache/
-.venv/
-venv/
+**/.pytest_cache/
 
-# Node
-node_modules/
-
-# Local runtime/state
-*.db
-*.sqlite
-*.sqlite3
-backend/backend.db
-
-# Build/cache
-build/
-dist/
-.cache/
-
-# OS/editor
+# OS/editor noise
 .DS_Store
 Thumbs.db
-.vscode/
+
+node_modules/
+.venv/
+__pycache__/
