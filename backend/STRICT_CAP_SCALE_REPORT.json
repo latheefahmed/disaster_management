@@ -1,0 +1,451 @@
+{
+  "status": "ok",
+  "backup": "C:\\Users\\LATHEEF\\Desktop\\disaster_management\\backend\\backend_pre_strict_cap_scale_20260304_204733.db",
+  "resource_factors": {
+    "R1": {
+      "resource_name": "food_packets",
+      "unit": "person_day_rations",
+      "max_before": 48772.0,
+      "strict_cap": 30000.0,
+      "factor": 0.6151070286229804
+    },
+    "R2": {
+      "resource_name": "rice_kg",
+      "unit": "kg",
+      "max_before": 31344.804,
+      "strict_cap": 20000.0,
+      "factor": 0.63806428650822
+    },
+    "R3": {
+      "resource_name": "wheat_kg",
+      "unit": "kg",
+      "max_before": 32514.486,
+      "strict_cap": 20000.0,
+      "factor": 0.61511044646377
+    },
+    "R4": {
+      "resource_name": "baby_formula",
+      "unit": "packets",
+      "max_before": 19509.0,
+      "strict_cap": 20000.0,
+      "factor": 1.0
+    },
+    "R5": {
+      "resource_name": "bottled_water_liters",
+      "unit": "liters",
+      "max_before": 38954.391,
+      "strict_cap": 50000.0,
+      "factor": 1.0
+    },
+    "R6": {
+      "resource_name": "bulk_water_liters",
+      "unit": "liters",
+      "max_before": 81286.215,
+      "strict_cap": 50000.0,
+      "factor": 0.61511044646377
+    },
+    "R7": {
+      "resource_name": "water_purification_tablets",
+      "unit": "tablets",
+      "max_before": 1389026.0,
+      "strict_cap": 1500000.0,
+      "factor": 1.0
+    },
+    "R8": {
+      "resource_name": "tents",
+      "unit": "units",
+      "max_before": 16083.0,
+      "strict_cap": 20000.0,
+      "factor": 1.0
+    },
+    "R9": {
+      "resource_name": "tarpaulins",
+      "unit": "units",
+      "max_before": 25875.0,
+      "strict_cap": 20000.0,
+      "factor": 0.7729468599033816
+    },
+    "R10": {
+      "resource_name": "blankets",
+      "unit": "units",
+      "max_before": 43210.0,
+      "strict_cap": 20000.0,
+      "factor": 0.4628558204119417
+    },
+    "R11": {
+      "resource_name": "sleeping_mats",
+      "unit": "units",
+      "max_before": 63055.0,
+      "strict_cap": 20000.0,
+      "factor": 0.3171834113075886
+    },
+    "R12": {
+      "resource_name": "plastic_sheets",
+      "unit": "units",
+      "max_before": 16889.0,
+      "strict_cap": 20000.0,
+      "factor": 1.0
+    },
+    "R13": {
+      "resource_name": "family_shelter_kits",
+      "unit": "kits",
+      "max_before": 2587.0,
+      "strict_cap": 20000.0,
+      "factor": 1.0
+    },
+    "R14": {
+      "resource_name": "medical_kits",
+      "unit": "kits",
+      "max_before": 9062.0,
+      "strict_cap": 20000.0,
+      "factor": 1.0
+    },
+    "R15": {
+      "resource_name": "trauma_kits",
+      "unit": "kits",
+      "max_before": 12794.0,
+      "strict_cap": 20000.0,
+      "factor": 1.0
+    },
+    "R16": {
+      "resource_name": "first_aid_kits",
+      "unit": "kits",
+      "max_before": 8900.0,
+      "strict_cap": 20000.0,
+      "factor": 1.0
+    },
+    "R17": {
+      "resource_name": "antibiotics_courses",
+      "unit": "courses",
+      "max_before": 13051.0,
+      "strict_cap": 20000.0,
+      "factor": 1.0
+    },
+    "R18": {
+      "resource_name": "iv_fluids",
+      "unit": "liters",
+      "max_before": 30508.038,
+      "strict_cap": 50000.0,
+      "factor": 1.0
+    },
+    "R19": {
+      "resource_name": "syringes",
+      "unit": "units",
+      "max_before": 10527.0,
+      "strict_cap": 20000.0,
+      "factor": 1.0
+    },
+    "R20": {
+      "resource_name": "ppe_kits",
+      "unit": "kits",
+      "max_before": 12937.0,
+      "strict_cap": 20000.0,
+      "factor": 1.0
+    },
+    "R21": {
+      "resource_name": "oxygen_cylinders",
+      "unit": "cylinders",
+      "max_before": 21304.0,
+      "strict_cap": 25000.0,
+      "factor": 1.0
+    },
+    "R22": {
+      "resource_name": "doctors",
+      "unit": "people",
+      "max_before": 15095.0,
+      "strict_cap": 25000.0,
+      "factor": 1.0
+    },
+    "R23": {
+      "resource_name": "nurses",
+      "unit": "people",
+      "max_before": 15103.0,
+      "strict_cap": 25000.0,
+      "factor": 1.0
+    },
+    "R24": {
+      "resource_name": "paramedics",
+      "unit": "people",
+      "max_before": 14833.0,
+      "strict_cap": 25000.0,
+      "factor": 1.0
+    },
+    "R25": {
+      "resource_name": "hospital_beds",
+      "unit": "beds",
+      "max_before": 14838.0,
+      "strict_cap": 25000.0,
+      "factor": 1.0
+    },
+    "R26": {
+      "resource_name": "icu_beds",
+      "unit": "beds",
+      "max_before": 14808.0,
+      "strict_cap": 25000.0,
+      "factor": 1.0
+    },
+    "R27": {
+      "resource_name": "field_hospital_units",
+      "unit": "units",
+      "max_before": 3454.0,
+      "strict_cap": 20000.0,
+      "factor": 1.0
+    },
+    "R28": {
+      "resource_name": "rescue_boats",
+      "unit": "units",
+      "max_before": 1074.0,
+      "strict_cap": 20000.0,
+      "factor": 1.0
+    },
+    "R29": {
+      "resource_name": "rescue_ropes",
+      "unit": "units",
+      "max_before": 21303.0,
+      "strict_cap": 20000.0,
+      "factor": 0.9388349058818006
+    },
+    "R30": {
+      "resource_name": "stretchers",
+      "unit": "units",
+      "max_before": 19966.0,
+      "strict_cap": 20000.0,
+      "factor": 1.0
+    },
+    "R31": {
+      "resource_name": "hydraulic_cutters",
+      "unit": "units",
+      "max_before": 7207.0,
+      "strict_cap": 20000.0,
+      "factor": 1.0
+    },
+    "R32": {
+      "resource_name": "search_cameras",
+      "unit": "units",
+      "max_before": 6099.0,
+      "strict_cap": 20000.0,
+      "factor": 1.0
+    },
+    "R33": {
+      "resource_name": "sniffer_dogs",
+      "unit": "animals",
+      "max_before": 736.0,
+      "strict_cap": 25000.0,
+      "factor": 1.0
+    },
+    "R34": {
+      "resource_name": "ambulances",
+      "unit": "vehicles",
+      "max_before": 14720.0,
+      "strict_cap": 25000.0,
+      "factor": 1.0
+    },
+    "R35": {
+      "resource_name": "buses",
+      "unit": "vehicles",
+      "max_before": 3454.0,
+      "strict_cap": 25000.0,
+      "factor": 1.0
+    },
+    "R36": {
+      "resource_name": "trucks",
+      "unit": "vehicles",
+      "max_before": 2581.0,
+      "strict_cap": 25000.0,
+      "factor": 1.0
+    },
+    "R37": {
+      "resource_name": "helicopters",
+      "unit": "vehicles",
+      "max_before": 14000.0,
+      "strict_cap": 25000.0,
+      "factor": 1.0
+    },
+    "R38": {
+      "resource_name": "boats",
+      "unit": "vehicles",
+      "max_before": 755.0,
+      "strict_cap": 25000.0,
+      "factor": 1.0
+    },
+    "R39": {
+      "resource_name": "diesel_liters",
+      "unit": "liters",
+      "max_before": 41857.736,
+      "strict_cap": 50000.0,
+      "factor": 1.0
+    },
+    "R40": {
+      "resource_name": "petrol_liters",
+      "unit": "liters",
+      "max_before": 26919.349,
+      "strict_cap": 50000.0,
+      "factor": 1.0
+    },
+    "R41": {
+      "resource_name": "generators",
+      "unit": "units",
+      "max_before": 7187.0,
+      "strict_cap": 20000.0,
+      "factor": 1.0
+    },
+    "R42": {
+      "resource_name": "solar_lanterns",
+      "unit": "units",
+      "max_before": 12795.0,
+      "strict_cap": 20000.0,
+      "factor": 1.0
+    },
+    "R43": {
+      "resource_name": "battery_packs",
+      "unit": "units",
+      "max_before": 18541.0,
+      "strict_cap": 20000.0,
+      "factor": 1.0
+    },
+    "R44": {
+      "resource_name": "satellite_phones",
+      "unit": "units",
+      "max_before": 7207.0,
+      "strict_cap": 20000.0,
+      "factor": 1.0
+    },
+    "R45": {
+      "resource_name": "handheld_radios",
+      "unit": "units",
+      "max_before": 21303.0,
+      "strict_cap": 20000.0,
+      "factor": 0.9388349058818006
+    },
+    "R46": {
+      "resource_name": "mobile_base_stations",
+      "unit": "units",
+      "max_before": 2465.0,
+      "strict_cap": 20000.0,
+      "factor": 1.0
+    },
+    "R47": {
+      "resource_name": "loudspeakers",
+      "unit": "units",
+      "max_before": 21325.0,
+      "strict_cap": 20000.0,
+      "factor": 0.9378663540445487
+    },
+    "R48": {
+      "resource_name": "toilets_portable",
+      "unit": "units",
+      "max_before": 19950.0,
+      "strict_cap": 20000.0,
+      "factor": 1.0
+    },
+    "R49": {
+      "resource_name": "hygiene_kits",
+      "unit": "kits",
+      "max_before": 12574.0,
+      "strict_cap": 20000.0,
+      "factor": 1.0
+    },
+    "R50": {
+      "resource_name": "soap_bars",
+      "unit": "units",
+      "max_before": 20519.0,
+      "strict_cap": 20000.0,
+      "factor": 0.974706369706126
+    },
+    "R51": {
+      "resource_name": "sanitary_pads",
+      "unit": "packs",
+      "max_before": 17067.0,
+      "strict_cap": 25000.0,
+      "factor": 1.0
+    },
+    "R52": {
+      "resource_name": "diapers",
+      "unit": "packs",
+      "max_before": 21562.0,
+      "strict_cap": 25000.0,
+      "factor": 1.0
+    },
+    "R53": {
+      "resource_name": "forklifts",
+      "unit": "units",
+      "max_before": 2581.0,
+      "strict_cap": 20000.0,
+      "factor": 1.0
+    },
+    "R54": {
+      "resource_name": "pallets",
+      "unit": "units",
+      "max_before": 21245.0,
+      "strict_cap": 20000.0,
+      "factor": 0.9413979759943516
+    },
+    "R55": {
+      "resource_name": "storage_containers",
+      "unit": "units",
+      "max_before": 15091.0,
+      "strict_cap": 20000.0,
+      "factor": 1.0
+    },
+    "R56": {
+      "resource_name": "cold_chain_boxes",
+      "unit": "units",
+      "max_before": 21304.0,
+      "strict_cap": 20000.0,
+      "factor": 0.938790837401427
+    }
+  },
+  "tables": {
+    "allocations": {
+      "updated_rows": 366696
+    },
+    "claims": {
+      "updated_rows": 9518
+    },
+    "consumptions": {
+      "updated_rows": 78
+    },
+    "returns": {
+      "updated_rows": 9652
+    },
+    "final_demands": {
+      "updated_rows": 2055718
+    },
+    "requests": {
+      "updated_rows": 711
+    },
+    "inventory_snapshots": {
+      "updated_rows": 965423
+    },
+    "scenario_requests": {
+      "updated_rows": 100683
+    },
+    "scenario_state_stock": {
+      "updated_rows": 3
+    },
+    "scenario_national_stock": {
+      "updated_rows": 3
+    },
+    "shipment_plans": {
+      "updated_rows": 14074
+    },
+    "state_transfers": {
+      "updated_rows": 95
+    },
+    "mutual_aid_requests": {
+      "updated_rows": 39
+    },
+    "pool_transactions": {
+      "updated_rows": 110
+    },
+    "stock_refill_transactions": {
+      "updated_rows": 274090
+    },
+    "demand_learning_events": {
+      "updated_rows": 6240
+    },
+    "priority_urgency_events": {
+      "updated_rows": 119
+    }
+  }
+}

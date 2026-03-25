@@ -1,0 +1,546 @@
+{
+  "latest_completed_live_run": [
+    1097
+  ],
+  "tables_checked": {
+    "allocations": {
+      "row_count": 783677,
+      "columns": {
+        "allocated_quantity": {
+          "current_sum": 21457672.759,
+          "current_max_abs": 1389026.0,
+          "backup_pre_second_sum": 76792573286.735,
+          "backup_pre_second_max_abs": 2612177600.0
+        },
+        "claimed_quantity": {
+          "current_sum": 990479.382,
+          "current_max_abs": 20000.0,
+          "backup_pre_second_sum": 135926748.0,
+          "backup_pre_second_max_abs": 50000000.0
+        },
+        "consumed_quantity": {
+          "current_sum": 8293.278,
+          "current_max_abs": 8185.302,
+          "backup_pre_second_sum": 50001419.0,
+          "backup_pre_second_max_abs": 50000000.0
+        },
+        "returned_quantity": {
+          "current_sum": 982184.102,
+          "current_max_abs": 20000.0,
+          "backup_pre_second_sum": 85926149.0,
+          "backup_pre_second_max_abs": 7882094.0
+        },
+        "overflow_reconciled_quantity": {
+          "current_sum": 2708494.994,
+          "current_max_abs": 398858.0,
+          "backup_pre_second_sum": 3491586040.0,
+          "backup_pre_second_max_abs": 80000004.0
+        }
+      }
+    },
+    "claims": {
+      "row_count": 11447,
+      "columns": {
+        "quantity": {
+          "current_sum": 515553.228,
+          "current_max_abs": 17391.386,
+          "backup_pre_second_sum": 114717673.0,
+          "backup_pre_second_max_abs": 50000000.0
+        }
+      }
+    },
+    "consumptions": {
+      "row_count": 210,
+      "columns": {
+        "quantity": {
+          "current_sum": 7219.619000000001,
+          "current_max_abs": 7117.654,
+          "backup_pre_second_sum": 50001410.0,
+          "backup_pre_second_max_abs": 50000000.0
+        }
+      }
+    },
+    "returns": {
+      "row_count": 11484,
+      "columns": {
+        "quantity": {
+          "current_sum": 508473.71499999997,
+          "current_max_abs": 17391.386,
+          "backup_pre_second_sum": 64717083.0,
+          "backup_pre_second_max_abs": 7882094.0
+        }
+      }
+    },
+    "final_demands": {
+      "row_count": 3430810,
+      "columns": {
+        "demand_quantity": {
+          "current_sum": 23398480.822,
+          "current_max_abs": 1391335.0,
+          "backup_pre_second_sum": 77014772168.166,
+          "backup_pre_second_max_abs": 2616401660.0
+        }
+      }
+    },
+    "requests": {
+      "row_count": 3015,
+      "columns": {
+        "quantity": {
+          "current_sum": 3410246.09,
+          "current_max_abs": 184172.0,
+          "backup_pre_second_sum": 3249173653.019,
+          "backup_pre_second_max_abs": 120000000.0
+        },
+        "allocated_quantity": {
+          "current_sum": 3399355.54,
+          "current_max_abs": 736690.0,
+          "backup_pre_second_sum": 3861161721.774,
+          "backup_pre_second_max_abs": 120000004.0
+        },
+        "unmet_quantity": {
+          "current_sum": 71869.107,
+          "current_max_abs": 14000.0,
+          "backup_pre_second_sum": 44553080.0,
+          "backup_pre_second_max_abs": 19999996.0
+        },
+        "final_demand_quantity": {
+          "current_sum": 3459122.54,
+          "current_max_abs": 736690.0,
+          "backup_pre_second_sum": 3861712876.774,
+          "backup_pre_second_max_abs": 120000004.0
+        }
+      }
+    },
+    "inventory_snapshots": {
+      "row_count": 3313267,
+      "columns": {
+        "quantity": {
+          "current_sum": 195596426609.265,
+          "current_max_abs": 36231832.0,
+          "backup_pre_second_sum": 151979898589360.6,
+          "backup_pre_second_max_abs": 48378132000.0
+        }
+      }
+    },
+    "scenario_requests": {
+      "row_count": 408397,
+      "columns": {
+        "quantity": {
+          "current_sum": 184343054.066,
+          "current_max_abs": 6707260.0,
+          "backup_pre_second_sum": 3129273724429.614,
+          "backup_pre_second_max_abs": 22146464781.2
+        }
+      }
+    },
+    "scenario_state_stock": {
+      "row_count": 3,
+      "columns": {
+        "quantity": {
+          "current_sum": 0.006,
+          "current_max_abs": 0.002,
+          "backup_pre_second_sum": 120.0,
+          "backup_pre_second_max_abs": 40.0
+        }
+      }
+    },
+    "scenario_national_stock": {
+      "row_count": 3,
+      "columns": {
+        "quantity": {
+          "current_sum": 0.012,
+          "current_max_abs": 0.004,
+          "backup_pre_second_sum": 270.0,
+          "backup_pre_second_max_abs": 90.0
+        }
+      }
+    },
+    "shipment_plans": {
+      "row_count": 87353,
+      "columns": {
+        "quantity": {
+          "current_sum": 2389893797.091,
+          "current_max_abs": 22176409.0,
+          "backup_pre_second_sum": 4842727193059.127,
+          "backup_pre_second_max_abs": 38945464000.0
+        }
+      }
+    },
+    "state_transfers": {
+      "row_count": 556,
+      "columns": {
+        "quantity": {
+          "current_sum": 489971.13899999997,
+          "current_max_abs": 82185.0,
+          "backup_pre_second_sum": 67999224.0,
+          "backup_pre_second_max_abs": 7882094.0
+        }
+      }
+    },
+    "mutual_aid_requests": {
+      "row_count": 4823,
+      "columns": {
+        "quantity_requested": {
+          "current_sum": 5379061.04,
+          "current_max_abs": 4660183.0,
+          "backup_pre_second_sum": 8739649944.71,
+          "backup_pre_second_max_abs": 4476642563.54
+        }
+      }
+    },
+    "pool_transactions": {
+      "row_count": 284,
+      "columns": {
+        "quantity_delta": {
+          "current_sum": 503041.499,
+          "current_max_abs": 17391.386,
+          "backup_pre_second_sum": 64669440.0,
+          "backup_pre_second_max_abs": 7882094.0
+        }
+      }
+    },
+    "stock_refill_transactions": {
+      "row_count": 523529,
+      "columns": {
+        "quantity_delta": {
+          "current_sum": 18165974.727,
+          "current_max_abs": 19154133.0,
+          "backup_pre_second_sum": -43699276890.572,
+          "backup_pre_second_max_abs": 12981821458.0
+        }
+      }
+    },
+    "demand_learning_events": {
+      "row_count": 26880,
+      "columns": {
+        "baseline_demand": {
+          "current_sum": 0.0,
+          "current_max_abs": 0.0,
+          "backup_pre_second_sum": 0.0,
+          "backup_pre_second_max_abs": 0.0
+        },
+        "human_demand": {
+          "current_sum": 0.0,
+          "current_max_abs": 0.0,
+          "backup_pre_second_sum": 0.0,
+          "backup_pre_second_max_abs": 0.0
+        },
+        "final_demand": {
+          "current_sum": 1568.781,
+          "current_max_abs": 45.0,
+          "backup_pre_second_sum": 9688.0,
+          "backup_pre_second_max_abs": 172.0
+        },
+        "allocated": {
+          "current_sum": 599.781,
+          "current_max_abs": 8.45,
+          "backup_pre_second_sum": 8097.0,
+          "backup_pre_second_max_abs": 172.0
+        },
+        "unmet": {
+          "current_sum": 969.0,
+          "current_max_abs": 45.0,
+          "backup_pre_second_sum": 1591.0,
+          "backup_pre_second_max_abs": 45.0
+        }
+      }
+    },
+    "priority_urgency_events": {
+      "row_count": 525,
+      "columns": {
+        "baseline_demand": {
+          "current_sum": 45.565,
+          "current_max_abs": 1.0,
+          "backup_pre_second_sum": 66.77,
+          "backup_pre_second_max_abs": 1.0
+        },
+        "human_quantity": {
+          "current_sum": 2493.96,
+          "current_max_abs": 57.0,
+          "backup_pre_second_sum": 9705.0,
+          "backup_pre_second_max_abs": 87.0
+        },
+        "final_demand": {
+          "current_sum": 1930.721,
+          "current_max_abs": 57.0,
+          "backup_pre_second_sum": 7446.0,
+          "backup_pre_second_max_abs": 87.0
+        },
+        "allocated": {
+          "current_sum": 265.715,
+          "current_max_abs": 10.327,
+          "backup_pre_second_sum": 8219.0,
+          "backup_pre_second_max_abs": 244.0
+        },
+        "unmet": {
+          "current_sum": 1548.0,
+          "current_max_abs": 57.0,
+          "backup_pre_second_sum": 2711.0,
+          "backup_pre_second_max_abs": 57.0
+        }
+      }
+    }
+  },
+  "runs_checked": {
+    "count": 709,
+    "max_allocated_total_run": {
+      "run_id": 352,
+      "allocated_total": 736714.244,
+      "unmet_total": 0.0,
+      "final_demand_total": 736714.244,
+      "max_allocation_slot": 398858.0
+    },
+    "max_single_slot_run": {
+      "run_id": 352,
+      "allocated_total": 736714.244,
+      "unmet_total": 0.0,
+      "final_demand_total": 736714.244,
+      "max_allocation_slot": 398858.0
+    },
+    "latest_15_runs": [
+      {
+        "run_id": 1029,
+        "allocated_total": 0.0,
+        "unmet_total": 0.0,
+        "final_demand_total": 0.0,
+        "max_allocation_slot": 0.0
+      },
+      {
+        "run_id": 1030,
+        "allocated_total": 25.86,
+        "unmet_total": 0.0,
+        "final_demand_total": 25.86,
+        "max_allocation_slot": 1.0
+      },
+      {
+        "run_id": 1031,
+        "allocated_total": 0.0,
+        "unmet_total": 0.0,
+        "final_demand_total": 0.0,
+        "max_allocation_slot": 0.0
+      },
+      {
+        "run_id": 1032,
+        "allocated_total": 25.86,
+        "unmet_total": 0.0,
+        "final_demand_total": 25.86,
+        "max_allocation_slot": 1.0
+      },
+      {
+        "run_id": 1033,
+        "allocated_total": 0.0,
+        "unmet_total": 0.0,
+        "final_demand_total": 0.0,
+        "max_allocation_slot": 0.0
+      },
+      {
+        "run_id": 1034,
+        "allocated_total": 26.177,
+        "unmet_total": 0.0,
+        "final_demand_total": 26.177,
+        "max_allocation_slot": 1.0
+      },
+      {
+        "run_id": 1035,
+        "allocated_total": 0.0,
+        "unmet_total": 0.0,
+        "final_demand_total": 0.0,
+        "max_allocation_slot": 0.0
+      },
+      {
+        "run_id": 1036,
+        "allocated_total": 28.86,
+        "unmet_total": 0.0,
+        "final_demand_total": 28.86,
+        "max_allocation_slot": 3.0
+      },
+      {
+        "run_id": 1037,
+        "allocated_total": 0.0,
+        "unmet_total": 0.0,
+        "final_demand_total": 0.0,
+        "max_allocation_slot": 0.0
+      },
+      {
+        "run_id": 1038,
+        "allocated_total": 26.86,
+        "unmet_total": 0.0,
+        "final_demand_total": 26.86,
+        "max_allocation_slot": 1.0
+      },
+      {
+        "run_id": 1039,
+        "allocated_total": 0.0,
+        "unmet_total": 0.0,
+        "final_demand_total": 0.0,
+        "max_allocation_slot": 0.0
+      },
+      {
+        "run_id": 1040,
+        "allocated_total": 11644.86,
+        "unmet_total": 2381.0,
+        "final_demand_total": 14025.86,
+        "max_allocation_slot": 11619.0
+      },
+      {
+        "run_id": 1041,
+        "allocated_total": 25.86,
+        "unmet_total": 0.0,
+        "final_demand_total": 25.86,
+        "max_allocation_slot": 1.0
+      },
+      {
+        "run_id": 1096,
+        "allocated_total": 0.0,
+        "unmet_total": 0.0,
+        "final_demand_total": 0.0,
+        "max_allocation_slot": 0.0
+      },
+      {
+        "run_id": 1097,
+        "allocated_total": 8211.162,
+        "unmet_total": 0.0,
+        "final_demand_total": 8211.162,
+        "max_allocation_slot": 8185.302
+      }
+    ]
+  },
+  "scopes_checked": {
+    "allocation_supply_level_totals": {
+      "district": 1602258.12,
+      "national": 11093974.273,
+      "state": 5590590.971
+    },
+    "refill_scope_totals": {
+      "district": 31342795.921,
+      "national": -7664849.548,
+      "state": -5511971.646
+    },
+    "scenario_state_stock_total": 0.006,
+    "scenario_national_stock_total": 0.012,
+    "pool_transactions_abs_total": 503055.499
+  },
+  "resource_maxima_top20": [
+    {
+      "resource_id": "R7",
+      "resource_name": "water_purification_tablets",
+      "unit": "tablets",
+      "max_abs_allocation": 1389026.0
+    },
+    {
+      "resource_id": "R6",
+      "resource_name": "bulk_water_liters",
+      "unit": "liters",
+      "max_abs_allocation": 50000.0
+    },
+    {
+      "resource_id": "R39",
+      "resource_name": "diesel_liters",
+      "unit": "liters",
+      "max_abs_allocation": 41857.736
+    },
+    {
+      "resource_id": "R5",
+      "resource_name": "bottled_water_liters",
+      "unit": "liters",
+      "max_abs_allocation": 38954.391
+    },
+    {
+      "resource_id": "R18",
+      "resource_name": "iv_fluids",
+      "unit": "liters",
+      "max_abs_allocation": 30508.038
+    },
+    {
+      "resource_id": "R1",
+      "resource_name": "food_packets",
+      "unit": "person_day_rations",
+      "max_abs_allocation": 30000.0
+    },
+    {
+      "resource_id": "R40",
+      "resource_name": "petrol_liters",
+      "unit": "liters",
+      "max_abs_allocation": 26919.349
+    },
+    {
+      "resource_id": "R52",
+      "resource_name": "diapers",
+      "unit": "packs",
+      "max_abs_allocation": 21562.0
+    },
+    {
+      "resource_id": "R21",
+      "resource_name": "oxygen_cylinders",
+      "unit": "cylinders",
+      "max_abs_allocation": 21304.0
+    },
+    {
+      "resource_id": "R10",
+      "resource_name": "blankets",
+      "unit": "units",
+      "max_abs_allocation": 20000.0
+    },
+    {
+      "resource_id": "R11",
+      "resource_name": "sleeping_mats",
+      "unit": "units",
+      "max_abs_allocation": 20000.0
+    },
+    {
+      "resource_id": "R2",
+      "resource_name": "rice_kg",
+      "unit": "kg",
+      "max_abs_allocation": 20000.0
+    },
+    {
+      "resource_id": "R29",
+      "resource_name": "rescue_ropes",
+      "unit": "units",
+      "max_abs_allocation": 20000.0
+    },
+    {
+      "resource_id": "R3",
+      "resource_name": "wheat_kg",
+      "unit": "kg",
+      "max_abs_allocation": 20000.0
+    },
+    {
+      "resource_id": "R45",
+      "resource_name": "handheld_radios",
+      "unit": "units",
+      "max_abs_allocation": 20000.0
+    },
+    {
+      "resource_id": "R47",
+      "resource_name": "loudspeakers",
+      "unit": "units",
+      "max_abs_allocation": 20000.0
+    },
+    {
+      "resource_id": "R50",
+      "resource_name": "soap_bars",
+      "unit": "units",
+      "max_abs_allocation": 20000.0
+    },
+    {
+      "resource_id": "R54",
+      "resource_name": "pallets",
+      "unit": "units",
+      "max_abs_allocation": 20000.0
+    },
+    {
+      "resource_id": "R56",
+      "resource_name": "cold_chain_boxes",
+      "unit": "units",
+      "max_abs_allocation": 20000.0
+    },
+    {
+      "resource_id": "R9",
+      "resource_name": "tarpaulins",
+      "unit": "units",
+      "max_abs_allocation": 20000.0
+    }
+  ],
+  "remaining_alerts": []
+}

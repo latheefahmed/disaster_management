@@ -1,0 +1,787 @@
+{
+  "timestamp": "2026-03-04T20:39:48.158435",
+  "database": "C:\\Users\\LATHEEF\\Desktop\\disaster_management\\backend\\backend.db",
+  "backup": "C:\\Users\\LATHEEF\\Desktop\\disaster_management\\backend\\backend_pre_realworld_scale_20260304_203800.db",
+  "method": {
+    "resource_scaling": "Per-resource p95-to-target scaling by unit + resource overrides",
+    "population_weighting": "District/state proxy weighting from latest 100-run demand signal",
+    "snapshot_rebuild": true
+  },
+  "resource_factors": {
+    "R1": {
+      "resource_name": "food_packets",
+      "unit": "person_day_rations",
+      "p95_before": 9.0,
+      "p99_before": 20.0,
+      "max_before": 981860420.0,
+      "target_p95": 15000.0,
+      "hard_cap": 45000.0,
+      "scale_factor": 4.583136165118052e-05
+    },
+    "R2": {
+      "resource_name": "rice_kg",
+      "unit": "kg",
+      "p95_before": 9.0,
+      "p99_before": 36.0,
+      "max_before": 413860491.0,
+      "target_p95": 10000.0,
+      "hard_cap": 30000.0,
+      "scale_factor": 7.248819506184755e-05
+    },
+    "R3": {
+      "resource_name": "wheat_kg",
+      "unit": "kg",
+      "p95_before": 9.0,
+      "p99_before": 22.0,
+      "max_before": 326110520.0,
+      "target_p95": 10000.0,
+      "hard_cap": 30000.0,
+      "scale_factor": 9.199335243769505e-05
+    },
+    "R4": {
+      "resource_name": "baby_formula",
+      "unit": "packets",
+      "p95_before": 9.0,
+      "p99_before": 16.0,
+      "max_before": 97650330.0,
+      "target_p95": 6000.0,
+      "hard_cap": 18000.0,
+      "scale_factor": 0.0001843311743032512
+    },
+    "R5": {
+      "resource_name": "bottled_water_liters",
+      "unit": "liters",
+      "p95_before": 9.0,
+      "p99_before": 21.0,
+      "max_before": 2616401660.0,
+      "target_p95": 12000.0,
+      "hard_cap": 36000.0,
+      "scale_factor": 1.3759355281864483e-05
+    },
+    "R6": {
+      "resource_name": "bulk_water_liters",
+      "unit": "liters",
+      "p95_before": 9.0,
+      "p99_before": 19.0,
+      "max_before": 1865170000.0,
+      "target_p95": 25000.0,
+      "hard_cap": 75000.0,
+      "scale_factor": 4.021081188309913e-05
+    },
+    "R7": {
+      "resource_name": "water_purification_tablets",
+      "unit": "tablets",
+      "p95_before": 9.0,
+      "p99_before": 22.0,
+      "max_before": 351233281.0,
+      "target_p95": 500000.0,
+      "hard_cap": 1500000.0,
+      "scale_factor": 0.004270665911070085
+    },
+    "R8": {
+      "resource_name": "tents",
+      "unit": "units",
+      "p95_before": 9.0,
+      "p99_before": 20.0,
+      "max_before": 912572.0,
+      "target_p95": 5000.0,
+      "hard_cap": 15000.0,
+      "scale_factor": 0.016437059212862107
+    },
+    "R9": {
+      "resource_name": "tarpaulins",
+      "unit": "units",
+      "p95_before": 9.0,
+      "p99_before": 23.0,
+      "max_before": 8000004.0,
+      "target_p95": 6000.0,
+      "hard_cap": 18000.0,
+      "scale_factor": 0.0022499988750005625
+    },
+    "R10": {
+      "resource_name": "blankets",
+      "unit": "units",
+      "p95_before": 9.0,
+      "p99_before": 22.0,
+      "max_before": 102335256.0,
+      "target_p95": 15000.0,
+      "hard_cap": 45000.0,
+      "scale_factor": 0.0004397311518915827
+    },
+    "R11": {
+      "resource_name": "sleeping_mats",
+      "unit": "units",
+      "p95_before": 9.0,
+      "p99_before": 22.0,
+      "max_before": 77611908.0,
+      "target_p95": 15000.0,
+      "hard_cap": 45000.0,
+      "scale_factor": 0.0005798079335969939
+    },
+    "R12": {
+      "resource_name": "plastic_sheets",
+      "unit": "units",
+      "p95_before": 31.0,
+      "p99_before": 3000000.0,
+      "max_before": 11857448.0,
+      "target_p95": 5000.0,
+      "hard_cap": 15000.0,
+      "scale_factor": 0.0012650276855525743
+    },
+    "R13": {
+      "resource_name": "family_shelter_kits",
+      "unit": "kits",
+      "p95_before": 30.0,
+      "p99_before": 629077.6299999994,
+      "max_before": 6000000.0,
+      "target_p95": 3000.0,
+      "hard_cap": 9000.0,
+      "scale_factor": 0.0015
+    },
+    "R14": {
+      "resource_name": "medical_kits",
+      "unit": "kits",
+      "p95_before": 28.0,
+      "p99_before": 12560.0,
+      "max_before": 1235561.0,
+      "target_p95": 3000.0,
+      "hard_cap": 9000.0,
+      "scale_factor": 0.00728414056448852
+    },
+    "R15": {
+      "resource_name": "trauma_kits",
+      "unit": "kits",
+      "p95_before": 29.0,
+      "p99_before": 6418.0,
+      "max_before": 53850.0,
+      "target_p95": 3000.0,
+      "hard_cap": 9000.0,
+      "scale_factor": 0.1671309192200557
+    },
+    "R16": {
+      "resource_name": "first_aid_kits",
+      "unit": "kits",
+      "p95_before": 29.0,
+      "p99_before": 9017.359999999986,
+      "max_before": 256308.0,
+      "target_p95": 3000.0,
+      "hard_cap": 9000.0,
+      "scale_factor": 0.035114003464581676
+    },
+    "R17": {
+      "resource_name": "antibiotics_courses",
+      "unit": "courses",
+      "p95_before": 30.0,
+      "p99_before": 581248.999999961,
+      "max_before": 6541547.0,
+      "target_p95": 4000.0,
+      "hard_cap": 12000.0,
+      "scale_factor": 0.0018344284616467633
+    },
+    "R18": {
+      "resource_name": "iv_fluids",
+      "unit": "liters",
+      "p95_before": 29.0,
+      "p99_before": 2243859.999999999,
+      "max_before": 11095166.0,
+      "target_p95": 8000.0,
+      "hard_cap": 24000.0,
+      "scale_factor": 0.002163104184290708
+    },
+    "R19": {
+      "resource_name": "syringes",
+      "unit": "units",
+      "p95_before": 30.0,
+      "p99_before": 8554412.399999984,
+      "max_before": 100000000.0,
+      "target_p95": 5000.0,
+      "hard_cap": 15000.0,
+      "scale_factor": 0.00015
+    },
+    "R20": {
+      "resource_name": "ppe_kits",
+      "unit": "kits",
+      "p95_before": 27.0,
+      "p99_before": 92.80000000000109,
+      "max_before": 5000000.0,
+      "target_p95": 3000.0,
+      "hard_cap": 9000.0,
+      "scale_factor": 0.0018
+    },
+    "R21": {
+      "resource_name": "oxygen_cylinders",
+      "unit": "cylinders",
+      "p95_before": 29.0,
+      "p99_before": 10611.080000000002,
+      "max_before": 262514.0,
+      "target_p95": 5000.0,
+      "hard_cap": 15000.0,
+      "scale_factor": 0.05713980968634054
+    },
+    "R22": {
+      "resource_name": "doctors",
+      "unit": "people",
+      "p95_before": 30.0,
+      "p99_before": 6589.939999999977,
+      "max_before": 309068.0,
+      "target_p95": 5000.0,
+      "hard_cap": 15000.0,
+      "scale_factor": 0.048533008917131505
+    },
+    "R23": {
+      "resource_name": "nurses",
+      "unit": "people",
+      "p95_before": 27.0,
+      "p99_before": 31.0,
+      "max_before": 988462.0,
+      "target_p95": 5000.0,
+      "hard_cap": 15000.0,
+      "scale_factor": 0.015175090190619366
+    },
+    "R24": {
+      "resource_name": "paramedics",
+      "unit": "people",
+      "p95_before": 29.0,
+      "p99_before": 86.0,
+      "max_before": 224242.0,
+      "target_p95": 5000.0,
+      "hard_cap": 15000.0,
+      "scale_factor": 0.06689201844435921
+    },
+    "R25": {
+      "resource_name": "hospital_beds",
+      "unit": "beds",
+      "p95_before": 32.0,
+      "p99_before": 70591.86999999994,
+      "max_before": 641195.0,
+      "target_p95": 5000.0,
+      "hard_cap": 15000.0,
+      "scale_factor": 0.023393819352926958
+    },
+    "R26": {
+      "resource_name": "icu_beds",
+      "unit": "beds",
+      "p95_before": 29.0,
+      "p99_before": 2471.0,
+      "max_before": 51041.0,
+      "target_p95": 5000.0,
+      "hard_cap": 15000.0,
+      "scale_factor": 0.2938813894712094
+    },
+    "R27": {
+      "resource_name": "field_hospital_units",
+      "unit": "units",
+      "p95_before": 31.0,
+      "p99_before": 193.0,
+      "max_before": 5925.0,
+      "target_p95": 5000.0,
+      "hard_cap": 15000.0,
+      "scale_factor": 1.0
+    },
+    "R28": {
+      "resource_name": "rescue_boats",
+      "unit": "units",
+      "p95_before": 29.0,
+      "p99_before": 77.29999999999927,
+      "max_before": 1090.0,
+      "target_p95": 5000.0,
+      "hard_cap": 15000.0,
+      "scale_factor": 1.0
+    },
+    "R29": {
+      "resource_name": "rescue_ropes",
+      "unit": "units",
+      "p95_before": 29.0,
+      "p99_before": 5427.10000000001,
+      "max_before": 78913.0,
+      "target_p95": 5000.0,
+      "hard_cap": 15000.0,
+      "scale_factor": 0.1900827493568867
+    },
+    "R30": {
+      "resource_name": "stretchers",
+      "unit": "units",
+      "p95_before": 29.0,
+      "p99_before": 18737.10000000005,
+      "max_before": 84834.0,
+      "target_p95": 5000.0,
+      "hard_cap": 15000.0,
+      "scale_factor": 0.17681589928566377
+    },
+    "R31": {
+      "resource_name": "hydraulic_cutters",
+      "unit": "units",
+      "p95_before": 47.79999999999927,
+      "p99_before": 508.0,
+      "max_before": 10549.0,
+      "target_p95": 5000.0,
+      "hard_cap": 15000.0,
+      "scale_factor": 1.0
+    },
+    "R32": {
+      "resource_name": "search_cameras",
+      "unit": "units",
+      "p95_before": 31.0,
+      "p99_before": 581.1800000000003,
+      "max_before": 8185.0,
+      "target_p95": 5000.0,
+      "hard_cap": 15000.0,
+      "scale_factor": 1.0
+    },
+    "R33": {
+      "resource_name": "sniffer_dogs",
+      "unit": "animals",
+      "p95_before": 28.0,
+      "p99_before": 94.0,
+      "max_before": 748.0,
+      "target_p95": 5000.0,
+      "hard_cap": 15000.0,
+      "scale_factor": 1.0
+    },
+    "R34": {
+      "resource_name": "ambulances",
+      "unit": "vehicles",
+      "p95_before": 29.0,
+      "p99_before": 4004.8800000000047,
+      "max_before": 62832.0,
+      "target_p95": 5000.0,
+      "hard_cap": 15000.0,
+      "scale_factor": 0.2387318563789152
+    },
+    "R35": {
+      "resource_name": "buses",
+      "unit": "vehicles",
+      "p95_before": 27.0,
+      "p99_before": 42.0,
+      "max_before": 5925.0,
+      "target_p95": 5000.0,
+      "hard_cap": 15000.0,
+      "scale_factor": 1.0
+    },
+    "R36": {
+      "resource_name": "trucks",
+      "unit": "vehicles",
+      "p95_before": 79.0,
+      "p99_before": 370.6999999999971,
+      "max_before": 2614.0,
+      "target_p95": 5000.0,
+      "hard_cap": 15000.0,
+      "scale_factor": 1.0
+    },
+    "R37": {
+      "resource_name": "helicopters",
+      "unit": "vehicles",
+      "p95_before": 28.0,
+      "p99_before": 31.0,
+      "max_before": 14000.0,
+      "target_p95": 5000.0,
+      "hard_cap": 15000.0,
+      "scale_factor": 1.0
+    },
+    "R38": {
+      "resource_name": "boats",
+      "unit": "vehicles",
+      "p95_before": 29.0,
+      "p99_before": 41.0,
+      "max_before": 767.0,
+      "target_p95": 5000.0,
+      "hard_cap": 15000.0,
+      "scale_factor": 1.0
+    },
+    "R39": {
+      "resource_name": "diesel_liters",
+      "unit": "liters",
+      "p95_before": 28.0,
+      "p99_before": 103.75,
+      "max_before": 316115410.0,
+      "target_p95": 12000.0,
+      "hard_cap": 36000.0,
+      "scale_factor": 0.00011388245830850195
+    },
+    "R40": {
+      "resource_name": "petrol_liters",
+      "unit": "liters",
+      "p95_before": 28.0,
+      "p99_before": 25277231.011609636,
+      "max_before": 231232779.0,
+      "target_p95": 8000.0,
+      "hard_cap": 24000.0,
+      "scale_factor": 0.0001037915130536056
+    },
+    "R41": {
+      "resource_name": "generators",
+      "unit": "units",
+      "p95_before": 27.0,
+      "p99_before": 76.0,
+      "max_before": 1200014.0,
+      "target_p95": 5000.0,
+      "hard_cap": 15000.0,
+      "scale_factor": 0.012499854168368036
+    },
+    "R42": {
+      "resource_name": "solar_lanterns",
+      "unit": "units",
+      "p95_before": 93.0,
+      "p99_before": 4638019.119999992,
+      "max_before": 19378308.0,
+      "target_p95": 5000.0,
+      "hard_cap": 15000.0,
+      "scale_factor": 0.0007740613886413612
+    },
+    "R43": {
+      "resource_name": "battery_packs",
+      "unit": "units",
+      "p95_before": 28.0,
+      "p99_before": 24570958.0,
+      "max_before": 78309407.0,
+      "target_p95": 5000.0,
+      "hard_cap": 15000.0,
+      "scale_factor": 0.00019154786857216273
+    },
+    "R44": {
+      "resource_name": "satellite_phones",
+      "unit": "units",
+      "p95_before": 30.0,
+      "p99_before": 531.8799999999974,
+      "max_before": 10549.0,
+      "target_p95": 5000.0,
+      "hard_cap": 15000.0,
+      "scale_factor": 1.0
+    },
+    "R45": {
+      "resource_name": "handheld_radios",
+      "unit": "units",
+      "p95_before": 43.0,
+      "p99_before": 11704.480000000047,
+      "max_before": 78913.0,
+      "target_p95": 5000.0,
+      "hard_cap": 15000.0,
+      "scale_factor": 0.1900827493568867
+    },
+    "R46": {
+      "resource_name": "mobile_base_stations",
+      "unit": "units",
+      "p95_before": 29.0,
+      "p99_before": 49.090000000001965,
+      "max_before": 4529.0,
+      "target_p95": 5000.0,
+      "hard_cap": 15000.0,
+      "scale_factor": 1.0
+    },
+    "R47": {
+      "resource_name": "loudspeakers",
+      "unit": "units",
+      "p95_before": 30.0,
+      "p99_before": 16211.699999999964,
+      "max_before": 143181.0,
+      "target_p95": 5000.0,
+      "hard_cap": 15000.0,
+      "scale_factor": 0.10476250340478135
+    },
+    "R48": {
+      "resource_name": "toilets_portable",
+      "unit": "units",
+      "p95_before": 32.0,
+      "p99_before": 800000.0,
+      "max_before": 2503432.0,
+      "target_p95": 5000.0,
+      "hard_cap": 15000.0,
+      "scale_factor": 0.005991774491977414
+    },
+    "R49": {
+      "resource_name": "hygiene_kits",
+      "unit": "kits",
+      "p95_before": 30.0,
+      "p99_before": 993323.0,
+      "max_before": 5000000.0,
+      "target_p95": 3000.0,
+      "hard_cap": 9000.0,
+      "scale_factor": 0.0018
+    },
+    "R50": {
+      "resource_name": "soap_bars",
+      "unit": "units",
+      "p95_before": 28.0,
+      "p99_before": 51.0,
+      "max_before": 156999360.0,
+      "target_p95": 5000.0,
+      "hard_cap": 15000.0,
+      "scale_factor": 9.554179074360558e-05
+    },
+    "R51": {
+      "resource_name": "sanitary_pads",
+      "unit": "packs",
+      "p95_before": 30.0,
+      "p99_before": 16459535.269999847,
+      "max_before": 113887184.0,
+      "target_p95": 5000.0,
+      "hard_cap": 15000.0,
+      "scale_factor": 0.0001317092887290988
+    },
+    "R52": {
+      "resource_name": "diapers",
+      "unit": "packs",
+      "p95_before": 29.0,
+      "p99_before": 3191728.920002128,
+      "max_before": 15000000.0,
+      "target_p95": 5000.0,
+      "hard_cap": 15000.0,
+      "scale_factor": 0.001
+    },
+    "R53": {
+      "resource_name": "forklifts",
+      "unit": "units",
+      "p95_before": 28.0,
+      "p99_before": 210.4399999999987,
+      "max_before": 2614.0,
+      "target_p95": 5000.0,
+      "hard_cap": 15000.0,
+      "scale_factor": 1.0
+    },
+    "R54": {
+      "resource_name": "pallets",
+      "unit": "units",
+      "p95_before": 29.0,
+      "p99_before": 1042388.0,
+      "max_before": 8000000.0,
+      "target_p95": 5000.0,
+      "hard_cap": 15000.0,
+      "scale_factor": 0.001875
+    },
+    "R55": {
+      "resource_name": "storage_containers",
+      "unit": "units",
+      "p95_before": 4406.0,
+      "p99_before": 19656.0,
+      "max_before": 274790.0,
+      "target_p95": 5000.0,
+      "hard_cap": 15000.0,
+      "scale_factor": 0.05458713926998799
+    },
+    "R56": {
+      "resource_name": "cold_chain_boxes",
+      "unit": "units",
+      "p95_before": 29.69999999999891,
+      "p99_before": 20031.0,
+      "max_before": 179041.0,
+      "target_p95": 5000.0,
+      "hard_cap": 15000.0,
+      "scale_factor": 0.08377969291949888
+    }
+  },
+  "table_summary": {
+    "allocations": {
+      "updated_rows": 468227,
+      "columns": {
+        "allocated_quantity": {
+          "before": 76792573286.73499,
+          "after": 24123874.850028563
+        },
+        "claimed_quantity": {
+          "before": 135926748.0,
+          "after": 1015360.5530000028
+        },
+        "consumed_quantity": {
+          "before": 50001419.0,
+          "after": 8301.551
+        },
+        "returned_quantity": {
+          "before": 85926149.0,
+          "after": 1007057.0
+        },
+        "overflow_reconciled_quantity": {
+          "before": 3491586040.0,
+          "after": 2773514.9710007184
+        }
+      }
+    },
+    "claims": {
+      "updated_rows": 11156,
+      "columns": {
+        "quantity": {
+          "before": 114717673.0,
+          "after": 532120.889
+        }
+      }
+    },
+    "consumptions": {
+      "updated_rows": 127,
+      "columns": {
+        "quantity": {
+          "before": 50001410.0,
+          "after": 7227.887000000001
+        }
+      }
+    },
+    "returns": {
+      "updated_rows": 11276,
+      "columns": {
+        "quantity": {
+          "before": 64717083.0,
+          "after": 525142.0
+        }
+      }
+    },
+    "final_demands": {
+      "updated_rows": 2516660,
+      "columns": {
+        "demand_quantity": {
+          "before": 77014772168.16623,
+          "after": 26508213.787082255
+        }
+      }
+    },
+    "requests": {
+      "updated_rows": 2398,
+      "columns": {
+        "quantity": {
+          "before": 3249173653.019002,
+          "after": 3506903.721000013
+        },
+        "allocated_quantity": {
+          "before": 3861161721.7740016,
+          "after": 3525619.0820000106
+        },
+        "unmet_quantity": {
+          "before": 44553080.0,
+          "after": 75439.76499999998
+        },
+        "final_demand_quantity": {
+          "before": 3861712876.7740016,
+          "after": 3585386.08200001
+        }
+      }
+    },
+    "inventory_snapshots": {
+      "updated_rows": 2207209,
+      "columns": {
+        "quantity": {
+          "before": 151979898589355.7,
+          "after": 203855879279.80807
+        }
+      }
+    },
+    "scenario_requests": {
+      "updated_rows": 350904,
+      "columns": {
+        "quantity": {
+          "before": 3129273724429.6177,
+          "after": 228446817.52399993
+        }
+      }
+    },
+    "scenario_state_stock": {
+      "updated_rows": 3,
+      "columns": {
+        "quantity": {
+          "before": 120.0,
+          "after": 0.009000000000000001
+        }
+      }
+    },
+    "scenario_national_stock": {
+      "updated_rows": 3,
+      "columns": {
+        "quantity": {
+          "before": 270.0,
+          "after": 0.021
+        }
+      }
+    },
+    "shipment_plans": {
+      "updated_rows": 39858,
+      "columns": {
+        "quantity": {
+          "before": 4842727193059.127,
+          "after": 2487397995.069997
+        }
+      }
+    },
+    "state_transfers": {
+      "updated_rows": 142,
+      "columns": {
+        "quantity": {
+          "before": 67999224.0,
+          "after": 499336.0
+        }
+      }
+    },
+    "mutual_aid_requests": {
+      "updated_rows": 146,
+      "columns": {
+        "quantity_requested": {
+          "before": 8739649944.71,
+          "after": 5827065.783
+        }
+      }
+    },
+    "pool_transactions": {
+      "updated_rows": 143,
+      "columns": {
+        "quantity_delta": {
+          "before": 64669440.0,
+          "after": 515150.0
+        }
+      }
+    },
+    "stock_refill_transactions": {
+      "updated_rows": 498763,
+      "columns": {
+        "quantity_delta": {
+          "before": -43699276890.57203,
+          "after": 18193745.96599963
+        }
+      }
+    },
+    "demand_learning_events": {
+      "updated_rows": 1101,
+      "columns": {
+        "baseline_demand": {
+          "before": 0.0,
+          "after": 0.0
+        },
+        "human_demand": {
+          "before": 0.0,
+          "after": 0.0
+        },
+        "final_demand": {
+          "before": 9688.0,
+          "after": 1719.5959999999923
+        },
+        "allocated": {
+          "before": 8097.0,
+          "after": 750.5959999999945
+        },
+        "unmet": {
+          "before": 1591.0,
+          "after": 969.0
+        }
+      }
+    },
+    "priority_urgency_events": {
+      "updated_rows": 409,
+      "columns": {
+        "baseline_demand": {
+          "before": 66.77000000000001,
+          "after": 65.03599999999997
+        },
+        "human_quantity": {
+          "before": 9705.0,
+          "after": 2522.626000000001
+        },
+        "final_demand": {
+          "before": 7446.0,
+          "after": 1957.484999999999
+        },
+        "allocated": {
+          "before": 8219.0,
+          "after": 290.359
+        },
+        "unmet": {
+          "before": 2711.0,
+          "after": 1548.0
+        }
+      }
+    }
+  }
+}

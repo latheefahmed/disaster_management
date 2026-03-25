@@ -322,6 +322,10 @@ def create_claim(db: Session, district_code: str, resource_id: str,
     db.commit()
     db.refresh(row)
 
+    # Return mutates pool/district availability; clear stock caches for immediate UI consistency.
+    from app.services.kpi_service import invalidate_stock_caches
+    invalidate_stock_caches()
+
     return row, snapshot
 
 
@@ -442,6 +446,10 @@ def create_return(db: Session, district_code: str, resource_id: str,
         source_scope = ""
     if source_code in {"", "—", "None", "none", "null"}:
         source_code = ""
+
+    # If UI omits scope but provides district code, preserve district-return credit behavior.
+    if not source_scope and source_code and str(source_code) == str(district_code):
+        source_scope = "district"
 
     with db.begin_nested():
         row = Return(

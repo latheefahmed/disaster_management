@@ -84,12 +84,66 @@ AUTO_ESCALATION_MIN_UNMET_QTY = float(os.getenv("AUTO_ESCALATION_MIN_UNMET_QTY",
 AUTO_ESCALATION_IMMEDIATE_TIME_MAX = int(os.getenv("AUTO_ESCALATION_IMMEDIATE_TIME_MAX", "0"))
 AUTO_ESCALATION_NATIONAL_UNMET_RATIO = float(os.getenv("AUTO_ESCALATION_NATIONAL_UNMET_RATIO", "0.40"))
 AUTO_ESCALATION_NATIONAL_DELAY_MINUTES = int(os.getenv("AUTO_ESCALATION_NATIONAL_DELAY_MINUTES", "30"))
-AUTO_ESCALATION_NEIGHBOR_MAX_STATES = int(os.getenv("AUTO_ESCALATION_NEIGHBOR_MAX_STATES", "3"))
+AUTO_ESCALATION_NEIGHBOR_MAX_STATES = int(os.getenv("AUTO_ESCALATION_NEIGHBOR_MAX_STATES", "5"))
 AUTO_ESCALATION_NEIGHBOR_OFFER_FRACTION = float(os.getenv("AUTO_ESCALATION_NEIGHBOR_OFFER_FRACTION", "0.55"))
 AUTO_ESCALATION_NEIGHBOR_STOCK_UTILIZATION_CAP = float(os.getenv("AUTO_ESCALATION_NEIGHBOR_STOCK_UTILIZATION_CAP", "0.20"))
 AUTO_ESCALATION_NEIGHBOR_ACCEPT_THRESHOLD = int(os.getenv("AUTO_ESCALATION_NEIGHBOR_ACCEPT_THRESHOLD", "55"))
 AUTO_ESCALATION_NEIGHBOR_EMERGENCY_ACCEPT_THRESHOLD = int(os.getenv("AUTO_ESCALATION_NEIGHBOR_EMERGENCY_ACCEPT_THRESHOLD", "75"))
 AUTO_ESCALATION_NEIGHBOR_AUTO_ACCEPT = os.getenv("AUTO_ESCALATION_NEIGHBOR_AUTO_ACCEPT", "true").strip().lower() in {"1", "true", "yes", "on"}
+AUTO_ESCALATION_DIRECT_NATIONAL_LOW_PRIORITY_MAX = int(os.getenv("AUTO_ESCALATION_DIRECT_NATIONAL_LOW_PRIORITY_MAX", "2"))
+AUTO_ESCALATION_DIRECT_NATIONAL_HIGH_TIME_MIN = int(os.getenv("AUTO_ESCALATION_DIRECT_NATIONAL_HIGH_TIME_MIN", "2"))
+AUTO_ESCALATION_EARLY_TIME_MAX = int(os.getenv("AUTO_ESCALATION_EARLY_TIME_MAX", "5"))
+AUTO_ESCALATION_MID_TIME_MAX = int(os.getenv("AUTO_ESCALATION_MID_TIME_MAX", "20"))
+LIVE_RUN_STALE_TIMEOUT_MINUTES = max(1, int(os.getenv("LIVE_RUN_STALE_TIMEOUT_MINUTES", "5")))
+REQUEST_STATUS_EPS = max(1e-6, float(os.getenv("REQUEST_STATUS_EPS", "1e-6")))
+
+
+_live_run_threads_lock = threading.Lock()
+_live_run_threads: dict[int, threading.Thread] = {}
+
+
+def _mark_stale_live_runs_failed(db: Session) -> set[int]:
+    cutoff = datetime.utcnow() - timedelta(minutes=int(LIVE_RUN_STALE_TIMEOUT_MINUTES))
+    stale_runs = db.query(SolverRun).filter(
+        SolverRun.mode == "live",
+        SolverRun.status == "running",
+        SolverRun.started_at.isnot(None),
+        SolverRun.started_at < cutoff,
+    ).all()
+
+    if not stale_runs:
+        return set()
+
+    stale_ids = {int(r.id) for r in stale_runs}
+    for row in stale_runs:
+        row.status = "failed"
+
+    # Ensure requests waiting on stale runs move to a definitive state.
+    db.query(ResourceRequest).filter(
+        ResourceRequest.run_id.in_(list(stale_ids)),
+        ResourceRequest.status == "solving",
+    ).update(
+        {
+            "status": "failed",
+            "lifecycle_state": "FAILED",
+            "included_in_run": 1,
+            "queued": 1,
+        },
+        synchronize_session=False,
+    )
+    _commit_with_retry(db)
+    return stale_ids
+
+
+def _normalize_solver_run_mode(mode: str | None) -> str:
+    raw = str(mode or "").strip().lower()
+    if raw == "normal":
+        return "manual"
+    if raw == "prod":
+        return "production"
+    if raw in {"scenario", "live", "production", "manual"}:
+        return raw
+    return "manual"
 
 
 def _priority_urgency_influence_mode() -> str:
@@ -190,13 +244,18 @@ def _state_resource_stock(
 
     from app.services.kpi_service import get_state_stock_rows
 
+    state_rows_key = ("__state_rows__", str(state_code))
     value = 0.0
     try:
-        rows = get_state_stock_rows(db, str(state_code))
-        for row in rows:
-            if str(row.get("resource_id") or "") == str(resource_id):
-                value = max(0.0, float(row.get("state_stock") or 0.0))
-                break
+        state_map = cache.get(state_rows_key)  # type: ignore[assignment]
+        if not isinstance(state_map, dict):
+            rows = get_state_stock_rows(db, str(state_code))
+            state_map = {
+                str(row.get("resource_id") or ""): max(0.0, float(row.get("state_stock") or 0.0))
+                for row in rows
+            }
+            cache[state_rows_key] = state_map  # type: ignore[assignment]
+        value = float(state_map.get(str(resource_id), 0.0))
     except Exception:
         value = 0.0
 
@@ -211,6 +270,7 @@ def _seed_neighbor_offers_for_request(
     unmet_qty: float,
     emergency_mode: bool,
     stock_cache: dict[tuple[str, str], float],
+    run_mode: str,
 ) -> dict[str, float]:
     accepted_existing = float(
         db.query(func.coalesce(func.sum(MutualAidOffer.quantity_offered), 0.0)).filter(
@@ -221,7 +281,19 @@ def _seed_neighbor_offers_for_request(
     )
     remaining = max(0.0, float(unmet_qty) - accepted_existing)
     if remaining <= 1e-9:
-        return {"offers_created": 0.0, "offers_accepted": 0.0, "accepted_quantity": 0.0}
+        return {"offers_created": 0.0, "offers_accepted": 0.0, "accepted_quantity": 0.0, "own_state_covered": 0.0}
+
+    # Enforce escalation order: requesting state's stock first, then neighbors.
+    own_state_available = _state_resource_stock(db, str(req.state_code), str(req.resource_id), stock_cache)
+    own_state_covered = min(remaining, max(0.0, float(own_state_available)))
+    remaining = max(0.0, remaining - own_state_covered)
+    if remaining <= 1e-9:
+        return {
+            "offers_created": 0.0,
+            "offers_accepted": 0.0,
+            "accepted_quantity": 0.0,
+            "own_state_covered": float(own_state_covered),
+        }
 
     neighbors = get_candidate_states(
         db,
@@ -229,12 +301,19 @@ def _seed_neighbor_offers_for_request(
         limit=max(1, int(AUTO_ESCALATION_NEIGHBOR_MAX_STATES) * 2),
     )
     if not neighbors:
-        return {"offers_created": 0.0, "offers_accepted": 0.0, "accepted_quantity": 0.0}
+        return {
+            "offers_created": 0.0,
+            "offers_accepted": 0.0,
+            "accepted_quantity": 0.0,
+            "own_state_covered": float(own_state_covered),
+        }
 
     max_states = max(1, int(AUTO_ESCALATION_NEIGHBOR_MAX_STATES))
     offer_fraction = max(0.05, min(1.0, float(AUTO_ESCALATION_NEIGHBOR_OFFER_FRACTION)))
     stock_cap = max(0.05, min(1.0, float(AUTO_ESCALATION_NEIGHBOR_STOCK_UTILIZATION_CAP)))
     accept_threshold = int(AUTO_ESCALATION_NEIGHBOR_EMERGENCY_ACCEPT_THRESHOLD if emergency_mode else AUTO_ESCALATION_NEIGHBOR_ACCEPT_THRESHOLD)
+
+    is_scenario_mode = _normalize_solver_run_mode(run_mode) == "scenario"
 
     offers_created = 0
     offers_accepted = 0
@@ -276,19 +355,18 @@ def _seed_neighbor_offers_for_request(
                 offering_state=offering_state,
                 quantity_offered=float(proposed_qty),
                 cap_quantity=float(cap_qty),
+                approval_source=("scenario_auto" if is_scenario_mode else "auto_neighbor_chain"),
             )
             offers_created += 1
 
-            if AUTO_ESCALATION_NEIGHBOR_AUTO_ACCEPT:
-                decision = "accepted"
-            else:
-                score = _stable_acceptance_score(int(req.id), offering_state)
-                decision = "accepted" if score < accept_threshold else "rejected"
+            decision = "accepted"
             responded = respond_to_offer(
                 db=db,
                 offer_id=int(offer.id),
                 decision=decision,
                 actor_state=str(req.state_code),
+                approval_source=("scenario_auto" if is_scenario_mode else "auto_neighbor_chain"),
+                auto_accepted=True,
             )
             if str(responded.status or "").lower() == "accepted":
                 offers_accepted += 1
@@ -303,10 +381,15 @@ def _seed_neighbor_offers_for_request(
         "offers_created": float(offers_created),
         "offers_accepted": float(offers_accepted),
         "accepted_quantity": float(accepted_quantity),
+        "own_state_covered": float(own_state_covered),
     }
 
 
 def _auto_progress_escalation_chain(db: Session, solver_run_id: int) -> dict[str, int]:
+    run = db.query(SolverRun).filter(SolverRun.id == int(solver_run_id)).first()
+    resolved_run_mode = _normalize_solver_run_mode(None if run is None else getattr(run, "mode", None))
+    is_scenario_mode = resolved_run_mode == "scenario"
+
     if not AUTO_ESCALATION_ENABLED:
         return {
             "state_marked": 0,
@@ -333,6 +416,7 @@ def _auto_progress_escalation_chain(db: Session, solver_run_id: int) -> dict[str
     neighbor_offers_created = 0
     neighbor_offers_accepted = 0
     neighbor_accepted_qty = 0.0
+    own_state_covered_total = 0.0
     stock_cache: dict[tuple[str, str], float] = {}
 
     pred_map: dict[int, RequestPrediction] = {}
@@ -358,6 +442,25 @@ def _auto_progress_escalation_chain(db: Session, solver_run_id: int) -> dict[str
             continue
 
         unmet_ratio = (unmet_qty / requested_qty) if requested_qty > 1e-9 else 1.0
+
+        slot_time = int(req.time or 0)
+        early_window = slot_time <= int(AUTO_ESCALATION_EARLY_TIME_MAX)
+        mid_window = int(AUTO_ESCALATION_EARLY_TIME_MAX) < slot_time <= int(AUTO_ESCALATION_MID_TIME_MAX)
+        district_only_window = slot_time > int(AUTO_ESCALATION_MID_TIME_MAX)
+
+        if district_only_window:
+            # Late horizon policy: keep district-only escalation behavior (no state/national escalation labels).
+            if float(req.allocated_quantity or 0.0) > 1e-9 and unmet_qty > 1e-9:
+                target = "partial"
+            elif unmet_qty > 1e-9:
+                target = "unmet"
+            else:
+                target = "allocated"
+            if req.status != target:
+                req.status = target
+            req.lifecycle_state = _lifecycle_for_status(target)
+            req.unmet_quantity = float(unmet_qty)
+            continue
 
         open_aid = db.query(MutualAidRequest).filter(
             MutualAidRequest.requesting_state == str(req.state_code),
@@ -402,13 +505,19 @@ def _auto_progress_escalation_chain(db: Session, solver_run_id: int) -> dict[str
             int(effective_priority or 0) >= 5 or int(effective_urgency or 0) >= 5
         ) and unmet_qty >= AUTO_ESCALATION_MIN_UNMET_QTY
         delayed_without_fill = open_aid is not None and aid_age_minutes >= float(AUTO_ESCALATION_NATIONAL_DELAY_MINUTES)
-
         emergency_pressure = (
             unmet_ratio >= max(float(AUTO_ESCALATION_NATIONAL_UNMET_RATIO), 0.60)
             and (int(effective_priority or 0) >= 4 or int(effective_urgency or 0) >= 4)
         )
 
-        if open_aid is not None and (emergency_pressure or delayed_without_fill or unmet_ratio >= float(AUTO_ESCALATION_NATIONAL_UNMET_RATIO)):
+        remaining_after_aid = float(unmet_qty)
+
+        if open_aid is not None and (
+            immediate_high_priority
+            or emergency_pressure
+            or delayed_without_fill
+            or unmet_ratio >= float(AUTO_ESCALATION_NATIONAL_UNMET_RATIO)
+        ):
             seeded = _seed_neighbor_offers_for_request(
                 db=db,
                 req=req,
@@ -416,12 +525,30 @@ def _auto_progress_escalation_chain(db: Session, solver_run_id: int) -> dict[str
                 unmet_qty=float(unmet_qty),
                 emergency_mode=bool(emergency_pressure),
                 stock_cache=stock_cache,
+                run_mode=resolved_run_mode,
             )
             neighbor_offers_created += int(seeded.get("offers_created", 0.0))
             neighbor_offers_accepted += int(seeded.get("offers_accepted", 0.0))
             neighbor_accepted_qty += float(seeded.get("accepted_quantity", 0.0))
+            own_state_covered_total += float(seeded.get("own_state_covered", 0.0))
 
-        if req.status != "escalated_national" and (immediate_and_severe or immediate_high_priority or delayed_without_fill or emergency_pressure):
+            accepted_total = db.query(func.coalesce(func.sum(MutualAidOffer.quantity_offered), 0.0)).filter(
+                MutualAidOffer.request_id == int(open_aid.id),
+                MutualAidOffer.status == "accepted",
+            ).scalar()
+            own_state_covered = max(0.0, float(seeded.get("own_state_covered", 0.0)))
+            remaining_after_aid = max(
+                0.0,
+                float(open_aid.quantity_requested or 0.0) - float(accepted_total or 0.0) - own_state_covered,
+            )
+
+        post_aid_unmet_ratio = (remaining_after_aid / requested_qty) if requested_qty > 1e-9 else 1.0
+        allow_national = (
+            (early_window and (immediate_and_severe or delayed_without_fill or emergency_pressure))
+            or (mid_window and post_aid_unmet_ratio >= float(AUTO_ESCALATION_NATIONAL_UNMET_RATIO))
+        )
+
+        if req.status != "escalated_national" and allow_national and remaining_after_aid > AUTO_ESCALATION_MIN_UNMET_QTY:
             req.status = "escalated_national"
             req.lifecycle_state = "ESCALATED"
             req.unmet_quantity = float(unmet_qty)
@@ -454,6 +581,8 @@ def _auto_progress_escalation_chain(db: Session, solver_run_id: int) -> dict[str
                     "immediate_time_max": int(AUTO_ESCALATION_IMMEDIATE_TIME_MAX),
                     "national_unmet_ratio": float(AUTO_ESCALATION_NATIONAL_UNMET_RATIO),
                     "delay_minutes": int(AUTO_ESCALATION_NATIONAL_DELAY_MINUTES),
+                    "early_time_max": int(AUTO_ESCALATION_EARLY_TIME_MAX),
+                    "mid_time_max": int(AUTO_ESCALATION_MID_TIME_MAX),
                 },
             },
             db=db,
@@ -469,6 +598,7 @@ def _auto_progress_escalation_chain(db: Session, solver_run_id: int) -> dict[str
                 "offers_created": int(neighbor_offers_created),
                 "offers_accepted": int(neighbor_offers_accepted),
                 "accepted_quantity": float(neighbor_accepted_qty),
+                "own_state_covered": float(own_state_covered_total),
                 "policy": {
                     "max_neighbor_states": int(AUTO_ESCALATION_NEIGHBOR_MAX_STATES),
                     "offer_fraction": float(AUTO_ESCALATION_NEIGHBOR_OFFER_FRACTION),
@@ -476,6 +606,7 @@ def _auto_progress_escalation_chain(db: Session, solver_run_id: int) -> dict[str
                     "accept_threshold": int(AUTO_ESCALATION_NEIGHBOR_ACCEPT_THRESHOLD),
                     "emergency_accept_threshold": int(AUTO_ESCALATION_NEIGHBOR_EMERGENCY_ACCEPT_THRESHOLD),
                 },
+                "mode": ("scenario_auto_chain" if is_scenario_mode else "governed_chain"),
             },
             db=db,
         )
@@ -1088,11 +1219,20 @@ def _run_solver_job(run_id: int):
         except Exception as err:
             print("Online LS-NMC training failed, continuing:", err)
 
-        _refresh_request_statuses_for_latest_live_run(db)
+        try:
+            _refresh_request_statuses_for_latest_live_run(db)
+        except Exception as err:
+            print("Post-run request status refresh failed, continuing:", err)
 
         if ENABLE_MUTUAL_AID:
-            create_requests_from_unmet_allocations(db, solver_run_id=int(solver_run.id))
-            _auto_progress_escalation_chain(db, solver_run_id=int(solver_run.id))
+            try:
+                create_requests_from_unmet_allocations(db, solver_run_id=int(solver_run.id))
+            except Exception as err:
+                print("Post-run unmet request creation failed, continuing:", err)
+            try:
+                _auto_progress_escalation_chain(db, solver_run_id=int(solver_run.id))
+            except Exception as err:
+                print("Post-run escalation auto-progress failed, continuing:", err)
 
         if ENABLE_AGENT_ENGINE:
             try:
@@ -1109,14 +1249,26 @@ def _run_solver_job(run_id: int):
     except Exception as e:
         db.rollback()
         solver_run = db.query(SolverRun).filter(SolverRun.id == run_id).first()
-        if solver_run is not None:
+        if solver_run is not None and str(solver_run.status or "").lower() != "completed":
             solver_run.status = "failed"
+            try:
+                existing_summary = {}
+                raw = getattr(solver_run, "summary_snapshot_json", None)
+                if raw:
+                    parsed = json.loads(str(raw))
+                    if isinstance(parsed, dict):
+                        existing_summary = parsed
+                existing_summary["failure_reason"] = f"{type(e).__name__}: {e}"
+                existing_summary["error"] = f"{type(e).__name__}: {e}"
+                solver_run.summary_snapshot_json = json.dumps(existing_summary, default=str)
+            except Exception:
+                pass
             try:
                 _commit_with_retry(db)
             except Exception:
                 db.rollback()
 
-        if 'pending_ids' in locals() and pending_ids:
+        if 'pending_ids' in locals() and pending_ids and not (solver_run is not None and str(solver_run.status or "").lower() == "completed"):
             db.query(ResourceRequest)\
                 .filter(ResourceRequest.id.in_(pending_ids))\
                 .update({"status": "pending", "lifecycle_state": "CREATED", "included_in_run": 0, "queued": 1, "run_id": 0}, synchronize_session=False)
@@ -1129,6 +1281,8 @@ def _run_solver_job(run_id: int):
         print(traceback.format_exc())
 
     finally:
+        with _live_run_threads_lock:
+            _live_run_threads.pop(int(run_id), None)
         db.close()
 
 
@@ -1328,20 +1482,46 @@ def create_request_batch(db: Session, user: dict, items: list[dict]):
 
 
 def _start_live_solver_run(db: Session) -> int:
-    stale_cutoff = datetime.utcnow() - timedelta(minutes=30)
+    def _requeue_requests_for_failed_run(failed_run_id: int):
+        db.query(ResourceRequest)\
+            .filter(
+                ResourceRequest.run_id == int(failed_run_id),
+                ResourceRequest.status == "solving",
+            )\
+            .update(
+                {
+                    "status": "pending",
+                    "lifecycle_state": "CREATED",
+                    "included_in_run": 0,
+                    "queued": 1,
+                    "run_id": 0,
+                },
+                synchronize_session=False,
+            )
 
-    stale_running_rows = db.query(SolverRun)\
+    stale_ids = _mark_stale_live_runs_failed(db)
+    if stale_ids:
+        for stale_id in stale_ids:
+            _requeue_requests_for_failed_run(int(stale_id))
+        _commit_with_retry(db)
+
+    running_row = db.query(SolverRun)\
         .filter(
             SolverRun.mode == "live",
             SolverRun.status == "running",
-            SolverRun.started_at.isnot(None),
-            SolverRun.started_at < stale_cutoff,
         )\
-        .all()
-    if stale_running_rows:
-        for row in stale_running_rows:
-            row.status = "failed"
-        _commit_with_retry(db)
+        .order_by(SolverRun.id.desc())\
+        .first()
+    if running_row is not None:
+        with _live_run_threads_lock:
+            worker = _live_run_threads.get(int(running_row.id))
+            worker_alive = bool(worker is not None and worker.is_alive())
+        if not worker_alive:
+            running_row.status = "failed"
+            _requeue_requests_for_failed_run(int(running_row.id))
+            _commit_with_retry(db)
+        else:
+            return int(running_row.id)
 
     running_row = db.query(SolverRun)\
         .filter(
@@ -1364,6 +1544,8 @@ def _start_live_solver_run(db: Session) -> int:
     db.refresh(run)
 
     worker = threading.Thread(target=_run_solver_job, args=(int(run.id),), daemon=True)
+    with _live_run_threads_lock:
+        _live_run_threads[int(run.id)] = worker
     worker.start()
 
     return int(run.id)
@@ -1380,7 +1562,11 @@ def trigger_live_solver_run(db: Session) -> int:
 def get_requests_for_district(db, district_code):
     rows = db.query(ResourceRequest)\
         .filter(ResourceRequest.district_code == district_code)\
-        .order_by(ResourceRequest.created_at.desc())\
+        .order_by(
+            func.coalesce(ResourceRequest.run_id, 0).desc(),
+            ResourceRequest.created_at.desc(),
+            ResourceRequest.id.desc(),
+        )\
         .all()
 
     _refresh_request_statuses_for_latest_live_run(db)
@@ -1390,7 +1576,11 @@ def get_requests_for_district(db, district_code):
 def get_requests_for_state(db: Session, state_code: str):
     rows = db.query(ResourceRequest)\
         .filter(ResourceRequest.state_code == state_code)\
-        .order_by(ResourceRequest.created_at.desc())\
+        .order_by(
+            func.coalesce(ResourceRequest.run_id, 0).desc(),
+            ResourceRequest.created_at.desc(),
+            ResourceRequest.id.desc(),
+        )\
         .all()
 
     _refresh_request_statuses_for_latest_live_run(db)
@@ -1399,7 +1589,11 @@ def get_requests_for_state(db: Session, state_code: str):
 
 def get_all_requests(db: Session):
     rows = db.query(ResourceRequest)\
-        .order_by(ResourceRequest.created_at.desc())\
+        .order_by(
+            func.coalesce(ResourceRequest.run_id, 0).desc(),
+            ResourceRequest.created_at.desc(),
+            ResourceRequest.id.desc(),
+        )\
         .all()
 
     _refresh_request_statuses_for_latest_live_run(db)
@@ -1877,6 +2071,8 @@ def resolve_national_escalation(db: Session, request_id: int, decision: str, not
 
 
 def _refresh_request_statuses_for_latest_live_run(db: Session, target_request_ids: list[int] | None = None):
+    _mark_stale_live_runs_failed(db)
+
     req_query = db.query(ResourceRequest)
     if target_request_ids:
         req_query = req_query.filter(ResourceRequest.id.in_(target_request_ids))
@@ -1952,7 +2148,23 @@ def _refresh_request_statuses_for_latest_live_run(db: Session, target_request_id
 
     for slot, reqs in by_slot.items():
         run_id, district_code, resource_id, time = slot
-        run_state = str(run_status.get(int(run_id), ""))
+        run_state = str(run_status.get(int(run_id), "")).lower()
+        if run_state in {"failed", "failed_reconciliation"}:
+            for req in reqs:
+                if req.status != "failed":
+                    req.status = "failed"
+                    changed = True
+                if str(getattr(req, "lifecycle_state", "") or "") != "FAILED":
+                    req.lifecycle_state = "FAILED"
+                    changed = True
+                if int(req.included_in_run or 0) != 1:
+                    req.included_in_run = 1
+                    changed = True
+                if int(req.queued or 0) != 1:
+                    req.queued = 1
+                    changed = True
+            continue
+
         if run_state != "completed":
             for req in reqs:
                 if req.status != "solving":
@@ -1982,22 +2194,44 @@ def _refresh_request_statuses_for_latest_live_run(db: Session, target_request_id
 
             current_status = str(req.status or "").lower()
 
-            if allocated_share >= requested_qty - 1e-9:
+            eps = max(float(REQUEST_STATUS_EPS), abs(float(requested_qty)) * 1e-9)
+
+            if allocated_share >= requested_qty - eps:
                 target = "allocated"
-            elif allocated_share > 1e-9:
+                allocated_share = requested_qty
+                unmet_share = 0.0
+            elif allocated_share > eps:
                 target = "partial"
-            elif unmet_share > 1e-9:
+            elif unmet_share > eps:
                 target = "unmet"
             else:
-                target = "failed"
+                # For completed runs, unresolved positive demand should be visible as unmet,
+                # not failed, even if ingest dropped slot rows.
+                target = "unmet"
+                unmet_share = max(unmet_share, max(0.0, requested_qty - allocated_share))
 
-            if current_status == "escalated_national":
+            remaining = max(0.0, float(requested_qty - allocated_share))
+            if current_status == "escalated_national" and remaining > eps:
                 target = "escalated_national"
             elif current_status == "escalated_state" and target in {"partial", "unmet"}:
                 target = "escalated_state"
 
             if req.status != target:
                 req.status = target
+                changed = True
+
+            desired_allocated = max(0.0, float(allocated_share or 0.0))
+            desired_unmet = max(0.0, float(unmet_share or 0.0))
+            desired_final = desired_allocated + desired_unmet
+
+            if abs(float(req.allocated_quantity or 0.0) - desired_allocated) > 1e-6:
+                req.allocated_quantity = desired_allocated
+                changed = True
+            if abs(float(req.unmet_quantity or 0.0) - desired_unmet) > 1e-6:
+                req.unmet_quantity = desired_unmet
+                changed = True
+            if abs(float(req.final_demand_quantity or 0.0) - desired_final) > 1e-6:
+                req.final_demand_quantity = desired_final
                 changed = True
 
             lifecycle_target = _lifecycle_for_status(target)

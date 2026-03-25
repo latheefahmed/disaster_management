@@ -14,3 +14,6 @@ class ScenarioRequest(Base):
     resource_id = Column(String, nullable=False)
     time = Column(Integer, nullable=False)
     quantity = Column(Float, nullable=False)
+    priority = Column(Float, nullable=False, default=1.0)
+    urgency = Column(Float, nullable=False, default=1.0)
+    time_index = Column(Float, nullable=False, default=1.0)

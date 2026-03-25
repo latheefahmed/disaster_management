@@ -40,7 +40,10 @@ def add_scenario_request(db: Session, scenario_id: int, data: dict):
         state_code=data["state_code"],
         resource_id=data["resource_id"],
         time=int(data["time"]),
-        quantity=float(data["quantity"])
+        quantity=float(data["quantity"]),
+        priority=float(data.get("priority", 1.0) or 1.0),
+        urgency=float(data.get("urgency", 1.0) or 1.0),
+        time_index=float(data.get("time_index", 1.0) or 1.0),
     )
     db.add(row)
     db.commit()
@@ -60,6 +63,9 @@ def add_scenario_demand_batch(db: Session, scenario_id: int, rows: list[dict]):
             resource_id=str(data["resource_id"]),
             time=int(data["time"]),
             quantity=float(data["quantity"]),
+            priority=float(data.get("priority", 1.0) or 1.0),
+            urgency=float(data.get("urgency", 1.0) or 1.0),
+            time_index=float(data.get("time_index", 1.0) or 1.0),
         ))
 
     db.bulk_save_objects(objects)
@@ -220,7 +226,7 @@ def get_scenario_run_summary(db: Session, scenario_id: int, run_id: int):
         "neighbor_offers_created": 0,
         "neighbor_offers_accepted": 0,
         "neighbor_accepted_quantity": 0.0,
-        "mode": ("live_auto_chain" if str(run.mode or "").lower() == "live" else "scenario_no_live_auto_chain"),
+        "mode": ("scenario_auto_chain" if str(run.mode or "").lower() == "scenario" else "governed_chain"),
     }
 
     for row in escalation_rows:
@@ -228,6 +234,9 @@ def get_scenario_run_summary(db: Session, scenario_id: int, run_id: int):
         if int(payload.get("solver_run_id") or -1) != int(run_id):
             continue
         escalation_summary["events_found"] += 1
+        payload_mode = str(payload.get("mode") or "").strip().lower()
+        if payload_mode in {"scenario_auto_chain", "governed_chain"}:
+            escalation_summary["mode"] = payload_mode
         if str(row.event_type) == "AUTO_ESCALATED_TO_STATE_MARKET":
             escalation_summary["state_marked"] += int(payload.get("requests_marked") or 0)
         elif str(row.event_type) == "AUTO_ESCALATED_TO_NATIONAL":
@@ -236,6 +245,28 @@ def get_scenario_run_summary(db: Session, scenario_id: int, run_id: int):
             escalation_summary["neighbor_offers_created"] += int(payload.get("offers_created") or 0)
             escalation_summary["neighbor_offers_accepted"] += int(payload.get("offers_accepted") or 0)
             escalation_summary["neighbor_accepted_quantity"] += float(payload.get("accepted_quantity") or 0.0)
+
+    if str(run.mode or "").lower() == "scenario" and int(escalation_summary.get("events_found") or 0) > 0:
+        escalation_summary["mode"] = "scenario_auto_chain"
+
+    def _scope_key(raw_scope: str | None, raw_level: str | None) -> str:
+        scope = str(raw_scope or "").strip().lower()
+        level = str(raw_level or "district").strip().lower()
+        if scope == "neighbor_state":
+            return "neighbor_state"
+        if scope == "state" or level == "state":
+            return "state"
+        if scope == "national" or level == "national":
+            return "national"
+        return "district"
+
+    def _blank_scope_allocations() -> dict[str, float]:
+        return {
+            "district": 0.0,
+            "state": 0.0,
+            "neighbor_state": 0.0,
+            "national": 0.0,
+        }
 
     if getattr(run, "summary_snapshot_json", None):
         try:
@@ -251,17 +282,68 @@ def get_scenario_run_summary(db: Session, scenario_id: int, run_id: int):
                     escalation_summary["neighbor_offers_accepted"] = max(1, int(escalation_summary.get("neighbor_offers_accepted") or 0))
                     escalation_summary["neighbor_accepted_quantity"] = float(round(neighbor_alloc_qty, 2))
 
+                alloc_details_rows = list(snap.get("allocation_details") or [])
                 districts = sorted({str(r.get("district_code") or "") for r in national_rows if str(r.get("district_code") or "")})
                 district_breakdown = []
                 for district in districts:
-                    d_alloc = sum(float(r.get("allocated_quantity") or 0.0) for r in national_rows if str(r.get("district_code") or "") == district)
-                    d_unmet = sum(float(r.get("unmet_quantity") or 0.0) for r in national_rows if str(r.get("district_code") or "") == district)
+                    district_rows = [r for r in national_rows if str(r.get("district_code") or "") == district]
+                    d_alloc = sum(float(r.get("allocated_quantity") or 0.0) for r in district_rows)
+                    d_unmet = sum(float(r.get("unmet_quantity") or 0.0) for r in district_rows)
+                    d_scope_alloc = _blank_scope_allocations()
+                    district_scope_rows = db.query(
+                        func.coalesce(Allocation.allocation_source_scope, "").label("source_scope"),
+                        func.coalesce(Allocation.supply_level, "district").label("supply_level"),
+                        func.coalesce(func.sum(Allocation.allocated_quantity), 0.0).label("quantity"),
+                    ).filter(
+                        Allocation.solver_run_id == run_id,
+                        Allocation.is_unmet == False,
+                        Allocation.district_code == district,
+                    ).group_by(
+                        Allocation.allocation_source_scope,
+                        Allocation.supply_level,
+                    ).all()
+
+                    if district_scope_rows:
+                        for r in district_scope_rows:
+                            qty = float(r.quantity or 0.0)
+                            if qty <= 1e-9:
+                                continue
+                            key = _scope_key(str(r.source_scope or ""), str(r.supply_level or "district"))
+                            d_scope_alloc[key] += qty
+                    else:
+                        district_alloc_detail_rows = [r for r in alloc_details_rows if str(r.get("district_code") or "") == district]
+                        if district_alloc_detail_rows:
+                            for r in district_alloc_detail_rows:
+                                qty = float(r.get("allocated_quantity") or 0.0)
+                                if qty <= 1e-9:
+                                    continue
+                                key = _scope_key(
+                                    str(r.get("allocation_source_scope") or ""),
+                                    str(r.get("source_level") or str(r.get("supply_level") or "district")),
+                                )
+                                d_scope_alloc[key] += qty
+                        else:
+                            for r in district_rows:
+                                qty = float(r.get("allocated_quantity") or 0.0)
+                                if qty <= 1e-9:
+                                    continue
+                                key = _scope_key(
+                                    str(r.get("allocation_source_scope") or ""),
+                                    str(r.get("supply_level") or "district"),
+                                )
+                                d_scope_alloc[key] += qty
+                    d_scope_total = float(sum(d_scope_alloc.values()))
                     district_breakdown.append(
                         {
                             "district_code": district,
                             "allocated_quantity": d_alloc,
                             "unmet_quantity": d_unmet,
                             "met": d_unmet <= 1e-9,
+                            "source_scope_allocations": {k: float(v) for k, v in d_scope_alloc.items()},
+                            "source_scope_percentages": {
+                                k: float((v / d_scope_total) if d_scope_total > 1e-9 else 0.0)
+                                for k, v in d_scope_alloc.items()
+                            },
                         }
                     )
 
@@ -281,6 +363,14 @@ def get_scenario_run_summary(db: Session, scenario_id: int, run_id: int):
                         "unmet_rows": len([r for r in national_rows if float(r.get("unmet_quantity") or 0.0) > 1e-9]),
                     },
                     "district_breakdown": district_breakdown,
+                    "district_source_scope_breakdown": [
+                        {
+                            "district_code": str(item.get("district_code") or ""),
+                            "allocations": dict(item.get("source_scope_allocations") or {}),
+                            "percentages": dict(item.get("source_scope_percentages") or {}),
+                        }
+                        for item in district_breakdown
+                    ],
                     "source_scope_breakdown": {
                         "allocations": {
                             "district": float(source_scope.get("district") or 0.0),
@@ -382,9 +472,13 @@ def get_scenario_run_summary(db: Session, scenario_id: int, run_id: int):
     by_state_unmet: dict[str, float] = defaultdict(float)
     by_time_alloc: dict[int, float] = defaultdict(float)
     by_time_unmet: dict[int, float] = defaultdict(float)
+    by_district_scope_alloc: dict[str, dict[str, float]] = defaultdict(_blank_scope_allocations)
 
     for row in alloc_rows:
         state_code = str(row.state_code or "")
+        district_code = str(row.district_code or "")
+        scope_key = _scope_key(str(row.source_scope or ""), str(row.supply_level or "district"))
+        by_district_scope_alloc[district_code][scope_key] += float(row.quantity or 0.0)
         by_state_alloc[state_code] += float(row.quantity or 0.0)
         by_time_alloc[int(row.time)] += float(row.quantity or 0.0)
 
@@ -507,6 +601,31 @@ def get_scenario_run_summary(db: Session, scenario_id: int, run_id: int):
         for r in unmet_rows
     ]
 
+    district_breakdown = []
+    for d in districts_in_run:
+        d_scope_alloc = dict(by_district_scope_alloc.get(d) or _blank_scope_allocations())
+        d_scope_total = float(sum(d_scope_alloc.values()))
+        district_breakdown.append(
+            {
+                "district_code": d,
+                "allocated_quantity": float(by_district_alloc.get(d, 0.0)),
+                "unmet_quantity": float(by_district_unmet.get(d, 0.0)),
+                "met": by_district_unmet.get(d, 0.0) <= 1e-9,
+                "source_scope_allocations": {
+                    "district": float(d_scope_alloc.get("district") or 0.0),
+                    "state": float(d_scope_alloc.get("state") or 0.0),
+                    "neighbor_state": float(d_scope_alloc.get("neighbor_state") or 0.0),
+                    "national": float(d_scope_alloc.get("national") or 0.0),
+                },
+                "source_scope_percentages": {
+                    "district": float((float(d_scope_alloc.get("district") or 0.0) / d_scope_total) if d_scope_total > 1e-9 else 0.0),
+                    "state": float((float(d_scope_alloc.get("state") or 0.0) / d_scope_total) if d_scope_total > 1e-9 else 0.0),
+                    "neighbor_state": float((float(d_scope_alloc.get("neighbor_state") or 0.0) / d_scope_total) if d_scope_total > 1e-9 else 0.0),
+                    "national": float((float(d_scope_alloc.get("national") or 0.0) / d_scope_total) if d_scope_total > 1e-9 else 0.0),
+                },
+            }
+        )
+
     return {
         "run_id": run.id,
         "scenario_id": scenario_id,
@@ -522,14 +641,14 @@ def get_scenario_run_summary(db: Session, scenario_id: int, run_id: int):
             "allocation_rows": len(alloc_details),
             "unmet_rows": len(unmet_details),
         },
-        "district_breakdown": [
+        "district_breakdown": district_breakdown,
+        "district_source_scope_breakdown": [
             {
-                "district_code": d,
-                "allocated_quantity": float(by_district_alloc.get(d, 0.0)),
-                "unmet_quantity": float(by_district_unmet.get(d, 0.0)),
-                "met": by_district_unmet.get(d, 0.0) <= 1e-9,
+                "district_code": str(item.get("district_code") or ""),
+                "allocations": dict(item.get("source_scope_allocations") or {}),
+                "percentages": dict(item.get("source_scope_percentages") or {}),
             }
-            for d in districts_in_run
+            for item in district_breakdown
         ],
         "source_scope_breakdown": {
             "allocations": {

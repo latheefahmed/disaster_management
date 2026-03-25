@@ -1,0 +1,124 @@
+{
+  "district_code": "603",
+  "time_slot": 0,
+  "results": [
+    {
+      "label": "interstate_target_R33_2500",
+      "resource_id": "R33",
+      "quantity": 2500.0,
+      "request_id": 3741,
+      "solver_run_id": 1931,
+      "run_status": "completed",
+      "request_status": "allocated",
+      "present_scopes": [
+        "district",
+        "national",
+        "neighbor_state",
+        "state"
+      ],
+      "scope_totals": {
+        "district": 24.0,
+        "state": 1609.8145752600005,
+        "neighbor_state": 795.2293530899998,
+        "national": 70.95607165
+      },
+      "neighbor_state_count": 5,
+      "neighbor_states": [
+        "3",
+        "5",
+        "6",
+        "8",
+        "9"
+      ],
+      "unmet": 0.0,
+      "returned_total": 2500.0
+    },
+    {
+      "label": "national_target_R22_100000",
+      "resource_id": "R22",
+      "quantity": 100000.0,
+      "request_id": 3742,
+      "solver_run_id": 1932,
+      "run_status": "completed",
+      "request_status": "escalated_state",
+      "present_scopes": [
+        "district",
+        "national",
+        "neighbor_state",
+        "state"
+      ],
+      "scope_totals": {
+        "district": 3168.0002000000095,
+        "state": 1600.0000000000002,
+        "neighbor_state": 2248.0768000000003,
+        "national": 538.056
+      },
+      "neighbor_state_count": 5,
+      "neighbor_states": [
+        "16",
+        "17",
+        "2",
+        "5",
+        "7"
+      ],
+      "unmet": 92445.867,
+      "returned_total": 7554.0
+    },
+    {
+      "label": "national_alt_R33_40000",
+      "resource_id": "R33",
+      "quantity": 40000.0,
+      "request_id": 3743,
+      "solver_run_id": 1933,
+      "run_status": "completed",
+      "request_status": "allocated",
+      "present_scopes": [
+        "district",
+        "national",
+        "state"
+      ],
+      "scope_totals": {
+        "district": 24.0,
+        "state": 3038.2602795400003,
+        "neighbor_state": 0.0,
+        "national": 36937.73972046
+      },
+      "neighbor_state_count": 0,
+      "neighbor_states": [],
+      "unmet": 0.0,
+      "returned_total": 40000.0
+    }
+  ],
+  "interstate_case": null,
+  "national_case": {
+    "label": "interstate_target_R33_2500",
+    "resource_id": "R33",
+    "quantity": 2500.0,
+    "request_id": 3741,
+    "solver_run_id": 1931,
+    "run_status": "completed",
+    "request_status": "allocated",
+    "present_scopes": [
+      "district",
+      "national",
+      "neighbor_state",
+      "state"
+    ],
+    "scope_totals": {
+      "district": 24.0,
+      "state": 1609.8145752600005,
+      "neighbor_state": 795.2293530899998,
+      "national": 70.95607165
+    },
+    "neighbor_state_count": 5,
+    "neighbor_states": [
+      "3",
+      "5",
+      "6",
+      "8",
+      "9"
+    ],
+    "unmet": 0.0,
+    "returned_total": 2500.0
+  }
+}

@@ -135,7 +135,17 @@ export default function StateOverview() {
       },
     })
 
-    if (!res.ok) throw new Error(`Request failed: ${res.status}`)
+    if (!res.ok) {
+      let msg = `Request failed: ${res.status}`
+      try {
+        const errJson = await res.json()
+        if (errJson.detail) msg = typeof errJson.detail === 'string' ? errJson.detail : JSON.stringify(errJson.detail)
+        else if (errJson.message) msg = errJson.message
+      } catch (e) {
+        // ignore parse error for fallback
+      }
+      throw new Error(msg)
+    }
     return await res.json()
   }
 
@@ -272,6 +282,10 @@ export default function StateOverview() {
         method: 'POST',
         body: JSON.stringify({ request_id: row.id, quantity_offered: qty }),
       })
+      setLoadError('')
+      await loadData()
+    } catch (e: any) {
+      setLoadError(e.message)
       await loadData()
     } finally {
       setOfferBusyId(null)
@@ -310,7 +324,7 @@ export default function StateOverview() {
               disabled={offerBusyId === mutualAidMarket[0].id}
               onClick={() => submitMutualAidOffer(mutualAidMarket[0])}
             >
-              {offerBusyId === mutualAidMarket[0].id ? 'Offering...' : 'Offer Mutual Aid'}
+              {offerBusyId === mutualAidMarket[0].id ? 'Submitting...' : 'Provide Manual Aid'}
             </button>
           )}
         </div>
@@ -413,7 +427,7 @@ export default function StateOverview() {
               { key: 'status', label: 'Status' },
               {
                 key: 'offer',
-                label: 'Offer',
+                label: 'Manual Aid',
                 sortable: false,
                 filterable: false,
                 render: (row) => (
@@ -422,7 +436,7 @@ export default function StateOverview() {
                     disabled={offerBusyId === row.id}
                     onClick={() => submitMutualAidOffer(row)}
                   >
-                    {offerBusyId === row.id ? 'Offering...' : 'Offer Mutual Aid'}
+                    {offerBusyId === row.id ? 'Submitting...' : 'Provide Manual Aid'}
                   </button>
                 ),
               },

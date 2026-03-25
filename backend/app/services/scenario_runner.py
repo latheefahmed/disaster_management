@@ -31,6 +31,8 @@ from app.services.mutual_aid_service import (
     build_state_stock_with_confirmed_transfers,
     mark_confirmed_transfers_consumed,
     apply_transfer_provenance_to_run,
+    create_requests_from_unmet_allocations,
+    auto_progress_mutual_aid_for_solver_run,
 )
 
 
@@ -113,10 +115,22 @@ def _normalize_demand_frame(df: pd.DataFrame, value_col: str = "demand") -> pd.D
     work["time"] = work["time"].astype(int)
     work["demand"] = work["demand"].astype(float)
 
-    work = work.groupby(
-        ["district_code", "resource_id", "time"],
-        as_index=False
-    )["demand"].sum()
+    has_priority = "priority" in work.columns
+    has_urgency = "urgency" in work.columns
+    has_time_index = "time_index" in work.columns
+
+    agg_spec: dict[str, str] = {"demand": "sum"}
+    if has_priority:
+        work["priority"] = work["priority"].astype(float)
+        agg_spec["priority"] = "mean"
+    if has_urgency:
+        work["urgency"] = work["urgency"].astype(float)
+        agg_spec["urgency"] = "mean"
+    if has_time_index:
+        work["time_index"] = work["time_index"].astype(float)
+        agg_spec["time_index"] = "mean"
+
+    work = work.groupby(["district_code", "resource_id", "time"], as_index=False).agg(agg_spec)
 
     return work
 
@@ -143,6 +157,9 @@ def _assemble_final_demand(
 
     base = _normalize_demand_frame(baseline_df)
     human = _normalize_demand_frame(human_df)
+
+    human_signal_cols = [c for c in ["district_code", "resource_id", "time", "priority", "urgency", "time_index"] if c in human.columns]
+    human_signals = human[human_signal_cols].copy() if human_signal_cols else pd.DataFrame(columns=["district_code", "resource_id", "time"])
 
     merged = base.merge(
         human,
@@ -179,10 +196,32 @@ def _assemble_final_demand(
 
     final_df = merged[["district_code", "resource_id", "time", "demand", "demand_mode", "source_mix"]].copy()
 
+    if not human_signals.empty:
+        final_df = final_df.merge(
+            human_signals,
+            on=["district_code", "resource_id", "time"],
+            how="left",
+        )
+    if "priority" not in final_df.columns:
+        final_df["priority"] = 1.0
+    if "urgency" not in final_df.columns:
+        final_df["urgency"] = 1.0
+    if "time_index" not in final_df.columns:
+        final_df["time_index"] = 1.0
+
+    final_df["priority"] = final_df["priority"].fillna(1.0).astype(float)
+    final_df["urgency"] = final_df["urgency"].fillna(1.0).astype(float)
+    final_df["time_index"] = final_df["time_index"].fillna(1.0).astype(float)
+
     final_df = final_df.groupby(
         ["district_code", "resource_id", "time", "demand_mode", "source_mix"],
         as_index=False
-    )["demand"].sum()
+    ).agg({
+        "demand": "sum",
+        "priority": "mean",
+        "urgency": "mean",
+        "time_index": "mean",
+    })
 
     _validate_demand(final_df)
     if include_model_ids:
@@ -200,7 +239,10 @@ def _build_scenario_human_signal(db: Session, scenario_id: int) -> pd.DataFrame:
         "district_code": r.district_code,
         "resource_id": r.resource_id,
         "time": r.time,
-        "demand": r.quantity
+        "demand": r.quantity,
+        "priority": float(getattr(r, "priority", 1.0) or 1.0),
+        "urgency": float(getattr(r, "urgency", 1.0) or 1.0),
+        "time_index": float(getattr(r, "time_index", 1.0) or 1.0),
     } for r in rows])
 
     return _normalize_demand_frame(raw)
@@ -640,7 +682,9 @@ def run_scenario(db: Session, scenario_id: int, scope_mode: str = "full"):
     )
 
     path.parent.mkdir(parents=True, exist_ok=True)
-    final_df[["district_code", "resource_id", "time", "demand"]].to_csv(path, index=False)
+    solver_cols = ["district_code", "resource_id", "time", "demand", "priority", "urgency", "time_index"]
+    write_cols = [c for c in solver_cols if c in final_df.columns]
+    final_df[write_cols].to_csv(path, index=False)
 
     state_stock_override = _build_state_stock_override_file(db, scenario_id)
     national_stock_override = _build_national_stock_override_file(db, scenario_id)
@@ -720,6 +764,10 @@ def run_scenario(db: Session, scenario_id: int, scope_mode: str = "full"):
             mark_confirmed_transfers_consumed(db, solver_run_id=int(run.id))
             stage = "apply_transfer_provenance"
             apply_transfer_provenance_to_run(db, solver_run_id=int(run.id))
+            stage = "create_mutual_aid_requests_from_unmet"
+            create_requests_from_unmet_allocations(db, solver_run_id=int(run.id))
+            stage = "auto_progress_escalation_chain"
+            auto_progress_mutual_aid_for_solver_run(db, solver_run_id=int(run.id))
 
         stage = "capture_demand_learning"
         capture_demand_learning_events(

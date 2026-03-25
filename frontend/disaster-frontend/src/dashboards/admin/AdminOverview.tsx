@@ -159,6 +159,10 @@ type RandomizerPreview = {
   latest_live_run_id?: number | null
   district_count: number
   resource_count: number
+  district_count_requested?: number
+  resource_count_requested?: number
+  district_selection_mode?: 'explicit' | 'random_count'
+  resource_selection_mode?: 'explicit' | 'random_count'
   row_count: number
   total_quantity: number
   baseline_total_quantity: number
@@ -168,6 +172,7 @@ type RandomizerPreview = {
   demand_supply_ratio?: number | null
   expected_shortage_estimate?: number
   selected_districts?: string[]
+  selected_states?: string[]
   selected_resources?: string[]
   avg_available_stock?: number
   avg_priority?: number
@@ -267,12 +272,12 @@ export default function AdminOverview({ initialAdminView = 'system' }: AdminOver
   const [stateStockDraft, setStateStockDraft] = useState({
     state_code: '',
     resource_id: '',
-    quantity: 0,
+    quantity: '',
   })
 
   const [nationalStockDraft, setNationalStockDraft] = useState({
     resource_id: '',
-    quantity: 0,
+    quantity: '',
   })
   const [selectedRunSummary, setSelectedRunSummary] = useState<ScenarioRunSummary | null>(null)
   const [agentRows, setAgentRows] = useState<AgentRecommendationRow[]>([])
@@ -283,6 +288,8 @@ export default function AdminOverview({ initialAdminView = 'system' }: AdminOver
   const [randomSeed, setRandomSeed] = useState<number | ''>(() => Number(`${Date.now()}`.slice(-8)))
   const [randomStressMode, setRandomStressMode] = useState<boolean>(false)
   const [randomStockAwareDistribution, setRandomStockAwareDistribution] = useState<boolean>(false)
+  const [randomDistrictCount, setRandomDistrictCount] = useState<number | ''>(8)
+  const [randomResourceCount, setRandomResourceCount] = useState<number | ''>(8)
   const [randomizerPreview, setRandomizerPreview] = useState<RandomizerPreview | null>(null)
   const [revertVerify, setRevertVerify] = useState<RevertVerify | null>(null)
   const [incidentData, setIncidentData] = useState<ScenarioIncidentResponse | null>(null)
@@ -401,13 +408,19 @@ export default function AdminOverview({ initialAdminView = 'system' }: AdminOver
 
   const isBlockingOverlayVisible = isRunningScenario || isReverting
 
+  const normalizeHighDisplayQty = (value: unknown) => {
+    const qty = Number(value || 0)
+    if (!Number.isFinite(qty)) return 0
+    return Math.abs(qty) > 100000 ? (qty / 1000) : qty
+  }
+
   const sharedScope = useMemo(() => {
     const alloc = selectedRunSummary?.source_scope_breakdown?.allocations
     return {
-      district: Number(alloc?.district || 0),
-      state: Number(alloc?.state || 0),
-      neighbor: Number(alloc?.neighbor_state || 0),
-      national: Number(alloc?.national || 0),
+      district: normalizeHighDisplayQty(alloc?.district || 0),
+      state: normalizeHighDisplayQty(alloc?.state || 0),
+      neighbor: normalizeHighDisplayQty(alloc?.neighbor_state || 0),
+      national: normalizeHighDisplayQty(alloc?.national || 0),
     }
   }, [selectedRunSummary])
 
@@ -435,6 +448,25 @@ export default function AdminOverview({ initialAdminView = 'system' }: AdminOver
     () => resources.filter(r => selectedResourceIds.includes(String(r.resource_id))),
     [resources, selectedResourceIds]
   )
+
+  const selectedStateDistrictMap = useMemo(() => {
+    const out: Record<string, string[]> = {}
+    for (const row of selectedDistrictRows) {
+      const stateCode = String(row.state_code || '').trim()
+      const districtCode = String(row.district_code || '').trim()
+      if (!stateCode || !districtCode) continue
+      if (!out[stateCode]) out[stateCode] = []
+      if (!out[stateCode].includes(districtCode)) out[stateCode].push(districtCode)
+    }
+    return out
+  }, [selectedDistrictRows])
+
+  const selectedStateCodesForPayload = useMemo(() => {
+    const set = new Set<string>()
+    Object.keys(selectedStateDistrictMap).forEach(code => set.add(String(code)))
+    if (selectedStateCode) set.add(String(selectedStateCode))
+    return Array.from(set)
+  }, [selectedStateDistrictMap, selectedStateCode])
 
   useEffect(() => {
     const nextMap: Record<string, number> = {}
@@ -520,12 +552,20 @@ export default function AdminOverview({ initialAdminView = 'system' }: AdminOver
 
   async function addStateStock() {
     if (!token || !selectedScenarioId) return
+    const quantity = Number(stateStockDraft.quantity)
+    if (!Number.isFinite(quantity) || quantity <= 0) {
+      setError('State stock quantity must be greater than 0.')
+      return
+    }
     setBusy(true)
     setError('')
     try {
       await apiFetch(`${BACKEND_PATHS.adminScenarios}/${selectedScenarioId}/set-state-stock`, {
         method: 'POST',
-        body: JSON.stringify(stateStockDraft),
+        body: JSON.stringify({
+          ...stateStockDraft,
+          quantity,
+        }),
       })
       await reloadScenarios()
     } catch (e) {
@@ -537,12 +577,20 @@ export default function AdminOverview({ initialAdminView = 'system' }: AdminOver
 
   async function addNationalStock() {
     if (!token || !selectedScenarioId) return
+    const quantity = Number(nationalStockDraft.quantity)
+    if (!Number.isFinite(quantity) || quantity <= 0) {
+      setError('National stock quantity must be greater than 0.')
+      return
+    }
     setBusy(true)
     setError('')
     try {
       await apiFetch(`${BACKEND_PATHS.adminScenarios}/${selectedScenarioId}/set-national-stock`, {
         method: 'POST',
-        body: JSON.stringify(nationalStockDraft),
+        body: JSON.stringify({
+          ...nationalStockDraft,
+          quantity,
+        }),
       })
       await reloadScenarios()
     } catch (e) {
@@ -636,8 +684,11 @@ export default function AdminOverview({ initialAdminView = 'system' }: AdminOver
       seed: (randomSeed === '' ? undefined : Number(randomSeed)),
       time_horizon: clampPositiveInt(timeHorizon, 1),
       stress_mode: randomStressMode,
-      state_codes: selectedStateCode ? [selectedStateCode] : [],
+      district_count: clampPositiveInt(randomDistrictCount, 8),
+      resource_count: clampPositiveInt(randomResourceCount, 8),
+      state_codes: selectedStateCodesForPayload,
       district_codes: selectedDistrictCodes,
+      state_district_map: selectedStateDistrictMap,
       resource_ids: selectedResourceIds,
       quantity_mode: randomStockAwareDistribution ? 'stock_aware' : 'fixed',
       stock_aware_distribution: randomStockAwareDistribution,
@@ -659,8 +710,9 @@ export default function AdminOverview({ initialAdminView = 'system' }: AdminOver
       setRandomizerPreview(preview)
       setToast({ kind: 'info', message: `Preview generated: ${Number(preview?.row_count || 0)} rows.` })
     } catch (e) {
-      setError(e instanceof Error ? e.message : 'Failed to preview randomizer')
-      setToast({ kind: 'error', message: 'Randomizer preview failed.' })
+      const message = e instanceof Error ? e.message : 'Failed to preview randomizer'
+      setError(message)
+      setToast({ kind: 'error', message: `Randomizer preview failed: ${message}` })
     } finally {
       setBusy(false)
       setIsPreviewing(false)
@@ -688,8 +740,9 @@ export default function AdminOverview({ initialAdminView = 'system' }: AdminOver
       setRandomizerPreview(preview)
       setToast({ kind: 'success', message: 'Randomizer applied successfully.' })
     } catch (e) {
-      setError(e instanceof Error ? e.message : 'Failed to apply randomizer')
-      setToast({ kind: 'error', message: 'Randomizer apply failed.' })
+      const message = e instanceof Error ? e.message : 'Failed to apply randomizer'
+      setError(message)
+      setToast({ kind: 'error', message: `Randomizer apply failed: ${message}` })
     } finally {
       setBusy(false)
       setIsApplyingRandomizer(false)
@@ -822,6 +875,7 @@ export default function AdminOverview({ initialAdminView = 'system' }: AdminOver
           <div>Neighbor Scope: {sharedScope.neighbor.toFixed(2)}</div>
           <div>National Scope: {sharedScope.national.toFixed(2)}</div>
         </div>
+        <div className="mt-2 text-slate-600">Display rule: values above 100,000 are shown as value/1000.</div>
         <div className={`mt-2 ${sharedFlags.length > 0 ? 'text-amber-700' : 'text-emerald-700'}`}>
           Active Flags: {sharedFlags.length > 0 ? sharedFlags.join(', ') : 'none'}
         </div>
@@ -1114,7 +1168,7 @@ export default function AdminOverview({ initialAdminView = 'system' }: AdminOver
               Guided Randomizer is disabled while Manual mode is active.
             </div>
           )}
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-2 text-sm">
+          <div className="grid grid-cols-2 md:grid-cols-7 gap-2 text-sm">
             <label className="flex flex-col gap-1">
               <span className="text-xs">Demand Level</span>
               <select value={randomPreset} onChange={e => setRandomPreset(e.target.value as any)} className="border rounded px-2 py-1" disabled={modelingMode !== 'guided_random'}>
@@ -1135,6 +1189,34 @@ export default function AdminOverview({ initialAdminView = 'system' }: AdminOver
               <input type="checkbox" checked={randomStressMode} onChange={e => setRandomStressMode(e.target.checked)} disabled={modelingMode !== 'guided_random'} />
               <span className="text-xs">Stress mode</span>
             </label>
+            <label className="flex flex-col gap-1">
+              <span className="text-xs">Random District Count</span>
+              <input
+                type="number"
+                min={1}
+                value={randomDistrictCount}
+                onChange={e => setRandomDistrictCount(e.target.value === '' ? '' : clampPositiveInt(Number(e.target.value), 8))}
+                className="border rounded px-2 py-1"
+                disabled={modelingMode !== 'guided_random'}
+              />
+            </label>
+            <label className="flex flex-col gap-1">
+              <span className="text-xs">Random Resource Count</span>
+              <input
+                type="number"
+                min={1}
+                value={randomResourceCount}
+                onChange={e => setRandomResourceCount(e.target.value === '' ? '' : clampPositiveInt(Number(e.target.value), 8))}
+                className="border rounded px-2 py-1"
+                disabled={modelingMode !== 'guided_random'}
+              />
+            </label>
+          </div>
+          <div className="text-xs text-slate-600">
+            District selection rule: if districts are chosen in Hierarchical Selector, those exact districts are used; otherwise random districts are sampled using Random District Count (within selected state scope if a state is chosen).
+          </div>
+          <div className="text-xs text-slate-600">
+            Resource selection rule: if resources are checked in Resource Types, those exact resources are used; otherwise random resources are sampled using Random Resource Count.
           </div>
           <div className="flex flex-wrap gap-4 text-sm">
             <label className="flex items-center gap-2">
@@ -1171,7 +1253,9 @@ export default function AdminOverview({ initialAdminView = 'system' }: AdminOver
               <div>Total available supply={Number(randomizerPreview.total_available_supply || 0).toFixed(2)} | Total generated demand={Number(randomizerPreview.total_generated_demand || 0).toFixed(2)}</div>
               <div>Demand/Supply ratio={randomizerPreview.demand_supply_ratio ?? 'n/a'} | Expected shortage={Number(randomizerPreview.expected_shortage_estimate || 0).toFixed(2)} | Intensity ratio={Number(randomizerPreview.intensity_ratio || 0).toFixed(2)}</div>
               <div>Mode={randomizerPreview.quantity_mode || (randomStockAwareDistribution ? 'stock_aware' : 'fixed')} | Scope districts={randomizerPreview.district_count} | Scope resources={randomizerPreview.resource_count}</div>
+              <div>Selection mode: districts={randomizerPreview.district_selection_mode || 'n/a'} (requested={randomizerPreview.district_count_requested ?? 'n/a'}) | resources={randomizerPreview.resource_selection_mode || 'n/a'} (requested={randomizerPreview.resource_count_requested ?? 'n/a'})</div>
               <div>Selected districts={(randomizerPreview.selected_districts || []).join(', ') || '—'}</div>
+              <div>Selected states={(randomizerPreview.selected_states || []).join(', ') || '—'}</div>
               <div>Selected resources={(randomizerPreview.selected_resources || []).join(', ') || '—'}</div>
               <div>Stock-backed rows={Number(randomizerPreview.stock_backed_rows || 0)} | Zero-stock rows={Number(randomizerPreview.zero_stock_rows || 0)} | Avg available stock={Number(randomizerPreview.avg_available_stock || 0).toFixed(2)}</div>
               <div>Randomizer Priority/TimeIndex: avg_priority={Number(randomizerPreview.avg_priority || 0).toFixed(2)} avg_time_index={Number(randomizerPreview.avg_time_index || 0).toFixed(2)}</div>
@@ -1189,14 +1273,14 @@ export default function AdminOverview({ initialAdminView = 'system' }: AdminOver
             <h3 className="font-semibold">State Stock Override</h3>
             <input className="border rounded px-2 py-1 w-full" placeholder="state_code" value={stateStockDraft.state_code} onChange={e => setStateStockDraft({ ...stateStockDraft, state_code: e.target.value })} />
             <input className="border rounded px-2 py-1 w-full" placeholder="resource_id" value={stateStockDraft.resource_id} onChange={e => setStateStockDraft({ ...stateStockDraft, resource_id: e.target.value })} />
-            <input className="border rounded px-2 py-1 w-full" type="number" placeholder="quantity" value={stateStockDraft.quantity} onChange={e => setStateStockDraft({ ...stateStockDraft, quantity: Number(e.target.value) })} />
+            <input className="border rounded px-2 py-1 w-full" type="number" min={1} placeholder="quantity" value={stateStockDraft.quantity} onChange={e => setStateStockDraft({ ...stateStockDraft, quantity: e.target.value })} />
             <button disabled={!selectedScenarioId || busy} onClick={addStateStock} className="px-3 py-1 bg-slate-700 text-white rounded">Add State Stock</button>
           </div>
 
           <div className="border rounded p-3 space-y-2">
             <h3 className="font-semibold">National Stock Override</h3>
             <input className="border rounded px-2 py-1 w-full" placeholder="resource_id" value={nationalStockDraft.resource_id} onChange={e => setNationalStockDraft({ ...nationalStockDraft, resource_id: e.target.value })} />
-            <input className="border rounded px-2 py-1 w-full" type="number" placeholder="quantity" value={nationalStockDraft.quantity} onChange={e => setNationalStockDraft({ ...nationalStockDraft, quantity: Number(e.target.value) })} />
+            <input className="border rounded px-2 py-1 w-full" type="number" min={1} placeholder="quantity" value={nationalStockDraft.quantity} onChange={e => setNationalStockDraft({ ...nationalStockDraft, quantity: e.target.value })} />
             <button disabled={!selectedScenarioId || busy} onClick={addNationalStock} className="px-3 py-1 bg-slate-700 text-white rounded">Add National Stock</button>
           </div>
         </div>
@@ -1206,6 +1290,7 @@ export default function AdminOverview({ initialAdminView = 'system' }: AdminOver
           <div>Scenario Type: {scenarioType}</div>
           <div>Modeling Mode: {modelingMode === 'manual' ? 'Manual' : 'Guided Random'}</div>
           <div>State: {selectedStateCode || '—'}</div>
+          <div>State→District map: {Object.keys(selectedStateDistrictMap).length > 0 ? JSON.stringify(selectedStateDistrictMap) : '—'}</div>
           <div>Districts Selected: {selectedDistrictCodes.length}</div>
           <div>District IDs: {selectedDistrictCodes.length > 0 ? selectedDistrictCodes.slice(0, 12).join(', ') : '—'}</div>
           <div>Resources Selected: {selectedResourceRows.length}</div>
@@ -1317,7 +1402,7 @@ export default function AdminOverview({ initialAdminView = 'system' }: AdminOver
                       <td className="p-2">{Number(inc.unmet_quantity || 0).toFixed(2)}</td>
                       <td className="p-2">{inc.districts_unmet}</td>
                       <td className="p-2">{inc.time_service_early_avg == null ? 'n/a' : Number(inc.time_service_early_avg).toFixed(4)} / {inc.time_service_late_avg == null ? 'n/a' : Number(inc.time_service_late_avg).toFixed(4)}</td>
-                      <td className="p-2">{Number((inc.scope_allocations || {}).neighbor_state || 0).toFixed(2)}</td>
+                      <td className="p-2">{normalizeHighDisplayQty((inc.scope_allocations || {}).neighbor_state || 0).toFixed(2)}</td>
                       <td className="p-2">
                         <button className="px-2 py-1 rounded border" onClick={() => loadRunSummary(inc.run_id)}>
                           Inspect
@@ -1402,10 +1487,10 @@ export default function AdminOverview({ initialAdminView = 'system' }: AdminOver
               <div className="mt-3 border rounded p-2 bg-white">
                 <div className="font-semibold mb-1">Allocation Source Scope</div>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-2 text-xs">
-                  <div>District: {Number(selectedRunSummary.source_scope_breakdown.allocations.district || 0).toFixed(2)} ({Number((selectedRunSummary.source_scope_breakdown.percentages.district || 0) * 100).toFixed(1)}%)</div>
-                  <div>State: {Number(selectedRunSummary.source_scope_breakdown.allocations.state || 0).toFixed(2)} ({Number((selectedRunSummary.source_scope_breakdown.percentages.state || 0) * 100).toFixed(1)}%)</div>
-                  <div>Neighbor: {Number(selectedRunSummary.source_scope_breakdown.allocations.neighbor_state || 0).toFixed(2)} ({Number((selectedRunSummary.source_scope_breakdown.percentages.neighbor_state || 0) * 100).toFixed(1)}%)</div>
-                  <div>National: {Number(selectedRunSummary.source_scope_breakdown.allocations.national || 0).toFixed(2)} ({Number((selectedRunSummary.source_scope_breakdown.percentages.national || 0) * 100).toFixed(1)}%)</div>
+                  <div>District: {normalizeHighDisplayQty(selectedRunSummary.source_scope_breakdown.allocations.district || 0).toFixed(2)} ({Number((selectedRunSummary.source_scope_breakdown.percentages.district || 0) * 100).toFixed(1)}%)</div>
+                  <div>State: {normalizeHighDisplayQty(selectedRunSummary.source_scope_breakdown.allocations.state || 0).toFixed(2)} ({Number((selectedRunSummary.source_scope_breakdown.percentages.state || 0) * 100).toFixed(1)}%)</div>
+                  <div>Neighbor: {normalizeHighDisplayQty(selectedRunSummary.source_scope_breakdown.allocations.neighbor_state || 0).toFixed(2)} ({Number((selectedRunSummary.source_scope_breakdown.percentages.neighbor_state || 0) * 100).toFixed(1)}%)</div>
+                  <div>National: {normalizeHighDisplayQty(selectedRunSummary.source_scope_breakdown.allocations.national || 0).toFixed(2)} ({Number((selectedRunSummary.source_scope_breakdown.percentages.national || 0) * 100).toFixed(1)}%)</div>
                 </div>
                 <div className="mt-1 text-xs">
                   used_state_stock={selectedRunSummary.used_state_stock ? 'true' : 'false'} | used_national_stock={selectedRunSummary.used_national_stock ? 'true' : 'false'}

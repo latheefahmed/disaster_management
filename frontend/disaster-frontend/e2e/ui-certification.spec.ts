@@ -49,7 +49,7 @@ test('state can see mutual aid market and offer aid', async ({ page }) => {
     await expect(page.getByText(/State Overview/i)).toBeVisible()
     await expect(page.getByRole('heading', { name: 'Mutual Aid Market' })).toBeVisible()
 
-    const offerButton = page.getByRole('button', { name: 'Offer Mutual Aid' }).first()
+    const offerButton = page.getByRole('button', { name: 'Provide Manual Aid' }).first()
     await expect(offerButton).toBeVisible()
     await offerButton.click()
 

@@ -1,0 +1,14 @@
+{
+  "timestamp": "2026-03-04T16:49:01.420627Z",
+  "db": "C:\\Users\\LATHEEF\\Desktop\\disaster_management\\backend\\backend.db",
+  "backup": "C:\\Users\\LATHEEF\\Desktop\\disaster_management\\backend\\backend_pre_restore_pool_20260304_221857.db",
+  "latest_live_run_id": 1104,
+  "restored_up_to_run_id": 1103,
+  "reason": "historical_pool_restore_upto_1103",
+  "rows_considered": 109763,
+  "insert_rows": 8936,
+  "district_rows": 7913,
+  "state_rows": 967,
+  "national_rows": 56,
+  "total_restored_qty": 21907166.0
+}

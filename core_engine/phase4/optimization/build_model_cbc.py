@@ -186,7 +186,7 @@ def build_model_cbc(
     # 8. OBJECTIVE
     # --------------------------------------------------------
 
-    add_objective(model, x, u)
+    add_objective(model, x, u, demand_df=demand_df)
 
     print("MODEL_BUILD_SUMMARY", {
         "configured_horizon": int(configured_horizon),

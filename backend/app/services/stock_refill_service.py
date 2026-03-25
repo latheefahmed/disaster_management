@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import csv
+import os
 from collections import defaultdict
 from pathlib import Path
 
@@ -11,6 +12,7 @@ from app.config import CORE_ENGINE_ROOT, PHASE4_RESOURCE_DATA
 from app.models.stock_refill_transaction import StockRefillTransaction
 from app.models.solver_run import SolverRun
 from app.services.canonical_resources import CANONICAL_RESOURCE_ORDER
+from app.services.canonical_resources import CANONICAL_RESOURCE_UNIT
 from app.services.canonical_resources import canonicalize_resource_id
 from app.services.resource_dictionary_service import resolve_resource_id
 
@@ -64,6 +66,9 @@ def create_stock_refill(
     db.add(row)
     db.commit()
     db.refresh(row)
+    # Ensure stock APIs reflect refill immediately instead of waiting for cache TTL.
+    from app.services.kpi_service import invalidate_stock_caches
+    invalidate_stock_caches()
     return row
 
 
@@ -148,8 +153,12 @@ def record_solver_allocation_debits(db: Session, solver_run_id: int, allocation_
     if objects:
         db.bulk_save_objects(objects)
 
+    # Debits change effective stock; clear caches so stock panels stay consistent.
+    from app.services.kpi_service import invalidate_stock_caches
+    invalidate_stock_caches()
 
-def get_refill_adjustment_maps(db: Session):
+
+def get_refill_adjustment_maps(db: Session, include_solver_debits: bool = True):
     scenario_run_ids = {
         int(r[0])
         for r in db.query(SolverRun.id)
@@ -157,7 +166,9 @@ def get_refill_adjustment_maps(db: Session):
         .all()
     }
 
-    def _exclude_scenario_solver_debits(query):
+    def _apply_solver_debit_filter(query):
+        if not include_solver_debits:
+            return query.filter(StockRefillTransaction.source != "solver_allocation_debit")
         if not scenario_run_ids:
             return query
         return query.filter(
@@ -172,7 +183,7 @@ def get_refill_adjustment_maps(db: Session):
         StockRefillTransaction.resource_id,
         func.coalesce(func.sum(StockRefillTransaction.quantity_delta), 0.0).label("qty"),
     )
-    district_rows = _exclude_scenario_solver_debits(district_rows).filter(
+    district_rows = _apply_solver_debit_filter(district_rows).filter(
         StockRefillTransaction.scope == "district"
     ).group_by(
         StockRefillTransaction.district_code,
@@ -184,7 +195,7 @@ def get_refill_adjustment_maps(db: Session):
         StockRefillTransaction.resource_id,
         func.coalesce(func.sum(StockRefillTransaction.quantity_delta), 0.0).label("qty"),
     )
-    state_rows = _exclude_scenario_solver_debits(state_rows).filter(
+    state_rows = _apply_solver_debit_filter(state_rows).filter(
         StockRefillTransaction.scope == "state"
     ).group_by(
         StockRefillTransaction.state_code,
@@ -195,7 +206,7 @@ def get_refill_adjustment_maps(db: Session):
         StockRefillTransaction.resource_id,
         func.coalesce(func.sum(StockRefillTransaction.quantity_delta), 0.0).label("qty"),
     )
-    national_rows = _exclude_scenario_solver_debits(national_rows).filter(
+    national_rows = _apply_solver_debit_filter(national_rows).filter(
         StockRefillTransaction.scope == "national"
     ).group_by(
         StockRefillTransaction.resource_id,
@@ -264,6 +275,8 @@ def build_live_stock_override_files(
     national_base_path: str | None = None,
 ):
     district_map, state_map, national_map = get_refill_adjustment_maps(db)
+    # Non-debit view is used only for targeted district-floor logic on personnel resources.
+    district_map_no_debit, _, _ = get_refill_adjustment_maps(db, include_solver_debits=False)
 
     has_adjustments = bool(district_map) or bool(state_map) or bool(national_map)
     if not has_adjustments and not district_base_path and not state_base_path and not national_base_path:
@@ -277,9 +290,24 @@ def build_live_stock_override_files(
     state_raw = _read_stock_csv(state_base, ("state_code",))
     national_raw = _read_stock_csv(national_base, tuple())
 
+    reserve_ratio = max(0.0, min(0.95, float(os.getenv("DISTRICT_STOCK_RESERVE_RATIO", "0.08") or 0.08)))
+    reserve_min = max(0.0, float(os.getenv("DISTRICT_STOCK_RESERVE_MIN", "1") or 1.0))
+
     district_rows = []
     for (district_code, resource_id), qty in sorted(((k[0], k[1]), v) for k, v in district_raw.items()):
-        adjusted = _max0(float(qty) + float(district_map.get((district_code, resource_id), 0.0)))
+        base_qty = float(qty or 0.0)
+        adjusted = _max0(base_qty + float(district_map.get((district_code, resource_id), 0.0)))
+
+        # Targeted policy: for personnel resources (e.g., nurses), avoid over-preserving via
+        # historical solver debits by keeping at least 80% of non-debit effective stock available.
+        unit = str(CANONICAL_RESOURCE_UNIT.get(str(resource_id), "")).lower()
+        if unit == "people":
+            non_debit_effective = _max0(base_qty + float(district_map_no_debit.get((district_code, resource_id), 0.0)))
+            adjusted = max(adjusted, non_debit_effective * 0.80)
+
+        if base_qty > 0.0:
+            reserve_floor = max(float(reserve_min), base_qty * float(reserve_ratio))
+            adjusted = max(adjusted, reserve_floor)
         district_rows.append({"district_code": district_code, "resource_id": resource_id, "quantity": adjusted})
 
     state_rows = []

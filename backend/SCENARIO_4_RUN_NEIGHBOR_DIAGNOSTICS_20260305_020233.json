@@ -1,0 +1,221 @@
+[
+  {
+    "case": "C1_neighbor_potential_immediate",
+    "scenario_id": 414,
+    "run_id": 1186,
+    "status": "completed",
+    "requests": [
+      {
+        "district_code": "1001",
+        "state_code": "10",
+        "resource_id": "R35",
+        "time": 0,
+        "quantity": 40000000.0
+      }
+    ],
+    "escalation_status": {
+      "events_found": 0,
+      "state_marked": 0,
+      "national_marked": 0,
+      "neighbor_offers_created": 0,
+      "neighbor_offers_accepted": 0,
+      "neighbor_accepted_quantity": 0.0,
+      "mode": "scenario_no_live_auto_chain"
+    },
+    "totals": {
+      "allocated_quantity": 0.0,
+      "unmet_quantity": 0.0,
+      "districts_covered": 0,
+      "districts_met": 0,
+      "districts_unmet": 0,
+      "allocation_rows": 0,
+      "unmet_rows": 0
+    },
+    "source_scope_breakdown": {
+      "allocations": {
+        "district": 0.0,
+        "state": 0.0,
+        "neighbor_state": 0.0,
+        "national": 0.0
+      },
+      "percentages": {
+        "district": 0.0,
+        "state": 0.0,
+        "neighbor_state": 0.0,
+        "national": 0.0
+      }
+    },
+    "district_source_scope_breakdown": [],
+    "by_time_breakdown": [],
+    "neighbor_diagnostic": {
+      "neighbor_active": false,
+      "reason": "no_state_escalation_marked"
+    }
+  },
+  {
+    "case": "C2_neighbor_potential_staggered",
+    "scenario_id": 415,
+    "run_id": 1187,
+    "status": "completed",
+    "requests": [
+      {
+        "district_code": "1001",
+        "state_code": "10",
+        "resource_id": "R35",
+        "time": 1,
+        "quantity": 22000000.0
+      },
+      {
+        "district_code": "1001",
+        "state_code": "10",
+        "resource_id": "R35",
+        "time": 2,
+        "quantity": 15000000.0
+      }
+    ],
+    "escalation_status": {
+      "events_found": 0,
+      "state_marked": 0,
+      "national_marked": 0,
+      "neighbor_offers_created": 0,
+      "neighbor_offers_accepted": 0,
+      "neighbor_accepted_quantity": 0.0,
+      "mode": "scenario_no_live_auto_chain"
+    },
+    "totals": {
+      "allocated_quantity": 0.0,
+      "unmet_quantity": 0.0,
+      "districts_covered": 0,
+      "districts_met": 0,
+      "districts_unmet": 0,
+      "allocation_rows": 0,
+      "unmet_rows": 0
+    },
+    "source_scope_breakdown": {
+      "allocations": {
+        "district": 0.0,
+        "state": 0.0,
+        "neighbor_state": 0.0,
+        "national": 0.0
+      },
+      "percentages": {
+        "district": 0.0,
+        "state": 0.0,
+        "neighbor_state": 0.0,
+        "national": 0.0
+      }
+    },
+    "district_source_scope_breakdown": [],
+    "by_time_breakdown": [],
+    "neighbor_diagnostic": {
+      "neighbor_active": false,
+      "reason": "no_state_escalation_marked"
+    }
+  },
+  {
+    "case": "C3_late_time_low_priority_national_path",
+    "scenario_id": 416,
+    "run_id": 1188,
+    "status": "completed",
+    "requests": [
+      {
+        "district_code": "1001",
+        "state_code": "10",
+        "resource_id": "R35",
+        "time": 24,
+        "quantity": 30000000.0
+      }
+    ],
+    "escalation_status": {
+      "events_found": 0,
+      "state_marked": 0,
+      "national_marked": 0,
+      "neighbor_offers_created": 0,
+      "neighbor_offers_accepted": 0,
+      "neighbor_accepted_quantity": 0.0,
+      "mode": "scenario_no_live_auto_chain"
+    },
+    "totals": {
+      "allocated_quantity": 0.0,
+      "unmet_quantity": 0.0,
+      "districts_covered": 0,
+      "districts_met": 0,
+      "districts_unmet": 0,
+      "allocation_rows": 0,
+      "unmet_rows": 0
+    },
+    "source_scope_breakdown": {
+      "allocations": {
+        "district": 0.0,
+        "state": 0.0,
+        "neighbor_state": 0.0,
+        "national": 0.0
+      },
+      "percentages": {
+        "district": 0.0,
+        "state": 0.0,
+        "neighbor_state": 0.0,
+        "national": 0.0
+      }
+    },
+    "district_source_scope_breakdown": [],
+    "by_time_breakdown": [],
+    "neighbor_diagnostic": {
+      "neighbor_active": false,
+      "reason": "no_state_escalation_marked"
+    }
+  },
+  {
+    "case": "C4_moderate_should_meet_local_then_upper",
+    "scenario_id": 417,
+    "run_id": 1189,
+    "status": "completed",
+    "requests": [
+      {
+        "district_code": "1001",
+        "state_code": "10",
+        "resource_id": "R35",
+        "time": 6,
+        "quantity": 5000000.0
+      }
+    ],
+    "escalation_status": {
+      "events_found": 0,
+      "state_marked": 0,
+      "national_marked": 0,
+      "neighbor_offers_created": 0,
+      "neighbor_offers_accepted": 0,
+      "neighbor_accepted_quantity": 0.0,
+      "mode": "scenario_no_live_auto_chain"
+    },
+    "totals": {
+      "allocated_quantity": 0.0,
+      "unmet_quantity": 0.0,
+      "districts_covered": 0,
+      "districts_met": 0,
+      "districts_unmet": 0,
+      "allocation_rows": 0,
+      "unmet_rows": 0
+    },
+    "source_scope_breakdown": {
+      "allocations": {
+        "district": 0.0,
+        "state": 0.0,
+        "neighbor_state": 0.0,
+        "national": 0.0
+      },
+      "percentages": {
+        "district": 0.0,
+        "state": 0.0,
+        "neighbor_state": 0.0,
+        "national": 0.0
+      }
+    },
+    "district_source_scope_breakdown": [],
+    "by_time_breakdown": [],
+    "neighbor_diagnostic": {
+      "neighbor_active": false,
+      "reason": "no_state_escalation_marked"
+    }
+  }
+]

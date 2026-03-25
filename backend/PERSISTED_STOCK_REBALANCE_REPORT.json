@@ -1,0 +1,10 @@
+{
+  "status": "ok",
+  "backup": "C:\\Users\\LATHEEF\\Desktop\\disaster_management\\backend\\backend_pre_persisted_rebalance_20260304_212201.db",
+  "latest_run": 1099,
+  "latest_scenario": 317,
+  "district_rows_inserted": 40320,
+  "state_rows_inserted": 1960,
+  "national_rows_inserted": 56,
+  "note": "Persisted stock floors to avoid artificial zero stocks and reduce runtime fallback dependence"
+}

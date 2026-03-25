@@ -101,9 +101,11 @@ function sortAllocationsLatestFirst(rows: AllocationRow[]): AllocationRow[] {
   return [...rows].sort((a, b) => {
     const runDiff = Number(b.solver_run_id || 0) - Number(a.solver_run_id || 0)
     if (runDiff !== 0) return runDiff
-    const timeDiff = Number(b.time || 0) - Number(a.time || 0)
-    if (timeDiff !== 0) return timeDiff
-    return Number(b.id || 0) - Number(a.id || 0)
+    const qtyDiff = Number(b.allocated_quantity || 0) - Number(a.allocated_quantity || 0)
+    if (qtyDiff !== 0) return qtyDiff
+    const idDiff = Number(b.id || 0) - Number(a.id || 0)
+    if (idDiff !== 0) return idDiff
+    return Number(b.time || 0) - Number(a.time || 0)
   })
 }
 
@@ -119,6 +121,7 @@ function sortRequestsLatestFirst(rows: DistrictRequestRow[]): DistrictRequestRow
 }
 
 export default function DistrictOverview() {
+  const CLAIM_TABLE_PAGE_SIZE = 10
     function supplyBadge(level?: string) {
       const v = String(level || 'district').toLowerCase()
       if (v === 'state') return <span className="px-2 py-1 rounded bg-blue-100 text-blue-700 border border-blue-200 text-xs font-medium">State</span>
@@ -148,9 +151,10 @@ export default function DistrictOverview() {
   const [actionMessage, setActionMessage] = useState('')
   const [claimBusy, setClaimBusy] = useState<string>('')
   const [demandMode, setDemandMode] = useState<string>('ai_human')
-  const lastTopAllocationKeyRef = useRef<string>('')
+  const previousFirstPageRowsRef = useRef<Array<any>>([])
   const autoLifecycleBusyRef = useRef(false)
   const autoLifecycleProcessedRef = useRef<Set<string>>(new Set())
+  const lastKpiFetchAtRef = useRef<number>(0)
   const shouldSyncOps = !overviewBoot && (mainTab === 'allocations' || mainTab === 'upstream')
 
   const { claims, claimResource, refreshClaims } = useDistrictClaims(shouldSyncOps)
@@ -166,12 +170,12 @@ export default function DistrictOverview() {
   async function fetchData() {
     if (!districtCode || !token) return
     try {
-      const shouldLoadRequests = !overviewBoot && mainTab === 'requests'
       const shouldLoadAllocations = !overviewBoot && (mainTab === 'allocations' || mainTab === 'upstream')
       const shouldLoadUnmet = !overviewBoot && mainTab === 'unmet'
       const shouldLoadStock = !overviewBoot && (mainTab === 'stock' || mainTab === 'refill')
       const shouldLoadHistory = !overviewBoot && mainTab === 'history'
       const shouldLoadResources = !overviewBoot && (mainTab === 'allocations' || mainTab === 'upstream' || mainTab === 'unmet' || mainTab === 'stock' || mainTab === 'refill' || mainTab === 'agent')
+      const shouldRefreshKpi = lastKpiFetchAtRef.current === 0 || (Date.now() - lastKpiFetchAtRef.current) >= 20000
 
       const settled = await Promise.allSettled([
         shouldLoadAllocations ? safeFetch<AllocationRow[]>(`${BACKEND_PATHS.districtAllocations}?page=1&page_size=200`) : Promise.resolve([] as AllocationRow[]),
@@ -179,9 +183,10 @@ export default function DistrictOverview() {
         safeFetch<{ demand_mode: string; ui_mode?: string }>(BACKEND_PATHS.districtGetDemandMode),
         safeFetch<SolverStatus>(BACKEND_PATHS.districtSolverStatus),
         shouldLoadResources ? safeFetch<ResourceMeta[]>(BACKEND_PATHS.resourceCatalog) : Promise.resolve([] as ResourceMeta[]),
-        safeFetch<KpiPayload>(BACKEND_PATHS.districtKpis),
+        shouldRefreshKpi ? safeFetch<KpiPayload>(`${BACKEND_PATHS.districtKpis}?runs=100`) : Promise.resolve(kpi as KpiPayload),
         shouldLoadStock ? safeFetch<StockRow[]>(BACKEND_PATHS.districtStock) : Promise.resolve([] as StockRow[]),
         shouldLoadHistory ? safeFetch<RunHistoryRow[]>(`${BACKEND_PATHS.districtRunHistory}?page=1&page_size=200`) : Promise.resolve([] as RunHistoryRow[]),
+        safeFetch<DistrictRequestRow[]>(`${BACKEND_PATHS.districtListRequests}?page=1&page_size=200`),
       ])
 
       const allocRes = settled[0].status === 'fulfilled' ? settled[0].value : []
@@ -192,6 +197,7 @@ export default function DistrictOverview() {
       const kpiRes = settled[5].status === 'fulfilled' ? settled[5].value : null
       const stockRes = settled[6].status === 'fulfilled' ? settled[6].value : []
       const historyRes = settled[7].status === 'fulfilled' ? settled[7].value : []
+      const requestRes = settled[8].status === 'fulfilled' ? settled[8].value : []
 
       const scopedAlloc = safeArray<AllocationRow>(allocRes).filter((r) => String(r.district_code) === String(districtCode))
       const scopedUnmet = safeArray<UnmetRow>(unmetRes).filter((r) => String(r.district_code) === String(districtCode))
@@ -201,17 +207,13 @@ export default function DistrictOverview() {
       if (shouldLoadResources) setResources(safeArray<ResourceMeta>(resourceRes))
       setSolverStatus(solverRes || { solver_run_id: null, status: 'idle', mode: 'live' })
       setKpi(kpiRes || { solver_run_id: null, allocated: 0, unmet: 0, final_demand: 0, coverage: 0 })
+      if (shouldRefreshKpi) {
+        lastKpiFetchAtRef.current = Date.now()
+      }
       if (shouldLoadStock) setStockRows(safeArray<StockRow>(stockRes))
       if (shouldLoadHistory) setRunHistoryRows(safeArray<RunHistoryRow>(historyRes))
-
-      if (shouldLoadRequests) {
-        try {
-          const reqRes = await safeFetch<DistrictRequestRow[]>(`${BACKEND_PATHS.districtListRequests}?page=1&page_size=200`)
-          const scopedRequests = safeArray<DistrictRequestRow>(reqRes).filter((r) => !districtCode || String((r as any).district_code || districtCode) === String(districtCode))
-          setRequests(sortRequestsLatestFirst(scopedRequests))
-        } catch {
-        }
-      }
+      const scopedRequests = safeArray<DistrictRequestRow>(requestRes).filter((r) => !districtCode || String((r as any).district_code || districtCode) === String(districtCode))
+      setRequests(sortRequestsLatestFirst(scopedRequests))
       if (modeRes?.demand_mode) {
         setDemandMode(modeRes.ui_mode || (modeRes.demand_mode === 'baseline_plus_human' ? 'ai_human' : modeRes.demand_mode))
       }
@@ -243,7 +245,7 @@ export default function DistrictOverview() {
       }
     }, 4000)
     return () => clearInterval(id)
-  }, [districtCode, token, mainTab, streamEnabled, shouldSyncOps])
+  }, [districtCode, token, mainTab, streamEnabled, shouldSyncOps, overviewBoot])
 
   useLiveAllocationStream({
     enabled: streamEnabled,
@@ -354,6 +356,32 @@ export default function DistrictOverview() {
   const allocationRowsForTable = useMemo(() => {
     const slotKey = (runId: number, resourceId: string, time: number) => `${runId}_${resourceId}_${time}`
 
+    const groupedAllocations = new Map<string, any>()
+    for (const row of sortAllocationsLatestFirst(allocations)) {
+      const groupedKey = [
+        Number(row.solver_run_id || 0),
+        String(row.resource_id || ''),
+        Number(row.time || 0),
+        String((row as any).allocation_source_scope || row.supply_level || ''),
+        String((row as any).allocation_source_code || row.origin_state_code || row.state_code || ''),
+      ].join('__')
+
+      if (!groupedAllocations.has(groupedKey)) {
+        groupedAllocations.set(groupedKey, {
+          ...row,
+          allocated_quantity: Number(row.allocated_quantity || 0),
+        })
+      } else {
+        const existing = groupedAllocations.get(groupedKey)
+        groupedAllocations.set(groupedKey, {
+          ...existing,
+          allocated_quantity: Number(existing.allocated_quantity || 0) + Number(row.allocated_quantity || 0),
+          id: Math.max(Number(existing.id || 0), Number(row.id || 0)),
+        })
+      }
+    }
+    const normalizedAllocations = sortAllocationsLatestFirst(Array.from(groupedAllocations.values()))
+
     const claimedBySlot = new Map<string, number>()
     for (const row of claims) {
       const runId = Number(row.solver_run_id || 0)
@@ -378,7 +406,7 @@ export default function DistrictOverview() {
       returnedBySlot.set(key, (returnedBySlot.get(key) || 0) + Number(row.returned_quantity || 0))
     }
 
-    return sortAllocationsLatestFirst(allocations).map((row, idx) => {
+    return normalizedAllocations.map((row, idx) => {
       const runId = Number(row.solver_run_id || 0)
       const key = slotKey(runId, String(row.resource_id), Number(row.time))
 
@@ -591,18 +619,29 @@ export default function DistrictOverview() {
   useEffect(() => {
     if (mainTab !== 'allocations') return
     if (!allocationRowsForTable.length) return
+    const currentFirstPageRows = allocationRowsForTable.slice(0, CLAIM_TABLE_PAGE_SIZE)
+    const currentFirstPageKeys = new Set(
+      currentFirstPageRows.map(
+        (row) => `${row.solver_run_id || 'latest'}_${row.resource_id}_${row.time}_${row.id || 0}`,
+      ),
+    )
 
-    const top = allocationRowsForTable[0]
-    const topKey = `${top.solver_run_id || 'latest'}_${top.resource_id}_${top.time}_${top.id || 0}`
-    if (!lastTopAllocationKeyRef.current) {
-      lastTopAllocationKeyRef.current = topKey
+    if (!previousFirstPageRowsRef.current.length) {
+      previousFirstPageRowsRef.current = currentFirstPageRows
       return
     }
-    if (topKey === lastTopAllocationKeyRef.current) return
 
-    lastTopAllocationKeyRef.current = topKey
-    const tail = allocationRowsForTable[allocationRowsForTable.length - 1]
-    void autoProcessTailAllocation(tail)
+    const displacedRows = previousFirstPageRowsRef.current.filter((row) => {
+      const key = `${row.solver_run_id || 'latest'}_${row.resource_id}_${row.time}_${row.id || 0}`
+      return !currentFirstPageKeys.has(key)
+    })
+
+    previousFirstPageRowsRef.current = currentFirstPageRows
+
+    if (displacedRows.length > 0) {
+      const candidate = displacedRows[displacedRows.length - 1]
+      void autoProcessTailAllocation(candidate)
+    }
   }, [mainTab, allocationRowsForTable])
 
   const tabs: Array<{ key: TabKey; label: string }> = [
@@ -753,6 +792,7 @@ export default function DistrictOverview() {
           <OpsDataTable
             rows={allocationRowsForTable}
             columns={[
+              { key: 'solver_run_id', label: 'Run ID' },
               { key: 'resource_label', label: 'Resource' },
               { key: 'allocated_quantity', label: 'Allocated Quantity' },
               {

@@ -42,6 +42,8 @@ import time
 router = APIRouter()
 DEFAULT_PAGE_SIZE = 100
 MAX_PAGE_SIZE = 200
+STOCK_DISPLAY_THRESHOLD = 100000.0
+STOCK_DISPLAY_DIVISOR = 1000.0
 
 
 def _pagination(page: int, page_size: int) -> tuple[int, int]:
@@ -59,6 +61,26 @@ def _require_stream_role(token: str, roles: list[str]):
     if not payload:
         raise HTTPException(status_code=401, detail="Invalid or expired token")
     return require_roles(roles)(payload)
+
+
+def _normalize_stock_value(value) -> float:
+    qty = float(value or 0.0)
+    if abs(qty) > STOCK_DISPLAY_THRESHOLD:
+        return qty / STOCK_DISPLAY_DIVISOR
+    return qty
+
+
+def _normalize_stock_rows(rows: list[dict]) -> list[dict]:
+    out: list[dict] = []
+    for row in rows:
+        shaped = dict(row)
+        shaped["district_stock"] = _normalize_stock_value(shaped.get("district_stock"))
+        shaped["state_stock"] = _normalize_stock_value(shaped.get("state_stock"))
+        shaped["national_stock"] = _normalize_stock_value(shaped.get("national_stock"))
+        shaped["in_transit"] = _normalize_stock_value(shaped.get("in_transit"))
+        shaped["available_stock"] = _normalize_stock_value(shaped.get("available_stock"))
+        out.append(shaped)
+    return out
 
 
 @router.get("/me")
@@ -82,7 +104,8 @@ def state_stock(
     db: Session = Depends(get_db),
     user=Depends(require_role(["state"]))
 ):
-    return get_state_stock_rows(db, str(user["state_code"]))
+    rows = get_state_stock_rows(db, str(user["state_code"]))
+    return _normalize_stock_rows(rows)
 
 
 @router.post("/stock/refill")
@@ -102,7 +125,14 @@ def state_stock_refill(
             state_code=str(user["state_code"]),
             note=payload.note,
         )
-        return {"status": "ok", "refill_id": int(row.id)}
+        stock_rows = _normalize_stock_rows(get_state_stock_rows(db, str(user["state_code"])))
+        stock_after = next((r for r in stock_rows if str(r.get("resource_id")) == str(row.resource_id)), None)
+        return {
+            "status": "ok",
+            "refill_id": int(row.id),
+            "resource_id": str(row.resource_id),
+            "stock_after": stock_after,
+        }
     except ValueError as e:
         from fastapi import HTTPException
         raise HTTPException(status_code=400, detail=str(e))
@@ -390,7 +420,9 @@ def state_create_mutual_aid_offer(
             offering_state=str(user["state_code"]),
             quantity_offered=float((payload or {}).get("quantity_offered", 0.0)),
             cap_quantity=(None if (payload or {}).get("cap_quantity") is None else float((payload or {}).get("cap_quantity"))),
+            approval_source="state_authority",
         )
+
         return {
             "status": "ok",
             "offer_id": int(row.id),

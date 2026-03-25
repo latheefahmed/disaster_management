@@ -1,0 +1,70 @@
+{
+  "timestamp": "2026-03-05T14:54:22.955620Z",
+  "before": {
+    "failed_live_runs": 102,
+    "requests_linked": 0,
+    "allocations_linked": 889
+  },
+  "updated": {
+    "requests_requeued": 0
+  },
+  "deleted": {
+    "allocations": 889,
+    "solver_runs": 102
+  },
+  "after": {
+    "failed_live_runs": 0,
+    "latest_live_runs": [
+      {
+        "id": 1208,
+        "status": "completed",
+        "mode": "live"
+      },
+      {
+        "id": 1207,
+        "status": "completed",
+        "mode": "live"
+      },
+      {
+        "id": 1168,
+        "status": "completed",
+        "mode": "live"
+      },
+      {
+        "id": 1140,
+        "status": "completed",
+        "mode": "live"
+      },
+      {
+        "id": 1139,
+        "status": "completed",
+        "mode": "live"
+      },
+      {
+        "id": 1135,
+        "status": "completed",
+        "mode": "live"
+      },
+      {
+        "id": 1134,
+        "status": "completed",
+        "mode": "live"
+      },
+      {
+        "id": 1133,
+        "status": "completed",
+        "mode": "live"
+      },
+      {
+        "id": 1132,
+        "status": "completed",
+        "mode": "live"
+      },
+      {
+        "id": 1131,
+        "status": "completed",
+        "mode": "live"
+      }
+    ]
+  }
+}

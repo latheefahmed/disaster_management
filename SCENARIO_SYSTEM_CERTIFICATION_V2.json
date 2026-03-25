@@ -1,0 +1,289 @@
+{
+  "generated_at": "2026-03-11T15:36:17.846858+00:00",
+  "objective": "Validate and strengthen Scenario Studio -> Randomizer -> Solver -> Escalation pipeline",
+  "forced_topology": {
+    "source_state": "1",
+    "neighbor_state": "10",
+    "source_district": "1",
+    "source_district_alt": "10",
+    "neighbor_district": "1001",
+    "resource_id": "R27"
+  },
+  "invariants": {
+    "negative_inventory_rows": 0,
+    "min_inventory_quantity": 0.0,
+    "min_allocation_quantity": 6.0,
+    "over_allocation_slots": [],
+    "district_stock_conservation": {
+      "checked_pairs": 1,
+      "all_hold": true,
+      "sample": [
+        {
+          "district_code": "1",
+          "resource_id": "R27",
+          "initial_stock": 12.0,
+          "allocated": 6.0,
+          "remaining": 6.0,
+          "holds": true
+        }
+      ]
+    }
+  },
+  "neighbor_escalation": {
+    "status": "activated",
+    "forced_scenario_id": 899,
+    "run1_id": 1690,
+    "run2_id": 1691,
+    "run1_scope_allocations": {
+      "district": 6.0,
+      "state": 25.0,
+      "neighbor_state": 44.0,
+      "national": 10.0
+    },
+    "run2_scope_allocations": {
+      "district": 6.0,
+      "state": 25.0,
+      "neighbor_state": 44.0,
+      "national": 10.0
+    },
+    "correction_applied": false,
+    "correction_policy": {},
+    "correction_scenario_id": null,
+    "final_scope_allocations": {
+      "district": 6.0,
+      "state": 25.0,
+      "neighbor_state": 44.0,
+      "national": 10.0
+    },
+    "final_escalation_status": {
+      "events_found": 1,
+      "state_marked": 1,
+      "national_marked": 0,
+      "neighbor_offers_created": 0,
+      "neighbor_offers_accepted": 1,
+      "neighbor_accepted_quantity": 44.0,
+      "mode": "scenario_auto_chain"
+    },
+    "diagnostics": {
+      "candidate_neighbors": [
+        {
+          "state_code": "10",
+          "distance_km": null
+        },
+        {
+          "state_code": "11",
+          "distance_km": null
+        },
+        {
+          "state_code": "12",
+          "distance_km": null
+        },
+        {
+          "state_code": "13",
+          "distance_km": null
+        },
+        {
+          "state_code": "14",
+          "distance_km": null
+        },
+        {
+          "state_code": "15",
+          "distance_km": null
+        }
+      ],
+      "neighbor_stock_policy": {
+        "max_states": 3,
+        "offer_fraction": 0.55,
+        "stock_cap": 0.2
+      },
+      "transport_model": "Haversine distance / AVG_SPEED_KMPH via implied_delay_hours",
+      "cost_hierarchy": {
+        "solver_level_flow_cost": {
+          "district": 1.0,
+          "state": 2.0,
+          "neighbor_state": 2.3,
+          "national": 3.0
+        },
+        "note": "Neighbor is represented through confirmed inter-state aid provenance on state allocations; national remains highest cost level."
+      }
+    }
+  },
+  "stress": {
+    "cases": 50,
+    "service_ratio_avg": 0.925007985910798,
+    "service_ratio_min": 0.15117849175014886,
+    "fairness_avg": 0.914282969262548,
+    "fairness_min": 0.5571073691714774,
+    "fairness_variance": 0.017949436841529533,
+    "escalation_source_distribution_abs": {
+      "district": 13956083917.0,
+      "state": 3514745213.0,
+      "neighbor_state": 6375676337.0,
+      "national": 3490908581.0
+    },
+    "escalation_source_distribution_pct": {
+      "district": 0.510512,
+      "state": 0.128569,
+      "neighbor_state": 0.233222,
+      "national": 0.127697
+    },
+    "severe_cases": 36,
+    "severe_neighbor_nonzero_cases": 19,
+    "severe_neighbor_nonzero_rate": 0.5277777777777778,
+    "demand_realism_violations": 0,
+    "sample": [
+      {
+        "scenario_id": 900,
+        "run_id": 1692,
+        "preset": "high",
+        "demand_supply_ratio": 1.5,
+        "service_ratio": 1.0,
+        "scope_allocations": {
+          "district": 934327732.0,
+          "state": 9962834.0,
+          "neighbor_state": 525935126.0,
+          "national": 243368200.0
+        }
+      },
+      {
+        "scenario_id": 901,
+        "run_id": 1693,
+        "preset": "high",
+        "demand_supply_ratio": 1.5,
+        "service_ratio": 1.0,
+        "scope_allocations": {
+          "district": 0.0,
+          "state": 0.0,
+          "neighbor_state": 0.0,
+          "national": 0.0
+        }
+      },
+      {
+        "scenario_id": 902,
+        "run_id": 1694,
+        "preset": "medium_high",
+        "demand_supply_ratio": 1.25,
+        "service_ratio": 1.0,
+        "scope_allocations": {
+          "district": 214132460.0,
+          "state": 0.0,
+          "neighbor_state": 0.0,
+          "national": 0.0
+        }
+      },
+      {
+        "scenario_id": 903,
+        "run_id": 1695,
+        "preset": "medium_high",
+        "demand_supply_ratio": 1.25,
+        "service_ratio": 1.0,
+        "scope_allocations": {
+          "district": 980901840.0,
+          "state": 131965840.0,
+          "neighbor_state": 137788044.0,
+          "national": 0.0
+        }
+      },
+      {
+        "scenario_id": 904,
+        "run_id": 1696,
+        "preset": "extremely_high",
+        "demand_supply_ratio": 2.0,
+        "service_ratio": 0.6195743530976843,
+        "scope_allocations": {
+          "district": 548449200.0,
+          "state": 0.0,
+          "neighbor_state": 0.0,
+          "national": 0.0
+        }
+      },
+      {
+        "scenario_id": 905,
+        "run_id": 1697,
+        "preset": "high",
+        "demand_supply_ratio": 1.5,
+        "service_ratio": 1.0,
+        "scope_allocations": {
+          "district": 8603390.0,
+          "state": 131965840.0,
+          "neighbor_state": 180652460.0,
+          "national": 5392007.0
+        }
+      },
+      {
+        "scenario_id": 906,
+        "run_id": 1698,
+        "preset": "medium_high",
+        "demand_supply_ratio": 1.25,
+        "service_ratio": 1.0,
+        "scope_allocations": {
+          "district": 6581770.0,
+          "state": 35740438.0,
+          "neighbor_state": 201767509.0,
+          "national": 0.0
+        }
+      },
+      {
+        "scenario_id": 907,
+        "run_id": 1699,
+        "preset": "medium_high",
+        "demand_supply_ratio": 1.25,
+        "service_ratio": 1.0,
+        "scope_allocations": {
+          "district": 11080938.0,
+          "state": 646395960.0,
+          "neighbor_state": 218074412.0,
+          "national": 0.0
+        }
+      },
+      {
+        "scenario_id": 908,
+        "run_id": 1700,
+        "preset": "medium_high",
+        "demand_supply_ratio": 1.25,
+        "service_ratio": 1.0,
+        "scope_allocations": {
+          "district": 177606030.0,
+          "state": 0.0,
+          "neighbor_state": 0.0,
+          "national": 0.0
+        }
+      },
+      {
+        "scenario_id": 909,
+        "run_id": 1701,
+        "preset": "extremely_high",
+        "demand_supply_ratio": 2.0,
+        "service_ratio": 0.9053729749826208,
+        "scope_allocations": {
+          "district": 259446930.0,
+          "state": 0.0,
+          "neighbor_state": 0.0,
+          "national": 0.0
+        }
+      }
+    ]
+  },
+  "priority_validation": {
+    "district_a": "1",
+    "district_b": "10",
+    "allocation_a": 80.0,
+    "allocation_b": 80.0,
+    "pass": true
+  },
+  "timestep_validation": {
+    "time1_allocated": 120.0,
+    "time2_allocated": 26.0,
+    "pass": true
+  },
+  "certification": {
+    "stock_conservation_holds": true,
+    "fairness_threshold_holds": true,
+    "priority_holds": true,
+    "timestep_holds": true,
+    "neighbor_activates": true,
+    "escalation_order_preserved": true,
+    "demand_bounded": true,
+    "status": "CERTIFIED"
+  }
+}

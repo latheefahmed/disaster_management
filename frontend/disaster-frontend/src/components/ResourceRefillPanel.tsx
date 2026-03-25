@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react'
 
-import { apiFetch } from '../data/apiClient'
+import { apiFetch, invalidateApiCache } from '../data/apiClient'
 
 type ResourceMeta = {
   resource_id: string
@@ -63,6 +63,8 @@ export default function ResourceRefillPanel({
           note: note.trim() || `${scope}_manual_refill`,
         }),
       })
+      // Refill is a mutation; purge cached GET responses before reloading stock panels.
+      invalidateApiCache()
       await onRefilled()
       setMessage('Stock refill applied successfully.')
       setQuantity('')

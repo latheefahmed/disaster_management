@@ -1,5 +1,6 @@
 import csv
 import json
+import time
 from functools import lru_cache
 from pathlib import Path
 
@@ -21,6 +22,26 @@ from app.config import PHASE4_RESOURCE_DATA
 from app.services.canonical_resources import CANONICAL_RESOURCE_ORDER
 from app.services.canonical_resources import canonicalize_resource_id
 from app.services.stock_refill_service import get_refill_adjustment_maps
+
+
+_DISTRICT_KPI_CACHE: dict[tuple[str, int], tuple[float, dict]] = {}
+_DISTRICT_KPI_CACHE_TTL_SEC = 20.0
+_DISTRICT_STOCK_CACHE: dict[str, tuple[float, list[dict]]] = {}
+_STATE_STOCK_CACHE: dict[str, tuple[float, list[dict]]] = {}
+_NATIONAL_STOCK_CACHE: tuple[float, list[dict]] | None = None
+_STOCK_CACHE_TTL_SEC = 20.0
+
+
+def invalidate_stock_caches() -> None:
+    """Clear cached stock/KPI snapshots so refill and debit writes are visible immediately."""
+    global _NATIONAL_STOCK_CACHE
+    _DISTRICT_KPI_CACHE.clear()
+    _DISTRICT_STOCK_CACHE.clear()
+    _STATE_STOCK_CACHE.clear()
+    _NATIONAL_STOCK_CACHE = None
+    _load_district_stock_csv.cache_clear()
+    _load_state_stock_csv.cache_clear()
+    _load_national_stock_csv.cache_clear()
 
 
 def get_latest_solver_run_id(db: Session) -> int | None:
@@ -194,9 +215,16 @@ def _sum_allocations_from_snapshots(db: Session, run_ids: list[int], *, district
     }
 
 
-def compute_district_kpis(db: Session, district_code: str):
-    run = db.query(SolverRun).filter(SolverRun.status == "completed", SolverRun.mode == "live").order_by(SolverRun.id.desc()).first()
-    if run is None:
+def compute_district_kpis(db: Session, district_code: str, run_window: int = 100):
+    safe_window = max(1, min(1000, int(run_window or 100)))
+    cache_key = (str(district_code), int(safe_window))
+    now = time.time()
+    cached = _DISTRICT_KPI_CACHE.get(cache_key)
+    if cached and (now - float(cached[0])) <= _DISTRICT_KPI_CACHE_TTL_SEC:
+        return dict(cached[1])
+
+    run_ids = _completed_run_ids_with_signal(db)
+    if not run_ids:
         return {
             "solver_run_id": None,
             "allocated": 0.0,
@@ -204,27 +232,25 @@ def compute_district_kpis(db: Session, district_code: str):
             "final_demand": 0.0,
             "coverage": 0.0,
         }
-    snap = _snapshot_for_run(run)
-    if not snap:
-        return {
-            "solver_run_id": int(run.id),
-            "allocated": 0.0,
-            "unmet": 0.0,
-            "final_demand": 0.0,
-            "coverage": 0.0,
-        }
-    totals = (snap.get("district_totals") or {}).get(str(district_code)) or {}
-    allocated = float(totals.get("allocated_quantity") or 0.0)
-    unmet = float(totals.get("unmet_quantity") or 0.0)
-    final_demand = allocated + unmet
-    coverage = (allocated / final_demand) if final_demand > 0 else 0.0
-    return {
-        "solver_run_id": int(run.id),
-        "allocated": allocated,
-        "unmet": unmet,
-        "final_demand": final_demand,
-        "coverage": coverage,
-    }
+
+    scoped_run_ids = run_ids[-safe_window:]
+    snapshot_payload = _sum_allocations_from_snapshots(
+        db,
+        scoped_run_ids,
+        district_code=str(district_code),
+    )
+    if snapshot_payload is not None:
+        _DISTRICT_KPI_CACHE[cache_key] = (now, dict(snapshot_payload))
+        return snapshot_payload
+
+    payload = _sum_allocations(
+        db,
+        scoped_run_ids,
+        [Allocation.district_code == str(district_code)],
+        [FinalDemand.district_code == str(district_code)],
+    )
+    _DISTRICT_KPI_CACHE[cache_key] = (now, dict(payload))
+    return payload
 
 
 def compute_state_kpis(db: Session, state_code: str):
@@ -390,12 +416,19 @@ def _district_stock_map(db: Session, district_code: str) -> dict[str, float]:
     latest_run_id = get_latest_solver_run_id(db)
     if latest_run_id is None:
         return {}
+    latest_time = db.query(func.max(InventorySnapshot.time)).filter(
+        InventorySnapshot.solver_run_id == int(latest_run_id),
+        InventorySnapshot.district_code == str(district_code),
+    ).scalar()
+    if latest_time is None:
+        return {}
     rows = db.query(
         InventorySnapshot.resource_id,
         func.coalesce(func.sum(InventorySnapshot.quantity), 0.0).label("quantity"),
     ).filter(
         InventorySnapshot.solver_run_id == int(latest_run_id),
         InventorySnapshot.district_code == str(district_code),
+        InventorySnapshot.time == int(latest_time),
     ).group_by(
         InventorySnapshot.resource_id
     ).all()
@@ -418,6 +451,61 @@ def _to_float(value) -> float:
         return float(value)
     except Exception:
         return 0.0
+
+
+def _base_stock_cap_for_unit(unit: str) -> float:
+    u = str(unit or "").lower()
+    if "liter" in u:
+        return 50000.0
+    if u == "kg":
+        return 20000.0
+    if "tablet" in u:
+        return 1500000.0
+    if "person_day" in u:
+        return 30000.0
+    if u in {"units", "kits", "packets", "courses", "cylinders", "packs"}:
+        return 20000.0
+    return 25000.0
+
+
+def _scope_cap_multiplier(scope: str) -> float:
+    s = str(scope or "district").lower()
+    if s == "state":
+        return 8.0
+    if s == "national":
+        return 100.0
+    return 1.0
+
+
+def _resource_unit_map(db: Session) -> dict[str, str]:
+    rows = db.query(Resource.resource_id, Resource.unit).all()
+    out: dict[str, str] = {}
+    for rid, unit in rows:
+        if not rid:
+            continue
+        out[str(rid)] = str(unit or "units")
+    return out
+
+
+def _cap_stock_map(db: Session, stock_map: dict[str, float], scope: str) -> dict[str, float]:
+    unit_map = _resource_unit_map(db)
+    out: dict[str, float] = {}
+    mul = _scope_cap_multiplier(scope)
+    for rid, qty in stock_map.items():
+        unit = unit_map.get(str(rid), "units")
+        cap = _base_stock_cap_for_unit(unit) * mul
+        out[str(rid)] = max(0.0, min(float(qty or 0.0), float(cap)))
+    return out
+
+
+def _apply_adjustment_with_floor(base: float, adjustment: float, keep_ratio: float = 0.25) -> float:
+    base_val = max(0.0, float(base or 0.0))
+    adj_val = float(adjustment or 0.0)
+    merged = base_val + adj_val
+    if base_val <= 0.0:
+        return max(0.0, merged)
+    floor_val = base_val * max(0.0, min(1.0, float(keep_ratio)))
+    return max(floor_val, merged)
 
 
 @lru_cache(maxsize=1)
@@ -485,14 +573,13 @@ def _state_stock_csv_map(state_code: str) -> dict[str, float]:
 
 
 def _merge_with_csv_fallback(primary: dict[str, float], fallback: dict[str, float], resource_ids: list[str]) -> dict[str, float]:
-    if len(primary) >= len(resource_ids):
-        return primary
     out: dict[str, float] = {}
     for rid in resource_ids:
         if rid in primary:
-            out[rid] = float(primary[rid])
-        elif rid in fallback:
-            out[rid] = float(fallback[rid])
+            out[rid] = max(0.0, float(primary.get(rid, 0.0)))
+            continue
+        if rid in fallback:
+            out[rid] = max(0.0, float(fallback.get(rid, 0.0)))
     return out
 
 
@@ -577,6 +664,12 @@ def _pool_stock_map(
 
 
 def get_district_stock_rows(db: Session, district_code: str):
+    cache_key = str(district_code)
+    now = time.time()
+    cached = _DISTRICT_STOCK_CACHE.get(cache_key)
+    if cached and (now - float(cached[0])) <= _STOCK_CACHE_TTL_SEC:
+        return [dict(row) for row in cached[1]]
+
     scenario_id = _latest_scenario_id(db)
     latest_run_id = get_latest_solver_run_id(db)
     district_state = db.query(District.state_code).filter(District.district_code == str(district_code)).first()
@@ -599,27 +692,44 @@ def get_district_stock_rows(db: Session, district_code: str):
         _load_national_stock_csv(),
         resource_ids,
     )
-    district_adj_map, state_adj_map, national_adj_map = get_refill_adjustment_maps(db)
+    # Keep raw effective stock for dashboard display so refill/consumption deltas remain visible.
+    district_adj_map, state_adj_map, national_adj_map = get_refill_adjustment_maps(db, include_solver_debits=False)
     state_pool_map = _pool_stock_map(db, state_code=state_code)
     national_pool_map = _pool_stock_map(db, state_code="NATIONAL")
     in_transit_map = _in_transit_for_district_map(db, latest_run_id, district_code)
-    return [
-        {
+    rows = []
+    for rid in resource_ids:
+        district_base = float(district_map.get(rid, 0.0))
+        state_base = float(state_map.get(rid, 0.0))
+        national_base = float(national_map.get(rid, 0.0))
+
+        district_adj = float(district_adj_map.get((str(district_code), rid), 0.0))
+        state_adj = float(state_adj_map.get((str(state_code), rid), 0.0)) + float(state_pool_map.get(rid, 0.0))
+        national_adj = float(national_adj_map.get(rid, 0.0)) + float(national_pool_map.get(rid, 0.0))
+
+        district_stock = _apply_adjustment_with_floor(district_base, district_adj, keep_ratio=0.25)
+        state_stock = _apply_adjustment_with_floor(state_base, state_adj, keep_ratio=0.20)
+        national_stock = _apply_adjustment_with_floor(national_base, national_adj, keep_ratio=0.15)
+
+        rows.append({
             "resource_id": rid,
-            "district_stock": max(0.0, float(district_map.get(rid, 0.0)) + float(district_adj_map.get((str(district_code), rid), 0.0))),
-            "state_stock": max(0.0, float(state_map.get(rid, 0.0)) + float(state_adj_map.get((str(state_code), rid), 0.0)) + float(state_pool_map.get(rid, 0.0))),
-            "national_stock": max(0.0, float(national_map.get(rid, 0.0)) + float(national_adj_map.get(rid, 0.0)) + float(national_pool_map.get(rid, 0.0))),
+            "district_stock": district_stock,
+            "state_stock": state_stock,
+            "national_stock": national_stock,
             "in_transit": float(in_transit_map.get(rid, 0.0)),
-            "available_stock": max(0.0, float(district_map.get(rid, 0.0)) + float(district_adj_map.get((str(district_code), rid), 0.0)))
-            + max(0.0, float(state_map.get(rid, 0.0)) + float(state_adj_map.get((str(state_code), rid), 0.0)) + float(state_pool_map.get(rid, 0.0)))
-            + max(0.0, float(national_map.get(rid, 0.0)) + float(national_adj_map.get(rid, 0.0)) + float(national_pool_map.get(rid, 0.0)))
-            - float(in_transit_map.get(rid, 0.0)),
-        }
-        for rid in resource_ids
-    ]
+            "available_stock": district_stock + state_stock + national_stock - float(in_transit_map.get(rid, 0.0)),
+        })
+    _DISTRICT_STOCK_CACHE[cache_key] = (now, [dict(row) for row in rows])
+    return rows
 
 
 def get_state_stock_rows(db: Session, state_code: str):
+    cache_key = str(state_code)
+    now = time.time()
+    cached = _STATE_STOCK_CACHE.get(cache_key)
+    if cached and (now - float(cached[0])) <= _STOCK_CACHE_TTL_SEC:
+        return [dict(row) for row in cached[1]]
+
     scenario_id = _latest_scenario_id(db)
     latest_run_id = get_latest_solver_run_id(db)
     resource_ids = _canonical_resource_ids(db)
@@ -633,26 +743,37 @@ def get_state_stock_rows(db: Session, state_code: str):
         _load_national_stock_csv(),
         resource_ids,
     )
-    _, state_adj_map, national_adj_map = get_refill_adjustment_maps(db)
+    # Keep raw effective stock for dashboard display so refill/consumption deltas remain visible.
+    _, state_adj_map, national_adj_map = get_refill_adjustment_maps(db, include_solver_debits=False)
     state_pool_map = _pool_stock_map(db, state_code=state_code)
     national_pool_map = _pool_stock_map(db, state_code="NATIONAL")
     in_transit_map = _in_transit_for_state_map(db, latest_run_id, state_code)
-    return [
-        {
+    rows = []
+    for rid in resource_ids:
+        state_base = float(state_map.get(rid, 0.0))
+        national_base = float(national_map.get(rid, 0.0))
+        state_adj = float(state_adj_map.get((str(state_code), rid), 0.0)) + float(state_pool_map.get(rid, 0.0))
+        national_adj = float(national_adj_map.get(rid, 0.0)) + float(national_pool_map.get(rid, 0.0))
+        state_stock = _apply_adjustment_with_floor(state_base, state_adj, keep_ratio=0.20)
+        national_stock = _apply_adjustment_with_floor(national_base, national_adj, keep_ratio=0.15)
+        rows.append({
             "resource_id": rid,
             "district_stock": 0.0,
-            "state_stock": max(0.0, float(state_map.get(rid, 0.0)) + float(state_adj_map.get((str(state_code), rid), 0.0)) + float(state_pool_map.get(rid, 0.0))),
-            "national_stock": max(0.0, float(national_map.get(rid, 0.0)) + float(national_adj_map.get(rid, 0.0)) + float(national_pool_map.get(rid, 0.0))),
+            "state_stock": state_stock,
+            "national_stock": national_stock,
             "in_transit": float(in_transit_map.get(rid, 0.0)),
-            "available_stock": max(0.0, float(state_map.get(rid, 0.0)) + float(state_adj_map.get((str(state_code), rid), 0.0)) + float(state_pool_map.get(rid, 0.0)))
-            + max(0.0, float(national_map.get(rid, 0.0)) + float(national_adj_map.get(rid, 0.0)) + float(national_pool_map.get(rid, 0.0)))
-            - float(in_transit_map.get(rid, 0.0)),
-        }
-        for rid in resource_ids
-    ]
+            "available_stock": state_stock + national_stock - float(in_transit_map.get(rid, 0.0)),
+        })
+    _STATE_STOCK_CACHE[cache_key] = (now, [dict(row) for row in rows])
+    return rows
 
 
 def get_national_stock_rows(db: Session):
+    global _NATIONAL_STOCK_CACHE
+    now = time.time()
+    if _NATIONAL_STOCK_CACHE and (now - float(_NATIONAL_STOCK_CACHE[0])) <= _STOCK_CACHE_TTL_SEC:
+        return [dict(row) for row in _NATIONAL_STOCK_CACHE[1]]
+
     scenario_id = _latest_scenario_id(db)
     latest_run_id = get_latest_solver_run_id(db)
     resource_ids = _canonical_resource_ids(db)
@@ -661,17 +782,22 @@ def get_national_stock_rows(db: Session):
         _load_national_stock_csv(),
         resource_ids,
     )
+    # Keep raw effective stock for dashboard display so refill/consumption deltas remain visible.
     global_pool_map = _pool_stock_map(db, state_code="NATIONAL")
-    _, _, national_adj_map = get_refill_adjustment_maps(db)
+    _, _, national_adj_map = get_refill_adjustment_maps(db, include_solver_debits=False)
     in_transit_map = _in_transit_national_map(db, latest_run_id)
-    return [
-        {
+    rows = []
+    for rid in resource_ids:
+        national_base = float(national_map.get(rid, 0.0))
+        national_adj = float(national_adj_map.get(rid, 0.0)) + float(global_pool_map.get(rid, 0.0))
+        national_stock = _apply_adjustment_with_floor(national_base, national_adj, keep_ratio=0.15)
+        rows.append({
             "resource_id": rid,
             "district_stock": 0.0,
             "state_stock": 0.0,
-            "national_stock": max(0.0, float(national_map.get(rid, 0.0)) + float(national_adj_map.get(rid, 0.0)) + float(global_pool_map.get(rid, 0.0))),
+            "national_stock": national_stock,
             "in_transit": float(in_transit_map.get(rid, 0.0)),
-            "available_stock": max(0.0, float(national_map.get(rid, 0.0)) + float(national_adj_map.get(rid, 0.0)) + float(global_pool_map.get(rid, 0.0))) - float(in_transit_map.get(rid, 0.0)),
-        }
-        for rid in resource_ids
-    ]
+            "available_stock": national_stock - float(in_transit_map.get(rid, 0.0)),
+        })
+    _NATIONAL_STOCK_CACHE = (now, [dict(row) for row in rows])
+    return rows

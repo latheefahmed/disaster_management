@@ -12,4 +12,6 @@ class MutualAidOffer(Base):
     offering_state = Column(String, nullable=False, index=True)
     quantity_offered = Column(Float, nullable=False)
     status = Column(String, nullable=False, default="pending", index=True)
+    auto_accepted = Column(Integer, nullable=False, default=0)
+    approval_source = Column(String, nullable=True)
     created_at = Column(DateTime, default=datetime.utcnow)

@@ -66,10 +66,19 @@ class Phase9MutualAidTests(unittest.TestCase):
 
         offer_1 = create_mutual_aid_offer(self.db, req.id, "20", 40.0)
         offer_2 = create_mutual_aid_offer(self.db, req.id, "30", 60.0)
-        offer_3 = create_mutual_aid_offer(self.db, req.id, "20", 10.0)
+        
+        # Test creation of pool transactions
+        pool_tx_count_before = self.db.query(PoolTransaction).count()
 
         a1 = respond_to_offer(self.db, offer_1.id, "accepted", actor_state="10")
         self.assertEqual(str(a1.status), "accepted")
+        
+        pool_txs = self.db.query(PoolTransaction).filter(PoolTransaction.id > pool_tx_count_before).all()
+        self.assertEqual(len(pool_txs), 2)
+        sent_tx = next(t for t in pool_txs if t.quantity_delta < 0)
+        recv_tx = next(t for t in pool_txs if t.quantity_delta > 0)
+        self.assertEqual(sent_tx.state_code, "20")
+        self.assertEqual(recv_tx.state_code, "10")
 
         refreshed_req = self.db.query(MutualAidRequest).filter(MutualAidRequest.id == req.id).first()
         self.assertEqual(str(refreshed_req.status), "partially_filled")
@@ -79,9 +88,10 @@ class Phase9MutualAidTests(unittest.TestCase):
 
         refreshed_req = self.db.query(MutualAidRequest).filter(MutualAidRequest.id == req.id).first()
         self.assertEqual(str(refreshed_req.status), "satisfied")
-
-        pending_after = self.db.query(MutualAidOffer).filter(MutualAidOffer.id == offer_3.id).first()
-        self.assertEqual(str(pending_after.status), "revoked")
+        
+        with self.assertRaises(ValueError) as context:
+            create_mutual_aid_offer(self.db, req.id, "20", 10.0)
+        self.assertIn("closed", str(context.exception))
 
     def test_state_stock_override_uses_only_confirmed_transfers(self):
         req = create_mutual_aid_request(self.db, "10", "101", "R10", 100.0, 1)

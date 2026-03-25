@@ -8,6 +8,8 @@ from app.models.resource import Resource
 from app.services.resource_policy import get_resource_policy, get_resource_unit
 from app.services.canonical_resources import (
     CANONICAL_RESOURCE_ORDER,
+    CANONICAL_RESOURCE_NAME,
+    CANONICAL_RESOURCE_UNIT,
     CANONICAL_RESOURCE_CATEGORY,
     CANONICAL_RESOURCE_CLASS,
     CANONICAL_RESOURCE_COUNT_TYPE,
@@ -67,26 +69,29 @@ def get_districts(
 def get_resources(db: Session = Depends(get_db)):
     rows = db.query(Resource).all()
     by_id = {str(r.resource_id): r for r in rows}
-    ordered = [by_id[rid] for rid in CANONICAL_RESOURCE_ORDER if rid in by_id]
-    if not ordered:
-        ordered = list(rows)
-
-    return [
-        {
-            "resource_id": r.resource_id,
-            "label": r.resource_name or r.resource_id,
-            "unit": r.unit or get_resource_unit(r.resource_id),
-            "canonical_name": r.canonical_name,
-            "resource_name": r.resource_name,
-            "ethical_priority": r.ethical_priority,
-            "category": CANONICAL_RESOURCE_CATEGORY.get(r.resource_id),
-            "class": CANONICAL_RESOURCE_CLASS.get(r.resource_id),
-            "count_type": CANONICAL_RESOURCE_COUNT_TYPE.get(r.resource_id),
-            "max_reasonable_quantity": float(MAX_PER_RESOURCE.get(r.resource_id, 0.0)),
-            **get_resource_policy(r.resource_id)
-        }
-        for r in ordered
-    ]
+    # Always project labels/units from canonical resource dictionary.
+    # This prevents corrupted DB display names from mismatching a canonical resource_id.
+    payload = []
+    for rid in CANONICAL_RESOURCE_ORDER:
+        db_row = by_id.get(rid)
+        canonical_name = CANONICAL_RESOURCE_NAME.get(rid, rid)
+        canonical_unit = CANONICAL_RESOURCE_UNIT.get(rid) or get_resource_unit(rid)
+        payload.append(
+            {
+                "resource_id": rid,
+                "label": canonical_name,
+                "unit": canonical_unit,
+                "canonical_name": canonical_name,
+                "resource_name": canonical_name,
+                "ethical_priority": float(db_row.ethical_priority) if db_row and db_row.ethical_priority is not None else 1.0,
+                "category": CANONICAL_RESOURCE_CATEGORY.get(rid),
+                "class": CANONICAL_RESOURCE_CLASS.get(rid),
+                "count_type": CANONICAL_RESOURCE_COUNT_TYPE.get(rid),
+                "max_reasonable_quantity": float(MAX_PER_RESOURCE.get(rid, 0.0)),
+                **get_resource_policy(rid),
+            }
+        )
+    return payload
 
 
 @router.get("/read-model/district/{district_code}")

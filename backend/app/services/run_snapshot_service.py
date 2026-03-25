@@ -254,5 +254,5 @@ def persist_solver_run_snapshot(db: Session, solver_run_id: int) -> dict:
     snapshot = build_solver_run_snapshot(db, int(solver_run_id))
     run = db.query(SolverRun).filter(SolverRun.id == int(solver_run_id)).first()
     if run is not None:
-        run.summary_snapshot_json = json.dumps(snapshot, separators=(",", ":"))
+        run.summary_snapshot_json = json.dumps(snapshot, separators=(",", ":"), default=str)
     return snapshot

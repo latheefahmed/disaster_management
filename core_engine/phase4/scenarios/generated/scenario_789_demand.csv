@@ -1,0 +1,3 @@
+district_code,resource_id,time,demand,priority,urgency,time_index
+1,R3,1,80.03800050977242,1.0,1.0,1.0
+10,R3,1,80.06044517582463,5.0,5.0,1.0

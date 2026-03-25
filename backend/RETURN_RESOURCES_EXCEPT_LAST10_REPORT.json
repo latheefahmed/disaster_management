@@ -1,0 +1,8 @@
+{
+  "timestamp": "2026-03-05T01:14:08.043077Z",
+  "status": "skipped_already_applied",
+  "db": "C:\\Users\\LATHEEF\\Desktop\\disaster_management\\backend\\backend.db",
+  "backup": "C:\\Users\\LATHEEF\\Desktop\\disaster_management\\backend\\backend_pre_return_except_last10_20260305_064405.db",
+  "reason": "global_return_excluding_last0",
+  "actor_id": "global_return_except_last0_attempt_1"
+}

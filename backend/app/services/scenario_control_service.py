@@ -27,7 +27,7 @@ _INTENSITY_RATIOS: dict[str, float] = {
     "medium": 1.00,
     "medium_high": 1.25,
     "high": 1.50,
-    "extremely_high": 1.79,
+    "extremely_high": 2.00,
 }
 
 _PRESET_ALIASES: dict[str, str] = {
@@ -245,27 +245,63 @@ def build_randomizer_preview(db: Session, scenario_id: int, config: dict[str, An
 
     selected_state_codes = list(dict.fromkeys([str(x) for x in (payload.get("state_codes") or []) if str(x).strip()]))
     selected_district_codes = list(dict.fromkeys([str(x) for x in (payload.get("district_codes") or []) if str(x).strip()]))
+    state_district_map = payload.get("state_district_map") or {}
+    if isinstance(state_district_map, dict):
+        for raw_state_code, district_list in state_district_map.items():
+            state_code = str(raw_state_code).strip()
+            if not state_code:
+                continue
+            if state_code not in selected_state_codes:
+                selected_state_codes.append(state_code)
+            if isinstance(district_list, list):
+                for district_code in district_list:
+                    d = str(district_code).strip()
+                    if d and d not in selected_district_codes:
+                        selected_district_codes.append(d)
     selected_resource_ids = list(dict.fromkeys([str(x) for x in (payload.get("resource_ids") or []) if str(x).strip()]))
+    requested_district_count = max(1, _safe_int(payload.get("district_count"), 1))
+    requested_resource_count = max(1, _safe_int(payload.get("resource_count"), 1))
 
-    if not selected_district_codes:
-        raise ValueError("Randomizer requires explicit district selection from Hierarchical Selector")
-    if not selected_resource_ids:
-        raise ValueError("Randomizer requires explicit resource selection from Hierarchical Selector")
+    all_district_rows = db.query(District).order_by(District.state_code.asc(), District.district_code.asc()).all()
+    all_district_map = {str(d.district_code): str(d.state_code or "") for d in all_district_rows}
 
-    districts_query = db.query(District)
+    for district_code in selected_district_codes:
+        state_code = all_district_map.get(str(district_code))
+        if state_code and state_code not in selected_state_codes:
+            selected_state_codes.append(str(state_code))
+
+    district_codes = [d for d in selected_district_codes if d in all_district_map]
+
     if selected_state_codes:
-        districts_query = districts_query.filter(District.state_code.in_(selected_state_codes))
-    districts_all = districts_query.order_by(District.state_code.asc(), District.district_code.asc()).all()
-    districts_map = {str(d.district_code): str(d.state_code or "") for d in districts_all}
+        candidate_district_codes = [
+            str(d.district_code)
+            for d in all_district_rows
+            if str(d.state_code or "") in set(selected_state_codes)
+        ]
+    else:
+        candidate_district_codes = [str(d.district_code) for d in all_district_rows]
 
-    district_codes = [d for d in selected_district_codes if d in districts_map]
+    if not district_codes:
+        if not candidate_district_codes:
+            raise ValueError("No valid districts found in selected state scope")
+        if requested_district_count >= len(candidate_district_codes):
+            district_codes = list(candidate_district_codes)
+        else:
+            district_codes = sorted(rng.sample(candidate_district_codes, requested_district_count))
+
+    districts_map = {d: str(all_district_map.get(d, "")) for d in district_codes}
 
     resources_all = [str(r.resource_id) for r in db.query(Resource).order_by(Resource.resource_id.asc()).all()]
     resources_set = set(resources_all)
     resource_ids = [r for r in selected_resource_ids if r in resources_set]
+    if not resource_ids:
+        if not resources_all:
+            raise ValueError("No resources available for randomizer")
+        if requested_resource_count >= len(resources_all):
+            resource_ids = list(resources_all)
+        else:
+            resource_ids = sorted(rng.sample(resources_all, requested_resource_count))
 
-    if not district_codes:
-        raise ValueError("No valid districts found in selected state scope")
     if not resource_ids:
         raise ValueError("No valid resources found in selection")
 
@@ -333,6 +369,11 @@ def build_randomizer_preview(db: Session, scenario_id: int, config: dict[str, An
 
     total_available_supply = float(sum(float(x["pair_supply"]) for x in pair_contexts))
     ratio = float(_INTENSITY_RATIOS[preset])
+    max_demand_supply_ratio = _safe_float(payload.get("max_demand_supply_ratio"), 3.0)
+    max_demand_supply_ratio = max(0.1, min(5.0, max_demand_supply_ratio))
+    if ratio > max_demand_supply_ratio:
+        warnings.append(f"ratio_clamped_to_{max_demand_supply_ratio}")
+        ratio = float(max_demand_supply_ratio)
     target_total_demand = float(round(total_available_supply * ratio, 2))
 
     if total_available_supply <= 1e-9:
@@ -417,7 +458,12 @@ def build_randomizer_preview(db: Session, scenario_id: int, config: dict[str, An
         "latest_live_run_id": _latest_live_completed_run_id(db),
         "district_count": len(district_codes),
         "resource_count": len(resource_ids),
+        "district_count_requested": int(requested_district_count),
+        "resource_count_requested": int(requested_resource_count),
+        "district_selection_mode": ("explicit" if selected_district_codes else "random_count"),
+        "resource_selection_mode": ("explicit" if selected_resource_ids else "random_count"),
         "selected_districts": district_codes,
+        "selected_states": sorted({str(districts_map.get(d, "")) for d in district_codes if str(districts_map.get(d, ""))}),
         "selected_resources": resource_ids,
         "row_count": len(rows),
         "total_quantity": float(round(total_qty, 2)),

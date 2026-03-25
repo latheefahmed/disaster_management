@@ -28,7 +28,7 @@ type AllocationRow = {
   allocated_quantity: number
 }
 
-type Urgency = "Low" | "Medium" | "High" | "Critical"
+type Urgency = "Low" | "Medium" | "High" | "Critical" | "Highly Critical"
 
 type ExistingRequest = {
   id: number
@@ -63,6 +63,12 @@ type DraftRequest = {
   notes?: string
 }
 
+type DraftInputState = {
+  quantity: string
+  time: string
+  confidence: string
+}
+
 /* ---------------- COMPONENT ---------------- */
 
 export default function DistrictRequest() {
@@ -84,6 +90,12 @@ export default function DistrictRequest() {
     urgency: "",
     confidence: 1,
     source: "human"
+  })
+
+  const [activeDraftInput, setActiveDraftInput] = useState<DraftInputState>({
+    quantity: '0',
+    time: '0',
+    confidence: '1',
   })
 
   const [error, setError] = useState<string | null>(null)
@@ -143,7 +155,8 @@ export default function DistrictRequest() {
     if (value === 'Low') return 1
     if (value === 'Medium') return 2
     if (value === 'High') return 3
-    return 4
+    if (value === 'Critical') return 4
+    return 5
   }
 
   function predictionTooltip(req: ExistingRequest): string {
@@ -209,45 +222,72 @@ export default function DistrictRequest() {
     return null
   }
 
+  function parseDraftNumberInput(value: string): number | null {
+    if (value.trim() === '') return null
+    const parsed = Number(value)
+    return Number.isFinite(parsed) ? parsed : null
+  }
+
   /* ---------------- ACTIONS ---------------- */
 
   function addDraft() {
     setError(null)
     setSuccess(null)
 
-    const validationError = validateDraft(activeDraft)
+    const parsedTime = parseDraftNumberInput(activeDraftInput.time)
+    const parsedQuantity = parseDraftNumberInput(activeDraftInput.quantity)
+    const parsedConfidence = parseDraftNumberInput(activeDraftInput.confidence)
+
+    if (parsedTime == null || parsedQuantity == null || parsedConfidence == null) {
+      setError('Time, Quantity and Confidence are required numbers.')
+      return
+    }
+
+    const normalizedDraft: DraftRequest = {
+      ...activeDraft,
+      time: parsedTime,
+      quantity: parsedQuantity,
+      confidence: parsedConfidence,
+    }
+
+    const validationError = validateDraft(normalizedDraft)
     if (validationError) {
       setError(validationError)
       return
     }
 
     const existingIndex = drafts.findIndex(d => (
-      d.resource_id === activeDraft.resource_id &&
-      d.time === activeDraft.time &&
-      (d.priority ?? null) === (activeDraft.priority ?? null) &&
-      d.urgency === activeDraft.urgency &&
-      d.source === activeDraft.source
+      d.resource_id === normalizedDraft.resource_id &&
+      d.time === normalizedDraft.time &&
+      (d.priority ?? null) === (normalizedDraft.priority ?? null) &&
+      d.urgency === normalizedDraft.urgency &&
+      d.source === normalizedDraft.source
     ))
 
     if (existingIndex >= 0) {
       const next = [...drafts]
       next[existingIndex] = {
         ...next[existingIndex],
-        quantity: Number(next[existingIndex].quantity) + Number(activeDraft.quantity),
+        quantity: Number(next[existingIndex].quantity) + Number(normalizedDraft.quantity),
       }
       setDrafts(next)
     } else {
-      setDrafts([...drafts, activeDraft])
+      setDrafts([...drafts, normalizedDraft])
     }
 
     setActiveDraft({
       resource_id: "",
       quantity: 0,
-      time: activeDraft.time,
+      time: normalizedDraft.time,
       priority: null,
       urgency: "",
       confidence: 1,
       source: "human"
+    })
+    setActiveDraftInput({
+      quantity: '0',
+      time: String(normalizedDraft.time),
+      confidence: '1',
     })
   }
 
@@ -356,13 +396,16 @@ export default function DistrictRequest() {
               <input
                 type="number"
                 min={0}
-                value={activeDraft.time}
-                onChange={e =>
+                value={activeDraftInput.time}
+                onChange={e => {
+                  const nextValue = e.target.value
+                  const parsed = parseDraftNumberInput(nextValue)
+                  setActiveDraftInput(prev => ({ ...prev, time: nextValue }))
                   setActiveDraft({
                     ...activeDraft,
-                    time: Number(e.target.value)
+                    time: parsed ?? 0
                   })
-                }
+                }}
                 className="w-full border rounded px-3 py-2"
               />
             </div>
@@ -372,13 +415,16 @@ export default function DistrictRequest() {
               <input
                 type="number"
                 min={1}
-                value={activeDraft.quantity}
-                onChange={e =>
+                value={activeDraftInput.quantity}
+                onChange={e => {
+                  const nextValue = e.target.value
+                  const parsed = parseDraftNumberInput(nextValue)
+                  setActiveDraftInput(prev => ({ ...prev, quantity: nextValue }))
                   setActiveDraft({
                     ...activeDraft,
-                    quantity: Number(e.target.value)
+                    quantity: parsed ?? 0
                   })
-                }
+                }}
                 className="w-full border rounded px-3 py-2"
               />
             </div>
@@ -418,6 +464,7 @@ export default function DistrictRequest() {
                 <option>Medium</option>
                 <option>High</option>
                 <option>Critical</option>
+                <option>Highly Critical</option>
               </select>
             </div>
 
@@ -428,13 +475,16 @@ export default function DistrictRequest() {
                 min={0}
                 max={1}
                 step={0.01}
-                value={activeDraft.confidence}
-                onChange={e =>
+                value={activeDraftInput.confidence}
+                onChange={e => {
+                  const nextValue = e.target.value
+                  const parsed = parseDraftNumberInput(nextValue)
+                  setActiveDraftInput(prev => ({ ...prev, confidence: nextValue }))
                   setActiveDraft({
                     ...activeDraft,
-                    confidence: Number(e.target.value)
+                    confidence: parsed ?? 0
                   })
-                }
+                }}
                 className="w-full border rounded px-3 py-2"
               />
             </div>

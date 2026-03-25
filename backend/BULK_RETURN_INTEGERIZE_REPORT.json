@@ -1,0 +1,207 @@
+{
+  "timestamp": "2026-03-24T11:27:46.431326Z",
+  "db": "C:\\Users\\LATHEEF\\Desktop\\disaster_management\\backend\\backend.db",
+  "backup": "C:\\Users\\LATHEEF\\Desktop\\disaster_management\\backend\\backend_pre_bulk_return_integerize_20260324_165744.db",
+  "latest_live_run_id": 1799,
+  "latest_scenario_id": 975,
+  "allocation_return_pass": {
+    "rows_scanned": 121642,
+    "rows_updated": 121642,
+    "returns_inserted": 10408,
+    "kept_latest_20": 20
+  },
+  "integerize_pass": {
+    "tables": {
+      "requests": {
+        "columns": [
+          "quantity",
+          "allocated_quantity",
+          "unmet_quantity",
+          "final_demand_quantity"
+        ],
+        "rows": 426,
+        "row_updates": 77,
+        "cell_changes": 111
+      },
+      "claims": {
+        "columns": [
+          "quantity"
+        ],
+        "rows": 258,
+        "row_updates": 0,
+        "cell_changes": 0
+      },
+      "consumptions": {
+        "columns": [
+          "quantity"
+        ],
+        "rows": 77,
+        "row_updates": 0,
+        "cell_changes": 0
+      },
+      "returns": {
+        "columns": [
+          "quantity"
+        ],
+        "rows": 120637,
+        "row_updates": 0,
+        "cell_changes": 0
+      },
+      "allocations": {
+        "columns": [
+          "allocated_quantity",
+          "claimed_quantity",
+          "consumed_quantity",
+          "returned_quantity",
+          "overflow_reconciled_quantity"
+        ],
+        "rows": 137167,
+        "row_updates": 44,
+        "cell_changes": 44
+      },
+      "scenario_requests": {
+        "columns": [
+          "quantity"
+        ],
+        "rows": 426114,
+        "row_updates": 17445,
+        "cell_changes": 17445
+      },
+      "scenario_state_stock": {
+        "columns": [
+          "quantity"
+        ],
+        "rows": 2011,
+        "row_updates": 0,
+        "cell_changes": 0
+      },
+      "scenario_national_stock": {
+        "columns": [
+          "quantity"
+        ],
+        "rows": 91,
+        "row_updates": 16,
+        "cell_changes": 16
+      },
+      "pool_transactions": {
+        "columns": [
+          "quantity_delta"
+        ],
+        "rows": 3553,
+        "row_updates": 1470,
+        "cell_changes": 1470
+      },
+      "final_demands": {
+        "columns": [
+          "demand_quantity"
+        ],
+        "rows": 3441535,
+        "row_updates": 0,
+        "cell_changes": 0
+      },
+      "demand_learning_events": {
+        "columns": [
+          "baseline_demand",
+          "human_demand",
+          "final_demand",
+          "allocated",
+          "unmet"
+        ],
+        "rows": 26880,
+        "row_updates": 0,
+        "cell_changes": 0
+      },
+      "priority_urgency_events": {
+        "columns": [
+          "baseline_demand",
+          "human_quantity",
+          "final_demand",
+          "allocated",
+          "unmet"
+        ],
+        "rows": 525,
+        "row_updates": 0,
+        "cell_changes": 0
+      },
+      "inventory_snapshots": {
+        "columns": [
+          "quantity"
+        ],
+        "rows": 3416789,
+        "row_updates": 29669,
+        "cell_changes": 29669
+      },
+      "shipment_plans": {
+        "columns": [
+          "quantity"
+        ],
+        "rows": 113215,
+        "row_updates": 1129,
+        "cell_changes": 1129
+      },
+      "mutual_aid_requests": {
+        "columns": [
+          "quantity_requested"
+        ],
+        "rows": 5366,
+        "row_updates": 4,
+        "cell_changes": 4
+      },
+      "mutual_aid_offers": {
+        "columns": [
+          "quantity_offered"
+        ],
+        "rows": 2248,
+        "row_updates": 751,
+        "cell_changes": 751
+      },
+      "state_transfers": {
+        "columns": [
+          "quantity",
+          "consumed_in_run_id"
+        ],
+        "rows": 2212,
+        "row_updates": 735,
+        "cell_changes": 735
+      },
+      "adaptive_metrics": {
+        "columns": [
+          "unmet_ratio"
+        ],
+        "rows": 803,
+        "row_updates": 16,
+        "cell_changes": 16
+      },
+      "canonical_resources": {
+        "columns": [
+          "max_reasonable_quantity"
+        ],
+        "rows": 56,
+        "row_updates": 0,
+        "cell_changes": 0
+      },
+      "stock_refill_transactions": {
+        "columns": [
+          "quantity_delta"
+        ],
+        "rows": 690156,
+        "row_updates": 1932,
+        "cell_changes": 1932
+      }
+    },
+    "total_cell_changes": 53322
+  },
+  "nonzero_stock_floor_pass": {
+    "inventory_snapshots_updated": 31,
+    "scenario_state_stock_updated": 0,
+    "scenario_national_stock_updated": 0
+  },
+  "validation": {
+    "allocations_non_int_like_qty_rows": 0,
+    "allocations_older_than_latest20_not_returned": 0,
+    "latest_inventory_nonzero_rows": 31,
+    "latest_inventory_zero_or_negative_rows": 0,
+    "latest_state_stock_zero_or_negative_rows": 0,
+    "latest_national_stock_zero_or_negative_rows": 0
+  }
+}

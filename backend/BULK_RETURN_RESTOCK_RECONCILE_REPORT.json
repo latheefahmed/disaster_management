@@ -1,0 +1,86 @@
+{
+  "timestamp": "2026-03-04T16:16:58.791889Z",
+  "status": "applied",
+  "db": "C:\\Users\\LATHEEF\\Desktop\\disaster_management\\backend\\backend.db",
+  "backup": "C:\\Users\\LATHEEF\\Desktop\\disaster_management\\backend\\backend_pre_bulk_return_integerize_20260304_213517.db",
+  "alloc_rows_with_new_return_delta": 465462,
+  "credit_rows_inserted": 149022,
+  "total_credit_quantity": 17651854.076,
+  "top_credits": [
+    {
+      "scope": "national",
+      "resource_id": "R7",
+      "quantity": 2730666.0
+    },
+    {
+      "scope": "state",
+      "resource_id": "R7",
+      "quantity": 2165248.0
+    },
+    {
+      "scope": "district",
+      "resource_id": "R7",
+      "quantity": 607771.0
+    },
+    {
+      "scope": "national",
+      "resource_id": "R18",
+      "quantity": 551340.0
+    },
+    {
+      "scope": "national",
+      "resource_id": "R52",
+      "quantity": 550641.0
+    },
+    {
+      "scope": "national",
+      "resource_id": "R48",
+      "quantity": 425620.0
+    },
+    {
+      "scope": "national",
+      "resource_id": "R43",
+      "quantity": 331674.0
+    },
+    {
+      "scope": "national",
+      "resource_id": "R4",
+      "quantity": 323862.0
+    },
+    {
+      "scope": "national",
+      "resource_id": "R10",
+      "quantity": 299702.0
+    },
+    {
+      "scope": "national",
+      "resource_id": "R11",
+      "quantity": 280032.0
+    },
+    {
+      "scope": "national",
+      "resource_id": "R3",
+      "quantity": 264695.0
+    },
+    {
+      "scope": "national",
+      "resource_id": "R39",
+      "quantity": 250018.0
+    },
+    {
+      "scope": "national",
+      "resource_id": "R8",
+      "quantity": 249366.0
+    },
+    {
+      "scope": "state",
+      "resource_id": "R12",
+      "quantity": 248388.0
+    },
+    {
+      "scope": "state",
+      "resource_id": "R30",
+      "quantity": 236800.0
+    }
+  ]
+}

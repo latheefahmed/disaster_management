@@ -1,0 +1,1681 @@
+QUERY_PLAN {'sql': 'SELECT solver_run_id, district_code, resource_id, time, SUM(allocated_quantity) FROM allocations WHERE state_code=:state_code AND is_unmet=0 GROUP BY solver_run_id, district_code, resource_id, time', 'plan': [(7, 0, 0, 'SEARCH allocations USING INDEX idx_allocations_state_run (state_code=?)'), (16, 0, 0, 'USE TEMP B-TREE FOR GROUP BY')]}
+QUERY_PLAN {'sql': 'SELECT solver_run_id, state_code, district_code, resource_id, time, SUM(allocated_quantity) FROM allocations WHERE is_unmet=0 GROUP BY solver_run_id, state_code, district_code, resource_id, time', 'plan': [(7, 0, 0, 'SCAN allocations USING INDEX idx_allocations_run_state'), (12, 0, 0, 'USE TEMP B-TREE FOR GROUP BY')]}
+QUERY_PLAN {'sql': 'SELECT solver_run_id, SUM(allocated_quantity) FROM allocations WHERE state_code=:state_code AND is_unmet=0 GROUP BY solver_run_id', 'plan': [(7, 0, 0, 'SEARCH allocations USING INDEX idx_allocations_state_run (state_code=?)')]}
+INFO:     127.0.0.1:62988 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62992 - "POST /auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62993 - "POST /admin/scenarios HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62994 - "GET /metadata/states HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62995 - "GET /metadata/districts HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62996 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62997 - "POST /admin/scenarios/317/randomizer/preview HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54855 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59270 - "OPTIONS /admin/scenarios HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51457 - "OPTIONS /metadata/states HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59870 - "OPTIONS /metadata/districts HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52020 - "OPTIONS /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57150 - "OPTIONS /admin/agent/recommendations HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55163 - "OPTIONS /admin/scenarios HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64103 - "OPTIONS /metadata/states HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61451 - "OPTIONS /metadata/districts HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53083 - "OPTIONS /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59136 - "OPTIONS /admin/agent/recommendations HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55163 - "GET /metadata/states HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49835 - "GET /metadata/states HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52493 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49835 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64103 - "GET /metadata/districts HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49835 - "GET /metadata/districts HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/admin/agent/recommendations", "total_ms": 149.827, "db_ms": 149.827, "latency_bucket": "<1s", "rows_scanned": 100, "rows_returned": 100}
+INFO:     127.0.0.1:64340 - "GET /admin/agent/recommendations HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/admin/agent/recommendations", "total_ms": 60.836, "db_ms": 60.836, "latency_bucket": "<1s", "rows_scanned": 100, "rows_returned": 100}
+INFO:     127.0.0.1:49835 - "GET /admin/agent/recommendations HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61242 - "GET /metadata/states HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54278 - "GET /metadata/states HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57150 - "GET /admin/scenarios HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64300 - "GET /metadata/districts?state_code=33 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64300 - "OPTIONS /auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64300 - "POST /auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64300 - "OPTIONS /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49827 - "OPTIONS /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56769 - "OPTIONS /district/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64300 - "OPTIONS /district/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63041 - "OPTIONS /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53496 - "OPTIONS /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63041 - "OPTIONS /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52297 - "OPTIONS /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57062 - "OPTIONS /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53496 - "OPTIONS /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52297 - "OPTIONS /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58918 - "GET /district/allocations/stream?token=4c1af6acf361a219ddee6766f66aae5547e8ada766bc7bd6d386646c18eef83e HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59397 - "OPTIONS /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53496 - "OPTIONS /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60732 - "OPTIONS /district/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56792 - "OPTIONS /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62168 - "OPTIONS /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55624 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60732 - "GET /district/demand-mode HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 28.972, "db_ms": 28.972, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:62168 - "GET /district/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56792 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62168 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62168 - "GET /district/demand-mode HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 1.878, "db_ms": 1.878, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:62168 - "GET /district/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62168 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62168 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62168 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55624 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60732 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 3.77, "db_ms": 3.77, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:62168 - "GET /district/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55624 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60732 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62168 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 237.548, "db_ms": 237.548, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:56792 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 106.675, "db_ms": 106.675, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:62168 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60732 - "GET /metadata/resources HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 2.728, "db_ms": 2.728, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:55624 - "GET /district/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62168 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56792 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62168 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60732 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55624 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 96.809, "db_ms": 96.809, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:55624 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59082 - "GET /admin/scenarios HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 7.74, "db_ms": 7.74, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:59082 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55624 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60732 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56792 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62168 - "GET /district/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59082 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55624 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59082 - "OPTIONS /district/requests?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 102.216, "db_ms": 102.216, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:55624 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 6.577, "db_ms": 6.577, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:62168 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55624 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56792 - "GET /district/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59082 - "GET /district/requests?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59082 - "GET /district/demand-mode HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 4.995, "db_ms": 4.995, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:55624 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62168 - "GET /district/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56792 - "GET /district/requests?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56792 - "GET /district/demand-mode HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 4.434, "db_ms": 4.434, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:59082 - "GET /district/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55624 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62168 - "GET /district/requests?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55624 - "GET /district/requests?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55624 - "GET /district/demand-mode HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 6.983, "db_ms": 6.983, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:62168 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59082 - "GET /district/kpis HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 3.97, "db_ms": 3.97, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:52847 - "GET /district/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62168 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55624 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59082 - "GET /district/requests?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 83.737, "db_ms": 83.737, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:62168 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52847 - "GET /district/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59082 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55624 - "GET /district/requests?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52847 - "GET /district/solver-status HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 5.789, "db_ms": 5.789, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:55624 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62168 - "GET /district/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59082 - "GET /district/requests?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62168 - "GET /district/requests?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 3.152, "db_ms": 3.152, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:62168 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59082 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55624 - "GET /district/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55624 - "OPTIONS /district/run HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55624 - "POST /district/run HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55624 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55624 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55624 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55624 - "GET /district/demand-mode HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 5.608, "db_ms": 5.608, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:59082 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62168 - "GET /district/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59082 - "OPTIONS /district/allocations HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65366 - "OPTIONS /district/requests HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56246 - "OPTIONS /district/allocations HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62286 - "OPTIONS /district/requests HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55624 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62286 - "GET /metadata/resources HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 164.911, "db_ms": 164.911, "latency_bucket": "<1s", "rows_scanned": 100, "rows_returned": 100, "district_code": "603"}
+INFO:     127.0.0.1:64625 - "GET /district/allocations HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 114.819, "db_ms": 114.819, "latency_bucket": "<1s", "rows_scanned": 100, "rows_returned": 100, "district_code": "603"}
+INFO:     127.0.0.1:62286 - "GET /district/allocations HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62286 - "GET /metadata/resources HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 94.69, "db_ms": 94.69, "latency_bucket": "<1s", "rows_scanned": 100, "rows_returned": 100, "district_code": "603"}
+INFO:     127.0.0.1:62286 - "GET /district/allocations HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62168 - "GET /district/requests?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65366 - "GET /district/requests HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65366 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62168 - "GET /district/requests HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 110.118, "db_ms": 110.118, "latency_bucket": "<1s", "rows_scanned": 100, "rows_returned": 100, "district_code": "603"}
+INFO:     127.0.0.1:62168 - "GET /district/allocations HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65366 - "GET /district/requests HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65366 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62168 - "GET /district/requests HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 84.931, "db_ms": 84.931, "latency_bucket": "<1s", "rows_scanned": 100, "rows_returned": 100, "district_code": "603"}
+INFO:     127.0.0.1:62168 - "GET /district/allocations HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62168 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62168 - "GET /metadata/resources HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 89.768, "db_ms": 89.768, "latency_bucket": "<1s", "rows_scanned": 100, "rows_returned": 100, "district_code": "603"}
+INFO:     127.0.0.1:53850 - "GET /district/allocations HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54369 - "GET /district/requests HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53850 - "GET /district/requests HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53850 - "GET /metadata/resources HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 120.236, "db_ms": 120.236, "latency_bucket": "<1s", "rows_scanned": 100, "rows_returned": 100, "district_code": "603"}
+INFO:     127.0.0.1:59576 - "GET /district/allocations HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61802 - "GET /metadata/resources HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 93.99, "db_ms": 93.99, "latency_bucket": "<1s", "rows_scanned": 100, "rows_returned": 100, "district_code": "603"}
+INFO:     127.0.0.1:59149 - "GET /district/allocations HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59576 - "GET /district/requests HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59149 - "GET /district/requests HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59149 - "GET /metadata/resources HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 85.822, "db_ms": 85.822, "latency_bucket": "<1s", "rows_scanned": 100, "rows_returned": 100, "district_code": "603"}
+INFO:     127.0.0.1:58148 - "GET /district/allocations HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58148 - "OPTIONS /district/request-batch HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58148 - "POST /district/request-batch HTTP/1.1" 200 OK
+FINAL_DEMAND_INPUT_SUMMARY {'solver_run_id': 1097, 'rows': 1680, 'distinct_resource_ids': 56, 'min_quantity': 0.0, 'max_quantity': 50000000.0}
+INFO:     127.0.0.1:58148 - "GET /district/requests HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58148 - "GET /metadata/resources HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 104.788, "db_ms": 104.788, "latency_bucket": "<1s", "rows_scanned": 100, "rows_returned": 100, "district_code": "603"}
+INFO:     127.0.0.1:51449 - "GET /district/allocations HTTP/1.1" 200 OK
+=== RUNNING SOLVER ===
+Command: C:\Users\LATHEEF\Desktop\disaster_management\.venv\Scripts\python.exe C:\Users\LATHEEF\Desktop\disaster_management\core_engine\phase4\optimization\just_runs_cbc.py --demand C:\Users\LATHEEF\Desktop\disaster_management\core_engine\phase4\optimization\output\live_demand.csv --district-stock C:\Users\LATHEEF\Desktop\disaster_management\core_engine\phase4\scenarios\generated\live_district_stock_with_refills.csv --state-stock C:\Users\LATHEEF\Desktop\disaster_management\core_engine\phase4\scenarios\generated\live_state_stock_with_refills.csv --national-stock C:\Users\LATHEEF\Desktop\disaster_management\core_engine\phase4\scenarios\generated\live_national_stock_with_refills.csv --horizon 30 --w-unmet 1000000.0 --w-hold 1.0 --w-ship 2.0 --cbc-time-limit 300
+======================
+INFO:     127.0.0.1:64432 - "GET /district/requests HTTP/1.1" 200 OK
+=== SOLVER STDOUT ===
+Welcome to the CBC MILP Solver 
+Version: 2.10.3 
+Build Date: Dec 15 2019 
+
+command line - C:\Users\LATHEEF\Desktop\disaster_management\.venv\Lib\site-packages\pulp\apis\../solverdir/cbc/win/i64/cbc.exe C:\Users\LATHEEF\AppData\Local\Temp\f59eb53379c943a199cc66bcb3cbac35-pulp.mps -sec 300 -timeMode elapsed -branch -printingOptions all -solution C:\Users\LATHEEF\AppData\Local\Temp\f59eb53379c943a199cc66bcb3cbac35-pulp.sol (default strategy 1)
+At line 2 NAME          MODEL
+At line 3 ROWS
+At line 1041 COLUMNS
+At line 3502 RHS
+At line 4539 BOUNDS
+At line 4540 ENDATA
+Problem MODEL has 1036 rows, 764 columns and 2044 elements
+Coin0008I MODEL read with 0 errors
+seconds was changed from 1e+100 to 300
+Option for timeMode changed from cpu to elapsed
+Presolve 77 (-959) rows, 165 (-599) columns and 385 (-1659) elements
+Perturbing problem by 0.001% of 100000 - largest nonzero change 0.09997708 ( 4.9396697%) - largest zero change 0.093168627
+0  Obj 6.7480441e+11 Primal inf 636.63412 (55)
+55  Obj 6.7480443e+11
+Optimal - objective value 6.7099325e+11
+After Postsolve, objective 6.7099325e+11, infeasibilities - dual 0 (0), primal 0 (0)
+Optimal objective 6.709932475e+11 - 55 iterations time 0.002, Presolve 0.00
+Option for printingOptions changed from normal to all
+Total time (CPU seconds):       0.04   (Wallclock seconds):       0.04
+
+MODEL_BUILD_SUMMARY {'window_start': 0, 'window_end': 29, 'DEMAND_ROWS': 56, 'DEMAND_SLOTS': 56, 'INV_PAIRS': 12, 'SHIP_ARCS': 0}
+VARIABLE_COUNT 764
+CONSTRAINT_COUNT 1036
+DEMAND_ROWS 56
+SOLVER_STATUS Optimal
+HAS_FEASIBLE_VALUES True
+Run summary: {'districts': 1, 'resources': 12, 'time_steps': 30, 'horizon': 30, 'rolling': False, 'window_start': 0, 'window_end': 29, 'total_demand': 50000055.0, 'total_stock': 50000055.0, 'total_unmet': 0.0, 'objective': 670993248668.9988, 'status': 'Optimal'}
+
+=== SOLVER STDERR ===
+
+INFO:     127.0.0.1:64432 - "GET /metadata/resources HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 99.605, "db_ms": 99.605, "latency_bucket": "<1s", "rows_scanned": 100, "rows_returned": 100, "district_code": "603"}
+INFO:     127.0.0.1:62982 - "GET /district/allocations HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51449 - "GET /district/requests HTTP/1.1" 200 OK
+Ingested 56 allocations and 0 unmet rows, 372 inventory snapshots and 0 shipment rows
+INFO:     127.0.0.1:51449 - "GET /metadata/resources HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 158.347, "db_ms": 158.347, "latency_bucket": "<1s", "rows_scanned": 100, "rows_returned": 100, "district_code": "603"}
+INFO:     127.0.0.1:63567 - "GET /district/allocations HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65390 - "GET /district/requests HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65390 - "GET /metadata/resources HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 148.912, "db_ms": 148.912, "latency_bucket": "<1s", "rows_scanned": 100, "rows_returned": 100, "district_code": "603"}
+INFO:     127.0.0.1:56050 - "GET /district/allocations HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63567 - "GET /district/requests HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60141 - "GET /district/allocations/stream?token=4c1af6acf361a219ddee6766f66aae5547e8ada766bc7bd6d386646c18eef83e HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63567 - "GET /district/demand-mode HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 5.451, "db_ms": 5.451, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:56050 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65390 - "GET /district/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65390 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60277 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65390 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60277 - "GET /district/solver-status HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 3.421, "db_ms": 3.421, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:65390 - "GET /district/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65390 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60277 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63567 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56147 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 3.63, "db_ms": 3.63, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:65390 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60277 - "GET /district/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63567 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56147 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 214.099, "db_ms": 214.099, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:56050 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60277 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56147 - "GET /district/demand-mode HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 10.983, "db_ms": 10.983, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:65390 - "GET /district/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63567 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56147 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60277 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65390 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 159.255, "db_ms": 159.255, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:56050 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56050 - "GET /district/demand-mode HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 9.686, "db_ms": 9.686, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:65390 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60277 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56147 - "GET /district/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65390 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56050 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60277 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 136.338, "db_ms": 136.338, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:56147 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56147 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60277 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56050 - "GET /metadata/resources HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 8.807, "db_ms": 8.807, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:65390 - "GET /district/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56050 - "GET /district/demand-mode HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 3.695, "db_ms": 3.695, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:56147 - "GET /district/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60277 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65390 - "GET /district/requests?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65390 - "GET /district/demand-mode HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 3.385, "db_ms": 3.385, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:56147 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56050 - "GET /district/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60277 - "GET /district/requests?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60277 - "GET /district/demand-mode HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 4.07, "db_ms": 4.07, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:65390 - "GET /district/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56147 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56050 - "GET /district/requests?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64890 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56147 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64890 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56050 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65390 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64890 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56050 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 190.778, "db_ms": 190.778, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:60277 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 1.95, "db_ms": 1.95, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:60277 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64890 - "GET /district/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56050 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52410 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60732 - "GET /metadata/resources HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 452.896, "db_ms": 452.896, "latency_bucket": "<1s", "rows_scanned": 100, "rows_returned": 100, "district_code": "603"}
+INFO:     127.0.0.1:51667 - "GET /district/allocations HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 129.744, "db_ms": 129.744, "latency_bucket": "<1s", "rows_scanned": 100, "rows_returned": 100, "district_code": "603"}
+INFO:     127.0.0.1:60732 - "GET /district/allocations HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59441 - "GET /district/allocations/stream?token=4c1af6acf361a219ddee6766f66aae5547e8ada766bc7bd6d386646c18eef83e HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60732 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51667 - "GET /district/solver-status HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 5.876, "db_ms": 5.876, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:52410 - "GET /district/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60732 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60732 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60732 - "GET /district/solver-status HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 2.075, "db_ms": 2.075, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:60732 - "GET /district/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57390 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57390 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51667 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60732 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 3.778, "db_ms": 3.778, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:51667 - "GET /district/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57390 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60732 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51667 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 208.399, "db_ms": 208.399, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:52410 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52410 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57401 - "GET /district/requests HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52410 - "GET /district/requests HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60732 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57401 - "GET /district/demand-mode HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 6.824, "db_ms": 6.824, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:57390 - "GET /district/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51667 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57401 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60732 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57390 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 152.523, "db_ms": 152.523, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:52410 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52410 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57564 - "GET /metadata/resources HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 219.644, "db_ms": 219.644, "latency_bucket": "<1s", "rows_scanned": 100, "rows_returned": 100, "district_code": "603"}
+INFO:     127.0.0.1:57390 - "GET /district/allocations HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 119.331, "db_ms": 119.331, "latency_bucket": "<1s", "rows_scanned": 100, "rows_returned": 100, "district_code": "603"}
+INFO:     127.0.0.1:57564 - "GET /district/allocations HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57276 - "GET /district/requests HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56647 - "GET /district/allocations/stream?token=4c1af6acf361a219ddee6766f66aae5547e8ada766bc7bd6d386646c18eef83e HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 5.427, "db_ms": 5.427, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:57276 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57390 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52410 - "GET /district/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57276 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57276 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50874 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57276 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50874 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57390 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 3.771, "db_ms": 3.771, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:57276 - "GET /district/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50874 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57276 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50874 - "GET /district/solver-status HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 1.731, "db_ms": 1.731, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:50874 - "GET /district/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57390 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57276 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 231.938, "db_ms": 231.938, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:52410 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57564 - "GET /district/requests HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57276 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50874 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57390 - "GET /district/solver-status HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 2.013, "db_ms": 2.013, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:57276 - "GET /district/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57390 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 736.698, "db_ms": 736.698, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:50874 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57276 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57564 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52410 - "GET /district/requests HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 4.341, "db_ms": 4.341, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:57564 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57276 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50874 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57390 - "GET /district/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57276 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50874 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57564 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 160.202, "db_ms": 160.202, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:52410 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52410 - "GET /district/demand-mode HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 6.835, "db_ms": 6.835, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:57564 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50874 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57390 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57276 - "GET /district/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52410 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57276 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 113.943, "db_ms": 113.943, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:52410 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57390 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52410 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57276 - "GET /district/solver-status HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 11.687, "db_ms": 11.687, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:57564 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50874 - "GET /district/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57390 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50874 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 123.203, "db_ms": 123.203, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:57390 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57390 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57564 - "GET /metadata/resources HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 9.425, "db_ms": 9.425, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:50874 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57276 - "GET /district/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52410 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57390 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52410 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 100.794, "db_ms": 100.794, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:57390 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57390 - "GET /district/demand-mode HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 8.936, "db_ms": 8.936, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:52410 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57276 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52059 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50874 - "GET /district/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57390 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50874 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 116.113, "db_ms": 116.113, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:57390 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52059 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57390 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50874 - "GET /district/solver-status HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 3.731, "db_ms": 3.731, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:52410 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57276 - "GET /district/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52059 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57276 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 121.38, "db_ms": 121.38, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:52059 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 2.738, "db_ms": 2.738, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:52059 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57276 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52410 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57390 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50874 - "GET /district/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52059 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50874 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 125.036, "db_ms": 125.036, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:52059 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50874 - "GET /district/demand-mode HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 3.216, "db_ms": 3.216, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:52410 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57390 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57276 - "GET /district/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52410 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50874 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57390 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 153.712, "db_ms": 153.712, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:52059 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52410 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57390 - "GET /district/demand-mode HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 10.848, "db_ms": 10.848, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:57276 - "GET /district/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50874 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57390 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52410 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57276 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 179.301, "db_ms": 179.301, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:52059 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 2.409, "db_ms": 2.409, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:57276 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52410 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57390 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50874 - "GET /district/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52410 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57276 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57390 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 265.633, "db_ms": 265.633, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:52059 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57390 - "GET /district/demand-mode HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 6.817, "db_ms": 6.817, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:57276 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52410 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50874 - "GET /district/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57276 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 107.955, "db_ms": 107.955, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:52059 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52410 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57390 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 6.782, "db_ms": 6.782, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:52410 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57276 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52059 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50874 - "GET /district/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57276 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52410 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52059 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 159.687, "db_ms": 159.687, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:57390 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52059 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57276 - "GET /metadata/resources HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 13.018, "db_ms": 13.018, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:50874 - "GET /district/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52410 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57276 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52059 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50874 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 175.863, "db_ms": 175.863, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:57390 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 5.594, "db_ms": 5.594, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:50874 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52059 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57276 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52410 - "GET /district/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52059 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57276 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50874 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 177.239, "db_ms": 177.239, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:57390 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 5.488, "db_ms": 5.488, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:50874 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57276 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52059 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52410 - "GET /district/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57276 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52059 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50874 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 149.195, "db_ms": 149.195, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:57390 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50874 - "GET /district/demand-mode HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 9.851, "db_ms": 9.851, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:52410 - "GET /district/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52059 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57276 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52410 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50874 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52059 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 171.817, "db_ms": 171.817, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:57390 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 3.679, "db_ms": 3.679, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:52059 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52410 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50874 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57276 - "GET /district/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52410 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52059 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50874 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 159.807, "db_ms": 159.807, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:57390 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50874 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52059 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52410 - "GET /metadata/resources HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 9.273, "db_ms": 9.273, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:57276 - "GET /district/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52059 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50874 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52410 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 174.191, "db_ms": 174.191, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:57390 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52059 - "GET /metadata/resources HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 14.364, "db_ms": 14.364, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:52410 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50874 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57276 - "GET /district/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57276 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52410 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57276 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52410 - "GET /district/solver-status HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 3.639, "db_ms": 3.639, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:50874 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52059 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57276 - "GET /district/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52410 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52059 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50874 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 322.15, "db_ms": 322.15, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:57390 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 144.756, "db_ms": 144.756, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:50874 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50874 - "GET /metadata/resources HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 7.239, "db_ms": 7.239, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:57390 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52059 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52410 - "GET /district/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57390 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57276 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52059 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 188.55, "db_ms": 188.55, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:50874 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50874 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52059 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50874 - "GET /district/demand-mode HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 12.672, "db_ms": 12.672, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:57390 - "GET /district/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57276 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50874 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52410 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57390 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 213.912, "db_ms": 213.912, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:52059 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52059 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57390 - "GET /district/demand-mode HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 1.782, "db_ms": 1.782, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:52410 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50874 - "GET /district/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57390 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57276 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52410 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 155.018, "db_ms": 155.018, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:52059 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52059 - "GET /metadata/resources HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 6.264, "db_ms": 6.264, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:57390 - "GET /district/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52410 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57276 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57390 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50874 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52410 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 190.048, "db_ms": 190.048, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:52059 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52059 - "GET /metadata/resources HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 4.59, "db_ms": 4.59, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:52410 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57390 - "GET /district/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50874 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52410 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57276 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57390 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 174.819, "db_ms": 174.819, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:52059 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52059 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57390 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57276 - "GET /district/solver-status HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 19.233, "db_ms": 19.233, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:52410 - "GET /district/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57390 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50874 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57276 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 202.604, "db_ms": 202.604, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:52059 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52059 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57276 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50874 - "GET /district/solver-status HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 2.701, "db_ms": 2.701, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:57390 - "GET /district/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57276 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52410 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50874 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 177.404, "db_ms": 177.404, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:52059 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52059 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57276 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50874 - "GET /district/demand-mode HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 4.417, "db_ms": 4.417, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:52410 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56097 - "GET /district/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50874 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57276 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52410 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 226.018, "db_ms": 226.018, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:52059 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52410 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57276 - "GET /district/solver-status HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 4.187, "db_ms": 4.187, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:50874 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56097 - "GET /district/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57276 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50874 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52410 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 156.298, "db_ms": 156.298, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:52059 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 6.218, "db_ms": 6.218, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:52410 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50874 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57276 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56097 - "GET /district/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50874 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57276 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52410 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 147.958, "db_ms": 147.958, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:52059 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52410 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50874 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57276 - "GET /district/solver-status HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 13.725, "db_ms": 13.725, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:56097 - "GET /district/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50874 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52410 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57276 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 195.111, "db_ms": 195.111, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:52059 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50874 - "GET /metadata/resources HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 3.84, "db_ms": 3.84, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:57276 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52410 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56097 - "GET /district/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57276 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50874 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52410 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 185.326, "db_ms": 185.326, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:52059 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 6.405, "db_ms": 6.405, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:52410 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50874 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57276 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56097 - "GET /district/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52410 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50874 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57276 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 187.816, "db_ms": 187.816, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:52059 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 3.92, "db_ms": 3.92, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:56097 - "GET /district/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57276 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50874 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52410 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57276 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50874 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56097 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 210.948, "db_ms": 210.948, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:52059 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 3.895, "db_ms": 3.895, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:56097 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57276 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50874 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52410 - "GET /district/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57276 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56097 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50874 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 427.354, "db_ms": 427.354, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:52059 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50874 - "GET /district/demand-mode HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 4.602, "db_ms": 4.602, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:56097 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57276 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52410 - "GET /district/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56097 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57276 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50874 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 207.39, "db_ms": 207.39, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:52059 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53145 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53879 - "GET /metadata/resources HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 6.17, "db_ms": 6.17, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:50215 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57335 - "GET /district/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53879 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53145 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50215 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 165.911, "db_ms": 165.911, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:60840 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 3.783, "db_ms": 3.783, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:50215 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53879 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57335 - "GET /district/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53879 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53145 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50215 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57335 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 202.493, "db_ms": 202.493, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:60840 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53145 - "GET /metadata/resources HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 21.749, "db_ms": 21.749, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:57335 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50215 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53879 - "GET /district/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57335 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53145 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50215 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 219.631, "db_ms": 219.631, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:60840 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65096 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58541 - "OPTIONS /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54270 - "OPTIONS /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64725 - "GET /district/allocations/stream?token=4c1af6acf361a219ddee6766f66aae5547e8ada766bc7bd6d386646c18eef83e HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55646 - "GET /district/solver-status HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 14.588, "db_ms": 14.588, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:65096 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58541 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53900 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58541 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60322 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58541 - "GET /district/demand-mode HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 5.942, "db_ms": 5.942, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:53900 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60322 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60322 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55646 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58541 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53900 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 20.426, "db_ms": 20.426, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:60322 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55646 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 245.303, "db_ms": 245.303, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:65096 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55646 - "GET /district/demand-mode HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 5.152, "db_ms": 5.152, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:60322 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53900 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58541 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60322 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55646 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53900 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 170.413, "db_ms": 170.413, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:65096 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60322 - "GET /metadata/resources HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 6.402, "db_ms": 6.402, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:58541 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53900 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55646 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58541 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60322 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53900 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 147.229, "db_ms": 147.229, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:65096 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 2.328, "db_ms": 2.328, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:53900 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58541 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60322 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55646 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58541 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53900 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60322 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 179.313, "db_ms": 179.313, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:65096 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58541 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60322 - "GET /district/demand-mode HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 10.398, "db_ms": 10.398, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:53900 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55646 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60322 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58541 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53900 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 167.05, "db_ms": 167.05, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:65096 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60322 - "GET /district/allocations/stream?token=4c1af6acf361a219ddee6766f66aae5547e8ada766bc7bd6d386646c18eef83e HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 7.81, "db_ms": 7.81, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:65096 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53900 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58541 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58541 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64473 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58541 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64473 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55646 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65096 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55646 - "GET /district/demand-mode HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 7.778, "db_ms": 7.778, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:65096 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64473 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58541 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 10.472, "db_ms": 10.472, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:64473 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65096 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55646 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 441.024, "db_ms": 441.024, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:53900 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 110.476, "db_ms": 110.476, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:53900 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64473 - "GET /metadata/resources HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 8.68, "db_ms": 8.68, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:58541 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55646 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65096 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58541 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64473 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55646 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 151.937, "db_ms": 151.937, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:53900 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 4.166, "db_ms": 4.166, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:55646 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58541 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64473 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65096 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58541 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55646 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64473 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 161.605, "db_ms": 161.605, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:53900 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 4.06, "db_ms": 4.06, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:64473 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55646 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58541 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65096 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55646 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 758.671, "db_ms": 758.671, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:64473 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58541 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53900 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58541 - "GET /district/demand-mode HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 3.777, "db_ms": 3.777, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:64473 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55646 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65096 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64473 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58541 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55646 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 190.927, "db_ms": 190.927, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:53900 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55646 - "GET /district/demand-mode HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 6.165, "db_ms": 6.165, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:65096 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58541 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64473 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65096 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55646 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58541 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 178.935, "db_ms": 178.935, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:53900 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 3.224, "db_ms": 3.224, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:58541 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55646 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65096 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64473 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55646 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58541 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65096 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 143.529, "db_ms": 143.529, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:53900 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64481 - "GET /docs HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 4.452, "db_ms": 4.452, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:65096 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58541 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55646 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64473 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58541 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55646 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65096 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 145.076, "db_ms": 145.076, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:53900 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58541 - "GET /metadata/resources HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 9.704, "db_ms": 9.704, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:65096 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55646 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64473 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65096 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58541 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55646 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 142.084, "db_ms": 142.084, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:53900 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65096 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55646 - "GET /district/demand-mode HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 3.29, "db_ms": 3.29, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:58541 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64473 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55646 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58541 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65096 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 145.498, "db_ms": 145.498, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:53900 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 6.393, "db_ms": 6.393, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:64473 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65096 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58541 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55646 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65096 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64473 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58541 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 132.653, "db_ms": 132.653, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:53900 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 6.654, "db_ms": 6.654, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:55646 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64473 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58541 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65096 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64473 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55646 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58541 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 136.743, "db_ms": 136.743, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:53900 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58541 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64473 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55646 - "GET /district/solver-status HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 2.93, "db_ms": 2.93, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:62067 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64473 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58541 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55646 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 138.777, "db_ms": 138.777, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:53900 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55646 - "OPTIONS /metadata/resources HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 3.527, "db_ms": 3.527, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:58541 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64473 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62067 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62067 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58541 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55646 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64473 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 172.841, "db_ms": 172.841, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:53900 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58541 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64473 - "GET /district/demand-mode HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 10.532, "db_ms": 10.532, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:55646 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62067 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64473 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58541 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55646 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 173.072, "db_ms": 173.072, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:53900 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55646 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64473 - "GET /metadata/resources HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 6.694, "db_ms": 6.694, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:62067 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58541 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64473 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55646 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62067 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 175.176, "db_ms": 175.176, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:53900 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64473 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55646 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62067 - "GET /district/demand-mode HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 9.681, "db_ms": 9.681, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:58541 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55646 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64473 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62067 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 217.587, "db_ms": 217.587, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:53900 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60729 - "GET /metadata/resources HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 10.149, "db_ms": 10.149, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:63836 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60584 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50961 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60584 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60729 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63836 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 530.052, "db_ms": 530.052, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:50649 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 5.906, "db_ms": 5.906, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:60584 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63836 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60729 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50961 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63836 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60584 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60729 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 164.572, "db_ms": 164.572, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:50649 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55202 - "OPTIONS /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54963 - "OPTIONS /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58837 - "OPTIONS /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50925 - "OPTIONS /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63822 - "OPTIONS /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58837 - "OPTIONS /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50925 - "OPTIONS /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58837 - "OPTIONS /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50647 - "OPTIONS /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50925 - "OPTIONS /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62540 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51083 - "OPTIONS /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51063 - "OPTIONS /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 3.011, "db_ms": 3.011, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:63900 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62540 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64015 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62540 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64015 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51083 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63900 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 12.513, "db_ms": 12.513, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:62540 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63900 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64015 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51083 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62540 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63900 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 302.081, "db_ms": 302.081, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:54695 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 105.4, "db_ms": 105.4, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:63900 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54695 - "GET /district/demand-mode HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 2.689, "db_ms": 2.689, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:62540 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51083 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64015 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62540 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54695 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51083 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 136.043, "db_ms": 136.043, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:63900 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 7.854, "db_ms": 7.854, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:51083 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54695 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62540 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64015 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54695 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51083 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62540 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 163.718, "db_ms": 163.718, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:63900 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 3.967, "db_ms": 3.967, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:64015 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51083 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62540 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54695 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51083 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62540 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64015 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 167.141, "db_ms": 167.141, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:63900 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64015 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51083 - "GET /metadata/resources HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 12.111, "db_ms": 12.111, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:54695 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62540 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51083 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64015 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54695 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 176.797, "db_ms": 176.797, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:63900 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54695 - "GET /district/demand-mode HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 6.493, "db_ms": 6.493, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:51083 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64015 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62540 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51083 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54695 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64015 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 169.443, "db_ms": 169.443, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:63900 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 6.829, "db_ms": 6.829, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:62540 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64015 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54695 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51083 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64015 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54695 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62540 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 159.902, "db_ms": 159.902, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:63900 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64015 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62540 - "GET /district/demand-mode HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 13.085, "db_ms": 13.085, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:51083 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54695 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62540 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64015 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51083 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 196.332, "db_ms": 196.332, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:63900 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51083 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64015 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64015 - "GET /metadata/resources HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 20.699, "db_ms": 20.699, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:51083 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 222.106, "db_ms": 222.106, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:49363 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63900 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49242 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64015 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 5.475, "db_ms": 5.475, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:49242 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63900 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49363 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51083 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63900 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49242 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49363 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 180.051, "db_ms": 180.051, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:64015 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64015 - "GET /metadata/states HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49363 - "GET /metadata/states HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59670 - "GET /metadata/districts?state_code=33 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59670 - "OPTIONS /auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59670 - "POST /auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59670 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60829 - "GET /district/allocations/stream?token=0e87a988003ccdaef332cb19f76577c9d14880456a36bc10cb13e191cb004885 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 5.121, "db_ms": 5.121, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:55109 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53604 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55109 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59279 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55109 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59279 - "GET /district/solver-status HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 3.817, "db_ms": 3.817, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:59279 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55109 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59670 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51030 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 4.764, "db_ms": 4.764, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:59670 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55109 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59279 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51030 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59670 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 244.657, "db_ms": 244.657, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:53604 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 3.696, "db_ms": 3.696, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:59670 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59279 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55109 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51030 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59279 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59670 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55109 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 690.037, "db_ms": 690.037, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:53604 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53604 - "GET /district/demand-mode HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 7.645, "db_ms": 7.645, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:55109 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59670 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59279 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55109 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59670 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53604 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 130.457, "db_ms": 130.457, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:59279 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 4.103, "db_ms": 4.103, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:59670 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53604 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59279 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55109 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55109 - "OPTIONS /district/requests?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59279 - "GET /district/demand-mode HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 82.098, "db_ms": 82.098, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:53604 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59670 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55109 - "GET /district/requests?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 30.664, "db_ms": 30.664, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:55109 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53604 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59279 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59670 - "GET /district/requests?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59670 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53604 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53604 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59279 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55109 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59279 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 210.382, "db_ms": 210.382, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:53604 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57572 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 28.859, "db_ms": 28.859, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:59279 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53604 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57572 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57572 - "OPTIONS /district/run-history?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53604 - "OPTIONS /district/run-history?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59670 - "GET /district/requests?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/run-history", "total_ms": 2131.638, "db_ms": 2131.638, "latency_bucket": ">=1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:57572 - "GET /district/run-history?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57572 - "GET /district/demand-mode HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 24.106, "db_ms": 24.106, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:59858 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64569 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/run-history", "total_ms": 2089.2, "db_ms": 2089.2, "latency_bucket": ">=1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:59670 - "GET /district/run-history?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59279 - "GET /district/requests?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 3.623, "db_ms": 3.623, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:59858 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59279 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64569 - "GET /district/solver-status HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/run-history", "total_ms": 2068.158, "db_ms": 2068.158, "latency_bucket": ">=1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:57572 - "GET /district/run-history?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59279 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59279 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59279 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59858 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64569 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59279 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59858 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 181.16, "db_ms": 181.16, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:57572 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 111.975, "db_ms": 111.975, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:59858 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 4.184, "db_ms": 4.184, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:59858 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57572 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59279 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59670 - "GET /district/requests?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59279 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59858 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57572 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64569 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 118.203, "db_ms": 118.203, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:59670 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59670 - "GET /district/demand-mode HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 7.848, "db_ms": 7.848, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:57572 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64569 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64569 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59670 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57572 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59670 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 118.228, "db_ms": 118.228, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:57572 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 3.922, "db_ms": 3.922, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:57572 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59670 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64569 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64569 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59670 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64569 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57572 - "GET /district/solver-status HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 5.03, "db_ms": 5.03, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:54822 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62003 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64569 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 133.403, "db_ms": 133.403, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:59670 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59670 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64569 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64569 - "GET /district/demand-mode HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 6.238, "db_ms": 6.238, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:59670 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62003 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54822 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57572 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54822 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62003 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 110.007, "db_ms": 110.007, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:57572 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 8.748, "db_ms": 8.748, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:54822 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57572 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62003 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64569 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59670 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64569 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62003 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 132.22, "db_ms": 132.22, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:59670 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59670 - "GET /district/demand-mode HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 9.436, "db_ms": 9.436, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:62003 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64569 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57572 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54822 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57572 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64569 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 137.076, "db_ms": 137.076, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:54822 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54822 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57572 - "GET /metadata/resources HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 15.405, "db_ms": 15.405, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:64569 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62997 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54822 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59949 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57572 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 98.162, "db_ms": 98.162, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:57572 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57572 - "GET /district/demand-mode HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 6.986, "db_ms": 6.986, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:62997 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59949 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54822 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57572 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64569 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62997 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 92.245, "db_ms": 92.245, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:62997 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62997 - "GET /district/demand-mode HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 3.043, "db_ms": 3.043, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:54822 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64569 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57572 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62997 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59949 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54822 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 85.244, "db_ms": 85.244, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:54822 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54822 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62997 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59949 - "GET /district/solver-status HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 3.544, "db_ms": 3.544, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:57572 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54822 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64569 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62997 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 84.399, "db_ms": 84.399, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:62997 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62997 - "GET /district/demand-mode HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 12.85, "db_ms": 12.85, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:54822 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64569 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57572 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62997 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59949 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54822 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 96.441, "db_ms": 96.441, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:54822 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54822 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62997 - "GET /metadata/resources HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 10.258, "db_ms": 10.258, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:59949 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57572 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54822 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64569 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62997 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 99.586, "db_ms": 99.586, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:62997 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 3.264, "db_ms": 3.264, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:62997 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64569 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54822 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57572 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62997 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59949 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64569 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 75.526, "db_ms": 75.526, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:64569 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62997 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64569 - "GET /district/demand-mode HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 3.353, "db_ms": 3.353, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:59949 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57572 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62997 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54822 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64569 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 132.909, "db_ms": 132.909, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:64569 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64569 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62997 - "GET /metadata/resources HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 11.007, "db_ms": 11.007, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:54822 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57572 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64569 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59949 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62997 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 134.828, "db_ms": 134.828, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:62997 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 4.45, "db_ms": 4.45, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:64569 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59949 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62997 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57572 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64569 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54822 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59949 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 100.084, "db_ms": 100.084, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:59949 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64569 - "GET /metadata/resources HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 11.045, "db_ms": 11.045, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:59949 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54822 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57572 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64569 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62997 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59949 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 106.112, "db_ms": 106.112, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:59949 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 4.239, "db_ms": 4.239, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:59949 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64569 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62997 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57572 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54822 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59949 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64569 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59949 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54822 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57572 - "GET /metadata/resources HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 4.378, "db_ms": 4.378, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:62997 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54822 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57572 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59949 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 291.953, "db_ms": 291.953, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:64569 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54822 - "GET /metadata/resources HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 10.157, "db_ms": 10.157, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:62997 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59949 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57572 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62997 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59949 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54822 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 270.3, "db_ms": 270.3, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:64569 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 5.72, "db_ms": 5.72, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:54822 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59949 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62997 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57572 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59949 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54822 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62997 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 163.638, "db_ms": 163.638, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:64569 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59949 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62997 - "GET /district/demand-mode HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 8.046, "db_ms": 8.046, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:54822 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57572 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62997 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59949 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54822 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 169.777, "db_ms": 169.777, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:64569 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 4.452, "db_ms": 4.452, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:54822 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59949 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62997 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57572 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59949 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62997 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54822 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 159.974, "db_ms": 159.974, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:64569 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59949 - "GET /metadata/resources HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 8.91, "db_ms": 8.91, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:54822 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57572 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62997 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54822 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59949 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57572 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 597.875, "db_ms": 597.875, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:64569 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57572 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54822 - "GET /metadata/resources HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 8.119, "db_ms": 8.119, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:59949 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62997 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54822 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57572 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59949 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 278.682, "db_ms": 278.682, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:64569 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 3.748, "db_ms": 3.748, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:59949 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57572 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54822 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62997 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57572 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54822 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59949 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 242.488, "db_ms": 242.488, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:64569 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64569 - "GET /district/demand-mode HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 16.6, "db_ms": 16.6, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:54822 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59949 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57572 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54822 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59949 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64569 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 157.856, "db_ms": 157.856, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:57572 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59949 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57572 - "GET /district/demand-mode HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 10.724, "db_ms": 10.724, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:64569 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54822 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57572 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64569 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59949 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 118.948, "db_ms": 118.948, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:54822 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54822 - "GET /district/demand-mode HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 7.537, "db_ms": 7.537, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:57572 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59949 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64569 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57572 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54822 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59949 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 126.622, "db_ms": 126.622, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:64569 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64569 - "GET /district/demand-mode HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 7.964, "db_ms": 7.964, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:54822 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59949 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57572 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54822 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59949 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64569 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 123.496, "db_ms": 123.496, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:57572 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59949 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57572 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64569 - "GET /district/solver-status HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 16.342, "db_ms": 16.342, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:54822 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57572 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64569 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59949 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 178.55, "db_ms": 178.55, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:54822 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 5.194, "db_ms": 5.194, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:54822 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59949 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64569 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57572 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59949 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64569 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54822 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 128.162, "db_ms": 128.162, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:57572 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64569 - "GET /metadata/resources HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 7.379, "db_ms": 7.379, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:57572 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54822 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59949 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57572 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64569 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54822 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 108.247, "db_ms": 108.247, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:59949 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59949 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64569 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54822 - "GET /district/solver-status HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 7.968, "db_ms": 7.968, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:57572 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64569 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50497 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54822 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59949 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54822 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50497 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 207.44, "db_ms": 207.44, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:57572 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 104.777, "db_ms": 104.777, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:50497 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50497 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54822 - "GET /metadata/resources HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 9.304, "db_ms": 9.304, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:57572 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59949 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51348 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64894 - "GET /district/allocations/stream?token=0e87a988003ccdaef332cb19f76577c9d14880456a36bc10cb13e191cb004885 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 7.187, "db_ms": 7.187, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:49674 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50569 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55810 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55810 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60737 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55810 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60737 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51348 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 3.9, "db_ms": 3.9, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:55810 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51348 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60737 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49674 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 4.218, "db_ms": 4.218, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:51348 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60737 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55810 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 253.623, "db_ms": 253.623, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:50569 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/kpis", "total_ms": 3.34, "db_ms": 3.34, "latency_bucket": "<1s", "rows_scanned": 1, "rows_returned": 1, "district_code": "603"}
+INFO:     127.0.0.1:49674 - "GET /district/kpis?runs=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55810 - "GET /district/demand-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60737 - "GET /district/solver-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51348 - "GET /metadata/resources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55810 - "GET /district/consumptions?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49674 - "GET /district/claims?page=1&page_size=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60737 - "GET /district/returns?page=1&page_size=200 HTTP/1.1" 200 OK
+{"event": "PERF_ENDPOINT", "endpoint": "/district/allocations", "total_ms": 159.723, "db_ms": 159.723, "latency_bucket": "<1s", "rows_scanned": 200, "rows_returned": 200, "district_code": "603"}
+INFO:     127.0.0.1:50569 - "GET /district/allocations?page=1&page_size=200 HTTP/1.1" 200 OK

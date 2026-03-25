@@ -20,7 +20,13 @@ __pycache__/
 # OS/editor noise
 .DS_Store
 Thumbs.db
+.vscode/
 
 node_modules/
 .venv/
 __pycache__/
+
+# SQLite runtime and local backup artifacts (keep primary DB files)
+*.db-wal
+*.db-shm
+backend/backend_pre_*.db

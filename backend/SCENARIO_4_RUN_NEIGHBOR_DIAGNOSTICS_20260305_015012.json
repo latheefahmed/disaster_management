@@ -1,0 +1,353 @@
+[
+  {
+    "case": "C1_neighbor_potential_immediate",
+    "scenario_id": 406,
+    "run_id": 1178,
+    "status": "completed",
+    "requests": [
+      {
+        "district_code": "603",
+        "state_code": "33",
+        "resource_id": "R35",
+        "time": 0,
+        "quantity": 40000000.0
+      }
+    ],
+    "escalation_status": {
+      "events_found": 2,
+      "state_marked": 1,
+      "national_marked": 1,
+      "neighbor_offers_created": 0,
+      "neighbor_offers_accepted": 0,
+      "neighbor_accepted_quantity": 0.0,
+      "mode": "scenario_auto_chain"
+    },
+    "totals": {
+      "allocated_quantity": 4169.0,
+      "unmet_quantity": 39995831.0,
+      "districts_covered": 1,
+      "districts_met": 0,
+      "districts_unmet": 1,
+      "allocation_rows": 1,
+      "unmet_rows": 1
+    },
+    "source_scope_breakdown": {
+      "allocations": {
+        "district": 38.0,
+        "state": 677.0,
+        "neighbor_state": 0.0,
+        "national": 3454.0
+      },
+      "percentages": {
+        "district": 0.009114895658431278,
+        "state": 0.16238906212520987,
+        "neighbor_state": 0.0,
+        "national": 0.8284960422163589
+      }
+    },
+    "district_source_scope_breakdown": [
+      {
+        "district_code": "603",
+        "allocations": {
+          "district": 4169.0,
+          "state": 0.0,
+          "neighbor_state": 0.0,
+          "national": 0.0
+        },
+        "percentages": {
+          "district": 1.0,
+          "state": 0.0,
+          "neighbor_state": 0.0,
+          "national": 0.0
+        }
+      }
+    ],
+    "by_time_breakdown": [
+      {
+        "time": 0,
+        "allocated_quantity": 4169.0,
+        "unmet_quantity": 39995831.0,
+        "demand_quantity": 40000000.0,
+        "service_ratio": 0.000104225
+      }
+    ],
+    "neighbor_diagnostic": {
+      "neighbor_active": false,
+      "reason": "neighbor_candidates_below_cap_or_zero_stock",
+      "stock_checks": [
+        {
+          "requesting_state": "33",
+          "resource_id": "R35",
+          "time": 0,
+          "unmet_quantity": 39995831.0,
+          "candidates": []
+        }
+      ]
+    }
+  },
+  {
+    "case": "C2_neighbor_potential_staggered",
+    "scenario_id": 407,
+    "run_id": 1179,
+    "status": "completed",
+    "requests": [
+      {
+        "district_code": "603",
+        "state_code": "33",
+        "resource_id": "R35",
+        "time": 1,
+        "quantity": 22000000.0
+      },
+      {
+        "district_code": "603",
+        "state_code": "33",
+        "resource_id": "R35",
+        "time": 2,
+        "quantity": 15000000.0
+      }
+    ],
+    "escalation_status": {
+      "events_found": 2,
+      "state_marked": 2,
+      "national_marked": 2,
+      "neighbor_offers_created": 0,
+      "neighbor_offers_accepted": 0,
+      "neighbor_accepted_quantity": 0.0,
+      "mode": "scenario_auto_chain"
+    },
+    "totals": {
+      "allocated_quantity": 4169.0,
+      "unmet_quantity": 21995831.0,
+      "districts_covered": 1,
+      "districts_met": 0,
+      "districts_unmet": 1,
+      "allocation_rows": 1,
+      "unmet_rows": 1
+    },
+    "source_scope_breakdown": {
+      "allocations": {
+        "district": 38.0,
+        "state": 677.0,
+        "neighbor_state": 0.0,
+        "national": 3454.0
+      },
+      "percentages": {
+        "district": 0.009114895658431278,
+        "state": 0.16238906212520987,
+        "neighbor_state": 0.0,
+        "national": 0.8284960422163589
+      }
+    },
+    "district_source_scope_breakdown": [
+      {
+        "district_code": "603",
+        "allocations": {
+          "district": 4169.0,
+          "state": 0.0,
+          "neighbor_state": 0.0,
+          "national": 0.0
+        },
+        "percentages": {
+          "district": 1.0,
+          "state": 0.0,
+          "neighbor_state": 0.0,
+          "national": 0.0
+        }
+      }
+    ],
+    "by_time_breakdown": [
+      {
+        "time": 1,
+        "allocated_quantity": 4169.0,
+        "unmet_quantity": 21995831.0,
+        "demand_quantity": 22000000.0,
+        "service_ratio": 0.0001895
+      }
+    ],
+    "neighbor_diagnostic": {
+      "neighbor_active": false,
+      "reason": "neighbor_candidates_below_cap_or_zero_stock",
+      "stock_checks": [
+        {
+          "requesting_state": "33",
+          "resource_id": "R35",
+          "time": 1,
+          "unmet_quantity": 21995831.0,
+          "candidates": []
+        }
+      ]
+    }
+  },
+  {
+    "case": "C3_late_time_low_priority_national_path",
+    "scenario_id": 408,
+    "run_id": 1180,
+    "status": "completed",
+    "requests": [
+      {
+        "district_code": "603",
+        "state_code": "33",
+        "resource_id": "R35",
+        "time": 24,
+        "quantity": 30000000.0
+      }
+    ],
+    "escalation_status": {
+      "events_found": 2,
+      "state_marked": 1,
+      "national_marked": 1,
+      "neighbor_offers_created": 0,
+      "neighbor_offers_accepted": 0,
+      "neighbor_accepted_quantity": 0.0,
+      "mode": "scenario_auto_chain"
+    },
+    "totals": {
+      "allocated_quantity": 4169.0,
+      "unmet_quantity": 29995831.0,
+      "districts_covered": 1,
+      "districts_met": 0,
+      "districts_unmet": 1,
+      "allocation_rows": 1,
+      "unmet_rows": 1
+    },
+    "source_scope_breakdown": {
+      "allocations": {
+        "district": 38.0,
+        "state": 677.0,
+        "neighbor_state": 0.0,
+        "national": 3454.0
+      },
+      "percentages": {
+        "district": 0.009114895658431278,
+        "state": 0.16238906212520987,
+        "neighbor_state": 0.0,
+        "national": 0.8284960422163589
+      }
+    },
+    "district_source_scope_breakdown": [
+      {
+        "district_code": "603",
+        "allocations": {
+          "district": 4169.0,
+          "state": 0.0,
+          "neighbor_state": 0.0,
+          "national": 0.0
+        },
+        "percentages": {
+          "district": 1.0,
+          "state": 0.0,
+          "neighbor_state": 0.0,
+          "national": 0.0
+        }
+      }
+    ],
+    "by_time_breakdown": [
+      {
+        "time": 24,
+        "allocated_quantity": 4169.0,
+        "unmet_quantity": 29995831.0,
+        "demand_quantity": 30000000.0,
+        "service_ratio": 0.00013896666666666667
+      }
+    ],
+    "neighbor_diagnostic": {
+      "neighbor_active": false,
+      "reason": "neighbor_candidates_below_cap_or_zero_stock",
+      "stock_checks": [
+        {
+          "requesting_state": "33",
+          "resource_id": "R35",
+          "time": 24,
+          "unmet_quantity": 29995831.0,
+          "candidates": []
+        }
+      ]
+    }
+  },
+  {
+    "case": "C4_moderate_should_meet_local_then_upper",
+    "scenario_id": 409,
+    "run_id": 1181,
+    "status": "completed",
+    "requests": [
+      {
+        "district_code": "603",
+        "state_code": "33",
+        "resource_id": "R35",
+        "time": 6,
+        "quantity": 5000000.0
+      }
+    ],
+    "escalation_status": {
+      "events_found": 2,
+      "state_marked": 1,
+      "national_marked": 1,
+      "neighbor_offers_created": 0,
+      "neighbor_offers_accepted": 0,
+      "neighbor_accepted_quantity": 0.0,
+      "mode": "scenario_auto_chain"
+    },
+    "totals": {
+      "allocated_quantity": 4169.0,
+      "unmet_quantity": 4995831.0,
+      "districts_covered": 1,
+      "districts_met": 0,
+      "districts_unmet": 1,
+      "allocation_rows": 1,
+      "unmet_rows": 1
+    },
+    "source_scope_breakdown": {
+      "allocations": {
+        "district": 38.0,
+        "state": 677.0,
+        "neighbor_state": 0.0,
+        "national": 3454.0
+      },
+      "percentages": {
+        "district": 0.009114895658431278,
+        "state": 0.16238906212520987,
+        "neighbor_state": 0.0,
+        "national": 0.8284960422163589
+      }
+    },
+    "district_source_scope_breakdown": [
+      {
+        "district_code": "603",
+        "allocations": {
+          "district": 4169.0,
+          "state": 0.0,
+          "neighbor_state": 0.0,
+          "national": 0.0
+        },
+        "percentages": {
+          "district": 1.0,
+          "state": 0.0,
+          "neighbor_state": 0.0,
+          "national": 0.0
+        }
+      }
+    ],
+    "by_time_breakdown": [
+      {
+        "time": 6,
+        "allocated_quantity": 4169.0,
+        "unmet_quantity": 4995831.0,
+        "demand_quantity": 5000000.0,
+        "service_ratio": 0.0008338
+      }
+    ],
+    "neighbor_diagnostic": {
+      "neighbor_active": false,
+      "reason": "neighbor_candidates_below_cap_or_zero_stock",
+      "stock_checks": [
+        {
+          "requesting_state": "33",
+          "resource_id": "R35",
+          "time": 6,
+          "unmet_quantity": 4995831.0,
+          "candidates": []
+        }
+      ]
+    }
+  }
+]

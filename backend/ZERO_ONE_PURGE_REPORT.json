@@ -1,0 +1,56 @@
+{
+  "timestamp": "2026-03-04T16:21:42.024648Z",
+  "db": "C:\\Users\\LATHEEF\\Desktop\\disaster_management\\backend\\backend.db",
+  "backup": "C:\\Users\\LATHEEF\\Desktop\\disaster_management\\backend\\backend_pre_zero_one_purge_20260304_215140.db",
+  "tables": {
+    "claims": {
+      "columns_checked": [
+        "quantity"
+      ],
+      "before": 11450,
+      "matched_for_purge": 11341,
+      "deleted": 11341,
+      "after": 109
+    },
+    "returns": {
+      "columns_checked": [
+        "quantity"
+      ],
+      "before": 473885,
+      "matched_for_purge": 364222,
+      "deleted": 364222,
+      "after": 109663
+    },
+    "consumptions": {
+      "columns_checked": [
+        "quantity"
+      ],
+      "before": 211,
+      "matched_for_purge": 210,
+      "deleted": 210,
+      "after": 1
+    },
+    "allocations": {
+      "columns_checked": [
+        "allocated_quantity"
+      ],
+      "before": 783681,
+      "matched_for_purge": 660946,
+      "deleted": 660946,
+      "after": 122735
+    },
+    "requests": {
+      "columns_checked": [
+        "quantity",
+        "allocated_quantity",
+        "unmet_quantity",
+        "final_demand_quantity"
+      ],
+      "before": 3019,
+      "matched_for_purge": 2991,
+      "deleted": 2991,
+      "after": 28
+    }
+  },
+  "total_deleted": 1039710
+}

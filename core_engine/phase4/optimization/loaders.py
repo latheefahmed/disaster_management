@@ -187,7 +187,15 @@ def load_demand(arg=None, demand_override_path=None):
 
     df["demand"] = df["demand"] * DEMAND_UNIT_MULTIPLIER
 
-    return df.groupby(
-        ["resource_id", "district_code", "time"],
-        as_index=False
-    )["demand"].sum()
+    agg_spec = {"demand": "sum"}
+    if "priority" in df.columns:
+        df["priority"] = pd.to_numeric(df["priority"], errors="coerce").fillna(1.0)
+        agg_spec["priority"] = "mean"
+    if "urgency" in df.columns:
+        df["urgency"] = pd.to_numeric(df["urgency"], errors="coerce").fillna(1.0)
+        agg_spec["urgency"] = "mean"
+    if "time_index" in df.columns:
+        df["time_index"] = pd.to_numeric(df["time_index"], errors="coerce").fillna(1.0)
+        agg_spec["time_index"] = "mean"
+
+    return df.groupby(["resource_id", "district_code", "time"], as_index=False).agg(agg_spec)

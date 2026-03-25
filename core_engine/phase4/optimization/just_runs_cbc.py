@@ -226,7 +226,7 @@ def _collect_phase8_rows(metadata, variables, execute_times=None):
             "allocated_quantity": val,
         })
 
-    for (d, r, t), var in variables["allocation_state"].items():
+    for (origin_state, d, r, t), var in variables.get("allocation_state_by_origin", {}).items():
         if int(t) not in selected_times:
             continue
         val = 0.0 if var.varValue is None else float(var.varValue)
@@ -235,7 +235,8 @@ def _collect_phase8_rows(metadata, variables, execute_times=None):
         alloc_rows.append({
             "supply_level": "state",
             "resource_id": str(r),
-            "state_code": str(state_for_d[str(d)]),
+            # Emit origin state so ingest can mark in-state vs neighbor-state correctly.
+            "state_code": str(origin_state),
             "district_code": str(d),
             "time": int(t),
             "allocated_quantity": val,
@@ -293,14 +294,14 @@ def _collect_phase8_rows(metadata, variables, execute_times=None):
             "status": "planned",
         })
 
-    for (d, r, t), var in variables["state_in"].items():
+    for (origin_state, d, r, t), var in variables["state_in"].items():
         if int(t) not in selected_times:
             continue
         val = 0.0 if var.varValue is None else float(var.varValue)
         if val <= 0:
             continue
         shipment_rows.append({
-            "from_district": f"STATE::{state_for_d[str(d)]}",
+            "from_district": f"STATE::{origin_state}",
             "to_district": str(d),
             "resource_id": str(r),
             "time": int(t),

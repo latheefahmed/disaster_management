@@ -34,6 +34,8 @@ import time
 router = APIRouter()
 DEFAULT_PAGE_SIZE = 100
 MAX_PAGE_SIZE = 200
+STOCK_DISPLAY_THRESHOLD = 100000.0
+STOCK_DISPLAY_DIVISOR = 1000.0
 
 
 def _pagination(page: int, page_size: int) -> tuple[int, int]:
@@ -51,6 +53,26 @@ def _require_stream_role(token: str, roles: list[str]):
     if not payload:
         raise HTTPException(status_code=401, detail="Invalid or expired token")
     return require_roles(roles)(payload)
+
+
+def _normalize_stock_value(value) -> float:
+    qty = float(value or 0.0)
+    if abs(qty) > STOCK_DISPLAY_THRESHOLD:
+        return qty / STOCK_DISPLAY_DIVISOR
+    return qty
+
+
+def _normalize_stock_rows(rows: list[dict]) -> list[dict]:
+    out: list[dict] = []
+    for row in rows:
+        shaped = dict(row)
+        shaped["district_stock"] = _normalize_stock_value(shaped.get("district_stock"))
+        shaped["state_stock"] = _normalize_stock_value(shaped.get("state_stock"))
+        shaped["national_stock"] = _normalize_stock_value(shaped.get("national_stock"))
+        shaped["in_transit"] = _normalize_stock_value(shaped.get("in_transit"))
+        shaped["available_stock"] = _normalize_stock_value(shaped.get("available_stock"))
+        out.append(shaped)
+    return out
 
 
 @router.get("/me")
@@ -74,7 +96,7 @@ def national_stock(
     db: Session = Depends(get_db),
     user=Depends(require_role(["national"]))
 ):
-    return get_national_stock_rows(db)
+    return _normalize_stock_rows(get_national_stock_rows(db))
 
 
 @router.get("/allocations/stock", response_model=list[StockRowOut])
@@ -82,7 +104,7 @@ def national_allocations_stock(
     db: Session = Depends(get_db),
     user=Depends(require_role(["national"]))
 ):
-    return get_national_stock_rows(db)
+    return _normalize_stock_rows(get_national_stock_rows(db))
 
 
 @router.post("/stock/refill")
@@ -101,7 +123,14 @@ def national_stock_refill(
             actor_id="NATIONAL",
             note=payload.note,
         )
-        return {"status": "ok", "refill_id": int(row.id)}
+        stock_rows = _normalize_stock_rows(get_national_stock_rows(db))
+        stock_after = next((r for r in stock_rows if str(r.get("resource_id")) == str(row.resource_id)), None)
+        return {
+            "status": "ok",
+            "refill_id": int(row.id),
+            "resource_id": str(row.resource_id),
+            "stock_after": stock_after,
+        }
     except ValueError as e:
         from fastapi import HTTPException
         raise HTTPException(status_code=400, detail=str(e))

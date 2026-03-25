@@ -19,7 +19,7 @@ export type AuditEvent = {
 
   request_context?: {
     priority?: number
-    urgency?: 'Low' | 'Medium' | 'High' | 'Critical'
+    urgency?: 'Low' | 'Medium' | 'High' | 'Critical' | 'Highly Critical'
     confidence?: number
     source?: string
     notes?: string

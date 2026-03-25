@@ -57,6 +57,8 @@ import time
 router = APIRouter()
 DEFAULT_PAGE_SIZE = 100
 MAX_PAGE_SIZE = 200
+STOCK_DISPLAY_THRESHOLD = 100000.0
+STOCK_DISPLAY_DIVISOR = 1000.0
 
 
 def _pagination(page: int, page_size: int) -> tuple[int, int]:
@@ -74,6 +76,82 @@ def _require_stream_role(token: str, roles: list[str]):
     if not payload:
         raise HTTPException(status_code=401, detail="Invalid or expired token")
     return require_roles(roles)(payload)
+
+
+def _normalize_stock_value(value) -> float:
+    qty = float(value or 0.0)
+    if abs(qty) > STOCK_DISPLAY_THRESHOLD:
+        return qty / STOCK_DISPLAY_DIVISOR
+    return qty
+
+
+def _normalize_stock_rows(rows: list[dict]) -> list[dict]:
+    out: list[dict] = []
+    for row in rows:
+        shaped = dict(row)
+        shaped["district_stock"] = _normalize_stock_value(shaped.get("district_stock"))
+        shaped["state_stock"] = _normalize_stock_value(shaped.get("state_stock"))
+        shaped["national_stock"] = _normalize_stock_value(shaped.get("national_stock"))
+        shaped["in_transit"] = _normalize_stock_value(shaped.get("in_transit"))
+        shaped["available_stock"] = _normalize_stock_value(shaped.get("available_stock"))
+        out.append(shaped)
+    return out
+
+
+def _slot_source_breakdown(
+    db: Session,
+    solver_run_id: int,
+    district_code: str,
+    resource_id: str,
+    time_slot: int,
+):
+    rows = db.query(Allocation).filter(
+        Allocation.solver_run_id == int(solver_run_id),
+        Allocation.district_code == str(district_code),
+        Allocation.resource_id == str(resource_id),
+        Allocation.time == int(time_slot),
+        Allocation.is_unmet == False,
+    ).all()
+
+    totals = {
+        "district": 0.0,
+        "state": 0.0,
+        "neighbor_state": 0.0,
+        "national": 0.0,
+    }
+    interstate_qty = 0.0
+    origin_states: set[str] = set()
+    slot_status = "unknown"
+
+    for row in rows:
+        qty = float(row.allocated_quantity or 0.0)
+        scope = str(row.allocation_source_scope or row.supply_level or "district").strip().lower()
+        if scope not in totals:
+            scope = "district"
+        totals[scope] += qty
+
+        origin_state = str(row.origin_state_code or "").strip()
+        state_code = str(row.state_code or "").strip()
+        if origin_state:
+            origin_states.add(origin_state)
+        if scope in {"state", "neighbor_state"} and origin_state and state_code and origin_state not in {state_code, "NATIONAL"}:
+            interstate_qty += qty
+
+        if str(row.status or "").strip():
+            slot_status = str(row.status)
+
+    dominant_source = "unknown"
+    if any(v > 0.0 for v in totals.values()):
+        dominant_source = max(totals.items(), key=lambda x: float(x[1]))[0]
+
+    return {
+        "allocation_source_breakdown": totals,
+        "interstate_quantity": float(interstate_qty),
+        "has_interstate": bool(interstate_qty > 0.0),
+        "origin_states": sorted(list(origin_states)),
+        "dominant_source": dominant_source,
+        "slot_status": slot_status,
+    }
 
 
 # -------------------------------
@@ -219,7 +297,12 @@ def get_unmet_for_district(db: Session, district_code: str, limit: int = 100, of
 def get_run_history_for_district(db: Session, district_code: str, limit: int = 100, offset: int = 0):
     safe_limit = max(1, min(200, int(limit or 100)))
     safe_offset = max(0, int(offset or 0))
-    runs = db.query(SolverRun).filter(SolverRun.status == "completed").order_by(SolverRun.id.desc()).offset(safe_offset).limit(safe_limit).all()
+    runs = db.query(SolverRun)\
+        .filter(SolverRun.mode == "live")\
+        .order_by(SolverRun.id.desc())\
+        .offset(safe_offset)\
+        .limit(safe_limit)\
+        .all()
     if not runs:
         return []
 
@@ -228,6 +311,7 @@ def get_run_history_for_district(db: Session, district_code: str, limit: int = 1
         rid = int(run.id)
         allocated = 0.0
         unmet = 0.0
+        failure_reason = None
         raw = getattr(run, "summary_snapshot_json", None)
         if raw:
             try:
@@ -236,6 +320,7 @@ def get_run_history_for_district(db: Session, district_code: str, limit: int = 1
                     district_totals = (snap.get("district_totals") or {}).get(str(district_code)) or {}
                     allocated = float(district_totals.get("allocated_quantity") or 0.0)
                     unmet = float(district_totals.get("unmet_quantity") or 0.0)
+                    failure_reason = snap.get("failure_reason") or snap.get("error")
             except Exception:
                 pass
         out.append({
@@ -246,6 +331,7 @@ def get_run_history_for_district(db: Session, district_code: str, limit: int = 1
             "total_demand": float(allocated + unmet),
             "total_allocated": allocated,
             "total_unmet": unmet,
+            "failure_reason": failure_reason,
         })
     return out
 
@@ -460,7 +546,13 @@ def get_district_solver_status(
     db: Session = Depends(get_db),
     user=Depends(require_role(["district"]))
 ):
-    selected_run = get_latest_completed_run(db)
+    selected_run = db.query(SolverRun)\
+        .filter(SolverRun.mode == "live")\
+        .order_by(SolverRun.id.desc())\
+        .first()
+
+    if not selected_run:
+        selected_run = get_latest_completed_run(db)
 
     if not selected_run:
         return {
@@ -519,11 +611,12 @@ def district_run_history(
 
 @router.get("/kpis", response_model=KPIOut)
 def district_kpis(
+    runs: int = Query(100, ge=1, le=1000),
     db: Session = Depends(get_db),
     user=Depends(require_role(["district"]))
 ):
     started = time.perf_counter() * 1000.0
-    payload = compute_district_kpis(db, str(user["district_code"]))
+    payload = compute_district_kpis(db, str(user["district_code"]), run_window=runs)
     total_ms = (time.perf_counter() * 1000.0) - started
     log_perf_event(
         endpoint="/district/kpis",
@@ -531,7 +624,7 @@ def district_kpis(
         db_ms=total_ms,
         rows_scanned=1,
         rows_returned=1,
-        extra={"district_code": str(user["district_code"])},
+        extra={"district_code": str(user["district_code"]), "runs": int(runs)},
     )
     return payload
 
@@ -541,7 +634,8 @@ def district_stock(
     db: Session = Depends(get_db),
     user=Depends(require_role(["district"]))
 ):
-    return get_district_stock_rows(db, str(user["district_code"]))
+    rows = get_district_stock_rows(db, str(user["district_code"]))
+    return _normalize_stock_rows(rows)
 
 
 @router.post("/stock/refill")
@@ -562,7 +656,14 @@ def district_stock_refill(
             state_code=str(user.get("state_code") or ""),
             note=payload.note,
         )
-        return {"status": "ok", "refill_id": int(row.id)}
+        stock_rows = _normalize_stock_rows(get_district_stock_rows(db, str(user["district_code"])))
+        stock_after = next((r for r in stock_rows if str(r.get("resource_id")) == str(row.resource_id)), None)
+        return {
+            "status": "ok",
+            "refill_id": int(row.id),
+            "resource_id": str(row.resource_id),
+            "stock_after": stock_after,
+        }
     except ValueError as e:
         raise HTTPException(status_code=400, detail=str(e))
 
@@ -591,8 +692,17 @@ def list_my_claims(
 ):
     limit, offset = _pagination(page, page_size)
     rows = list_claims_for_district(db, user["district_code"], limit=limit, offset=offset)
-    return [
-        {
+    out = []
+    for r in rows:
+        breakdown = _slot_source_breakdown(
+            db,
+            solver_run_id=int(r.solver_run_id),
+            district_code=str(r.district_code),
+            resource_id=str(r.resource_id),
+            time_slot=int(r.time),
+        )
+        out.append(
+            {
             "id": r.id,
             "district_code": r.district_code,
             "resource_id": r.resource_id,
@@ -601,9 +711,10 @@ def list_my_claims(
             "claimed_by": r.claimed_by,
             "claimed_at": r.created_at,
             "solver_run_id": r.solver_run_id,
+            **breakdown,
         }
-        for r in rows
-    ]
+        )
+    return out
 
 
 @router.get("/consumptions")
@@ -615,8 +726,17 @@ def list_my_consumptions(
 ):
     limit, offset = _pagination(page, page_size)
     rows = list_consumption_for_district(db, user["district_code"], limit=limit, offset=offset)
-    return [
-        {
+    out = []
+    for r in rows:
+        breakdown = _slot_source_breakdown(
+            db,
+            solver_run_id=int(r.solver_run_id),
+            district_code=str(r.district_code),
+            resource_id=str(r.resource_id),
+            time_slot=int(r.time),
+        )
+        out.append(
+            {
             "id": r.id,
             "district_code": r.district_code,
             "resource_id": r.resource_id,
@@ -624,9 +744,10 @@ def list_my_consumptions(
             "consumed_quantity": float(r.quantity),
             "consumed_at": r.created_at,
             "solver_run_id": r.solver_run_id,
+            **breakdown,
         }
-        for r in rows
-    ]
+        )
+    return out
 
 
 @router.get("/returns")
@@ -638,8 +759,17 @@ def list_my_returns(
 ):
     limit, offset = _pagination(page, page_size)
     rows = list_returns_for_district(db, user["district_code"], limit=limit, offset=offset)
-    return [
-        {
+    out = []
+    for r in rows:
+        breakdown = _slot_source_breakdown(
+            db,
+            solver_run_id=int(r.solver_run_id),
+            district_code=str(r.district_code),
+            resource_id=str(r.resource_id),
+            time_slot=int(r.time),
+        )
+        out.append(
+            {
             "id": r.id,
             "district_code": r.district_code,
             "resource_id": r.resource_id,
@@ -648,9 +778,10 @@ def list_my_returns(
             "reason": r.reason,
             "returned_at": r.created_at,
             "solver_run_id": r.solver_run_id,
+            **breakdown,
         }
-        for r in rows
-    ]
+        )
+    return out
 
 
 @router.post("/claim")

@@ -1,0 +1,950 @@
+{
+  "started_at": "2026-03-04T16:24:09.864680+00:00",
+  "cases_planned": 30,
+  "requests": [
+    {
+      "case_id": 1,
+      "resource_id": "R38",
+      "resource_name": "boats",
+      "time": 0,
+      "variant": "district_preferred",
+      "requested_quantity": 2.0,
+      "priority": 3,
+      "urgency": 3,
+      "pre_stock": {
+        "district": 3.0,
+        "state": 131.0,
+        "national": 80913.0,
+        "available": 81027.0
+      },
+      "request_status": 201,
+      "request_body": {
+        "status": "accepted",
+        "request_id": 3206,
+        "solver_run_id": 1102,
+        "human_priority": 3,
+        "human_urgency": 3,
+        "predicted_priority": null,
+        "predicted_urgency": null,
+        "prediction_confidence": null
+      },
+      "request_id": 3206
+    },
+    {
+      "case_id": 2,
+      "resource_id": "R33",
+      "resource_name": "sniffer_dogs",
+      "time": 1,
+      "variant": "state_pressure",
+      "requested_quantity": 149.0,
+      "priority": 4,
+      "urgency": 4,
+      "pre_stock": {
+        "district": 3.0,
+        "state": 366.0,
+        "national": 60102.0,
+        "available": 60471.0
+      },
+      "request_status": 201,
+      "request_body": {
+        "status": "accepted",
+        "request_id": 3207,
+        "solver_run_id": 1102,
+        "human_priority": 4,
+        "human_urgency": 4,
+        "predicted_priority": null,
+        "predicted_urgency": null,
+        "prediction_confidence": null
+      },
+      "request_id": 3207
+    },
+    {
+      "case_id": 3,
+      "resource_id": "R46",
+      "resource_name": "mobile_base_stations",
+      "time": 2,
+      "variant": "neighbor_pressure",
+      "requested_quantity": 4770.0,
+      "priority": 4,
+      "urgency": 5,
+      "pre_stock": {
+        "district": 6.5,
+        "state": 196.0,
+        "national": 152053.0,
+        "available": 152255.5
+      },
+      "request_status": 201,
+      "request_body": {
+        "status": "accepted",
+        "request_id": 3208,
+        "solver_run_id": 1102,
+        "human_priority": 4,
+        "human_urgency": 5,
+        "predicted_priority": null,
+        "predicted_urgency": null,
+        "prediction_confidence": null
+      },
+      "request_id": 3208
+    },
+    {
+      "case_id": 4,
+      "resource_id": "R37",
+      "resource_name": "helicopters",
+      "time": 3,
+      "variant": "national_pressure",
+      "requested_quantity": 15000.0,
+      "priority": 5,
+      "urgency": 5,
+      "pre_stock": {
+        "district": 7.0,
+        "state": 60.0,
+        "national": 23995.0,
+        "available": 24062.0
+      },
+      "request_status": 201,
+      "request_body": {
+        "status": "accepted",
+        "request_id": 3209,
+        "solver_run_id": 1102,
+        "human_priority": 5,
+        "human_urgency": 5,
+        "predicted_priority": null,
+        "predicted_urgency": null,
+        "prediction_confidence": null
+      },
+      "request_id": 3209
+    },
+    {
+      "case_id": 5,
+      "resource_id": "R35",
+      "resource_name": "buses",
+      "time": 0,
+      "variant": "mixed_pressure",
+      "requested_quantity": 7429.0,
+      "priority": 4,
+      "urgency": 5,
+      "pre_stock": {
+        "district": 9.5,
+        "state": 590.0,
+        "national": 135995.0,
+        "available": 136594.5
+      },
+      "request_status": 201,
+      "request_body": {
+        "status": "accepted",
+        "request_id": 3210,
+        "solver_run_id": 1102,
+        "human_priority": 4,
+        "human_urgency": 5,
+        "predicted_priority": null,
+        "predicted_urgency": null,
+        "prediction_confidence": null
+      },
+      "request_id": 3210
+    },
+    {
+      "case_id": 6,
+      "resource_id": "R36",
+      "resource_name": "trucks",
+      "time": 1,
+      "variant": "district_preferred",
+      "requested_quantity": 6.0,
+      "priority": 3,
+      "urgency": 3,
+      "pre_stock": {
+        "district": 13.0,
+        "state": 2595.0,
+        "national": 89462.0,
+        "available": 92070.0
+      },
+      "request_status": 201,
+      "request_body": {
+        "status": "accepted",
+        "request_id": 3211,
+        "solver_run_id": 1102,
+        "human_priority": 3,
+        "human_urgency": 3,
+        "predicted_priority": null,
+        "predicted_urgency": null,
+        "prediction_confidence": null
+      },
+      "request_id": 3211
+    },
+    {
+      "case_id": 7,
+      "resource_id": "R44",
+      "resource_name": "satellite_phones",
+      "time": 2,
+      "variant": "state_pressure",
+      "requested_quantity": 519.0,
+      "priority": 4,
+      "urgency": 4,
+      "pre_stock": {
+        "district": 19.5,
+        "state": 1457.0,
+        "national": 118964.0,
+        "available": 120440.5
+      },
+      "request_status": 201,
+      "request_body": {
+        "status": "accepted",
+        "request_id": 3212,
+        "solver_run_id": 1102,
+        "human_priority": 4,
+        "human_urgency": 4,
+        "predicted_priority": null,
+        "predicted_urgency": null,
+        "prediction_confidence": null
+      },
+      "request_id": 3212
+    },
+    {
+      "case_id": 8,
+      "resource_id": "R31",
+      "resource_name": "hydraulic_cutters",
+      "time": 3,
+      "variant": "neighbor_pressure",
+      "requested_quantity": 6190.0,
+      "priority": 4,
+      "urgency": 5,
+      "pre_stock": {
+        "district": 19.5,
+        "state": 2729.0,
+        "national": 111994.0,
+        "available": 114742.5
+      },
+      "request_status": 201,
+      "request_body": {
+        "status": "accepted",
+        "request_id": 3213,
+        "solver_run_id": 1102,
+        "human_priority": 4,
+        "human_urgency": 5,
+        "predicted_priority": null,
+        "predicted_urgency": null,
+        "prediction_confidence": null
+      },
+      "request_id": 3213
+    },
+    {
+      "case_id": 9,
+      "resource_id": "R32",
+      "resource_name": "search_cameras",
+      "time": 0,
+      "variant": "national_pressure",
+      "requested_quantity": 120000.0,
+      "priority": 5,
+      "urgency": 5,
+      "pre_stock": {
+        "district": 23.0,
+        "state": 1951.0,
+        "national": 124377.0,
+        "available": 126351.0
+      },
+      "request_status": 201,
+      "request_body": {
+        "status": "accepted",
+        "request_id": 3214,
+        "solver_run_id": 1102,
+        "human_priority": 5,
+        "human_urgency": 5,
+        "predicted_priority": null,
+        "predicted_urgency": null,
+        "prediction_confidence": null
+      },
+      "request_id": 3214
+    },
+    {
+      "case_id": 10,
+      "resource_id": "R28",
+      "resource_name": "rescue_boats",
+      "time": 1,
+      "variant": "mixed_pressure",
+      "requested_quantity": 4522.0,
+      "priority": 4,
+      "urgency": 5,
+      "pre_stock": {
+        "district": 34.0,
+        "state": 1132.0,
+        "national": 65954.0,
+        "available": 67120.0
+      },
+      "request_status": 201,
+      "request_body": {
+        "status": "accepted",
+        "request_id": 3215,
+        "solver_run_id": 1102,
+        "human_priority": 4,
+        "human_urgency": 5,
+        "predicted_priority": null,
+        "predicted_urgency": null,
+        "prediction_confidence": null
+      },
+      "request_id": 3215
+    },
+    {
+      "case_id": 11,
+      "resource_id": "R27",
+      "resource_name": "field_hospital_units",
+      "time": 2,
+      "variant": "district_preferred",
+      "requested_quantity": 39.0,
+      "priority": 3,
+      "urgency": 3,
+      "pre_stock": {
+        "district": 78.0,
+        "state": 1716.0,
+        "national": 61016.0,
+        "available": 62810.0
+      },
+      "request_status": 201,
+      "request_body": {
+        "status": "accepted",
+        "request_id": 3216,
+        "solver_run_id": 1102,
+        "human_priority": 3,
+        "human_urgency": 3,
+        "predicted_priority": null,
+        "predicted_urgency": null,
+        "prediction_confidence": null
+      },
+      "request_id": 3216
+    },
+    {
+      "case_id": 12,
+      "resource_id": "R53",
+      "resource_name": "forklifts",
+      "time": 3,
+      "variant": "state_pressure",
+      "requested_quantity": 606.0,
+      "priority": 4,
+      "urgency": 4,
+      "pre_stock": {
+        "district": 106.0,
+        "state": 3204.0,
+        "national": 53606.0,
+        "available": 56916.0
+      },
+      "request_status": 201,
+      "request_body": {
+        "status": "accepted",
+        "request_id": 3217,
+        "solver_run_id": 1102,
+        "human_priority": 4,
+        "human_urgency": 4,
+        "predicted_priority": null,
+        "predicted_urgency": null,
+        "prediction_confidence": null
+      },
+      "request_id": 3217
+    },
+    {
+      "case_id": 13,
+      "resource_id": "R26",
+      "resource_name": "icu_beds",
+      "time": 0,
+      "variant": "neighbor_pressure",
+      "requested_quantity": 13927.0,
+      "priority": 4,
+      "urgency": 5,
+      "pre_stock": {
+        "district": 429.0,
+        "state": 8976.0,
+        "national": 141357.0,
+        "available": 150762.0
+      },
+      "request_status": 201,
+      "request_body": {
+        "status": "accepted",
+        "request_id": 3218,
+        "solver_run_id": 1102,
+        "human_priority": 4,
+        "human_urgency": 5,
+        "predicted_priority": null,
+        "predicted_urgency": null,
+        "prediction_confidence": null
+      },
+      "request_id": 3218
+    },
+    {
+      "case_id": 14,
+      "resource_id": "R34",
+      "resource_name": "ambulances",
+      "time": 1,
+      "variant": "national_pressure",
+      "requested_quantity": 150000.0,
+      "priority": 5,
+      "urgency": 5,
+      "pre_stock": {
+        "district": 611.0,
+        "state": 12294.0,
+        "national": 180922.0,
+        "available": 193827.0
+      },
+      "request_status": 201,
+      "request_body": {
+        "status": "accepted",
+        "request_id": 3219,
+        "solver_run_id": 1102,
+        "human_priority": 5,
+        "human_urgency": 5,
+        "predicted_priority": null,
+        "predicted_urgency": null,
+        "prediction_confidence": null
+      },
+      "request_id": 3219
+    },
+    {
+      "case_id": 15,
+      "resource_id": "R15",
+      "resource_name": "trauma_kits",
+      "time": 2,
+      "variant": "mixed_pressure",
+      "requested_quantity": 45875.0,
+      "priority": 4,
+      "urgency": 5,
+      "pre_stock": {
+        "district": 1169.0,
+        "state": 34154.0,
+        "national": 175729.0,
+        "available": 211052.0
+      },
+      "request_status": 201,
+      "request_body": {
+        "status": "accepted",
+        "request_id": 3220,
+        "solver_run_id": 1102,
+        "human_priority": 4,
+        "human_urgency": 5,
+        "predicted_priority": null,
+        "predicted_urgency": null,
+        "prediction_confidence": null
+      },
+      "request_id": 3220
+    },
+    {
+      "case_id": 16,
+      "resource_id": "R29",
+      "resource_name": "rescue_ropes",
+      "time": 3,
+      "variant": "district_preferred",
+      "requested_quantity": 691.0,
+      "priority": 3,
+      "urgency": 3,
+      "pre_stock": {
+        "district": 1382.0,
+        "state": 33897.244,
+        "national": 249280.405,
+        "available": 284559.649
+      },
+      "request_status": 201,
+      "request_body": {
+        "status": "accepted",
+        "request_id": 3221,
+        "solver_run_id": 1102,
+        "human_priority": 3,
+        "human_urgency": 3,
+        "predicted_priority": null,
+        "predicted_urgency": null,
+        "prediction_confidence": null
+      },
+      "request_id": 3221
+    },
+    {
+      "case_id": 17,
+      "resource_id": "R45",
+      "resource_name": "handheld_radios",
+      "time": 0,
+      "variant": "state_pressure",
+      "requested_quantity": 1882.0,
+      "priority": 4,
+      "urgency": 4,
+      "pre_stock": {
+        "district": 1382.0,
+        "state": 56966.549,
+        "national": 397239.225,
+        "available": 455587.774
+      },
+      "request_status": 201,
+      "request_body": {
+        "status": "accepted",
+        "request_id": 3222,
+        "solver_run_id": 1102,
+        "human_priority": 4,
+        "human_urgency": 4,
+        "predicted_priority": null,
+        "predicted_urgency": null,
+        "prediction_confidence": null
+      },
+      "request_id": 3222
+    },
+    {
+      "case_id": 18,
+      "resource_id": "R55",
+      "resource_name": "storage_containers",
+      "time": 1,
+      "variant": "neighbor_pressure",
+      "requested_quantity": 50515.0,
+      "priority": 4,
+      "urgency": 5,
+      "pre_stock": {
+        "district": 1904.0,
+        "state": 39690.0,
+        "national": 255784.0,
+        "available": 297378.0
+      },
+      "request_status": 201,
+      "request_body": {
+        "status": "accepted",
+        "request_id": 3223,
+        "solver_run_id": 1102,
+        "human_priority": 4,
+        "human_urgency": 5,
+        "predicted_priority": null,
+        "predicted_urgency": null,
+        "prediction_confidence": null
+      },
+      "request_id": 3223
+    },
+    {
+      "case_id": 19,
+      "resource_id": "R22",
+      "resource_name": "doctors",
+      "time": 2,
+      "variant": "national_pressure",
+      "requested_quantity": 293862.0,
+      "priority": 5,
+      "urgency": 5,
+      "pre_stock": {
+        "district": 2162.0,
+        "state": 40737.0,
+        "national": 245201.0,
+        "available": 288100.0
+      },
+      "request_status": 201,
+      "request_body": {
+        "status": "accepted",
+        "request_id": 3224,
+        "solver_run_id": 1102,
+        "human_priority": 5,
+        "human_urgency": 5,
+        "predicted_priority": null,
+        "predicted_urgency": null,
+        "prediction_confidence": null
+      },
+      "request_id": 3224
+    },
+    {
+      "case_id": 20,
+      "resource_id": "R30",
+      "resource_name": "stretchers",
+      "time": 3,
+      "variant": "mixed_pressure",
+      "requested_quantity": 122808.0,
+      "priority": 4,
+      "urgency": 5,
+      "pre_stock": {
+        "district": 2311.0,
+        "state": 91277.0,
+        "national": 490818.0,
+        "available": 584406.0
+      },
+      "request_status": 201,
+      "request_body": {
+        "status": "accepted",
+        "request_id": 3225,
+        "solver_run_id": 1102,
+        "human_priority": 4,
+        "human_urgency": 5,
+        "predicted_priority": null,
+        "predicted_urgency": null,
+        "prediction_confidence": null
+      },
+      "request_id": 3225
+    },
+    {
+      "case_id": 21,
+      "resource_id": "R47",
+      "resource_name": "loudspeakers",
+      "time": 0,
+      "variant": "district_preferred",
+      "requested_quantity": 1357.0,
+      "priority": 3,
+      "urgency": 3,
+      "pre_stock": {
+        "district": 2715.0,
+        "state": 67422.206,
+        "national": 387690.559,
+        "available": 457827.765
+      },
+      "request_status": 201,
+      "request_body": {
+        "status": "accepted",
+        "request_id": 3226,
+        "solver_run_id": 1102,
+        "human_priority": 3,
+        "human_urgency": 3,
+        "predicted_priority": null,
+        "predicted_urgency": null,
+        "prediction_confidence": null
+      },
+      "request_id": 3226
+    },
+    {
+      "case_id": 22,
+      "resource_id": "R24",
+      "resource_name": "paramedics",
+      "time": 1,
+      "variant": "state_pressure",
+      "requested_quantity": 3469.0,
+      "priority": 4,
+      "urgency": 4,
+      "pre_stock": {
+        "district": 2969.0,
+        "state": 54760.0,
+        "national": 349530.0,
+        "available": 407259.0
+      },
+      "request_status": 201,
+      "request_body": {
+        "status": "accepted",
+        "request_id": 3227,
+        "solver_run_id": 1102,
+        "human_priority": 4,
+        "human_urgency": 4,
+        "predicted_priority": null,
+        "predicted_urgency": null,
+        "prediction_confidence": null
+      },
+      "request_id": 3227
+    },
+    {
+      "case_id": 23,
+      "resource_id": "R16",
+      "resource_name": "first_aid_kits",
+      "time": 2,
+      "variant": "neighbor_pressure",
+      "requested_quantity": 89157.0,
+      "priority": 4,
+      "urgency": 5,
+      "pre_stock": {
+        "district": 3739.0,
+        "state": 71214.0,
+        "national": 398514.0,
+        "available": 473467.0
+      },
+      "request_status": 201,
+      "request_body": {
+        "status": "accepted",
+        "request_id": 3228,
+        "solver_run_id": 1102,
+        "human_priority": 4,
+        "human_urgency": 5,
+        "predicted_priority": null,
+        "predicted_urgency": null,
+        "prediction_confidence": null
+      },
+      "request_id": 3228
+    },
+    {
+      "case_id": 24,
+      "resource_id": "R56",
+      "resource_name": "cold_chain_boxes",
+      "time": 3,
+      "variant": "national_pressure",
+      "requested_quantity": 586123.0,
+      "priority": 5,
+      "urgency": 5,
+      "pre_stock": {
+        "district": 3786.0,
+        "state": 79453.0,
+        "national": 491391.827,
+        "available": 574630.827
+      },
+      "request_status": 201,
+      "request_body": {
+        "status": "accepted",
+        "request_id": 3229,
+        "solver_run_id": 1102,
+        "human_priority": 5,
+        "human_urgency": 5,
+        "predicted_priority": null,
+        "predicted_urgency": null,
+        "prediction_confidence": null
+      },
+      "request_id": 3229
+    },
+    {
+      "case_id": 25,
+      "resource_id": "R21",
+      "resource_name": "oxygen_cylinders",
+      "time": 0,
+      "variant": "mixed_pressure",
+      "requested_quantity": 159433.0,
+      "priority": 4,
+      "urgency": 5,
+      "pre_stock": {
+        "district": 6228.0,
+        "state": 113602.0,
+        "national": 672247.0,
+        "available": 792077.0
+      },
+      "request_status": 201,
+      "request_body": {
+        "status": "accepted",
+        "request_id": 3230,
+        "solver_run_id": 1102,
+        "human_priority": 4,
+        "human_urgency": 5,
+        "predicted_priority": null,
+        "predicted_urgency": null,
+        "prediction_confidence": null
+      },
+      "request_id": 3230
+    },
+    {
+      "case_id": 26,
+      "resource_id": "R23",
+      "resource_name": "nurses",
+      "time": 1,
+      "variant": "district_preferred",
+      "requested_quantity": 3636.0,
+      "priority": 3,
+      "urgency": 3,
+      "pre_stock": {
+        "district": 7273.0,
+        "state": 133180.0,
+        "national": 699195.0,
+        "available": 839648.0
+      },
+      "request_status": 201,
+      "request_body": {
+        "status": "accepted",
+        "request_id": 3231,
+        "solver_run_id": 1102,
+        "human_priority": 3,
+        "human_urgency": 3,
+        "predicted_priority": null,
+        "predicted_urgency": null,
+        "prediction_confidence": null
+      },
+      "request_id": 3231
+    },
+    {
+      "case_id": 27,
+      "resource_id": "R25",
+      "resource_name": "hospital_beds",
+      "time": 2,
+      "variant": "state_pressure",
+      "requested_quantity": 9494.0,
+      "priority": 4,
+      "urgency": 4,
+      "pre_stock": {
+        "district": 8994.0,
+        "state": 173914.0,
+        "national": 920050.0,
+        "available": 1102958.0
+      },
+      "request_status": 201,
+      "request_body": {
+        "status": "accepted",
+        "request_id": 3232,
+        "solver_run_id": 1102,
+        "human_priority": 4,
+        "human_urgency": 4,
+        "predicted_priority": null,
+        "predicted_urgency": null,
+        "prediction_confidence": null
+      },
+      "request_id": 3232
+    },
+    {
+      "case_id": 28,
+      "resource_id": "R14",
+      "resource_name": "medical_kits",
+      "time": 3,
+      "variant": "neighbor_pressure",
+      "requested_quantity": 203733.0,
+      "priority": 4,
+      "urgency": 5,
+      "pre_stock": {
+        "district": 9296.0,
+        "state": 162707.0,
+        "national": 885685.0,
+        "available": 1057688.0
+      },
+      "request_status": 201,
+      "request_body": {
+        "status": "accepted",
+        "request_id": 3233,
+        "solver_run_id": 1102,
+        "human_priority": 4,
+        "human_urgency": 5,
+        "predicted_priority": null,
+        "predicted_urgency": null,
+        "prediction_confidence": null
+      },
+      "request_id": 3233
+    },
+    {
+      "case_id": 29,
+      "resource_id": "R17",
+      "resource_name": "antibiotics_courses",
+      "time": 0,
+      "variant": "national_pressure",
+      "requested_quantity": 2483185.0,
+      "priority": 5,
+      "urgency": 5,
+      "pre_stock": {
+        "district": 13060.0,
+        "state": 218593.0,
+        "national": 2202843.0,
+        "available": 2434496.0
+      },
+      "request_status": 201,
+      "request_body": {
+        "status": "accepted",
+        "request_id": 3234,
+        "solver_run_id": 1102,
+        "human_priority": 5,
+        "human_urgency": 5,
+        "predicted_priority": null,
+        "predicted_urgency": null,
+        "prediction_confidence": null
+      },
+      "request_id": 3234
+    },
+    {
+      "case_id": 30,
+      "resource_id": "R8",
+      "resource_name": "tents",
+      "time": 1,
+      "variant": "mixed_pressure",
+      "requested_quantity": 207081.0,
+      "priority": 4,
+      "urgency": 5,
+      "pre_stock": {
+        "district": 16710.0,
+        "state": 85948.0,
+        "national": 1985804.0,
+        "available": 2088462.0
+      },
+      "request_status": 201,
+      "request_body": {
+        "status": "accepted",
+        "request_id": 3235,
+        "solver_run_id": 1102,
+        "human_priority": 4,
+        "human_urgency": 5,
+        "predicted_priority": null,
+        "predicted_urgency": null,
+        "prediction_confidence": null
+      },
+      "request_id": 3235
+    }
+  ],
+  "waves": [
+    {
+      "wave_index": 1,
+      "run_id": 1102,
+      "trigger_status": 200,
+      "run_status": {
+        "run_id": 1102,
+        "status": "completed",
+        "mode": "live",
+        "started_at": "2026-03-04T16:24:09.902296",
+        "total_demand": 2.0,
+        "total_allocated": 2.0,
+        "total_unmet": 0.0
+      },
+      "request_ids": [
+        3206,
+        3207,
+        3208,
+        3209,
+        3210,
+        3211,
+        3212,
+        3213,
+        3214,
+        3215
+      ],
+      "scope_allocations": {
+        "district": 0.0,
+        "state": 0.0,
+        "neighbor_state": 0.0,
+        "national": 2.0
+      },
+      "state_escalations_seen": 10,
+      "national_escalations_seen": 0,
+      "neighbor_market_hits": 10
+    },
+    {
+      "wave_index": 2,
+      "run_id": 1103,
+      "trigger_status": 200,
+      "run_status": {},
+      "request_ids": [
+        3216,
+        3217,
+        3218,
+        3219,
+        3220,
+        3221,
+        3222,
+        3223,
+        3224,
+        3225
+      ],
+      "scope_allocations": {
+        "district": 0.0,
+        "state": 0.0,
+        "neighbor_state": 0.0,
+        "national": 0.0
+      },
+      "state_escalations_seen": 10,
+      "national_escalations_seen": 0,
+      "neighbor_market_hits": 10
+    },
+    {
+      "wave_index": 3,
+      "run_id": 1104,
+      "trigger_status": 200,
+      "run_status": {},
+      "request_ids": [
+        3226,
+        3227,
+        3228,
+        3229,
+        3230,
+        3231,
+        3232,
+        3233,
+        3234,
+        3235
+      ],
+      "scope_allocations": {
+        "district": 0.0,
+        "state": 0.0,
+        "neighbor_state": 0.0,
+        "national": 0.0
+      },
+      "state_escalations_seen": 10,
+      "national_escalations_seen": 0,
+      "neighbor_market_hits": 10
+    }
+  ],
+  "completed_at": "2026-03-04T16:38:49.472785+00:00",
+  "summary": {
+    "accepted_requests": 30,
+    "waves": 3,
+    "scope_totals": {
+      "district": 0.0,
+      "state": 0.0,
+      "neighbor_state": 0.0,
+      "national": 2.0
+    },
+    "state_or_neighbor_seen": false,
+    "national_seen": true
+  }
+}

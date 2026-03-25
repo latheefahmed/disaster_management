@@ -1,0 +1,522 @@
+{
+  "started_at": "2026-03-04T17:27:17.147062+00:00",
+  "cases_planned": 20,
+  "wave_size": 5,
+  "max_wave_retries": 2,
+  "waves": [
+    {
+      "request_rows": [
+        {
+          "case_id": 1,
+          "variant": "urgent_fast_state_neighbor_first",
+          "resource_id": "R39",
+          "resource_name": "diesel_liters",
+          "time": 0,
+          "priority": 5,
+          "urgency": 5,
+          "quantity": 336759.5,
+          "pre_stock": {
+            "district": 12500.0,
+            "state": 432346.0,
+            "national": 5500036.0,
+            "available": 5944882.0
+          },
+          "request_status": 201,
+          "request_id": 3361
+        },
+        {
+          "case_id": 2,
+          "variant": "urgent_fast_state_neighbor_first",
+          "resource_id": "R5",
+          "resource_name": "bottled_water_liters",
+          "time": 0,
+          "priority": 5,
+          "urgency": 5,
+          "quantity": 315676.25,
+          "pre_stock": {
+            "district": 12500.0,
+            "state": 404235.0,
+            "national": 5215231.0,
+            "available": 5631966.0
+          },
+          "request_status": 201,
+          "request_id": 3362
+        },
+        {
+          "case_id": 3,
+          "variant": "balanced_mid",
+          "resource_id": "R39",
+          "resource_name": "diesel_liters",
+          "time": 1,
+          "priority": 3,
+          "urgency": 3,
+          "quantity": 163821.09999999998,
+          "pre_stock": {
+            "district": 12500.0,
+            "state": 432346.0,
+            "national": 5500036.0,
+            "available": 5944882.0
+          },
+          "request_status": 201,
+          "request_id": 3363
+        },
+        {
+          "case_id": 4,
+          "variant": "low_late_direct_national",
+          "resource_id": "R5",
+          "resource_name": "bottled_water_liters",
+          "time": 3,
+          "priority": 1,
+          "urgency": 1,
+          "quantity": 1543128.2,
+          "pre_stock": {
+            "district": 12500.0,
+            "state": 404235.0,
+            "national": 5215231.0,
+            "available": 5631966.0
+          },
+          "request_status": 201,
+          "request_id": 3364
+        },
+        {
+          "case_id": 5,
+          "variant": "low_late_direct_national",
+          "resource_id": "R6",
+          "resource_name": "bulk_water_liters",
+          "time": 3,
+          "priority": 1,
+          "urgency": 1,
+          "quantity": 1538130.4000000001,
+          "pre_stock": {
+            "district": 12500.0,
+            "state": 400000.0,
+            "national": 5215652.0,
+            "available": 5628152.0
+          },
+          "request_status": 201,
+          "request_id": 3365
+        }
+      ],
+      "request_ids": [
+        3361,
+        3362,
+        3363,
+        3364,
+        3365
+      ],
+      "run_id": 1127,
+      "run_status": {
+        "run_id": 1127,
+        "status": "completed",
+        "mode": "live",
+        "started_at": "2026-03-04T17:27:17.158388",
+        "total_demand": 3428817.0,
+        "total_allocated": 3327387.0,
+        "total_unmet": 101430.0
+      },
+      "trigger_status": 200,
+      "scope": {
+        "district": 336760.0,
+        "state": 0.0,
+        "neighbor_state": 0.0,
+        "national": 0.0
+      },
+      "unmet_qty": 0.0,
+      "state_escalations_seen": 5,
+      "national_escalations_seen": 0,
+      "acceptable_run_outcome": true,
+      "attempt": 1,
+      "attempts": 1
+    },
+    {
+      "request_rows": [
+        {
+          "case_id": 6,
+          "variant": "urgent_fast_state_neighbor_first",
+          "resource_id": "R1",
+          "resource_name": "food_packets",
+          "time": 0,
+          "priority": 5,
+          "urgency": 5,
+          "quantity": 196186.0,
+          "pre_stock": {
+            "district": 7500.0,
+            "state": 251582.0,
+            "national": 3263433.0,
+            "available": 3522515.0
+          },
+          "request_status": 201,
+          "request_id": 3366
+        },
+        {
+          "case_id": 7,
+          "variant": "urgent_fast_state_neighbor_first",
+          "resource_id": "R48",
+          "resource_name": "toilets_portable",
+          "time": 0,
+          "priority": 5,
+          "urgency": 5,
+          "quantity": 197278.0,
+          "pre_stock": {
+            "district": 19213.0,
+            "state": 237420.0,
+            "national": 2900288.0,
+            "available": 3156921.0
+          },
+          "request_status": 201,
+          "request_id": 3367
+        },
+        {
+          "case_id": 8,
+          "variant": "balanced_mid",
+          "resource_id": "R52",
+          "resource_name": "diapers",
+          "time": 1,
+          "priority": 3,
+          "urgency": 3,
+          "quantity": 61000.0,
+          "pre_stock": {
+            "district": 5000.0,
+            "state": 160000.0,
+            "national": 3551230.0,
+            "available": 3716230.0
+          },
+          "request_status": 201,
+          "request_id": 3368
+        },
+        {
+          "case_id": 9,
+          "variant": "low_late_direct_national",
+          "resource_id": "R1",
+          "resource_name": "food_packets",
+          "time": 3,
+          "priority": 1,
+          "urgency": 1,
+          "quantity": 963585.0,
+          "pre_stock": {
+            "district": 7500.0,
+            "state": 251582.0,
+            "national": 3263433.0,
+            "available": 3522515.0
+          },
+          "request_status": 201,
+          "request_id": 3369
+        },
+        {
+          "case_id": 10,
+          "variant": "low_late_direct_national",
+          "resource_id": "R48",
+          "resource_name": "toilets_portable",
+          "time": 3,
+          "priority": 1,
+          "urgency": 1,
+          "quantity": 800000.0,
+          "pre_stock": {
+            "district": 19213.0,
+            "state": 237420.0,
+            "national": 2900288.0,
+            "available": 3156921.0
+          },
+          "request_status": 201,
+          "request_id": 3370
+        }
+      ],
+      "request_ids": [
+        3366,
+        3367,
+        3368,
+        3369,
+        3370
+      ],
+      "run_id": 1128,
+      "run_status": {
+        "run_id": 1128,
+        "status": "completed",
+        "mode": "live",
+        "started_at": "2026-03-04T17:27:25.980643",
+        "total_demand": 3756945.0,
+        "total_allocated": 3756945.0,
+        "total_unmet": 0.0
+      },
+      "trigger_status": 200,
+      "scope": {
+        "district": 196186.0,
+        "state": 0.0,
+        "neighbor_state": 0.0,
+        "national": 0.0
+      },
+      "unmet_qty": 0.0,
+      "state_escalations_seen": 5,
+      "national_escalations_seen": 0,
+      "acceptable_run_outcome": true,
+      "attempt": 1,
+      "attempts": 1
+    },
+    {
+      "request_rows": [
+        {
+          "case_id": 11,
+          "variant": "urgent_fast_state_neighbor_first",
+          "resource_id": "R51",
+          "resource_name": "sanitary_pads",
+          "time": 0,
+          "priority": 5,
+          "urgency": 5,
+          "quantity": 147395.0,
+          "pre_stock": {
+            "district": 5000.0,
+            "state": 189860.0,
+            "national": 2383006.0,
+            "available": 2577866.0
+          },
+          "request_status": 201,
+          "request_id": 3371
+        },
+        {
+          "case_id": 12,
+          "variant": "urgent_fast_state_neighbor_first",
+          "resource_id": "R50",
+          "resource_name": "soap_bars",
+          "time": 0,
+          "priority": 5,
+          "urgency": 5,
+          "quantity": 125003.0,
+          "pre_stock": {
+            "district": 5000.0,
+            "state": 160004.0,
+            "national": 2351552.0,
+            "available": 2516556.0
+          },
+          "request_status": 201,
+          "request_id": 3372
+        },
+        {
+          "case_id": 13,
+          "variant": "balanced_mid",
+          "resource_id": "R43",
+          "resource_name": "battery_packs",
+          "time": 1,
+          "priority": 3,
+          "urgency": 3,
+          "quantity": 68740.0,
+          "pre_stock": {
+            "district": 5000.0,
+            "state": 182115.0,
+            "national": 2663269.0,
+            "available": 2850384.0
+          },
+          "request_status": 201,
+          "request_id": 3373
+        },
+        {
+          "case_id": 14,
+          "variant": "low_late_direct_national",
+          "resource_id": "R12",
+          "resource_name": "plastic_sheets",
+          "time": 3,
+          "priority": 1,
+          "urgency": 1,
+          "quantity": 862210.0,
+          "pre_stock": {
+            "district": 19587.0,
+            "state": 286238.0,
+            "national": 2476104.0,
+            "available": 2781929.0
+          },
+          "request_status": 201,
+          "request_id": 3374
+        },
+        {
+          "case_id": 15,
+          "variant": "low_late_direct_national",
+          "resource_id": "R42",
+          "resource_name": "solar_lanterns",
+          "time": 3,
+          "priority": 1,
+          "urgency": 1,
+          "quantity": 722659.0,
+          "pre_stock": {
+            "district": 19626.0,
+            "state": 183820.0,
+            "national": 2392623.0,
+            "available": 2596069.0
+          },
+          "request_status": 201,
+          "request_id": 3375
+        }
+      ],
+      "request_ids": [
+        3371,
+        3372,
+        3373,
+        3374,
+        3375
+      ],
+      "run_id": 1129,
+      "run_status": {
+        "run_id": 1129,
+        "status": "completed",
+        "mode": "live",
+        "started_at": "2026-03-04T17:27:34.847358",
+        "total_demand": 2169258.0,
+        "total_allocated": 2169258.0,
+        "total_unmet": 0.0
+      },
+      "trigger_status": 200,
+      "scope": {
+        "district": 147395.0,
+        "state": 0.0,
+        "neighbor_state": 0.0,
+        "national": 0.0
+      },
+      "unmet_qty": 0.0,
+      "state_escalations_seen": 5,
+      "national_escalations_seen": 0,
+      "acceptable_run_outcome": true,
+      "attempt": 1,
+      "attempts": 1
+    },
+    {
+      "request_rows": [
+        {
+          "case_id": 16,
+          "variant": "urgent_fast_state_neighbor_first",
+          "resource_id": "R54",
+          "resource_name": "pallets",
+          "time": 0,
+          "priority": 5,
+          "urgency": 5,
+          "quantity": 142420.0,
+          "pre_stock": {
+            "district": 5000.0,
+            "state": 183227.365,
+            "national": 1761401.361,
+            "available": 1949628.726
+          },
+          "request_status": 201,
+          "request_id": 3376
+        },
+        {
+          "case_id": 17,
+          "variant": "urgent_fast_state_neighbor_first",
+          "resource_id": "R49",
+          "resource_name": "hygiene_kits",
+          "time": 0,
+          "priority": 5,
+          "urgency": 5,
+          "quantity": 140389.0,
+          "pre_stock": {
+            "district": 20383.0,
+            "state": 160008.0,
+            "national": 1636227.0,
+            "available": 1816618.0
+          },
+          "request_status": 201,
+          "request_id": 3377
+        },
+        {
+          "case_id": 18,
+          "variant": "balanced_mid",
+          "resource_id": "R19",
+          "resource_name": "syringes",
+          "time": 1,
+          "priority": 3,
+          "urgency": 3,
+          "quantity": 61001.0,
+          "pre_stock": {
+            "district": 5000.0,
+            "state": 160003.0,
+            "national": 2165078.0,
+            "available": 2330081.0
+          },
+          "request_status": 201,
+          "request_id": 3378
+        },
+        {
+          "case_id": 19,
+          "variant": "low_late_direct_national",
+          "resource_id": "R41",
+          "resource_name": "generators",
+          "time": 3,
+          "priority": 1,
+          "urgency": 1,
+          "quantity": 400000.0,
+          "pre_stock": {
+            "district": 19603.0,
+            "state": 153742.0,
+            "national": 2018652.0,
+            "available": 2191997.0
+          },
+          "request_status": 201,
+          "request_id": 3379
+        },
+        {
+          "case_id": 20,
+          "variant": "low_late_direct_national",
+          "resource_id": "R4",
+          "resource_name": "baby_formula",
+          "time": 3,
+          "priority": 1,
+          "urgency": 1,
+          "quantity": 566397.0,
+          "pre_stock": {
+            "district": 5000.0,
+            "state": 160002.0,
+            "national": 2244808.0,
+            "available": 2006979.0
+          },
+          "request_status": 201,
+          "request_id": 3380
+        }
+      ],
+      "request_ids": [
+        3376,
+        3377,
+        3378,
+        3379,
+        3380
+      ],
+      "run_id": 1130,
+      "run_status": {
+        "run_id": 1130,
+        "status": "completed",
+        "mode": "live",
+        "started_at": "2026-03-04T17:27:43.607237",
+        "total_demand": 1921032.0,
+        "total_allocated": 1921032.0,
+        "total_unmet": 0.0
+      },
+      "trigger_status": 200,
+      "scope": {
+        "district": 0.0,
+        "state": 0.0,
+        "neighbor_state": 0.0,
+        "national": 142420.0
+      },
+      "unmet_qty": 0.0,
+      "state_escalations_seen": 5,
+      "national_escalations_seen": 0,
+      "acceptable_run_outcome": true,
+      "attempt": 1,
+      "attempts": 1
+    }
+  ],
+  "completed_at": "2026-03-04T17:27:52.448721+00:00",
+  "summary": {
+    "waves": 4,
+    "successful_waves": 4,
+    "scope_totals": {
+      "district": 680341.0,
+      "state": 0.0,
+      "neighbor_state": 0.0,
+      "national": 142420.0
+    },
+    "unmet_total": 0.0,
+    "state_escalations_seen_total": 20,
+    "national_escalations_seen_total": 0,
+    "policy_check": {
+      "urgent_path_has_state_or_neighbor": false,
+      "low_late_path_allows_national": true
+    }
+  }
+}

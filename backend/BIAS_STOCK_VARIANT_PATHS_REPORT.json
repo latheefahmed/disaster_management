@@ -1,0 +1,10 @@
+{
+  "timestamp": "2026-03-04T16:53:37.321810Z",
+  "latest_run_id": 1116,
+  "district_code": "603",
+  "state_code": "33",
+  "reason": "variant_path_bias_603",
+  "rows_inserted": 15,
+  "resources_shifted": 5,
+  "total_shift_quantity": 739587869.049
+}

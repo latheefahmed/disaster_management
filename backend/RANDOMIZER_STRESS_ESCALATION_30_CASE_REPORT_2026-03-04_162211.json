@@ -1,0 +1,491 @@
+{
+  "timestamp": "2026-03-04T16:22:11.480914+00:00",
+  "cases": 30,
+  "passed": 0,
+  "failed": 30,
+  "pass_rate": 0.0,
+  "escalation_happened_cases": 0,
+  "escalation_rate": 0.0,
+  "results": [
+    {
+      "case": 1,
+      "scenario_id": 318,
+      "preset": "high",
+      "horizon": 3,
+      "district_count_requested": 7,
+      "resource_count_requested": 8,
+      "state_scope": [],
+      "run_http": null,
+      "run_status": "failed",
+      "error": "500 Server Error: Internal Server Error for url: http://127.0.0.1:8000/admin/scenarios/318/randomizer/preview",
+      "escalation_happened": false,
+      "pass": false
+    },
+    {
+      "case": 2,
+      "scenario_id": 319,
+      "preset": "extreme",
+      "horizon": 3,
+      "district_count_requested": 10,
+      "resource_count_requested": 9,
+      "state_scope": [
+        "31",
+        "13"
+      ],
+      "run_http": null,
+      "run_status": "failed",
+      "error": "500 Server Error: Internal Server Error for url: http://127.0.0.1:8000/admin/scenarios/319/randomizer/preview",
+      "escalation_happened": false,
+      "pass": false
+    },
+    {
+      "case": 3,
+      "scenario_id": 320,
+      "preset": "extreme",
+      "horizon": 3,
+      "district_count_requested": 11,
+      "resource_count_requested": 10,
+      "state_scope": [
+        "1",
+        "26"
+      ],
+      "run_http": null,
+      "run_status": "failed",
+      "error": "500 Server Error: Internal Server Error for url: http://127.0.0.1:8000/admin/scenarios/320/randomizer/preview",
+      "escalation_happened": false,
+      "pass": false
+    },
+    {
+      "case": 4,
+      "scenario_id": 321,
+      "preset": "high",
+      "horizon": 3,
+      "district_count_requested": 11,
+      "resource_count_requested": 10,
+      "state_scope": [],
+      "run_http": null,
+      "run_status": "failed",
+      "error": "500 Server Error: Internal Server Error for url: http://127.0.0.1:8000/admin/scenarios/321/randomizer/preview",
+      "escalation_happened": false,
+      "pass": false
+    },
+    {
+      "case": 5,
+      "scenario_id": 322,
+      "preset": "extreme",
+      "horizon": 3,
+      "district_count_requested": 12,
+      "resource_count_requested": 10,
+      "state_scope": [
+        "9",
+        "5"
+      ],
+      "run_http": null,
+      "run_status": "failed",
+      "error": "500 Server Error: Internal Server Error for url: http://127.0.0.1:8000/admin/scenarios/322/randomizer/preview",
+      "escalation_happened": false,
+      "pass": false
+    },
+    {
+      "case": 6,
+      "scenario_id": 323,
+      "preset": "high",
+      "horizon": 3,
+      "district_count_requested": 9,
+      "resource_count_requested": 9,
+      "state_scope": [
+        "24",
+        "4"
+      ],
+      "run_http": null,
+      "run_status": "failed",
+      "error": "500 Server Error: Internal Server Error for url: http://127.0.0.1:8000/admin/scenarios/323/randomizer/preview",
+      "escalation_happened": false,
+      "pass": false
+    },
+    {
+      "case": 7,
+      "scenario_id": 324,
+      "preset": "extreme",
+      "horizon": 3,
+      "district_count_requested": 8,
+      "resource_count_requested": 7,
+      "state_scope": [],
+      "run_http": null,
+      "run_status": "failed",
+      "error": "500 Server Error: Internal Server Error for url: http://127.0.0.1:8000/admin/scenarios/324/randomizer/preview",
+      "escalation_happened": false,
+      "pass": false
+    },
+    {
+      "case": 8,
+      "scenario_id": 325,
+      "preset": "extreme",
+      "horizon": 3,
+      "district_count_requested": 12,
+      "resource_count_requested": 5,
+      "state_scope": [
+        "34",
+        "15"
+      ],
+      "run_http": null,
+      "run_status": "failed",
+      "error": "500 Server Error: Internal Server Error for url: http://127.0.0.1:8000/admin/scenarios/325/randomizer/preview",
+      "escalation_happened": false,
+      "pass": false
+    },
+    {
+      "case": 9,
+      "scenario_id": 326,
+      "preset": "high",
+      "horizon": 3,
+      "district_count_requested": 8,
+      "resource_count_requested": 9,
+      "state_scope": [
+        "16",
+        "14"
+      ],
+      "run_http": null,
+      "run_status": "failed",
+      "error": "500 Server Error: Internal Server Error for url: http://127.0.0.1:8000/admin/scenarios/326/randomizer/preview",
+      "escalation_happened": false,
+      "pass": false
+    },
+    {
+      "case": 10,
+      "scenario_id": 327,
+      "preset": "extreme",
+      "horizon": 3,
+      "district_count_requested": 10,
+      "resource_count_requested": 9,
+      "state_scope": [],
+      "run_http": null,
+      "run_status": "failed",
+      "error": "500 Server Error: Internal Server Error for url: http://127.0.0.1:8000/admin/scenarios/327/randomizer/preview",
+      "escalation_happened": false,
+      "pass": false
+    },
+    {
+      "case": 11,
+      "scenario_id": 328,
+      "preset": "high",
+      "horizon": 4,
+      "district_count_requested": 11,
+      "resource_count_requested": 5,
+      "state_scope": [
+        "32",
+        "26"
+      ],
+      "run_http": null,
+      "run_status": "failed",
+      "error": "500 Server Error: Internal Server Error for url: http://127.0.0.1:8000/admin/scenarios/328/randomizer/preview",
+      "escalation_happened": false,
+      "pass": false
+    },
+    {
+      "case": 12,
+      "scenario_id": 329,
+      "preset": "extreme",
+      "horizon": 4,
+      "district_count_requested": 9,
+      "resource_count_requested": 5,
+      "state_scope": [
+        "35",
+        "9"
+      ],
+      "run_http": null,
+      "run_status": "failed",
+      "error": "500 Server Error: Internal Server Error for url: http://127.0.0.1:8000/admin/scenarios/329/randomizer/preview",
+      "escalation_happened": false,
+      "pass": false
+    },
+    {
+      "case": 13,
+      "scenario_id": 330,
+      "preset": "extreme",
+      "horizon": 4,
+      "district_count_requested": 11,
+      "resource_count_requested": 8,
+      "state_scope": [],
+      "run_http": null,
+      "run_status": "failed",
+      "error": "500 Server Error: Internal Server Error for url: http://127.0.0.1:8000/admin/scenarios/330/randomizer/preview",
+      "escalation_happened": false,
+      "pass": false
+    },
+    {
+      "case": 14,
+      "scenario_id": 331,
+      "preset": "high",
+      "horizon": 4,
+      "district_count_requested": 7,
+      "resource_count_requested": 5,
+      "state_scope": [
+        "34",
+        "2"
+      ],
+      "run_http": null,
+      "run_status": "failed",
+      "error": "500 Server Error: Internal Server Error for url: http://127.0.0.1:8000/admin/scenarios/331/randomizer/preview",
+      "escalation_happened": false,
+      "pass": false
+    },
+    {
+      "case": 15,
+      "scenario_id": 332,
+      "preset": "extreme",
+      "horizon": 4,
+      "district_count_requested": 7,
+      "resource_count_requested": 9,
+      "state_scope": [
+        "1",
+        "30"
+      ],
+      "run_http": null,
+      "run_status": "failed",
+      "error": "500 Server Error: Internal Server Error for url: http://127.0.0.1:8000/admin/scenarios/332/randomizer/preview",
+      "escalation_happened": false,
+      "pass": false
+    },
+    {
+      "case": 16,
+      "scenario_id": 333,
+      "preset": "high",
+      "horizon": 4,
+      "district_count_requested": 12,
+      "resource_count_requested": 7,
+      "state_scope": [],
+      "run_http": null,
+      "run_status": "failed",
+      "error": "500 Server Error: Internal Server Error for url: http://127.0.0.1:8000/admin/scenarios/333/randomizer/preview",
+      "escalation_happened": false,
+      "pass": false
+    },
+    {
+      "case": 17,
+      "scenario_id": 334,
+      "preset": "extreme",
+      "horizon": 4,
+      "district_count_requested": 12,
+      "resource_count_requested": 5,
+      "state_scope": [
+        "11",
+        "5"
+      ],
+      "run_http": null,
+      "run_status": "failed",
+      "error": "500 Server Error: Internal Server Error for url: http://127.0.0.1:8000/admin/scenarios/334/randomizer/preview",
+      "escalation_happened": false,
+      "pass": false
+    },
+    {
+      "case": 18,
+      "scenario_id": 335,
+      "preset": "extreme",
+      "horizon": 4,
+      "district_count_requested": 9,
+      "resource_count_requested": 9,
+      "state_scope": [
+        "26",
+        "1"
+      ],
+      "run_http": null,
+      "run_status": "failed",
+      "error": "500 Server Error: Internal Server Error for url: http://127.0.0.1:8000/admin/scenarios/335/randomizer/preview",
+      "escalation_happened": false,
+      "pass": false
+    },
+    {
+      "case": 19,
+      "scenario_id": 336,
+      "preset": "high",
+      "horizon": 4,
+      "district_count_requested": 11,
+      "resource_count_requested": 6,
+      "state_scope": [],
+      "run_http": null,
+      "run_status": "failed",
+      "error": "500 Server Error: Internal Server Error for url: http://127.0.0.1:8000/admin/scenarios/336/randomizer/preview",
+      "escalation_happened": false,
+      "pass": false
+    },
+    {
+      "case": 20,
+      "scenario_id": 337,
+      "preset": "extreme",
+      "horizon": 4,
+      "district_count_requested": 11,
+      "resource_count_requested": 6,
+      "state_scope": [
+        "35",
+        "24"
+      ],
+      "run_http": null,
+      "run_status": "failed",
+      "error": "500 Server Error: Internal Server Error for url: http://127.0.0.1:8000/admin/scenarios/337/randomizer/preview",
+      "escalation_happened": false,
+      "pass": false
+    },
+    {
+      "case": 21,
+      "scenario_id": 338,
+      "preset": "high",
+      "horizon": 5,
+      "district_count_requested": 6,
+      "resource_count_requested": 5,
+      "state_scope": [
+        "21",
+        "19"
+      ],
+      "run_http": null,
+      "run_status": "failed",
+      "error": "500 Server Error: Internal Server Error for url: http://127.0.0.1:8000/admin/scenarios/338/randomizer/preview",
+      "escalation_happened": false,
+      "pass": false
+    },
+    {
+      "case": 22,
+      "scenario_id": 339,
+      "preset": "extreme",
+      "horizon": 5,
+      "district_count_requested": 6,
+      "resource_count_requested": 9,
+      "state_scope": [],
+      "run_http": null,
+      "run_status": "failed",
+      "error": "500 Server Error: Internal Server Error for url: http://127.0.0.1:8000/admin/scenarios/339/randomizer/preview",
+      "escalation_happened": false,
+      "pass": false
+    },
+    {
+      "case": 23,
+      "scenario_id": 340,
+      "preset": "extreme",
+      "horizon": 5,
+      "district_count_requested": 10,
+      "resource_count_requested": 9,
+      "state_scope": [
+        "25",
+        "21"
+      ],
+      "run_http": null,
+      "run_status": "failed",
+      "error": "500 Server Error: Internal Server Error for url: http://127.0.0.1:8000/admin/scenarios/340/randomizer/preview",
+      "escalation_happened": false,
+      "pass": false
+    },
+    {
+      "case": 24,
+      "scenario_id": 341,
+      "preset": "high",
+      "horizon": 5,
+      "district_count_requested": 9,
+      "resource_count_requested": 7,
+      "state_scope": [
+        "4",
+        "9"
+      ],
+      "run_http": null,
+      "run_status": "failed",
+      "error": "500 Server Error: Internal Server Error for url: http://127.0.0.1:8000/admin/scenarios/341/randomizer/preview",
+      "escalation_happened": false,
+      "pass": false
+    },
+    {
+      "case": 25,
+      "scenario_id": 342,
+      "preset": "extreme",
+      "horizon": 5,
+      "district_count_requested": 12,
+      "resource_count_requested": 6,
+      "state_scope": [],
+      "run_http": null,
+      "run_status": "failed",
+      "error": "500 Server Error: Internal Server Error for url: http://127.0.0.1:8000/admin/scenarios/342/randomizer/preview",
+      "escalation_happened": false,
+      "pass": false
+    },
+    {
+      "case": 26,
+      "scenario_id": 343,
+      "preset": "high",
+      "horizon": 5,
+      "district_count_requested": 11,
+      "resource_count_requested": 6,
+      "state_scope": [
+        "15",
+        "30"
+      ],
+      "run_http": null,
+      "run_status": "failed",
+      "error": "500 Server Error: Internal Server Error for url: http://127.0.0.1:8000/admin/scenarios/343/randomizer/preview",
+      "escalation_happened": false,
+      "pass": false
+    },
+    {
+      "case": 27,
+      "scenario_id": 344,
+      "preset": "extreme",
+      "horizon": 5,
+      "district_count_requested": 7,
+      "resource_count_requested": 6,
+      "state_scope": [
+        "15",
+        "14"
+      ],
+      "run_http": null,
+      "run_status": "failed",
+      "error": "500 Server Error: Internal Server Error for url: http://127.0.0.1:8000/admin/scenarios/344/randomizer/preview",
+      "escalation_happened": false,
+      "pass": false
+    },
+    {
+      "case": 28,
+      "scenario_id": 345,
+      "preset": "extreme",
+      "horizon": 5,
+      "district_count_requested": 6,
+      "resource_count_requested": 8,
+      "state_scope": [],
+      "run_http": null,
+      "run_status": "failed",
+      "error": "500 Server Error: Internal Server Error for url: http://127.0.0.1:8000/admin/scenarios/345/randomizer/preview",
+      "escalation_happened": false,
+      "pass": false
+    },
+    {
+      "case": 29,
+      "scenario_id": 346,
+      "preset": "high",
+      "horizon": 5,
+      "district_count_requested": 12,
+      "resource_count_requested": 6,
+      "state_scope": [
+        "34",
+        "24"
+      ],
+      "run_http": null,
+      "run_status": "failed",
+      "error": "500 Server Error: Internal Server Error for url: http://127.0.0.1:8000/admin/scenarios/346/randomizer/preview",
+      "escalation_happened": false,
+      "pass": false
+    },
+    {
+      "case": 30,
+      "scenario_id": 347,
+      "preset": "extreme",
+      "horizon": 5,
+      "district_count_requested": 7,
+      "resource_count_requested": 6,
+      "state_scope": [
+        "32",
+        "8"
+      ],
+      "run_http": null,
+      "run_status": "failed",
+      "error": "500 Server Error: Internal Server Error for url: http://127.0.0.1:8000/admin/scenarios/347/randomizer/preview",
+      "escalation_happened": false,
+      "pass": false
+    }
+  ]
+}

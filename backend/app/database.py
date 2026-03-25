@@ -256,6 +256,13 @@ def apply_runtime_migrations():
             conn.execute(text("UPDATE requests SET lifecycle_state = 'CREATED' WHERE status = 'pending'"))
             conn.execute(text("UPDATE requests SET lifecycle_state = 'SENT_TO_SOLVER' WHERE status = 'solving'"))
             conn.execute(text("UPDATE requests SET lifecycle_state = 'ALLOCATED' WHERE status = 'allocated'"))
+            if _sqlite_table_exists(conn, "scenario_requests"):
+                if not _sqlite_column_exists(conn, "scenario_requests", "priority"):
+                    conn.execute(text("ALTER TABLE scenario_requests ADD COLUMN priority REAL NOT NULL DEFAULT 1.0"))
+                if not _sqlite_column_exists(conn, "scenario_requests", "urgency"):
+                    conn.execute(text("ALTER TABLE scenario_requests ADD COLUMN urgency REAL NOT NULL DEFAULT 1.0"))
+                if not _sqlite_column_exists(conn, "scenario_requests", "time_index"):
+                    conn.execute(text("ALTER TABLE scenario_requests ADD COLUMN time_index REAL NOT NULL DEFAULT 1.0"))
             conn.execute(text("UPDATE requests SET lifecycle_state = 'PARTIAL' WHERE status = 'partial'"))
             conn.execute(text("UPDATE requests SET lifecycle_state = 'UNMET' WHERE status = 'unmet'"))
             conn.execute(text("UPDATE requests SET lifecycle_state = 'ESCALATED' WHERE status IN ('escalated_state','escalated_national')"))
@@ -420,9 +427,39 @@ def apply_runtime_migrations():
             if not _sqlite_column_exists(conn, "solver_runs", "summary_snapshot_json"):
                 conn.execute(text("ALTER TABLE solver_runs ADD COLUMN summary_snapshot_json TEXT"))
 
+            # Normalize run modes to the allowed governance vocabulary.
+            conn.execute(
+                text(
+                    "UPDATE solver_runs "
+                    "SET mode = CASE "
+                    "  WHEN mode IS NULL OR TRIM(mode) = '' THEN 'manual' "
+                    "  WHEN LOWER(TRIM(mode)) = 'normal' THEN 'manual' "
+                    "  WHEN LOWER(TRIM(mode)) = 'prod' THEN 'production' "
+                    "  WHEN LOWER(TRIM(mode)) IN ('scenario','live','production','manual') THEN LOWER(TRIM(mode)) "
+                    "  ELSE 'manual' "
+                    "END"
+                )
+            )
+
             conn.execute(text("CREATE INDEX IF NOT EXISTS idx_solver_runs_status_mode ON solver_runs(status, mode, id)"))
             conn.execute(text("CREATE INDEX IF NOT EXISTS idx_solver_runs_id_desc ON solver_runs(id DESC)"))
             conn.execute(text("CREATE INDEX IF NOT EXISTS idx_solver_runs_status ON solver_runs(status)"))
+
+        if _sqlite_table_exists(conn, "mutual_aid_offers"):
+            if not _sqlite_column_exists(conn, "mutual_aid_offers", "auto_accepted"):
+                conn.execute(text("ALTER TABLE mutual_aid_offers ADD COLUMN auto_accepted INTEGER NOT NULL DEFAULT 0"))
+            if not _sqlite_column_exists(conn, "mutual_aid_offers", "approval_source"):
+                conn.execute(text("ALTER TABLE mutual_aid_offers ADD COLUMN approval_source TEXT"))
+            conn.execute(
+                text(
+                    "UPDATE mutual_aid_offers "
+                    "SET approval_source = CASE "
+                    "  WHEN LOWER(COALESCE(status, '')) = 'accepted' AND COALESCE(auto_accepted, 0) = 1 THEN 'scenario_auto' "
+                    "  WHEN COALESCE(approval_source, '') = '' THEN 'state_authority' "
+                    "  ELSE approval_source "
+                    "END"
+                )
+            )
 
         if _sqlite_table_exists(conn, "requests"):
             conn.execute(text("CREATE INDEX IF NOT EXISTS idx_requests_district_status ON requests(district_code, status)"))

@@ -1,0 +1,134 @@
+{
+  "timestamp": "2026-03-24T16:57:19.723161Z",
+  "latest_inventory_run_id": 1922,
+  "latest_inventory_time": 30,
+  "targets": {
+    "R22": {
+      "name": "doctors",
+      "district_cap": 2200.0,
+      "state_cap": 8000.0,
+      "national_cap": 60000.0
+    },
+    "R13": {
+      "name": "family_shelter_kits",
+      "district_cap": 3500.0,
+      "state_cap": 15000.0,
+      "national_cap": 120000.0
+    },
+    "R12": {
+      "name": "plastic_sheets",
+      "district_cap": 5000.0,
+      "state_cap": 20000.0,
+      "national_cap": 150000.0
+    }
+  },
+  "before": {
+    "R22": {
+      "district_count": 0,
+      "district_max": 0.0,
+      "district_avg": 0.0,
+      "state_count": 0,
+      "state_max": 0.0,
+      "state_avg": 0.0,
+      "national_count": 0,
+      "national_max": 0.0,
+      "national_avg": 0.0
+    },
+    "R13": {
+      "district_count": 0,
+      "district_max": 0.0,
+      "district_avg": 0.0,
+      "state_count": 0,
+      "state_max": 0.0,
+      "state_avg": 0.0,
+      "national_count": 0,
+      "national_max": 0.0,
+      "national_avg": 0.0
+    },
+    "R12": {
+      "district_count": 0,
+      "district_max": 0.0,
+      "district_avg": 0.0,
+      "state_count": 0,
+      "state_max": 0.0,
+      "state_avg": 0.0,
+      "national_count": 0,
+      "national_max": 0.0,
+      "national_avg": 0.0
+    }
+  },
+  "after": {
+    "R22": {
+      "district_count": 0,
+      "district_max": 0.0,
+      "district_avg": 0.0,
+      "state_count": 0,
+      "state_max": 0.0,
+      "state_avg": 0.0,
+      "national_count": 0,
+      "national_max": 0.0,
+      "national_avg": 0.0
+    },
+    "R13": {
+      "district_count": 0,
+      "district_max": 0.0,
+      "district_avg": 0.0,
+      "state_count": 0,
+      "state_max": 0.0,
+      "state_avg": 0.0,
+      "national_count": 0,
+      "national_max": 0.0,
+      "national_avg": 0.0
+    },
+    "R12": {
+      "district_count": 0,
+      "district_max": 0.0,
+      "district_avg": 0.0,
+      "state_count": 0,
+      "state_max": 0.0,
+      "state_avg": 0.0,
+      "national_count": 0,
+      "national_max": 0.0,
+      "national_avg": 0.0
+    }
+  },
+  "cap_changes": {
+    "district_R22": 0,
+    "state_R22": 0,
+    "national_R22": 0,
+    "district_R13": 0,
+    "state_R13": 0,
+    "national_R13": 0,
+    "district_R12": 0,
+    "state_R12": 0,
+    "national_R12": 0
+  },
+  "prune_report": {
+    "kept": 100,
+    "min_kept": 1823,
+    "max_kept": 1922,
+    "deleted_runs": 1720,
+    "deleted_rows": {
+      "adaptive_metrics": 825,
+      "adaptive_parameters": 10142,
+      "agent_recommendations": 20961,
+      "allocations": 137296,
+      "claims": 279,
+      "consumptions": 93,
+      "demand_learning_events": 26880,
+      "final_demands": 3441560,
+      "inventory_snapshots": 3417502,
+      "neural_incident_log": 10142,
+      "nn_feature_cache": 23149,
+      "nn_predictions": 0,
+      "priority_urgency_events": 525,
+      "requests": 452,
+      "returns": 110234,
+      "scenario_explanations": 877,
+      "shipment_plans": 113303,
+      "state_transfers": 2214,
+      "stock_refill_transactions": 654565,
+      "requests_by_run": 0
+    }
+  }
+}
